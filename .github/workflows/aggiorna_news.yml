@@ -36,31 +36,55 @@ jobs:
           python - <<EOF
           import os, requests, json
 
+          # Configurazione iniziale
           api_key = os.environ.get('GEMINI_API_KEY', '')
           citta = os.environ.get('CITY', 'Pescara')
           
-          # Notizia di emergenza se Gemini fallisce o manca la chiave
-          notizie = [{"titolo": "Onde di Smeraldo", "riassunto": "Il Delfino sta perlustrando le coste. Presto nuove notizie!", "data": "Oggi", "visivo": "emerald sea waves", "is_fake": True, "commento": "Il mare è calmo.", "fonte": "Delfino", "link": "#"}]
+          # Dati di emergenza (se tutto fallisce, il sito funzionerà comunque con questi)
+          notizie = [{
+              "titolo": "Onde di Smeraldo", 
+              "riassunto": "Il Delfino sta esplorando i fondali. Presto nuove storie!", 
+              "data": "Oggi", 
+              "visivo": "emerald sea ghibli style", 
+              "is_fake": True, 
+              "commento": "Il mare sussurra segreti.", 
+              "fonte": "Delfino", 
+              "link": "#"
+          }]
 
+          # Tenta di chiamare Gemini
           if api_key:
               try:
                   url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
-                  prompt = f"Sei un cronista Ghibli a {citta}. Scrivi 3 news reali e 1 leggenda. Rispondi SOLO JSON: [{{'titolo':'','riassunto':'','data':'','visivo':'','is_fake':false,'fonte':'','link':''}}]"
+                  prompt = f"Sei un cronista Ghibli a {citta}. Scrivi 3 news reali e 1 leggenda. Rispondi SOLO con un array JSON puro, senza blocchi di codice, con i campi: titolo, riassunto, data, visivo, is_fake, fonte, link."
+                  
                   res = requests.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=30)
-                  testo = res.json()['candidates'][0]['content']['parts'][0]['text']
-                  notizie = json.loads(testo.replace('```json', '').replace('```', '').strip())
+                  res_data = res.json()
+                  
+                  if 'candidates' in res_data:
+                      testo = res_data['candidates'][0]['content']['parts'][0]['text']
+                      # Pulizia profonda del testo
+                      testo_pulito = testo.replace('```json', '').replace('```', '').strip()
+                      notizie = json.loads(testo_pulito)
+                      print("News generate con successo!")
+                  else:
+                      print("Gemini ha risposto con un errore, uso news di emergenza.")
               except Exception as e:
-                  print(f"Errore Gemini: {e}")
+                  print(f"Errore durante l'esecuzione: {e}")
 
+          # Crea il pacchetto finale
           pacchetto = {
               "notizie": notizie,
-              "caveau": os.environ.get('DATI_PRIVATI', 'Cassaforte ancora vuota.'),
+              "caveau": os.environ.get('DATI_PRIVATI', 'Cassaforte ancora chiusa.'),
               "chiave_accesso": os.environ.get('PASSWORD_SITO', 'Delfino2026'),
               "telecomando": os.environ.get('GH_TOKEN', '')
           }
 
+          # Salva il file notizie.json
           with open('notizie.json', 'w', encoding='utf-8') as f:
               json.dump(pacchetto, f, indent=4, ensure_ascii=False)
+          
+          print("Processo completato.")
           EOF
 
       - name: Salva Risultati
