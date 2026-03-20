@@ -27,6 +27,7 @@ jobs:
 
       - name: Genera Edizione Italiana e Caveau
         env:
+          PASS_SITO_SECRET: ${{ secrets.PASSWORD_SITO }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DATI_PRIVATI: ${{ secrets.DATI_PRIVATI }}
           TARGET_CITY: ${{ github.event.inputs.citta_scelta }}
