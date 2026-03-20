@@ -4,28 +4,28 @@ on:
   workflow_dispatch:
     inputs:
       citta_scelta:
-        description: 'Città per le news'
+        description: 'Città'
         required: true
         default: 'Pescara'
-  schedule:
-    - cron: '0 * * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout del codice
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Configura Python
-        uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
 
-      - name: InstallRequests
+      - name: Install Dependencies
         run: pip install requests
 
-      - name: Esegui Script Robot
+      - name: Esegui Robot
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DATI_PRIVATI: ${{ secrets.DATI_PRIVATI }}
@@ -36,46 +36,41 @@ jobs:
           python - <<EOF
           import os, requests, json
 
-          # 1. Recupera i Segreti
-          api_key = os.environ.get('GEMINI_API_KEY')
-          caveau_dati = os.environ.get('DATI_PRIVATI', 'Nessun dato salvato.')
-          pass_segreta = os.environ.get('PASSWORD_SITO', 'Delfino2026')
-          token_telecomando = os.environ.get('GH_TOKEN', '')
-          citta = os.environ.get('CITY', 'Pescara')
+          def genera():
+              api_key = os.environ.get('GEMINI_API_KEY')
+              citta = os.environ.get('CITY', 'Pescara')
+              
+              # Caso d'emergenza se manca la chiave
+              fallback = [{"titolo": "Onde Silenziose", "riassunto": "Il Delfino sta nuotando nel mare della tranquillità.", "data": "Oggi", "visivo": "peaceful sea", "is_fake": True, "commento": "A presto!"}]
+              
+              if not api_key:
+                  return fallback
 
-          # 2. Chiedi a Gemini di generare le News
-          url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
-          prompt = f"Sei un cronista dello Studio Ghibli a {citta}. Scrivi 3 news reali e 1 leggenda locale. Rispondi solo in formato JSON: [{{'titolo':'', 'riassunto':'', 'data':'', 'visivo':'descrizione immagine', 'is_fake':false, 'fonte':'', 'link':''}}]"
-          
-          response = requests.post(url, json={"contents": [{"parts": [{"text": prompt}]}]})
-          
-          try:
-              raw_text = response.json()['candidates'][0]['content']['parts'][0]['text']
-              clean_json = raw_text.replace('```json', '').replace('```', '').strip()
-              notizie = json.loads(clean_json)
-          except Exception as e:
-              print(f"Errore: {e}")
-              notizie = [{"titolo": "Cielo di Fiaba", "riassunto": "Il Delfino sta arrivando...", "data": "Oggi", "visivo": "sea sunset", "is_fake": True, "commento": "Le onde sussurrano."}]
+              try:
+                  url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+                  prompt = f"Sei un cronista Ghibli a {citta}. Scrivi 3 news reali e 1 leggenda. Rispondi SOLO con un array JSON puro, senza markdown, con i campi: titolo, riassunto, data, visivo, is_fake, fonte, link."
+                  
+                  res = requests.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=30)
+                  raw = res.json()['candidates'][0]['content']['parts'][0]['text']
+                  return json.loads(raw.replace('```json', '').replace('```', '').strip())
+              except:
+                  return fallback
 
-          # 3. Crea il Pacchetto Finale
           pacchetto = {
-              "notizie": notizie,
-              "caveau": caveau_dati,
-              "chiave_accesso": pass_segreta,
-              "telecomando": token_telecomando 
+              "notizie": genera(),
+              "caveau": os.environ.get('DATI_PRIVATI', 'Cassaforte vuota.'),
+              "chiave_accesso": os.environ.get('PASSWORD_SITO', 'Delfino2026'),
+              "telecomando": os.environ.get('GH_TOKEN', '')
           }
 
-          # 4. Salva il file
           with open('notizie.json', 'w', encoding='utf-8') as f:
               json.dump(pacchetto, f, indent=4, ensure_ascii=False)
-          
-          print("File notizie.json creato con successo!")
           EOF
 
-      - name: Commit e Push dei risultati
+      - name: Salva Risultati
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add notizie.json
-          git commit -m "Aggiornamento news Ghibli" || exit 0
+          git commit -m "Update news" || exit 0
           git push
