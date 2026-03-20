@@ -36,29 +36,25 @@ jobs:
           python - <<EOF
           import os, requests, json
 
-          def genera():
-              api_key = os.environ.get('GEMINI_API_KEY')
-              citta = os.environ.get('CITY', 'Pescara')
-              
-              # Caso d'emergenza se manca la chiave
-              fallback = [{"titolo": "Onde Silenziose", "riassunto": "Il Delfino sta nuotando nel mare della tranquillità.", "data": "Oggi", "visivo": "peaceful sea", "is_fake": True, "commento": "A presto!"}]
-              
-              if not api_key:
-                  return fallback
+          api_key = os.environ.get('GEMINI_API_KEY', '')
+          citta = os.environ.get('CITY', 'Pescara')
+          
+          # Notizia di emergenza se Gemini fallisce o manca la chiave
+          notizie = [{"titolo": "Onde di Smeraldo", "riassunto": "Il Delfino sta perlustrando le coste. Presto nuove notizie!", "data": "Oggi", "visivo": "emerald sea waves", "is_fake": True, "commento": "Il mare è calmo.", "fonte": "Delfino", "link": "#"}]
 
+          if api_key:
               try:
                   url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
-                  prompt = f"Sei un cronista Ghibli a {citta}. Scrivi 3 news reali e 1 leggenda. Rispondi SOLO con un array JSON puro, senza markdown, con i campi: titolo, riassunto, data, visivo, is_fake, fonte, link."
-                  
+                  prompt = f"Sei un cronista Ghibli a {citta}. Scrivi 3 news reali e 1 leggenda. Rispondi SOLO JSON: [{{'titolo':'','riassunto':'','data':'','visivo':'','is_fake':false,'fonte':'','link':''}}]"
                   res = requests.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=30)
-                  raw = res.json()['candidates'][0]['content']['parts'][0]['text']
-                  return json.loads(raw.replace('```json', '').replace('```', '').strip())
-              except:
-                  return fallback
+                  testo = res.json()['candidates'][0]['content']['parts'][0]['text']
+                  notizie = json.loads(testo.replace('```json', '').replace('```', '').strip())
+              except Exception as e:
+                  print(f"Errore Gemini: {e}")
 
           pacchetto = {
-              "notizie": genera(),
-              "caveau": os.environ.get('DATI_PRIVATI', 'Cassaforte vuota.'),
+              "notizie": notizie,
+              "caveau": os.environ.get('DATI_PRIVATI', 'Cassaforte ancora vuota.'),
               "chiave_accesso": os.environ.get('PASSWORD_SITO', 'Delfino2026'),
               "telecomando": os.environ.get('GH_TOKEN', '')
           }
