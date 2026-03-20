@@ -18,75 +18,76 @@ jobs:
     steps:
       - name: Checkout del codice
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false
 
       - name: Configura Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
 
-      - name: Installa Requests
+      - name: Installa dipendenze
         run: pip install requests
 
       - name: Esegui Robot Delfino
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          DATI_PRIVATI: ${{ secrets.DATI_PRIVATI }}
-          PASSWORD_SITO: ${{ secrets.PASSWORD_SITO }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           CITY: ${{ github.event.inputs.citta_scelta || 'Pescara' }}
         run: |
-          python - <<EOF
+          python - <<'EOF'
           import os, requests, json
 
-          # Configurazione
           api_key = os.environ.get('GEMINI_API_KEY', '')
           citta = os.environ.get('CITY', 'Pescara')
-          
-          # News di emergenza se Gemini fallisce
+
+          # News di riserva se Gemini non risponde
           notizie = [{
-              "titolo": "Onde di Smeraldo", 
-              "riassunto": "Il Delfino sta nuotando verso " + citta + ". Presto nuove storie!", 
-              "data": "Oggi", 
-              "visivo": "emerald sea waves ghibli style", 
-              "is_fake": True, 
-              "commento": "Il mare sussurra segreti.", 
-              "fonte": "Delfino", 
+              "titolo": "Onde di Smeraldo",
+              "riassunto": "Il Delfino sta nuotando verso " + citta + ". Presto nuove storie!",
+              "data": "Oggi",
+              "visivo": "emerald sea waves ghibli style",
+              "is_fake": True,
+              "commento": "Il mare sussurra segreti.",
+              "fonte": "Delfino",
               "link": "#"
           }]
 
-          # Chiamata a Gemini
           if api_key:
               try:
                   url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
-                  prompt = f"Sei un cronista dello Studio Ghibli a {citta}. Scrivi 3 news reali e 1 leggenda locale. Rispondi SOLO con un array JSON puro, niente markdown, con i campi: titolo, riassunto, data, visivo, is_fake, fonte, link."
-                  res = requests.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=30)
+                  prompt = (
+                      f"Sei un cronista dello Studio Ghibli a {citta}. "
+                      f"Scrivi 3 news reali e 1 leggenda locale. "
+                      f"Rispondi SOLO con un array JSON puro, niente markdown, "
+                      f"con i campi: titolo, riassunto, data, visivo, is_fake, commento, fonte, link."
+                  )
+                  res = requests.post(
+                      url,
+                      json={"contents": [{"parts": [{"text": prompt}]}]},
+                      timeout=30
+                  )
                   testo = res.json()['candidates'][0]['content']['parts'][0]['text']
-                  notizie = json.loads(testo.replace('```json', '').replace('```', '').strip())
+                  testo = testo.replace('```json', '').replace('```', '').strip()
+                  notizie = json.loads(testo)
+                  print(f"✅ Gemini ha generato {len(notizie)} notizie per {citta}")
               except Exception as e:
-                  print(f"Nota: Gemini non disponibile, uso news di riserva. ({e})")
+                  print(f"⚠️ Gemini non disponibile, uso news di riserva. ({e})")
 
-          # Pacchetto finale per il sito
+          # Il JSON pubblico contiene SOLO le notizie
           pacchetto = {
-              "notizie": notizie,
-              "caveau": os.environ.get('DATI_PRIVATI', 'Cassaforte vuota.'),
-              "chiave_accesso": os.environ.get('PASSWORD_SITO', 'Delfino2026'),
-              "telecomando": os.environ.get('GH_TOKEN', '')
+              "citta": citta,
+              "notizie": notizie
           }
 
-          # Salvataggio file
           with open('notizie.json', 'w', encoding='utf-8') as f:
               json.dump(pacchetto, f, indent=4, ensure_ascii=False)
+
+          print("✅ notizie.json salvato correttamente.")
           EOF
 
-      - name: Push Finale Forzato
-        env:
-          MIO_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Commit e Push
         run: |
           git config --global user.name "frascia"
           git config --global user.email "frascia@users.noreply.github.com"
           git add notizie.json
-          git commit -m "Update notizie.json" || exit 0
-          # Questa riga scavalca le protezioni usando il tuo Token Personale come password
-          git push https://x-access-token:${MIO_TOKEN}@github.com/${{ github.repository }}.git main --force
+          git diff --staged --quiet && echo "Nessuna modifica, skip commit." && exit 0
+          git commit -m "🐬 Aggiornamento notizie - $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git push
