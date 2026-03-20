@@ -51,6 +51,7 @@ jobs:
           }]
 
           if api_key:
+              print(f"🔑 Chiave trovata, lunghezza: {len(api_key)}")
               try:
                   url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
                   prompt = (
@@ -64,12 +65,16 @@ jobs:
                       json={"contents": [{"parts": [{"text": prompt}]}]},
                       timeout=30
                   )
+                  print(f"📡 Status code: {res.status_code}")
+                  print(f"📦 Risposta raw: {res.text[:500]}")
                   testo = res.json()['candidates'][0]['content']['parts'][0]['text']
                   testo = testo.replace('```json', '').replace('```', '').strip()
                   notizie = json.loads(testo)
                   print(f"✅ Gemini ha generato {len(notizie)} notizie per {citta}")
               except Exception as e:
                   print(f"⚠️ Gemini non disponibile, uso news di riserva. ({e})")
+          else:
+              print("❌ GEMINI_API_KEY non trovata nell'ambiente")
 
           # Il JSON pubblico contiene SOLO le notizie
           pacchetto = {
