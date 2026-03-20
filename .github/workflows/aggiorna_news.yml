@@ -1,0 +1,64 @@
+name: Aggiornamento Dinamico La Voce del Delfino
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      citta_scelta:
+        description: 'Città inviata dal browser'
+        required: true
+        default: 'Pescara'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Configura Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Installa dipendenze
+        run: pip install google-generativeai
+
+      - name: Genera Edizione Italiana e Caveau
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DATI_PRIVATI: ${{ secrets.DATI_PRIVATI }}
+          TARGET_CITY: ${{ github.event.inputs.citta_scelta }}
+        run: |
+          python - <<EOF
+          import google.generativeai as genai
+          import json, os
+          from datetime import datetime
+
+          genai.configure(api_key=os.environ['GEMINI_API_KEY'])
+          model = genai.GenerativeModel('gemini-1.5-flash')
+          citta = os.environ['TARGET_CITY']
+          data_ora = datetime.now().strftime("%d/%m/%Y %H:%M")
+
+          prompt = f"Trova 4 notizie vere positive dal MONDO e 4 da {citta}. Inventa 1 notizia FAKE poetica per il MONDO e 1 per {citta}. Scrivi tutto in ITALIANO. Fornisci link reali per le vere. Rispondi SOLO in JSON: [{{'tipo':'MONDO/LOCALE','titolo':'...','riassunto':'...','commento':'...','visivo':'descrizione inglese stile Ghibli','fonte':'...','link':'...','is_fake':true/false,'data':'{data_ora}'}}]"
+          
+          response = model.generate_content(prompt)
+          notizie = json.loads(response.text.replace('```json', '').replace('```', '').strip())
+          
+          pacchetto = {
+              "notizie": notizie,
+              "caveau": os.environ.get('DATI_PRIVATI', 'Nessun dato nel caveau.')
+          }
+          
+          with open('notizie.json', 'w', encoding='utf-8') as f:
+              json.dump(pacchetto, f, ensure_ascii=False, indent=2)
+          EOF
+
+      - name: Commit e Push
+        run: |
+          git config --global user.name "Delfino Robot"
+          git config --global user.email "actions@github.com"
+          git add notizie.json
+          git commit -m "Edizione per ${{ github.event.inputs.citta_scelta }}"
+          git push

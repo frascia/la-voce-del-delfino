@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Voce del Delfino</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400&display=swap');
+        :root { --blue: #5d8aa8; --dark: #1a4a73; --gold: #f5c842; --sand: #fdf5e6; }
+        body { background: #f0f7f9; font-family: 'Crimson Pro', serif; margin: 0; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; background: rgba(255,255,255,0.8); min-height: 100vh; }
+        header { text-align: center; border-bottom: 4px double var(--blue); padding: 20px 0; }
+        .article { margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        .img-box img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 5px; }
+        .fake-tag { background: #ffe4e1; color: #d63031; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; }
+        
+        /* CAVEAU POPUP */
+        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(10px); }
+        .pergamena { background: var(--sand); width: 90%; max-width: 500px; padding: 30px; border: 12px solid #5d4037; border-radius: 5px; box-shadow: 0 0 40px black; }
+        .riga-segreta { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed #a1887f; font-family: monospace; flex-wrap: wrap; }
+        .anteprima-foto { display: none; width: 100%; margin-top: 10px; border: 3px solid #8b4513; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <div id="modal-pass" class="modal" style="display: flex;">
+        <div style="background:white; padding:30px; border-radius:15px; text-align:center;">
+            <h3>🔐 Parola d'ordine</h3>
+            <input type="password" id="pass-field" style="padding:10px; width:80%;">
+            <button onclick="checkPass()" style="margin-top:20px; padding:10px 20px; background:var(--dark); color:white; border:none; border-radius:20px;">Entra</button>
+        </div>
+    </div>
+
+    <div id="popup-caveau" class="modal">
+        <div class="pergamena">
+            <h2 style="text-align:center;">📜 Registro Segreto</h2>
+            <div id="lista-segreta"></div>
+            <center><button onclick="document.getElementById('popup-caveau').style.display='none'" style="margin-top:20px; padding:10px; background:#5d4037; color:white; border:none;">Chiudi</button></center>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>La Voce del Delfino</h1>
+            <p>Navigando verso <span id="loc">Pescara</span> (<span id="reg">Abruzzo</span>)</p>
+        </header>
+        <div id="feed"></div>
+    </div>
+
+<script>
+    const CONFIG = {
+        pass: "IL_TUO_PIN",
+        token: "ghp_TUO_TOKEN",
+        owner: "TUO_UTENTE",
+        repo: "la-voce-del-delfino"
+    };
+
+    let datiPrivati = "";
+
+    async function checkPass() {
+        if(document.getElementById('pass-field').value === CONFIG.pass) {
+            document.getElementById('modal-pass').style.display = 'none';
+            navigator.geolocation.getCurrentPosition(async (pos) => {
+                const geo = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`);
+                const d = await geo.json();
+                const city = d.address.city || d.address.town || "Pescara";
+                
+                // MOSTRA CAVEAU
+                apriCaveau(datiPrivati);
+                // COMANDA IL ROBOT
+                comandaRobot(city);
+            });
+        } else { alert("Accesso negato!"); }
+    }
+
+    function apriCaveau(dati) {
+        const list = document.getElementById('lista-segreta');
+        list.innerHTML = "";
+        dati.split('\n').forEach((r, i) => {
+            const isImg = r.trim().match(/\.(jpeg|jpg|gif|png)$/);
+            list.innerHTML += `<div class="riga-segreta">
+                <span>${isImg ? '🖼️ Foto' : '********'}</span>
+                <button onclick="this.previousElementSibling.innerText='${r.trim()}'; if(${isImg}){document.getElementById('img-${i}').style.display='block'}">👁️</button>
+                ${isImg ? `<img src="${r.trim()}" id="img-${i}" class="anteprima-foto">` : ''}
+            </div>`;
+        });
+        document.getElementById('popup-caveau').style.display = 'flex';
+    }
+
+    async function comandaRobot(c) {
+        const url = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/actions/workflows/aggiorna_news.yml/dispatches`;
+        await fetch(url, {
+            method: 'POST',
+            headers: { 'Authorization': `Bearer ${CONFIG.token}` },
+            body: JSON.stringify({ ref: 'main', inputs: { citta_scelta: c } })
+        });
+    }
+
+    async function load() {
+        const res = await fetch('notizie.json?v=' + Date.now());
+        const data = await res.json();
+        datiPrivati = data.caveau;
+        data.notizie.forEach((n, i) => {
+            document.getElementById('feed').innerHTML += `
+                <div class="article">
+                    <div class="img-box"><img src="https://pollinations.ai/p/${encodeURIComponent(n.visivo)}?width=800&height=450&seed=${i}" style="opacity:1"></div>
+                    <h3>${n.titolo} ${n.is_fake ? '<span class="fake-tag">FAKE</span>' : ''}</h3>
+                    <p>${n.riassunto}</p>
+                    <div style="background:#fffcf0; padding:10px; border-left:4px solid var(--gold);">🐬 ${n.commento}</div>
+                    <small>🕒 ${n.data} - <a href="${n.link}" target="_blank">Fonte: ${n.fonte}</a></small>
+                </div>`;
+        });
+    }
+    window.onload = load;
+</script>
+</body>
+</html>

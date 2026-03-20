@@ -1,0 +1,24 @@
+Ecco il progetto finale e definitivo della tua Super-App Ghibli: "La Voce del Delfino".
+
+Questa configurazione include tutto: automazione oraria, cambio rotta intelligente, traduzione in italiano, notizie vere e leggende fake, link alle fonti, date reali e il Caveau Segreto con protezione a "occhio" per dati e foto.
+
+🛠️ FASE 1: Configurazione "Cassaforte" su GitHub
+Prima di caricare i file, prepara il terreno nel tuo repository (Settings > Secrets and variables > Actions):
+
+GEMINI_API_KEY: La tua chiave Google AI.
+
+DATI_PRIVATI: Incolla qui i tuoi dati sensibili (PIN, Password, Link a foto private). Vai a capo per ogni riga.
+
+GH_TOKEN: Crea un Personal Access Token (classic) con permessi workflow e salvalo (ti servirà nel file HTML).
+
+
+4. Ultimi ritocchi "Post-Varo"
+Una volta caricato tutto, mancano solo due click per accendere i motori:
+
+Attiva GitHub Pages: Vai in Settings > Pages, imposta "Branch: main" e clicca Save.
+
+Verifica i Secrets: Vai in Settings > Secrets and variables > Actions e assicurati di aver inserito GEMINI_API_KEY e DATI_PRIVATI.
+
+Il Primo Lancio: Vai nella scheda Actions, seleziona il tuo workflow a sinistra e clicca Run workflow scrivendo "Pescara".
+
+Consiglio del Capitano: Una volta fatto il primo commit, scarica l'app GitHub sul tuo telefono. Ti permetterà di controllare se il Robot ha finito di "dipingere" le notizie di Tokyo mentre sei in giro, o di cambiare i tuoi dati privati al volo modificando il Secret direttamente dall'app

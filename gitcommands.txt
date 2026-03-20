@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Varo della Voce del Delfino: Edizione Itinerante"
+git branch -M main
+git remote add origin https://github.com/TUO_UTENTE/la-voce-del-delfino.git
+git push -u origin main
