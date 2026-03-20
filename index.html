@@ -6,112 +6,135 @@
     <title>La Voce del Delfino</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400&display=swap');
-        :root { --blue: #5d8aa8; --dark: #1a4a73; --gold: #f5c842; --sand: #fdf5e6; }
-        body { background: #f0f7f9; font-family: 'Crimson Pro', serif; margin: 0; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; background: rgba(255,255,255,0.8); min-height: 100vh; }
-        header { text-align: center; border-bottom: 4px double var(--blue); padding: 20px 0; }
-        .article { margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-        .img-box img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 5px; }
-        .fake-tag { background: #ffe4e1; color: #d63031; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; }
-        
-        /* CAVEAU POPUP */
-        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(10px); }
-        .pergamena { background: var(--sand); width: 90%; max-width: 500px; padding: 30px; border: 12px solid #5d4037; border-radius: 5px; box-shadow: 0 0 40px black; }
-        .riga-segreta { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed #a1887f; font-family: monospace; flex-wrap: wrap; }
+        :root { --blue: #5d8aa8; --sand: #fdf5e6; --dark: #2c3e50; --gold: #f5c842; }
+        body { background-color: #f0f7f9; background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png"); font-family: 'Crimson Pro', serif; margin: 0; color: var(--dark); }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; border-bottom: 4px double var(--blue); padding: 20px 0; margin-bottom: 30px; }
+        .article { background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .img-box img { width: 100%; border-radius: 5px; border: 5px solid white; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .title { font-size: 1.8rem; font-weight: bold; margin: 15px 0 10px; }
+        .comment { background: #fffcf0; border-left: 5px solid var(--gold); padding: 15px; font-style: italic; margin: 15px 0; }
+        .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 3000; backdrop-filter: blur(10px); }
+        .pergamena { background: var(--sand); background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); width: 90%; max-width: 500px; padding: 30px; border: 12px solid #5d4037; border-radius: 5px; box-shadow: 0 0 50px black; }
+        .riga-segreta { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px dashed #a1887f; font-family: monospace; }
+        .btn-occhio { background: none; border: none; cursor: pointer; font-size: 1.4rem; filter: sepia(1); }
         .anteprima-foto { display: none; width: 100%; margin-top: 10px; border: 3px solid #8b4513; border-radius: 5px; }
     </style>
 </head>
 <body>
 
-    <div id="modal-pass" class="modal" style="display: flex;">
-        <div style="background:white; padding:30px; border-radius:15px; text-align:center;">
-            <h3>🔐 Parola d'ordine</h3>
-            <input type="password" id="pass-field" style="padding:10px; width:80%;">
-            <button onclick="checkPass()" style="margin-top:20px; padding:10px 20px; background:var(--dark); color:white; border:none; border-radius:20px;">Entra</button>
+    <div id="modal-pass" class="modal">
+        <div style="background:white; padding:40px; border-radius:20px; text-align:center; border:5px solid var(--blue);">
+            <h2>📜 Identificati, Capitano</h2>
+            <input type="password" id="pass-field" style="padding:12px; font-size:1.2rem; border-radius:10px; border:2px solid #ddd; width:200px; text-align:center;"><br><br>
+            <button onclick="checkPass()" style="background:var(--blue); color:white; border:none; padding:12px 30px; border-radius:25px; cursor:pointer; font-weight:bold;">Sblocca Registro</button>
         </div>
     </div>
 
-    <div id="popup-caveau" class="modal">
+    <div id="popup-caveau" class="modal" style="display:none;">
         <div class="pergamena">
-            <h2 style="text-align:center;">📜 Registro Segreto</h2>
+            <h2 style="text-align:center; border-bottom:2px solid #8b4513;">📔 Diario di Bordo</h2>
             <div id="lista-segreta"></div>
-            <center><button onclick="document.getElementById('popup-caveau').style.display='none'" style="margin-top:20px; padding:10px; background:#5d4037; color:white; border:none;">Chiudi</button></center>
+            <center><button onclick="document.getElementById('popup-caveau').style.display='none'" style="margin-top:20px; padding:10px 20px; background:#8b4513; color:white; border:none; border-radius:5px; cursor:pointer;">Chiudi</button></center>
         </div>
     </div>
 
     <div class="container">
         <header>
             <h1>La Voce del Delfino</h1>
-            <p>Navigando verso <span id="loc">Pescara</span> (<span id="reg">Abruzzo</span>)</p>
+            <p>Rotta attuale: <b id="loc-name">...</b></p>
         </header>
         <div id="feed"></div>
     </div>
 
-<script>
-    const CONFIG = {
-        pass: "IL_TUO_PIN",
-        token: "ghp_TUO_TOKEN",
-        owner: "TUO_UTENTE",
-        repo: "la-voce-del-delfino"
-    };
+    <script>
+        // CONFIGURAZIONE PUBBLICA (Innocua)
+        const CONFIG = {
+            owner: "TUO_USERNAME_GITHUB", // Inserisci il tuo nome utente GitHub
+            repo: "la-voce-del-delfino",
+            token: "" // Verrà riempito dal JSON segreto
+        };
 
-    let datiPrivati = "";
+        let datiSegreti = "";
+        let passwordServer = "";
 
-    async function checkPass() {
-        if(document.getElementById('pass-field').value === CONFIG.pass) {
-            document.getElementById('modal-pass').style.display = 'none';
+        async function loadData() {
+            try {
+                const res = await fetch('notizie.json?v=' + Date.now());
+                const data = await res.json();
+                
+                // Peschiamo i segreti dal JSON generato dal Robot
+                datiSegreti = data.caveau;
+                passwordServer = data.chiave_accesso;
+                CONFIG.token = data.telecomando; 
+
+                const feed = document.getElementById('feed');
+                feed.innerHTML = "";
+                data.notizie.forEach((n, i) => {
+                    feed.innerHTML += `
+                        <div class="article">
+                            <div class="img-box"><img src="https://pollinations.ai/p/${encodeURIComponent(n.visivo + ", Studio Ghibli watercolor")}?width=800&height=450&seed=${i}"></div>
+                            <small>🕒 ${n.data}</small>
+                            <div class="title">${n.titolo} ${n.is_fake ? '<span style="color:red; font-size:0.7rem;">✨ Leggenda</span>' : ''}</div>
+                            <p>${n.riassunto}</p>
+                            <div class="comment">🐬 ${n.commento}</div>
+                            ${n.is_fake ? '' : `<a href="${n.link}" target="_blank" style="color:var(--blue); text-decoration:none; font-weight:bold;">Leggi Fonte ↗</a>`}
+                        </div>`;
+                });
+            } catch (e) { console.log("In attesa del primo lancio del Robot..."); }
+        }
+
+        function checkPass() {
+            const input = document.getElementById('pass-field').value;
+            if (input === passwordServer && passwordServer !== "") {
+                document.getElementById('modal-pass').style.display = 'none';
+                popolaCaveau(datiSegreti);
+                avviaCambioRotta();
+            } else { alert("Password errata!"); }
+        }
+
+        function popolaCaveau(testo) {
+            const container = document.getElementById('lista-segreta');
+            container.innerHTML = "";
+            testo.split('\n').forEach((riga, i) => {
+                if(!riga.trim()) return;
+                const isImg = riga.trim().match(/\.(jpeg|jpg|gif|png)$/i);
+                container.innerHTML += `
+                    <div class="riga-segreta">
+                        <span id="t-${i}">${isImg ? '🖼️ Foto Segreta' : '********'}</span>
+                        <button class="btn-occhio" onclick="toggleDato(${i}, '${riga.trim().replace(/'/g, "\\'")}', ${isImg ? true : false})">👁️</button>
+                        ${isImg ? `<img src="${riga.trim()}" id="img-${i}" class="anteprima-foto">` : ''}
+                    </div>`;
+            });
+            document.getElementById('popup-caveau').style.display = 'flex';
+        }
+
+        function toggleDato(id, val, isImg) {
+            const el = document.getElementById(`t-${id}`);
+            if(isImg) {
+                const img = document.getElementById(`img-${id}`);
+                img.style.display = (img.style.display === 'block') ? 'none' : 'block';
+            } else {
+                el.innerText = (el.innerText === '********') ? val : '********';
+            }
+        }
+
+        function avviaCambioRotta() {
             navigator.geolocation.getCurrentPosition(async (pos) => {
                 const geo = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`);
                 const d = await geo.json();
                 const city = d.address.city || d.address.town || "Pescara";
-                
-                // MOSTRA CAVEAU
-                apriCaveau(datiPrivati);
-                // COMANDA IL ROBOT
-                comandaRobot(city);
+                document.getElementById('loc-name').innerText = city;
+
+                fetch(`https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/actions/workflows/aggiorna_news.yml/dispatches`, {
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${CONFIG.token}`, 'Accept': 'application/vnd.github.v3+json' },
+                    body: JSON.stringify({ ref: 'main', inputs: { citta_scelta: city } })
+                });
             });
-        } else { alert("Accesso negato!"); }
-    }
+        }
 
-    function apriCaveau(dati) {
-        const list = document.getElementById('lista-segreta');
-        list.innerHTML = "";
-        dati.split('\n').forEach((r, i) => {
-            const isImg = r.trim().match(/\.(jpeg|jpg|gif|png)$/);
-            list.innerHTML += `<div class="riga-segreta">
-                <span>${isImg ? '🖼️ Foto' : '********'}</span>
-                <button onclick="this.previousElementSibling.innerText='${r.trim()}'; if(${isImg}){document.getElementById('img-${i}').style.display='block'}">👁️</button>
-                ${isImg ? `<img src="${r.trim()}" id="img-${i}" class="anteprima-foto">` : ''}
-            </div>`;
-        });
-        document.getElementById('popup-caveau').style.display = 'flex';
-    }
-
-    async function comandaRobot(c) {
-        const url = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/actions/workflows/aggiorna_news.yml/dispatches`;
-        await fetch(url, {
-            method: 'POST',
-            headers: { 'Authorization': `Bearer ${CONFIG.token}` },
-            body: JSON.stringify({ ref: 'main', inputs: { citta_scelta: c } })
-        });
-    }
-
-    async function load() {
-        const res = await fetch('notizie.json?v=' + Date.now());
-        const data = await res.json();
-        datiPrivati = data.caveau;
-        data.notizie.forEach((n, i) => {
-            document.getElementById('feed').innerHTML += `
-                <div class="article">
-                    <div class="img-box"><img src="https://pollinations.ai/p/${encodeURIComponent(n.visivo)}?width=800&height=450&seed=${i}" style="opacity:1"></div>
-                    <h3>${n.titolo} ${n.is_fake ? '<span class="fake-tag">FAKE</span>' : ''}</h3>
-                    <p>${n.riassunto}</p>
-                    <div style="background:#fffcf0; padding:10px; border-left:4px solid var(--gold);">🐬 ${n.commento}</div>
-                    <small>🕒 ${n.data} - <a href="${n.link}" target="_blank">Fonte: ${n.fonte}</a></small>
-                </div>`;
-        });
-    }
-    window.onload = load;
-</script>
+        window.onload = loadData;
+    </script>
 </body>
 </html>
