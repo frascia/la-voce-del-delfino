@@ -8,26 +8,28 @@ on:
         required: true
         default: 'Pescara'
   schedule:
-    - cron: '0 * * * *' # Si aggiorna da solo ogni ora
+    - cron: '0 * * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Permessi base di scrittura
+      contents: write
     steps:
       - name: Checkout del codice
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Configura Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
 
-      - name: Installa Librerie
+      - name: Installa Requests
         run: pip install requests
 
-      - name: Esegui Script Robot
+      - name: Esegui Robot Delfino
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DATI_PRIVATI: ${{ secrets.DATI_PRIVATI }}
@@ -38,17 +40,14 @@ jobs:
           python - <<EOF
           import os, requests, json
 
-          # 1. Recupero Dati e Segreti
+          # Configurazione
           api_key = os.environ.get('GEMINI_API_KEY', '')
-          caveau = os.environ.get('DATI_PRIVATI', 'Nessun dato salvato.')
-          pass_sito = os.environ.get('PASSWORD_SITO', 'Delfino2026')
-          token = os.environ.get('GH_TOKEN', '')
           citta = os.environ.get('CITY', 'Pescara')
-
-          # 2. News di emergenza (se Gemini fallisce)
+          
+          # News di emergenza se Gemini fallisce
           notizie = [{
               "titolo": "Onde di Smeraldo", 
-              "riassunto": "Il Delfino sta esplorando i fondali di " + citta + ". Presto nuove storie!", 
+              "riassunto": "Il Delfino sta nuotando verso " + citta + ". Presto nuove storie!", 
               "data": "Oggi", 
               "visivo": "emerald sea waves ghibli style", 
               "is_fake": True, 
@@ -57,45 +56,37 @@ jobs:
               "link": "#"
           }]
 
-          # 3. Chiamata a Gemini
+          # Chiamata a Gemini
           if api_key:
               try:
                   url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
-                  prompt = f"Sei un cronista Ghibli a {citta}. Scrivi 3 news reali e 1 leggenda locale. Rispondi SOLO con un array JSON puro (niente markdown), campi: titolo, riassunto, data, visivo, is_fake, fonte, link."
-                  
+                  prompt = f"Sei un cronista dello Studio Ghibli a {citta}. Scrivi 3 news reali e 1 leggenda locale. Rispondi SOLO con un array JSON puro, niente markdown, con i campi: titolo, riassunto, data, visivo, is_fake, fonte, link."
                   res = requests.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=30)
-                  res_data = res.json()
-                  
-                  if 'candidates' in res_data:
-                      testo_raw = res_data['candidates'][0]['content']['parts'][0]['text']
-                      testo_pulito = testo_raw.replace('```json', '').replace('```', '').strip()
-                      notizie = json.loads(testo_pulito)
-                      print("News generate con successo da Gemini!")
+                  testo = res.json()['candidates'][0]['content']['parts'][0]['text']
+                  notizie = json.loads(testo.replace('```json', '').replace('```', '').strip())
               except Exception as e:
-                  print(f"Errore Gemini (uso emergenza): {e}")
+                  print(f"Nota: Gemini non disponibile, uso news di riserva. ({e})")
 
-          # 4. Creazione Pacchetto Finale
+          # Pacchetto finale per il sito
           pacchetto = {
               "notizie": notizie,
-              "caveau": caveau,
-              "chiave_accesso": pass_sito,
-              "telecomando": token
+              "caveau": os.environ.get('DATI_PRIVATI', 'Cassaforte vuota.'),
+              "chiave_accesso": os.environ.get('PASSWORD_SITO', 'Delfino2026'),
+              "telecomando": os.environ.get('GH_TOKEN', '')
           }
 
-          # 5. Salvataggio
+          # Salvataggio file
           with open('notizie.json', 'w', encoding='utf-8') as f:
               json.dump(pacchetto, f, indent=4, ensure_ascii=False)
-          
-          print("File notizie.json creato!")
           EOF
 
-      - name: Salva e Spingi su GitHub (Forzato)
+      - name: Push Finale Forzato
         env:
           MIO_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
+          git config --global user.name "frascia"
+          git config --global user.email "frascia@users.noreply.github.com"
           git add notizie.json
-          git commit -m "Aggiornamento automatico notizie" || exit 0
-          # Qui usiamo il token per 'sfondare' le protezioni del repository
-          git push https://x-access-token:${MIO_TOKEN}@github.com/${{ github.repository }}.git main
+          git commit -m "Update notizie.json" || exit 0
+          # Questa riga scavalca le protezioni usando il tuo Token Personale come password
+          git push https://x-access-token:${MIO_TOKEN}@github.com/${{ github.repository }}.git main --force
