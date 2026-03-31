@@ -1,0 +1,51 @@
+name: 🐬 Aggiorna Notizie
+
+on:
+  schedule:
+    - cron: '0 4  * * *'   # 04:00 UTC (06:00 ora italiana estate, 05:00 inverno)
+    - cron: '0 10 * * *'   # 10:00 UTC (12:00 ora italiana estate, 11:00 inverno)
+  workflow_dispatch:        # avvio manuale da GitHub Actions
+
+permissions:
+  contents: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Installa dipendenze
+        run: npm ci
+
+      - name: 🚩 Segnala inizio aggiornamento
+        run: |
+          echo '{"updating":true,"startedAt":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"}' > public/data/status.json
+          git config user.name  "Delfino Bot"
+          git config user.email "delfino-bot@voce-del-delfino.it"
+          git add public/data/status.json
+          git commit -m "🔄 Inizio aggiornamento - $(date -u '+%H:%M UTC')"
+          git push
+
+      - name: 🔍 Genera notizie e illustrazioni
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/fetch-news.js
+
+      - name: ✅ Segnala fine aggiornamento e salva dati
+        run: |
+          echo '{"updating":false,"lastUpdate":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"}' > public/data/status.json
+          git add public/data/
+          git diff --staged --quiet || git commit -m "🐬 Notizie aggiornate - $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
