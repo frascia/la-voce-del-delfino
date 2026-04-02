@@ -14,7 +14,7 @@ fs.mkdirSync(DATA_DIR, { recursive: true });
 const API_KEY = process.env.GEMINI_API_KEY;
 if (!API_KEY) { console.error("❌ GEMINI_API_KEY mancante"); process.exit(1); }
 
-const MODEL    = "gemini-1.5-flash"; // Usiamo Flash per velocità e limiti più alti
+const MODEL = "gemini-1.5-flash-latest";
 const BASE_URL = "https://generativelanguage.googleapis.com/v1beta";
 const today    = new Date().toLocaleDateString("it-IT", {
   weekday:"long", year:"numeric", month:"long", day:"numeric"
