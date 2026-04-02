@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * fetch-news.js — La Voce del Delfino (Versione Stabile e Definitiva)
+ * fetch-news.js — La Voce del Delfino (Versione Definitiva GitHub Actions)
  * Caratteristiche:
  * - Auto-Discovery del modello per evitare errori 404
- * - Gestione automatica del Rate Limit (Pausa ogni 10 chiamate e retry sui 429)
+ * - Gestione avanzata Rate Limit (429) con Retry intelligente e pause per IP condivisi
  * - Prompt SVG ottimizzati per evitare i blocchi di sicurezza (Safety Filters)
  * - Parser JSON antiproiettile
  */
@@ -20,7 +20,7 @@ fs.mkdirSync(DATA_DIR, { recursive: true });
 // Controllo Chiave API
 const API_KEY = process.env.GEMINI_API_KEY;
 if (!API_KEY) { 
-  console.error("❌ GEMINI_API_KEY mancante. Inseriscila nel tuo ambiente o nel file .env"); 
+  console.error("❌ GEMINI_API_KEY mancante. Inseriscila nel tuo ambiente o nei Secrets di GitHub"); 
   process.exit(1); 
 }
 
@@ -62,10 +62,10 @@ async function autoDiscoverModel() {
 }
 
 // ─────────────────────────────────────────────
-//  Il Motore API con Gestione Limiti e JSON Forzato
+//  Il Motore API con Gestione Limiti Estrema (GitHub Actions safe)
 // ─────────────────────────────────────────────
-async function callGemini({ system, prompt, useSearch = false, maxTokens = 4096, isJson = false }) {
-  // Pausa lunga ogni 10 chiamate per resettare le quote di Google (Free Tier)
+async function callGemini({ system, prompt, useSearch = false, maxTokens = 4096, isJson = false, retries = 0 }) {
+  // Pausa lunga ogni 10 chiamate
   if (callCount > 0 && callCount % 10 === 0) {
     console.log(`\n ⏸️  Traffico intenso. Il Delfino prende fiato per 60 secondi...`);
     await new Promise(r => setTimeout(r, 60_000));
@@ -97,20 +97,34 @@ async function callGemini({ system, prompt, useSearch = false, maxTokens = 4096,
 
   if (!res.ok) {
     const errText = await res.text();
-    // Gestione automatica del Rate Limit (429)
+    
+    // Gestione intelligente del Rate Limit (429)
     if (res.status === 429) {
-        console.log("⚠️ 429 Troppe richieste. Il Delfino attende 30 secondi e ritenta...");
-        await new Promise(r => setTimeout(r, 30_000));
-        return callGemini({ system, prompt, useSearch, maxTokens, isJson }); // Ritenta la chiamata
+        console.log(`\n⚠️ 429 Rilevato! Motivo: ${errText.slice(0, 150)}`);
+        
+        // Se hai finito i crediti gratuiti, fermiamo tutto per non sprecare minuti GitHub
+        if (errText.toLowerCase().includes("quota")) {
+            throw new Error("QUOTA GIORNALIERA ESAURITA! Google ha chiuso i rubinetti per oggi.");
+        }
+        
+        // Se è solo traffico, riproviamo massimo 3 volte
+        if (retries >= 3) {
+            throw new Error("Troppi tentativi falliti per limite di traffico. Mi arrendo per questa sezione.");
+        }
+        
+        console.log(`⏳ GitHub IP lento. Ritento tra 60 secondi... (Tentativo ${retries + 1} di 3)`);
+        await new Promise(r => setTimeout(r, 60_000)); // Pausa molto lunga per resettare l'IP
+        return callGemini({ system, prompt, useSearch, maxTokens, isJson, retries: retries + 1 });
     }
+    
     throw new Error(`API HTTP ${res.status}: ${errText.slice(0,150)}`);
   }
 
   const data = await res.json();
   const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
   
-  // PAUSA FONDAMENTALE DI 3 SECONDI DOPO OGNI CHIAMATA (Evita il burst 429 sulle chiamate singole)
-  await new Promise(r => setTimeout(r, 3000));
+  // PAUSA LUNGA OBBLIGATORIA DOPO OGNI CHIAMATA (FONDAMENTALE SU GITHUB ACTIONS)
+  await new Promise(r => setTimeout(r, 10_000)); 
   
   return textResponse;
 }
@@ -124,7 +138,7 @@ function parseNews(text) {
         return JSON.parse(cleaned);
     } catch (e) {
         console.error("❌ Errore parsing JSON. Frammento:", text.slice(0, 100));
-        return []; // Restituisce array vuoto per non far crashare lo script
+        return []; 
     }
 }
 
@@ -152,7 +166,7 @@ async function buildSection(isPescara) {
     system: "Inventa una notizia satirica falsa e assurda. Rispondi SOLO in JSON puro.",
     prompt: isPescara ? "Satira su Pescara (es. arrosticini, mare, traffico)" : "Satira tecnologica o politica internazionale",
     maxTokens: 2000,
-    isJson: true // Qui possiamo usare isJson perché non c'è la ricerca Google
+    isJson: true 
   });
   
   const satiraObj = parseNews(satiraRaw);
@@ -176,11 +190,11 @@ async function buildSection(isPescara) {
             item.svg = match[0];
             process.stdout.write("✓ ");
         } else {
-            process.stdout.write("✗(tag mancante) ");
+            process.stdout.write("✗(manca tag) ");
         }
     } catch (e) {
         const errMsg = e.message.toLowerCase();
-        const reason = errMsg.includes("safety") ? "Sicurezza" : "API";
+        const reason = errMsg.includes("safety") ? "Sicurezza" : "API/Timeout";
         process.stdout.write(`!(${reason}) `);
     }
   }
@@ -201,7 +215,6 @@ async function main() {
     process.exit(1);
   }
 
-  // Genera prima le notizie dal mondo, poi quelle locali
   for (const isPescara of [false, true]) {
     try {
       const data = await buildSection(isPescara);
