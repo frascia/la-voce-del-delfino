@@ -2,15 +2,12 @@ name: 🐬 Aggiorna Notizie
 
 on:
   schedule:
-    - cron: '0 4  * * *'   # 04:00 UTC (06:00 ora italiana estate)
-    - cron: '0 10 * * *'   # 10:00 UTC (12:00 ora italiana estate)
+    - cron: '0 4  * * *'   # 04:00 UTC = 06:00 ora italiana (estate)
+    - cron: '0 10 * * *'   # 10:00 UTC = 12:00 ora italiana (estate)
   workflow_dispatch:
 
 permissions:
   contents: write
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   aggiorna:
@@ -19,12 +16,12 @@ jobs:
 
     steps:
       - name: 📥 Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
 
