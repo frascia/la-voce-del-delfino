@@ -2,12 +2,15 @@ name: 🐬 Aggiorna Notizie
 
 on:
   schedule:
-    - cron: '0 4  * * *'   # 04:00 UTC (06:00 ora italiana estate, 05:00 inverno)
-    - cron: '0 10 * * *'   # 10:00 UTC (12:00 ora italiana estate, 11:00 inverno)
-  workflow_dispatch:        # avvio manuale da GitHub Actions
+    - cron: '0 4  * * *'   # 04:00 UTC (06:00 ora italiana estate)
+    - cron: '0 10 * * *'   # 10:00 UTC (12:00 ora italiana estate)
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   aggiorna:
@@ -23,7 +26,7 @@ jobs:
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: 📦 Installa dipendenze
         run: npm install
@@ -42,7 +45,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/fetch-news.js
 
-      - name: ✅ Segnala fine aggiornamento e salva dati
+      - name: ✅ Salva dati e segnala fine
         run: |
           echo '{"updating":false,"lastUpdate":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"}' > public/data/status.json
           git add public/data/
