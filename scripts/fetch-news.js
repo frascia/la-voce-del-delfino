@@ -29,7 +29,7 @@ let callCount = 0;
 
 async function callGemini({ system, prompt, useSearch = false, maxTokens = 4096 }) {
   // Ogni 10 chiamate, aspetta 2 minuti prima di continuare
-  if (callCount > 0 && callCount % 10 === 0) {
+  if (callCount > 0 && callCount % 5 === 0) {
     console.log(`\n  ⏸️  Raggiunte ${callCount} chiamate — pausa 2 minuti per rate limit...\n`);
     await new Promise(r => setTimeout(r, 2 * 60_000));
   }
@@ -97,8 +97,8 @@ async function stepRicerca(isPescara) {
     useSearch: true,
     maxTokens: 6000,
     prompt: isPescara
-      ? `Cerca e descrivi 20 notizie recenti di Pescara e Abruzzo (${today}). Temi: sport locale, cultura, gastronomia, cronaca positiva, economia, eventi, lungomare, infrastrutture, natura, turismo. Per ognuna: titolo, fonte, luogo preciso, descrizione dettagliata.`
-      : `Oggi è ${today}. Trova 20 notizie recenti, positive o interessanti dal mondo. Temi vari: scienza, natura, spazio, animali, tecnologia, cultura, sport, gastronomia, economia, ambiente, salute. Per ognuna: titolo, paese/città, fonte, descrizione dettagliata.`
+      ? `Cerca e descrivi 5 notizie recenti di Pescara e Abruzzo (${today}). Temi: sport locale, cultura, gastronomia, cronaca positiva, economia, eventi, lungomare, infrastrutture, natura, turismo. Per ognuna: titolo, fonte, luogo preciso, descrizione dettagliata.`
+      : `Oggi è ${today}. Trova 5 notizie recenti, positive o interessanti dal mondo. Temi vari: scienza, natura, spazio, animali, tecnologia, cultura, sport, gastronomia, economia, ambiente, salute. Per ognuna: titolo, paese/città, fonte, descrizione dettagliata.`
   });
 }
 
@@ -116,7 +116,7 @@ async function stepFormatta(raw, isPescara) {
 Trasforma le notizie in JSON puro. ZERO backtick, ZERO testo prima o dopo l'array.
 Array di ESATTAMENTE 20 oggetti con chiavi: titolo, categoria, sommario, commento, fonte, luogo.
 Il campo "commento" DEVE essere sarcastico, ironico, divertente con battuta finale. MAI serio.`,
-    prompt: `Notizie trovate:\n\n${raw}\n\nJSON (20 oggetti):\n[{"titolo":"...","categoria":"una di: ${cats}","sommario":"2-3 frasi","commento":"sarcastico con battuta finale","fonte":"...","luogo":"${isPescara?"zona Pescara":"Paese/città"}"}]`
+    prompt: `Notizie trovate:\n\n${raw}\n\nJSON (5 oggetti):\n[{"titolo":"...","categoria":"una di: ${cats}","sommario":"2-3 frasi","commento":"sarcastico con battuta finale","fonte":"...","luogo":"${isPescara?"zona Pescara":"Paese/città"}"}]`
   });
 
   const parsed = extractJSON(txt);
