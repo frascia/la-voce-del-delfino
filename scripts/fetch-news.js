@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /**
- * fetch-news.js — La Voce del Delfino (Versione Definitiva GitHub Actions)
+ * fetch-news.js — La Voce del Delfino (Versione Definitiva GitHub Actions - Corretta)
  * Caratteristiche:
  * - Auto-Discovery del modello per evitare errori 404
  * - Gestione avanzata Rate Limit (429) con Retry intelligente e pause per IP condivisi
  * - Prompt SVG ottimizzati per evitare i blocchi di sicurezza (Safety Filters)
  * - Parser JSON antiproiettile
+ * - Corretto schema JSON per la satira e prompt SVG per garantire la generazione delle immagini
  */
 
 import fs from "fs";
@@ -143,18 +144,21 @@ function parseNews(text) {
 }
 
 // ─────────────────────────────────────────────
-//  Costruzione delle Sezioni
+//  Costruzione delle Sezioni (Versione Corretta)
 // ─────────────────────────────────────────────
 async function buildSection(isPescara) {
   const label = isPescara ? "🐬 PESCARA" : "🌍 MONDO";
+
+  // Ho aumentato il numero di articoli a 12
+  const NUM_ARTICOLI = 12;
 
   console.log(`\n${label} — Ricerca e Scrittura Notizie...`);
   const rawJson = await callGemini({
     system: `Sei un redattore pungente. Rispondi SOLO con un array JSON puro. NESSUN TESTO PRIMA O DOPO, ZERO BACKTICK.
     Chiavi: titolo, categoria, sommario, commento, fonte, luogo.`,
     prompt: isPescara
-      ? `Cerca 8 notizie VERE di oggi (${today}) su Pescara/Abruzzo. Temi vari (sport, cronaca bianca, eventi). Array JSON.`
-      : `Oggi è ${today}. Cerca 8 notizie VERE dal mondo. Temi vari (scienza, tech, curiosità). Array JSON.`,
+      ? `Cerca ${NUM_ARTICOLI} notizie VERE di oggi (${today}) su Pescara/Abruzzo. Temi vari (sport, cronaca bianca, eventi). Array JSON.`
+      : `Oggi è ${today}. Cerca ${NUM_ARTICOLI} notizie VERE dal mondo. Temi vari (scienza, tech, curiosità). Array JSON.`,
     useSearch: true,
     maxTokens: 4000
   });
@@ -163,8 +167,10 @@ async function buildSection(isPescara) {
 
   console.log(`${label} — Aggiungo la Satira...`);
   const satiraRaw = await callGemini({
-    system: "Inventa una notizia satirica falsa e assurda. Rispondi SOLO in JSON puro.",
-    prompt: isPescara ? "Satira su Pescara (es. arrosticini, mare, traffico)" : "Satira tecnologica o politica internazionale",
+    // FIX SATIRA: Schema JSON forzato per garantire la compatibilità delle chiavi
+    system: `Inventa una notizia satirica falsa e assurda. Rispondi SOLO in un oggetto JSON puro.
+    DEVI USARE ESATTAMENTE QUESTE CHIAVI: "titolo", "categoria", "sommario", "commento", "fonte", "luogo".`,
+    prompt: isPescara ? "Satira su Pescara (es. arrosticini, mare, traffico). Fonte: 'Il Delfino Sognatore'" : "Satira tecnologica o politica internazionale assurda. Fonte: 'Il Delfino Sognatore'",
     maxTokens: 2000,
     isJson: true 
   });
@@ -178,23 +184,26 @@ async function buildSection(isPescara) {
     const item = allNews[i];
     try {
         const svgCode = await callGemini({
-            system: `Sei un programmatore frontend esperto. Scrivi ESCLUSIVAMENTE codice testuale XML per un'immagine <svg> ASTRATTA, GEOMETRICA e SUPER MINIMALISTA (massimo 15 forme). 
-            Niente markdown, niente spiegazioni, solo <svg>...</svg>. 
-            REGOLA D'ORO: Usa uno stile simbolico, pacifico e innocuo. Se il tema è controverso, usa solo forme astratte e colori tenui pastello.`,
-            prompt: `Genera il codice sorgente di un <svg viewBox="0 0 900 400"> a colori pastello che rappresenti questa notizia in modo astratto: "${item.titolo}". Assicurati di chiudere il tag con </svg>.`,
-            maxTokens: 4000 
+            // FIX IMMAGINI: Prompt blindato per garantire output SVG crudo e valido
+            system: `Sei un generatore automatico di codice SVG. Devi restituire ESCLUSIVAMENTE il codice <svg> crudo. Niente markdown, niente chiacchiere, niente backtick.`,
+            prompt: `Genera un <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">. 
+            Stile: Astratto, geometrico, minimalista (massimo 8 forme). Colori pastello eleganti. 
+            Deve rappresentare visivamente questa frase: "${item.titolo}". 
+            Non inserire testo nell'immagine, solo forme (rect, circle, path). Assicurati di chiudere il tag </svg>.`,
+            maxTokens: 2000 
         });
         
+        // Estrazione aggressiva del tag SVG
         const match = svgCode.match(/<svg[\s\S]*?<\/svg>/i);
         if (match) {
             item.svg = match[0];
             process.stdout.write("✓ ");
         } else {
-            process.stdout.write("✗(manca tag) ");
+            process.stdout.write("✗(no-tag) ");
         }
     } catch (e) {
         const errMsg = e.message.toLowerCase();
-        const reason = errMsg.includes("safety") ? "Sicurezza" : "API/Timeout";
+        const reason = errMsg.includes("safety") ? "Sicurezza" : "Timeout";
         process.stdout.write(`!(${reason}) `);
     }
   }
