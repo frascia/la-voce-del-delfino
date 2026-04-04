@@ -5,10 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="La Voce del Delfino — notizie Ghibli ogni ora" />
     <title>La Voce del Delfino 🐬</title>
-    <style>body{margin:0;background:#f5f0e8;}#root{min-height:100vh;}</style>
+    <style>
+      /* Stili di base per rendere tutto leggibile su mobile e desktop */
+      body { margin: 0; background: #f5f0e8; font-family: sans-serif; color: #333; padding: 15px; font-size: 16px; }
+      #root { min-height: 100vh; max-width: 1000px; margin: auto; }
+      
+      h1 { text-align: center; color: #005f73; }
+      .bottoni { text-align: center; margin-bottom: 20px; }
+      button { padding: 10px 15px; margin: 5px; cursor: pointer; border: none; background: #005f73; color: white; border-radius: 5px; font-size: 16px; }
+      
+      /* Griglia responsive: 1 colonna su mobile, 2 su PC */
+      .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+      @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
+      
+      /* Design delle carte */
+      .card { background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; padding: 15px; }
+      .fake-badge { display: inline-block; background: #e9d8a6; color: #ae2012; padding: 3px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; }
+      
+      /* Regola d'oro per far apparire gli SVG senza distruggere la pagina */
+      .immagine-svg svg { width: 100%; height: auto; max-height: 250px; display: block; border-radius: 6px; background-color: #e0e1dd; margin-bottom: 15px; }
+      .commento { background: #e0fbfc; padding: 10px; border-left: 4px solid #005f73; font-style: italic; margin-top: 15px; }
+    </style>
   </head>
   <body>
     <noscript>Abilita JavaScript per vedere La Voce del Delfino.</noscript>
+    
     <div id="root"></div>
+
+    <script>
+        // 1. Costruiamo l'impalcatura del sito dentro il tuo div #root
+        document.getElementById('root').innerHTML = `
+            <h1>🐬 La Voce del Delfino</h1>
+            <div class="bottoni">
+                <button onclick="caricaNotizie('pescara')">Mostra Pescara</button>
+                <button onclick="caricaNotizie('mondo')">Mostra Mondo</button>
+            </div>
+            <h2 id="sezione-titolo" style="text-align:center;">Delfino in riscaldamento...</h2>
+            <div id="notizie-container" class="grid"></div>
+        `;
+
+        // 2. La funzione che pesca i dati e disegna le carte
+        async function caricaNotizie(sezione) {
+            const container = document.getElementById('notizie-container');
+            const titolo = document.getElementById('sezione-titolo');
+            
+            container.innerHTML = '<p style="text-align:center;">Caricamento in corso...</p>';
+            titolo.innerText = sezione === 'pescara' ? "🐬 Notizie da Pescara" : "🌍 Notizie dal Mondo";
+
+            try {
+                // Prende i file JSON generati dal tuo script backend
+                const response = await fetch(`data/news-${sezione}.json`);
+                if (!response.ok) throw new Error('Non riesco a trovare il giornale di oggi!');
+                
+                const data = await response.json();
+                container.innerHTML = ''; // Pulisce il messaggio di caricamento
+
+                // Costruisce ogni singola notizia
+                data.news.forEach(articolo => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+
+                    const fakeBadge = articolo.isFake ? \`<div class="fake-badge">Notizia Satirica</div>\` : '';
+
+                    // Inietta il codice SVG fisicamente dentro la pagina per farlo disegnare al browser
+                    const imageContainer = document.createElement('div');
+                    imageContainer.className = 'immagine-svg';
+                    if (articolo.svg && articolo.svg.includes('<svg')) {
+                        imageContainer.innerHTML = articolo.svg;
+                    } else {
+                        imageContainer.innerHTML = '<div style="background:#ddd; height:150px; text-align:center; padding-top:60px; border-radius:6px;">Nessuna immagine 🐬</div>';
+                    }
+
+                    // Aggiunge tutto il testo
+                    const testoHTML = \`
+                        \${fakeBadge}
+                        <h3>\${articolo.titolo || 'Titolo mancante'}</h3>
+                        <p><strong>\${articolo.categoria || 'Varie'}</strong> - \${articolo.luogo || 'Sconosciuto'}</p>
+                        <p>\${articolo.sommario || ''}</p>
+                        <div class="commento">💬 \${articolo.commento || ''}</div>
+                        <p style="font-size:0.8em; margin-top:10px; color:gray;">Fonte: \${articolo.fonte || 'Non dichiarata'}</p>
+                    \`;
+
+                    // Unisce immagine e testo nella card, e aggiunge la card al sito
+                    card.appendChild(imageContainer);
+                    card.innerHTML += testoHTML; 
+                    container.appendChild(card);
+                });
+
+            } catch (error) {
+                container.innerHTML = \`<p style="color:red; text-align:center;">Errore: \${error.message}</p>\`;
+            }
+        }
+
+        // 3. Fai partire tutto appena si apre la pagina
+        caricaNotizie('pescara');
+    </script>
   </body>
 </html>
