@@ -3,44 +3,88 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="La Voce del Delfino — notizie Ghibli ogni ora" />
+    <meta name="description" content="La Voce del Delfino — notizie scelte ogni ora" />
     <title>La Voce del Delfino 🐬</title>
     <style>
-      /* Stili di base per rendere tutto leggibile su mobile e desktop */
-      body { margin: 0; background: #f5f0e8; font-family: sans-serif; color: #333; padding: 15px; font-size: 16px; }
+      /* Stili di base e FONT PIU' GRANDI */
+      body {
+          margin: 0;
+          background: #f5f0e8;
+          font-family: sans-serif;
+          color: #333;
+          padding: 15px;
+          /* Font base ingrandito per i cellulari */
+          font-size: 18px;
+      }
+      @media (min-width: 768px) {
+          body { font-size: 20px; } /* Ancora più grande su PC/Tablet */
+      }
+      
       #root { min-height: 100vh; max-width: 1000px; margin: auto; }
       
-      h1 { text-align: center; color: #005f73; }
-      .bottoni { text-align: center; margin-bottom: 20px; }
-      button { padding: 10px 15px; margin: 5px; cursor: pointer; border: none; background: #005f73; color: white; border-radius: 5px; font-size: 16px; }
+      h1 { text-align: center; color: #005f73; font-size: 2.5em; margin-bottom: 5px; }
+      h2 { font-size: 1.8em; }
+      h3 { font-size: 1.5em; margin-top: 0; color: #0a4f5e; line-height: 1.2; }
+      p { line-height: 1.6; margin-bottom: 12px; }
+      
+      .logo-delfino {
+          display: block;
+          width: 100%;
+          max-width: 350px;
+          margin: 0 auto 20px auto;
+          border-radius: 16px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+
+      .bottoni { text-align: center; margin-bottom: 30px; }
+      button {
+          padding: 12px 20px;
+          margin: 5px;
+          cursor: pointer;
+          border: none;
+          background: #005f73;
+          color: white;
+          border-radius: 8px;
+          font-size: 1.1em;
+          font-weight: bold;
+          transition: transform 0.2s, background 0.2s;
+      }
+      button:hover { background: #0a4f5e; transform: scale(1.05); }
       
       /* Griglia responsive: 1 colonna su mobile, 2 su PC */
-      .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+      .grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
       @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
       
-      /* Design delle carte */
-      .card { background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; padding: 15px; }
-      .fake-badge { display: inline-block; background: #e9d8a6; color: #ae2012; padding: 3px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; }
+      /* Design delle carte ingrandito e arrotondato */
+      .card { background: white; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 20px; }
+      .fake-badge { display: inline-block; background: #e9d8a6; color: #ae2012; padding: 5px 10px; border-radius: 6px; font-size: 0.9em; font-weight: bold; margin-bottom: 15px; }
       
-      /* Regola d'oro per far apparire gli SVG senza distruggere la pagina */
-      .immagine-svg svg { width: 100%; height: auto; max-height: 250px; display: block; border-radius: 6px; background-color: #e0e1dd; margin-bottom: 15px; }
-      .commento { background: #e0fbfc; padding: 10px; border-left: 4px solid #005f73; font-style: italic; margin-top: 15px; }
+      /* Regola per l'immagine interna */
+      .immagine-svg svg { width: 100%; height: auto; max-height: 250px; display: block; border-radius: 8px; background-color: #e0e1dd; margin-bottom: 15px; }
+      .commento { background: #e0fbfc; padding: 12px; border-left: 5px solid #005f73; font-style: italic; margin-top: 15px; font-size: 1.1em; border-radius: 0 8px 8px 0; }
     </style>
   </head>
   <body>
     <noscript>Abilita JavaScript per vedere La Voce del Delfino.</noscript>
     
+    <!-- La scatola magica -->
     <div id="root"></div>
 
+    <!-- Il motore del sito -->
     <script>
+        // Immagine fissa creata con Pollinations (Delfino con occhiali che scrive a macchina)
+        const logoUrl = "https://image.pollinations.ai/prompt/A%20cool%20smart%20dolphin%20wearing%20glasses%20writing%20on%20a%20typewriter%20colorful%202d%20cartoon%20flat%20art%20style?width=800&height=400&nologo=true&seed=42";
+
         // 1. Costruiamo l'impalcatura del sito dentro il tuo div #root
         document.getElementById('root').innerHTML = `
-            <h1>🐬 La Voce del Delfino</h1>
+            <img src="${logoUrl}" alt="Il Delfino Giornalista" class="logo-delfino" loading="lazy" />
+            <h1>La Voce del Delfino</h1>
+            <p style="text-align:center; font-style:italic; color:#555; margin-bottom:20px; font-size: 1.1em;">Le notizie scelte e commentate per te.</p>
             <div class="bottoni">
-                <button onclick="caricaNotizie('pescara')">Mostra Pescara</button>
-                <button onclick="caricaNotizie('mondo')">Mostra Mondo</button>
+                <button onclick="caricaNotizie('pescara')">🐬 Pescara & Abruzzo</button>
+                <button onclick="caricaNotizie('mondo')">🌍 Dal Mondo</button>
             </div>
-            <h2 id="sezione-titolo" style="text-align:center;">Delfino in riscaldamento...</h2>
+            <h2 id="sezione-titolo" style="text-align:center; margin-bottom:20px;">Il Delfino sta inforcando gli occhiali...</h2>
             <div id="notizie-container" class="grid"></div>
         `;
 
@@ -49,51 +93,51 @@
             const container = document.getElementById('notizie-container');
             const titolo = document.getElementById('sezione-titolo');
             
-            container.innerHTML = '<p style="text-align:center;">Caricamento in corso...</p>';
+            container.innerHTML = '<p style="text-align:center; font-size: 1.2em; font-weight: bold;">Nuoto a prendere le notizie... 🌊</p>';
             titolo.innerText = sezione === 'pescara' ? "🐬 Notizie da Pescara" : "🌍 Notizie dal Mondo";
 
             try {
-                // Prende i file JSON generati dal tuo script backend
+                // Togliamo il trucco anti-cache. Peschiamo il file normalmente.
                 const response = await fetch(`data/news-${sezione}.json`);
-                if (!response.ok) throw new Error('Non riesco a trovare il giornale di oggi!');
+                if (!response.ok) throw new Error('Il Delfino ha perso gli appunti in mare!');
                 
                 const data = await response.json();
-                container.innerHTML = ''; // Pulisce il messaggio di caricamento
+                container.innerHTML = ''; 
 
                 // Costruisce ogni singola notizia
                 data.news.forEach(articolo => {
                     const card = document.createElement('div');
                     card.className = 'card';
 
-                    const fakeBadge = articolo.isFake ? \`<div class="fake-badge">Notizia Satirica</div>\` : '';
+                    const fakeBadge = articolo.isFake ? `<div class="fake-badge">🛑 Notizia Satirica (Falsa!)</div>` : '';
 
-                    // Inietta il codice SVG fisicamente dentro la pagina per farlo disegnare al browser
                     const imageContainer = document.createElement('div');
                     imageContainer.className = 'immagine-svg';
                     if (articolo.svg && articolo.svg.includes('<svg')) {
                         imageContainer.innerHTML = articolo.svg;
                     } else {
-                        imageContainer.innerHTML = '<div style="background:#ddd; height:150px; text-align:center; padding-top:60px; border-radius:6px;">Nessuna immagine 🐬</div>';
+                        imageContainer.innerHTML = '<div style="background:#ddd; height:200px; text-align:center; padding-top:80px; border-radius:8px;">Immagine dispersa in mare 🌊</div>';
                     }
 
-                    // Aggiunge tutto il testo
-                    const testoHTML = \`
-                        \${fakeBadge}
-                        <h3>\${articolo.titolo || 'Titolo mancante'}</h3>
-                        <p><strong>\${articolo.categoria || 'Varie'}</strong> - \${articolo.luogo || 'Sconosciuto'}</p>
-                        <p>\${articolo.sommario || ''}</p>
-                        <div class="commento">💬 \${articolo.commento || ''}</div>
-                        <p style="font-size:0.8em; margin-top:10px; color:gray;">Fonte: \${articolo.fonte || 'Non dichiarata'}</p>
-                    \`;
+                    // Aggiunge tutto il testo formattato in grande
+                    const testoHTML = `
+                        ${fakeBadge}
+                        <h3>${articolo.titolo || 'Titolo mancante'}</h3>
+                        <p style="color:#005f73; font-weight:bold; text-transform:uppercase; font-size:0.85em; margin-bottom:5px;">
+                            🏷️ ${articolo.categoria || 'Varie'} | 📍 ${articolo.luogo || 'Sconosciuto'}
+                        </p>
+                        <p>${articolo.sommario || ''}</p>
+                        <div class="commento">🐬 <strong>Dice il Delfino:</strong><br/>${articolo.commento || ''}</div>
+                        <p style="font-size:0.85em; margin-top:15px; color:#777; text-align:right;">Fonte: ${articolo.fonte || 'Non dichiarata'}</p>
+                    `;
 
-                    // Unisce immagine e testo nella card, e aggiunge la card al sito
                     card.appendChild(imageContainer);
                     card.innerHTML += testoHTML; 
                     container.appendChild(card);
                 });
 
             } catch (error) {
-                container.innerHTML = \`<p style="color:red; text-align:center;">Errore: \${error.message}</p>\`;
+                container.innerHTML = `<p style="color:#ae2012; text-align:center; font-weight:bold; font-size:1.2em;">Errore: ${error.message}</p>`;
             }
         }
 
@@ -102,3 +146,5 @@
     </script>
   </body>
 </html>
+
+
