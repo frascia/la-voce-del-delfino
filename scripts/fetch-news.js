@@ -34,7 +34,7 @@ async function callGemini({ system, prompt, useSearch = false, maxTokens = 4096,
   
   const body = {
     contents: [{ role:"user", parts:[{ text:prompt }] }],
-    generationConfig: { maxOutputTokens: maxTokens, temperature: 0.7 } // Abbassata temp per renderlo più ubbidiente col JSON
+    generationConfig: { maxOutputTokens: maxTokens, temperature: 0.7 }
   };
   
   if (isJson && !useSearch) body.generationConfig.response_mime_type = "application/json";
@@ -59,25 +59,91 @@ async function callGemini({ system, prompt, useSearch = false, maxTokens = 4096,
   return data.candidates?.[0]?.content?.parts?.[0]?.text || "";
 }
 
-// PARSER ESTREMAMENTE AGGRESSIVO
+// PARSER BASICO, SICURO E A PROVA DI BOMBA
 function parseNews(text) {
     try {
-        let clean = text.replace(/
-http://googleusercontent.com/immersive_entry_chip/0
+        // Togliamo i backtick in modo semplice e lineare, senza regex che si rompono
+        let clean = text.replace(/```json/gi, "")
+                        .replace(/```html/gi, "")
+                        .replace(/```xml/gi, "")
+                        .replace(/```/g, "")
+                        .trim();
 
----
+        // Trova dove inizia e finisce il vero codice
+        let start = Math.min(...[clean.indexOf('['), clean.indexOf('{')].filter(i => i !== -1));
+        let end = Math.max(clean.lastIndexOf(']'), clean.lastIndexOf('}'));
+        
+        if (start !== -1 && end !== -1) {
+            return JSON.parse(clean.substring(start, end + 1));
+        }
+        throw new Error("Nessuna parentesi trovata");
+    } catch (e) {
+        console.error("❌ Errore JSON. L'IA ha scritto spazzatura.");
+        return []; 
+    }
+}
 
-### 2. Svuotare la cache del cellulare (Fondamentale!)
-Il tuo file HTML di prima andava già bene per i font grandi, ma il tuo telefono si ostina a caricare la vecchia versione dalla sua memoria. 
+async function buildSection(isPescara) {
+  const label = isPescara ? "🐬 PESCARA" : "🌍 MONDO";
+  const NUM_ARTICOLI = 12;
 
-**Per forzare il telefono ad aggiornare:**
-1. Apri il sito sul cellulare.
-2. Vai nella barra dell'indirizzo in alto.
-3. Aggiungi alla fine del link questo trucco: `?v=2`
-   Es: `https://frascia.github.io/la-voce-del-delfino/?v=2`
-4. Premi Invio/Vai. 
+  console.log(`\n${label} — Ricerca e Scrittura Notizie...`);
+  const rawJson = await callGemini({
+    system: `Devi restituire ESCLUSIVAMENTE un ARRAY JSON VALIDO, senza markdown e senza testo prima o dopo. Modello esatto: [{"titolo":"...","categoria":"...","sommario":"...","commento":"...","fonte":"...","luogo":"..."}]`,
+    prompt: isPescara
+      ? `Oggi è ${today}. Cerca ${NUM_ARTICOLI} notizie vere su Pescara/Abruzzo. Output: Array JSON.`
+      : `Oggi è ${today}. Cerca ${NUM_ARTICOLI} notizie vere dal mondo. Output: Array JSON.`,
+    useSearch: true,
+    maxTokens: 4000
+  });
 
-Questo inganna il telefono facendogli credere che sia un sito nuovo, costringendolo a scaricare i caratteri grandi e l'impalcatura per le immagini!
+  let allNews = parseNews(rawJson);
+  if (!Array.isArray(allNews)) allNews = [allNews];
+  allNews = allNews.map(n => ({ ...n, isFake: false, svg: null }));
 
-Carica il file `.js` su GitHub, aspetta che la rotellina (Action) finisca, usa il trucchetto del `?v=2` sul telefono e ci siamo.
-                
+  console.log(`${label} — Aggiungo la Satira...`);
+  const satiraRaw = await callGemini({
+    system: `Devi restituire ESCLUSIVAMENTE un OGGETTO JSON. Chiavi esatte: "titolo", "categoria", "sommario", "commento", "fonte", "luogo".`,
+    prompt: isPescara ? "Inventa una notizia assurda e satirica su Pescara." : "Inventa una notizia assurda e satirica sul mondo tech.",
+    maxTokens: 2000,
+    isJson: true 
+  });
+  
+  const finalSatira = parseNews(satiraRaw);
+  if(!Array.isArray(finalSatira) && finalSatira.titolo) {
+      allNews.push({ ...finalSatira, isFake: true, svg: null });
+  }
+
+  console.log(`${label} — Generazione Illustrazioni SVG...`);
+  for (let i = 0; i < allNews.length; i++) {
+    try {
+        const svgCode = await callGemini({
+            system: `Sei un compilatore. Output: SOLO ED ESCLUSIVAMENTE codice <svg>. Vieta qualsiasi spiegazione. Inizia con <svg e finisci con </svg>.`,
+            prompt: `Genera codice per <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"> con forme geometriche astratte pastello che rappresenti: "${allNews[i].titolo}". Chiudi con </svg>.`,
+            maxTokens: 2000 
+        });
+        const match = svgCode.match(/<svg[\s\S]*?<\/svg>/i);
+        if (match) {
+            allNews[i].svg = match[0];
+            process.stdout.write("✓ ");
+        } else {
+            process.stdout.write("✗ ");
+        }
+    } catch (e) {
+        process.stdout.write(`! `);
+    }
+  }
+
+  return { generatedAt: new Date().toISOString(), today, news: allNews.filter(n => n.titolo) };
+}
+
+async function main() {
+  await autoDiscoverModel();
+  for (const isPescara of [false, true]) {
+    const data = await buildSection(isPescara);
+    fs.writeFileSync(path.join(DATA_DIR, isPescara ? "news-pescara.json" : "news-mondo.json"), JSON.stringify(data, null, 2));
+    console.log(`\n✅ Sezione salvata.`);
+  }
+}
+
+main();
