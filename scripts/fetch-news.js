@@ -170,7 +170,7 @@ async function main() {
     process.exit(1);
   }
 
-  for (const isPescara of [falwse, true]) {
+  for (const isPescara of [false, true]) {
     try {
       const data = await buildSection(isPescara);
       const fname = isPescara ? "news-pescara.json" : "news-mondo.json";
