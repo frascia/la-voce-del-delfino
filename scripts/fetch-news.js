@@ -55,21 +55,20 @@ async function callGemini({ system, prompt, useSearch = false, maxTokens = 4096,
   }
 
   const data = await res.json();
-  await new Promise(r => setTimeout(r, 10_000)); 
+  await new Promise(r => setTimeout(r, 5000)); // Breve pausa per non affogare i server
   return data.candidates?.[0]?.content?.parts?.[0]?.text || "";
 }
 
 // PARSER BASICO, SICURO E A PROVA DI BOMBA
 function parseNews(text) {
     try {
-        // Togliamo i backtick in modo semplice e lineare, senza regex che si rompono
+        // Pulizia lineare senza regex complicate
         let clean = text.replace(/```json/gi, "")
                         .replace(/```html/gi, "")
                         .replace(/```xml/gi, "")
                         .replace(/```/g, "")
                         .trim();
 
-        // Trova dove inizia e finisce il vero codice
         let start = Math.min(...[clean.indexOf('['), clean.indexOf('{')].filter(i => i !== -1));
         let end = Math.max(clean.lastIndexOf(']'), clean.lastIndexOf('}'));
         
@@ -114,25 +113,19 @@ async function buildSection(isPescara) {
       allNews.push({ ...finalSatira, isFake: true, svg: null });
   }
 
-  console.log(`${label} — Generazione Illustrazioni SVG...`);
+  console.log(`${label} — Assegnazione Foto Cartoon (Istantanea)...`);
   for (let i = 0; i < allNews.length; i++) {
-    try {
-        const svgCode = await callGemini({
-            system: `Sei un compilatore. Output: SOLO ED ESCLUSIVAMENTE codice <svg>. Vieta qualsiasi spiegazione. Inizia con <svg e finisci con </svg>.`,
-            prompt: `Genera codice per <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"> con forme geometriche astratte pastello che rappresenti: "${allNews[i].titolo}". Chiudi con </svg>.`,
-            maxTokens: 2000 
-        });
-        const match = svgCode.match(/<svg[\s\S]*?<\/svg>/i);
-        if (match) {
-            allNews[i].svg = match[0];
-            process.stdout.write("✓ ");
-        } else {
-            process.stdout.write("✗ ");
-        }
-    } catch (e) {
-        process.stdout.write(`! `);
-    }
+    if (!allNews[i].titolo) continue; // Salta se la notizia è vuota
+
+    // Bypassiamo Gemini per le immagini e generiamo URL istantanei con Pollinations
+    const encodedTitle = encodeURIComponent(allNews[i].titolo + " colorful 2d cartoon flat art style");
+    const imageUrl = `https://image.pollinations.ai/prompt/${encodedTitle}?width=800&height=400&nologo=true`;
+    
+    // Lo "mascheriamo" da SVG così il tuo HTML frontend non si accorge di nulla!
+    allNews[i].svg = `<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><image href="${imageUrl}" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" /></svg>`;
+    process.stdout.write("🖼️ ");
   }
+  console.log(""); // Ritorno a capo pulito dopo le icone
 
   return { generatedAt: new Date().toISOString(), today, news: allNews.filter(n => n.titolo) };
 }
@@ -144,6 +137,10 @@ async function main() {
     fs.writeFileSync(path.join(DATA_DIR, isPescara ? "news-pescara.json" : "news-mondo.json"), JSON.stringify(data, null, 2));
     console.log(`\n✅ Sezione salvata.`);
   }
+  console.log("\n🎉 Finito! Il notiziario è pronto.");
 }
 
 main();
+
+
+          
