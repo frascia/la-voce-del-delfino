@@ -27,14 +27,12 @@
             padding: 20px;
         }
 
-        /* Testata Dinamica */
+        /* Testata Dinamica - Trasparenza Totale */
         .header-box {
-            background: #fff;
+            background: transparent;
             border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
             margin-bottom: 30px;
-            border: 1px solid #d4cdb4;
             position: relative;
             min-height: 280px;
             display: flex;
@@ -45,32 +43,24 @@
         .header-img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* Usiamo contain per non tagliare il logo */
             display: block;
             position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
-            background: linear-gradient(135deg, #dbe9f4 0%, #ffffff 100%);
+            background: transparent;
             transition: opacity 0.5s ease;
+            opacity: 0;
         }
 
         .header-overlay {
             position: relative;
             z-index: 2;
             margin-top: auto;
-            padding: 40px 20px;
-            background: linear-gradient(to top, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0) 100%);
+            padding: 20px;
+            background: transparent;
             text-align: center;
-        }
-
-        .main-title {
-            font-size: 3.8em;
-            font-weight: 700;
-            letter-spacing: -2px;
-            margin: 0;
-            line-height: 1;
-            color: var(--text);
         }
 
         .date-bar {
@@ -80,14 +70,19 @@
             color: rgba(0,0,0,0.4);
             letter-spacing: 3px;
             margin-top: 15px;
+            background: rgba(255,255,255,0.3); /* Un tocco di leggibilità per la data */
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
         }
 
-        /* Navigazione */
+        /* Navigazione Dinamica */
         .tabs {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-bottom: 40px;
+            flex-wrap: wrap;
         }
 
         .btn-t {
@@ -189,14 +184,13 @@
         <header class="header-box" onclick="window.location.reload(true)">
             <img id="header-img" class="header-img" onerror="this.style.opacity='0'">
             <div class="header-overlay">
-                <h1 class="main-title">La Voce del Delfino</h1>
+                <!-- Titolo HTML rimosso per lasciare spazio al Logo personalizzato -->
                 <div id="date-now" class="date-bar">Caricamento Edizione...</div>
             </div>
         </header>
 
-        <div class="tabs">
-            <button class="btn-t active" onclick="loadSez('mondo', this)">🌍 Mondo</button>
-            <button class="btn-t" onclick="loadSez('pescara', this)">🐬 Pescara</button>
+        <div class="tabs" id="tabs-container">
+            <!-- I bottoni verranno generati dinamicamente -->
         </div>
 
         <div id="news-container">
@@ -208,7 +202,7 @@
         </div>
     </div>
 
-    <!-- Bottone segreto Admin in basso a destra -->
+    <!-- Bottone segreto Admin -->
     <div id="admin-link" onclick="chiediAdmin()"></div>
 
     <script>
@@ -224,68 +218,69 @@
         async function init() {
             logDebug("Inizializzazione Vetrina...");
             try {
-                // Tentativo di caricamento config da più percorsi possibili
                 const paths = [
                     `public/data/active_config.json?v=${v}`,
                     `data/active_config.json?v=${v}`,
-                    `public/data/config.json?v=${v}`,
-                    `data/config.json?v=${v}`
+                    `public/data/config.json?v=${v}`
                 ];
                 
                 let res = null;
                 for (let p of paths) {
                     res = await fetch(p);
-                    if (res.ok) {
-                        logDebug(`Configurazione trovata in: ${p}`);
-                        break;
-                    }
+                    if (res.ok) break;
                 }
                 
-                if (!res || !res.ok) {
-                    logDebug("ERRORE: Nessun file di configurazione trovato nelle cartelle previste.");
-                    throw new Error("404 Config");
-                }
-                
+                if (!res || !res.ok) throw new Error("Config non trovato");
                 currentConfig = await res.json();
                 
-                // Impostazione Logo Dinamico
-                const headerFile = currentConfig.site_settings?.Header || currentConfig.site_settings?.header_img || 'header.webp';
-                const hImg = document.getElementById('header-img');
-                
-                // Prova i percorsi per l'immagine
-                const imgPaths = [`public/images/${headerFile}`, `images/${headerFile}`];
-                let imgFound = false;
-                for (let ip of imgPaths) {
-                    const testImg = new Image();
-                    testImg.src = `${ip}?v=${v}`;
-                    testImg.onload = () => {
-                        hImg.src = `${ip}?v=${v}`;
-                        hImg.style.opacity = '1';
-                        imgFound = true;
-                    };
+                const headerFile = currentConfig.site_settings?.Header || currentConfig.site_settings?.header_img;
+                if (headerFile) {
+                    const hImg = document.getElementById('header-img');
+                    hImg.src = `public/images/${headerFile}?v=${v}`;
+                    hImg.onload = () => hImg.style.opacity = '1';
                 }
 
-                loadSez('mondo', document.querySelector('.btn-t.active'));
+                const tabsContainer = document.getElementById('tabs-container');
+                const sezioni = Object.keys(currentConfig).filter(k => 
+                    !['site_settings', 'satira_config'].includes(k)
+                );
+
+                if (sezioni.length === 0) {
+                    mostraVuoto("Nessuna sezione configurata.");
+                    return;
+                }
+
+                sezioni.forEach((sez, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'btn-t' + (index === 0 ? ' active' : '');
+                    let emoji = sez.toLowerCase().includes('pescara') ? '🐬' : '🌍';
+                    btn.innerHTML = `${emoji} ${sez}`;
+                    btn.onclick = () => loadSez(sez, btn);
+                    tabsContainer.appendChild(btn);
+                });
+
+                loadSez(sezioni[0], tabsContainer.firstChild);
 
             } catch (e) {
-                console.error("Init Error:", e);
-                mostraVuoto("Configurazione mancante o errata. Il Delfino non sa dove nuotare!");
+                logDebug(`Errore Init: ${e.message}`);
+                mostraVuoto("Il Delfino è rimasto impigliato. Controlla i file JSON.");
             }
         }
 
-        async function loadSez(sez, btn) {
-            if(document.querySelectorAll('.btn-t').length > 0) {
-                document.querySelectorAll('.btn-t').forEach(b => b.classList.remove('active'));
-            }
-            if(btn) btn.classList.add('active');
+        async function loadSez(sezKey, btn) {
+            document.querySelectorAll('.btn-t').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
 
             const container = document.getElementById('news-container');
-            container.innerHTML = '<div style="text-align:center; padding:80px; font-size:1.2em; color:#999;">🐟 Il Delfino sta pescando le news di oggi...</div>';
+            container.innerHTML = '<div style="text-align:center; padding:80px; font-size:1.2em; color:#999;">🐟 Il Delfino sta pescando le news...</div>';
 
             try {
+                const sezColor = currentConfig[sezKey]?.color || '#a67c00';
+                document.documentElement.style.setProperty('--accent', sezColor);
+
                 const paths = [
-                    `public/data/news-${sez}.json?v=${v}`,
-                    `data/news-${sez}.json?v=${v}`
+                    `public/data/news-${sezKey.toLowerCase()}.json?v=${v}`,
+                    `data/news-${sezKey.toLowerCase()}.json?v=${v}`
                 ];
 
                 let r = null;
@@ -294,11 +289,11 @@
                     if (r.ok) break;
                 }
 
-                if (!r || !r.ok) throw new Error(`File news-${sez}.json non trovato`);
+                if (!r || !r.ok) throw new Error(`Dati news-${sezKey} non trovati`);
                 
                 const data = await r.json();
                 if (!data.news || data.news.length === 0) {
-                    mostraVuoto("Il file esiste ma le reti sono rimaste vuote (0 articoli).");
+                    mostraVuoto("Nessuna notizia disponibile per questa sezione.");
                     return;
                 }
 
@@ -310,7 +305,7 @@
                     card.className = 'card';
                     card.innerHTML = `
                         <div class="tag-row">
-                            <span class="tag">${n.categoria || 'NOTIZIA'} • ${n.fonte || 'Redazione'}</span>
+                            <span class="tag">${n.categoria || 'NEWS'} • ${n.fonte || 'Ansa'}</span>
                             ${n.isFake ? '<span class="badge-fake">SATIRA</span>' : ''}
                         </div>
                         <h3>${n.titolo}</h3>
@@ -324,8 +319,8 @@
                 });
 
             } catch(e) {
-                logDebug(`Errore sezione ${sez}: ${e.message}`);
-                mostraVuoto("Le reti sono ancora vuote — il Delfino sta lavorando!");
+                logDebug(`Errore caricamento ${sezKey}: ${e.message}`);
+                mostraVuoto("Le reti sono ancora vuote in questa zona.");
             }
         }
 
@@ -333,12 +328,12 @@
             document.getElementById('news-container').innerHTML = `
                 <div class="empty-state">
                     <div style="font-size: 5em; margin-bottom: 20px;">🌊</div>
-                    <h2 style="font-family: serif;">Notizie in arrivo</h2>
+                    <h2 style="font-family: serif;">Orizzonte Libero</h2>
                     <p style="color: #666; max-width: 450px; margin: auto; line-height: 1.6;">
                         ${msg}<br><br>
-                        <small>Suggerimento: Controlla che i file JSON siano nella cartella corretta su GitHub.</small>
+                        <small>Il bot su GitHub deve terminare l'aggiornamento.</small>
                     </p>
-                    <button onclick="location.reload(true)" style="margin-top:30px; padding:14px 40px; background:var(--accent); color:white; border:none; border-radius:30px; cursor:pointer; font-weight:bold; letter-spacing:1px;">🔄 AGGIORNA PAGINA</button>
+                    <button onclick="location.reload(true)" style="margin-top:30px; padding:14px 40px; background:var(--accent); color:white; border:none; border-radius:30px; cursor:pointer; font-weight:bold;">🔄 AGGIORNA ORA</button>
                 </div>`;
         }
 
@@ -348,11 +343,10 @@
                 .then(r => r.json())
                 .then(d => {
                     if (pwd === d.key) {
-                        alert("ACCESSO CONFERMATO.\nIl terminale debug è attivo in fondo alla pagina.");
+                        alert("DIRETTORE IDENTIFICATO.\nConsole Debug attiva.");
                         document.getElementById('error-display').style.display = 'block';
-                    }
-                    else alert("ACCESSO NEGATO.");
-                }).catch(() => alert("Auth non disponibile."));
+                    } else alert("NEGATO.");
+                }).catch(() => alert("Auth offline."));
         }
 
         window.onload = init;
