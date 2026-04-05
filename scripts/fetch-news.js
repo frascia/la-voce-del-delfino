@@ -1,4 +1,72 @@
-// Trova dove inizia e finisce il vero JSON
+#!/usr/bin/env node
+
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const DATA_DIR  = path.join(__dirname, "../public/data"); 
+const LOG_PATH  = path.join(DATA_DIR, "redazione.log");
+const AUTH_PATH = path.join(DATA_DIR, "auth_info.json");
+const ACTIVE_CONFIG_PATH = path.join(DATA_DIR, "active_config.json");
+
+if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+
+const apiKey = process.env.GEMINI_API_KEY || "";
+const adminPwd = process.env.ADMIN_PASSWORD || "admin-delfino";
+const secretData = process.env.ADMIN_SECRET_DATA || "";
+
+const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
+const oggi = giorni[new Date().getDay()];
+
+let activeModel = "gemini-1.5-flash"; // Modello di salvataggio
+
+function scriviLog(msg) {
+    const ts = new Date().toLocaleString('it-IT');
+    const logLine = `[${ts}] ${msg}\n`;
+    fs.appendFileSync(LOG_PATH, logLine);
+    console.log(`> ${msg}`);
+}
+
+// -----------------------------------------------------
+// 1. IL CERVELLO: AUTO-DISCOVERY DEL MODELLO
+// -----------------------------------------------------
+async function autoDiscoverModel() {
+    scriviLog("🔍 Controllo Radar: Ricerca dell'ultimo modello Gemini disponibile...");
+    if (!apiKey) return;
+    try {
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+        if (!res.ok) throw new Error(`API Status: ${res.status}`);
+        
+        const data = await res.json();
+        
+        // Cerchiamo i modelli "flash" che supportano la generazione testi
+        const flashModels = data.models
+            .filter(m => m.name.includes('flash') && m.supportedGenerationMethods.includes('generateContent'))
+            .map(m => m.name.replace('models/', ''));
+
+        if (flashModels.length > 0) {
+            // Ordiniamo per prendere il più avanzato
+            const latest = flashModels.sort().reverse()[0]; 
+            activeModel = latest;
+            scriviLog(`✅ Radar completato. Agganciato modello: ${activeModel}`);
+        } else {
+            scriviLog(`⚠️ Radar a vuoto. Uso modello di riserva: ${activeModel}`);
+        }
+    } catch (e) {
+        scriviLog(`⚠️ Errore Radar (${e.message}). Uso modello base: ${activeModel}`);
+    }
+}
+
+// -----------------------------------------------------
+// 2. LO SCUDO: PARSER JSON INDISTRUTTIBILE
+// -----------------------------------------------------
+function parseNews(raw) {
+    if (!raw) return [];
+    try {
+        // Rimuove markdown, backticks e roba inutile messa dall'IA
+        let clean = raw.replace(/`{3}(?:json|html|xml)?\n/gi, "").replace(/`{3}/g, "").trim();
+        // Trova dove inizia e finisce il vero JSON
         let start = Math.min(...[clean.indexOf('['), clean.indexOf('{')].filter(i => i !== -1));
         let end = Math.max(clean.lastIndexOf(']'), clean.lastIndexOf('}'));
         
