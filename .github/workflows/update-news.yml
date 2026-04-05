@@ -16,13 +16,15 @@ jobs:
         run: |
           git config --global user.name "DelfinoBot"
           git config --global user.email "bot@lavocedeldelfino.it"
-          git pull origin main --rebase || echo "Nessuna modifica remota da integrare"
+          # Pulizia forzata per evitare conflitti
+          git fetch origin main
+          git reset --hard origin main
 
-      - name: Preparazione Macchine
+      - name: Setup Node (Senza Cache)
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # Rimosso 'cache: npm' perché non abbiamo un package-lock.json
+          # Qui NON deve esserci la riga 'cache: npm'
 
       - name: Esecuzione Redazione Segreta
         env:
@@ -32,7 +34,7 @@ jobs:
         run: node scripts/fetch-news.js
         continue-on-error: true
 
-      - name: Pubblicazione e Risoluzione Conflitti
+      - name: Pubblicazione Risultati
         run: |
           git add public/data/*.json public/data/*.log
           
@@ -43,5 +45,5 @@ jobs:
           
           git commit -m "🗞️ News Refresh - $(date +'%Y-%m-%d %H:%M')"
           
-          git pull origin main --rebase
-          git push origin main
+          # Forza il push per superare i blocchi precedenti
+          git push origin main --force
