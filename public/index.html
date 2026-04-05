@@ -2,423 +2,202 @@
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>La Voce del Delfino 🐬</title>
     <style>
-        :root {
-            --accent: #a67c00;
-            --bg: #e9e4d4;
-            --paper: #fdfaf4;
-            --text: #2b261d;
+        :root { --main-color: #005f73; --pescara-blue: #0091ff; }
+        body { 
+            margin: 0; background: #fdfaf4; font-family: 'Segoe UI', sans-serif; color: #333; 
+            padding: 0; -webkit-user-select: none; user-select: none; 
         }
+        #root { width: 100%; max-width: 850px; margin: auto; }
+        
+        /* HEADER */
+        .header-box { width: 100%; background-color: var(--main-color); overflow: hidden; cursor: default; }
+        .header-img { width: 100%; height: auto; display: block; object-fit: cover; }
 
-        body {
-            margin: 0;
-            background-color: var(--bg);
-            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
-            font-family: 'Playfair Display', serif;
-            color: var(--text);
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        /* Testata Dinamica - Dimensioni Originali Ripristinate */
-        .header-box {
-            background: transparent;
+        .day-banner-box { 
+            width: 100%; aspect-ratio: 6 / 1; max-height: 120px; background: #fff;
+            display: flex; justify-content: center; align-items: center; overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 3px solid var(--pescara-blue);
             margin-bottom: 10px;
-            position: relative;
-            min-height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
         }
+        .day-banner-img { height: 100%; width: auto; object-fit: contain; }
 
-        .header-img {
-            max-width: 100%;
-            max-height: 280px;
-            object-fit: contain;
-            display: block;
-            transition: opacity 0.8s ease;
-            opacity: 0; 
-            filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15));
-        }
+        .update-stamp { text-align: right; font-family: monospace; font-size: 0.65em; color: #777; padding: 5px 12px; background: #eee; margin-bottom: 20px; border-bottom: 1px solid #ddd; }
+        .date-bar { text-align: center; padding: 10px; background: #000; color: white; font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .main-content { padding: 0 12px 40px 12px; }
 
-        .main-title {
-            font-size: 4em;
-            font-weight: 700;
-            letter-spacing: -2px;
-            margin: 0;
-            line-height: 1;
-            color: var(--text);
-            text-align: center;
-            text-shadow: 0 2px 10px rgba(255,255,255,0.8);
-            width: 100%;
-        }
-
-        .date-container {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .date-bar {
-            font-size: 0.85em;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: rgba(0,0,0,0.5);
-            letter-spacing: 3px;
-            background: rgba(255,255,255,0.6);
-            display: inline-block;
-            padding: 8px 20px;
-            border-radius: 30px;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        /* Navigazione Dinamica */
-        .tabs {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .btn-t {
-            padding: 14px 32px;
-            border: 2px solid #d4cdb4;
-            background: rgba(255,255,255,0.8);
-            color: var(--accent);
-            border-radius: 50px;
-            font-weight: 800;
-            cursor: pointer;
-            transition: 0.3s;
-            text-transform: uppercase;
-            font-size: 0.75em;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .btn-t.active {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(166, 124, 0, 0.3);
-        }
-
-        /* Banner Aggiornamento */
-        .update-banner {
-            background: #fff3cd;
-            color: #856404;
-            padding: 15px;
-            text-align: center;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            font-weight: bold;
-            border: 1px solid #ffeeba;
-            display: none;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.6; }
-            100% { opacity: 1; }
-        }
-
-        /* Articoli */
-        .card {
-            background: var(--paper);
-            border-radius: 25px;
-            padding: 35px;
-            margin-bottom: 40px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.06);
-            border: 1px solid #eee;
-            position: relative;
-            animation: slideUp 0.6s ease-out;
-        }
-
-        /* Immagini degli articoli */
-        .article-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            background-color: #eaeaea;
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h3 { margin: 0 0 15px; font-size: 2.3em; line-height: 1.1; letter-spacing: -1px; }
-        .sommario { font-size: 1.2em; line-height: 1.6; color: #444; margin-bottom: 25px; }
+        /* CARDS FISARMONICA */
+        .card { background: white; border-radius: 18px; padding: 20px; margin-bottom: 30px; box-shadow: 0 6px 15px rgba(0,0,0,0.06); border: 1px solid #eee; overflow: hidden; }
+        .img-container { width: calc(100% + 40px); margin: -20px -20px 15px -20px; aspect-ratio: 16 / 9; background: #f4f4f4; display: flex; justify-content: center; align-items: center; }
+        .img-n { max-width: 100%; max-height: 100%; object-fit: contain; }
         
-        .tag-row { display: flex; justify-content: space-between; margin-bottom: 20px; align-items: center; }
-        .tag { font-size: 0.8em; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
-        .badge-fake { background: var(--accent); color: white; padding: 4px 12px; border-radius: 6px; font-size: 0.7em; font-weight: 900; }
-        
-        .comm-box {
-            background: #fdf5e6;
-            padding: 25px;
-            border-left: 6px solid var(--accent);
-            border-radius: 0 20px 20px 0;
-            font-style: italic;
-            color: #5d4037;
-            font-size: 1.1em;
-            line-height: 1.5;
-        }
+        .truncated { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+        .btn-expand { display: block; width: 100%; padding: 12px; margin-top: 10px; background: #f4f4f4; border: 1px solid #ddd; border-radius: 10px; cursor: pointer; font-size: 0.75em; font-weight: bold; }
 
-        #admin-link {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            opacity: 0.02;
-            cursor: pointer;
-            z-index: 1000;
+        /* ADMIN AREA (MATRIX STYLE) */
+        #admin-overlay { 
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(0,0,0,0.98); z-index: 9999; color: #00ff41; font-family: monospace; 
+            padding: 25px; box-sizing: border-box; overflow-y: auto; 
         }
+        .admin-head { display: flex; justify-content: space-between; border-bottom: 1px solid #00ff41; padding-bottom: 15px; margin-bottom: 20px; }
+        .logout-btn { cursor: pointer; color: #ff4d4d; border: 1px solid #ff4d4d; padding: 5px 15px; border-radius: 5px; }
+        .secret-card { border: 1px solid #00ff41; padding: 15px; margin-bottom: 10px; background: rgba(0,255,65,0.05); }
 
-        .error-log {
-            font-family: monospace;
-            font-size: 0.85em;
-            color: #c0392b;
-            background: #fff;
-            padding: 15px;
-            border: 1px solid #ddd;
-            margin-top: 20px;
-            border-radius: 10px;
-            display: none;
+        @media (min-width: 600px) {
+            body { padding: 12px; }
+            .header-box { border-radius: 20px 20px 0 0; }
+            .day-banner-box { border-radius: 0 0 20px 20px; border: 2px solid var(--pescara-blue); }
+            .main-content { padding: 0; }
+            .img-container { width: 100%; margin: 0 0 15px 0; border-radius: 12px; }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body oncontextmenu="return false;">
+    <div id="root">
+        <!-- Pannello Admin -->
+        <div id="admin-overlay">
+            <div class="admin-head">
+                <span>> TERMINALE DIREZIONE (PROTOCOLLO CRIPTATO)</span>
+                <div class="logout-btn" onclick="chiudiAdmin()">LOGOUT [X]</div>
+            </div>
+            <div id="admin-log" style="font-size:0.85em; margin-bottom:25px; color:#888;"></div>
+            <div id="admin-secrets"></div>
+        </div>
 
-    <div class="container">
-        <!-- Testata -->
-        <header class="header-box" onclick="window.location.reload(true)" title="Ricarica la pagina">
-            <img id="header-img" class="header-img" alt="La Voce del Delfino">
-            <h1 id="fallback-title" class="main-title" style="display: none;">La Voce del Delfino</h1>
+        <header class="header-box" id="admin-trigger">
+            <img id="main-header-img" src="" class="header-img" alt="Testata">
+            <div class="date-bar" id="date-now"></div>
         </header>
-
-        <!-- Data -->
-        <div class="date-container">
-            <div id="date-now" class="date-bar">Caricamento Edizione...</div>
-        </div>
-
-        <div class="tabs" id="tabs-container">
-            <!-- I bottoni verranno generati dinamicamente -->
-        </div>
-
-        <!-- Banner Aggiornamento -->
-        <div id="update-banner" class="update-banner"></div>
-
-        <div id="news-container">
-            <!-- News iniettate qui -->
+        
+        <div class="day-banner-box">
+            <img id="day-banner-img" src="" class="day-banner-img">
         </div>
         
-        <div id="error-display" class="error-log">
-            <strong>🔧 DEBUG DIREZIONE:</strong><br>
+        <div id="update-stamp" class="update-stamp">---</div>
+
+        <div class="main-content">
+            <div class="tabs" id="tabs"></div>
+            <div id="news-container"></div>
         </div>
     </div>
 
-    <!-- Bottone segreto Admin -->
-    <div id="admin-link" onclick="chiediAdmin()"></div>
-
     <script>
-        const v = Date.now();
-        let currentConfig = null;
+        let clickCount = 0, lastClick = 0;
+        let adminSessionData = null; // Memoria temporanea volatile
 
-        function logDebug(msg) {
-            const errDiv = document.getElementById('error-display');
-            errDiv.style.display = 'block';
-            errDiv.innerHTML += `> ${msg}<br>`;
+        // Funzione per ripulire tutto all'uscita
+        function chiudiAdmin() {
+            document.getElementById('admin-overlay').style.display = 'none';
+            document.getElementById('admin-secrets').innerHTML = "";
+            document.getElementById('admin-log').innerText = "";
+            adminSessionData = null; // CANCELLA I DATI DALLA MEMORIA
+            console.log("Sessione Admin terminata. Memoria ripulita.");
         }
 
-        function showBanner(text) {
-            const banner = document.getElementById('update-banner');
-            banner.style.display = 'block';
-            banner.innerHTML = text;
+        /**
+         * Funzioni di Sicurezza Browser
+         */
+        async function hashString(str) {
+            const msgUint8 = new TextEncoder().encode(str);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         }
 
-        // Funzione per gestire i fallbacks delle immagini degli articoli (salvagente default.png)
-        function fallbackArticolo(imgEl, nomeFile) {
-            if (!imgEl.dataset.retry) {
-                imgEl.dataset.retry = "public";
-                imgEl.src = `public/images/${nomeFile}?v=${v}`;
-            } else if (imgEl.dataset.retry === "public") {
-                imgEl.dataset.retry = "default";
-                imgEl.src = `images/default.png?v=${v}`;
-            } else if (imgEl.dataset.retry === "default") {
-                imgEl.dataset.retry = "public_default";
-                imgEl.src = `public/images/default.png?v=${v}`;
-            } else {
-                imgEl.style.display = 'none'; // Se falliscono tutte, nasconde l'immagine per pulizia
+        function decrypt(cipher, key) {
+            const text = atob(cipher);
+            let result = "";
+            for (let i = 0; i < text.length; i++) {
+                result += String.fromCharCode(text.charCodeAt(i) ^ key.charCodeAt(i % key.length));
             }
+            return result;
         }
 
+        // Innesco Admin: 5 click rapidi
+        document.getElementById('admin-trigger').addEventListener('click', async () => {
+            const now = Date.now();
+            if (now - lastClick > 1000) clickCount = 0; 
+            clickCount++; lastClick = now;
+
+            if (clickCount === 5) {
+                clickCount = 0;
+                const pwd = prompt("Identificazione richiesta:");
+                if (!pwd) return;
+
+                const h = await hashString(pwd);
+                try {
+                    const res = await fetch(`data/auth_info.json?v=${Date.now()}`);
+                    const auth = await res.json();
+                    
+                    if (h === auth.check) {
+                        // Successo! Decriptiamo i dati solo ora usando la password fornita
+                        const decrypted = decrypt(auth.data, pwd);
+                        adminSessionData = decrypted.split('|');
+                        
+                        document.getElementById('admin-overlay').style.display = 'block';
+                        const log = await (await fetch(`data/redazione.log?v=${Date.now()}`)).text();
+                        document.getElementById('admin-log').innerText = log;
+                        
+                        let html = "<strong>MESSAGGI RISERVATI:</strong><br><br>";
+                        adminSessionData.forEach(s => html += `<div class="secret-card">> ${s}</div>`);
+                        document.getElementById('admin-secrets').innerHTML = html;
+                    } else {
+                        alert("Chiave errata.");
+                    }
+                } catch(e) { alert("Sistemi non sincronizzati."); }
+            }
+        });
+
+        // Inizializzazione Sito
         async function init() {
-            logDebug("Inizializzazione Vetrina...");
             try {
-                const paths = [
-                    `public/data/active_config.json?v=${v}`,
-                    `data/active_config.json?v=${v}`,
-                    `public/data/config.json?v=${v}`
-                ];
+                const res = await fetch(`data/active_config.json?v=${Date.now()}`);
+                const config = await res.json();
+                document.getElementById('main-header-img').src = `images/${config.site_settings.header_img}`;
+                document.getElementById('day-banner-img').src = `images/${config.site_settings.day_banner}`;
+                document.getElementById('date-now').innerText = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+                document.getElementById('update-stamp').innerText = `ULTIMO AGGIORNAMENTO: ${config.site_settings.last_update || 'N/A'}`;
                 
-                let res = null;
-                for (let p of paths) {
-                    res = await fetch(p);
-                    if (res.ok) break;
-                }
-                
-                if (!res || !res.ok) throw new Error("Config non trovato");
-                currentConfig = await res.json();
-                
-                const headerFile = currentConfig.site_settings?.Header || currentConfig.site_settings?.header_img;
-                
-                const hImg = document.getElementById('header-img');
-                const fallbackTitle = document.getElementById('fallback-title');
-                
-                if (headerFile) {
-                    const imgPaths = [`images/${headerFile}`, `public/images/${headerFile}`];
-                    
-                    hImg.onload = () => {
-                        hImg.style.opacity = '1';
-                        fallbackTitle.style.display = 'none';
-                        logDebug("Logo caricato con successo.");
-                    };
-                    
-                    hImg.onerror = () => {
-                        if (imgPaths.length > 0) {
-                            hImg.src = `${imgPaths.shift()}?v=${v}`;
-                        } else {
-                            hImg.style.display = 'none';
-                            fallbackTitle.style.display = 'block';
-                            logDebug("Impossibile trovare il logo.");
-                        }
-                    };
-                    
-                    hImg.src = `${imgPaths.shift()}?v=${v}`;
-                } else {
-                    hImg.style.display = 'none';
-                    fallbackTitle.style.display = 'block';
-                }
-
-                const tabsContainer = document.getElementById('tabs-container');
-                const sezioni = Object.keys(currentConfig).filter(k => 
-                    !['site_settings', 'satira_config'].includes(k)
-                );
-
-                if (sezioni.length === 0) {
-                    showBanner('🔄 Nessuna sezione configurata. Aggiornamento in corso...');
-                    return;
-                }
-
-                sezioni.forEach((sez, index) => {
-                    const btn = document.createElement('button');
-                    btn.className = 'btn-t' + (index === 0 ? ' active' : '');
-                    let emoji = sez.toLowerCase().includes('pescara') ? '🐬' : '🌍';
-                    btn.innerHTML = `${emoji} ${sez}`;
-                    btn.onclick = () => loadSez(sez, btn);
-                    tabsContainer.appendChild(btn);
+                const activeSezs = Object.keys(config).filter(k => !['site_settings', 'satira_config'].includes(k) && Object.values(config[k]).some(i => i.count > 0));
+                const tDiv = document.getElementById('tabs');
+                if (activeSezs.length === 0) return;
+                activeSezs.forEach(s => {
+                    const b = document.createElement('button'); b.className = 'btn-t'; b.innerText = s;
+                    b.onclick = () => loadSez(s); tDiv.appendChild(b);
                 });
-
-                loadSez(sezioni[0], tabsContainer.firstChild);
-
-            } catch (e) {
-                logDebug(`Errore Init: ${e.message}`);
-                showBanner('🔄 Aggiornamento in corso...');
-            }
+                loadSez(activeSezs[0]);
+            } catch(e) {}
         }
 
-        async function loadSez(sezKey, btn) {
+        async function loadSez(s) {
             document.querySelectorAll('.btn-t').forEach(b => b.classList.remove('active'));
-            if (btn) btn.classList.add('active');
-
+            const activeBtn = Array.from(document.querySelectorAll('.btn-t')).find(b => b.innerText === s);
+            if (activeBtn) activeBtn.classList.add('active');
+            const r = await fetch(`data/news-${s}.json?v=${Date.now()}`);
+            const data = await r.json();
+            document.documentElement.style.setProperty('--main-color', data.color);
             const container = document.getElementById('news-container');
-            const banner = document.getElementById('update-banner');
-            
-            showBanner('🔄 Ricerca notizie in corso...');
-
-            try {
-                const sezColor = currentConfig[sezKey]?.color || '#a67c00';
-                document.documentElement.style.setProperty('--accent', sezColor);
-
-                const paths = [
-                    `public/data/news-${sezKey.toLowerCase()}.json?v=${v}`,
-                    `data/news-${sezKey.toLowerCase()}.json?v=${v}`
-                ];
-
-                let r = null;
-                for (let p of paths) {
-                    r = await fetch(p);
-                    if (r.ok) break;
-                }
-
-                if (!r || !r.ok) throw new Error(`Dati news-${sezKey} non trovati`);
-                
-                const data = await r.json();
-                
-                if (!data.news || data.news.length === 0) {
-                    showBanner('🔄 Aggiornamento in corso... (Mostrando l\'ultima edizione)');
-                    return; 
-                }
-
-                banner.style.display = 'none';
-
-                if (data.today) document.getElementById('date-now').innerText = data.today;
-                
-                container.innerHTML = '';
-                data.news.forEach(n => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    
-                    // Creazione della card con salvataggio intelligente dell'immagine
-                    card.innerHTML = `
-                        ${n.immagine ? `<img src="images/${n.immagine}?v=${v}" onerror="fallbackArticolo(this, '${n.immagine}')" class="article-img" alt="Immagine articolo">` : `<img src="images/default.png?v=${v}" onerror="fallbackArticolo(this, 'default.png')" class="article-img" alt="Immagine articolo">`}
-                        <div class="tag-row">
-                            <span class="tag">${n.categoria || 'NEWS'} • ${n.fonte || 'Ansa'}</span>
-                            ${n.isFake ? '<span class="badge-fake">SATIRA</span>' : ''}
-                        </div>
+            container.innerHTML = '';
+            data.news.forEach((n, idx) => {
+                container.innerHTML += `
+                    <div class="card">
+                        <div class="tag-row"><span class="tag">${n.categoria}</span>${n.isFake ? '<span class="badge-fake">FAKE</span>' : ''}</div>
+                        <div class="img-container"><img src="images/${n.immagine}" class="img-n"></div>
                         <h3>${n.titolo}</h3>
-                        <div class="sommario">${n.sommario}</div>
+                        <div id="art-${idx}" class="content-text truncated">${n.articolo}</div>
+                        <button class="btn-expand" onclick="this.previousElementSibling.classList.toggle('truncated'); this.innerText = this.innerText === 'Leggi di più' ? 'Chiudi' : 'Leggi di più'">Leggi di più</button>
                         <div class="comm-box">
-                            <strong>🐬 Il commento:</strong><br>
-                            ${n.commento}
+                            <div class="comm-text comm-truncated">🐬 <strong>Il Delfino:</strong> ${n.commento}</div>
+                            <button class="btn-expand" style="background:none; border:none; color:var(--main-color); margin-top:5px; text-align:left;" onclick="this.previousElementSibling.classList.toggle('comm-truncated'); this.innerText = this.innerText === 'Leggi tutto' ? 'Chiudi' : 'Leggi tutto'">Leggi tutto</button>
                         </div>
-                    `;
-                    container.appendChild(card);
-                });
-
-            } catch(e) {
-                logDebug(`Errore caricamento ${sezKey}: ${e.message}`);
-                showBanner('🔄 Aggiornamento in corso...');
-            }
+                    </div>`;
+            });
         }
-
-        function chiediAdmin() {
-            const pwd = prompt("PIN Direttore:");
-            fetch(`public/data/auth_info.json?v=${v}`)
-                .then(r => r.json())
-                .then(d => {
-                    if (pwd === d.key) {
-                        alert("DIRETTORE IDENTIFICATO.\nConsole Debug attiva.");
-                        document.getElementById('error-display').style.display = 'block';
-                    } else alert("NEGATO.");
-                }).catch(() => alert("Auth offline."));
-        }
-
-        window.onload = init;
+        init();
     </script>
 </body>
 </html>
+
