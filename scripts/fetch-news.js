@@ -125,11 +125,22 @@ async function fetchRSS(query, max) {
         }
         const xml = await res.text();
         const titles = [];
-        const regex = /<title><!\[CDATA\[(.*?)\]\]><\/title>/g;
+        
+        // CORREZIONE: Nuova espressione regolare senza vincolo CDATA
+        const regex = /<title>(.*?)<\/title>/g;
         let m;
-        while ((m = regex.exec(xml)) !== null && titles.length < max) { 
-            titles.push(m[1]); 
+        let isFirst = true; // Serve a saltare il primo risultato che è il titolo del sito stesso
+        
+        while ((m = regex.exec(xml)) !== null) { 
+            if (isFirst) {
+                isFirst = false;
+                continue;
+            }
+            // Pulisce da eventuali vecchi tag CDATA se per caso dovessero ricomparire
+            titles.push(m[1].replace(/<!\[CDATA\[|\]\]>/g, '').trim()); 
+            if (titles.length >= max) break;
         }
+        
         scriviLog(`✅ Trovati ${titles.length} articoli per ${query}.`);
         return titles;
     } catch(e) { 
