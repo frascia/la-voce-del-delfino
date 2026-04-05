@@ -1,3 +1,4 @@
+# Questo file dice al bot: "Cerca le notizie e salvale nei file JSON"
 name: Aggiornamento Dinamico Delfino
 
 on:
@@ -5,7 +6,6 @@ on:
   schedule:
     - cron: '0 7-21/2 * * *' 
 
-# Ecco la chiave universale: diamo il permesso di scrivere contenuti E workflow
 permissions:
   contents: write
   workflows: write
@@ -19,7 +19,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Sincronizzazione Totale
+      - name: Sincronizzazione Git
         run: |
           git config --global user.name "DelfinoBot"
           git config --global user.email "bot@lavocedeldelfino.it"
@@ -33,19 +33,12 @@ jobs:
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/fetch-news.js
 
-      - name: Pubblicazione e Spinta
+      - name: Pubblicazione Forzata
         run: |
-          # Aggiungiamo i dati e i log
           git add public/data/*.json public/data/*.log
-          
-          # Se il bot ha "sentito" modifiche al workflow le aggiungiamo
-          # così non ci sono discrepanze
-          git add .github/workflows/*.yml
-          
           if git diff --staged --quiet; then
-            echo "Nessun pesce fresco da vendere."
+            echo "Nessuna novità."
             exit 0
           fi
-          
           git commit -m "🗞️ News Refresh $(date +'%d-%m %H:%M')"
           git push origin main --force
