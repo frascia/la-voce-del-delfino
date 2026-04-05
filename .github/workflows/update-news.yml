@@ -1,20 +1,18 @@
-# Questo file dice al bot: "Cerca le notizie e salvale nei file JSON"
 name: Aggiornamento Dinamico Delfino
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 7-21/2 * * *' 
-
-permissions:
-  contents: write
-  workflows: write
+    - cron: '0 7-21/2 * * *'
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      workflows: write
     steps:
-      - name: Arrivo in Redazione
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
