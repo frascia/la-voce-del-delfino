@@ -27,12 +27,12 @@
             padding: 20px;
         }
 
-        /* Testata Dinamica */
+        /* Testata Dinamica - Dimensioni Originali Ripristinate */
         .header-box {
             background: transparent;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             position: relative;
-            min-height: 150px;
+            min-height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -41,18 +41,18 @@
 
         .header-img {
             max-width: 100%;
-            max-height: 160px;
+            max-height: 280px; /* Ripristinato a 280px */
             object-fit: contain;
             display: block;
             transition: opacity 0.8s ease;
             opacity: 0; 
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.12));
+            filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15));
         }
 
         .main-title {
-            font-size: 3em;
+            font-size: 4em;
             font-weight: 700;
-            letter-spacing: -1.5px;
+            letter-spacing: -2px;
             margin: 0;
             line-height: 1;
             color: var(--text);
@@ -63,23 +63,23 @@
 
         .date-container {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .date-bar {
-            font-size: 0.8em;
+            font-size: 0.85em;
             text-transform: uppercase;
             font-weight: 700;
             color: rgba(0,0,0,0.5);
             letter-spacing: 3px;
             background: rgba(255,255,255,0.6);
             display: inline-block;
-            padding: 6px 18px;
+            padding: 8px 20px;
             border-radius: 30px;
             border: 1px solid rgba(0,0,0,0.05);
         }
 
-        /* Navigazione */
+        /* Navigazione Dinamica */
         .tabs {
             display: flex;
             justify-content: center;
@@ -89,7 +89,7 @@
         }
 
         .btn-t {
-            padding: 12px 28px;
+            padding: 14px 32px;
             border: 2px solid #d4cdb4;
             background: rgba(255,255,255,0.8);
             color: var(--accent);
@@ -143,13 +143,23 @@
             animation: slideUp 0.6s ease-out;
         }
 
+        /* Immagini degli articoli */
+        .article-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            background-color: #eaeaea;
+        }
+
         @keyframes slideUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        h3 { margin: 0 0 15px; font-size: 2.1em; line-height: 1.1; letter-spacing: -1px; }
-        .sommario { font-size: 1.15em; line-height: 1.6; color: #444; margin-bottom: 25px; }
+        h3 { margin: 0 0 15px; font-size: 2.3em; line-height: 1.1; letter-spacing: -1px; }
+        .sommario { font-size: 1.2em; line-height: 1.6; color: #444; margin-bottom: 25px; }
         
         .tag-row { display: flex; justify-content: space-between; margin-bottom: 20px; align-items: center; }
         .tag { font-size: 0.8em; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
@@ -345,10 +355,9 @@
                 
                 if (!data.news || data.news.length === 0) {
                     showBanner('🔄 Aggiornamento in corso... (Mostrando l\'ultima edizione)');
-                    return; // Interrompe qui. Non cancella il container, le vecchie news restano visibili.
+                    return; 
                 }
 
-                // Se ci sono nuove news, nasconde il banner e renderizza
                 banner.style.display = 'none';
 
                 if (data.today) document.getElementById('date-now').innerText = data.today;
@@ -357,7 +366,10 @@
                 data.news.forEach(n => {
                     const card = document.createElement('div');
                     card.className = 'card';
+                    
+                    // Creazione della card con l'immagine ripristinata in alto
                     card.innerHTML = `
+                        ${n.immagine ? `<img src="images/${n.immagine}?v=${v}" onerror="this.onerror=null; this.src='public/images/${n.immagine}?v=${v}';" class="article-img" alt="Immagine articolo">` : ''}
                         <div class="tag-row">
                             <span class="tag">${n.categoria || 'NEWS'} • ${n.fonte || 'Ansa'}</span>
                             ${n.isFake ? '<span class="badge-fake">SATIRA</span>' : ''}
