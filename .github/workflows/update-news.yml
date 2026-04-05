@@ -1,10 +1,13 @@
-# Workflow per far girare il bot delle notizie
 name: Aggiornamento Dinamico Delfino
 
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 7-21/2 * * *' 
+
+# Rende esplicito che il bot può scrivere nel repository
+permissions:
+  contents: write
 
 jobs:
   update:
@@ -15,12 +18,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Sincronizzazione Forzata
+      - name: Sincronizzazione
         run: |
           git config --global user.name "DelfinoBot"
           git config --global user.email "bot@lavocedeldelfino.it"
           git fetch origin main
-          # Corretto: origin/main con lo slash, non lo spazio!
           git reset --hard origin/main
 
       - name: Esecuzione Redazione
@@ -32,10 +34,13 @@ jobs:
 
       - name: Pubblicazione Risultati
         run: |
+          # AGGIUNGIAMO SOLO I DATI, MAI IL WORKFLOW
           git add public/data/*.json public/data/*.log
+          
           if git diff --staged --quiet; then
-            echo "Nessuna novità."
+            echo "Nessuna novità da pubblicare."
             exit 0
           fi
+          
           git commit -m "🗞️ News Refresh $(date +'%d-%m %H:%M')"
           git push origin main --force
