@@ -223,17 +223,18 @@
                 if (!res.ok) res = await fetch(`public/data/config.json?v=${v}`);
                 
                 if (!res.ok) {
-                    logError("Configurazione non trovata nei percorsi previsti.");
+                    logError("Configurazione non trovata. Controlla la cartella public/data.");
                     throw new Error("404 Config");
                 }
                 
                 currentConfig = await res.json();
                 
-                // Impostazione Logo
-                if (currentConfig.site_settings && currentConfig.site_settings.header_img) {
+                // Impostazione Logo - Cerca la chiave 'Header' o 'header_img'
+                const headerFile = currentConfig.site_settings?.Header || currentConfig.site_settings?.header_img;
+                if (headerFile) {
                     const hImg = document.getElementById('header-img');
-                    // Prova a caricare l'immagine dal percorso public/images/
-                    hImg.src = `public/images/${currentConfig.site_settings.header_img}?v=${v}`;
+                    // Costruisce il percorso. Assicurati che il file sia in public/images/
+                    hImg.src = `public/images/${headerFile}?v=${v}`;
                 }
 
                 loadSez('mondo', document.querySelector('.btn-t.active'));
@@ -245,14 +246,15 @@
         }
 
         async function loadSez(sez, btn) {
-            document.querySelectorAll('.btn-t').forEach(b => b.classList.remove('active'));
+            if(document.querySelectorAll('.btn-t').length > 0) {
+                document.querySelectorAll('.btn-t').forEach(b => b.classList.remove('active'));
+            }
             if(btn) btn.classList.add('active');
 
             const container = document.getElementById('news-container');
             container.innerHTML = '<div style="text-align:center; padding:80px; font-size:1.2em; color:#999;">🐟 Il Delfino sta pescando le news...</div>';
 
             try {
-                // Prova a caricare news-mondo.json o news-pescara.json
                 let path = `public/data/news-${sez}.json?v=${v}`;
                 let r = await fetch(path);
                 
@@ -265,7 +267,7 @@
                 
                 const data = await r.json();
                 if (!data.news || data.news.length === 0) {
-                    mostraVuoto("Il file è stato generato ma non contiene notizie.");
+                    mostraVuoto("Il file esiste ma le reti sono vuote.");
                     return;
                 }
 
@@ -283,7 +285,7 @@
                         <h3>${n.titolo}</h3>
                         <div class="sommario">${n.sommario}</div>
                         <div class="comm-box">
-                            <strong>🐬 Il commento del Delfino:</strong><br>
+                            <strong>🐬 Il commento:</strong><br>
                             ${n.commento}
                         </div>
                     `;
@@ -292,7 +294,7 @@
 
             } catch(e) {
                 logError(`Errore caricamento news-${sez}: ${e.message}`);
-                mostraVuoto("Le reti sono ancora vuote — il Delfino sta lavorando!");
+                mostraVuoto("Il Delfino sta ancora preparando questa edizione. Riprova tra poco!");
             }
         }
 
@@ -300,23 +302,23 @@
             document.getElementById('news-container').innerHTML = `
                 <div class="empty-state">
                     <div style="font-size: 5em; margin-bottom: 20px;">🌊</div>
-                    <h2 style="font-family: serif;">Reti vuote</h2>
+                    <h2 style="font-family: serif;">Notizie in arrivo</h2>
                     <p style="color: #666; max-width: 400px; margin: auto; line-height: 1.6;">
                         ${msg}<br><br>
-                        Assicurati che il bot abbia terminato l'aggiornamento e prova a ricaricare la pagina.
+                        Controlla che l'azione su GitHub sia terminata con successo.
                     </p>
                     <button onclick="location.reload(true)" style="margin-top:30px; padding:12px 30px; background:var(--accent); color:white; border:none; border-radius:30px; cursor:pointer; font-weight:bold;">🔄 AGGIORNA ORA</button>
                 </div>`;
         }
 
         function chiediAdmin() {
-            const pwd = prompt("Area Riservata Direttore - Inserire PIN:");
+            const pwd = prompt("PIN Direttore:");
             fetch(`public/data/auth_info.json?v=${v}`)
                 .then(r => r.json())
                 .then(d => {
-                    if (pwd === d.key) alert("IDENTITÀ CONFERMATA.\nIl sistema è operativo. Controlla i log nel browser (F12) per i dettagli tecnici.");
+                    if (pwd === d.key) alert("ACCESSO CONFERMATO.\nSistema integro.");
                     else alert("ACCESSO NEGATO.");
-                }).catch(() => alert("Sistema di sicurezza offline."));
+                }).catch(() => alert("Auth non disponibile."));
         }
 
         window.onload = init;
