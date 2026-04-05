@@ -9,11 +9,18 @@ jobs:
     steps:
       - name: Checkout Codice
         uses: actions/checkout@v4
+
       - name: Configura Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+
+      - name: Installazione Dipendenze (se presenti)
+        run: |
+          if [ -f package.json ]; then
+            npm install
+          fi
+
       - name: Esecuzione Redazione
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -21,6 +28,7 @@ jobs:
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/fetch-news.js
         continue-on-error: true
+
       - name: Commit e Push Risultati
         run: |
           git config --global user.name "DelfinoBot"
