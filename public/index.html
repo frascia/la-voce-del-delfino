@@ -27,63 +27,57 @@
             padding: 20px;
         }
 
-        /* Testata Dinamica - Trasparenza Totale */
+        /* Testata Dinamica - Completamente Fluttuante */
         .header-box {
             background: transparent;
-            border-radius: 30px;
-            overflow: hidden;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             position: relative;
-            min-height: 280px;
+            min-height: 200px;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
         }
 
         .header-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* Usiamo contain per non tagliare il logo */
+            max-width: 100%;
+            max-height: 280px; /* Altezza massima per non esagerare */
+            object-fit: contain; /* Non taglia mai il logo */
             display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            background: transparent;
-            transition: opacity 0.5s ease;
-            opacity: 0; /* Parte invisibile, diventa 1 solo se caricata con successo */
-        }
-
-        .header-overlay {
-            position: relative;
-            z-index: 2;
-            margin-top: auto;
-            padding: 20px;
-            background: transparent;
-            text-align: center;
+            transition: opacity 0.8s ease;
+            opacity: 0; /* Inizia invisibile */
+            /* Questa ombra segue la SAGOMA del logo trasparente, non fa un rettangolo! */
+            filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15)); 
         }
 
         .main-title {
-            font-size: 3.8em;
+            font-size: 4em;
             font-weight: 700;
             letter-spacing: -2px;
             margin: 0;
             line-height: 1;
             color: var(--text);
+            text-align: center;
             text-shadow: 0 2px 10px rgba(255,255,255,0.8);
+            width: 100%;
+        }
+
+        .date-container {
+            text-align: center;
+            margin-bottom: 35px;
         }
 
         .date-bar {
             font-size: 0.85em;
             text-transform: uppercase;
             font-weight: 700;
-            color: rgba(0,0,0,0.4);
+            color: rgba(0,0,0,0.5);
             letter-spacing: 3px;
-            margin-top: 15px;
-            background: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.6);
             display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         /* Navigazione Dinamica */
@@ -191,15 +185,16 @@
 <body>
 
     <div class="container">
-        <header class="header-box" onclick="window.location.reload(true)">
-            <!-- Rimosso onerror inline, gestiamo tutto tramite Javascript -->
+        <!-- Testata 100% pulita -->
+        <header class="header-box" onclick="window.location.reload(true)" title="Ricarica la pagina">
             <img id="header-img" class="header-img" alt="La Voce del Delfino">
-            <div class="header-overlay">
-                <!-- Questo titolo appare SOLO se il logo non viene trovato -->
-                <h1 id="fallback-title" class="main-title" style="display: none;">La Voce del Delfino</h1>
-                <div id="date-now" class="date-bar">Caricamento Edizione...</div>
-            </div>
+            <h1 id="fallback-title" class="main-title" style="display: none;">La Voce del Delfino</h1>
         </header>
+
+        <!-- Data spostata sotto il logo -->
+        <div class="date-container">
+            <div id="date-now" class="date-bar">Caricamento Edizione...</div>
+        </div>
 
         <div class="tabs" id="tabs-container">
             <!-- I bottoni verranno generati dinamicamente -->
@@ -267,7 +262,7 @@
                             hImg.src = `${imgPaths.shift()}?v=${v}`;
                         } else {
                             // Se falliscono tutti, mostra il testo come salvagente
-                            hImg.style.opacity = '0';
+                            hImg.style.display = 'none';
                             fallbackTitle.style.display = 'block';
                             logDebug("Impossibile trovare il logo. Attivata scritta di sicurezza.");
                         }
@@ -276,6 +271,7 @@
                     // Fai partire il primo tentativo
                     hImg.src = `${imgPaths.shift()}?v=${v}`;
                 } else {
+                    hImg.style.display = 'none';
                     fallbackTitle.style.display = 'block';
                 }
 
@@ -334,7 +330,7 @@
                 
                 // SE IL FILE ESISTE MA È VUOTO:
                 if (!data.news || data.news.length === 0) {
-                    mostraVuoto("Il file JSON è stato trovato, ma non contiene articoli (0 news generate dal Bot).");
+                    mostraVuoto("Il file JSON è stato trovato, ma non contiene articoli (0 news generate dal Bot in questo turno).");
                     return;
                 }
 
@@ -372,7 +368,7 @@
                     <h2 style="font-family: serif;">Orizzonte Libero</h2>
                     <p style="color: #666; max-width: 450px; margin: auto; line-height: 1.6;">
                         ${msg}<br><br>
-                        <small>Se hai appena fatto modifiche su GitHub, aspetta che il processo sia completato.</small>
+                        <small>Esegui nuovamente il Workflow su GitHub Actions per far ripartire la ricerca delle news.</small>
                     </p>
                     <button onclick="location.reload(true)" style="margin-top:30px; padding:14px 40px; background:var(--accent); color:white; border:none; border-radius:30px; cursor:pointer; font-weight:bold;">🔄 AGGIORNA ORA</button>
                 </div>`;
