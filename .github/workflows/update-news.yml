@@ -3,12 +3,19 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 7-21/2 * * *'
+
+# FONDAMENTALE: Permette al bot di scrivere nel repository
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Codice
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Prende tutta la cronologia per evitare conflitti
 
       - name: Configura Node.js
         uses: actions/setup-node@v4
@@ -33,5 +40,14 @@ jobs:
         run: |
           git config --global user.name "DelfinoBot"
           git config --global user.email "bot@lavocedeldelfino.it"
+          
+          # Aggiungiamo tutti i file JSON e i LOG generati
           git add public/data/*.json public/data/*.log
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🗞️ News Refresh" && git push)
+          
+          # Se ci sono cambiamenti, facciamo il push. Se non ce ne sono, usciamo puliti.
+          if git diff --staged --quiet; then
+            echo "Nessun cambiamento rilevato. Il Delfino non ha pescato nulla di nuovo."
+          else
+            git commit -m "🗞️ News Refresh - $(date +'%Y-%m-%d %H:%M')"
+            git push origin main
+          fi
