@@ -27,12 +27,12 @@
             padding: 20px;
         }
 
-        /* Testata Dinamica - Completamente Fluttuante */
+        /* Testata Dinamica */
         .header-box {
             background: transparent;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             position: relative;
-            min-height: 200px;
+            min-height: 150px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -41,19 +41,18 @@
 
         .header-img {
             max-width: 100%;
-            max-height: 280px; /* Altezza massima per non esagerare */
-            object-fit: contain; /* Non taglia mai il logo */
+            max-height: 160px;
+            object-fit: contain;
             display: block;
             transition: opacity 0.8s ease;
-            opacity: 0; /* Inizia invisibile */
-            /* Questa ombra segue la SAGOMA del logo trasparente, non fa un rettangolo! */
-            filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15)); 
+            opacity: 0; 
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.12));
         }
 
         .main-title {
-            font-size: 4em;
+            font-size: 3em;
             font-weight: 700;
-            letter-spacing: -2px;
+            letter-spacing: -1.5px;
             margin: 0;
             line-height: 1;
             color: var(--text);
@@ -64,23 +63,23 @@
 
         .date-container {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .date-bar {
-            font-size: 0.85em;
+            font-size: 0.8em;
             text-transform: uppercase;
             font-weight: 700;
             color: rgba(0,0,0,0.5);
             letter-spacing: 3px;
             background: rgba(255,255,255,0.6);
             display: inline-block;
-            padding: 8px 20px;
+            padding: 6px 18px;
             border-radius: 30px;
             border: 1px solid rgba(0,0,0,0.05);
         }
 
-        /* Navigazione Dinamica */
+        /* Navigazione */
         .tabs {
             display: flex;
             justify-content: center;
@@ -90,7 +89,7 @@
         }
 
         .btn-t {
-            padding: 14px 32px;
+            padding: 12px 28px;
             border: 2px solid #d4cdb4;
             background: rgba(255,255,255,0.8);
             color: var(--accent);
@@ -112,6 +111,26 @@
             box-shadow: 0 8px 20px rgba(166, 124, 0, 0.3);
         }
 
+        /* Banner Aggiornamento */
+        .update-banner {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            font-weight: bold;
+            border: 1px solid #ffeeba;
+            display: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
         /* Articoli */
         .card {
             background: var(--paper);
@@ -129,8 +148,8 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        h3 { margin: 0 0 15px; font-size: 2.3em; line-height: 1.1; letter-spacing: -1px; }
-        .sommario { font-size: 1.2em; line-height: 1.6; color: #444; margin-bottom: 25px; }
+        h3 { margin: 0 0 15px; font-size: 2.1em; line-height: 1.1; letter-spacing: -1px; }
+        .sommario { font-size: 1.15em; line-height: 1.6; color: #444; margin-bottom: 25px; }
         
         .tag-row { display: flex; justify-content: space-between; margin-bottom: 20px; align-items: center; }
         .tag { font-size: 0.8em; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
@@ -145,16 +164,6 @@
             color: #5d4037;
             font-size: 1.1em;
             line-height: 1.5;
-        }
-
-        /* Stati Vuoti */
-        .empty-state {
-            text-align: center;
-            background: white;
-            padding: 80px 40px;
-            border-radius: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
-            border: 1px solid #f0f0f0;
         }
 
         #admin-link {
@@ -185,13 +194,13 @@
 <body>
 
     <div class="container">
-        <!-- Testata 100% pulita -->
+        <!-- Testata -->
         <header class="header-box" onclick="window.location.reload(true)" title="Ricarica la pagina">
             <img id="header-img" class="header-img" alt="La Voce del Delfino">
             <h1 id="fallback-title" class="main-title" style="display: none;">La Voce del Delfino</h1>
         </header>
 
-        <!-- Data spostata sotto il logo -->
+        <!-- Data -->
         <div class="date-container">
             <div id="date-now" class="date-bar">Caricamento Edizione...</div>
         </div>
@@ -199,6 +208,9 @@
         <div class="tabs" id="tabs-container">
             <!-- I bottoni verranno generati dinamicamente -->
         </div>
+
+        <!-- Banner Aggiornamento -->
+        <div id="update-banner" class="update-banner"></div>
 
         <div id="news-container">
             <!-- News iniettate qui -->
@@ -222,6 +234,12 @@
             errDiv.innerHTML += `> ${msg}<br>`;
         }
 
+        function showBanner(text) {
+            const banner = document.getElementById('update-banner');
+            banner.style.display = 'block';
+            banner.innerHTML = text;
+        }
+
         async function init() {
             logDebug("Inizializzazione Vetrina...");
             try {
@@ -242,33 +260,28 @@
                 
                 const headerFile = currentConfig.site_settings?.Header || currentConfig.site_settings?.header_img;
                 
-                // GESTIONE INTELLIGENTE DEL LOGO
                 const hImg = document.getElementById('header-img');
                 const fallbackTitle = document.getElementById('fallback-title');
                 
                 if (headerFile) {
-                    // Coda dei percorsi da provare
                     const imgPaths = [`images/${headerFile}`, `public/images/${headerFile}`];
                     
                     hImg.onload = () => {
                         hImg.style.opacity = '1';
-                        fallbackTitle.style.display = 'none'; // Nasconde la scritta se c'è l'immagine
+                        fallbackTitle.style.display = 'none';
                         logDebug("Logo caricato con successo.");
                     };
                     
                     hImg.onerror = () => {
                         if (imgPaths.length > 0) {
-                            // Se fallisce, prova il prossimo percorso della lista
                             hImg.src = `${imgPaths.shift()}?v=${v}`;
                         } else {
-                            // Se falliscono tutti, mostra il testo come salvagente
                             hImg.style.display = 'none';
                             fallbackTitle.style.display = 'block';
-                            logDebug("Impossibile trovare il logo. Attivata scritta di sicurezza.");
+                            logDebug("Impossibile trovare il logo.");
                         }
                     };
                     
-                    // Fai partire il primo tentativo
                     hImg.src = `${imgPaths.shift()}?v=${v}`;
                 } else {
                     hImg.style.display = 'none';
@@ -281,7 +294,7 @@
                 );
 
                 if (sezioni.length === 0) {
-                    mostraVuoto("Nessuna sezione configurata.");
+                    showBanner('🔄 Nessuna sezione configurata. Aggiornamento in corso...');
                     return;
                 }
 
@@ -298,7 +311,7 @@
 
             } catch (e) {
                 logDebug(`Errore Init: ${e.message}`);
-                mostraVuoto("Il Delfino è rimasto impigliato. Controlla i file JSON.");
+                showBanner('🔄 Aggiornamento in corso...');
             }
         }
 
@@ -307,7 +320,9 @@
             if (btn) btn.classList.add('active');
 
             const container = document.getElementById('news-container');
-            container.innerHTML = '<div style="text-align:center; padding:80px; font-size:1.2em; color:#999;">🐟 Il Delfino sta pescando le news...</div>';
+            const banner = document.getElementById('update-banner');
+            
+            showBanner('🔄 Ricerca notizie in corso...');
 
             try {
                 const sezColor = currentConfig[sezKey]?.color || '#a67c00';
@@ -328,11 +343,13 @@
                 
                 const data = await r.json();
                 
-                // SE IL FILE ESISTE MA È VUOTO:
                 if (!data.news || data.news.length === 0) {
-                    mostraVuoto("Il file JSON è stato trovato, ma non contiene articoli (0 news generate dal Bot in questo turno).");
-                    return;
+                    showBanner('🔄 Aggiornamento in corso... (Mostrando l\'ultima edizione)');
+                    return; // Interrompe qui. Non cancella il container, le vecchie news restano visibili.
                 }
+
+                // Se ci sono nuove news, nasconde il banner e renderizza
+                banner.style.display = 'none';
 
                 if (data.today) document.getElementById('date-now').innerText = data.today;
                 
@@ -357,21 +374,8 @@
 
             } catch(e) {
                 logDebug(`Errore caricamento ${sezKey}: ${e.message}`);
-                mostraVuoto("I file delle notizie non sono stati trovati su GitHub.");
+                showBanner('🔄 Aggiornamento in corso...');
             }
-        }
-
-        function mostraVuoto(msg) {
-            document.getElementById('news-container').innerHTML = `
-                <div class="empty-state">
-                    <div style="font-size: 5em; margin-bottom: 20px;">🌊</div>
-                    <h2 style="font-family: serif;">Orizzonte Libero</h2>
-                    <p style="color: #666; max-width: 450px; margin: auto; line-height: 1.6;">
-                        ${msg}<br><br>
-                        <small>Esegui nuovamente il Workflow su GitHub Actions per far ripartire la ricerca delle news.</small>
-                    </p>
-                    <button onclick="location.reload(true)" style="margin-top:30px; padding:14px 40px; background:var(--accent); color:white; border:none; border-radius:30px; cursor:pointer; font-weight:bold;">🔄 AGGIORNA ORA</button>
-                </div>`;
         }
 
         function chiediAdmin() {
