@@ -2,7 +2,7 @@ name: Aggiornamento Dinamico Delfino
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 7-21/2 * * *' # Ogni 2 ore dalle 7 alle 21
+    - cron: '0 7-21/2 * * *' 
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -16,13 +16,13 @@ jobs:
         run: |
           git config --global user.name "DelfinoBot"
           git config --global user.email "bot@lavocedeldelfino.it"
-          git pull origin main --rebase # Prende subito le tue modifiche manuali
+          git pull origin main --rebase || echo "Nessuna modifica remota da integrare"
 
       - name: Preparazione Macchine
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          # Rimosso 'cache: npm' perché non abbiamo un package-lock.json
 
       - name: Esecuzione Redazione Segreta
         env:
@@ -43,7 +43,5 @@ jobs:
           
           git commit -m "🗞️ News Refresh - $(date +'%Y-%m-%d %H:%M')"
           
-          # PROTOCOLLO ANTI-INGORGO FINALE
-          # Se nel frattempo hai cambiato qualcosa, il bot si accoda gentilmente
           git pull origin main --rebase
           git push origin main
