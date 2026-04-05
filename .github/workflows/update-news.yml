@@ -1,50 +1,29 @@
-name: 🐬 Aggiorna Notizie
-
+name: Aggiornamento Voce del Delfino
 on:
-  schedule:
-    - cron: '0 4  * * *'   # 04:00 UTC = 06:00 ora italiana (estate)
-    - cron: '0 10 * * *'   # 10:00 UTC = 12:00 ora italiana (estate)
   workflow_dispatch:
-
-permissions:
-  contents: write
-
+  schedule:
+    - cron: '0 7-21/2 * * *'
 jobs:
-  aggiorna:
+  update:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-
     steps:
-      - name: 📥 Checkout repo
-        uses: actions/checkout@v5
+      - name: Checkout Codice
+        uses: actions/checkout@v4
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: '22'
-
-      - name: 📦 Installa dipendenze
-        run: npm install
-
-      - name: 🚩 Segnala inizio aggiornamento
-        run: |
-          echo '{"updating":true,"startedAt":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"}' > public/data/status.json
-          git config user.name  "Delfino Bot"
-          git config user.email "delfino-bot@voce-del-delfino.it"
-          git add public/data/status.json
-          git commit -m "🔄 Inizio aggiornamento - $(date -u '+%H:%M UTC')"
-          git push
-
-      - name: 🔍 Genera notizie e illustrazioni
+          node-version: '20'
+          cache: 'npm'
+      - name: Esecuzione Redazione
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/fetch-news.js
-
-      - name: ✅ Salva dati e segnala fine
+        continue-on-error: true
+      - name: Commit e Push Risultati
         run: |
-          echo '{"updating":false,"lastUpdate":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"}' > public/data/status.json
-          git add public/data/
-          git diff --staged --quiet || git commit -m "🐬 Notizie aggiornate - $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          git config --global user.name "DelfinoBot"
+          git config --global user.email "bot@lavocedeldelfino.it"
+          git add public/data/*.json public/data/*.log
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🗞️ News Refresh" && git push)
