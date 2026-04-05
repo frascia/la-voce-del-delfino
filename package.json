@@ -1,22 +1,8 @@
 {
-  "name": "voce-del-delfino",
+  "name": "la-voce-del-delfino",
   "version": "1.0.0",
-  "private": true,
+  "description": "Redazione automatica del Delfino",
+  "main": "scripts/fetch-news.js",
   "type": "module",
-  "homepage": ".",
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "fetch-news": "node scripts/fetch-news.js"
-  },
-  "eslintConfig": { "extends": ["react-app"] },
-  "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version"]
-  }
+  "dependencies": {}
 }
