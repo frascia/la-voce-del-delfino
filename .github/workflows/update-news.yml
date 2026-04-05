@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # Rimosso il parametro cache che causava l'errore del lock file
 
       - name: Esecuzione Redazione
         env:
