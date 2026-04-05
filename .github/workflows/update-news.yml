@@ -12,19 +12,19 @@ jobs:
         with:
           fetch-depth: 0 
 
-      - name: Sincronizzazione Iniziale
+      - name: Sincronizzazione Forzata
         run: |
           git config --global user.name "DelfinoBot"
           git config --global user.email "bot@lavocedeldelfino.it"
-          # Pulizia forzata per evitare conflitti
           git fetch origin main
           git reset --hard origin main
 
-      - name: Setup Node (Senza Cache)
+      - name: Setup Node (Versione Base)
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # Qui NON deve esserci la riga 'cache: npm'
+          # ATTENZIONE: Qui NON deve esserci la riga 'cache: npm'
+          # È proprio quella riga che genera l'errore che vedi!
 
       - name: Esecuzione Redazione Segreta
         env:
@@ -44,6 +44,4 @@ jobs:
           fi
           
           git commit -m "🗞️ News Refresh - $(date +'%Y-%m-%d %H:%M')"
-          
-          # Forza il push per superare i blocchi precedenti
           git push origin main --force
