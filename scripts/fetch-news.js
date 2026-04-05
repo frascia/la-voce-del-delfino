@@ -76,7 +76,7 @@ function parseNews(raw) {
     }
 }
 
-async function callGemini(system, prompt, temp) {
+async function callGemini(system, prompt, temp, maxRetries = 3) {
     if (!apiKey) {
         scriviLog("❌ ERRORE: Chiave Motore (API_KEY) mancante.");
         return null;
@@ -84,28 +84,46 @@ async function callGemini(system, prompt, temp) {
     
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeModel}:generateContent?key=${apiKey}`;
     
-    try {
-        const res = await fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }] }],
-                systemInstruction: { parts: [{ text: system }] },
-                generationConfig: { responseMimeType: "application/json", temperature: parseFloat(temp) }
-            })
-        });
-        
-        if (!res.ok) {
-            const errorText = await res.text();
-            scriviLog(`❌ ERRORE API GOOGLE (${res.status}): ${errorText}`);
-            return null;
-        }
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            const res = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }],
+                    systemInstruction: { parts: [{ text: system }] },
+                    generationConfig: { responseMimeType: "application/json", temperature: parseFloat(temp) }
+                })
+            });
+            
+            if (res.ok) {
+                const data = await res.json();
+                return data.candidates?.[0]?.content?.parts?.[0]?.text || null;
+            }
 
-        const data = await res.json();
-        return data.candidates?.[0]?.content?.parts?.[0]?.text || null;
-    } catch (e) { 
-        scriviLog(`❌ ERRORE DI RETE GEMINI: ${e.message}`);
-        return null; 
+            const errorData = await res.json().catch(() => ({}));
+            const isRetryable = res.status === 503 || res.status === 429;
+
+            if (isRetryable && attempt < maxRetries) {
+                const delay = attempt * 3000; // Aspetta 3s, poi 6s...
+                scriviLog(`⚠️ Gemini è congestionata (${res.status}). Riprovo tra ${delay/1000}s... (Tentativo ${attempt}/${maxRetries})`);
+                await new Promise(resolve => setTimeout(resolve, delay));
+                continue;
+            }
+
+            scriviLog(`❌ ERRORE API GOOGLE (${res.status}): ${JSON.stringify(errorData, null, 2)}`);
+            return null;
+
+        } catch (e) {
+            if (attempt < maxRetries) {
+                const delay = attempt * 3000;
+                scriviLog(`❌ Errore di rete. Riprovo tra ${delay/1000}s... (${attempt}/${maxRetries})`);
+                await new Promise(resolve => setTimeout(resolve, delay));
+                continue;
+            }
+            scriviLog(`❌ ERRORE DI RETE GEMINI DOPO ${maxRetries} TENTATIVI: ${e.message}`);
+            return null; 
+        }
     }
 }
 
