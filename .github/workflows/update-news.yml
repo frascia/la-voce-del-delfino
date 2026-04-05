@@ -12,36 +12,28 @@ jobs:
         with:
           fetch-depth: 0 
 
-      - name: Sincronizzazione Forzata
+      - name: Configurazione Git
         run: |
           git config --global user.name "DelfinoBot"
           git config --global user.email "bot@lavocedeldelfino.it"
           git fetch origin main
           git reset --hard origin main
 
-      - name: Setup Node (Versione Base)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          # ATTENZIONE: Qui NON deve esserci la riga 'cache: npm'
-          # È proprio quella riga che genera l'errore che vedi!
-
-      - name: Esecuzione Redazione Segreta
+      - name: Esecuzione Notizie
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/fetch-news.js
-        continue-on-error: true
+        # Usiamo il Node già presente nel sistema senza invocare setup-node
+        # così non cercherà mai più il lock file.
 
-      - name: Pubblicazione Risultati
+      - name: Pubblicazione Forzata
         run: |
           git add public/data/*.json public/data/*.log
-          
           if git diff --staged --quiet; then
-            echo "Nessuna notizia fresca, chiudo la redazione."
+            echo "Nessuna novità."
             exit 0
           fi
-          
-          git commit -m "🗞️ News Refresh - $(date +'%Y-%m-%d %H:%M')"
+          git commit -m "🗞️ News Refresh $(date +'%d-%m %H:%M')"
           git push origin main --force
