@@ -7,29 +7,28 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Arrivo in Redazione
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 
 
-      - name: Configurazione Git
-        run: |
-          git config --global user.name "DelfinoBot"
-          git config --global user.email "bot@lavocedeldelfino.it"
-          git fetch origin main
-          git reset --hard origin main
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          # Rimosso il parametro cache che causava l'errore del lock file
 
-      - name: Esecuzione Notizie
+      - name: Esecuzione Redazione
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/fetch-news.js
-        # Usiamo il Node già presente nel sistema senza invocare setup-node
-        # così non cercherà mai più il lock file.
 
       - name: Pubblicazione Forzata
         run: |
+          git config --global user.name "DelfinoBot"
+          git config --global user.email "bot@lavocedeldelfino.it"
           git add public/data/*.json public/data/*.log
           if git diff --staged --quiet; then
             echo "Nessuna novità."
