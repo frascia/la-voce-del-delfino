@@ -1,63 +1,31 @@
-name: 🚀 Deploy GitHub Pages
+# Workflow per pubblicare il sito su GitHub Pages senza compilazione
+name: Deploy GitHub Pages
 
 on:
   push:
-    branches: [main]
-  workflow_run:
-    workflows: ["🐬 Aggiorna Notizie"]
-    types: [completed]
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-
-  # ── JOB 1: Build React app ──────────────────────────
-  build:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'push' }}
-
-    steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v5
-
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: '22'
-
-      - name: 📦 Installa dipendenze
-        run: npm install
-
-      - name: 🔨 Build React app
-        run: npm run build
-        env:
-          CI: false
-          PUBLIC_URL: ""
-
-      - name: 📄 Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: 📤 Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
-
-  # ── JOB 2: Deploy su GitHub Pages ───────────────────
   deploy:
-    runs-on: ubuntu-latest
-    needs: build
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
+      url: ${{ steps:deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
-      - name: 🚀 Deploy su GitHub Pages
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Carica tutto il progetto così com'è
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
