@@ -171,9 +171,13 @@
 
         .error-log {
             font-family: monospace;
-            font-size: 0.8em;
+            font-size: 0.85em;
             color: #c0392b;
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
             margin-top: 20px;
+            border-radius: 10px;
             display: none;
         }
     </style>
@@ -198,50 +202,74 @@
         <div id="news-container">
             <!-- News iniettate qui -->
         </div>
-        <div id="error-display" class="error-log"></div>
+        
+        <div id="error-display" class="error-log">
+            <strong>🔧 DEBUG DIREZIONE:</strong><br>
+        </div>
     </div>
 
     <!-- Bottone segreto Admin in basso a destra -->
     <div id="admin-link" onclick="chiediAdmin()"></div>
 
     <script>
-        // Cache Buster per forzare GitHub a darci i file nuovi
         const v = Date.now();
         let currentConfig = null;
 
-        function logError(msg) {
+        function logDebug(msg) {
             const errDiv = document.getElementById('error-display');
             errDiv.style.display = 'block';
             errDiv.innerHTML += `> ${msg}<br>`;
         }
 
         async function init() {
+            logDebug("Inizializzazione Vetrina...");
             try {
-                // Tentativo di caricamento config (prova diversi percorsi comuni)
-                let res = await fetch(`public/data/active_config.json?v=${v}`);
-                if (!res.ok) res = await fetch(`data/active_config.json?v=${v}`);
-                if (!res.ok) res = await fetch(`public/data/config.json?v=${v}`);
+                // Tentativo di caricamento config da più percorsi possibili
+                const paths = [
+                    `public/data/active_config.json?v=${v}`,
+                    `data/active_config.json?v=${v}`,
+                    `public/data/config.json?v=${v}`,
+                    `data/config.json?v=${v}`
+                ];
                 
-                if (!res.ok) {
-                    logError("Configurazione non trovata. Controlla la cartella public/data.");
+                let res = null;
+                for (let p of paths) {
+                    res = await fetch(p);
+                    if (res.ok) {
+                        logDebug(`Configurazione trovata in: ${p}`);
+                        break;
+                    }
+                }
+                
+                if (!res || !res.ok) {
+                    logDebug("ERRORE: Nessun file di configurazione trovato nelle cartelle previste.");
                     throw new Error("404 Config");
                 }
                 
                 currentConfig = await res.json();
                 
-                // Impostazione Logo - Cerca la chiave 'Header' o 'header_img'
-                const headerFile = currentConfig.site_settings?.Header || currentConfig.site_settings?.header_img;
-                if (headerFile) {
-                    const hImg = document.getElementById('header-img');
-                    // Costruisce il percorso. Assicurati che il file sia in public/images/
-                    hImg.src = `public/images/${headerFile}?v=${v}`;
+                // Impostazione Logo Dinamico
+                const headerFile = currentConfig.site_settings?.Header || currentConfig.site_settings?.header_img || 'header.webp';
+                const hImg = document.getElementById('header-img');
+                
+                // Prova i percorsi per l'immagine
+                const imgPaths = [`public/images/${headerFile}`, `images/${headerFile}`];
+                let imgFound = false;
+                for (let ip of imgPaths) {
+                    const testImg = new Image();
+                    testImg.src = `${ip}?v=${v}`;
+                    testImg.onload = () => {
+                        hImg.src = `${ip}?v=${v}`;
+                        hImg.style.opacity = '1';
+                        imgFound = true;
+                    };
                 }
 
                 loadSez('mondo', document.querySelector('.btn-t.active'));
 
             } catch (e) {
                 console.error("Init Error:", e);
-                mostraVuoto("Configurazione mancante o errata.");
+                mostraVuoto("Configurazione mancante o errata. Il Delfino non sa dove nuotare!");
             }
         }
 
@@ -252,22 +280,25 @@
             if(btn) btn.classList.add('active');
 
             const container = document.getElementById('news-container');
-            container.innerHTML = '<div style="text-align:center; padding:80px; font-size:1.2em; color:#999;">🐟 Il Delfino sta pescando le news...</div>';
+            container.innerHTML = '<div style="text-align:center; padding:80px; font-size:1.2em; color:#999;">🐟 Il Delfino sta pescando le news di oggi...</div>';
 
             try {
-                let path = `public/data/news-${sez}.json?v=${v}`;
-                let r = await fetch(path);
-                
-                if (!r.ok) {
-                    path = `data/news-${sez}.json?v=${v}`;
-                    r = await fetch(path);
+                const paths = [
+                    `public/data/news-${sez}.json?v=${v}`,
+                    `data/news-${sez}.json?v=${v}`
+                ];
+
+                let r = null;
+                for (let p of paths) {
+                    r = await fetch(p);
+                    if (r.ok) break;
                 }
 
-                if (!r.ok) throw new Error(`File news-${sez}.json non trovato`);
+                if (!r || !r.ok) throw new Error(`File news-${sez}.json non trovato`);
                 
                 const data = await r.json();
                 if (!data.news || data.news.length === 0) {
-                    mostraVuoto("Il file esiste ma le reti sono vuote.");
+                    mostraVuoto("Il file esiste ma le reti sono rimaste vuote (0 articoli).");
                     return;
                 }
 
@@ -293,8 +324,8 @@
                 });
 
             } catch(e) {
-                logError(`Errore caricamento news-${sez}: ${e.message}`);
-                mostraVuoto("Il Delfino sta ancora preparando questa edizione. Riprova tra poco!");
+                logDebug(`Errore sezione ${sez}: ${e.message}`);
+                mostraVuoto("Le reti sono ancora vuote — il Delfino sta lavorando!");
             }
         }
 
@@ -303,11 +334,11 @@
                 <div class="empty-state">
                     <div style="font-size: 5em; margin-bottom: 20px;">🌊</div>
                     <h2 style="font-family: serif;">Notizie in arrivo</h2>
-                    <p style="color: #666; max-width: 400px; margin: auto; line-height: 1.6;">
+                    <p style="color: #666; max-width: 450px; margin: auto; line-height: 1.6;">
                         ${msg}<br><br>
-                        Controlla che l'azione su GitHub sia terminata con successo.
+                        <small>Suggerimento: Controlla che i file JSON siano nella cartella corretta su GitHub.</small>
                     </p>
-                    <button onclick="location.reload(true)" style="margin-top:30px; padding:12px 30px; background:var(--accent); color:white; border:none; border-radius:30px; cursor:pointer; font-weight:bold;">🔄 AGGIORNA ORA</button>
+                    <button onclick="location.reload(true)" style="margin-top:30px; padding:14px 40px; background:var(--accent); color:white; border:none; border-radius:30px; cursor:pointer; font-weight:bold; letter-spacing:1px;">🔄 AGGIORNA PAGINA</button>
                 </div>`;
         }
 
@@ -316,7 +347,10 @@
             fetch(`public/data/auth_info.json?v=${v}`)
                 .then(r => r.json())
                 .then(d => {
-                    if (pwd === d.key) alert("ACCESSO CONFERMATO.\nSistema integro.");
+                    if (pwd === d.key) {
+                        alert("ACCESSO CONFERMATO.\nIl terminale debug è attivo in fondo alla pagina.");
+                        document.getElementById('error-display').style.display = 'block';
+                    }
                     else alert("ACCESSO NEGATO.");
                 }).catch(() => alert("Auth non disponibile."));
         }
