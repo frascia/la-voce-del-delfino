@@ -40,13 +40,11 @@ async function autoDiscoverModel() {
         
         const data = await res.json();
         
-        // Cerchiamo i modelli "flash" che supportano la generazione testi
         const flashModels = data.models
             .filter(m => m.name.includes('flash') && m.supportedGenerationMethods.includes('generateContent'))
             .map(m => m.name.replace('models/', ''));
 
         if (flashModels.length > 0) {
-            // Ordiniamo per prendere il più avanzato
             const latest = flashModels.sort().reverse()[0]; 
             activeModel = latest;
             scriviLog(`✅ Radar completato. Agganciato modello: ${activeModel}`);
@@ -64,9 +62,7 @@ async function autoDiscoverModel() {
 function parseNews(raw) {
     if (!raw) return [];
     try {
-        // Rimuove markdown, backticks e roba inutile messa dall'IA
         let clean = raw.replace(/`{3}(?:json|html|xml)?\n/gi, "").replace(/`{3}/g, "").trim();
-        // Trova dove inizia e finisce il vero JSON
         let start = Math.min(...[clean.indexOf('['), clean.indexOf('{')].filter(i => i !== -1));
         let end = Math.max(clean.lastIndexOf(']'), clean.lastIndexOf('}'));
         
@@ -118,27 +114,26 @@ async function fetchRSS(query, max) {
     scriviLog(`🔍 Ricerca RSS in corso per: ${query}...`);
     const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=it&gl=IT&ceid=IT:it`;
     try {
-        const res = await fetch(url);
+        const res = await fetch(url, {
+            headers: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
+        });
+        
         if (!res.ok) {
             scriviLog(`❌ ERRORE RSS GOOGLE NEWS: ${res.status}`);
             return [];
         }
+        
         const xml = await res.text();
         const titles = [];
         
-        // CORREZIONE: Nuova espressione regolare senza vincolo CDATA
-        const regex = /<title>(.*?)<\/title>/g;
+        const regex = /<item>[\s\S]*?<title[^>]*>([\s\S]*?)<\/title>/gi;
         let m;
-        let isFirst = true; // Serve a saltare il primo risultato che è il titolo del sito stesso
         
-        while ((m = regex.exec(xml)) !== null) { 
-            if (isFirst) {
-                isFirst = false;
-                continue;
-            }
-            // Pulisce da eventuali vecchi tag CDATA se per caso dovessero ricomparire
-            titles.push(m[1].replace(/<!\[CDATA\[|\]\]>/g, '').trim()); 
-            if (titles.length >= max) break;
+        while ((m = regex.exec(xml)) !== null && titles.length < max) { 
+            let cleanTitle = m[1].replace(/<!\[CDATA\[|\]\]>/gi, '').trim();
+            titles.push(cleanTitle); 
         }
         
         scriviLog(`✅ Trovati ${titles.length} articoli per ${query}.`);
@@ -152,7 +147,6 @@ async function fetchRSS(query, max) {
 async function main() {
     scriviLog(`⚓️ Inizio turno. Oggi è ${oggi.toUpperCase()}.`);
 
-    // Avvio Auto-Discovery PRIMA di fare qualsiasi altra cosa
     await autoDiscoverModel();
 
     let configPath = path.join(DATA_DIR, `config_${oggi}.json`);
@@ -186,7 +180,7 @@ async function main() {
                     scriviLog(`📝 Affido Satira a Gemini... Tema: ${tema}`);
                     const raw = await callGemini(
                         "Sei un autore satirico. Rispondi SOLO in JSON con questo formato: {\"titolo\":\"...\",\"sommario\":\"...\",\"commento\":\"...\"}", 
-                        `Scrivi una fake news satirica a tema Pescara. Tema: ${tema}`, 
+                        `Scrivi una fake news satirica a tema Pescara. Il campo 'sommario' deve essere un vero articolo lungo e dettagliato, non un testo corto. Tema: ${tema}`, 
                         s.weight
                     );
                     
@@ -196,7 +190,7 @@ async function main() {
                         scriviLog(`✅ Satira generata e imbarcata.`);
                     } else {
                         scriviLog(`⚠️ Riprovo satira per errore formato...`);
-                        i--; // Riprova se fallisce
+                        i--; 
                     }
                 }
             } else {
@@ -205,7 +199,7 @@ async function main() {
                     scriviLog(`🤖 Invio titoli a Gemini (Stile: ${s.mood})...`);
                     const raw = await callGemini(
                         `Sei un giornalista ${s.mood}. Rispondi SOLO in formato ARRAY JSON: [{"titolo":"...","sommario":"...","commento":"..."}]`, 
-                        `Rielabora questi titoli di notizie in un breve sommario e aggiungi un commento pungente in stile giornalista. Titoli:\n${titles.join('\n')}`, 
+                        `Rielabora questi titoli di notizie scrivendo nel campo 'sommario' un vero e proprio articolo lungo e ricco di dettagli, non un testo corto. Aggiungi anche un 'commento' più lungo e discorsivo in stile giornalista. Titoli:\n${titles.join('\n')}`, 
                         s.weight
                     );
                     
