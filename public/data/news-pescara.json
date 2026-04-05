@@ -1,5 +1,42 @@
 {
   "today": "domenica 5 aprile",
   "color": "#005f73",
-  "news": []
+  "news": [
+    {
+      "titolo": "Pasquetta di fuoco per Reggiana e Pescara",
+      "sommario": "Il lunedì dell'Angelo si tinge di calcio con la sfida tra Reggiana e Pescara; i tifosi si preparano al match decisivo mentre analizzano le probabili formazioni e le opzioni per seguire la gara in diretta.",
+      "commento": "Mentre il resto d'Italia si sfida a colpi di grigliate e picnic, i tifosi di Reggiana e Pescara scelgono l'adrenalina del rettangolo verde: speriamo solo che il risultato non sia indigesto quanto l'uovo di Pasqua dimenticato al sole.",
+      "categoria": "Calcio",
+      "immagine": "Calcio.webp",
+      "isFake": false,
+      "mood": "entusiasta"
+    },
+    {
+      "titolo": "Pescara, il tour de force finale",
+      "sommario": "Il Pescara si prepara ad affrontare le ultime sei giornate di campionato, un percorso ad ostacoli che decreterà le sorti della stagione in una volata finale carica di tensione.",
+      "commento": "Sei giornate alla fine: il tempo delle scuse è terminato e quello dei calcoli è appena iniziato. Vedremo se il Delfino saprà nuotare verso la salvezza o se preferirà affogare tra le proprie incertezze.",
+      "categoria": "Calcio",
+      "immagine": "Calcio.webp",
+      "isFake": false,
+      "mood": "entusiasta"
+    },
+    {
+      "titolo": "Google News: l'algoritmo che decide cosa dobbiamo sapere",
+      "sommario": "Google News continua a dominare il flusso informativo globale, selezionando e gerarchizzando le notizie tramite algoritmi opachi che influenzano la percezione della realtà di milioni di utenti.",
+      "commento": "Un tempo i direttori di giornale decidevano l'agenda; oggi lo fa un codice che non dorme mai e non ha una coscienza, ma ha imparato benissimo a vendere pubblicità spacciandola per informazione.",
+      "categoria": "Futuro",
+      "immagine": "Ai.webp",
+      "isFake": false,
+      "mood": "saggio"
+    },
+    {
+      "titolo": "Meteo Pasquale: tra sole e incognite",
+      "sommario": "Il weekend di Pasqua sarà caratterizzato da tempo prevalentemente soleggiato e temperature miti, sebbene non si escludano isolati temporali in alcune aree specifiche.",
+      "commento": "La natura ci concede una tregua, ma il meteo resta l'unico vero arbitro dei nostri piani: pronti a passare dal barbecue al rifugio d'emergenza in un battito di ciglia.",
+      "categoria": "Mente",
+      "immagine": "Meteo.webp",
+      "isFake": false,
+      "mood": "riflessivo"
+    }
+  ]
 }

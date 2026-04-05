@@ -1,5 +1,51 @@
 {
   "today": "domenica 5 aprile",
   "color": "#0a9396",
-  "news": []
+  "news": [
+    {
+      "titolo": "Netflix, stangata sui rimborsi: gli aumenti erano illegittimi",
+      "sommario": "Una sentenza impone a Netflix di rimborsare le famiglie italiane per gli aumenti unilaterali del costo dell'abbonamento, con richieste che toccano i 500 euro a utenza.",
+      "commento": "Finalmente qualcuno ha ricordato a Netflix che non vive nel mondo delle fiabe, dove il prezzo aumenta a piacimento mentre la qualità dei contenuti scende in picchiata.",
+      "categoria": "Streaming",
+      "immagine": "netflix.webp",
+      "isFake": false,
+      "mood": "sarcastico"
+    },
+    {
+      "titolo": "Il cinema al servizio dello streaming: il caso Prime Video",
+      "sommario": "Un film approdato nelle sale cinematografiche solo trenta giorni fa è già disponibile nel catalogo di Prime Video, confermando la drastica riduzione delle finestre di distribuzione.",
+      "commento": "La sala cinematografica diventa sempre più un antipasto fugace per il banchetto del divano: il valore dell'esperienza in grande schermo è ufficialmente sacrificato sull'altare della velocità di consumo algoritmico.",
+      "categoria": "Streaming",
+      "immagine": "prime.webp",
+      "isFake": false,
+      "mood": "critico"
+    },
+    {
+      "titolo": "Google News: l'algoritmo che decide cosa dobbiamo sapere",
+      "sommario": "Il portale di Google aggrega le notizie da migliaia di fonti globali, personalizzando il flusso informativo in base agli interessi e alla cronologia di navigazione dell'utente.",
+      "commento": "Un maggiordomo digitale che, invece di portarti il caffè, decide quale realtà farti digerire oggi per tenerti incollato allo schermo.",
+      "categoria": "Esteri",
+      "immagine": "giappone.webp",
+      "isFake": false,
+      "mood": "curioso"
+    },
+    {
+      "titolo": "Google News: l'algoritmo che decide cosa dobbiamo sapere",
+      "sommario": "La piattaforma di aggregazione di Big G continua a plasmare l'agenda informativa globale, filtrando il flusso infinito di notizie in base a criteri opachi e personalizzati.",
+      "commento": "Più che un servizio di informazione, sembra un telecomando universale nelle mani di un gigante che sa cosa vuoi leggere prima ancora che tu lo sappia. Comodo, certo, ma quanto ci costa in termini di pluralismo?",
+      "categoria": "Esteri",
+      "immagine": "brasile.webp",
+      "isFake": false,
+      "mood": "festoso"
+    },
+    {
+      "titolo": "Google News: l'algoritmo che decide la nostra realtà",
+      "sommario": "Google News continua a dominare il flusso informativo globale, selezionando e gerarchizzando le notizie attraverso algoritmi opachi che influenzano la percezione pubblica.",
+      "commento": "Un'infrastruttura digitale che si spaccia per specchio del mondo, ma che in realtà è solo un filtro personalizzato per mantenere l'utente in una comoda, redditizia e ignorante bolla.",
+      "categoria": "Esteri",
+      "immagine": "danimarca.webp",
+      "isFake": false,
+      "mood": "nordico"
+    }
+  ]
 }
