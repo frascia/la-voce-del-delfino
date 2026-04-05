@@ -51,7 +51,7 @@
             z-index: 1;
             background: transparent;
             transition: opacity 0.5s ease;
-            opacity: 0;
+            opacity: 0; /* Parte invisibile, diventa 1 solo se caricata con successo */
         }
 
         .header-overlay {
@@ -63,6 +63,16 @@
             text-align: center;
         }
 
+        .main-title {
+            font-size: 3.8em;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin: 0;
+            line-height: 1;
+            color: var(--text);
+            text-shadow: 0 2px 10px rgba(255,255,255,0.8);
+        }
+
         .date-bar {
             font-size: 0.85em;
             text-transform: uppercase;
@@ -70,7 +80,7 @@
             color: rgba(0,0,0,0.4);
             letter-spacing: 3px;
             margin-top: 15px;
-            background: rgba(255,255,255,0.3); /* Un tocco di leggibilità per la data */
+            background: rgba(255,255,255,0.4);
             display: inline-block;
             padding: 5px 15px;
             border-radius: 20px;
@@ -182,9 +192,11 @@
 
     <div class="container">
         <header class="header-box" onclick="window.location.reload(true)">
-            <img id="header-img" class="header-img" onerror="this.style.opacity='0'">
+            <!-- Rimosso onerror inline, gestiamo tutto tramite Javascript -->
+            <img id="header-img" class="header-img" alt="La Voce del Delfino">
             <div class="header-overlay">
-                <!-- Titolo HTML rimosso per lasciare spazio al Logo personalizzato -->
+                <!-- Questo titolo appare SOLO se il logo non viene trovato -->
+                <h1 id="fallback-title" class="main-title" style="display: none;">La Voce del Delfino</h1>
                 <div id="date-now" class="date-bar">Caricamento Edizione...</div>
             </div>
         </header>
@@ -234,10 +246,37 @@
                 currentConfig = await res.json();
                 
                 const headerFile = currentConfig.site_settings?.Header || currentConfig.site_settings?.header_img;
+                
+                // GESTIONE INTELLIGENTE DEL LOGO
+                const hImg = document.getElementById('header-img');
+                const fallbackTitle = document.getElementById('fallback-title');
+                
                 if (headerFile) {
-                    const hImg = document.getElementById('header-img');
-                    hImg.src = `public/images/${headerFile}?v=${v}`;
-                    hImg.onload = () => hImg.style.opacity = '1';
+                    // Coda dei percorsi da provare
+                    const imgPaths = [`images/${headerFile}`, `public/images/${headerFile}`];
+                    
+                    hImg.onload = () => {
+                        hImg.style.opacity = '1';
+                        fallbackTitle.style.display = 'none'; // Nasconde la scritta se c'è l'immagine
+                        logDebug("Logo caricato con successo.");
+                    };
+                    
+                    hImg.onerror = () => {
+                        if (imgPaths.length > 0) {
+                            // Se fallisce, prova il prossimo percorso della lista
+                            hImg.src = `${imgPaths.shift()}?v=${v}`;
+                        } else {
+                            // Se falliscono tutti, mostra il testo come salvagente
+                            hImg.style.opacity = '0';
+                            fallbackTitle.style.display = 'block';
+                            logDebug("Impossibile trovare il logo. Attivata scritta di sicurezza.");
+                        }
+                    };
+                    
+                    // Fai partire il primo tentativo
+                    hImg.src = `${imgPaths.shift()}?v=${v}`;
+                } else {
+                    fallbackTitle.style.display = 'block';
                 }
 
                 const tabsContainer = document.getElementById('tabs-container');
@@ -292,8 +331,10 @@
                 if (!r || !r.ok) throw new Error(`Dati news-${sezKey} non trovati`);
                 
                 const data = await r.json();
+                
+                // SE IL FILE ESISTE MA È VUOTO:
                 if (!data.news || data.news.length === 0) {
-                    mostraVuoto("Nessuna notizia disponibile per questa sezione.");
+                    mostraVuoto("Il file JSON è stato trovato, ma non contiene articoli (0 news generate dal Bot).");
                     return;
                 }
 
@@ -320,7 +361,7 @@
 
             } catch(e) {
                 logDebug(`Errore caricamento ${sezKey}: ${e.message}`);
-                mostraVuoto("Le reti sono ancora vuote in questa zona.");
+                mostraVuoto("I file delle notizie non sono stati trovati su GitHub.");
             }
         }
 
@@ -331,7 +372,7 @@
                     <h2 style="font-family: serif;">Orizzonte Libero</h2>
                     <p style="color: #666; max-width: 450px; margin: auto; line-height: 1.6;">
                         ${msg}<br><br>
-                        <small>Il bot su GitHub deve terminare l'aggiornamento.</small>
+                        <small>Se hai appena fatto modifiche su GitHub, aspetta che il processo sia completato.</small>
                     </p>
                     <button onclick="location.reload(true)" style="margin-top:30px; padding:14px 40px; background:var(--accent); color:white; border:none; border-radius:30px; cursor:pointer; font-weight:bold;">🔄 AGGIORNA ORA</button>
                 </div>`;
