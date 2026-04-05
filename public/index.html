@@ -41,7 +41,7 @@
 
         .header-img {
             max-width: 100%;
-            max-height: 280px; /* Ripristinato a 280px */
+            max-height: 280px;
             object-fit: contain;
             display: block;
             transition: opacity 0.8s ease;
@@ -250,6 +250,22 @@
             banner.innerHTML = text;
         }
 
+        // Funzione per gestire i fallbacks delle immagini degli articoli (salvagente default.png)
+        function fallbackArticolo(imgEl, nomeFile) {
+            if (!imgEl.dataset.retry) {
+                imgEl.dataset.retry = "public";
+                imgEl.src = `public/images/${nomeFile}?v=${v}`;
+            } else if (imgEl.dataset.retry === "public") {
+                imgEl.dataset.retry = "default";
+                imgEl.src = `images/default.png?v=${v}`;
+            } else if (imgEl.dataset.retry === "default") {
+                imgEl.dataset.retry = "public_default";
+                imgEl.src = `public/images/default.png?v=${v}`;
+            } else {
+                imgEl.style.display = 'none'; // Se falliscono tutte, nasconde l'immagine per pulizia
+            }
+        }
+
         async function init() {
             logDebug("Inizializzazione Vetrina...");
             try {
@@ -367,9 +383,9 @@
                     const card = document.createElement('div');
                     card.className = 'card';
                     
-                    // Creazione della card con l'immagine ripristinata in alto
+                    // Creazione della card con salvataggio intelligente dell'immagine
                     card.innerHTML = `
-                        ${n.immagine ? `<img src="images/${n.immagine}?v=${v}" onerror="this.onerror=null; this.src='public/images/${n.immagine}?v=${v}';" class="article-img" alt="Immagine articolo">` : ''}
+                        ${n.immagine ? `<img src="images/${n.immagine}?v=${v}" onerror="fallbackArticolo(this, '${n.immagine}')" class="article-img" alt="Immagine articolo">` : `<img src="images/default.png?v=${v}" onerror="fallbackArticolo(this, 'default.png')" class="article-img" alt="Immagine articolo">`}
                         <div class="tag-row">
                             <span class="tag">${n.categoria || 'NEWS'} • ${n.fonte || 'Ansa'}</span>
                             ${n.isFake ? '<span class="badge-fake">SATIRA</span>' : ''}
