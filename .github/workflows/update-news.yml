@@ -10,7 +10,13 @@ jobs:
       - name: Arrivo in Redazione
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Necessario per gestire i conflitti e il rebase
+          fetch-depth: 0 
+
+      - name: Sincronizzazione Iniziale
+        run: |
+          git config --global user.name "DelfinoBot"
+          git config --global user.email "bot@lavocedeldelfino.it"
+          git pull origin main --rebase # Prende subito le tue modifiche manuali
 
       - name: Preparazione Macchine
         uses: actions/setup-node@v4
@@ -28,11 +34,8 @@ jobs:
 
       - name: Pubblicazione e Risoluzione Conflitti
         run: |
-          git config --global user.name "DelfinoBot"
-          git config --global user.email "bot@lavocedeldelfino.it"
           git add public/data/*.json public/data/*.log
           
-          # Se non ci sono cambiamenti, il bot torna a dormire
           if git diff --staged --quiet; then
             echo "Nessuna notizia fresca, chiudo la redazione."
             exit 0
@@ -40,9 +43,7 @@ jobs:
           
           git commit -m "🗞️ News Refresh - $(date +'%Y-%m-%d %H:%M')"
           
-          # PROTOCOLLO ANTI-INGORGO: 
-          # Scarica le tue modifiche e metti le news del bot "sopra" di esse
-          git pull --rebase origin main
-          
-          # Spinta finale
+          # PROTOCOLLO ANTI-INGORGO FINALE
+          # Se nel frattempo hai cambiato qualcosa, il bot si accoda gentilmente
+          git pull origin main --rebase
           git push origin main
