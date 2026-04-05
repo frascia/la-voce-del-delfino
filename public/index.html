@@ -10,6 +10,7 @@
             --bg: #e9e4d4;
             --paper: #fdfaf4;
             --text: #2b261d;
+            --delfino-blue: #dbe9f4;
         }
 
         body {
@@ -22,25 +23,13 @@
             user-select: none;
         }
 
-        /* Top Bar Aggiornamento */
-        #update-banner {
-            background: var(--accent);
-            color: white;
-            text-align: center;
-            padding: 8px;
-            font-size: 0.85em;
-            display: none;
-            font-family: sans-serif;
-            letter-spacing: 1px;
-        }
-
         .container {
             max-width: 900px;
             margin: auto;
             padding: 20px;
         }
 
-        /* Testata Acquerello */
+        /* Testata Dinamica */
         .header-box {
             background: white;
             border-radius: 30px;
@@ -49,33 +38,41 @@
             margin-bottom: 30px;
             border: 1px solid #d4cdb4;
             position: relative;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
         }
 
         .header-img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             display: block;
-            min-height: 200px;
-            background: linear-gradient(to bottom, #dbe9f4, #f4f9fc);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: linear-gradient(135deg, #dbe9f4 0%, #ffffff 100%);
+            transition: opacity 0.5s ease;
         }
 
         .header-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            background: rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 2;
+            margin-top: auto;
+            padding: 30px 20px;
+            background: linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 100%);
             text-align: center;
         }
 
         .date-bar {
-            font-size: 0.75em;
+            font-size: 0.8em;
             text-transform: uppercase;
             font-weight: bold;
-            color: rgba(0,0,0,0.4);
+            color: rgba(0,0,0,0.5);
             letter-spacing: 2px;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
         /* Tabs */
@@ -99,6 +96,10 @@
             align-items: center;
             gap: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
         }
 
         .btn-t.active {
@@ -125,11 +126,12 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        h3 { margin: 0 0 15px; font-size: 2em; line-height: 1.1; }
-        .sommario { font-size: 1.1em; line-height: 1.6; color: #555; margin-bottom: 25px; }
+        h3 { margin: 0 0 15px; font-size: 2.2em; line-height: 1.1; letter-spacing: -1px; }
+        .sommario { font-size: 1.15em; line-height: 1.6; color: #444; margin-bottom: 25px; }
         
-        .tag-row { display: flex; justify-content: space-between; margin-bottom: 20px; }
-        .tag { font-size: 0.75em; font-weight: bold; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+        .tag-row { display: flex; justify-content: space-between; margin-bottom: 20px; align-items: center; }
+        .tag { font-size: 0.8em; font-weight: bold; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+        .badge-fake { background: var(--accent); color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.7em; font-weight: bold; font-family: sans-serif; }
         
         .comm-box {
             background: #fdf5e6;
@@ -140,26 +142,13 @@
             color: #5d4037;
         }
 
-        /* Empty / Loading State */
+        /* Empty State */
         .empty-state {
             text-align: center;
             background: white;
             padding: 60px;
             border-radius: 30px;
-            border: 1px solid #eee;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .btn-retry {
-            margin-top: 30px;
-            padding: 15px 40px;
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
         }
 
         #admin-link {
@@ -168,65 +157,85 @@
             right: 20px;
             width: 40px;
             height: 40px;
-            opacity: 0.1;
+            opacity: 0.05;
             cursor: pointer;
+            z-index: 100;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body oncontextmenu="return false;">
 
-    <div id="update-banner">
-        🔄 IL DELFINO STA AGGIORNANDO LE NOTIZIE — STAI LEGGENDO L'EDIZIONE PRECEDENTE
-    </div>
-
     <div class="container">
         <header class="header-box" onclick="window.location.reload(true)">
-            <!-- Carichiamo la testata con cache buster -->
-            <img src="public/images/testata_comune_delfino.webp" class="header-img" id="header-img" onerror="this.src='https://images.unsplash.com/photo-1551009175-8a68da93d5f9?auto=format&fit=crop&w=1000&q=80'">
+            <!-- L'immagine viene impostata dinamicamente dallo script -->
+            <img id="header-img" class="header-img" onerror="this.style.opacity='0'">
             <div class="header-overlay">
-                <div style="font-size: 3em; font-weight: bold; letter-spacing: -2px;">La Voce del Delfino</div>
-                <div id="date-now" class="date-bar">Caricamento data...</div>
+                <div style="font-size: 3.5em; font-weight: bold; letter-spacing: -2px; margin-bottom: 5px;">La Voce del Delfino</div>
+                <div id="date-now" class="date-bar">Pescara, Abruzzo</div>
             </div>
         </header>
 
         <div class="tabs">
-            <button class="btn-t active" onclick="loadSez('mondo', this)">🌍 NOTIZIE DAL MONDO</button>
-            <button class="btn-t" onclick="loadSez('pescara', this)">🐬 PESCARA & ABRUZZO</button>
+            <button class="btn-t active" onclick="loadSez('mondo', this)">🌍 Notizie dal Mondo</button>
+            <button class="btn-t" onclick="loadSez('pescara', this)">🐬 Pescara & Abruzzo</button>
         </div>
 
         <div id="news-container">
-            <!-- Qui verranno iniettate le news -->
+            <!-- News iniettate qui -->
         </div>
     </div>
 
     <div id="admin-link" onclick="chiediAdmin()"></div>
 
     <script>
-        // TRUCCO DEL DELFINO: Aggiungiamo sempre un numero casuale ai file per saltare la cache!
         const v = Date.now();
+        let currentConfig = null;
+
+        // 1. Inizializzazione: legge il config e imposta il logo
+        async function init() {
+            try {
+                // Prova a leggere il config attivo (quello dell'ultimo giro del bot)
+                let res = await fetch(`public/data/active_config.json?v=${v}`);
+                if (!res.ok) res = await fetch(`public/data/config.json?v=${v}`);
+                
+                currentConfig = await res.json();
+                
+                // IMPOSTA LOGO DINAMICO
+                if (currentConfig.site_settings && currentConfig.site_settings.header_img) {
+                    const hImg = document.getElementById('header-img');
+                    hImg.src = `public/images/${currentConfig.site_settings.header_img}?v=${v}`;
+                }
+
+                // Avvia la prima sezione
+                const defaultBtn = document.querySelector('.btn-t.active');
+                loadSez('mondo', defaultBtn);
+
+            } catch (e) {
+                console.error("Errore inizializzazione:", e);
+                mostraVuoto();
+            }
+        }
 
         async function loadSez(sez, btn) {
-            // Cambio stile bottoni
             document.querySelectorAll('.btn-t').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
             const container = document.getElementById('news-container');
-            container.innerHTML = '<div style="text-align:center; padding:50px; font-size:1.5em; color:#999;">🐟 Il Delfino sta pescando le news...</div>';
+            container.innerHTML = '<div style="text-align:center; padding:100px; font-size:1.2em; color:#999;">🐟 Il Delfino sta pescando le news...</div>';
 
             try {
-                // FETCH CON CACHE BUSTER (v=...)
                 const r = await fetch(`public/data/news-${sez}.json?v=${v}`);
-                if (!r.ok) throw new Error("File non trovato");
+                if (!r.ok) throw new Error("Dati non pronti");
                 
                 const data = await r.json();
-                
                 if (!data.news || data.news.length === 0) {
                     mostraVuoto();
                     return;
                 }
 
-                document.getElementById('date-now').innerText = data.today || new Date().toLocaleDateString('it-IT');
+                // Aggiorna data testata
+                if (data.today) document.getElementById('date-now').innerText = data.today;
                 
                 container.innerHTML = '';
                 data.news.forEach(n => {
@@ -235,7 +244,7 @@
                     card.innerHTML = `
                         <div class="tag-row">
                             <span class="tag">${n.categoria || 'NOTIZIA'} • ${n.fonte || 'Redazione'}</span>
-                            ${n.isFake ? '<span class="badge-fake">DIRETTA DAL FUTURO</span>' : ''}
+                            ${n.isFake ? '<span class="badge-fake">SATIRA</span>' : ''}
                         </div>
                         <h3>${n.titolo}</h3>
                         <div class="sommario">${n.sommario}</div>
@@ -248,7 +257,6 @@
                 });
 
             } catch(e) {
-                console.error(e);
                 mostraVuoto();
             }
         }
@@ -256,32 +264,24 @@
         function mostraVuoto() {
             document.getElementById('news-container').innerHTML = `
                 <div class="empty-state">
-                    <div style="font-size: 5em;">🌊</div>
-                    <h3>Notizie in arrivo</h3>
-                    <p>Le reti sono ancora vuote — il Delfino sta lavorando!<br>Torna tra qualche minuto.</p>
-                    <button class="btn-retry" onclick="location.reload()">🔄 RIPROVA</button>
+                    <div style="font-size: 4em; margin-bottom: 20px;">🌊</div>
+                    <h3>Reti vuote</h3>
+                    <p>Le notizie non sono ancora arrivate — il Delfino sta lavorando!<br>Torna a trovarci tra poco.</p>
                 </div>`;
         }
 
         function chiediAdmin() {
-            const pwd = prompt("Chiave Direttore:");
+            const pwd = prompt("Identificazione Direttore:");
             fetch(`public/data/auth_info.json?v=${v}`)
                 .then(r => r.json())
                 .then(d => {
-                    if (pwd === d.key) alert("Accesso Admin sbloccato (Funzione in arrivo)");
+                    if (pwd === d.key) alert("Accesso Admin Sbloccato.");
                     else alert("Accesso negato.");
-                });
+                }).catch(() => alert("Sistema di sicurezza non pronto."));
         }
 
-        // Avvio automatico
-        window.onload = () => {
-            const defaultBtn = document.querySelector('.btn-t.active');
-            loadSez('mondo', defaultBtn);
-            
-            // Aggiorna l'immagine testata col cache buster
-            const hImg = document.getElementById('header-img');
-            hImg.src = hImg.src + "?v=" + v;
-        };
+        // Avvio
+        window.onload = init;
     </script>
 </body>
 </html>
