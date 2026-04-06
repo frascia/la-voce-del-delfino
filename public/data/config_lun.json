@@ -14,15 +14,15 @@
   },
   "pescara": {
     "color": "#005f73",
-    "Pescara Calcio": { "count": 5, "img": "sport_pescara.webp", "label": "Calcio", "mood": "sarcastico", "weight": 0.8 },
-    "Intelligenza Artificiale": { "count": 0, "img": "ai_tech.webp", "label": "Futuro", "mood": "saggio", "weight": 0.4 },
-    "Psicologia": { "count": 2, "img": "psicologia.webp", "label": "Mente", "mood": "riflessivo", "weight": 0.3 },
-    "Satira": { "count": 4, "img": "satira.webp", "label": "Satira", "mood": "pungente", "weight": 1.0 }
+    "Pescara Calcio": { "count": 5, "img": "Calcio.webp", "label": "Calcio", "mood": "sarcastico", "weight": 0.8 },
+    "Meteo Pescara": { "count": 2, "img": "Meteo.webp", "label": "Meteo Pescara", "mood": "riflessivo", "weight": 0.3 },
+    "Satira": { "count": 4, "img": "Fake.webp", "label": "Satira", "mood": "pungente", "weight": 1.0 }
   },
   "mondo": {
     "color": "#0a9396",
-    "Netflix": { "count": 0, "img": "netflix.webp", "label": "Streaming", "mood": "sarcastico", "weight": 0.7 },
-    "Giappone": { "count": 2, "img": "giappone.webp", "label": "Giappone", "mood": "curioso", "weight": 0.5 },
-    "Danimarca": { "count": 0, "img": "danimarca.webp", "label": "Danimarca", "mood": "nordico", "weight": 0.4 }
+    "Netflix": { "count": 2, "img": "Converti.webp", "label": "Streaming", "mood": "sarcastico", "weight": 0.7 },
+    "Giappone": { "count": 2, "img": "Giappone.webp", "label": "Giappone", "mood": "curioso", "weight": 0.5 },
+    "Danimarca": { "count": 2, "img": "Danimarca.webp", "label": "Danimarca", "mood": "nordico", "weight": 0.4 }
+    "Intelligenza Artificiale": { "count": 2, "img": "AI.webp", "label": "Futuro", "mood": "saggio", "weight": 0.4 },
   }
 }
