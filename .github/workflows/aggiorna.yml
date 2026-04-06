@@ -36,4 +36,3 @@ jobs:
             git commit -m "🗞️ News $(date +'%d-%m %H:%M')"
             git push origin main
           fi
-
