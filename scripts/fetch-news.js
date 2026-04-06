@@ -52,27 +52,36 @@ async function trovaUltimoModello() {
             }
         }
     } catch (e) {
-        scriviLog(`[ATTENZIONE] Ricerca modelli fallita. Uso modello di riserva.`);
+        scriviLog(`[ATTENZIONE] Ricerca modelli fallita.`);
     }
 }
 
 /**
- * Tenta di scaricare i titoli attualmente online per il confronto
+ * Recupera i titoli pubblicati online per evitare falsi "NEW"
  */
 async function recuperaTitoliOnline(sezione) {
-    // Costruiamo l'URL basandoci sulle info di GitHub (se disponibili)
-    const repo = process.env.GITHUB_REPOSITORY; // Es: "user/repo"
+    const repo = process.env.GITHUB_REPOSITORY; 
     if (!repo) return [];
     
     const [user, name] = repo.split('/');
-    const url = `https://${user}.github.io/${name}/public/data/news-${sezione}.json`;
+    // Se il repository si chiama come la pagina (user.github.io), l'URL è diverso
+    const baseUrl = (name === `${user}.github.io`) 
+        ? `https://${user}.github.io` 
+        : `https://${user}.github.io/${name}`;
+    
+    const url = `${baseUrl}/public/data/news-${sezione}.json?v=${Date.now()}`;
     
     try {
+        scriviLog(`Controllo archivio online su: ${url}`);
         const res = await fetch(url);
-        if (!res.ok) return [];
+        if (!res.ok) {
+            scriviLog(`Archivio per ${sezione} non trovato (prima pubblicazione?)`);
+            return [];
+        }
         const data = await res.json();
         return data.news ? data.news.map(n => n.titolo.trim().toLowerCase()) : [];
     } catch (e) {
+        scriviLog(`Errore connessione archivio online: ${e.message}`);
         return [];
     }
 }
@@ -88,25 +97,20 @@ async function fetchRSS(query, max) {
         const titles = [];
         const dueGiorniFa = Date.now() - (2 * 24 * 60 * 60 * 1000);
         const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
-        let matchItem;
-        while ((matchItem = itemRegex.exec(xml)) !== null && titles.length < max) {
-            const itemXml = matchItem[1];
-            const pubDateMatch = itemXml.match(/<pubDate>(.*?)<\/pubDate>/i);
-            if (!pubDateMatch) continue;
-            const dataNotizia = new Date(pubDateMatch[1]).getTime();
-            if (isNaN(dataNotizia) || dataNotizia < dueGiorniFa) continue;
-            const titleMatch = itemXml.match(/<title>(.*?)<\/title>/i);
-            if (titleMatch) {
-                let cleanTitle = titleMatch[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "");
-                cleanTitle = cleanTitle.split(" - ")[0].trim();
-                if (!titles.includes(cleanTitle)) titles.push(cleanTitle);
+        let m;
+        while ((m = itemRegex.exec(xml)) !== null && titles.length < max) {
+            const item = m[1];
+            const pMatch = item.match(/<pubDate>(.*?)<\/pubDate>/i);
+            if (!pMatch) continue;
+            if (new Date(pMatch[1]).getTime() < dueGiorniFa) continue;
+            const tMatch = item.match(/<title>(.*?)<\/title>/i);
+            if (tMatch) {
+                let t = tMatch[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "").split(" - ")[0].trim();
+                if (!titles.includes(t)) titles.push(t);
             }
         }
         return titles;
-    } catch (e) {
-        scriviLog(`Errore RSS per ${query}: ${e.message}`);
-        return [];
-    }
+    } catch (e) { return []; }
 }
 
 async function callGemini(sys, prompt) {
@@ -125,112 +129,82 @@ async function callGemini(sys, prompt) {
                         temperature: 0.8,
                         responseSchema: {
                             type: "OBJECT",
-                            properties: {
-                                titolo: { type: "STRING" },
-                                articolo: { type: "STRING" },
-                                commento: { type: "STRING" }
-                            },
+                            properties: { titolo: { type: "STRING" }, articolo: { type: "STRING" }, commento: { type: "STRING" } },
                             required: ["titolo", "articolo", "commento"]
                         }
                     },
-                    safetySettings: [
-                        { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
-                    ]
+                    safetySettings: [{ category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },{ category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },{ category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },{ category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }]
                 })
             });
             const d = await res.json();
             return d.candidates?.[0]?.content?.parts?.[0]?.text || null;
-        } catch (e) {
-            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
-        }
+        } catch (e) { await new Promise(r => setTimeout(r, 2000)); }
     }
     return null;
 }
 
-function parseJSON(raw) {
-    try {
-        if (!raw) return null;
-        const start = raw.indexOf('{');
-        const end = raw.lastIndexOf('}');
-        if (start !== -1 && end !== -1) return JSON.parse(raw.substring(start, end + 1));
-        return null;
-    } catch (e) { return null; }
-}
-
 async function main() {
-    scriviLog("⚓️ Inizio turno di redazione...");
+    scriviLog("⚓️ Apertura redazione...");
     await trovaUltimoModello();
     
-    const fusoItalia = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
-    const dataOggiItalia = new Date(fusoItalia);
+    const fuso = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
+    const oggiIdx = new Date(fuso).getDay();
     const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
-    const oggi = giorni[dataOggiItalia.getDay()];
+    const oggi = giorni[oggiIdx];
     
-    let currentConfigPath = path.join(DATA_DIR, `config_${oggi}.json`);
-    if (!fs.existsSync(currentConfigPath)) currentConfigPath = CONFIG_PATH;
-    const CONFIG = JSON.parse(fs.readFileSync(currentConfigPath, 'utf8'));
+    let cfgP = path.join(DATA_DIR, `config_${oggi}.json`);
+    if (!fs.existsSync(cfgP)) cfgP = CONFIG_PATH;
+    const CONFIG = JSON.parse(fs.readFileSync(cfgP, 'utf8'));
     
-    const oraAggiornamento = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' });
-    CONFIG.site_settings.last_update = oraAggiornamento;
+    const ts = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome', hour:'2-digit', minute:'2-digit', day:'2-digit', month:'2-digit' });
+    CONFIG.site_settings.last_update = ts;
     fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(CONFIG, null, 2));
 
     const hash = crypto.createHash('sha256').update(adminPwd).digest('hex');
-    const encrypted = Buffer.from(secretData).toString('base64'); 
-    fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: encrypted, ts: oraAggiornamento }));
+    fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: Buffer.from(secretData).toString('base64'), ts }));
 
-    const sysPromptSatira = "Sei un giornalista satirico pescarese. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo 800+ caratt.";
-    const sysPromptVera = "Sei un giornalista serio. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo VERO 800+ caratt.";
+    const sysSat = "Sei un giornalista satirico pescarese. JSON con: titolo, articolo (800+ car.), commento. Sii assurdo.";
+    const sysVer = "Sei un giornalista serio. JSON con: titolo, articolo (800+ car.), commento. Sii VERO e oggettivo.";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
         
-        // RECUPERO TITOLI ONLINE PER CONFRONTO REALE
-        const titoliOnline = await recuperaTitoliOnline(sez);
-        scriviLog(`Confronto con ${titoliOnline.length} titoli già pubblicati online per la sezione ${sez}.`);
-
+        const titoliVivi = await recuperaTitoliOnline(sez);
         let newsSezione = [];
         const categorie = CONFIG[sez];
-        let quotaAvanzata = 0;
+        let quota = 0;
 
         for (const [nome, info] of Object.entries(categorie)) {
             if (nome === "color" || info.count <= 0) continue;
-            const targetPezzi = info.count + quotaAvanzata;
-            quotaAvanzata = 0;
+            const tPezzi = info.count + quota;
+            quota = 0;
 
             if (info.label === "Satira") {
-                const temi = CONFIG.satira_config?.temi || ["Alieni"];
-                for (let i = 0; i < targetPezzi; i++) {
-                    const tema = temi[Math.floor(Math.random() * temi.length)];
-                    const raw = await callGemini(sysPromptSatira, `Scoop su: ${tema}.`);
-                    const p = parseJSON(raw);
-                    if (p && p.articolo) {
-                        const isNew = !titoliOnline.includes(p.titolo.trim().toLowerCase());
+                const temi = CONFIG.satira_config?.temi || ["Delfini"];
+                for (let i = 0; i < tPezzi; i++) {
+                    const r = await callGemini(sysSat, `Scoop su: ${temi[Math.floor(Math.random()*temi.length)]}`);
+                    const p = JSON.parse(r || "{}");
+                    if (p.articolo) {
+                        const isNew = titoliVivi.length > 0 && !titoliVivi.includes(p.titolo.trim().toLowerCase());
                         newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true, is_new: isNew });
                     }
                 }
             } else {
-                const titoli = await fetchRSS(nome, targetPezzi);
-                if (titoli.length < targetPezzi) quotaAvanzata = targetPezzi - titoli.length;
-                for (const t of titoli) {
-                    const raw = await callGemini(sysPromptVera, `Articolo su: ${t}`);
-                    const p = parseJSON(raw);
-                    if (p && p.articolo) {
-                        const isNew = !titoliOnline.includes(p.titolo.trim().toLowerCase());
+                const tits = await fetchRSS(nome, tPezzi);
+                if (tits.length < tPezzi) quota = tPezzi - tits.length;
+                for (const t of tits) {
+                    const r = await callGemini(sysVer, `Articolo su: ${t}`);
+                    const p = JSON.parse(r || "{}");
+                    if (p.articolo) {
+                        const isNew = titoliVivi.length > 0 && !titoliVivi.includes(p.titolo.trim().toLowerCase());
                         newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_new: isNew });
                     }
                 }
             }
         }
-        const outPath = path.join(DATA_DIR, `news-${sez}.json`);
-        fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
+        fs.writeFileSync(path.join(DATA_DIR, `news-${sez}.json`), JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
     }
     scriviLog("🏁 Turno completato.");
 }
 
-main().catch(err => {
-    scriviLog(`ERRORE CRITICO: ${err.message}`);
-    process.exit(1);
-});
+main().catch(e => scriviLog(`Errore: ${e.message}`));
