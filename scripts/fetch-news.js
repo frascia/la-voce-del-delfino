@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 
 // --- CONFIGURAZIONE PERCORSI ---
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-// Il file è in /scripts, quindi dobbiamo salire di uno per trovare /public
+// Saliamo di un livello per uscire da /scripts e trovare /public
 const BASE_DIR = path.join(__dirname, "..");
 const PUBLIC_DIR = path.join(BASE_DIR, "public");
 const DATA_DIR = path.join(PUBLIC_DIR, "data");
@@ -17,15 +17,15 @@ const AUTH_PATH = path.join(DATA_DIR, "auth_info.json");
 const CONFIG_PATH = path.join(DATA_DIR, "config.json");
 const ACTIVE_CONFIG_PATH = path.join(DATA_DIR, "active_config.json");
 
-// Assicuriamoci che la cartella dei dati esista
+// Creazione cartella dati se mancante
 if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 
-// --- COSTANTI ---
+// --- COSTANTI E SEGRETI ---
 const apiKey = process.env.GEMINI_API_KEY || "";
 const adminPwd = process.env.ADMIN_PASSWORD || "delfino2026";
-const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto oggi.";
+const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto impostato.";
 
 function scriviLog(msg) {
     const ts = new Date().toLocaleString('it-IT');
@@ -48,7 +48,6 @@ async function fetchRSS(query, max) {
         const regex = /<title><!\[CDATA\[(.*?)\]\]><\/title>/g;
         let m;
         while ((m = regex.exec(xml)) !== null && titles.length < max) {
-            // Puliamo il titolo (rimuoviamo il nome della testata finale)
             const cleanTitle = m[1].split(" - ")[0];
             titles.push(cleanTitle);
         }
@@ -64,7 +63,7 @@ async function fetchRSS(query, max) {
  */
 async function callGemini(sys, prompt) {
     if (!apiKey) {
-        scriviLog("ERRORE: Manca la GEMINI_API_KEY nei Secrets!");
+        scriviLog("ERRORE: Manca la GEMINI_API_KEY nei Secrets di GitHub!");
         return null;
     }
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
@@ -90,10 +89,93 @@ async function callGemini(sys, prompt) {
 }
 
 /**
- * Pulisce il JSON dalle risposte sporche dell'AI
+ * Pulisce il JSON dalle risposte sporche dell'AI (Senza Regex complesse)
  */
 function parseJSON(raw) {
     try {
         if (!raw) return null;
-        // Rimuove markdown ```json ... ``` se presente
-        const clean = raw.replace(/
+        let pulito = raw.trim();
+        // Se Gemini ci butta dentro i backtick del markdown, li filtriamo riga per riga
+        if (pulito.startsWith("```")) {
+            pulito = pulito.split('\n').filter(riga => !riga.includes('```')).join('\n');
+        }
+        return JSON.parse(pulito.trim());
+    } catch (e) {
+        scriviLog("Errore parsing JSON: l'AI ha risposto con un formato non valido.");
+        return null;
+    }
+}
+
+async function main() {
+    scriviLog("⚓️ Inizio turno di redazione (Fetch-News)...");
+    
+    const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
+    const oggi = giorni[new Date().getDay()];
+    let currentConfigPath = path.join(DATA_DIR, `config_${oggi}.json`);
+    
+    if (!fs.existsSync(currentConfigPath)) {
+        currentConfigPath = CONFIG_PATH;
+    }
+
+    if (!fs.existsSync(currentConfigPath)) {
+        scriviLog(`ERRORE: ${currentConfigPath} non trovato!`);
+        return;
+    }
+
+    const CONFIG = JSON.parse(fs.readFileSync(currentConfigPath, 'utf8'));
+    const oraAggiornamento = new Date().toLocaleString('it-IT', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' });
+    
+    // Aggiornamento configurazione attiva
+    CONFIG.site_settings.last_update = oraAggiornamento;
+    fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(CONFIG, null, 2));
+
+    // Sicurezza e Terminale
+    const hash = crypto.createHash('sha256').update(adminPwd).digest('hex');
+    const encrypted = Buffer.from(secretData).toString('base64'); 
+    fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: encrypted, ts: oraAggiornamento }));
+
+    const sysPrompt = "Sei un giornalista satirico pescarese. Rispondi SOLO in JSON: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}";
+
+    for (const sez of Object.keys(CONFIG)) {
+        if (["site_settings", "satira_config"].includes(sez)) continue;
+        
+        let newsSezione = [];
+        const categorie = CONFIG[sez];
+
+        for (const [nome, info] of Object.entries(categorie)) {
+            if (nome === "color" || info.count <= 0) continue;
+
+            scriviLog(`Lancio le reti per: ${nome} (${info.count} pezzi)`);
+            
+            if (info.label === "Satira") {
+                const temi = CONFIG.satira_config?.temi || ["Alieni a Pescara", "Arrosticini"];
+                for (let i = 0; i < info.count; i++) {
+                    const tema = temi[Math.floor(Math.random() * temi.length)];
+                    const raw = await callGemini(sysPrompt, `Inventa una notizia assurda su: ${tema}.`);
+                    const p = parseJSON(raw);
+                    if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
+                }
+            } else {
+                const titoli = await fetchRSS(nome, info.count);
+                if (titoli.length === 0) titoli.push(nome);
+
+                for (const t of titoli) {
+                    const raw = await callGemini(sysPrompt, `Articolo satirico basato su questa news reale: ${t}`);
+                    const p = parseJSON(raw);
+                    if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
+                }
+            }
+        }
+        
+        const outPath = path.join(DATA_DIR, `news-${sez}.json`);
+        fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
+        scriviLog(`Sezione ${sez}: ${newsSezione.length} notizie pescate.`);
+    }
+    
+    scriviLog("🏁 Turno completato con successo.");
+}
+
+main().catch(err => {
+    scriviLog(`ERRORE CRITICO: ${err.message}`);
+    process.exit(1);
+});
