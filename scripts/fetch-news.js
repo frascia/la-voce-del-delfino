@@ -204,7 +204,9 @@ async function main() {
     const encrypted = Buffer.from(secretData).toString('base64'); 
     fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: encrypted, ts: oraAggiornamento }));
 
-    const sysPrompt = "Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, corposo e ben articolato (almeno 800-1000 caratteri), sviluppando la notizia con ricchezza di dettagli e umorismo.";
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, corposo e ben articolato (almeno 800-1000 caratteri), sviluppando la notizia con ricchezza di dettagli e umorismo assurdo.";
+    
+    const sysPromptVera = "Sei un giornalista serio, fattuale e oggettivo. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, VERO, professionale e ben articolato (almeno 800-1000 caratteri), basandoti unicamente sui fatti. Niente invenzioni o satira nell'articolo. Il 'commento' finale del Delfino può invece avere un tono saggio o leggero.";
 
     const scuseDelfino = [
         "Il Delfino è in sciopero per carenza di arrosticini.",
@@ -228,7 +230,7 @@ async function main() {
                 const temi = CONFIG.satira_config?.temi || ["Alieni a Pescara", "Arrosticini"];
                 for (let i = 0; i < info.count; i++) {
                     const tema = temi[Math.floor(Math.random() * temi.length)];
-                    const raw = await callGemini(sysPrompt, `Inventa una notizia assurda su: ${tema}.`);
+                    const raw = await callGemini(sysPromptSatira, `Inventa una notizia assurda su: ${tema}.`);
                     const p = parseJSON(raw);
                     
                     if (p) {
@@ -249,7 +251,7 @@ async function main() {
                 if (titoli.length === 0) titoli.push(nome);
 
                 for (const t of titoli) {
-                    const raw = await callGemini(sysPrompt, `Articolo satirico basato su questa news reale: ${t}`);
+                    const raw = await callGemini(sysPromptVera, `Scrivi un articolo giornalistico VERO e dettagliato basato su questa news reale: ${t}`);
                     const p = parseJSON(raw);
                     
                     if (p) {
