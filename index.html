@@ -153,19 +153,22 @@
             </div>
             <pre id="log-content" style="font-size:13px; color:#ccc; margin:20px 0; white-space: pre-wrap;"></pre>
         </div>
+
         <div class="testata" id="logo-innesco">
             <img id="header-img" src="public/images/default.webp">
-            <div class="day-banner-box" id="banner-box"><img id="day-banner" src=""></div>
-            <div class="descrizione-sito" id="descrizione-display">...</div>
+            <div id="timbro-edizione"></div>
             <div class="data-oggi" id="data-display"></div>
         </div>
+
         <div class="info-aggiornamento">
             <span id="ts-display">...</span>
             <strong id="meteo-display">🌍 Pescara</strong>
         </div>
+
         <div class="menu" id="menu-categorie"></div>
         <div id="lista-notizie" class="notizia-container"></div>
     </div>
+
     <script>
         let clicks = 0, last = 0, pannaGradient = "";
         function toggleTerminale() { document.getElementById('terminale').style.display = 'none'; }
