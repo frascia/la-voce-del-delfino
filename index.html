@@ -35,10 +35,6 @@
         
         .notizia-numero { position: absolute; top: -18px; left: -18px; width: 45px; height: 45px; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 22px; z-index: 20; border: 4px solid #fff; }
 
-        /* Badge NEW rivisto: Più visibile e agganciato al bordo */
-        .badge-new { position: absolute; top: -12px; left: 35px; background: #FFD700; color: #000; font-size: 10px; font-weight: 900; padding: 4px 10px; border-radius: 12px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.15); z-index: 30; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-
         .etichetta-categoria { position: absolute; top: -12px; right: 20px; padding: 4px 12px; border-radius: 12px; font-size: 10px; font-weight: 900; text-transform: uppercase; z-index: 20; border: 2px solid #fff; }
 
         .notizia.vera-box { border: 2px solid var(--azzurro-pescara); box-shadow: 0 10px 25px rgba(0,140,255,0.1); }
@@ -142,7 +138,6 @@
                 const isSat = n.is_satira || n.categoria?.toLowerCase()==='satira';
                 lista.innerHTML += `
                     <div class="notizia ${isSat?'satira-box':'vera-box'}">
-                        ${n.is_new ? '<div class="badge-new">NEW ⭐</div>' : ''}
                         <div class="notizia-numero">${idx+1}</div>
                         <span class="etichetta-categoria ${isSat?'satira-label':'vera-label'}">${n.categoria}</span>
                         <div class="notizia-img-box"><img src="public/images/${n.immagine||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>
