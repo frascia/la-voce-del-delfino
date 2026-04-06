@@ -5,137 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>La Voce del Delfino 🐬</title>
     <style>
-        :root { --blu: #005f73; --azzurro: #0091ff; --crema: #fdfaf4; }
-        body { margin: 0; background: var(--crema); font-family: sans-serif; -webkit-user-select: none; user-select: none; }
-        #app { width: 100%; max-width: 850px; margin: auto; background: #fff; min-height: 100vh; box-shadow: 0 0 40px rgba(0,0,0,0.1); }
+        :root { --blu-mare: #005f73; --azzurro: #0091ff; --crema: #fdfaf4; }
+        body { margin: 0; background: var(--crema); font-family: -apple-system, sans-serif; -webkit-user-select: none; user-select: none; }
+        #app { width: 100%; max-width: 800px; margin: auto; background: #fff; min-height: 100vh; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
         
-        .header { width: 100%; background: var(--blu); line-height: 0; cursor: pointer; }
-        .header img { width: 100%; height: auto; display: block; }
-        .data-bar { background: #000; color: #fff; text-align: center; padding: 10px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; }
+        .testata { width: 100%; background: var(--blu-mare); line-height: 0; cursor: pointer; text-align: center; }
+        .testata img { width: 100%; height: auto; max-height: 250px; object-fit: cover; }
+        .descrizione-sito { background: var(--blu-mare); color: rgba(255,255,255,0.9); text-align: center; padding: 10px 15px; font-size: 14px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); }
+        .data-oggi { background: #000; color: #fff; text-align: center; padding: 8px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
 
-        .banner-box { border-top: 4px solid var(--azzurro); border-bottom: 2px solid #eee; padding: 10px; background: #fff; display: flex; justify-content: center; }
-        .banner-box img { height: 75px; width: auto; object-fit: contain; }
+        .info-aggiornamento { text-align: right; font-size: 11px; color: #999; padding: 5px 15px; font-family: monospace; border-bottom: 1px solid #eee; }
+
+        .menu { display: flex; overflow-x: auto; padding: 15px; gap: 10px; scrollbar-width: none; }
+        .menu::-webkit-scrollbar { display: none; }
+        .tab { white-space: nowrap; padding: 10px 18px; border-radius: 25px; border: 1px solid var(--blu-mare); background: #fff; color: var(--blu-mare); font-weight: bold; font-size: 13px; cursor: pointer; transition: 0.2s; }
+        .tab.attiva { background: var(--blu-mare); color: #fff; }
+
+        .notizia { padding: 20px; border-bottom: 8px solid #f9f9f9; }
+        .notizia-img-box { width: 100%; aspect-ratio: 16/9; background: #eee; border-radius: 12px; overflow: hidden; margin-bottom: 15px; position: relative; }
+        .notizia-img-box img { width: 100%; height: 100%; object-fit: cover; }
         
-        .ts-info { text-align: right; font-size: 10px; color: #999; padding: 5px 15px; font-family: monospace; border-bottom: 1px solid #f0f0f0; }
+        /* Stile del badge dell'etichetta! */
+        .etichetta-categoria { position: absolute; top: 12px; left: 12px; background: var(--blu-mare); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; text-transform: uppercase; box-shadow: 0 4px 6px rgba(0,0,0,0.3); letter-spacing: 0.5px; z-index: 10; }
 
-        .nav-scroll { display: flex; overflow-x: auto; padding: 15px; gap: 10px; scrollbar-width: none; }
-        .nav-scroll::-webkit-scrollbar { display: none; }
-        .tab-btn { white-space: nowrap; padding: 10px 20px; border-radius: 20px; border: 2px solid var(--blu); background: #fff; color: var(--blu); font-weight: bold; font-size: 0.75em; text-transform: uppercase; cursor: pointer; }
-        .tab-btn.active { background: var(--blu); color: #fff; }
-
-        .feed { padding: 15px; }
-        .card { background: #fff; border-radius: 15px; border: 1px solid #eee; margin-bottom: 30px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .card-img { width: 100%; aspect-ratio: 16/9; background: #f8f8f8; display: flex; justify-content: center; align-items: center; }
-        .card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        h2 { margin: 0 0 10px 0; font-size: 22px; line-height: 1.2; color: #111; }
+        .testo { font-size: 16px; line-height: 1.6; color: #444; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
+        .testo.aperto { -webkit-line-clamp: unset; }
+        .leggi-tutto { background: none; border: none; color: var(--blu-mare); font-weight: bold; padding: 10px 0; font-size: 14px; cursor: pointer; }
         
-        .card-body { padding: 20px; }
-        .card-body h3 { margin: 0 0 15px 0; font-size: 1.4em; color: #111; }
-        .text-box { font-size: 1em; line-height: 1.6; color: #444; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
-        .text-box.open { -webkit-line-clamp: unset; }
-        .expand-btn { background: none; border: none; color: var(--azzurro); font-weight: bold; padding: 10px 0; cursor: pointer; font-size: 0.9em; }
-        
-        .delfino-comm { background: #e0f7fa; padding: 15px; border-radius: 12px; margin-top: 20px; border-left: 5px solid var(--azzurro); font-style: italic; position: relative; }
-        .delfino-comm:after { content: "🐬"; position: absolute; right: 10px; top: -10px; font-size: 24px; }
+        .commento-delfino { background: #e0f2f1; padding: 15px; border-radius: 12px; margin-top: 15px; position: relative; }
+        .commento-delfino:before { content: "🐬"; position: absolute; left: -10px; top: -10px; font-size: 20px; }
 
-        #terminal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.98); z-index:9999; color:#00ff41; padding:20px; font-family:monospace; box-sizing:border-box; overflow-y:auto; }
+        #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:#000; color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; }
     </style>
 </head>
 <body>
     <div id="app">
-        <div id="terminal">
-            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #00ff41; padding-bottom:10px; margin-bottom:20px;">
-                <span>> ACCESSO DIREZIONE</span>
-                <span onclick="toggleTerm()" style="color:red; cursor:pointer;">[X]</span>
+        <!-- Pannello segreto del Direttore -->
+        <div id="terminale">
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #0f0; padding-bottom:10px;">
+                <span>> TERMINALE DIREZIONE</span>
+                <span onclick="toggleTerminale()" style="color:red; cursor:pointer;">[X]</span>
             </div>
-            <div id="term-out" style="white-space: pre-wrap; font-size: 0.8em;"></div>
+            <pre id="log-content" style="font-size:12px; color:#aaa; margin:20px 0; white-space: pre-wrap;"></pre>
         </div>
 
-        <header class="header" id="adm-trigger">
-            <!-- Percorso corretto images/ -->
-            <img src="public/images/Header.pgp" alt="Testata" onerror="this.src='https://placehold.co/1200x400?text=Header+Mancante'">
-            <div class="data-bar" id="data-display"></div>
-        </header>
-
-        <div class="banner-box">
-            <img id="banner-img" src="" alt="">
+        <div class="testata" id="logo-innesco">
+            <img id="header-img" src="public/images/default.webp" alt="La Voce del Delfino" onerror="this.src='https://placehold.co/800x250?text=La+Voce+del+Delfino'">
+            <div class="descrizione-sito" id="descrizione-display">In attesa del Delfino...</div>
+            <div class="data-oggi" id="data-display"></div>
         </div>
-        <div class="ts-info" id="upd-display">Sincronizzazione in corso...</div>
 
-        <nav class="nav-scroll" id="nav-tabs"></nav>
-        <main class="feed" id="main-feed"></main>
+        <div class="info-aggiornamento" id="ts-display">In attesa...</div>
+
+        <div class="menu" id="menu-categorie"></div>
+        <div id="lista-notizie"></div>
     </div>
 
     <script>
-        let taps = 0, lastTap = 0;
-        function toggleTerm() { document.getElementById('terminal').style.display = 'none'; }
-        
-        document.getElementById('adm-trigger').onclick = async () => {
-            const now = Date.now();
-            if (now - lastTap > 1000) taps = 0;
-            taps++; lastTap = now;
-            if (taps === 5) {
-                taps = 0;
-                const p = prompt("Chiave Direzione:");
+        let clicks = 0, last = 0;
+        function toggleTerminale() { document.getElementById('terminale').style.display = 'none'; }
+
+        // Sistema di innesco terminale con password (5 click sul logo)
+        document.getElementById('logo-innesco').onclick = async () => {
+            const ora = Date.now();
+            if (ora - last > 1000) clicks = 0;
+            clicks++; last = ora;
+            if (clicks === 5) {
+                clicks = 0;
+                const p = prompt("Password:");
                 if (!p) return;
                 try {
-                    const res = await fetch(`public/data/auth_info.json?v=${Date.now()}`);
-                    const auth = await res.json();
-                    const hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(p)).then(b => Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2,'0')).join(''));
-                    if (hash === auth.check) {
-                        document.getElementById('terminal').style.display = 'block';
-                        const log = await fetch(`public/data/redazione.log?v=${now}`).then(r => r.text());
-                        document.getElementById('term-out').innerText = log;
+                    const r = await fetch(`public/data/auth_info.json?v=${ora}`);
+                    const a = await r.json();
+                    const msgBuffer = new TextEncoder().encode(p);
+                    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+                    const hash = Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+                    
+                    if (hash === a.check) {
+                        document.getElementById('terminale').style.display = 'block';
+                        const log = await fetch(`public/data/redazione.log?v=${ora}`).then(res => res.text());
+                        document.getElementById('log-content').innerText = log;
                     }
                 } catch(e) { }
             }
         };
 
-        async function init() {
+        // Funzione iniziale che carica il menu e l'header
+        async function carica() {
             try {
                 const res = await fetch(`public/data/active_config.json?v=${Date.now()}`);
                 const cfg = await res.json();
-                document.getElementById('banner-img').src = `public/images/${cfg.site_settings.day_banner}`;
-                document.getElementById('data-display').innerText = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long'});
-                document.getElementById('upd-display').innerText = `ULTIMO REFRESH: ${cfg.site_settings.last_update || '---'}`;
                 
-                const sezs = Object.keys(cfg).filter(k => !['site_settings', 'satira_config'].includes(k));
-                const tabs = document.getElementById('nav-tabs');
-                sezs.forEach((s, i) => {
-                    const b = document.createElement('button');
-                    b.className = 'tab-btn' + (i === 0 ? ' active' : '');
-                    b.innerText = s;
-                    b.onclick = () => loadSez(s, b);
-                    tabs.appendChild(b);
+                // Aggiornamento testata ed extra dinamici
+                if (cfg.site_settings.header_img) {
+                    document.getElementById('header-img').src = `public/images/${cfg.site_settings.header_img}`;
+                }
+                if (cfg.site_settings.descrizione) {
+                    document.getElementById('descrizione-display').innerText = cfg.site_settings.descrizione;
+                }
+                
+                document.getElementById('data-display').innerText = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long'});
+                document.getElementById('ts-display').innerText = `ULTIMO REFRESH: ${cfg.site_settings.last_update || '---'}`;
+                
+                // Creazione Menu dinamico scartando site_settings e satira_config
+                const cat = Object.keys(cfg).filter(k => !['site_settings','satira_config'].includes(k));
+                const menu = document.getElementById('menu-categorie');
+                cat.forEach((c, i) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'tab' + (i === 0 ? ' attiva' : '');
+                    btn.innerText = c;
+                    btn.onclick = () => mostraSezione(c, btn);
+                    menu.appendChild(btn);
                 });
-                if (sezs[0]) loadSez(sezs[0]);
-            } catch(e) { document.getElementById('main-feed').innerHTML = '<p style="text-align:center; padding:50px; color:#999;">Il peschereccio sta arrivando con le news...</p>'; }
+                
+                // Clicca automaticamente sulla prima sezione all'avvio
+                if (cat[0]) mostraSezione(cat[0]);
+            } catch(e) { 
+                document.getElementById('lista-notizie').innerHTML = "<p style='text-align:center; padding:50px;'>Il Delfino sta pescando news fresche...</p>"; 
+            }
         }
 
-        async function loadSez(s, btn) {
+        // Funzione per mostrare le notizie di una sezione
+        async function mostraSezione(s, btn) {
             if (btn) {
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('attiva'));
+                btn.classList.add('attiva');
             }
-            const res = await fetch(`public/data/news-${s}.json?v=${Date.now()}`);
-            const data = await res.json();
-            document.documentElement.style.setProperty('--blu', data.color);
-            
-            const feed = document.getElementById('main-feed');
-            feed.innerHTML = '';
-            data.news.forEach((n, i) => {
-                feed.innerHTML += `
-                    <div class="card">
-                        <div class="card-img"><img src="public/images/${n.immagine}" onerror="this.src='https://placehold.co/800x450?text=News+Delfino'"></div>
-                        <div class="card-body">
-                            <h3>${n.titolo}</h3>
-                            <div class="text-box" id="t-${i}">${n.articolo}</div>
-                            <button class="expand-btn" onclick="const t=document.getElementById('t-${i}'); t.classList.toggle('open'); this.innerText=t.classList.contains('open')?'Chiudi':'Leggi di più'">Leggi di più</button>
-                            <div class="delfino-comm"><strong>Delfino:</strong> ${n.commento}</div>
-                        </div>
-                    </div>`;
-            });
+            try {
+                const res = await fetch(`public/data/news-${s}.json?v=${Date.now()}`);
+                const data = await res.json();
+                
+                // Imposta il colore tematico per l'intera sezione!
+                document.documentElement.style.setProperty('--blu-mare', data.color || '#005f73');
+                
+                const lista = document.getElementById('lista-notizie');
+                lista.innerHTML = '';
+                
+                data.news.forEach((n, idx) => {
+                    // Lettura di Etichetta (categoria) e Immagine caricate dal motore
+                    const etichetta = n.categoria || 'Speciale';
+                    const immagine = n.immagine || 'default.webp';
+                    
+                    lista.innerHTML += `
+                        <div class="notizia">
+                            <div class="notizia-img-box">
+                                <span class="etichetta-categoria">${etichetta}</span>
+                                <img src="public/images/${immagine}" onerror="this.src='https://placehold.co/600x400?text=Delfino'">
+                            </div>
+                            <h2>${n.titolo}</h2>
+                            <div class="testo" id="t-${idx}">${n.articolo}</div>
+                            <button class="leggi-tutto" onclick="const t=document.getElementById('t-${idx}'); t.classList.toggle('aperto'); this.innerText=(t.classList.contains('aperto')?'Chiudi':'Leggi di più')">Leggi di più</button>
+                            <div class="commento-delfino"><strong>Delfino:</strong> ${n.commento}</div>
+                        </div>`;
+                });
+            } catch(e) {}
         }
-        init();
+        
+        // Avvio!
+        carica();
     </script>
 </body>
 </html>
