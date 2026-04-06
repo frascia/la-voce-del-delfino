@@ -234,7 +234,8 @@ async function main() {
                     const p = parseJSON(raw);
                     
                     if (p) {
-                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
+                        // Aggiunto is_satira: true per il frontend
+                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true });
                     } else {
                         scriviLog(`[PIANO B] Inserisco scusa di sciopero per la satira su: ${tema}`);
                         newsSezione.push({
@@ -242,7 +243,8 @@ async function main() {
                             articolo: `Avevamo in serbo uno scoop clamoroso su "${tema}", ma un gabbiano gigante ci ha rubato gli appunti mentre mangiavamo un calzone al porto. La redazione è attualmente all'inseguimento del volatile per recuperare l'articolo completo. Speriamo di darvi aggiornamenti più succosi nella prossima edizione, sempre che il pennuto non decida di usare i nostri appunti per farsi il nido sulla ruota panoramica.`,
                             commento: scuseDelfino[Math.floor(Math.random() * scuseDelfino.length)],
                             categoria: info.label,
-                            immagine: info.img
+                            immagine: info.img,
+                            is_satira: true
                         });
                     }
                 }
