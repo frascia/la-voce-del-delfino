@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>La Voce del Delfino 🐬</title>
     <style>
-        :root { --blu-mare: #005f73; --bg-chiaro: rgba(0, 95, 115, 0.08); --panna: #Faf7f2; }
+        :root { 
+            --blu-mare: #005f73; 
+            --bg-chiaro: rgba(0, 95, 115, 0.08); 
+            --panna: #Faf7f2; 
+            --azzurro-pescara: #008cff; 
+        }
         
         body { margin: 0; background: var(--bg-chiaro); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-user-select: none; user-select: none; transition: background 0.6s ease; }
         #app { width: 100%; max-width: 800px; margin: auto; background: #fff; min-height: 100vh; box-shadow: 0 0 40px rgba(0,0,0,0.15); }
@@ -33,22 +38,19 @@
         .notizia { 
             position: relative;
             background: var(--panna); 
-            border: 2px solid rgba(0,0,0,0.05); 
             border-radius: 24px; 
             padding: 25px 20px 20px 20px; 
             margin-bottom: 35px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.06), inset 0 0 20px rgba(255,255,255,0.7);
             transition: border-color 0.6s ease;
         }
 
-        /* Il medaglione con il numero */
+        /* Il medaglione con il numero (Base) */
         .notizia-numero {
             position: absolute;
             top: -18px;
             left: -18px;
             width: 45px;
             height: 45px;
-            background: var(--blu-mare);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -56,39 +58,55 @@
             justify-content: center;
             font-weight: 900;
             font-size: 22px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             z-index: 20;
             border: 4px solid #fff;
             transition: background-color 0.6s ease;
         }
         
-        /* ETICHETTA CATEGORIA (Piccola e sul bordo in alto a destra) */
+        /* ETICHETTA CATEGORIA (Base, sul bordo) */
         .etichetta-categoria { 
             position: absolute; 
             top: -12px; 
             right: 20px; 
-            background: var(--blu-mare); 
-            color: white; 
             padding: 4px 12px; 
             border-radius: 12px; 
             font-size: 10px; 
-            font-weight: 800; 
+            font-weight: 900; 
             text-transform: uppercase; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
             letter-spacing: 0.5px; 
             z-index: 20; 
-            border: 2px solid #fff;
             transition: background-color 0.6s ease; 
         }
 
-        /* Satira Ghibli: rossa ma elegante */
+        /* 1) STILE NOTIZIE VERE: BIANCAZZURRO PESCARA */
+        .notizia.vera-box {
+            background: #ffffff; /* Sfondo bianchissimo per staccare l'azzurro */
+            border: 2px solid var(--azzurro-pescara);
+            box-shadow: 0 10px 25px rgba(0, 140, 255, 0.08), inset 0 0 20px rgba(255,255,255,0.8);
+        }
+        .notizia.vera-box .notizia-numero {
+            background: var(--azzurro-pescara);
+            box-shadow: 0 5px 15px rgba(0, 140, 255, 0.2);
+        }
+        .etichetta-categoria.vera-label { 
+            background: #fff; 
+            color: var(--azzurro-pescara); 
+            border: 2px solid var(--azzurro-pescara); 
+            box-shadow: 0 4px 8px rgba(0, 140, 255, 0.1); 
+        }
+        .vera-box .commento-delfino { 
+            border-color: var(--azzurro-pescara); 
+        }
+
+        /* 2) STILE SATIRA: ROSSO ALLARME */
         .notizia.satira-box { 
-            background: #fffafa;
+            background: #fffafa; /* Sfondo leggermente caldo */
             border: 2px solid #ff4d4d; 
             box-shadow: 0 10px 25px rgba(255,0,0,0.08), inset 0 0 20px rgba(255,255,255,0.8);
         }
         .notizia.satira-box .notizia-numero {
             background: #ff4d4d;
+            box-shadow: 0 5px 15px rgba(255,0,0,0.2);
         }
         .etichetta-categoria.satira-label { 
             background: #fff; 
@@ -96,6 +114,10 @@
             border: 2px solid #ff4d4d; 
             box-shadow: 0 4px 8px rgba(255,0,0,0.1); 
         }
+        .satira-box .commento-delfino { 
+            border-color: #ff4d4d; 
+        }
+
 
         .notizia-img-box { width: 100%; aspect-ratio: 16/9; background: #e9e5df; border-radius: 16px; overflow: hidden; margin-bottom: 20px; position: relative; border: 1px solid rgba(0,0,0,0.05); }
         .notizia-img-box img { width: 100%; height: 100%; object-fit: cover; }
@@ -113,14 +135,14 @@
             border-radius: 20px; 
             margin-top: 20px; 
             position: relative; 
-            border: 2px dashed var(--blu-mare); 
+            border-style: dashed;
+            border-width: 2px;
             transition: all 0.6s ease; 
             font-style: italic;
             color: #333;
             box-shadow: 0 4px 10px rgba(0,0,0,0.03);
         }
         .commento-delfino:before { content: "🐬"; position: absolute; left: 12px; top: 16px; font-size: 22px; font-style: normal; }
-        .satira-box .commento-delfino { border-color: #ff4d4d; }
 
         #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; backdrop-filter: blur(5px); }
     </style>
@@ -249,12 +271,13 @@
                     const immagine = n.immagine || 'default.webp';
                     
                     const isSatira = (n.is_satira || etichetta.toLowerCase() === 'satira');
-                    const classeBox = isSatira ? ' satira-box' : '';
-                    const classeLabel = isSatira ? ' satira-label' : '';
+                    
+                    // Assegnamo la classe appropriata: Rossa (Satira) o Biancazzurra (Vera)
+                    const classeBox = isSatira ? ' satira-box' : ' vera-box';
+                    const classeLabel = isSatira ? ' satira-label' : ' vera-label';
                     
                     const numeroArticolo = idx + 1;
                     
-                    // L'etichetta ora è fuori dall'immagine e posizionata sul bordo della cartolina!
                     lista.innerHTML += `
                         <div class="notizia${classeBox}">
                             <div class="notizia-numero">${numeroArticolo}</div>
