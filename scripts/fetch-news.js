@@ -56,36 +56,6 @@ async function trovaUltimoModello() {
     }
 }
 
-/**
- * Recupera i titoli pubblicati online per evitare falsi "NEW"
- */
-async function recuperaTitoliOnline(sezione) {
-    const repo = process.env.GITHUB_REPOSITORY; 
-    if (!repo) return [];
-    
-    const [user, name] = repo.split('/');
-    // Se il repository si chiama come la pagina (user.github.io), l'URL è diverso
-    const baseUrl = (name === `${user}.github.io`) 
-        ? `https://${user}.github.io` 
-        : `https://${user}.github.io/${name}`;
-    
-    const url = `${baseUrl}/public/data/news-${sezione}.json?v=${Date.now()}`;
-    
-    try {
-        scriviLog(`Controllo archivio online su: ${url}`);
-        const res = await fetch(url);
-        if (!res.ok) {
-            scriviLog(`Archivio per ${sezione} non trovato (prima pubblicazione?)`);
-            return [];
-        }
-        const data = await res.json();
-        return data.news ? data.news.map(n => n.titolo.trim().toLowerCase()) : [];
-    } catch (e) {
-        scriviLog(`Errore connessione archivio online: ${e.message}`);
-        return [];
-    }
-}
-
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
     const queryFresca = `${query} when:2d`;
@@ -169,7 +139,6 @@ async function main() {
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
         
-        const titoliVivi = await recuperaTitoliOnline(sez);
         let newsSezione = [];
         const categorie = CONFIG[sez];
         let quota = 0;
@@ -182,11 +151,11 @@ async function main() {
             if (info.label === "Satira") {
                 const temi = CONFIG.satira_config?.temi || ["Delfini"];
                 for (let i = 0; i < tPezzi; i++) {
-                    const r = await callGemini(sysSat, `Scoop su: ${temi[Math.floor(Math.random()*temi.length)]}`);
+                    const tema = temi[Math.floor(Math.random()*temi.length)];
+                    const r = await callGemini(sysSat, `Scoop su: ${tema}`);
                     const p = JSON.parse(r || "{}");
                     if (p.articolo) {
-                        const isNew = titoliVivi.length > 0 && !titoliVivi.includes(p.titolo.trim().toLowerCase());
-                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true, is_new: isNew });
+                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true });
                     }
                 }
             } else {
@@ -196,8 +165,7 @@ async function main() {
                     const r = await callGemini(sysVer, `Articolo su: ${t}`);
                     const p = JSON.parse(r || "{}");
                     if (p.articolo) {
-                        const isNew = titoliVivi.length > 0 && !titoliVivi.includes(p.titolo.trim().toLowerCase());
-                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_new: isNew });
+                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
                     }
                 }
             }
