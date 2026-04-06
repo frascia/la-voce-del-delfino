@@ -3007,3 +3007,73 @@ Please retry in 53.782133399s.
 Please retry in 53.716766757s.
 [06/04/2026, 22:20:06] Sezione mondo: 8 notizie pescate e confezionate.
 [06/04/2026, 22:20:06] 🏁 Turno completato con successo.
+[06/04/2026, 22:23:38] ⚓️ Inizio turno di redazione (Fetch-News)...
+[06/04/2026, 22:23:38] 🤖 Modello Dinamico Agganciato: [ gemini-flash-lite-latest ]
+[06/04/2026, 22:23:38] Lancio le reti per: Pescara Calcio (Quota: 5 + 0 recuperati = 5 totali)
+[06/04/2026, 22:23:39] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 20.447762835s.
+[06/04/2026, 22:23:39] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 20.342937896s.
+[06/04/2026, 22:23:39] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 20.234873207s.
+[06/04/2026, 22:23:39] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 20.13729522s.
+[06/04/2026, 22:23:39] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 20.035300269s.
+[06/04/2026, 22:23:39] Lancio le reti per: Meteo Pescara (Quota: 2 + 0 recuperati = 2 totali)
+[06/04/2026, 22:23:40] [SISTEMA A CASCATA] Trovate solo 0 notizie fresche per Meteo Pescara. Passo 2 reti alla categoria successiva!
+[06/04/2026, 22:23:40] Lancio le reti per: Satira (Quota: 4 + 2 recuperati = 6 totali)
+[06/04/2026, 22:23:40] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 19.39196372s.
+[06/04/2026, 22:23:40] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 19.294092134s.
+[06/04/2026, 22:23:40] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 19.199893224s.
+[06/04/2026, 22:23:40] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 19.096680379s.
+[06/04/2026, 22:23:41] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 18.991783842s.
+[06/04/2026, 22:23:41] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 18.888122963s.
+[06/04/2026, 22:23:41] Sezione pescara: 11 notizie pescate e confezionate.
+[06/04/2026, 22:23:41] Lancio le reti per: Netflix (Quota: 2 + 0 recuperati = 2 totali)
+[06/04/2026, 22:23:41] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 18.258625758s.
+[06/04/2026, 22:23:41] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 18.159663948s.
+[06/04/2026, 22:23:41] Lancio le reti per: Giappone (Quota: 2 + 0 recuperati = 2 totali)
+[06/04/2026, 22:23:42] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 17.588454235s.
+[06/04/2026, 22:23:42] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 17.496243392s.
+[06/04/2026, 22:23:42] Lancio le reti per: Danimarca (Quota: 2 + 0 recuperati = 2 totali)
+[06/04/2026, 22:23:43] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 16.939645333s.
+[06/04/2026, 22:23:43] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 16.84237115s.
+[06/04/2026, 22:23:43] Lancio le reti per: Intelligenza Artificiale (Quota: 2 + 0 recuperati = 2 totali)
+[06/04/2026, 22:23:43] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 16.220532488s.
+[06/04/2026, 22:23:43] [ERRORE API GEMINI] Richiesta rifiutata: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 16.128846757s.
+[06/04/2026, 22:23:43] Sezione mondo: 8 notizie pescate e confezionate.
+[06/04/2026, 22:23:43] 🏁 Turno completato con successo.
