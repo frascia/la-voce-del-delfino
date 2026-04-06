@@ -75,7 +75,6 @@ async function fetchRSS(query, max) {
             
             if (pubDateMatch) {
                 const dataNotizia = new Date(pubDateMatch[1]).getTime();
-                // Filtro 48 ore: scarta se troppo vecchio
                 if (dataNotizia < limiteTempo) continue; 
             }
             
@@ -112,7 +111,7 @@ async function callGemini(sys, prompt) {
             });
             const d = await res.json();
             const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
-            return text ? JSON.parse(text) : null;
+            if (text) return JSON.parse(text);
         } catch (e) {
             await new Promise(r => setTimeout(r, 2000));
         }
@@ -154,7 +153,7 @@ async function main() {
         
         let newsSezione = [];
         const categorie = CONFIG[sez];
-        let quotaAvanzata = 0; // GESTIONE CASCATA (Danimarca)
+        let quotaAvanzata = 0;
 
         for (const [nome, info] of Object.entries(categorie)) {
             if (nome === "color" || info.count === undefined) continue;
@@ -171,7 +170,6 @@ async function main() {
                 }
             } else {
                 const tits = await fetchRSS(nome, target);
-                // Calcolo cascata: se non trova titoli, il debito passa alla prossima categoria
                 if (tits.length < target) {
                     quotaAvanzata = target - tits.length;
                     scriviLog(`Mancano ${quotaAvanzata} notizie per ${nome}, quota passata alla successiva.`);
@@ -195,3 +193,4 @@ main().catch(err => {
     scriviLog(`Errore: ${err.message}`);
     process.exit(1);
 });
+
