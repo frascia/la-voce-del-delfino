@@ -150,7 +150,6 @@
                     const r = await fetch(`public/data/auth_info.json?v=${ora}`);
                     const a = await r.json();
                     
-                    // Decodifica esagonale pulita
                     const msgBuffer = new TextEncoder().encode(p);
                     const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
                     const hashArray = Array.from(new Uint8Array(hashBuffer));
@@ -232,7 +231,6 @@
                     const classeBox = isSatira ? ' satira-box' : '';
                     const classeLabel = isSatira ? ' satira-label' : '';
                     
-                    // Il numero magico per ogni pezzo
                     const numeroArticolo = idx + 1;
                     
                     lista.innerHTML += `
@@ -244,7 +242,7 @@
                             </div>
                             <h2>${n.titolo}</h2>
                             <div class="testo" id="t-${idx}">${n.articolo}</div>
-                            <button class="leggi-tutto" onclick="const t=document.getElementById('t-${idx}'); t.classList.toggle('aperto'); this.innerText=(t.classList.contains('aperto')?'Nascondi':'Leggi l\'articolo completo')">Leggi l'articolo completo</button>
+                            <button class="leggi-tutto" onclick="const t=document.getElementById('t-${idx}'); t.classList.toggle('aperto'); this.innerText=(t.classList.contains('aperto')?'Nascondi':'Leggi articolo')">Leggi articolo</button>
                             <div class="commento-delfino">${n.commento}</div>
                         </div>`;
                 });
