@@ -16,32 +16,129 @@ const AUTH_PATH = path.join(DATA_DIR, "auth_info.json");
 const CONFIG_PATH = path.join(DATA_DIR, "config.json");
 const ACTIVE_CONFIG_PATH = path.join(DATA_DIR, "active_config.json");
 
-if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+}
 
+// --- COSTANTI E SEGRETI ---
 const apiKey = process.env.GEMINI_API_KEY || "";
 const adminPwd = process.env.ADMIN_PASSWORD || "delfino2026";
 const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto impostato.";
+
 let activeGeminiModel = "gemini-1.5-flash";
 
 function scriviLog(msg) {
     const ts = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' });
-    fs.appendFileSync(LOG_PATH, `[${ts}] ${msg}\n`);
+    const riga = `[${ts}] ${msg}\n`;
+    fs.appendFileSync(LOG_PATH, riga);
     console.log(`> ${msg}`);
 }
 
+/**
+ * Cerca dinamicamente l'ultima API di Gemini
+ */
 async function trovaUltimoModello() {
     if (!apiKey) return;
     try {
-        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+        const url = `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`;
+        const res = await fetch(url);
         const data = await res.json();
+        
         if (data.models) {
-            const validi = data.models
+            const modelliValidi = data.models
                 .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
-            const flash = validi.filter(m => m.includes("flash")).sort((a, b) => b.localeCompare(a));
-            activeGeminiModel = flash[0] || validi[0] || activeGeminiModel;
+            
+            const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
+            modelliFlash.sort((a, b) => b.localeCompare(a));
+            
+            if (modelliFlash.length > 0) {
+                activeGeminiModel = modelliFlash[0];
+            } else if (modelliValidi.length > 0) {
+                modelliValidi.sort((a, b) => b.localeCompare(a));
+                activeGeminiModel = modelliValidi[0];
+            }
         }
-    } catch (e) { scriviLog("Errore ricerca modelli."); }
+    } catch (e) {
+        scriviLog(`[ATTENZIONE] Ricerca modelli fallita. Uso ${activeGeminiModel}`);
+    }
+}
+
+/**
+ * Pesca i titoli reali da Google News
+ */
+async function fetchRSS(query, max) {
+    if (max <= 0) return [];
+    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
+    try {
+        const res = await fetch(url);
+        if (!res.ok) return [];
+        const xml = await res.text();
+        const titles = [];
+        const dueGiorniFa = Date.now() - (2 * 24 * 60 * 60 * 1000);
+        
+        const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
+        let matchItem;
+        
+        while ((matchItem = itemRegex.exec(xml)) !== null && titles.length < max) {
+            const itemXml = matchItem[1];
+            const pubDateMatch = itemXml.match(/<pubDate>(.*?)<\/pubDate>/i);
+            
+            if (pubDateMatch) {
+                const dataNotizia = new Date(pubDateMatch[1]).getTime();
+                if (dataNotizia < dueGiorniFa) continue; 
+            }
+            
+            const titleMatch = itemXml.match(/<title>(.*?)<\/title>/i);
+            if (titleMatch) {
+                let cleanTitle = titleMatch[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "");
+                cleanTitle = cleanTitle.split(" - ")[0].trim();
+                if (!titles.includes(cleanTitle)) titles.push(cleanTitle);
+            }
+        }
+        return titles;
+    } catch (e) {
+        return [];
+    }
+}
+
+/**
+ * Chiama l'API Gemini
+ */
+async function callGemini(sys, prompt) {
+    if (!apiKey) return null;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
+    
+    for (let i = 0; i < 3; i++) {
+        try {
+            const res = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }],
+                    systemInstruction: { parts: [{ text: sys }] },
+                    generationConfig: { 
+                        responseMimeType: "application/json", 
+                        temperature: 0.8,
+                        responseSchema: {
+                            type: "OBJECT",
+                            properties: {
+                                titolo: { type: "STRING" },
+                                articolo: { type: "STRING" },
+                                commento: { type: "STRING" }
+                            },
+                            required: ["titolo", "articolo", "commento"]
+                        }
+                    }
+                })
+            });
+            const d = await res.json();
+            return d.candidates?.[0]?.content?.parts?.[0]?.text || null;
+        } catch (e) {
+            await new Promise(r => setTimeout(r, 2000));
+        }
+    }
+    return null;
 }
 
 function parseJSON(raw) {
@@ -54,119 +151,76 @@ function parseJSON(raw) {
     } catch (e) { return null; }
 }
 
-async function fetchRSS(query, max) {
-    if (max <= 0) return [];
-    // Ricerca ampia per evitare di restare a secco
-    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
-    try {
-        const res = await fetch(url);
-        const xml = await res.text();
-        const titles = [];
-        const limite = Date.now() - (3 * 24 * 60 * 60 * 1000); // 3 giorni di tolleranza
-        const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
-        let m;
-        while ((m = itemRegex.exec(xml)) !== null && titles.length < max) {
-            const item = m[1];
-            const dM = item.match(/<pubDate>(.*?)<\/pubDate>/i);
-            if (dM && new Date(dM[1]).getTime() < limite) continue;
-            const tM = item.match(/<title>(.*?)<\/title>/i);
-            if (tM) {
-                const t = tM[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "").split(" - ")[0].trim();
-                if (!titles.includes(t)) titles.push(t);
-            }
-        }
-        return titles;
-    } catch (e) { return []; }
-}
-
-async function callGemini(sys, prompt) {
-    if (!apiKey) return null;
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
-    for (let i = 0; i < 3; i++) {
-        try {
-            const res = await fetch(url, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: prompt }] }],
-                    systemInstruction: { parts: [{ text: sys }] },
-                    generationConfig: { responseMimeType: "application/json", temperature: 0.8 }
-                })
-            });
-            const d = await res.json();
-            return d.candidates?.[0]?.content?.parts?.[0]?.text || null;
-        } catch (e) { await new Promise(r => setTimeout(r, 2000)); }
-    }
-    return null;
-}
-
 async function main() {
     scriviLog("⚓️ Inizio turno di redazione...");
     await trovaUltimoModello();
     
-    const fuso = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
-    const oggi = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'][new Date(fuso).getDay()];
-    let cfgP = path.join(DATA_DIR, `config_${oggi}.json`);
-    if (!fs.existsSync(cfgP)) cfgP = CONFIG_PATH;
-    const CONFIG = JSON.parse(fs.readFileSync(cfgP, 'utf8'));
+    const fusoItalia = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
+    const dataOggiItalia = new Date(fusoItalia);
+    const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
+    const oggi = giorni[dataOggiItalia.getDay()];
     
-    const ts = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome', hour:'2-digit', minute:'2-digit', day:'2-digit', month:'2-digit' });
-    CONFIG.site_settings.last_update = ts;
+    let currentConfigPath = path.join(DATA_DIR, `config_${oggi}.json`);
+    if (!fs.existsSync(currentConfigPath)) currentConfigPath = CONFIG_PATH;
+    const CONFIG = JSON.parse(fs.readFileSync(currentConfigPath, 'utf8'));
     
-    // Aggiornamento configurazione attiva
+    const oraAggiornamento = new Date().toLocaleString('it-IT', { 
+        timeZone: 'Europe/Rome', 
+        hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' 
+    });
+    
+    CONFIG.site_settings.last_update = oraAggiornamento;
     fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(CONFIG, null, 2));
-    // Aggiornamento info auth
     fs.writeFileSync(AUTH_PATH, JSON.stringify({ 
         check: crypto.createHash('sha256').update(adminPwd).digest('hex'), 
         data: Buffer.from(secretData).toString('base64'), 
-        ts 
+        ts: oraAggiornamento 
     }));
 
-    const sysSat = "Sei un giornalista satirico pescarese. JSON: {titolo, articolo, commento}. Articolo lunghissimo (minimo 1000 caratteri).";
-    const sysVer = "Sei un giornalista serio. JSON: {titolo, articolo, commento}. Articolo lunghissimo (minimo 1000 caratteri), fattuale.";
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. JSON: {titolo, articolo, commento}. Articolo lungo (800-1000 caratteri).";
+    const sysPromptVera = "Sei un giornalista serio. JSON: {titolo, articolo, commento}. Articolo VERO, lungo (800-1000 caratteri).";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
         
         let newsSezione = [];
         const categorie = CONFIG[sez];
-        let quotaAvanzata = 0; // Gestione cascata (Danimarca)
+        let quotaAvanzata = 0; // SISTEMA A CASCATA
 
         for (const [nome, info] of Object.entries(categorie)) {
-            if (nome === "color" || info.count === undefined) continue;
+            if (nome === "color" || info.count <= 0) continue;
             
             const target = info.count + quotaAvanzata;
             quotaAvanzata = 0;
 
             if (info.label === "Satira") {
-                const temi = CONFIG.satira_config?.temi || ["Delfini"];
+                const temi = CONFIG.satira_config?.temi || ["Arrosticini"];
                 for (let i = 0; i < target; i++) {
-                    const r = await callGemini(sysSat, `Genera uno scoop assurdo su: ${temi[Math.floor(Math.random()*temi.length)]}`);
+                    const tema = temi[Math.floor(Math.random() * temi.length)];
+                    const r = await callGemini(sysPromptSatira, `Scoop assurdo su: ${tema}`);
                     const p = parseJSON(r);
                     if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true });
                 }
             } else {
-                const tits = await fetchRSS(nome, target);
-                // Calcolo cascata: se mancano notizie, le passiamo alla categoria successiva
-                if (tits.length < target) {
-                    quotaAvanzata = target - tits.length;
-                    scriviLog(`Categoria ${nome} incompleta. Passo ${quotaAvanzata} alla prossima.`);
+                const titoli = await fetchRSS(nome, target);
+                if (titoli.length < target) {
+                    quotaAvanzata = target - titoli.length;
                 }
-                
-                for (const t of tits) {
-                    const r = await callGemini(sysVer, `Scrivi articolo serio e lungo su: ${t}`);
+
+                for (const t of titoli) {
+                    const r = await callGemini(sysPromptVera, `Articolo dettagliato su: ${t}`);
                     const p = parseJSON(r);
                     if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
                 }
             }
         }
         
-        // SCRITTURA OBBLIGATORIA DEL JSON
         const outPath = path.join(DATA_DIR, `news-${sez}.json`);
         fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
-        scriviLog(`File ${outPath} scritto con ${newsSezione.length} articoli.`);
     }
     scriviLog("🏁 Turno completato.");
 }
 
-main().catch(e => scriviLog(`Errore critico: ${e.message}`));
+main().catch(err => {
+    process.exit(1);
+});
