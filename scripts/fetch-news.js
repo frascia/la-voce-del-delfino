@@ -56,6 +56,27 @@ async function trovaUltimoModello() {
     }
 }
 
+/**
+ * Tenta di scaricare i titoli attualmente online per il confronto
+ */
+async function recuperaTitoliOnline(sezione) {
+    // Costruiamo l'URL basandoci sulle info di GitHub (se disponibili)
+    const repo = process.env.GITHUB_REPOSITORY; // Es: "user/repo"
+    if (!repo) return [];
+    
+    const [user, name] = repo.split('/');
+    const url = `https://${user}.github.io/${name}/public/data/news-${sezione}.json`;
+    
+    try {
+        const res = await fetch(url);
+        if (!res.ok) return [];
+        const data = await res.json();
+        return data.news ? data.news.map(n => n.titolo.trim().toLowerCase()) : [];
+    } catch (e) {
+        return [];
+    }
+}
+
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
     const queryFresca = `${query} when:2d`;
@@ -102,7 +123,6 @@ async function callGemini(sys, prompt) {
                     generationConfig: { 
                         responseMimeType: "application/json", 
                         temperature: 0.8,
-                        // Definiamo lo schema JSON per essere sicuri che non manchino campi
                         responseSchema: {
                             type: "OBJECT",
                             properties: {
@@ -122,7 +142,6 @@ async function callGemini(sys, prompt) {
                 })
             });
             const d = await res.json();
-            if (d.error) return null;
             return d.candidates?.[0]?.content?.parts?.[0]?.text || null;
         } catch (e) {
             await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
@@ -136,9 +155,7 @@ function parseJSON(raw) {
         if (!raw) return null;
         const start = raw.indexOf('{');
         const end = raw.lastIndexOf('}');
-        if (start !== -1 && end !== -1) {
-            return JSON.parse(raw.substring(start, end + 1));
-        }
+        if (start !== -1 && end !== -1) return JSON.parse(raw.substring(start, end + 1));
         return null;
     } catch (e) { return null; }
 }
@@ -164,21 +181,15 @@ async function main() {
     const encrypted = Buffer.from(secretData).toString('base64'); 
     fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: encrypted, ts: oraAggiornamento }));
 
-    // Prompt più severi con nomi dei campi esplicitati
-    const sysPromptSatira = "Sei un giornalista satirico pescarese. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo lungo (800+ caratteri), umorismo pescarese assurdo.";
-    const sysPromptVera = "Sei un giornalista serio. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo VERO, lungo (800+ caratteri), oggettivo.";
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo 800+ caratt.";
+    const sysPromptVera = "Sei un giornalista serio. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo VERO 800+ caratt.";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
         
-        const outPath = path.join(DATA_DIR, `news-${sez}.json`);
-        let titoliPrecedenti = [];
-        if (fs.existsSync(outPath)) {
-            try {
-                const vecchieNews = JSON.parse(fs.readFileSync(outPath, 'utf8'));
-                titoliPrecedenti = vecchieNews.news.map(n => n.titolo);
-            } catch (e) {}
-        }
+        // RECUPERO TITOLI ONLINE PER CONFRONTO REALE
+        const titoliOnline = await recuperaTitoliOnline(sez);
+        scriviLog(`Confronto con ${titoliOnline.length} titoli già pubblicati online per la sezione ${sez}.`);
 
         let newsSezione = [];
         const categorie = CONFIG[sez];
@@ -193,10 +204,10 @@ async function main() {
                 const temi = CONFIG.satira_config?.temi || ["Alieni"];
                 for (let i = 0; i < targetPezzi; i++) {
                     const tema = temi[Math.floor(Math.random() * temi.length)];
-                    const raw = await callGemini(sysPromptSatira, `Scrivi scoop assurdo su: ${tema}.`);
+                    const raw = await callGemini(sysPromptSatira, `Scoop su: ${tema}.`);
                     const p = parseJSON(raw);
                     if (p && p.articolo) {
-                        const isNew = !titoliPrecedenti.includes(p.titolo);
+                        const isNew = !titoliOnline.includes(p.titolo.trim().toLowerCase());
                         newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true, is_new: isNew });
                     }
                 }
@@ -204,15 +215,16 @@ async function main() {
                 const titoli = await fetchRSS(nome, targetPezzi);
                 if (titoli.length < targetPezzi) quotaAvanzata = targetPezzi - titoli.length;
                 for (const t of titoli) {
-                    const raw = await callGemini(sysPromptVera, `Scrivi articolo serio su: ${t}`);
+                    const raw = await callGemini(sysPromptVera, `Articolo su: ${t}`);
                     const p = parseJSON(raw);
                     if (p && p.articolo) {
-                        const isNew = !titoliPrecedenti.includes(p.titolo);
+                        const isNew = !titoliOnline.includes(p.titolo.trim().toLowerCase());
                         newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_new: isNew });
                     }
                 }
             }
         }
+        const outPath = path.join(DATA_DIR, `news-${sez}.json`);
         fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
     }
     scriviLog("🏁 Turno completato.");
