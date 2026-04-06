@@ -8,30 +8,35 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      workflows: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Sincronizza
-        run: |
-          git config --global user.name "DelfinoBot"
-          git config --global user.email "bot@lavocedeldelfino.it"
-          git fetch origin main
-          git reset --hard origin/main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installa dipendenze
+        run: npm ci
+
       - name: Esegui Bot
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/fetch-news.js
+
       - name: Push
         run: |
-          git add public/data/*.json public/data/*.log
+          git config --global user.name "DelfinoBot"
+          git config --global user.email "bot@lavocedeldelfino.it"
+          git add public/data/
           if git diff --staged --quiet; then
-            echo "Niente news."
+            echo "Niente news da pubblicare."
           else
             git commit -m "🗞️ News $(date +'%d-%m %H:%M')"
-            git push origin main --force
+            git push origin main --force-with-lease
           fi
