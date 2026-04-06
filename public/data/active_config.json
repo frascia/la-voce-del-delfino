@@ -3,7 +3,7 @@
     "header_img": "Header.png",
     "day_banner": "banner_default.webp",
     "descrizione": "Edizione del Lunedì: Il ruggito dopo il weekend.",
-    "last_update": "06/04, 07:39"
+    "last_update": "06/04, 07:48"
   },
   "satira_config": {
     "temi": [
@@ -17,28 +17,21 @@
     "color": "#005f73",
     "Pescara Calcio": {
       "count": 5,
-      "img": "sport_pescara.webp",
+      "img": "Calcio.webp",
       "label": "Calcio",
       "mood": "sarcastico",
       "weight": 0.8
     },
-    "Intelligenza Artificiale": {
-      "count": 0,
-      "img": "ai_tech.webp",
-      "label": "Futuro",
-      "mood": "saggio",
-      "weight": 0.4
-    },
-    "Psicologia": {
+    "Meteo Pescara": {
       "count": 2,
-      "img": "psicologia.webp",
-      "label": "Mente",
+      "img": "Meteo.webp",
+      "label": "Meteo Pescara",
       "mood": "riflessivo",
       "weight": 0.3
     },
     "Satira": {
       "count": 4,
-      "img": "satira.webp",
+      "img": "Fake.webp",
       "label": "Satira",
       "mood": "pungente",
       "weight": 1
@@ -47,24 +40,31 @@
   "mondo": {
     "color": "#0a9396",
     "Netflix": {
-      "count": 0,
-      "img": "netflix.webp",
+      "count": 2,
+      "img": "Converti.webp",
       "label": "Streaming",
       "mood": "sarcastico",
       "weight": 0.7
     },
     "Giappone": {
       "count": 2,
-      "img": "giappone.webp",
+      "img": "Giappone.webp",
       "label": "Giappone",
       "mood": "curioso",
       "weight": 0.5
     },
     "Danimarca": {
-      "count": 0,
-      "img": "danimarca.webp",
+      "count": 2,
+      "img": "Danimarca.webp",
       "label": "Danimarca",
       "mood": "nordico",
+      "weight": 0.4
+    },
+    "Intelligenza Artificiale": {
+      "count": 2,
+      "img": "AI.webp",
+      "label": "Futuro",
+      "mood": "saggio",
       "weight": 0.4
     }
   }
