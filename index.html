@@ -23,7 +23,6 @@
             transition: background 1.2s ease; 
         }
 
-        /* --- LAYOUT FULL WIDTH --- */
         #app { 
             width: 100%; 
             max-width: 100vw; 
@@ -35,7 +34,6 @@
             box-shadow: 0 0 40px rgba(0,0,0,0.15);
         }
         
-        /* --- TESTATA PULITA CON TIMBRO --- */
         .testata { 
             width: 100%; 
             background: var(--blu-mare); 
@@ -52,12 +50,12 @@
             object-position: top; 
         }
 
-        /* IL TIMBRO (Descrizione sovrapposta) */
+        /* --- IL TIMBRO (Ora si vedrà!) --- */
         #timbro-edizione {
             position: absolute;
             bottom: 40px;
             right: 30px;
-            display: none;
+            display: none; /* Diventa block tramite JS */
             color: #b90505;
             border: 3px double #b90505;
             padding: 8px 15px;
@@ -68,14 +66,13 @@
             text-align: center;
             text-transform: uppercase;
             transform: rotate(-10deg);
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(3px);
             z-index: 50;
             pointer-events: none;
             line-height: 1.2;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
         }
-
         /* Rimossa la descrizione standard e il banner box */
         .descrizione-sito { display: none; }
         .data-oggi { background: #222; color: #fff; text-align: center; padding: 10px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
