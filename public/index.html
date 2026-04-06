@@ -4,141 +4,177 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>La Voce del Delfino 🐬</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --blu-mare: #005f73; --azzurro: #0091ff; --crema: #fdfaf4; }
-        body { margin: 0; background: var(--crema); font-family: -apple-system, sans-serif; -webkit-user-select: none; user-select: none; }
-        #app { width: 100%; max-width: 800px; margin: auto; background: #fff; min-height: 100vh; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
-        
-        /* TESTATA CON HEADER.PGP */
-        .testata { width: 100%; background: var(--blu-mare); line-height: 0; cursor: pointer; }
-        .testata img { width: 100%; height: auto; }
-        .data-oggi { background: #000; color: #fff; text-align: center; padding: 8px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
-
-        /* BANNER */
-        .cornice-banner { border-top: 4px solid var(--azzurro); border-bottom: 2px solid #eee; padding: 5px 0; background: #fff; display: flex; justify-content: center; }
-        .cornice-banner img { height: 80px; width: auto; object-fit: contain; }
-        
-        .info-aggiornamento { text-align: right; font-size: 11px; color: #999; padding: 5px 15px; font-family: monospace; border-bottom: 1px solid #eee; }
-
-        /* NAVIGAZIONE */
-        .menu { display: flex; overflow-x: auto; padding: 15px; gap: 10px; scrollbar-width: none; }
-        .menu::-webkit-scrollbar { display: none; }
-        .tab { white-space: nowrap; padding: 10px 18px; border-radius: 25px; border: 1px solid var(--blu-mare); background: #fff; color: var(--blu-mare); font-weight: bold; font-size: 13px; }
-        .tab.attiva { background: var(--blu-mare); color: #fff; }
-
-        /* NOTIZIE */
-        .notizia { padding: 20px; border-bottom: 8px solid #f9f9f9; }
-        .notizia-img-box { width: 100%; aspect-ratio: 16/9; background: #eee; border-radius: 12px; overflow: hidden; margin-bottom: 15px; }
-        .notizia-img-box img { width: 100%; height: 100%; object-fit: contain; }
-        h2 { margin: 0 0 10px 0; font-size: 22px; line-height: 1.2; color: #111; }
-        .testo { font-size: 16px; line-height: 1.6; color: #444; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
-        .testo.aperto { -webkit-line-clamp: unset; }
-        .leggi-tutto { background: none; border: none; color: var(--azzurro); font-weight: bold; padding: 10px 0; font-size: 14px; cursor: pointer; }
-        
-        .commento-delfino { background: #e0f2f1; padding: 15px; border-radius: 12px; margin-top: 15px; position: relative; }
-        .commento-delfino:before { content: "🐬"; position: absolute; left: -10px; top: -10px; font-size: 20px; }
-
-        /* TERMINALE */
-        #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:#000; color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; }
+        @import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Roboto:wght@400;700&display=swap');
+        :root { --delfino-blue: #005f73; }
+        body { background-color: #f8f9fa; font-family: 'Roboto', sans-serif; -webkit-user-select: none; user-select: none; }
+        .unica { font-family: 'Unica One', cursive; }
+        .header-gradient { background: linear-gradient(180deg, var(--delfino-blue) 0%, #001219 100%); }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .terminal-text { font-family: 'Courier New', Courier, monospace; }
     </style>
 </head>
-<body>
-    <div id="app">
-        <div id="terminale">
-            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #0f0; padding-bottom:10px;">
-                <span>> TERMINALE DIREZIONE</span>
-                <span onclick="chiudiAdmin()" style="color:red">[X]</span>
+<body class="bg-gray-50">
+    <div id="app" class="max-w-2xl mx-auto bg-white min-h-screen relative overflow-hidden">
+        
+        <!-- Terminale Segreto -->
+        <div id="terminal" class="fixed inset-0 bg-black z-50 p-6 hidden overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-green-500 pb-2 mb-4">
+                <span class="text-green-500 terminal-text font-bold">> TERMINALE DIREZIONE</span>
+                <button onclick="toggleTerminal()" class="text-red-500 font-bold">[X]</button>
             </div>
-            <pre id="log-content" style="font-size:12px; color:#aaa; margin:20px 0;"></pre>
+            <pre id="terminal-log" class="text-green-400 text-xs terminal-text whitespace-pre-wrap"></pre>
         </div>
 
-        <div class="testata" id="logo-innesco">
-            <img src="images/Header.pgp" alt="La Voce del Delfino" onerror="this.src='https://placehold.co/800x250?text=Header+Mancante'">
-            <div class="data-oggi" id="data-display"></div>
+        <!-- Header -->
+        <header class="header-gradient relative cursor-pointer" id="header-trigger">
+            <img src="images/Header.pgp" alt="La Voce del Delfino" class="w-full h-auto object-cover opacity-90" onerror="this.src='https://placehold.co/800x300?text=La+Voce+del+Delfino'">
+            <div class="bg-black/80 text-white text-center py-2 text-xs font-bold tracking-widest uppercase unica" id="current-date"></div>
+        </header>
+
+        <!-- Banner dinamico -->
+        <div class="border-t-4 border-cyan-600 bg-white shadow-md py-4 flex justify-center">
+            <img id="day-banner" src="" class="h-16 md:h-20 object-contain" alt="">
         </div>
 
-        <div class="cornice-banner">
-            <img id="banner-img" src="" alt="">
+        <!-- Stato Redazione -->
+        <div class="flex justify-between items-center px-4 py-2 bg-gray-100 border-b text-[10px] text-gray-500 font-mono">
+            <span>STATO: OPERATIVO</span>
+            <span id="update-time">ULTIMO REFRESH: ---</span>
         </div>
-        <div class="info-aggiornamento" id="ts-display">Aggiornamento in corso...</div>
 
-        <div class="menu" id="menu-categorie"></div>
-        <div id="lista-notizie"></div>
+        <!-- Navigazione -->
+        <nav class="flex overflow-x-auto p-4 gap-3 hide-scroll bg-white sticky top-0 z-10 border-b">
+            <div id="nav-tabs" class="flex gap-2"></div>
+        </nav>
+
+        <!-- News Feed -->
+        <main id="feed" class="p-4 space-y-8 pb-24"></main>
+
+        <!-- Footer -->
+        <footer class="p-8 text-center text-gray-400 text-xs border-t bg-gray-50">
+            <p class="unica text-lg mb-2 text-gray-600">La Voce del Delfino</p>
+            <p>© 2026 - Pescara, Abruzzo, Italia</p>
+        </footer>
     </div>
 
     <script>
-        let clicks = 0, last = 0;
-        const terminale = document.getElementById('terminale');
-        
-        function chiudiAdmin() { terminale.style.display = 'none'; }
+        let secretClicks = 0;
+        let lastClickTime = 0;
 
-        document.getElementById('logo-innesco').onclick = async () => {
-            const ora = Date.now();
-            if (ora - last > 1000) clicks = 0;
-            clicks++; last = ora;
-            if (clicks === 5) {
-                clicks = 0;
-                const p = prompt("Password:");
-                if (!p) return;
+        function toggleTerminal() {
+            document.getElementById('terminal').classList.toggle('hidden');
+        }
+
+        document.getElementById('header-trigger').onclick = async () => {
+            const now = Date.now();
+            if (now - lastClickTime > 1000) secretClicks = 0;
+            secretClicks++;
+            lastClickTime = now;
+            if (secretClicks === 5) {
+                secretClicks = 0;
+                const pwd = prompt("Chiave d'accesso Direzione:");
+                if (!pwd) return;
                 try {
-                    const r = await fetch(`data/auth_info.json?v=${Date.now()}`);
-                    const a = await r.json();
-                    const hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(p)).then(b => Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2,'0')).join(''));
-                    if (hash === a.check) {
-                        terminale.style.display = 'block';
-                        const log = await fetch(`data/redazione.log?v=${Date.now()}`).then(res => res.text());
-                        document.getElementById('log-content').innerText = log;
+                    const res = await fetch(`data/auth_info.json?v=${Date.now()}`);
+                    const auth = await res.json();
+                    const encoder = new TextEncoder();
+                    const data = encoder.encode(pwd);
+                    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+                    const hashArray = Array.from(new Uint8Array(hashBuffer));
+                    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                    
+                    if (hashHex === auth.check) {
+                        toggleTerminal();
+                        const logRes = await fetch(`data/redazione.log?v=${Date.now()}`);
+                        document.getElementById('terminal-log').innerText = await logRes.text();
+                    } else {
+                        alert("Accesso negato. Riprova quando il mare è calmo.");
                     }
-                } catch(e) { }
+                } catch(e) { console.error(e); }
             }
         };
 
-        async function carica() {
+        async function init() {
             try {
                 const res = await fetch(`data/active_config.json?v=${Date.now()}`);
-                const cfg = await res.json();
-                document.getElementById('banner-img').src = `images/${cfg.site_settings.day_banner}`;
-                document.getElementById('data-display').innerText = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long'});
-                document.getElementById('ts-display').innerText = `ULTIMO REFRESH: ${cfg.site_settings.last_update || '---'}`;
+                const config = await res.json();
                 
-                const cat = Object.keys(cfg).filter(k => !['site_settings','satira_config'].includes(k));
-                const menu = document.getElementById('menu-categorie');
-                cat.forEach((c, i) => {
+                document.getElementById('day-banner').src = `images/${config.site_settings.day_banner}`;
+                document.getElementById('update-time').innerText = `ULTIMO REFRESH: ${config.site_settings.last_update}`;
+                document.getElementById('current-date').innerText = new Date().toLocaleDateString('it-IT', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+
+                const sections = Object.keys(config).filter(k => !['site_settings', 'satira_config'].includes(k));
+                const nav = document.getElementById('nav-tabs');
+                
+                sections.forEach((sec, idx) => {
                     const btn = document.createElement('button');
-                    btn.className = 'tab' + (i === 0 ? ' attiva' : '');
-                    btn.innerText = c;
-                    btn.onclick = () => mostraSezione(c, btn);
-                    menu.appendChild(btn);
+                    btn.className = `px-6 py-2 rounded-full text-xs font-bold uppercase transition-all border-2 ${idx === 0 ? 'bg-[var(--delfino-blue)] text-white border-[var(--delfino-blue)]' : 'bg-white text-gray-600 border-gray-200'}`;
+                    btn.innerText = sec;
+                    btn.onclick = () => loadSection(sec, btn);
+                    nav.appendChild(btn);
                 });
-                if (cat[0]) mostraSezione(cat[0]);
-            } catch(e) { document.getElementById('lista-notizie').innerHTML = "<p style='text-align:center; padding:50px;'>Mare calmo, nessuna notizia.</p>"; }
+
+                if (sections.length > 0) loadSection(sections[0]);
+            } catch (e) {
+                document.getElementById('feed').innerHTML = '<div class="text-center py-20 text-gray-400 italic">Redazione in sciopero degli arrosticini... ricarica tra poco.</div>';
+            }
         }
 
-        async function mostraSezione(s, btn) {
-            if (btn) {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('attiva'));
-                btn.classList.add('attiva');
+        async function loadSection(sectionName, activeBtn) {
+            if (activeBtn) {
+                document.querySelectorAll('#nav-tabs button').forEach(b => {
+                    b.className = 'px-6 py-2 rounded-full text-xs font-bold uppercase transition-all border-2 bg-white text-gray-600 border-gray-200';
+                });
+                activeBtn.className = 'px-6 py-2 rounded-full text-xs font-bold uppercase transition-all border-2 bg-[var(--delfino-blue)] text-white border-[var(--delfino-blue)]';
             }
-            const res = await fetch(`data/news-${s}.json?v=${Date.now()}`);
+
+            const res = await fetch(`data/news-${sectionName}.json?v=${Date.now()}`);
             const data = await res.json();
-            document.documentElement.style.setProperty('--blu-mare', data.color);
-            
-            const lista = document.getElementById('lista-notizie');
-            lista.innerHTML = '';
-            data.news.forEach((n, idx) => {
-                const div = document.createElement('div');
-                div.className = 'notizia';
-                div.innerHTML = `
-                    <div class="notizia-img-box"><img src="images/${n.immagine}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>
-                    <h2>${n.titolo}</h2>
-                    <div class="testo" id="t-${idx}">${n.articolo}</div>
-                    <button class="leggi-tutto" onclick="document.getElementById('t-${idx}').classList.toggle('aperto'); this.innerText = (this.innerText === 'Leggi di più' ? 'Chiudi' : 'Leggi di più')">Leggi di più</button>
-                    <div class="commento-delfino"><strong>Delfino:</strong> ${n.commento}</div>
+            document.documentElement.style.setProperty('--delfino-blue', data.color);
+
+            const feed = document.getElementById('feed');
+            feed.innerHTML = '';
+
+            data.news.forEach((item, i) => {
+                const article = document.createElement('article');
+                article.className = 'card-shadow bg-white rounded-2xl overflow-hidden border border-gray-100';
+                article.innerHTML = `
+                    <div class="relative aspect-video bg-gray-200">
+                        <img src="images/${item.immagine}" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/600x400?text=News+Delfino'">
+                        <div class="absolute top-4 left-4 bg-[var(--delfino-blue)] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">${item.categoria}</div>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold leading-tight mb-4 text-gray-900">${item.titolo}</h2>
+                        <div id="txt-${i}" class="text-gray-600 leading-relaxed text-sm overflow-hidden transition-all duration-500" style="max-height: 100px;">${item.articolo}</div>
+                        <button onclick="expandText(${i}, this)" class="mt-4 text-[var(--delfino-blue)] font-bold text-xs uppercase tracking-tighter">Leggi tutto +</button>
+                        
+                        <div class="mt-8 pt-6 border-t border-dashed border-gray-200 flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center text-xl">🐬</div>
+                            <div class="bg-cyan-50 p-4 rounded-2xl rounded-tl-none flex-grow">
+                                <p class="text-xs italic text-cyan-900 leading-snug font-medium">"${item.commento}"</p>
+                            </div>
+                        </div>
+                    </div>
                 `;
-                lista.appendChild(div);
+                feed.appendChild(article);
             });
         }
-        carica();
+
+        function expandText(id, btn) {
+            const el = document.getElementById(`txt-${id}`);
+            if (el.style.maxHeight === '100px') {
+                el.style.maxHeight = '2000px';
+                btn.innerText = 'Chiudi -';
+            } else {
+                el.style.maxHeight = '100px';
+                btn.innerText = 'Leggi tutto +';
+            }
+        }
+
+        init();
     </script>
 </body>
 </html>
