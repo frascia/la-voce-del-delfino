@@ -118,7 +118,6 @@ async function callGemini(sys, prompt) {
                     contents: [{ parts: [{ text: prompt }] }],
                     systemInstruction: { parts: [{ text: sys }] },
                     generationConfig: { 
-                        responseMimeType: "application/json", 
                         temperature: 0.8
                     }
                 })
@@ -153,6 +152,12 @@ async function main() {
     
     let currentConfigPath = path.join(DATA_DIR, `config_${oggi}.json`);
     if (!fs.existsSync(currentConfigPath)) currentConfigPath = CONFIG_PATH;
+    
+    if (!fs.existsSync(currentConfigPath)) {
+        scriviLog(`ERRORE: Configurazione ${currentConfigPath} non trovata.`);
+        return;
+    }
+
     const CONFIG = JSON.parse(fs.readFileSync(currentConfigPath, 'utf8'));
     
     const oraAggiornamento = new Date().toLocaleString('it-IT', { 
@@ -168,8 +173,8 @@ async function main() {
         ts: oraAggiornamento 
     }));
 
-    const sysPromptSatira = "Sei un giornalista satirico pescarese. JSON: {titolo, articolo, commento}. Articolo lungo (1000 caratteri).";
-    const sysPromptVera = "Sei un giornalista serio. JSON: {titolo, articolo, commento}. Articolo VERO, lungo (1000 caratteri).";
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. Rispondi SEMPRE in formato JSON: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. L'articolo deve essere lungo (800-1000 caratteri).";
+    const sysPromptVera = "Sei un giornalista serio. Rispondi SEMPRE in formato JSON: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. L'articolo deve essere VERO e lungo (800-1000 caratteri).";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
@@ -188,20 +193,20 @@ async function main() {
                 const temi = CONFIG.satira_config?.temi || ["Arrosticini"];
                 for (let i = 0; i < target; i++) {
                     const tema = temi[Math.floor(Math.random() * temi.length)];
-                    const r = await callGemini(sysPromptSatira, `Scoop assurdo su: ${tema}`);
+                    const r = await callGemini(sysPromptSatira, `Scrivi una notizia satirica assurda su: ${tema}`);
                     const p = parseJSON(r);
                     if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true });
                 }
             } else {
                 const titoli = await fetchRSS(nome, target);
-                // Cascata: se non troviamo abbastanza news, passiamo il resto alla categoria dopo
+                
                 if (titoli.length < target) {
                     quotaAvanzata = target - titoli.length;
-                    scriviLog(`Vuoto per ${nome}, quota di ${quotaAvanzata} passata oltre.`);
+                    scriviLog(`Mancano ${quotaAvanzata} notizie per ${nome}, passo la quota alla prossima.`);
                 }
 
                 for (const t of titoli) {
-                    const r = await callGemini(sysPromptVera, `Articolo dettagliato su: ${t}`);
+                    const r = await callGemini(sysPromptVera, `Scrivi un articolo giornalistico reale basato su questo titolo: ${t}`);
                     const p = parseJSON(r);
                     if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
                 }
@@ -210,12 +215,11 @@ async function main() {
         
         const outPath = path.join(DATA_DIR, `news-${sez}.json`);
         fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
-        scriviLog(`Sezione ${sez} chiusa con ${newsSezione.length} pezzi.`);
+        scriviLog(`Sezione ${sez} completata con ${newsSezione.length} articoli.`);
     }
     scriviLog("🏁 Turno completato.");
 }
 
 main().catch(err => {
-    scriviLog(`Errore: ${err.message}`);
-    process.exit(1);
+    scriviLog(`ERRORE CRITICO: ${err.message}`);
 });
