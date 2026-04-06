@@ -6,13 +6,13 @@ on:
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
+    # Blocca run triggerati da commit del bot
+    if: github.actor != 'DelfinoBot'
     permissions:
       contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -38,5 +38,5 @@ jobs:
             echo "Niente news da pubblicare."
           else
             git commit -m "🗞️ News $(date +'%d-%m %H:%M')"
-            git push origin main --force-with-lease
+            git push origin main
           fi
