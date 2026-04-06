@@ -25,8 +25,7 @@ const apiKey = process.env.GEMINI_API_KEY || "";
 const adminPwd = process.env.ADMIN_PASSWORD || "delfino2026";
 const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto impostato.";
 
-// Variabile dinamica per l'ultima API disponibile
-let activeGeminiModel = "gemini-1.5-flash"; // Valore di riserva
+let activeGeminiModel = "gemini-1.5-flash";
 
 function scriviLog(msg) {
     const ts = new Date().toLocaleString('it-IT');
@@ -46,13 +45,10 @@ async function trovaUltimoModello() {
         const data = await res.json();
         
         if (data.models) {
-            // Filtra solo i modelli Gemini che possono generare testo
             const modelliValidi = data.models
                 .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
             
-            // Preferiamo i modelli "flash" (più veloci per le news) e li ordiniamo in modo decrescente
-            // Così gemini-2.5 starà sempre sopra a gemini-1.5 o 2.0
             const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
             modelliFlash.sort((a, b) => b.localeCompare(a));
             
@@ -69,7 +65,7 @@ async function trovaUltimoModello() {
 }
 
 /**
- * Pesca i titoli reali da Google News
+ * Pesca i titoli reali da Google News - SOLO NOTIZIE FRESCHE (Max 48 ore)
  */
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
@@ -80,12 +76,31 @@ async function fetchRSS(query, max) {
         const xml = await res.text();
         const titles = [];
         
-        const regex = /<item>[\s\S]*?<title>(.*?)<\/title>/gi;
-        let m;
-        while ((m = regex.exec(xml)) !== null && titles.length < max) {
-            let cleanTitle = m[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "");
-            cleanTitle = cleanTitle.split(" - ")[0].trim();
-            titles.push(cleanTitle);
+        const dueGiorniFa = Date.now() - (2 * 24 * 60 * 60 * 1000);
+        
+        const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
+        let matchItem;
+        
+        while ((matchItem = itemRegex.exec(xml)) !== null && titles.length < max) {
+            const itemXml = matchItem[1];
+            
+            const pubDateMatch = itemXml.match(/<pubDate>(.*?)<\/pubDate>/i);
+            if (pubDateMatch) {
+                const dataNotizia = new Date(pubDateMatch[1]).getTime();
+                if (dataNotizia < dueGiorniFa) {
+                    continue; 
+                }
+            }
+            
+            const titleMatch = itemXml.match(/<title>(.*?)<\/title>/i);
+            if (titleMatch) {
+                let cleanTitle = titleMatch[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "");
+                cleanTitle = cleanTitle.split(" - ")[0].trim();
+                
+                if (!titles.includes(cleanTitle)) {
+                    titles.push(cleanTitle);
+                }
+            }
         }
         return titles;
     } catch (e) {
@@ -103,7 +118,6 @@ async function callGemini(sys, prompt) {
         return null;
     }
     
-    // Usiamo il modello calcolato dinamicamente all'avvio!
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
     
     for (let i = 0; i < 3; i++) {
@@ -126,15 +140,13 @@ async function callGemini(sys, prompt) {
             const d = await res.json();
 
             if (d.error) {
-                scriviLog(`[ERRORE API GEMINI] Richiesta rifiutata da ${activeGeminiModel}: ${d.error.message}`);
+                scriviLog(`[ERRORE API GEMINI] Richiesta rifiutata: ${d.error.message}`);
                 return null; 
             }
 
             const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
             
             if (!text) {
-                const motivo = d.candidates?.[0]?.finishReason || "Sconosciuto";
-                scriviLog(`[ATTENZIONE] Il modello ${activeGeminiModel} ha restituito vuoto. FinishReason: ${motivo}`);
                 return null;
             }
             return text;
@@ -152,7 +164,6 @@ async function callGemini(sys, prompt) {
 function parseJSON(raw) {
     try {
         if (!raw) return null;
-        
         const inizioArray = raw.indexOf('[');
         const fineArray = raw.lastIndexOf(']');
         const inizioOggetto = raw.indexOf('{');
@@ -177,7 +188,6 @@ function parseJSON(raw) {
 async function main() {
     scriviLog("⚓️ Inizio turno di redazione (Fetch-News)...");
     
-    // 1. RICERCA DEL MODELLO PIÙ RECENTE
     await trovaUltimoModello();
     scriviLog(`🤖 Modello Dinamico Agganciato: [ ${activeGeminiModel} ]`);
     
@@ -206,7 +216,7 @@ async function main() {
 
     const sysPromptSatira = "Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, corposo e ben articolato (almeno 800-1000 caratteri), sviluppando la notizia con ricchezza di dettagli e umorismo assurdo.";
     
-    const sysPromptVera = "Sei un giornalista serio, fattuale e oggettivo. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, VERO, professionale e ben articolato (almeno 800-1000 caratteri), basandoti unicamente sui fatti. Niente invenzioni o satira nell'articolo. Il 'commento' finale del Delfino può invece avere un tono saggio o leggero.";
+    const sysPromptVera = "Sei un giornalista serio, fattuale e oggettivo. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, VERO, professionale e ben articolato (almeno 800-1000 caratteri), basandoti unicamente sui fatti reali forniti. Niente invenzioni o satira nell'articolo. Il 'commento' finale del Delfino può invece avere un tono saggio o ironico.";
 
     const scuseDelfino = [
         "Il Delfino è in sciopero per carenza di arrosticini.",
@@ -220,27 +230,32 @@ async function main() {
         
         let newsSezione = [];
         const categorie = CONFIG[sez];
+        
+        // IL SERBATOIO PER LA QUOTA EXTRA (A cascata!)
+        let quotaAvanzata = 0;
 
         for (const [nome, info] of Object.entries(categorie)) {
             if (nome === "color" || info.count <= 0) continue;
 
-            scriviLog(`Lancio le reti per: ${nome} (${info.count} pezzi)`);
+            // Calcoliamo quanti articoli servono in totale (base + avanzi della categoria prima)
+            const targetPezzi = info.count + quotaAvanzata;
+            quotaAvanzata = 0; // Azzeriamo il serbatoio dopo averlo svuotato
+
+            scriviLog(`Lancio le reti per: ${nome} (Quota: ${info.count} + ${targetPezzi - info.count} recuperati = ${targetPezzi} totali)`);
             
             if (info.label === "Satira") {
                 const temi = CONFIG.satira_config?.temi || ["Alieni a Pescara", "Arrosticini"];
-                for (let i = 0; i < info.count; i++) {
+                for (let i = 0; i < targetPezzi; i++) {
                     const tema = temi[Math.floor(Math.random() * temi.length)];
                     const raw = await callGemini(sysPromptSatira, `Inventa una notizia assurda su: ${tema}.`);
                     const p = parseJSON(raw);
                     
                     if (p) {
-                        // Aggiunto is_satira: true per il frontend
                         newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true });
                     } else {
-                        scriviLog(`[PIANO B] Inserisco scusa di sciopero per la satira su: ${tema}`);
                         newsSezione.push({
                             titolo: `Mistero su: ${tema}`,
-                            articolo: `Avevamo in serbo uno scoop clamoroso su "${tema}", ma un gabbiano gigante ci ha rubato gli appunti mentre mangiavamo un calzone al porto. La redazione è attualmente all'inseguimento del volatile per recuperare l'articolo completo. Speriamo di darvi aggiornamenti più succosi nella prossima edizione, sempre che il pennuto non decida di usare i nostri appunti per farsi il nido sulla ruota panoramica.`,
+                            articolo: `Avevamo in serbo uno scoop clamoroso su "${tema}", ma un gabbiano ci ha rubato gli appunti.`,
                             commento: scuseDelfino[Math.floor(Math.random() * scuseDelfino.length)],
                             categoria: info.label,
                             immagine: info.img,
@@ -249,8 +264,13 @@ async function main() {
                     }
                 }
             } else {
-                const titoli = await fetchRSS(nome, info.count);
-                if (titoli.length === 0) titoli.push(nome);
+                const titoli = await fetchRSS(nome, targetPezzi);
+                
+                // SISTEMA A CASCATA: Se troviamo meno notizie del previsto, passiamo il resto alla categoria successiva
+                if (titoli.length < targetPezzi) {
+                    quotaAvanzata = targetPezzi - titoli.length;
+                    scriviLog(`[SISTEMA A CASCATA] Trovate solo ${titoli.length} notizie fresche per ${nome}. Passo ${quotaAvanzata} reti alla categoria successiva!`);
+                }
 
                 for (const t of titoli) {
                     const raw = await callGemini(sysPromptVera, `Scrivi un articolo giornalistico VERO e dettagliato basato su questa news reale: ${t}`);
@@ -259,10 +279,9 @@ async function main() {
                     if (p) {
                         newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
                     } else {
-                        scriviLog(`[PIANO B] Inserisco notizia reale grezza per: ${t}`);
                         newsSezione.push({
                             titolo: t,
-                            articolo: `Notizia battuta in questo momento dalle agenzie stampa: "${t}". Purtroppo la nostra Intelligenza Artificiale si è rifiutata categoricamente di commentare l'accaduto, sostenendo di aver finito il turno e di aver già prenotato un tavolo per mangiare pesce sul lungomare. Torneremo sull'argomento non appena riusciremo a rimetterla davanti alla tastiera, magari corrompendola con una porzione abbondante di frittura. Rimanete sintonizzati sulle nostre frequenze.`,
+                            articolo: `Notizia battuta dalle agenzie: "${t}". L'Intelligenza Artificiale è in pausa caffè.`,
                             commento: scuseDelfino[Math.floor(Math.random() * scuseDelfino.length)],
                             categoria: info.label,
                             immagine: info.img
@@ -274,7 +293,7 @@ async function main() {
         
         const outPath = path.join(DATA_DIR, `news-${sez}.json`);
         fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
-        scriviLog(`Sezione ${sez}: ${newsSezione.length} notizie pescate.`);
+        scriviLog(`Sezione ${sez}: ${newsSezione.length} notizie pescate e confezionate.`);
     }
     
     scriviLog("🏁 Turno completato con successo.");
