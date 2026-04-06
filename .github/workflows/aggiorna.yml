@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Installa dipendenze
+        run: npm install
+
       - name: Esegui Bot
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
