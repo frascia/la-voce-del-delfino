@@ -89,19 +89,26 @@ async function callGemini(sys, prompt) {
 }
 
 /**
- * Pulisce il JSON dalle risposte sporche dell'AI (Senza Regex complesse)
+ * Pulisce il JSON ritagliando chirurgicamente solo i dati (ignora le chiacchiere dell'AI)
  */
 function parseJSON(raw) {
     try {
         if (!raw) return null;
-        let pulito = raw.trim();
-        // Se Gemini ci butta dentro i backtick del markdown, li filtriamo riga per riga
-        if (pulito.startsWith("```")) {
-            pulito = pulito.split('\n').filter(riga => !riga.includes('```')).join('\n');
+        
+        // Trova la prima graffa aperta e l'ultima chiusa
+        const inizio = raw.indexOf('{');
+        const fine = raw.lastIndexOf('}');
+        
+        if (inizio !== -1 && fine !== -1 && fine >= inizio) {
+            // Ritaglia esattamente il pezzo che ci serve
+            const soloJSON = raw.substring(inizio, fine + 1);
+            return JSON.parse(soloJSON);
         }
-        return JSON.parse(pulito.trim());
+        
+        scriviLog("Attenzione: Nessun blocco JSON trovato nella risposta di Gemini.");
+        return null;
     } catch (e) {
-        scriviLog("Errore parsing JSON: l'AI ha risposto con un formato non valido.");
+        scriviLog("Errore parsing JSON: l'AI ha generato un formato illeggibile.");
         return null;
     }
 }
