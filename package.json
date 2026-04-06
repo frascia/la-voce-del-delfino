@@ -1,0 +1,8 @@
+{
+  "name": "la-voce-del-delfino",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-news.js"
+  }
+}
