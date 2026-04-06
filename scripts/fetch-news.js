@@ -75,7 +75,7 @@ async function fetchRSS(query, max) {
         if (!res.ok) return [];
         const xml = await res.text();
         const titles = [];
-        const dueGiorniFa = Date.now() - (2 * 24 * 60 * 60 * 1000);
+        const limiteTempo = Date.now() - (2 * 24 * 60 * 60 * 1000); // 48 ore
         
         const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
         let matchItem;
@@ -86,7 +86,7 @@ async function fetchRSS(query, max) {
             
             if (pubDateMatch) {
                 const dataNotizia = new Date(pubDateMatch[1]).getTime();
-                if (dataNotizia < dueGiorniFa) continue; 
+                if (dataNotizia < limiteTempo) continue; 
             }
             
             const titleMatch = itemXml.match(/<title>(.*?)<\/title>/i);
@@ -119,16 +119,7 @@ async function callGemini(sys, prompt) {
                     systemInstruction: { parts: [{ text: sys }] },
                     generationConfig: { 
                         responseMimeType: "application/json", 
-                        temperature: 0.8,
-                        responseSchema: {
-                            type: "OBJECT",
-                            properties: {
-                                titolo: { type: "STRING" },
-                                articolo: { type: "STRING" },
-                                commento: { type: "STRING" }
-                            },
-                            required: ["titolo", "articolo", "commento"]
-                        }
+                        temperature: 0.8
                     }
                 })
             });
@@ -177,18 +168,18 @@ async function main() {
         ts: oraAggiornamento 
     }));
 
-    const sysPromptSatira = "Sei un giornalista satirico pescarese. JSON: {titolo, articolo, commento}. Articolo lungo (800-1000 caratteri).";
-    const sysPromptVera = "Sei un giornalista serio. JSON: {titolo, articolo, commento}. Articolo VERO, lungo (800-1000 caratteri).";
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. JSON: {titolo, articolo, commento}. Articolo lungo (1000 caratteri).";
+    const sysPromptVera = "Sei un giornalista serio. JSON: {titolo, articolo, commento}. Articolo VERO, lungo (1000 caratteri).";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
         
         let newsSezione = [];
         const categorie = CONFIG[sez];
-        let quotaAvanzata = 0; // SISTEMA A CASCATA
+        let quotaAvanzata = 0; 
 
         for (const [nome, info] of Object.entries(categorie)) {
-            if (nome === "color" || info.count <= 0) continue;
+            if (nome === "color" || info.count === undefined) continue;
             
             const target = info.count + quotaAvanzata;
             quotaAvanzata = 0;
@@ -203,8 +194,10 @@ async function main() {
                 }
             } else {
                 const titoli = await fetchRSS(nome, target);
+                // Cascata: se non troviamo abbastanza news, passiamo il resto alla categoria dopo
                 if (titoli.length < target) {
                     quotaAvanzata = target - titoli.length;
+                    scriviLog(`Vuoto per ${nome}, quota di ${quotaAvanzata} passata oltre.`);
                 }
 
                 for (const t of titoli) {
@@ -217,10 +210,12 @@ async function main() {
         
         const outPath = path.join(DATA_DIR, `news-${sez}.json`);
         fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
+        scriviLog(`Sezione ${sez} chiusa con ${newsSezione.length} pezzi.`);
     }
     scriviLog("🏁 Turno completato.");
 }
 
 main().catch(err => {
+    scriviLog(`Errore: ${err.message}`);
     process.exit(1);
 });
