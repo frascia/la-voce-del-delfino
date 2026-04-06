@@ -28,7 +28,6 @@ const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto impostato.";
 let activeGeminiModel = "gemini-1.5-flash";
 
 function scriviLog(msg) {
-    // Forziamo il fuso orario italiano per i log!
     const ts = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' });
     const riga = `[${ts}] ${msg}\n`;
     fs.appendFileSync(LOG_PATH, riga);
@@ -36,7 +35,7 @@ function scriviLog(msg) {
 }
 
 /**
- * Cerca dinamicamente l'ULTIMA API di Gemini disponibile per la tua chiave
+ * Cerca dinamicamente l'ULTIMA API di Gemini disponibile
  */
 async function trovaUltimoModello() {
     if (!apiKey) return;
@@ -66,11 +65,15 @@ async function trovaUltimoModello() {
 }
 
 /**
- * Pesca i titoli reali da Google News - SOLO NOTIZIE FRESCHE (Max 48 ore)
+ * Pesca i titoli reali da Google News - DOPPIO FILTRO FRESCHEZZA (Max 48 ore)
  */
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
-    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
+    
+    // FILTRO ALLA FONTE: Obblighiamo Google a cercare solo negli ultimi 2 giorni (when:2d)
+    const queryFresca = `${query} when:2d`;
+    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(queryFresca)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
+    
     try {
         const res = await fetch(url);
         if (!res.ok) return [];
@@ -85,12 +88,13 @@ async function fetchRSS(query, max) {
         while ((matchItem = itemRegex.exec(xml)) !== null && titles.length < max) {
             const itemXml = matchItem[1];
             
+            // FILTRO IN LOCALE: Se non c'è data, o è illeggibile, o è vecchia, SCARTIAMO!
             const pubDateMatch = itemXml.match(/<pubDate>(.*?)<\/pubDate>/i);
-            if (pubDateMatch) {
-                const dataNotizia = new Date(pubDateMatch[1]).getTime();
-                if (dataNotizia < dueGiorniFa) {
-                    continue; 
-                }
+            if (!pubDateMatch) continue; // Niente data? Via!
+            
+            const dataNotizia = new Date(pubDateMatch[1]).getTime();
+            if (isNaN(dataNotizia) || dataNotizia < dueGiorniFa) {
+                continue; // Troppo vecchia o illeggibile? Via!
             }
             
             const titleMatch = itemXml.match(/<title>(.*?)<\/title>/i);
@@ -192,7 +196,6 @@ async function main() {
     await trovaUltimoModello();
     scriviLog(`🤖 Modello Dinamico Agganciato: [ ${activeGeminiModel} ]`);
     
-    // Forziamo il fuso orario di Roma anche per calcolare se è Lunedì, Martedì, ecc.
     const fusoItalia = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
     const dataOggiItalia = new Date(fusoItalia);
     const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
@@ -211,7 +214,6 @@ async function main() {
 
     const CONFIG = JSON.parse(fs.readFileSync(currentConfigPath, 'utf8'));
     
-    // Forziamo il fuso orario italiano per l'etichetta "Ultimo aggiornamento"
     const oraAggiornamento = new Date().toLocaleString('it-IT', { 
         timeZone: 'Europe/Rome', 
         hour: '2-digit', 
