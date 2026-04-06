@@ -5,6 +5,7 @@ import path from "path";
 import crypto from "crypto";
 import { fileURLToPath } from "url";
 
+// --- CONFIGURAZIONE PERCORSI ---
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE_DIR = path.join(__dirname, "..");
 const PUBLIC_DIR = path.join(BASE_DIR, "public");
@@ -43,7 +44,7 @@ async function trovaUltimoModello() {
     } catch (e) { scriviLog("Errore ricerca modelli."); }
 }
 
-function pulisciEParseJSON(raw) {
+function parseJSON(raw) {
     try {
         if (!raw) return null;
         const start = raw.indexOf('{');
@@ -55,12 +56,13 @@ function pulisciEParseJSON(raw) {
 
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
+    // Ricerca ampia per evitare di restare a secco
     const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
     try {
         const res = await fetch(url);
         const xml = await res.text();
         const titles = [];
-        const limite = Date.now() - (2 * 24 * 60 * 60 * 1000);
+        const limite = Date.now() - (3 * 24 * 60 * 60 * 1000); // 3 giorni di tolleranza
         const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
         let m;
         while ((m = itemRegex.exec(xml)) !== null && titles.length < max) {
@@ -99,7 +101,7 @@ async function callGemini(sys, prompt) {
 }
 
 async function main() {
-    scriviLog("⚓️ Inizio turno...");
+    scriviLog("⚓️ Inizio turno di redazione...");
     await trovaUltimoModello();
     
     const fuso = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
@@ -110,44 +112,61 @@ async function main() {
     
     const ts = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome', hour:'2-digit', minute:'2-digit', day:'2-digit', month:'2-digit' });
     CONFIG.site_settings.last_update = ts;
+    
+    // Aggiornamento configurazione attiva
     fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(CONFIG, null, 2));
-    fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: crypto.createHash('sha256').update(adminPwd).digest('hex'), data: Buffer.from(secretData).toString('base64'), ts }));
+    // Aggiornamento info auth
+    fs.writeFileSync(AUTH_PATH, JSON.stringify({ 
+        check: crypto.createHash('sha256').update(adminPwd).digest('hex'), 
+        data: Buffer.from(secretData).toString('base64'), 
+        ts 
+    }));
 
-    const sysSat = "Sei un giornalista satirico. JSON: {titolo, articolo, commento}. Articolo LUNGO (1000 caratt).";
-    const sysVer = "Sei un giornalista serio. JSON: {titolo, articolo, commento}. Articolo LUNGO (1000 caratt), VERO.";
+    const sysSat = "Sei un giornalista satirico pescarese. JSON: {titolo, articolo, commento}. Articolo lunghissimo (minimo 1000 caratteri).";
+    const sysVer = "Sei un giornalista serio. JSON: {titolo, articolo, commento}. Articolo lunghissimo (minimo 1000 caratteri), fattuale.";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
+        
         let newsSezione = [];
         const categorie = CONFIG[sez];
-        let quota = 0;
+        let quotaAvanzata = 0; // Gestione cascata (Danimarca)
 
         for (const [nome, info] of Object.entries(categorie)) {
-            if (nome === "color" || info.count <= 0) continue;
-            const target = info.count + quota;
-            quota = 0;
+            if (nome === "color" || info.count === undefined) continue;
+            
+            const target = info.count + quotaAvanzata;
+            quotaAvanzata = 0;
 
             if (info.label === "Satira") {
                 const temi = CONFIG.satira_config?.temi || ["Delfini"];
                 for (let i = 0; i < target; i++) {
-                    const r = await callGemini(sysSat, `Scoop su: ${temi[Math.floor(Math.random()*temi.length)]}`);
-                    const p = pulisciEParseJSON(r);
+                    const r = await callGemini(sysSat, `Genera uno scoop assurdo su: ${temi[Math.floor(Math.random()*temi.length)]}`);
+                    const p = parseJSON(r);
                     if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true });
                 }
             } else {
                 const tits = await fetchRSS(nome, target);
-                if (tits.length < target) quota = target - tits.length;
+                // Calcolo cascata: se mancano notizie, le passiamo alla categoria successiva
+                if (tits.length < target) {
+                    quotaAvanzata = target - tits.length;
+                    scriviLog(`Categoria ${nome} incompleta. Passo ${quotaAvanzata} alla prossima.`);
+                }
+                
                 for (const t of tits) {
-                    const r = await callGemini(sysVer, `Articolo VERO su: ${t}`);
-                    const p = pulisciEParseJSON(r);
+                    const r = await callGemini(sysVer, `Scrivi articolo serio e lungo su: ${t}`);
+                    const p = parseJSON(r);
                     if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
                 }
             }
         }
-        fs.writeFileSync(path.join(DATA_DIR, `news-${sez}.json`), JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
-        scriviLog(`Scritto news-${sez}.json con ${newsSezione.length} articoli.`);
+        
+        // SCRITTURA OBBLIGATORIA DEL JSON
+        const outPath = path.join(DATA_DIR, `news-${sez}.json`);
+        fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
+        scriviLog(`File ${outPath} scritto con ${newsSezione.length} articoli.`);
     }
     scriviLog("🏁 Turno completato.");
 }
 
-main().catch(e => scriviLog(`Errore: ${e.message}`));
+main().catch(e => scriviLog(`Errore critico: ${e.message}`));
