@@ -1,6 +1,6 @@
 {
   "site_settings": {
-    "header_img": "header.webp",
+    "header_img": "Header.png",
     "descrizione": "Edizione del Lunedì: Il ruggito dopo il weekend."
   },
   "satira_config": {
@@ -13,7 +13,7 @@
   },
   "pescara": {
     "color": "#005f73",
-    "Pescara Calcio": { "count": 5, "img": "sport_pescara.webp", "label": "Calcio", "mood": "entusiasta", "weight": 0.8 },
+    "Pescara Calcio": { "count": 5, "img": "sport_pescara.webp", "label": "Calcio", "mood": "sarcastico", "weight": 0.8 },
     "Intelligenza Artificiale": { "count": 0, "img": "ai_tech.webp", "label": "Futuro", "mood": "saggio", "weight": 0.4 },
     "Psicologia": { "count": 0, "img": "psicologia.webp", "label": "Mente", "mood": "riflessivo", "weight": 0.3 },
     "Satira": { "count": 4, "img": "satira.webp", "label": "Satira", "mood": "pungente", "weight": 1.0 }
