@@ -99,7 +99,20 @@ async function callGemini(sys, prompt) {
                 body: JSON.stringify({
                     contents: [{ parts: [{ text: prompt }] }],
                     systemInstruction: { parts: [{ text: sys }] },
-                    generationConfig: { responseMimeType: "application/json", temperature: 0.8 },
+                    generationConfig: { 
+                        responseMimeType: "application/json", 
+                        temperature: 0.8,
+                        // Definiamo lo schema JSON per essere sicuri che non manchino campi
+                        responseSchema: {
+                            type: "OBJECT",
+                            properties: {
+                                titolo: { type: "STRING" },
+                                articolo: { type: "STRING" },
+                                commento: { type: "STRING" }
+                            },
+                            required: ["titolo", "articolo", "commento"]
+                        }
+                    },
                     safetySettings: [
                         { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
                         { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
@@ -121,10 +134,10 @@ async function callGemini(sys, prompt) {
 function parseJSON(raw) {
     try {
         if (!raw) return null;
-        const inizioOggetto = raw.indexOf('{');
-        const fineOggetto = raw.lastIndexOf('}');
-        if (inizioOggetto !== -1 && fineOggetto !== -1) {
-            return JSON.parse(raw.substring(inizioOggetto, fineOggetto + 1));
+        const start = raw.indexOf('{');
+        const end = raw.lastIndexOf('}');
+        if (start !== -1 && end !== -1) {
+            return JSON.parse(raw.substring(start, end + 1));
         }
         return null;
     } catch (e) { return null; }
@@ -151,10 +164,9 @@ async function main() {
     const encrypted = Buffer.from(secretData).toString('base64'); 
     fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: encrypted, ts: oraAggiornamento }));
 
-    const sysPromptSatira = "Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON. Articolo lungo (800-1000 caratt.), umorismo assurdo.";
-    const sysPromptVera = "Sei un giornalista serio. Rispondi restituendo UN SINGOLO OGGETTO JSON. Articolo lungo (800-1000 caratt.), VERO e oggettivo.";
-
-    const scuseDelfino = ["Il Delfino è in sciopero.", "Genziana versata sui server.", "Gabbiano ladro di appunti."];
+    // Prompt più severi con nomi dei campi esplicitati
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo lungo (800+ caratteri), umorismo pescarese assurdo.";
+    const sysPromptVera = "Sei un giornalista serio. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo VERO, lungo (800+ caratteri), oggettivo.";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
@@ -178,12 +190,12 @@ async function main() {
             quotaAvanzata = 0;
 
             if (info.label === "Satira") {
-                const temi = CONFIG.satira_config?.temi || ["Arrosticini"];
+                const temi = CONFIG.satira_config?.temi || ["Alieni"];
                 for (let i = 0; i < targetPezzi; i++) {
                     const tema = temi[Math.floor(Math.random() * temi.length)];
-                    const raw = await callGemini(sysPromptSatira, `Inventa una notizia assurda su: ${tema}.`);
+                    const raw = await callGemini(sysPromptSatira, `Scrivi scoop assurdo su: ${tema}.`);
                     const p = parseJSON(raw);
-                    if (p) {
+                    if (p && p.articolo) {
                         const isNew = !titoliPrecedenti.includes(p.titolo);
                         newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true, is_new: isNew });
                     }
@@ -192,9 +204,9 @@ async function main() {
                 const titoli = await fetchRSS(nome, targetPezzi);
                 if (titoli.length < targetPezzi) quotaAvanzata = targetPezzi - titoli.length;
                 for (const t of titoli) {
-                    const raw = await callGemini(sysPromptVera, `Articolo VERO su: ${t}`);
+                    const raw = await callGemini(sysPromptVera, `Scrivi articolo serio su: ${t}`);
                     const p = parseJSON(raw);
-                    if (p) {
+                    if (p && p.articolo) {
                         const isNew = !titoliPrecedenti.includes(p.titolo);
                         newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_new: isNew });
                     }
