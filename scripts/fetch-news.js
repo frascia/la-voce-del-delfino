@@ -52,38 +52,47 @@ async function trovaUltimoModello() {
             }
         }
     } catch (e) {
-        scriviLog(`[ATTENZIONE] Ricerca modelli fallita. Uso modello di riserva.`);
+        scriviLog(`[ATTENZIONE] Ricerca modelli fallita. Uso ${activeGeminiModel}`);
     }
 }
 
+/**
+ * Pesca i titoli reali con maggiore tolleranza
+ */
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
-    const queryFresca = `${query} when:2d`;
-    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(queryFresca)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
+    // Rimuoviamo il filtro restrittivo when:2d per vedere se Google ci dà più roba
+    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
     try {
         const res = await fetch(url);
         if (!res.ok) return [];
         const xml = await res.text();
         const titles = [];
-        const dueGiorniFa = Date.now() - (2 * 24 * 60 * 60 * 1000);
+        
+        // Limite di 3 giorni invece di 2, per sicurezza
+        const limiteTempo = Date.now() - (3 * 24 * 60 * 60 * 1000);
+        
         const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
-        let matchItem;
-        while ((matchItem = itemRegex.exec(xml)) !== null && titles.length < max) {
-            const itemXml = matchItem[1];
-            const pubDateMatch = itemXml.match(/<pubDate>(.*?)<\/pubDate>/i);
-            if (!pubDateMatch) continue;
-            const dataNotizia = new Date(pubDateMatch[1]).getTime();
-            if (isNaN(dataNotizia) || dataNotizia < dueGiorniFa) continue;
-            const titleMatch = itemXml.match(/<title>(.*?)<\/title>/i);
-            if (titleMatch) {
-                let cleanTitle = titleMatch[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "");
-                cleanTitle = cleanTitle.split(" - ")[0].trim();
-                if (!titles.includes(cleanTitle)) titles.push(cleanTitle);
+        let match;
+        while ((match = itemRegex.exec(xml)) !== null && titles.length < max) {
+            const itemContent = match[1];
+            
+            // Controllo Data
+            const dMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/i);
+            if (dMatch) {
+                const d = new Date(dMatch[1]).getTime();
+                if (!isNaN(d) && d < limiteTempo) continue; 
+            }
+            
+            const tMatch = itemContent.match(/<title>(.*?)<\/title>/i);
+            if (tMatch) {
+                let t = tMatch[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "").split(" - ")[0].trim();
+                if (!titles.includes(t)) titles.push(t);
             }
         }
         return titles;
     } catch (e) {
-        scriviLog(`Errore RSS per ${query}: ${e.message}`);
+        scriviLog(`Errore nel fetch RSS per ${query}: ${e.message}`);
         return [];
     }
 }
@@ -102,7 +111,6 @@ async function callGemini(sys, prompt) {
                     generationConfig: { 
                         responseMimeType: "application/json", 
                         temperature: 0.8,
-                        // Definiamo lo schema JSON per essere sicuri che non manchino campi
                         responseSchema: {
                             type: "OBJECT",
                             properties: {
@@ -112,40 +120,24 @@ async function callGemini(sys, prompt) {
                             },
                             required: ["titolo", "articolo", "commento"]
                         }
-                    },
-                    safetySettings: [
-                        { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
-                    ]
+                    }
                 })
             });
             const d = await res.json();
-            if (d.error) return null;
-            return d.candidates?.[0]?.content?.parts?.[0]?.text || null;
+            if (d.candidates && d.candidates[0].content) {
+                return d.candidates[0].content.parts[0].text;
+            }
         } catch (e) {
-            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
+            await new Promise(r => setTimeout(r, 2000));
         }
     }
     return null;
 }
 
-function parseJSON(raw) {
-    try {
-        if (!raw) return null;
-        const start = raw.indexOf('{');
-        const end = raw.lastIndexOf('}');
-        if (start !== -1 && end !== -1) {
-            return JSON.parse(raw.substring(start, end + 1));
-        }
-        return null;
-    } catch (e) { return null; }
-}
-
 async function main() {
-    scriviLog("âš“ï¸ Inizio turno di redazione...");
+    scriviLog("⚓️ Inizio turno di redazione (Fetch-News)...");
     await trovaUltimoModello();
+    scriviLog(`🤖 Modello in uso: ${activeGeminiModel}`);
     
     const fusoItalia = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
     const dataOggiItalia = new Date(fusoItalia);
@@ -156,69 +148,67 @@ async function main() {
     if (!fs.existsSync(currentConfigPath)) currentConfigPath = CONFIG_PATH;
     const CONFIG = JSON.parse(fs.readFileSync(currentConfigPath, 'utf8'));
     
-    const oraAggiornamento = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' });
+    const oraAggiornamento = new Date().toLocaleString('it-IT', { 
+        timeZone: 'Europe/Rome', 
+        hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' 
+    });
+    
     CONFIG.site_settings.last_update = oraAggiornamento;
     fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(CONFIG, null, 2));
 
     const hash = crypto.createHash('sha256').update(adminPwd).digest('hex');
-    const encrypted = Buffer.from(secretData).toString('base64'); 
-    fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: encrypted, ts: oraAggiornamento }));
+    fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: Buffer.from(secretData).toString('base64'), ts: oraAggiornamento }));
 
-    // Prompt piÃ¹ severi con nomi dei campi esplicitati
-    const sysPromptSatira = "Sei un giornalista satirico pescarese. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo lungo (800+ caratteri), umorismo pescarese assurdo.";
-    const sysPromptVera = "Sei un giornalista serio. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo VERO, lungo (800+ caratteri), oggettivo.";
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo lungo (800+ car.), ironico e assurdo.";
+    const sysPromptVera = "Sei un giornalista serio. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo VERO, lungo (800+ car.), professionale.";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
         
-        const outPath = path.join(DATA_DIR, `news-${sez}.json`);
-        let titoliPrecedenti = [];
-        if (fs.existsSync(outPath)) {
-            try {
-                const vecchieNews = JSON.parse(fs.readFileSync(outPath, 'utf8'));
-                titoliPrecedenti = vecchieNews.news.map(n => n.titolo);
-            } catch (e) {}
-        }
-
         let newsSezione = [];
         const categorie = CONFIG[sez];
         let quotaAvanzata = 0;
 
         for (const [nome, info] of Object.entries(categorie)) {
             if (nome === "color" || info.count <= 0) continue;
-            const targetPezzi = info.count + quotaAvanzata;
+            
+            const target = info.count + quotaAvanzata;
             quotaAvanzata = 0;
-
+            
+            scriviLog(`🔍 Cerco notizie per: ${nome} (Target: ${target})`);
+            
             if (info.label === "Satira") {
-                const temi = CONFIG.satira_config?.temi || ["Alieni"];
-                for (let i = 0; i < targetPezzi; i++) {
+                const temi = CONFIG.satira_config?.temi || ["Delfino"];
+                for (let i = 0; i < target; i++) {
                     const tema = temi[Math.floor(Math.random() * temi.length)];
-                    const raw = await callGemini(sysPromptSatira, `Scrivi scoop assurdo su: ${tema}.`);
-                    const p = parseJSON(raw);
-                    if (p && p.articolo) {
-                        const isNew = !titoliPrecedenti.includes(p.titolo);
-                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true, is_new: isNew });
-                    }
+                    const r = await callGemini(sysPromptSatira, `Inventa una notizia assurda su: ${tema}`);
+                    if (r) newsSezione.push({ ...JSON.parse(r), categoria: info.label, immagine: info.img, is_satira: true });
                 }
             } else {
-                const titoli = await fetchRSS(nome, targetPezzi);
-                if (titoli.length < targetPezzi) quotaAvanzata = targetPezzi - titoli.length;
-                for (const t of titoli) {
-                    const raw = await callGemini(sysPromptVera, `Scrivi articolo serio su: ${t}`);
-                    const p = parseJSON(raw);
-                    if (p && p.articolo) {
-                        const isNew = !titoliPrecedenti.includes(p.titolo);
-                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_new: isNew });
+                const titoli = await fetchRSS(nome, target);
+                scriviLog(`📈 Trovati ${titoli.length} titoli per ${nome}`);
+                
+                if (titoli.length < target) quotaAvanzata = target - titoli.length;
+                
+                // Se non troviamo proprio nulla, facciamo un articolo di "riempimento" intelligente
+                if (titoli.length === 0) {
+                    scriviLog(`⚠️ Vuoto totale per ${nome}, genero articolo di riempimento.`);
+                    const r = await callGemini(sysPromptVera, `Scrivi un editoriale serio sulla situazione attuale di ${nome} anche se non ci sono news fresche dell'ultima ora.`);
+                    if (r) newsSezione.push({ ...JSON.parse(r), categoria: info.label, immagine: info.img });
+                } else {
+                    for (const t of titoli) {
+                        const r = await callGemini(sysPromptVera, `Scrivi un articolo dettagliato su: ${t}`);
+                        if (r) newsSezione.push({ ...JSON.parse(r), categoria: info.label, immagine: info.img });
                     }
                 }
             }
         }
+        
+        const outPath = path.join(DATA_DIR, `news-${sez}.json`);
         fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
+        scriviLog(`✅ Sezione ${sez} completata con ${newsSezione.length} articoli.`);
     }
-    scriviLog("ðŸ Turno completato.");
+    scriviLog("🏁 Turno completato con successo.");
 }
 
-main().catch(err => {
-    scriviLog(`ERRORE CRITICO: ${err.message}`);
-    process.exit(1);
-});
+main().catch(err => scriviLog(`❌ ERRORE CRITICO: ${err.message}`));
