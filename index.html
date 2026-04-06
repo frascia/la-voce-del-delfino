@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>La Voce del Delfino 🐬</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Roboto:wght@400;700&display=swap');
+        :root { --delfino-blue: #005f73; }
+        body { background-color: #f8f9fa; font-family: 'Roboto', sans-serif; -webkit-user-select: none; user-select: none; }
+        .unica { font-family: 'Unica One', cursive; }
+        .header-gradient { background: linear-gradient(180deg, var(--delfino-blue) 0%, #001219 100%); }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .terminal-text { font-family: 'Courier New', Courier, monospace; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="app" class="max-w-2xl mx-auto bg-white min-h-screen relative overflow-hidden">
+        
+        <!-- Terminale Segreto -->
+        <div id="terminal" class="fixed inset-0 bg-black z-50 p-6 hidden overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-green-500 pb-2 mb-4">
+                <span class="text-green-500 terminal-text font-bold">> TERMINALE DIREZIONE</span>
+                <button onclick="toggleTerminal()" class="text-red-500 font-bold">[X]</button>
+            </div>
+            <pre id="terminal-log" class="text-green-400 text-xs terminal-text whitespace-pre-wrap"></pre>
+        </div>
+
+        <!-- Header -->
+        <header class="header-gradient relative cursor-pointer" id="header-trigger">
+            <img src="images/Header.pgp" alt="La Voce del Delfino" class="w-full h-auto object-cover opacity-90" onerror="this.src='https://placehold.co/800x300?text=La+Voce+del+Delfino'">
+            <div class="bg-black/80 text-white text-center py-2 text-xs font-bold tracking-widest uppercase unica" id="current-date"></div>
+        </header>
+
+        <!-- Banner dinamico -->
+        <div class="border-t-4 border-cyan-600 bg-white shadow-md py-4 flex justify-center">
+            <img id="day-banner" src="" class="h-16 md:h-20 object-contain" alt="">
+        </div>
+
+        <!-- Stato Redazione -->
+        <div class="flex justify-between items-center px-4 py-2 bg-gray-100 border-b text-[10px] text-gray-500 font-mono">
+            <span>STATO: OPERATIVO</span>
+            <span id="update-time">ULTIMO REFRESH: ---</span>
+        </div>
+
+        <!-- Navigazione -->
+        <nav class="flex overflow-x-auto p-4 gap-3 hide-scroll bg-white sticky top-0 z-10 border-b">
+            <div id="nav-tabs" class="flex gap-2"></div>
+        </nav>
+
+        <!-- News Feed -->
+        <main id="feed" class="p-4 space-y-8 pb-24"></main>
+
+        <!-- Footer -->
+        <footer class="p-8 text-center text-gray-400 text-xs border-t bg-gray-50">
+            <p class="unica text-lg mb-2 text-gray-600">La Voce del Delfino</p>
+            <p>© 2026 - Pescara, Abruzzo, Italia</p>
+        </footer>
+    </div>
+
+    <script>
+        let secretClicks = 0;
+        let lastClickTime = 0;
+
+        function toggleTerminal() {
+            document.getElementById('terminal').classList.toggle('hidden');
+        }
+
+        document.getElementById('header-trigger').onclick = async () => {
+            const now = Date.now();
+            if (now - lastClickTime > 1000) secretClicks = 0;
+            secretClicks++;
+            lastClickTime = now;
+            if (secretClicks === 5) {
+                secretClicks = 0;
+                const pwd = prompt("Chiave d'accesso Direzione:");
+                if (!pwd) return;
+                try {
+                    const res = await fetch(`data/auth_info.json?v=${Date.now()}`);
+                    const auth = await res.json();
+                    const encoder = new TextEncoder();
+                    const data = encoder.encode(pwd);
+                    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+                    const hashArray = Array.from(new Uint8Array(hashBuffer));
+                    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                    
+                    if (hashHex === auth.check) {
+                        toggleTerminal();
+                        const logRes = await fetch(`data/redazione.log?v=${Date.now()}`);
+                        document.getElementById('terminal-log').innerText = await logRes.text();
+                    } else {
+                        alert("Accesso negato. Riprova quando il mare è calmo.");
+                    }
+                } catch(e) { console.error(e); }
+            }
+        };
+
+        async function init() {
+            try {
+                const res = await fetch(`data/active_config.json?v=${Date.now()}`);
+                const config = await res.json();
+                
+                document.getElementById('day-banner').src = `images/${config.site_settings.day_banner}`;
+                document.getElementById('update-time').innerText = `ULTIMO REFRESH: ${config.site_settings.last_update}`;
+                document.getElementById('current-date').innerText = new Date().toLocaleDateString('it-IT', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+
+                const sections = Object.keys(config).filter(k => !['site_settings', 'satira_config'].includes(k));
+                const nav = document.getElementById('nav-tabs');
+                
+                sections.forEach((sec, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = `px-6 py-2 rounded-full text-xs font-bold uppercase transition-all border-2 ${idx === 0 ? 'bg-[var(--delfino-blue)] text-white border-[var(--delfino-blue)]' : 'bg-white text-gray-600 border-gray-200'}`;
+                    btn.innerText = sec;
+                    btn.onclick = () => loadSection(sec, btn);
+                    nav.appendChild(btn);
+                });
+
+                if (sections.length > 0) loadSection(sections[0]);
+            } catch (e) {
+                document.getElementById('feed').innerHTML = '<div class="text-center py-20 text-gray-400 italic">Redazione in sciopero degli arrosticini... ricarica tra poco.</div>';
+            }
+        }
+
+        async function loadSection(sectionName, activeBtn) {
+            if (activeBtn) {
+                document.querySelectorAll('#nav-tabs button').forEach(b => {
+                    b.className = 'px-6 py-2 rounded-full text-xs font-bold uppercase transition-all border-2 bg-white text-gray-600 border-gray-200';
+                });
+                activeBtn.className = 'px-6 py-2 rounded-full text-xs font-bold uppercase transition-all border-2 bg-[var(--delfino-blue)] text-white border-[var(--delfino-blue)]';
+            }
+
+            const res = await fetch(`data/news-${sectionName}.json?v=${Date.now()}`);
+            const data = await res.json();
+            document.documentElement.style.setProperty('--delfino-blue', data.color);
+
+            const feed = document.getElementById('feed');
+            feed.innerHTML = '';
+
+            data.news.forEach((item, i) => {
+                const article = document.createElement('article');
+                article.className = 'card-shadow bg-white rounded-2xl overflow-hidden border border-gray-100';
+                article.innerHTML = `
+                    <div class="relative aspect-video bg-gray-200">
+                        <img src="images/${item.immagine}" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/600x400?text=News+Delfino'">
+                        <div class="absolute top-4 left-4 bg-[var(--delfino-blue)] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">${item.categoria}</div>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold leading-tight mb-4 text-gray-900">${item.titolo}</h2>
+                        <div id="txt-${i}" class="text-gray-600 leading-relaxed text-sm overflow-hidden transition-all duration-500" style="max-height: 100px;">${item.articolo}</div>
+                        <button onclick="expandText(${i}, this)" class="mt-4 text-[var(--delfino-blue)] font-bold text-xs uppercase tracking-tighter">Leggi tutto +</button>
+                        
+                        <div class="mt-8 pt-6 border-t border-dashed border-gray-200 flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center text-xl">🐬</div>
+                            <div class="bg-cyan-50 p-4 rounded-2xl rounded-tl-none flex-grow">
+                                <p class="text-xs italic text-cyan-900 leading-snug font-medium">"${item.commento}"</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                feed.appendChild(article);
+            });
+        }
+
+        function expandText(id, btn) {
+            const el = document.getElementById(`txt-${id}`);
+            if (el.style.maxHeight === '100px') {
+                el.style.maxHeight = '2000px';
+                btn.innerText = 'Chiudi -';
+            } else {
+                el.style.maxHeight = '100px';
+                btn.innerText = 'Leggi tutto +';
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
+
