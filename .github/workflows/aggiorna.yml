@@ -14,24 +14,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Configura Git
+      - name: Sincronizza
         run: |
           git config --global user.name "DelfinoBot"
           git config --global user.email "bot@lavocedeldelfino.it"
           git fetch origin main
           git reset --hard origin/main
-      - name: Esecuzione Script
+      - name: Script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/fetch-news.js
-      - name: Push Risultati
+      - name: Push
         run: |
           git add public/data/*.json public/data/*.log
           if git diff --staged --quiet; then
-            echo "Niente di nuovo."
+            echo "Nessuna novità."
             exit 0
           fi
-          git commit -m "🗞️ Refresh $(date +'%d-%m %H:%M')"
+          git commit -m "🗞️ News Refresh $(date +'%d-%m %H:%M')"
           git push origin main --force
