@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          # Rimosso 'cache: npm' perché cercava il file lock inesistente
 
       - name: Installazione Dipendenze
         run: npm install
