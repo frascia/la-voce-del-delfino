@@ -52,7 +52,7 @@ async function trovaUltimoModello() {
             }
         }
     } catch (e) {
-        scriviLog(`[ATTENZIONE] Ricerca modelli fallita.`);
+        scriviLog(`[ATTENZIONE] Ricerca modelli fallita. Uso modello di riserva.`);
     }
 }
 
@@ -67,20 +67,25 @@ async function fetchRSS(query, max) {
         const titles = [];
         const dueGiorniFa = Date.now() - (2 * 24 * 60 * 60 * 1000);
         const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
-        let m;
-        while ((m = itemRegex.exec(xml)) !== null && titles.length < max) {
-            const item = m[1];
-            const pMatch = item.match(/<pubDate>(.*?)<\/pubDate>/i);
-            if (!pMatch) continue;
-            if (new Date(pMatch[1]).getTime() < dueGiorniFa) continue;
-            const tMatch = item.match(/<title>(.*?)<\/title>/i);
-            if (tMatch) {
-                let t = tMatch[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "").split(" - ")[0].trim();
-                if (!titles.includes(t)) titles.push(t);
+        let matchItem;
+        while ((matchItem = itemRegex.exec(xml)) !== null && titles.length < max) {
+            const itemXml = matchItem[1];
+            const pubDateMatch = itemXml.match(/<pubDate>(.*?)<\/pubDate>/i);
+            if (!pubDateMatch) continue;
+            const dataNotizia = new Date(pubDateMatch[1]).getTime();
+            if (isNaN(dataNotizia) || dataNotizia < dueGiorniFa) continue;
+            const titleMatch = itemXml.match(/<title>(.*?)<\/title>/i);
+            if (titleMatch) {
+                let cleanTitle = titleMatch[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "");
+                cleanTitle = cleanTitle.split(" - ")[0].trim();
+                if (!titles.includes(cleanTitle)) titles.push(cleanTitle);
             }
         }
         return titles;
-    } catch (e) { return []; }
+    } catch (e) {
+        scriviLog(`Errore RSS per ${query}: ${e.message}`);
+        return [];
+    }
 }
 
 async function callGemini(sys, prompt) {
@@ -97,82 +102,123 @@ async function callGemini(sys, prompt) {
                     generationConfig: { 
                         responseMimeType: "application/json", 
                         temperature: 0.8,
+                        // Definiamo lo schema JSON per essere sicuri che non manchino campi
                         responseSchema: {
                             type: "OBJECT",
-                            properties: { titolo: { type: "STRING" }, articolo: { type: "STRING" }, commento: { type: "STRING" } },
+                            properties: {
+                                titolo: { type: "STRING" },
+                                articolo: { type: "STRING" },
+                                commento: { type: "STRING" }
+                            },
                             required: ["titolo", "articolo", "commento"]
                         }
                     },
-                    safetySettings: [{ category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },{ category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },{ category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },{ category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }]
+                    safetySettings: [
+                        { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
+                    ]
                 })
             });
             const d = await res.json();
+            if (d.error) return null;
             return d.candidates?.[0]?.content?.parts?.[0]?.text || null;
-        } catch (e) { await new Promise(r => setTimeout(r, 2000)); }
+        } catch (e) {
+            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
+        }
     }
     return null;
 }
 
+function parseJSON(raw) {
+    try {
+        if (!raw) return null;
+        const start = raw.indexOf('{');
+        const end = raw.lastIndexOf('}');
+        if (start !== -1 && end !== -1) {
+            return JSON.parse(raw.substring(start, end + 1));
+        }
+        return null;
+    } catch (e) { return null; }
+}
+
 async function main() {
-    scriviLog("⚓️ Apertura redazione...");
+    scriviLog("âš“ï¸ Inizio turno di redazione...");
     await trovaUltimoModello();
     
-    const fuso = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
-    const oggiIdx = new Date(fuso).getDay();
+    const fusoItalia = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
+    const dataOggiItalia = new Date(fusoItalia);
     const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
-    const oggi = giorni[oggiIdx];
+    const oggi = giorni[dataOggiItalia.getDay()];
     
-    let cfgP = path.join(DATA_DIR, `config_${oggi}.json`);
-    if (!fs.existsSync(cfgP)) cfgP = CONFIG_PATH;
-    const CONFIG = JSON.parse(fs.readFileSync(cfgP, 'utf8'));
+    let currentConfigPath = path.join(DATA_DIR, `config_${oggi}.json`);
+    if (!fs.existsSync(currentConfigPath)) currentConfigPath = CONFIG_PATH;
+    const CONFIG = JSON.parse(fs.readFileSync(currentConfigPath, 'utf8'));
     
-    const ts = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome', hour:'2-digit', minute:'2-digit', day:'2-digit', month:'2-digit' });
-    CONFIG.site_settings.last_update = ts;
+    const oraAggiornamento = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' });
+    CONFIG.site_settings.last_update = oraAggiornamento;
     fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(CONFIG, null, 2));
 
     const hash = crypto.createHash('sha256').update(adminPwd).digest('hex');
-    fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: Buffer.from(secretData).toString('base64'), ts }));
+    const encrypted = Buffer.from(secretData).toString('base64'); 
+    fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: encrypted, ts: oraAggiornamento }));
 
-    const sysSat = "Sei un giornalista satirico pescarese. JSON con: titolo, articolo (800+ car.), commento. Sii assurdo.";
-    const sysVer = "Sei un giornalista serio. JSON con: titolo, articolo (800+ car.), commento. Sii VERO e oggettivo.";
+    // Prompt piÃ¹ severi con nomi dei campi esplicitati
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo lungo (800+ caratteri), umorismo pescarese assurdo.";
+    const sysPromptVera = "Sei un giornalista serio. Restituisci JSON con chiavi 'titolo', 'articolo', 'commento'. Articolo VERO, lungo (800+ caratteri), oggettivo.";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
         
+        const outPath = path.join(DATA_DIR, `news-${sez}.json`);
+        let titoliPrecedenti = [];
+        if (fs.existsSync(outPath)) {
+            try {
+                const vecchieNews = JSON.parse(fs.readFileSync(outPath, 'utf8'));
+                titoliPrecedenti = vecchieNews.news.map(n => n.titolo);
+            } catch (e) {}
+        }
+
         let newsSezione = [];
         const categorie = CONFIG[sez];
-        let quota = 0;
+        let quotaAvanzata = 0;
 
         for (const [nome, info] of Object.entries(categorie)) {
             if (nome === "color" || info.count <= 0) continue;
-            const tPezzi = info.count + quota;
-            quota = 0;
+            const targetPezzi = info.count + quotaAvanzata;
+            quotaAvanzata = 0;
 
             if (info.label === "Satira") {
-                const temi = CONFIG.satira_config?.temi || ["Delfini"];
-                for (let i = 0; i < tPezzi; i++) {
-                    const tema = temi[Math.floor(Math.random()*temi.length)];
-                    const r = await callGemini(sysSat, `Scoop su: ${tema}`);
-                    const p = JSON.parse(r || "{}");
-                    if (p.articolo) {
-                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true });
+                const temi = CONFIG.satira_config?.temi || ["Alieni"];
+                for (let i = 0; i < targetPezzi; i++) {
+                    const tema = temi[Math.floor(Math.random() * temi.length)];
+                    const raw = await callGemini(sysPromptSatira, `Scrivi scoop assurdo su: ${tema}.`);
+                    const p = parseJSON(raw);
+                    if (p && p.articolo) {
+                        const isNew = !titoliPrecedenti.includes(p.titolo);
+                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true, is_new: isNew });
                     }
                 }
             } else {
-                const tits = await fetchRSS(nome, tPezzi);
-                if (tits.length < tPezzi) quota = tPezzi - tits.length;
-                for (const t of tits) {
-                    const r = await callGemini(sysVer, `Articolo su: ${t}`);
-                    const p = JSON.parse(r || "{}");
-                    if (p.articolo) {
-                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
+                const titoli = await fetchRSS(nome, targetPezzi);
+                if (titoli.length < targetPezzi) quotaAvanzata = targetPezzi - titoli.length;
+                for (const t of titoli) {
+                    const raw = await callGemini(sysPromptVera, `Scrivi articolo serio su: ${t}`);
+                    const p = parseJSON(raw);
+                    if (p && p.articolo) {
+                        const isNew = !titoliPrecedenti.includes(p.titolo);
+                        newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_new: isNew });
                     }
                 }
             }
         }
-        fs.writeFileSync(path.join(DATA_DIR, `news-${sez}.json`), JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
+        fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
     }
-    scriviLog("🏁 Turno completato.");
+    scriviLog("ðŸ Turno completato.");
 }
 
-main().catch(e => scriviLog(`Errore: ${e.message}`));
+main().catch(err => {
+    scriviLog(`ERRORE CRITICO: ${err.message}`);
+    process.exit(1);
+});
