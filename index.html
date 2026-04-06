@@ -5,36 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>La Voce del Delfino 🐬</title>
     <style>
-        :root { --blu-mare: #005f73; --azzurro: #0091ff; --crema: #fdfaf4; }
-        body { margin: 0; background: var(--crema); font-family: -apple-system, sans-serif; -webkit-user-select: none; user-select: none; }
+        /* Variabili di base, verranno sovrascritte dinamicamente dallo script */
+        :root { --blu-mare: #005f73; --bg-chiaro: #fdfaf4; }
+        
+        /* Aggiunta la transizione per far sfumare morbidamente il colore di sfondo */
+        body { margin: 0; background: var(--bg-chiaro); font-family: -apple-system, sans-serif; -webkit-user-select: none; user-select: none; transition: background-color 0.5s ease; }
         #app { width: 100%; max-width: 800px; margin: auto; background: #fff; min-height: 100vh; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
         
-        .testata { width: 100%; background: var(--blu-mare); line-height: 0; cursor: pointer; text-align: center; }
-        .testata img { width: 100%; height: auto; max-height: 250px; object-fit: cover; }
-        .descrizione-sito { background: var(--blu-mare); color: rgba(255,255,255,0.9); text-align: center; padding: 10px 15px; font-size: 14px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); }
+        .testata { width: 100%; background: var(--blu-mare); line-height: 0; cursor: pointer; text-align: center; transition: background-color 0.5s ease; }
+        .testata img#header-img { width: 100%; height: auto; max-height: 250px; object-fit: cover; }
+        
+        /* Nuovo box per il Day Banner (la striscia quotidiana) */
+        .day-banner-box { width: 100%; display: none; background: #000; border-bottom: 2px solid var(--blu-mare); }
+        .day-banner-box img { width: 100%; max-height: 100px; object-fit: cover; display: block; }
+
+        .descrizione-sito { background: var(--blu-mare); color: rgba(255,255,255,0.9); text-align: center; padding: 10px 15px; font-size: 14px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); transition: background-color 0.5s ease; }
         .data-oggi { background: #000; color: #fff; text-align: center; padding: 8px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
 
         .info-aggiornamento { text-align: right; font-size: 11px; color: #999; padding: 5px 15px; font-family: monospace; border-bottom: 1px solid #eee; }
 
-        .menu { display: flex; overflow-x: auto; padding: 15px; gap: 10px; scrollbar-width: none; }
+        .menu { display: flex; overflow-x: auto; padding: 15px; gap: 10px; scrollbar-width: none; background: var(--bg-chiaro); transition: background-color 0.5s ease; }
         .menu::-webkit-scrollbar { display: none; }
-        .tab { white-space: nowrap; padding: 10px 18px; border-radius: 25px; border: 1px solid var(--blu-mare); background: #fff; color: var(--blu-mare); font-weight: bold; font-size: 13px; cursor: pointer; transition: 0.2s; }
+        .tab { white-space: nowrap; padding: 10px 18px; border-radius: 25px; border: 1px solid var(--blu-mare); background: #fff; color: var(--blu-mare); font-weight: bold; font-size: 13px; cursor: pointer; transition: 0.3s ease; }
         .tab.attiva { background: var(--blu-mare); color: #fff; }
 
-        .notizia { padding: 20px; border-bottom: 8px solid #f9f9f9; }
+        .notizia { padding: 20px; border-bottom: 8px solid var(--bg-chiaro); transition: border-color 0.5s ease; }
         .notizia-img-box { width: 100%; aspect-ratio: 16/9; background: #eee; border-radius: 12px; overflow: hidden; margin-bottom: 15px; position: relative; }
         .notizia-img-box img { width: 100%; height: 100%; object-fit: cover; }
         
-        /* Stile del badge dell'etichetta! */
-        .etichetta-categoria { position: absolute; top: 12px; left: 12px; background: var(--blu-mare); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; text-transform: uppercase; box-shadow: 0 4px 6px rgba(0,0,0,0.3); letter-spacing: 0.5px; z-index: 10; }
+        .etichetta-categoria { position: absolute; top: 12px; left: 12px; background: var(--blu-mare); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; text-transform: uppercase; box-shadow: 0 4px 6px rgba(0,0,0,0.3); letter-spacing: 0.5px; z-index: 10; transition: background-color 0.5s ease; }
 
         h2 { margin: 0 0 10px 0; font-size: 22px; line-height: 1.2; color: #111; }
         .testo { font-size: 16px; line-height: 1.6; color: #444; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
         .testo.aperto { -webkit-line-clamp: unset; }
-        .leggi-tutto { background: none; border: none; color: var(--blu-mare); font-weight: bold; padding: 10px 0; font-size: 14px; cursor: pointer; }
+        .leggi-tutto { background: none; border: none; color: var(--blu-mare); font-weight: bold; padding: 10px 0; font-size: 14px; cursor: pointer; transition: color 0.5s ease; }
         
-        .commento-delfino { background: #e0f2f1; padding: 15px; border-radius: 12px; margin-top: 15px; position: relative; }
-        .commento-delfino:before { content: "🐬"; position: absolute; left: -10px; top: -10px; font-size: 20px; }
+        .commento-delfino { background: var(--bg-chiaro); padding: 15px; border-radius: 12px; margin-top: 15px; position: relative; border-left: 4px solid var(--blu-mare); transition: all 0.5s ease; }
+        .commento-delfino:before { content: "🐬"; position: absolute; left: -10px; top: -15px; font-size: 24px; }
 
         #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:#000; color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; }
     </style>
@@ -52,6 +59,12 @@
 
         <div class="testata" id="logo-innesco">
             <img id="header-img" src="public/images/default.webp" alt="La Voce del Delfino" onerror="this.src='https://placehold.co/800x250?text=La+Voce+del+Delfino'">
+            
+            <!-- Striscia del banner del giorno -->
+            <div class="day-banner-box" id="banner-box">
+                <img id="day-banner" src="" alt="Banner del Giorno" onerror="this.parentElement.style.display='none'">
+            </div>
+
             <div class="descrizione-sito" id="descrizione-display">In attesa del Delfino...</div>
             <div class="data-oggi" id="data-display"></div>
         </div>
@@ -66,7 +79,7 @@
         let clicks = 0, last = 0;
         function toggleTerminale() { document.getElementById('terminale').style.display = 'none'; }
 
-        // Sistema di innesco terminale con password (5 click sul logo)
+        // Sistema di innesco terminale
         document.getElementById('logo-innesco').onclick = async () => {
             const ora = Date.now();
             if (ora - last > 1000) clicks = 0;
@@ -91,16 +104,23 @@
             }
         };
 
-        // Funzione iniziale che carica il menu e l'header
+        // Caricamento del Config
         async function carica() {
             try {
                 const res = await fetch(`public/data/active_config.json?v=${Date.now()}`);
                 const cfg = await res.json();
                 
-                // Aggiornamento testata ed extra dinamici
+                // Aggiornamento testata
                 if (cfg.site_settings.header_img) {
                     document.getElementById('header-img').src = `public/images/${cfg.site_settings.header_img}`;
                 }
+                
+                // Aggiornamento banner del giorno
+                if (cfg.site_settings.day_banner) {
+                    document.getElementById('day-banner').src = `public/images/${cfg.site_settings.day_banner}`;
+                    document.getElementById('banner-box').style.display = 'block';
+                }
+
                 if (cfg.site_settings.descrizione) {
                     document.getElementById('descrizione-display').innerText = cfg.site_settings.descrizione;
                 }
@@ -108,7 +128,6 @@
                 document.getElementById('data-display').innerText = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long'});
                 document.getElementById('ts-display').innerText = `ULTIMO REFRESH: ${cfg.site_settings.last_update || '---'}`;
                 
-                // Creazione Menu dinamico scartando site_settings e satira_config
                 const cat = Object.keys(cfg).filter(k => !['site_settings','satira_config'].includes(k));
                 const menu = document.getElementById('menu-categorie');
                 cat.forEach((c, i) => {
@@ -119,14 +138,13 @@
                     menu.appendChild(btn);
                 });
                 
-                // Clicca automaticamente sulla prima sezione all'avvio
                 if (cat[0]) mostraSezione(cat[0]);
             } catch(e) { 
                 document.getElementById('lista-notizie').innerHTML = "<p style='text-align:center; padding:50px;'>Il Delfino sta pescando news fresche...</p>"; 
             }
         }
 
-        // Funzione per mostrare le notizie di una sezione
+        // Cambio Sezione e Colori Dinamici
         async function mostraSezione(s, btn) {
             if (btn) {
                 document.querySelectorAll('.tab').forEach(t => t.classList.remove('attiva'));
@@ -136,14 +154,16 @@
                 const res = await fetch(`public/data/news-${s}.json?v=${Date.now()}`);
                 const data = await res.json();
                 
-                // Imposta il colore tematico per l'intera sezione!
-                document.documentElement.style.setProperty('--blu-mare', data.color || '#005f73');
+                // PRENDIAMO IL COLORE E LO APPLICHIAMO ALLA PAGINA
+                const mainColor = data.color || '#005f73';
+                document.documentElement.style.setProperty('--blu-mare', mainColor);
+                // Creiamo un background pastello aggiungendo il 10% di opacità ('1A' in esadecimale) al colore principale
+                document.documentElement.style.setProperty('--bg-chiaro', mainColor + '1A');
                 
                 const lista = document.getElementById('lista-notizie');
                 lista.innerHTML = '';
                 
                 data.news.forEach((n, idx) => {
-                    // Lettura di Etichetta (categoria) e Immagine caricate dal motore
                     const etichetta = n.categoria || 'Speciale';
                     const immagine = n.immagine || 'default.webp';
                     
@@ -162,7 +182,6 @@
             } catch(e) {}
         }
         
-        // Avvio!
         carica();
     </script>
 </body>
