@@ -35,7 +35,7 @@ function scriviLog(msg) {
 }
 
 /**
- * Pesca i titoli reali da Google News
+ * Pesca i titoli reali da Google News (Aggiornato per nuovo formato RSS)
  */
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
@@ -45,10 +45,13 @@ async function fetchRSS(query, max) {
         if (!res.ok) return [];
         const xml = await res.text();
         const titles = [];
-        const regex = /<title><!\[CDATA\[(.*?)\]\]><\/title>/g;
+        
+        // Nuova RegEx che cerca il <title> dentro i vari <item>, ignorando CDATA se non c'è
+        const regex = /<item>[\s\S]*?<title>(.*?)<\/title>/gi;
         let m;
         while ((m = regex.exec(xml)) !== null && titles.length < max) {
-            const cleanTitle = m[1].split(" - ")[0];
+            let cleanTitle = m[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "");
+            cleanTitle = cleanTitle.split(" - ")[0].trim();
             titles.push(cleanTitle);
         }
         return titles;
@@ -59,7 +62,7 @@ async function fetchRSS(query, max) {
 }
 
 /**
- * Chiama Gemini API con gestione errori
+ * Chiama Gemini API con gestione errori avanzata
  */
 async function callGemini(sys, prompt) {
     if (!apiKey) {
@@ -80,7 +83,15 @@ async function callGemini(sys, prompt) {
                 })
             });
             const d = await res.json();
-            return d.candidates?.[0]?.content?.parts?.[0]?.text || null;
+            const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
+            
+            if (!text) {
+                const motivo = d.candidates?.[0]?.finishReason || "Sconosciuto (Forse blocco sicurezza)";
+                scriviLog(`[ATTENZIONE] Gemini ha restituito vuoto. Motivo: ${motivo}`);
+                return null;
+            }
+            return text;
+            
         } catch (e) {
             await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
         }
@@ -89,26 +100,38 @@ async function callGemini(sys, prompt) {
 }
 
 /**
- * Pulisce il JSON ritagliando chirurgicamente solo i dati (ignora le chiacchiere dell'AI)
+ * Pulisce il JSON in modo "chirurgico" senza usare regex che spaccano il file
  */
 function parseJSON(raw) {
     try {
         if (!raw) return null;
         
-        // Trova la prima graffa aperta e l'ultima chiusa
-        const inizio = raw.indexOf('{');
-        const fine = raw.lastIndexOf('}');
+        // Cerca la prima parentesi quadra (se ci ha dato un array)
+        const inizioArray = raw.indexOf('[');
+        const fineArray = raw.lastIndexOf(']');
         
-        if (inizio !== -1 && fine !== -1 && fine >= inizio) {
-            // Ritaglia esattamente il pezzo che ci serve
-            const soloJSON = raw.substring(inizio, fine + 1);
-            return JSON.parse(soloJSON);
+        // Cerca la prima parentesi graffa (se ci ha dato un oggetto singolo)
+        const inizioOggetto = raw.indexOf('{');
+        const fineOggetto = raw.lastIndexOf('}');
+        
+        // Se ha risposto con un Array, prendiamo il primo elemento
+        if (inizioArray !== -1 && fineArray !== -1 && (inizioOggetto === -1 || inizioArray < inizioOggetto)) {
+            const jsonString = raw.substring(inizioArray, fineArray + 1);
+            const parsedArray = JSON.parse(jsonString);
+            return Array.isArray(parsedArray) && parsedArray.length > 0 ? parsedArray[0] : null;
         }
         
-        scriviLog("Attenzione: Nessun blocco JSON trovato nella risposta di Gemini.");
+        // Se ha risposto con un Oggetto
+        if (inizioOggetto !== -1 && fineOggetto !== -1 && fineOggetto >= inizioOggetto) {
+            const jsonString = raw.substring(inizioOggetto, fineOggetto + 1);
+            return JSON.parse(jsonString);
+        }
+
+        scriviLog(`[ERRORE PARSING] Nessun JSON trovato. Risposta: ${raw.substring(0, 100)}...`);
         return null;
+
     } catch (e) {
-        scriviLog("Errore parsing JSON: l'AI ha generato un formato illeggibile.");
+        scriviLog(`[ERRORE PARSING] Il JSON è illeggibile.`);
         return null;
     }
 }
@@ -141,7 +164,8 @@ async function main() {
     const encrypted = Buffer.from(secretData).toString('base64'); 
     fs.writeFileSync(AUTH_PATH, JSON.stringify({ check: hash, data: encrypted, ts: oraAggiornamento }));
 
-    const sysPrompt = "Sei un giornalista satirico pescarese. Rispondi SOLO in JSON: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}";
+    // Abbiamo aggiunto "UN SINGOLO OGGETTO" al prompt per obbligarlo
+    const sysPrompt = "Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
