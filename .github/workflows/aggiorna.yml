@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Sincronizza Git
+      - name: Sincronizza
         run: |
           git config --global user.name "DelfinoBot"
           git config --global user.email "bot@lavocedeldelfino.it"
@@ -26,12 +26,12 @@ jobs:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/fetch-news.js
-      - name: Push Risultati
+      - name: Push
         run: |
           git add public/data/*.json public/data/*.log
           if git diff --staged --quiet; then
-            echo "Nessuna novità."
+            echo "Niente news."
           else
-            git commit -m "🗞️ News Refresh $(date +'%d-%m %H:%M')"
+            git commit -m "🗞️ News $(date +'%d-%m %H:%M')"
             git push origin main --force
           fi
