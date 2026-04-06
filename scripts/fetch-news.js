@@ -7,7 +7,9 @@ import { fileURLToPath } from "url";
 
 // --- CONFIGURAZIONE PERCORSI ---
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PUBLIC_DIR = path.join(__dirname, "../public");
+// Il file è in /scripts, quindi dobbiamo salire di uno per trovare /public
+const BASE_DIR = path.join(__dirname, "..");
+const PUBLIC_DIR = path.join(BASE_DIR, "public");
 const DATA_DIR = path.join(PUBLIC_DIR, "data");
 
 const LOG_PATH = path.join(DATA_DIR, "redazione.log");
@@ -15,14 +17,15 @@ const AUTH_PATH = path.join(DATA_DIR, "auth_info.json");
 const CONFIG_PATH = path.join(DATA_DIR, "config.json");
 const ACTIVE_CONFIG_PATH = path.join(DATA_DIR, "active_config.json");
 
-// Assicuriamoci che la cartella data esista
+// Assicuriamoci che la cartella dei dati esista
 if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 
+// --- COSTANTI ---
 const apiKey = process.env.GEMINI_API_KEY || "";
 const adminPwd = process.env.ADMIN_PASSWORD || "delfino2026";
-const secretData = process.env.ADMIN_SECRET_DATA || "Segreto di Pescara.";
+const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto oggi.";
 
 function scriviLog(msg) {
     const ts = new Date().toLocaleString('it-IT');
@@ -32,7 +35,7 @@ function scriviLog(msg) {
 }
 
 /**
- * Pesca i titoli reali da Google News RSS
+ * Pesca i titoli reali da Google News
  */
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
@@ -45,7 +48,7 @@ async function fetchRSS(query, max) {
         const regex = /<title><!\[CDATA\[(.*?)\]\]><\/title>/g;
         let m;
         while ((m = regex.exec(xml)) !== null && titles.length < max) {
-            // Puliamo il titolo dal nome della testata (es: " - Il Centro")
+            // Puliamo il titolo (rimuoviamo il nome della testata finale)
             const cleanTitle = m[1].split(" - ")[0];
             titles.push(cleanTitle);
         }
@@ -57,11 +60,11 @@ async function fetchRSS(query, max) {
 }
 
 /**
- * Chiama Gemini API
+ * Chiama Gemini API con gestione errori
  */
 async function callGemini(sys, prompt) {
     if (!apiKey) {
-        scriviLog("ERRORE: Manca GEMINI_API_KEY!");
+        scriviLog("ERRORE: Manca la GEMINI_API_KEY nei Secrets!");
         return null;
     }
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
@@ -87,9 +90,10 @@ async function callGemini(sys, prompt) {
 }
 
 /**
- * Pulisce il JSON dalle risposte di Gemini
+ * Pulisce il JSON dalle risposte sporche dell'AI
  */
-function pulisciJSON(raw) {
+function parseJSON(raw) {
     try {
         if (!raw) return null;
+        // Rimuove markdown ```json ... ``` se presente
         const clean = raw.replace(/
