@@ -28,7 +28,8 @@ const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto impostato.";
 let activeGeminiModel = "gemini-1.5-flash";
 
 function scriviLog(msg) {
-    const ts = new Date().toLocaleString('it-IT');
+    // Forziamo il fuso orario italiano per i log!
+    const ts = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' });
     const riga = `[${ts}] ${msg}\n`;
     fs.appendFileSync(LOG_PATH, riga);
     console.log(`> ${msg}`);
@@ -191,8 +192,12 @@ async function main() {
     await trovaUltimoModello();
     scriviLog(`🤖 Modello Dinamico Agganciato: [ ${activeGeminiModel} ]`);
     
+    // Forziamo il fuso orario di Roma anche per calcolare se è Lunedì, Martedì, ecc.
+    const fusoItalia = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
+    const dataOggiItalia = new Date(fusoItalia);
     const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
-    const oggi = giorni[new Date().getDay()];
+    const oggi = giorni[dataOggiItalia.getDay()];
+    
     let currentConfigPath = path.join(DATA_DIR, `config_${oggi}.json`);
     
     if (!fs.existsSync(currentConfigPath)) {
@@ -205,7 +210,15 @@ async function main() {
     }
 
     const CONFIG = JSON.parse(fs.readFileSync(currentConfigPath, 'utf8'));
-    const oraAggiornamento = new Date().toLocaleString('it-IT', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' });
+    
+    // Forziamo il fuso orario italiano per l'etichetta "Ultimo aggiornamento"
+    const oraAggiornamento = new Date().toLocaleString('it-IT', { 
+        timeZone: 'Europe/Rome', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        day: '2-digit', 
+        month: '2-digit' 
+    });
     
     CONFIG.site_settings.last_update = oraAggiornamento;
     fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(CONFIG, null, 2));
@@ -231,15 +244,13 @@ async function main() {
         let newsSezione = [];
         const categorie = CONFIG[sez];
         
-        // IL SERBATOIO PER LA QUOTA EXTRA (A cascata!)
         let quotaAvanzata = 0;
 
         for (const [nome, info] of Object.entries(categorie)) {
             if (nome === "color" || info.count <= 0) continue;
 
-            // Calcoliamo quanti articoli servono in totale (base + avanzi della categoria prima)
             const targetPezzi = info.count + quotaAvanzata;
-            quotaAvanzata = 0; // Azzeriamo il serbatoio dopo averlo svuotato
+            quotaAvanzata = 0;
 
             scriviLog(`Lancio le reti per: ${nome} (Quota: ${info.count} + ${targetPezzi - info.count} recuperati = ${targetPezzi} totali)`);
             
@@ -266,7 +277,6 @@ async function main() {
             } else {
                 const titoli = await fetchRSS(nome, targetPezzi);
                 
-                // SISTEMA A CASCATA: Se troviamo meno notizie del previsto, passiamo il resto alla categoria successiva
                 if (titoli.length < targetPezzi) {
                     quotaAvanzata = targetPezzi - titoli.length;
                     scriviLog(`[SISTEMA A CASCATA] Trovate solo ${titoli.length} notizie fresche per ${nome}. Passo ${quotaAvanzata} reti alla categoria successiva!`);
