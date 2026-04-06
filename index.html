@@ -5,50 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>La Voce del Delfino 🐬</title>
     <style>
-        :root { --blu-mare: #005f73; --bg-chiaro: rgba(0, 95, 115, 0.08); }
+        :root { --blu-mare: #005f73; --bg-chiaro: rgba(0, 95, 115, 0.08); --panna: #Faf7f2; }
         
-        body { margin: 0; background: var(--bg-chiaro); font-family: -apple-system, sans-serif; -webkit-user-select: none; user-select: none; transition: background 0.6s ease; }
-        #app { width: 100%; max-width: 800px; margin: auto; background: #fff; min-height: 100vh; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
+        body { margin: 0; background: var(--bg-chiaro); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-user-select: none; user-select: none; transition: background 0.6s ease; }
+        #app { width: 100%; max-width: 800px; margin: auto; background: #fff; min-height: 100vh; box-shadow: 0 0 40px rgba(0,0,0,0.15); }
         
-        .testata { width: 100%; background: var(--blu-mare); line-height: 0; cursor: pointer; text-align: center; transition: background-color 0.6s ease; }
+        .testata { width: 100%; background: var(--blu-mare); line-height: 0; cursor: pointer; text-align: center; transition: background-color 0.6s ease; position: relative; }
         .testata img#header-img { width: 100%; height: auto; max-height: 250px; object-fit: cover; }
         
-        .day-banner-box { width: 100%; display: none; background: #000; border-bottom: 2px solid var(--blu-mare); transition: border-color 0.6s ease; }
+        .day-banner-box { width: 100%; display: none; background: #000; border-bottom: 3px solid var(--blu-mare); transition: border-color 0.6s ease; }
         .day-banner-box img { width: 100%; max-height: 100px; object-fit: cover; display: block; }
 
-        .descrizione-sito { background: var(--blu-mare); color: rgba(255,255,255,0.9); text-align: center; padding: 10px 15px; font-size: 14px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); transition: background-color 0.6s ease; }
-        .data-oggi { background: #000; color: #fff; text-align: center; padding: 8px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
+        .descrizione-sito { background: var(--blu-mare); color: rgba(255,255,255,0.95); text-align: center; padding: 12px 15px; font-size: 15px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.2); transition: background-color 0.6s ease; letter-spacing: 0.5px; }
+        .data-oggi { background: #222; color: #fff; text-align: center; padding: 10px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
 
-        .info-aggiornamento { text-align: right; font-size: 11px; color: #999; padding: 5px 15px; font-family: monospace; border-bottom: 1px solid #eee; }
+        .info-aggiornamento { text-align: right; font-size: 11px; color: #888; padding: 6px 15px; font-family: monospace; background: var(--panna); border-bottom: 1px dashed #ddd; }
 
-        .menu { display: flex; overflow-x: auto; padding: 15px; gap: 10px; scrollbar-width: none; background: var(--bg-chiaro); transition: background 0.6s ease; }
+        .menu { display: flex; overflow-x: auto; padding: 20px 15px; gap: 12px; scrollbar-width: none; background: var(--bg-chiaro); transition: background 0.6s ease; }
         .menu::-webkit-scrollbar { display: none; }
         
-        .tab { white-space: nowrap; padding: 10px 18px; border-radius: 25px; border: 1px solid var(--blu-mare); background: #fff; color: var(--blu-mare); font-weight: bold; font-size: 13px; cursor: pointer; transition: all 0.3s ease; }
-        .tab.attiva { background: var(--blu-mare); color: #fff; }
+        .tab { white-space: nowrap; padding: 12px 20px; border-radius: 30px; border: 2px solid var(--blu-mare); background: #fff; color: var(--blu-mare); font-weight: bold; font-size: 14px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .tab.attiva { background: var(--blu-mare); color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transform: translateY(-2px); }
 
-        .notizia { padding: 20px; border-bottom: 8px solid var(--bg-chiaro); transition: border-color 0.6s ease; }
+        /* --- STILE GHIBLI PER LE NOTIZIE --- */
+        .notizia-container { padding: 15px 20px 30px 20px; }
         
-        /* STILI SPECIALI PER LA SATIRA */
-        .notizia.satira-box { border: 1px solid red; border-bottom: 1px solid red; border-radius: 12px; margin: 15px; padding: 15px; box-shadow: 0 4px 10px rgba(255,0,0,0.05); }
+        .notizia { 
+            position: relative;
+            background: var(--panna); 
+            border: 2px solid rgba(0,0,0,0.05); 
+            border-radius: 24px; 
+            padding: 25px 20px 20px 20px; 
+            margin-bottom: 35px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06), inset 0 0 20px rgba(255,255,255,0.7);
+            transition: border-color 0.6s ease;
+        }
 
-        .notizia-img-box { width: 100%; aspect-ratio: 16/9; background: #eee; border-radius: 12px; overflow: hidden; margin-bottom: 15px; position: relative; }
+        /* Il medaglione con il numero */
+        .notizia-numero {
+            position: absolute;
+            top: -18px;
+            left: -18px;
+            width: 45px;
+            height: 45px;
+            background: var(--blu-mare);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 22px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 20;
+            border: 4px solid #fff;
+            transition: background-color 0.6s ease;
+        }
+
+        /* Satira Ghibli: rossa ma elegante */
+        .notizia.satira-box { 
+            background: #fffafa;
+            border: 2px solid #ff4d4d; 
+            box-shadow: 0 10px 25px rgba(255,0,0,0.08), inset 0 0 20px rgba(255,255,255,0.8);
+        }
+        .notizia.satira-box .notizia-numero {
+            background: #ff4d4d;
+        }
+
+        .notizia-img-box { width: 100%; aspect-ratio: 16/9; background: #e9e5df; border-radius: 16px; overflow: hidden; margin-bottom: 20px; position: relative; border: 1px solid rgba(0,0,0,0.05); }
         .notizia-img-box img { width: 100%; height: 100%; object-fit: cover; }
         
-        .etichetta-categoria { position: absolute; top: 12px; left: 12px; background: var(--blu-mare); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; text-transform: uppercase; box-shadow: 0 4px 6px rgba(0,0,0,0.3); letter-spacing: 0.5px; z-index: 10; transition: background-color 0.6s ease; }
+        .etichetta-categoria { position: absolute; top: 12px; right: 12px; background: var(--blu-mare); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 900; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.3); letter-spacing: 1px; z-index: 10; transition: background-color 0.6s ease; }
         
-        /* ETICHETTA ROSSA PER LA SATIRA */
-        .etichetta-categoria.satira-label { background: #fff; color: red; border: 1px solid red; box-shadow: 0 4px 6px rgba(255,0,0,0.2); }
+        .etichetta-categoria.satira-label { background: #fff; color: #ff4d4d; border: 2px solid #ff4d4d; box-shadow: 0 4px 10px rgba(255,0,0,0.2); }
 
-        h2 { margin: 0 0 10px 0; font-size: 22px; line-height: 1.2; color: #111; }
-        .testo { font-size: 16px; line-height: 1.6; color: #444; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
+        h2 { margin: 0 0 15px 0; font-size: 24px; line-height: 1.3; color: #2c2c2c; font-weight: 800; }
+        .testo { font-size: 16px; line-height: 1.7; color: #4a4a4a; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
         .testo.aperto { -webkit-line-clamp: unset; }
-        .leggi-tutto { background: none; border: none; color: var(--blu-mare); font-weight: bold; padding: 10px 0; font-size: 14px; cursor: pointer; transition: color 0.6s ease; }
         
-        .commento-delfino { background: var(--bg-chiaro); padding: 15px; border-radius: 12px; margin-top: 15px; position: relative; border-left: 4px solid var(--blu-mare); transition: all 0.6s ease; }
-        .commento-delfino:before { content: "🐬"; position: absolute; left: -10px; top: -15px; font-size: 24px; }
+        .leggi-tutto { background: none; border: none; color: var(--blu-mare); font-weight: 800; padding: 12px 0; font-size: 15px; cursor: pointer; transition: color 0.6s ease; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        /* Commento del Delfino in stile Ghibli (nuvoletta fiabesca) */
+        .commento-delfino { 
+            background: rgba(255, 255, 255, 0.6); 
+            padding: 18px 20px 18px 45px; 
+            border-radius: 20px; 
+            margin-top: 20px; 
+            position: relative; 
+            border: 2px dashed var(--blu-mare); 
+            transition: all 0.6s ease; 
+            font-style: italic;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+        .commento-delfino:before { content: "🐬"; position: absolute; left: 12px; top: 16px; font-size: 22px; font-style: normal; }
+        .satira-box .commento-delfino { border-color: #ff4d4d; }
 
-        #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:#000; color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; }
+        #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; backdrop-filter: blur(5px); }
     </style>
 </head>
 <body>
@@ -57,9 +110,9 @@
         <div id="terminale">
             <div style="display:flex; justify-content:space-between; border-bottom:1px solid #0f0; padding-bottom:10px;">
                 <span>> TERMINALE DIREZIONE</span>
-                <span onclick="toggleTerminale()" style="color:red; cursor:pointer;">[X]</span>
+                <span onclick="toggleTerminale()" style="color:red; cursor:pointer;">[X] CHIUDI</span>
             </div>
-            <pre id="log-content" style="font-size:12px; color:#aaa; margin:20px 0; white-space: pre-wrap;"></pre>
+            <pre id="log-content" style="font-size:13px; color:#ccc; margin:20px 0; white-space: pre-wrap; line-height: 1.5;"></pre>
         </div>
 
         <div class="testata" id="logo-innesco">
@@ -76,7 +129,9 @@
         <div class="info-aggiornamento" id="ts-display">In attesa...</div>
 
         <div class="menu" id="menu-categorie"></div>
-        <div id="lista-notizie"></div>
+        
+        <!-- Contenitore delle notizie -->
+        <div id="lista-notizie" class="notizia-container"></div>
     </div>
 
     <script>
@@ -89,19 +144,24 @@
             clicks++; last = ora;
             if (clicks === 5) {
                 clicks = 0;
-                const p = prompt("Password:");
+                const p = prompt("Password Direttore:");
                 if (!p) return;
                 try {
                     const r = await fetch(`public/data/auth_info.json?v=${ora}`);
                     const a = await r.json();
+                    
+                    // Decodifica esagonale pulita
                     const msgBuffer = new TextEncoder().encode(p);
                     const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-                    const hash = Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+                    const hashArray = Array.from(new Uint8Array(hashBuffer));
+                    const hash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
                     
                     if (hash === a.check) {
                         document.getElementById('terminale').style.display = 'block';
                         const log = await fetch(`public/data/redazione.log?v=${ora}`).then(res => res.text());
                         document.getElementById('log-content').innerText = log;
+                    } else {
+                        alert("Accesso Negato.");
                     }
                 } catch(e) { }
             }
@@ -126,7 +186,7 @@
                 }
                 
                 document.getElementById('data-display').innerText = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long'});
-                document.getElementById('ts-display').innerText = `ULTIMO REFRESH: ${cfg.site_settings.last_update || '---'}`;
+                document.getElementById('ts-display').innerText = `Ultimo aggiornamento reti: ${cfg.site_settings.last_update || '---'}`;
                 
                 const cat = Object.keys(cfg).filter(k => !['site_settings','satira_config'].includes(k));
                 const menu = document.getElementById('menu-categorie');
@@ -140,7 +200,7 @@
                 
                 if (cat[0]) mostraSezione(cat[0]);
             } catch(e) { 
-                document.getElementById('lista-notizie').innerHTML = "<p style='text-align:center; padding:50px;'>Il Delfino sta pescando news fresche...</p>"; 
+                document.getElementById('lista-notizie').innerHTML = "<p style='text-align:center; padding:50px; font-weight:bold; color:#777;'>Il Delfino sta pescando news fresche...</p>"; 
             }
         }
 
@@ -168,21 +228,24 @@
                     const etichetta = n.categoria || 'Speciale';
                     const immagine = n.immagine || 'default.webp';
                     
-                    // Rilevamento Satira
                     const isSatira = (n.is_satira || etichetta.toLowerCase() === 'satira');
                     const classeBox = isSatira ? ' satira-box' : '';
                     const classeLabel = isSatira ? ' satira-label' : '';
                     
+                    // Il numero magico per ogni pezzo
+                    const numeroArticolo = idx + 1;
+                    
                     lista.innerHTML += `
                         <div class="notizia${classeBox}">
+                            <div class="notizia-numero">${numeroArticolo}</div>
                             <div class="notizia-img-box">
                                 <span class="etichetta-categoria${classeLabel}">${etichetta}</span>
-                                <img src="public/images/${immagine}" onerror="this.src='https://placehold.co/600x400?text=Delfino'">
+                                <img src="public/images/${immagine}" onerror="this.src='https://placehold.co/600x400?text=Immagine+Assente'">
                             </div>
                             <h2>${n.titolo}</h2>
                             <div class="testo" id="t-${idx}">${n.articolo}</div>
-                            <button class="leggi-tutto" onclick="const t=document.getElementById('t-${idx}'); t.classList.toggle('aperto'); this.innerText=(t.classList.contains('aperto')?'Chiudi':'Leggi di più')">Leggi di più</button>
-                            <div class="commento-delfino"><strong>Delfino:</strong> ${n.commento}</div>
+                            <button class="leggi-tutto" onclick="const t=document.getElementById('t-${idx}'); t.classList.toggle('aperto'); this.innerText=(t.classList.contains('aperto')?'Nascondi':'Leggi l\'articolo completo')">Leggi l'articolo completo</button>
+                            <div class="commento-delfino">${n.commento}</div>
                         </div>`;
                 });
             } catch(e) {}
@@ -192,3 +255,5 @@
     </script>
 </body>
 </html>
+
+
