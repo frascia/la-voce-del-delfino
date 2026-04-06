@@ -4,178 +4,138 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>La Voce del Delfino 🐬</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Roboto:wght@400;700&display=swap');
-        :root { --delfino-blue: #005f73; }
-        body { background-color: #f8f9fa; font-family: 'Roboto', sans-serif; -webkit-user-select: none; user-select: none; }
-        .unica { font-family: 'Unica One', cursive; }
-        .header-gradient { background: linear-gradient(180deg, var(--delfino-blue) 0%, #001219 100%); }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
-        .hide-scroll::-webkit-scrollbar { display: none; }
-        .terminal-text { font-family: 'Courier New', Courier, monospace; }
+        :root { --blu: #005f73; --azzurro: #0091ff; --crema: #fdfaf4; }
+        body { margin: 0; background: var(--crema); font-family: sans-serif; -webkit-user-select: none; user-select: none; }
+        #app { width: 100%; max-width: 850px; margin: auto; background: #fff; min-height: 100vh; box-shadow: 0 0 40px rgba(0,0,0,0.1); }
+        
+        .header { width: 100%; background: var(--blu); line-height: 0; cursor: pointer; }
+        .header img { width: 100%; height: auto; display: block; }
+        .data-bar { background: #000; color: #fff; text-align: center; padding: 10px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; }
+
+        .banner-box { border-top: 4px solid var(--azzurro); border-bottom: 2px solid #eee; padding: 10px; background: #fff; display: flex; justify-content: center; }
+        .banner-box img { height: 75px; width: auto; object-fit: contain; }
+        
+        .ts-info { text-align: right; font-size: 10px; color: #999; padding: 5px 15px; font-family: monospace; border-bottom: 1px solid #f0f0f0; }
+
+        .nav-scroll { display: flex; overflow-x: auto; padding: 15px; gap: 10px; scrollbar-width: none; }
+        .nav-scroll::-webkit-scrollbar { display: none; }
+        .tab-btn { white-space: nowrap; padding: 10px 20px; border-radius: 20px; border: 2px solid var(--blu); background: #fff; color: var(--blu); font-weight: bold; font-size: 0.75em; text-transform: uppercase; cursor: pointer; }
+        .tab-btn.active { background: var(--blu); color: #fff; }
+
+        .feed { padding: 15px; }
+        .card { background: #fff; border-radius: 15px; border: 1px solid #eee; margin-bottom: 30px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .card-img { width: 100%; aspect-ratio: 16/9; background: #f8f8f8; display: flex; justify-content: center; align-items: center; }
+        .card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
+        .card-body { padding: 20px; }
+        .card-body h3 { margin: 0 0 15px 0; font-size: 1.4em; color: #111; }
+        .text-box { font-size: 1em; line-height: 1.6; color: #444; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
+        .text-box.open { -webkit-line-clamp: unset; }
+        .expand-btn { background: none; border: none; color: var(--azzurro); font-weight: bold; padding: 10px 0; cursor: pointer; font-size: 0.9em; }
+        
+        .delfino-comm { background: #e0f7fa; padding: 15px; border-radius: 12px; margin-top: 20px; border-left: 5px solid var(--azzurro); font-style: italic; position: relative; }
+        .delfino-comm:after { content: "🐬"; position: absolute; right: 10px; top: -10px; font-size: 24px; }
+
+        #terminal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.98); z-index:9999; color:#00ff41; padding:20px; font-family:monospace; box-sizing:border-box; overflow-y:auto; }
     </style>
 </head>
-<body class="bg-gray-50">
-    <div id="app" class="max-w-2xl mx-auto bg-white min-h-screen relative overflow-hidden">
-        
-        <!-- Terminale Segreto -->
-        <div id="terminal" class="fixed inset-0 bg-black z-50 p-6 hidden overflow-y-auto">
-            <div class="flex justify-between items-center border-b border-green-500 pb-2 mb-4">
-                <span class="text-green-500 terminal-text font-bold">> TERMINALE DIREZIONE</span>
-                <button onclick="toggleTerminal()" class="text-red-500 font-bold">[X]</button>
+<body>
+    <div id="app">
+        <div id="terminal">
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #00ff41; padding-bottom:10px; margin-bottom:20px;">
+                <span>> ACCESSO DIREZIONE</span>
+                <span onclick="toggleTerm()" style="color:red; cursor:pointer;">[X]</span>
             </div>
-            <pre id="terminal-log" class="text-green-400 text-xs terminal-text whitespace-pre-wrap"></pre>
+            <div id="term-out" style="white-space: pre-wrap; font-size: 0.8em;"></div>
         </div>
 
-        <!-- Header -->
-        <header class="header-gradient relative cursor-pointer" id="header-trigger">
-            <img src="images/Header.pgp" alt="La Voce del Delfino" class="w-full h-auto object-cover opacity-90" onerror="this.src='https://placehold.co/800x300?text=La+Voce+del+Delfino'">
-            <div class="bg-black/80 text-white text-center py-2 text-xs font-bold tracking-widest uppercase unica" id="current-date"></div>
+        <header class="header" id="adm-trigger">
+            <!-- Percorso corretto images/ -->
+            <img src="public/images/Header.pgp" alt="Testata" onerror="this.src='https://placehold.co/1200x400?text=Header+Mancante'">
+            <div class="data-bar" id="data-display"></div>
         </header>
 
-        <!-- Banner dinamico -->
-        <div class="border-t-4 border-cyan-600 bg-white shadow-md py-4 flex justify-center">
-            <img id="day-banner" src="" class="h-16 md:h-20 object-contain" alt="">
+        <div class="banner-box">
+            <img id="banner-img" src="" alt="">
         </div>
+        <div class="ts-info" id="upd-display">Sincronizzazione in corso...</div>
 
-        <!-- Stato Redazione -->
-        <div class="flex justify-between items-center px-4 py-2 bg-gray-100 border-b text-[10px] text-gray-500 font-mono">
-            <span>STATO: OPERATIVO</span>
-            <span id="update-time">ULTIMO REFRESH: ---</span>
-        </div>
-
-        <!-- Navigazione -->
-        <nav class="flex overflow-x-auto p-4 gap-3 hide-scroll bg-white sticky top-0 z-10 border-b">
-            <div id="nav-tabs" class="flex gap-2"></div>
-        </nav>
-
-        <!-- News Feed -->
-        <main id="feed" class="p-4 space-y-8 pb-24"></main>
-
-        <!-- Footer -->
-        <footer class="p-8 text-center text-gray-400 text-xs border-t bg-gray-50">
-            <p class="unica text-lg mb-2 text-gray-600">La Voce del Delfino</p>
-            <p>© 2026 - Pescara, Abruzzo, Italia</p>
-        </footer>
+        <nav class="nav-scroll" id="nav-tabs"></nav>
+        <main class="feed" id="main-feed"></main>
     </div>
 
     <script>
-        let secretClicks = 0;
-        let lastClickTime = 0;
-
-        function toggleTerminal() {
-            document.getElementById('terminal').classList.toggle('hidden');
-        }
-
-        document.getElementById('header-trigger').onclick = async () => {
+        let taps = 0, lastTap = 0;
+        function toggleTerm() { document.getElementById('terminal').style.display = 'none'; }
+        
+        document.getElementById('adm-trigger').onclick = async () => {
             const now = Date.now();
-            if (now - lastClickTime > 1000) secretClicks = 0;
-            secretClicks++;
-            lastClickTime = now;
-            if (secretClicks === 5) {
-                secretClicks = 0;
-                const pwd = prompt("Chiave d'accesso Direzione:");
-                if (!pwd) return;
+            if (now - lastTap > 1000) taps = 0;
+            taps++; lastTap = now;
+            if (taps === 5) {
+                taps = 0;
+                const p = prompt("Chiave Direzione:");
+                if (!p) return;
                 try {
-                    const res = await fetch(`data/auth_info.json?v=${Date.now()}`);
+                    const res = await fetch(`public/data/auth_info.json?v=${Date.now()}`);
                     const auth = await res.json();
-                    const encoder = new TextEncoder();
-                    const data = encoder.encode(pwd);
-                    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-                    const hashArray = Array.from(new Uint8Array(hashBuffer));
-                    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-                    
-                    if (hashHex === auth.check) {
-                        toggleTerminal();
-                        const logRes = await fetch(`data/redazione.log?v=${Date.now()}`);
-                        document.getElementById('terminal-log').innerText = await logRes.text();
-                    } else {
-                        alert("Accesso negato. Riprova quando il mare è calmo.");
+                    const hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(p)).then(b => Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2,'0')).join(''));
+                    if (hash === auth.check) {
+                        document.getElementById('terminal').style.display = 'block';
+                        const log = await fetch(`public/data/redazione.log?v=${now}`).then(r => r.text());
+                        document.getElementById('term-out').innerText = log;
                     }
-                } catch(e) { console.error(e); }
+                } catch(e) { }
             }
         };
 
         async function init() {
             try {
-                const res = await fetch(`data/active_config.json?v=${Date.now()}`);
-                const config = await res.json();
+                const res = await fetch(`public/data/active_config.json?v=${Date.now()}`);
+                const cfg = await res.json();
+                document.getElementById('banner-img').src = `public/images/${cfg.site_settings.day_banner}`;
+                document.getElementById('data-display').innerText = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long'});
+                document.getElementById('upd-display').innerText = `ULTIMO REFRESH: ${cfg.site_settings.last_update || '---'}`;
                 
-                document.getElementById('day-banner').src = `images/${config.site_settings.day_banner}`;
-                document.getElementById('update-time').innerText = `ULTIMO REFRESH: ${config.site_settings.last_update}`;
-                document.getElementById('current-date').innerText = new Date().toLocaleDateString('it-IT', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-
-                const sections = Object.keys(config).filter(k => !['site_settings', 'satira_config'].includes(k));
-                const nav = document.getElementById('nav-tabs');
-                
-                sections.forEach((sec, idx) => {
-                    const btn = document.createElement('button');
-                    btn.className = `px-6 py-2 rounded-full text-xs font-bold uppercase transition-all border-2 ${idx === 0 ? 'bg-[var(--delfino-blue)] text-white border-[var(--delfino-blue)]' : 'bg-white text-gray-600 border-gray-200'}`;
-                    btn.innerText = sec;
-                    btn.onclick = () => loadSection(sec, btn);
-                    nav.appendChild(btn);
+                const sezs = Object.keys(cfg).filter(k => !['site_settings', 'satira_config'].includes(k));
+                const tabs = document.getElementById('nav-tabs');
+                sezs.forEach((s, i) => {
+                    const b = document.createElement('button');
+                    b.className = 'tab-btn' + (i === 0 ? ' active' : '');
+                    b.innerText = s;
+                    b.onclick = () => loadSez(s, b);
+                    tabs.appendChild(b);
                 });
-
-                if (sections.length > 0) loadSection(sections[0]);
-            } catch (e) {
-                document.getElementById('feed').innerHTML = '<div class="text-center py-20 text-gray-400 italic">Redazione in sciopero degli arrosticini... ricarica tra poco.</div>';
-            }
+                if (sezs[0]) loadSez(sezs[0]);
+            } catch(e) { document.getElementById('main-feed').innerHTML = '<p style="text-align:center; padding:50px; color:#999;">Il peschereccio sta arrivando con le news...</p>'; }
         }
 
-        async function loadSection(sectionName, activeBtn) {
-            if (activeBtn) {
-                document.querySelectorAll('#nav-tabs button').forEach(b => {
-                    b.className = 'px-6 py-2 rounded-full text-xs font-bold uppercase transition-all border-2 bg-white text-gray-600 border-gray-200';
-                });
-                activeBtn.className = 'px-6 py-2 rounded-full text-xs font-bold uppercase transition-all border-2 bg-[var(--delfino-blue)] text-white border-[var(--delfino-blue)]';
+        async function loadSez(s, btn) {
+            if (btn) {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
             }
-
-            const res = await fetch(`data/news-${sectionName}.json?v=${Date.now()}`);
+            const res = await fetch(`public/data/news-${s}.json?v=${Date.now()}`);
             const data = await res.json();
-            document.documentElement.style.setProperty('--delfino-blue', data.color);
-
-            const feed = document.getElementById('feed');
+            document.documentElement.style.setProperty('--blu', data.color);
+            
+            const feed = document.getElementById('main-feed');
             feed.innerHTML = '';
-
-            data.news.forEach((item, i) => {
-                const article = document.createElement('article');
-                article.className = 'card-shadow bg-white rounded-2xl overflow-hidden border border-gray-100';
-                article.innerHTML = `
-                    <div class="relative aspect-video bg-gray-200">
-                        <img src="images/${item.immagine}" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/600x400?text=News+Delfino'">
-                        <div class="absolute top-4 left-4 bg-[var(--delfino-blue)] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">${item.categoria}</div>
-                    </div>
-                    <div class="p-6">
-                        <h2 class="text-2xl font-bold leading-tight mb-4 text-gray-900">${item.titolo}</h2>
-                        <div id="txt-${i}" class="text-gray-600 leading-relaxed text-sm overflow-hidden transition-all duration-500" style="max-height: 100px;">${item.articolo}</div>
-                        <button onclick="expandText(${i}, this)" class="mt-4 text-[var(--delfino-blue)] font-bold text-xs uppercase tracking-tighter">Leggi tutto +</button>
-                        
-                        <div class="mt-8 pt-6 border-t border-dashed border-gray-200 flex gap-4">
-                            <div class="flex-shrink-0 w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center text-xl">🐬</div>
-                            <div class="bg-cyan-50 p-4 rounded-2xl rounded-tl-none flex-grow">
-                                <p class="text-xs italic text-cyan-900 leading-snug font-medium">"${item.commento}"</p>
-                            </div>
+            data.news.forEach((n, i) => {
+                feed.innerHTML += `
+                    <div class="card">
+                        <div class="card-img"><img src="public/images/${n.immagine}" onerror="this.src='https://placehold.co/800x450?text=News+Delfino'"></div>
+                        <div class="card-body">
+                            <h3>${n.titolo}</h3>
+                            <div class="text-box" id="t-${i}">${n.articolo}</div>
+                            <button class="expand-btn" onclick="const t=document.getElementById('t-${i}'); t.classList.toggle('open'); this.innerText=t.classList.contains('open')?'Chiudi':'Leggi di più'">Leggi di più</button>
+                            <div class="delfino-comm"><strong>Delfino:</strong> ${n.commento}</div>
                         </div>
-                    </div>
-                `;
-                feed.appendChild(article);
+                    </div>`;
             });
         }
-
-        function expandText(id, btn) {
-            const el = document.getElementById(`txt-${id}`);
-            if (el.style.maxHeight === '100px') {
-                el.style.maxHeight = '2000px';
-                btn.innerText = 'Chiudi -';
-            } else {
-                el.style.maxHeight = '100px';
-                btn.innerText = 'Leggi tutto +';
-            }
-        }
-
         init();
     </script>
 </body>
 </html>
-
