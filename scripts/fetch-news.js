@@ -176,7 +176,8 @@ async function main() {
                 }
 
                 for (const t of tits) {
-                    const r = await callGemini(sysVer, `Scrivi un articolo lungo su: ${t}`);
+                    // QUI C'ERA L'ERRORE: Usava sysVer invece di sysPromptVera
+                    const r = await callGemini(sysPromptVera, `Scrivi un articolo lungo su: ${t}`);
                     if (r) newsSezione.push({ ...r, categoria: info.label, immagine: info.img });
                 }
             }
@@ -193,4 +194,3 @@ main().catch(err => {
     scriviLog(`Errore: ${err.message}`);
     process.exit(1);
 });
-
