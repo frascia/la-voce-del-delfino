@@ -6,7 +6,6 @@ on:
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
-    # Blocca run triggerati da commit del bot
     if: github.actor != 'DelfinoBot'
     permissions:
       contents: write
@@ -18,9 +17,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Installa dipendenze
-        run: npm ci
 
       - name: Esegui Bot
         env:
@@ -40,3 +36,4 @@ jobs:
             git commit -m "🗞️ News $(date +'%d-%m %H:%M')"
             git push origin main
           fi
+
