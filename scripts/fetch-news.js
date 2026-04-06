@@ -65,17 +65,18 @@ async function trovaUltimoModello() {
 }
 
 /**
- * Pesca i titoli reali da Google News
+ * Pesca i titoli reali da Google News - Limite 48 ore
  */
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
-    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
+    // Aggiungiamo un parametro di ricerca temporale per aiutare Google
+    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}+when:48h&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
     try {
         const res = await fetch(url);
         if (!res.ok) return [];
         const xml = await res.text();
         const titles = [];
-        const limiteTempo = Date.now() - (2 * 24 * 60 * 60 * 1000); // 48 ore
+        const limiteTempo = Date.now() - (48 * 60 * 60 * 1000); 
         
         const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
         let matchItem;
@@ -173,12 +174,13 @@ async function main() {
         ts: oraAggiornamento 
     }));
 
-    const sysPromptSatira = "Sei un giornalista satirico pescarese. Rispondi SEMPRE in formato JSON: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. L'articolo deve essere lungo (800-1000 caratteri).";
-    const sysPromptVera = "Sei un giornalista serio. Rispondi SEMPRE in formato JSON: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. L'articolo deve essere VERO e lungo (800-1000 caratteri).";
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. Rispondi SEMPRE in formato JSON: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. L'articolo deve essere lunghissimo (minimo 1000 caratteri).";
+    const sysPromptVera = "Sei un giornalista serio e fattuale. Rispondi SEMPRE in formato JSON: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. L'articolo deve essere VERO, serio e lunghissimo (minimo 1000 caratteri).";
 
     for (const sez of Object.keys(CONFIG)) {
         if (["site_settings", "satira_config"].includes(sez)) continue;
         
+        scriviLog(`--- Elaborazione Sezione: ${sez} ---`);
         let newsSezione = [];
         const categorie = CONFIG[sez];
         let quotaAvanzata = 0; 
@@ -189,24 +191,27 @@ async function main() {
             const target = info.count + quotaAvanzata;
             quotaAvanzata = 0;
 
+            scriviLog(`Categoria: ${nome} | Target originale: ${info.count} | Target con avanzi: ${target}`);
+
             if (info.label === "Satira") {
                 const temi = CONFIG.satira_config?.temi || ["Arrosticini"];
                 for (let i = 0; i < target; i++) {
                     const tema = temi[Math.floor(Math.random() * temi.length)];
-                    const r = await callGemini(sysPromptSatira, `Scrivi una notizia satirica assurda su: ${tema}`);
+                    const r = await callGemini(sysPromptSatira, `Scrivi una notizia satirica incredibile su: ${tema}`);
                     const p = parseJSON(r);
                     if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img, is_satira: true });
                 }
             } else {
                 const titoli = await fetchRSS(nome, target);
+                scriviLog(`Trovati ${titoli.length} titoli freschi per "${nome}"`);
                 
                 if (titoli.length < target) {
                     quotaAvanzata = target - titoli.length;
-                    scriviLog(`Mancano ${quotaAvanzata} notizie per ${nome}, passo la quota alla prossima.`);
+                    scriviLog(`Mancano ${quotaAvanzata} notizie. Le passerò alla categoria successiva.`);
                 }
 
                 for (const t of titoli) {
-                    const r = await callGemini(sysPromptVera, `Scrivi un articolo giornalistico reale basato su questo titolo: ${t}`);
+                    const r = await callGemini(sysPromptVera, `Scrivi un articolo dettagliato e lungo (1000+ caratteri) su questo fatto reale: ${t}`);
                     const p = parseJSON(r);
                     if (p) newsSezione.push({ ...p, categoria: info.label, immagine: info.img });
                 }
@@ -215,7 +220,7 @@ async function main() {
         
         const outPath = path.join(DATA_DIR, `news-${sez}.json`);
         fs.writeFileSync(outPath, JSON.stringify({ color: categorie.color, news: newsSezione }, null, 2));
-        scriviLog(`Sezione ${sez} completata con ${newsSezione.length} articoli.`);
+        scriviLog(`Sezione ${sez} completata: ${newsSezione.length} articoli generati.`);
     }
     scriviLog("🏁 Turno completato.");
 }
