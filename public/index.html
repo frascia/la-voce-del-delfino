@@ -5,511 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>La Voce del Delfino 🐬</title>
     <style>
-        :root { 
-            --main-color: #005f73; 
-            --pescara-blue: #0091ff; 
-            --bg-color: #fdfaf4;
-        }
+        :root { --blu-mare: #005f73; --azzurro: #0091ff; --crema: #fdfaf4; }
+        body { margin: 0; background: var(--crema); font-family: -apple-system, sans-serif; -webkit-user-select: none; user-select: none; }
+        #app { width: 100%; max-width: 800px; margin: auto; background: #fff; min-height: 100vh; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
         
-        body { 
-            margin: 0; 
-            background: var(--bg-color); 
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
-            color: #333; 
-            padding: 0; 
-            -webkit-user-select: none; 
-            user-select: none; 
-            line-height: 1.5;
-        }
+        /* TESTATA CON HEADER.PGP */
+        .testata { width: 100%; background: var(--blu-mare); line-height: 0; cursor: pointer; }
+        .testata img { width: 100%; height: auto; }
+        .data-oggi { background: #000; color: #fff; text-align: center; padding: 8px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
 
-        #root { 
-            width: 100%; 
-            max-width: 850px; 
-            margin: auto; 
-        }
-
-        /* --- TESTATA E BANNER --- */
-        .header-box { 
-            width: 100%; 
-            background-color: var(--main-color); 
-            overflow: hidden; 
-            cursor: default; 
-        }
+        /* BANNER */
+        .cornice-banner { border-top: 4px solid var(--azzurro); border-bottom: 2px solid #eee; padding: 5px 0; background: #fff; display: flex; justify-content: center; }
+        .cornice-banner img { height: 80px; width: auto; object-fit: contain; }
         
-        .header-img { 
-            width: 100%; 
-            height: auto; 
-            display: block; 
-            object-fit: cover; 
-        }
+        .info-aggiornamento { text-align: right; font-size: 11px; color: #999; padding: 5px 15px; font-family: monospace; border-bottom: 1px solid #eee; }
 
-        .date-bar { 
-            text-align: center; 
-            padding: 10px; 
-            background: #000; 
-            color: white; 
-            font-size: 0.85em; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 1.5px; 
-        }
+        /* NAVIGAZIONE */
+        .menu { display: flex; overflow-x: auto; padding: 15px; gap: 10px; scrollbar-width: none; }
+        .menu::-webkit-scrollbar { display: none; }
+        .tab { white-space: nowrap; padding: 10px 18px; border-radius: 25px; border: 1px solid var(--blu-mare); background: #fff; color: var(--blu-mare); font-weight: bold; font-size: 13px; }
+        .tab.attiva { background: var(--blu-mare); color: #fff; }
 
-        .day-banner-box { 
-            width: 100%; 
-            aspect-ratio: 6 / 1; 
-            max-height: 120px; 
-            background: #fff;
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-            border-top: 3px solid var(--pescara-blue);
-            border-bottom: 3px solid #fff;
-            box-sizing: border-box;
-            margin-bottom: 5px;
-        }
-
-        .day-banner-img { 
-            height: 100%; 
-            width: auto; 
-            object-fit: contain; 
-        }
-
-        .update-stamp { 
-            text-align: right; 
-            font-family: monospace; 
-            font-size: 0.65em; 
-            color: #777; 
-            padding: 5px 12px; 
-            background: #eee; 
-            margin-bottom: 25px; 
-            border-bottom: 1px solid #ddd; 
-        }
-
-        /* --- NAVIGAZIONE --- */
-        .main-content { padding: 0 12px 40px 12px; }
-
-        .tabs { 
-            display: flex; 
-            justify-content: center; 
-            gap: 10px; 
-            margin-bottom: 25px; 
-            flex-wrap: wrap; 
-        }
-
-        .btn-t { 
-            padding: 12px 20px; 
-            border: 2px solid var(--main-color); 
-            background: white; 
-            color: var(--main-color); 
-            border-radius: 12px; 
-            font-weight: bold; 
-            cursor: pointer; 
-            text-transform: uppercase; 
-            font-size: 0.8em; 
-            transition: all 0.2s ease; 
-        }
-
-        .btn-t.active { 
-            background: var(--main-color); 
-            color: white; 
-            transform: scale(1.05); 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        /* --- NOTIZIE (FISARMONICA) --- */
-        .card { 
-            background: white; 
-            border-radius: 20px; 
-            padding: 22px; 
-            margin-bottom: 35px; 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
-            border: 1px solid #eee; 
-            overflow: hidden; 
-        }
-
-        .img-container { 
-            width: calc(100% + 44px); 
-            margin: -22px -22px 20px -22px; 
-            aspect-ratio: 16 / 9; 
-            background: #f0f0f0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            overflow: hidden; 
-        }
-
-        .img-n { 
-            max-width: 100%; 
-            max-height: 100%; 
-            object-fit: contain; 
-            display: block; 
-        }
+        /* NOTIZIE */
+        .notizia { padding: 20px; border-bottom: 8px solid #f9f9f9; }
+        .notizia-img-box { width: 100%; aspect-ratio: 16/9; background: #eee; border-radius: 12px; overflow: hidden; margin-bottom: 15px; }
+        .notizia-img-box img { width: 100%; height: 100%; object-fit: contain; }
+        h2 { margin: 0 0 10px 0; font-size: 22px; line-height: 1.2; color: #111; }
+        .testo { font-size: 16px; line-height: 1.6; color: #444; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
+        .testo.aperto { -webkit-line-clamp: unset; }
+        .leggi-tutto { background: none; border: none; color: var(--azzurro); font-weight: bold; padding: 10px 0; font-size: 14px; cursor: pointer; }
         
-        h3 { 
-            margin: 0 0 12px; 
-            font-size: 1.6em; 
-            color: #111; 
-            line-height: 1.2; 
-            font-weight: 800;
-        }
+        .commento-delfino { background: #e0f2f1; padding: 15px; border-radius: 12px; margin-top: 15px; position: relative; }
+        .commento-delfino:before { content: "🐬"; position: absolute; left: -10px; top: -10px; font-size: 20px; }
 
-        .tag-row { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 15px; 
-        }
-
-        .tag { 
-            font-size: 0.7em; 
-            font-weight: 900; 
-            color: var(--main-color); 
-            text-transform: uppercase; 
-            letter-spacing: 0.5px;
-        }
-
-        .badge-fake { 
-            background: #ee9b00; 
-            color: white; 
-            padding: 4px 10px; 
-            border-radius: 6px; 
-            font-size: 0.6em; 
-            font-weight: bold; 
-        }
-        
-        .content-text { 
-            font-size: 1.05em; 
-            line-height: 1.6; 
-            color: #444; 
-        }
-
-        .truncated { 
-            display: -webkit-box; 
-            -webkit-line-clamp: 5; 
-            -webkit-box-orient: vertical; 
-            overflow: hidden; 
-        }
-        
-        .comm-box { 
-            background: #f0f9fa; 
-            padding: 18px; 
-            border-left: 6px solid var(--main-color); 
-            border-radius: 0 15px 15px 0; 
-            margin-top: 25px; 
-        }
-
-        .comm-text { 
-            font-style: italic; 
-            color: #003d4d; 
-            line-height: 1.5;
-        }
-
-        .comm-truncated { 
-            display: -webkit-box; 
-            -webkit-line-clamp: 3; 
-            -webkit-box-orient: vertical; 
-            overflow: hidden; 
-        }
-
-        .btn-expand { 
-            display: block; 
-            width: 100%; 
-            padding: 14px; 
-            margin-top: 15px; 
-            background: #f8f8f8; 
-            border: 1px solid #ddd; 
-            color: #666; 
-            border-radius: 12px; 
-            cursor: pointer; 
-            font-size: 0.8em; 
-            text-transform: uppercase; 
-            font-weight: bold; 
-            transition: 0.2s;
-        }
-
-        .btn-expand:hover { background: #fff; border-color: var(--main-color); color: var(--main-color); }
-
-        /* --- AREA AMMINISTRATORE --- */
-        #admin-overlay { 
-            display: none; 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background: rgba(0,0,0,0.98); 
-            z-index: 9999; 
-            color: #00ff41; 
-            font-family: 'Courier New', Courier, monospace; 
-            padding: 25px; 
-            box-sizing: border-box; 
-            overflow-y: auto; 
-        }
-
-        .admin-head { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border-bottom: 1px solid #00ff41; 
-            padding-bottom: 15px; 
-            margin-bottom: 25px; 
-        }
-
-        .logout-btn { 
-            cursor: pointer; 
-            color: #ff4d4d; 
-            border: 1px solid #ff4d4d; 
-            padding: 6px 16px; 
-            border-radius: 8px; 
-            font-weight: bold;
-        }
-
-        .admin-log-box { 
-            font-size: 0.85em; 
-            margin-bottom: 30px; 
-            color: #888; 
-            background: #050505; 
-            padding: 15px; 
-            border: 1px solid #222; 
-            border-radius: 8px;
-            white-space: pre-wrap;
-        }
-
-        .secret-card { 
-            border: 1px solid #00ff41; 
-            padding: 18px; 
-            margin-bottom: 12px; 
-            background: rgba(0,255,65,0.03); 
-            border-radius: 10px;
-            font-size: 0.95em;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (min-width: 600px) {
-            body { padding: 15px; }
-            #root { border-radius: 20px; overflow: hidden; background: #fff; box-shadow: 0 0 40px rgba(0,0,0,0.05); }
-            .header-box { border-radius: 20px 20px 0 0; }
-            .day-banner-box { border-radius: 0 0 20px 20px; border: 3px solid var(--pescara-blue); }
-            .update-stamp { border-radius: 0 0 12px 12px; margin-bottom: 35px; }
-            .main-content { padding: 0 25px 40px 25px; }
-            .img-container { width: 100%; margin: 0 0 15px 0; border-radius: 15px; }
-        }
+        /* TERMINALE */
+        #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:#000; color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; }
     </style>
 </head>
-<body oncontextmenu="return false;">
-    <div id="root">
-        <!-- Pannello Segreto Admin -->
-        <div id="admin-overlay">
-            <div class="admin-head">
-                <span>> TERMINALE DIREZIONE (PROTOCOLLO PESCARA-01)</span>
-                <div class="logout-btn" onclick="chiudiAdmin()">LOGOUT [X]</div>
+<body>
+    <div id="app">
+        <div id="terminale">
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #0f0; padding-bottom:10px;">
+                <span>> TERMINALE DIREZIONE</span>
+                <span onclick="chiudiAdmin()" style="color:red">[X]</span>
             </div>
-            <div id="admin-log" class="admin-log-box">Caricamento log...</div>
-            <div id="admin-secrets"></div>
+            <pre id="log-content" style="font-size:12px; color:#aaa; margin:20px 0;"></pre>
         </div>
 
-        <header class="header-box" id="admin-trigger">
-            <img id="main-header-img" src="" class="header-img" alt="Logo La Voce del Delfino">
-            <div class="date-bar" id="date-now"></div>
-        </header>
-        
-        <div class="day-banner-box">
-            <img id="day-banner-img" src="" class="day-banner-img" alt="Banner Quotidiano">
+        <div class="testata" id="logo-innesco">
+            <img src="images/Header.pgp" alt="La Voce del Delfino" onerror="this.src='https://placehold.co/800x250?text=Header+Mancante'">
+            <div class="data-oggi" id="data-display"></div>
         </div>
-        
-        <div id="update-stamp" class="update-stamp">Sincronizzazione in corso...</div>
 
-        <div class="main-content">
-            <div class="tabs" id="tabs"></div>
-            <div id="news-container"></div>
+        <div class="cornice-banner">
+            <img id="banner-img" src="" alt="">
         </div>
+        <div class="info-aggiornamento" id="ts-display">Aggiornamento in corso...</div>
+
+        <div class="menu" id="menu-categorie"></div>
+        <div id="lista-notizie"></div>
     </div>
 
     <script>
-        let clickCount = 0;
-        let lastClick = 0;
-        let sessionSecrets = null;
+        let clicks = 0, last = 0;
+        const terminale = document.getElementById('terminale');
+        
+        function chiudiAdmin() { terminale.style.display = 'none'; }
 
-        /**
-         * SICUREZZA: Funzione per chiudere l'admin e pulire la memoria
-         */
-        function chiudiAdmin() {
-            document.getElementById('admin-overlay').style.display = 'none';
-            document.getElementById('admin-secrets').innerHTML = "";
-            document.getElementById('admin-log').innerText = "";
-            sessionSecrets = null; // Autodistruzione dati sensibili
-            console.log("Accesso Admin terminato. Cache ripulita.");
-        }
-
-        /**
-         * ESC per uscire rapidamente
-         */
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') chiudiAdmin();
-        });
-
-        /**
-         * SICUREZZA: Hash SHA-256
-         */
-        async function hashString(str) {
-            const msgUint8 = new TextEncoder().encode(str);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-        }
-
-        /**
-         * SICUREZZA: Decriptazione XOR (Offuscamento)
-         */
-        function decrypt(cipher, key) {
-            try {
-                const text = atob(cipher);
-                let result = "";
-                for (let i = 0; i < text.length; i++) {
-                    result += String.fromCharCode(text.charCodeAt(i) ^ key.charCodeAt(i % key.length));
-                }
-                return result;
-            } catch(e) { return null; }
-        }
-
-        /**
-         * INNESCO ADMIN: 5 click rapidi sul logo
-         */
-        document.getElementById('admin-trigger').addEventListener('click', async () => {
-            const now = Date.now();
-            if (now - lastClick > 1000) clickCount = 0; 
-            clickCount++;
-            lastClick = now;
-
-            if (clickCount === 5) {
-                clickCount = 0;
-                const pwd = prompt("Identificazione Direttore:");
-                if (!pwd) return;
-
-                const inputHash = await hashString(pwd);
+        document.getElementById('logo-innesco').onclick = async () => {
+            const ora = Date.now();
+            if (ora - last > 1000) clicks = 0;
+            clicks++; last = ora;
+            if (clicks === 5) {
+                clicks = 0;
+                const p = prompt("Password:");
+                if (!p) return;
                 try {
-                    const res = await fetch(`data/auth_info.json?v=${Date.now()}`);
-                    const auth = await res.json();
-                    
-                    if (inputHash === auth.check) {
-                        document.getElementById('admin-overlay').style.display = 'block';
-                        
-                        // Decriptazione messaggi riservati
-                        const decrypted = decrypt(auth.data, pwd);
-                        sessionSecrets = decrypted ? decrypted.split('|') : ["Dati corrotti."];
-                        
-                        // Caricamento Log
-                        const logRes = await fetch(`data/redazione.log?v=${Date.now()}`);
-                        const logTxt = await logRes.text();
-                        document.getElementById('admin-log').innerText = logTxt || "Log assente.";
-                        
-                        // Render Segreti
-                        let html = "<strong>MESSAGGI CRITTOGRAFATI:</strong><br><br>";
-                        sessionSecrets.forEach(s => html += `<div class="secret-card">> ${s.trim()}</div>`);
-                        document.getElementById('admin-secrets').innerHTML = html;
-                    } else {
-                        alert("Accesso negato. Allerta Delfino inviata.");
+                    const r = await fetch(`data/auth_info.json?v=${Date.now()}`);
+                    const a = await r.json();
+                    const hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(p)).then(b => Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2,'0')).join(''));
+                    if (hash === a.check) {
+                        terminale.style.display = 'block';
+                        const log = await fetch(`data/redazione.log?v=${Date.now()}`).then(res => res.text());
+                        document.getElementById('log-content').innerText = log;
                     }
-                } catch(e) { alert("Sistemi di sicurezza offline."); }
+                } catch(e) { }
             }
-        });
+        };
 
-        /**
-         * INIZIALIZZAZIONE SITO
-         */
-        async function init() {
+        async function carica() {
             try {
-                const v = Date.now();
-                const res = await fetch(`data/active_config.json?v=${v}`);
-                const config = await res.json();
+                const res = await fetch(`data/active_config.json?v=${Date.now()}`);
+                const cfg = await res.json();
+                document.getElementById('banner-img').src = `images/${cfg.site_settings.day_banner}`;
+                document.getElementById('data-display').innerText = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long'});
+                document.getElementById('ts-display').innerText = `ULTIMO REFRESH: ${cfg.site_settings.last_update || '---'}`;
                 
-                document.getElementById('main-header-img').src = `images/${config.site_settings.header_img}`;
-                document.getElementById('day-banner-img').src = `images/${config.site_settings.day_banner}`;
-                document.getElementById('date-now').innerText = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
-                document.getElementById('update-stamp').innerText = `ULTIMO AGGIORNAMENTO: ${config.site_settings.last_update || 'N/A'}`;
-                
-                // Filtro categorie attive
-                const activeSezs = Object.keys(config).filter(k => {
-                    if (['site_settings', 'satira_config'].includes(k)) return false;
-                    return Object.values(config[k]).some(item => item && item.count > 0);
+                const cat = Object.keys(cfg).filter(k => !['site_settings','satira_config'].includes(k));
+                const menu = document.getElementById('menu-categorie');
+                cat.forEach((c, i) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'tab' + (i === 0 ? ' attiva' : '');
+                    btn.innerText = c;
+                    btn.onclick = () => mostraSezione(c, btn);
+                    menu.appendChild(btn);
                 });
-
-                const tDiv = document.getElementById('tabs');
-                if (activeSezs.length === 0) {
-                    document.getElementById('news-container').innerHTML = '<div style="text-align:center; padding:80px; color:#999;"><h3>😴 Mare calmo</h3><p>Nessuna ricerca attiva al momento.</p></div>';
-                    return;
-                }
-
-                activeSezs.forEach(s => {
-                    const b = document.createElement('button');
-                    b.className = 'btn-t'; b.innerText = s;
-                    b.onclick = () => loadSez(s);
-                    tDiv.appendChild(b);
-                });
-                loadSez(activeSezs[0]);
-            } catch(e) { }
+                if (cat[0]) mostraSezione(cat[0]);
+            } catch(e) { document.getElementById('lista-notizie').innerHTML = "<p style='text-align:center; padding:50px;'>Mare calmo, nessuna notizia.</p>"; }
         }
 
-        /**
-         * CARICAMENTO SEZIONE NEWS
-         */
-        async function loadSez(s) {
-            document.querySelectorAll('.btn-t').forEach(b => b.classList.remove('active'));
-            const activeBtn = Array.from(document.querySelectorAll('.btn-t')).find(b => b.innerText === s);
-            if (activeBtn) activeBtn.classList.add('active');
+        async function mostraSezione(s, btn) {
+            if (btn) {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('attiva'));
+                btn.classList.add('attiva');
+            }
+            const res = await fetch(`data/news-${s}.json?v=${Date.now()}`);
+            const data = await res.json();
+            document.documentElement.style.setProperty('--blu-mare', data.color);
             
-            const v = Date.now();
-            const r = await fetch(`data/news-${s}.json?v=${v}`);
-            const data = await r.json();
-            document.documentElement.style.setProperty('--main-color', data.color);
-            
-            const container = document.getElementById('news-container');
-            container.innerHTML = '';
-            
+            const lista = document.getElementById('lista-notizie');
+            lista.innerHTML = '';
             data.news.forEach((n, idx) => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `
-                    <div class="tag-row">
-                        <span class="tag">${n.categoria}</span>
-                        ${n.isFake ? '<span class="badge-fake">DIRETTA DAL FUTURO</span>' : ''}
-                    </div>
-                    <div class="img-container">
-                        <img src="images/${n.immagine}" class="img-n" alt="Notizia">
-                    </div>
-                    <h3>${n.titolo}</h3>
-                    <div id="art-${idx}" class="content-text truncated">${n.articolo}</div>
-                    <button class="btn-expand" onclick="toggleText(this, 'art-${idx}', 'Leggi di più')">Leggi di più</button>
-                    
-                    <div class="comm-box">
-                        <div id="com-${idx}" class="comm-text comm-truncated">🐬 <strong>Delfino:</strong> ${n.commento}</div>
-                        <button class="btn-expand" style="background:none; border:none; color:var(--main-color); margin-top:8px; text-align:left; padding:0; height:auto;" onclick="toggleText(this, 'com-${idx}', 'Leggi tutto')">Leggi tutto</button>
-                    </div>
+                const div = document.createElement('div');
+                div.className = 'notizia';
+                div.innerHTML = `
+                    <div class="notizia-img-box"><img src="images/${n.immagine}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>
+                    <h2>${n.titolo}</h2>
+                    <div class="testo" id="t-${idx}">${n.articolo}</div>
+                    <button class="leggi-tutto" onclick="document.getElementById('t-${idx}').classList.toggle('aperto'); this.innerText = (this.innerText === 'Leggi di più' ? 'Chiudi' : 'Leggi di più')">Leggi di più</button>
+                    <div class="commento-delfino"><strong>Delfino:</strong> ${n.commento}</div>
                 `;
-                container.appendChild(card);
+                lista.appendChild(div);
             });
         }
-
-        /**
-         * LOGICA FISARMONICA
-         */
-        function toggleText(btn, elId, defaultText) {
-            const el = document.getElementById(elId);
-            const isTruncated = el.classList.contains('truncated') || el.classList.contains('comm-truncated');
-            
-            if (isTruncated) {
-                el.classList.remove('truncated', 'comm-truncated');
-                btn.innerText = 'Chiudi';
-            } else {
-                if (elId.startsWith('art')) el.classList.add('truncated');
-                else el.classList.add('comm-truncated');
-                btn.innerText = defaultText;
-            }
-        }
-
-        init();
+        carica();
     </script>
 </body>
 </html>
