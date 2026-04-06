@@ -1,0 +1,67 @@
+name: Redazione e Pubblicazione Delfino
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 7-21/2 * * *'
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  turno_redazione:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Arrivo in Porto
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Installazione Dipendenze
+        run: npm install
+
+      - name: Sincronizzazione Git
+        run: |
+          git config --global user.name "DelfinoBot"
+          git config --global user.email "bot@lavocedeldelfino.it"
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Esecuzione Motore News (Fetch)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
+        run: node scripts/fetch-news.js
+
+      - name: Archiviazione Dati
+        run: |
+          git add public/data/*.json public/data/*.log
+          if git diff --staged --quiet; then
+            echo "Nessuna novità da pubblicare."
+          else
+            git commit -m "🗞️ Redazione completata $(date +'%d-%m %H:%M')"
+            git push origin main --force
+          fi
+
+      - name: Configurazione Pages
+        uses: actions/configure-pages@v4
+
+      - name: Caricamento Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
