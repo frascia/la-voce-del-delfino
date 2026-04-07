@@ -4426,3 +4426,57 @@ Please retry in 49.234792199s.
 [07/04/2026, 18:13:55] [3-deploy] [git] [main 878a119] 🤖 Aggiornamento redazione 07/04, 18:08 [skip ci]
  7 files changed, 187 insertions(+), 137 deletions(-)
 [07/04/2026, 18:13:56] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[07/04/2026, 18:18:14] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[07/04/2026, 18:18:14] [1-fetch] [DEBUG] Modelli che Google mi offre: gemini-2.5-flash, gemini-2.5-pro, gemini-2.0-flash, gemini-2.0-flash-001, gemini-2.0-flash-lite-001, gemini-2.0-flash-lite, gemini-2.5-flash-preview-tts, gemini-2.5-pro-preview-tts, gemini-flash-latest, gemini-flash-lite-latest, gemini-pro-latest, gemini-2.5-flash-lite, gemini-2.5-flash-image, gemini-3-pro-preview, gemini-3-flash-preview, gemini-3.1-pro-preview, gemini-3.1-pro-preview-customtools, gemini-3.1-flash-lite-preview, gemini-3-pro-image-preview, gemini-3.1-flash-image-preview, gemini-robotics-er-1.5-preview, gemini-2.5-computer-use-preview-10-2025
+[07/04/2026, 18:18:14] [1-fetch] [STRESS-TEST] Provo carico reale su: gemini-flash-lite-latest...
+[07/04/2026, 18:18:17] [1-fetch] [BUSY] gemini-flash-lite-latest è intasato (Errore 503). Scalo al prossimo...
+[07/04/2026, 18:18:17] [1-fetch] 🤖 Modello agganciato: [ gemini-1.5-flash ]
+[07/04/2026, 18:18:17] [1-fetch] Lancio le reti per: Pescara Calcio (target: 2)
+[07/04/2026, 18:18:18] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:18] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:18] [1-fetch] Lancio le reti per: Eventi e attività vicino Pescara (target: 5)
+[07/04/2026, 18:18:18] [1-fetch] [CASCATA] Solo 0 notizie fresche per Eventi e attività vicino Pescara. Passo 5 alla prossima categoria.
+[07/04/2026, 18:18:18] [1-fetch] Lancio le reti per: Meteo Pescara (target: 7)
+[07/04/2026, 18:18:19] [1-fetch] [CASCATA] Solo 1 notizie fresche per Meteo Pescara. Passo 6 alla prossima categoria.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] Lancio le reti per: Satira (target: 10)
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:19] [1-fetch] Sezione pescara: 13 elementi raccolti.
+[07/04/2026, 18:18:19] [1-fetch] Lancio le reti per: Novità serie Netflix (target: 2)
+[07/04/2026, 18:18:20] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:20] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:20] [1-fetch] Lancio le reti per: Novità Prime (target: 2)
+[07/04/2026, 18:18:20] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:21] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:21] [1-fetch] Lancio le reti per: Giappone (target: 2)
+[07/04/2026, 18:18:21] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:21] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:21] [1-fetch] Lancio le reti per: Danimarca (target: 2)
+[07/04/2026, 18:18:22] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:22] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:22] [1-fetch] Lancio le reti per: Brasile (target: 2)
+[07/04/2026, 18:18:22] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:22] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:22] [1-fetch] Lancio le reti per: Intelligenza Artificiale (target: 2)
+[07/04/2026, 18:18:23] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:23] [1-fetch] [ERRORE API GEMINI] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[07/04/2026, 18:18:23] [1-fetch] Sezione mondo: 12 elementi raccolti.
+[07/04/2026, 18:18:23] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 25
+[07/04/2026, 18:18:23] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[07/04/2026, 18:18:23] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[07/04/2026, 18:18:23] [2-elabora] Sezione pescara: 13 articoli elaborati.
+[07/04/2026, 18:18:23] [2-elabora] Sezione mondo: 12 articoli elaborati.
+[07/04/2026, 18:18:23] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[07/04/2026, 18:18:23] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[07/04/2026, 18:18:23] [3-deploy] 📄 Scritto: news-pescara.json (13 articoli)
+[07/04/2026, 18:18:23] [3-deploy] 📄 Scritto: news-mondo.json (12 articoli)
+[07/04/2026, 18:18:23] [3-deploy] 🕐 Ora aggiornamento: 07/04, 18:18
