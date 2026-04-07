@@ -1,8 +1,8 @@
 {
   "site_settings": {
     "header_img": "Header.png",
-    "day_banner": "Martedi.webp",
-    "descrizione": "Edizione del Martedi."
+    "day_banner": "Mercoledi.webp",
+    "descrizione": "Edizione del Mercoledi (era da leoni)"
   },
   "satira_config": {
     "temi": [
@@ -15,16 +15,18 @@
   },
   "pescara": {
     "color": "#b1dcf0",
-    "Pescara Calcio": { "count": 5, "img": "Calcio.webp", "label": "Calcio", "mood": "fanatico ultras pescarese", "weight": 1.0 },
-    "Meteo Pescara": { "count": 2, "img": "Meteo.webp", "label": "Meteo Pescara", "mood": "menefreghista", "weight": 0.8 },
-    "Satira": { "count": 4, "img": "Fake.webp", "label": "Satira", "mood": "ironico e credulone", "weight": 0.6 }
+    "Pescara Calcio": { "count": 1, "img": "Calcio.webp", "label": "Calcio", "mood": "fanatico ultras pescarese", "weight": 0.9 },
+    "Eventi e attività vicino Pescara": { "count": 1, "img": "Concerti.webp", "label": "Eventi", "mood": "fanatico ultras pescarese", "weight": 0.9 },
+    "Meteo Pescara": { "count": 1, "img": "Meteo.webp", "label": "Meteo Pescara", "mood": "menefreghista", "weight": 0.8 },
+    "Satira": { "count": 2, "img": "Fake.webp", "label": "Satira", "mood": "ironico e credulone", "weight": 0.8 }
   },
   "mondo": {
     "color": "#edcab4",
     "Novità serie Netflix": { "count": 2, "img": "Concerti.webp", "label": "Streaming", "mood": "meravigliato", "weight": 0.7 },
-    "Novità Prime": { "count": 2, "img": "Concerti.webp", "label": "Streaming", "mood": "dubbioso", "weight": 0.7 },
+    "Novità Prime": { "count": 2, "img": "Concerti.webp", "label": "Prime, "mood": "dubbioso", "weight": 0.7 },
     "Giappone": { "count": 2, "img": "Giappone.webp", "label": "Giappone", "mood": "appassionato e sognante", "weight": 0.5 },
     "Danimarca": { "count": 2, "img": "Danimarca.webp", "label": "Danimarca", "mood": "meravigliato", "weight": 0.4 },
-    "Intelligenza Artificiale": { "count": 2, "img": "Ai.webp", "label": "Futuro", "mood": "conservatore", "weight": 0.6 }
+    "Brasile": { "count": 2, "img": "Brasile.webp", "label": "Brasile", "mood": "meravigliato", "weight": 0.6 },
+    "Intelligenza Artificiale": { "count": 2, "img": "Ai.webp", "label": "Futuro", "mood": "conservatore pescarese", "weight": 0.6 }
   }
 }
