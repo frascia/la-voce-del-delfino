@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+    #!/usr/bin/env node
 /**
  * 1-fetch.js
  * FASE 1: Legge la config, chiama Google News RSS e Gemini AI.
@@ -75,12 +75,14 @@ async function trovaUltimoModello() {
             
             // Idea di gemini
             // 2. La nostra "scala gerarchica" di priorità
+       
            
         const preferiti = [
-                "gemini-3.1-flash-latest", 
-                "gemini-1.5-flash-latest", 
-                "gemini-flash-lite-latest" 
-            ];
+            "gemini-3.1-flash-latest", // <--- Con il -latest non fallisce il "found"
+            "gemini-1.5-flash-latest", // <--- Con il -latest non fallisce il "found"
+            //"gemini-1.5-flash",        // Teniamo anche questo per sicurezza
+            "gemini-flash-lite-latest"
+];
 
             // 3. Il TEST: proviamo a scalare finché non ne troviamo uno libero
             for (const modello of preferiti) {
