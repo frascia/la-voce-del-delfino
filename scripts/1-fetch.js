@@ -78,8 +78,8 @@ async function trovaUltimoModello() {
        
             scriviLog(`[DEBUG] Modelli che Google mi offre: ${modelliValidi.join(", ")}`);
         const preferiti = [
-            "gemini-2.5-flash",        // Il top attuale nel tuo account
-            "gemini-2.0-flash",        // Velocissimo e molto stabile
+            "gemini-2.0-flash",        // Il top attuale nel tuo account
+            "gemini-2.5-flash",        // Velocissimo e molto stabile
             "gemini-flash-latest",     // L'alias standard
             "gemini-2.5-flash-lite",   // La versione lite nuova
             "gemini-flash-lite-latest" // L'ultima spiaggia (quella lenta/busy)
