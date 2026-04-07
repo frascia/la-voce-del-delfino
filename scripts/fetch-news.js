@@ -153,7 +153,7 @@ async function callGemini(sys, prompt) {
             return text;
             
         } catch (e) {
-            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
+            await new Promise(r => setTimeout(r, Math.pow(2, i) * 30000));
         }
     }
     return null;
