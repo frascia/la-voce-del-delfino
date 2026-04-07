@@ -3634,3 +3634,25 @@ Please retry in 39.205434689s.
 [07/04/2026, 09:37:23] Lancio le reti per: Intelligenza Artificiale (Quota: 2 + 0 recuperati = 2 totali)
 [07/04/2026, 09:37:37] Sezione mondo: 8 notizie pescate e confezionate.
 [07/04/2026, 09:37:37] 🏁 Turno completato con successo.
+[07/04/2026, 09:59:46] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[07/04/2026, 09:59:46] [1-fetch] 🤖 Modello agganciato: [ gemini-flash-lite-latest ]
+[07/04/2026, 09:59:46] [1-fetch] Lancio le reti per: Pescara Calcio (target: 5)
+[07/04/2026, 10:00:40] [1-fetch] Lancio le reti per: Meteo Pescara (target: 2)
+[07/04/2026, 10:00:40] [1-fetch] [CASCATA] Solo 0 notizie fresche per Meteo Pescara. Passo 2 alla prossima categoria.
+[07/04/2026, 10:00:40] [1-fetch] Lancio le reti per: Satira (target: 6)
+[07/04/2026, 10:01:38] [1-fetch] Sezione pescara: 11 elementi raccolti.
+[07/04/2026, 10:01:38] [1-fetch] Lancio le reti per: Netflix (target: 2)
+[07/04/2026, 10:01:47] [1-fetch] Lancio le reti per: Giappone (target: 2)
+[07/04/2026, 10:02:03] [1-fetch] Lancio le reti per: Danimarca (target: 2)
+[07/04/2026, 10:02:44] [1-fetch] Lancio le reti per: Intelligenza Artificiale (target: 2)
+[07/04/2026, 10:02:52] [1-fetch] Sezione mondo: 8 elementi raccolti.
+[07/04/2026, 10:02:52] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 19
+[07/04/2026, 10:02:52] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[07/04/2026, 10:02:52] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[07/04/2026, 10:02:52] [2-elabora] Sezione pescara: 11 articoli elaborati.
+[07/04/2026, 10:02:52] [2-elabora] Sezione mondo: 8 articoli elaborati.
+[07/04/2026, 10:02:52] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[07/04/2026, 10:02:52] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[07/04/2026, 10:02:52] [3-deploy] 📄 Scritto: news-pescara.json (11 articoli)
+[07/04/2026, 10:02:52] [3-deploy] 📄 Scritto: news-mondo.json (8 articoli)
+[07/04/2026, 10:02:52] [3-deploy] 🕐 Ora aggiornamento: 07/04, 09:59
