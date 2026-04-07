@@ -145,7 +145,7 @@ async function callGemini(sys, prompt) {
 
                 // Se l'errore è di quota, aspetta e riprova il ciclo
                 if (d.error.code === 429 || d.error.message.toLowerCase().includes("quota")) {
-                    const msAttesa = Math.pow(2, i) * 30000;
+                    const msAttesa =30000;
                     scriviLog(`> ⏳ Quota superata. Attendo ${msAttesa / 1000}s prima del tentativo ${i + 2}...`);
                     await new Promise(r => setTimeout(r, msAttesa));
                     continue; // Torna all'inizio del ciclo 'for' per riprovare
