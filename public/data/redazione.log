@@ -3747,3 +3747,26 @@ Please retry in 39.205434689s.
 [07/04/2026, 14:04:51] [3-deploy] 📄 Scritto: news-pescara.json (11 articoli)
 [07/04/2026, 14:04:51] [3-deploy] 📄 Scritto: news-mondo.json (10 articoli)
 [07/04/2026, 14:04:51] [3-deploy] 🕐 Ora aggiornamento: 07/04, 14:01
+[07/04/2026, 14:19:11] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[07/04/2026, 14:19:11] [1-fetch] 🤖 Modello agganciato: [ gemini-flash-lite-latest ]
+[07/04/2026, 14:19:11] [1-fetch] Lancio le reti per: Pescara Calcio (target: 5)
+[07/04/2026, 14:19:52] [1-fetch] Lancio le reti per: Meteo Pescara (target: 2)
+[07/04/2026, 14:19:52] [1-fetch] [CASCATA] Solo 0 notizie fresche per Meteo Pescara. Passo 2 alla prossima categoria.
+[07/04/2026, 14:19:52] [1-fetch] Lancio le reti per: Satira (target: 6)
+[07/04/2026, 14:20:56] [1-fetch] Sezione pescara: 11 elementi raccolti.
+[07/04/2026, 14:20:56] [1-fetch] Lancio le reti per: Novità serie Netflix (target: 2)
+[07/04/2026, 14:21:14] [1-fetch] Lancio le reti per: Novità Prime (target: 2)
+[07/04/2026, 14:21:35] [1-fetch] Lancio le reti per: Giappone (target: 2)
+[07/04/2026, 14:21:43] [1-fetch] Lancio le reti per: Danimarca (target: 2)
+[07/04/2026, 14:21:51] [1-fetch] Lancio le reti per: Intelligenza Artificiale (target: 2)
+[07/04/2026, 14:21:59] [1-fetch] Sezione mondo: 10 elementi raccolti.
+[07/04/2026, 14:21:59] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 21
+[07/04/2026, 14:21:59] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[07/04/2026, 14:21:59] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[07/04/2026, 14:21:59] [2-elabora] Sezione pescara: 11 articoli elaborati.
+[07/04/2026, 14:21:59] [2-elabora] Sezione mondo: 10 articoli elaborati.
+[07/04/2026, 14:21:59] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[07/04/2026, 14:21:59] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[07/04/2026, 14:21:59] [3-deploy] 📄 Scritto: news-pescara.json (11 articoli)
+[07/04/2026, 14:21:59] [3-deploy] 📄 Scritto: news-mondo.json (10 articoli)
+[07/04/2026, 14:21:59] [3-deploy] 🕐 Ora aggiornamento: 07/04, 14:19
