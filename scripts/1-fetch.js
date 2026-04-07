@@ -77,12 +77,13 @@ async function trovaUltimoModello() {
             // 2. La nostra "scala gerarchica" di priorità
        
             scriviLog(`[DEBUG] Modelli che Google mi offre: ${modelliValidi.join(", ")}`);
-            const preferiti = [
-                "gemini-3.1-flash-latest",
-                "gemini-1.5-flash-latest",
-                "gemini-1.5-flash-002",
-                "gemini-flash-lite-latest" 
-            ];
+        const preferiti = [
+            "gemini-2.5-flash",        // Il top attuale nel tuo account
+            "gemini-2.0-flash",        // Velocissimo e molto stabile
+            "gemini-flash-latest",     // L'alias standard
+            "gemini-2.5-flash-lite",   // La versione lite nuova
+            "gemini-flash-lite-latest" // L'ultima spiaggia (quella lenta/busy)
+        ];
 
             // 3. Il TEST: proviamo a scalare finché non ne troviamo uno libero
             for (const modello of preferiti) {
