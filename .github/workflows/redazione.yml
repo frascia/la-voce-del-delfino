@@ -3,7 +3,7 @@ name: Redazione e Pubblicazione Delfino
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 7-21/2 * * *'
+    - cron: '0 6-21/1 * * *'
   # push:
   # branches: ["main"]
 
