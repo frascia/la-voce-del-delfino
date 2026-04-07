@@ -15,6 +15,9 @@ permissions:
 jobs:
   turno_redazione:
     runs-on: ubuntu-latest
+    # Mappiamo qui il secret per TUTTI gli step del job
+    env:
+      REDAZIONE_STATUS: ${{ secrets.REDAZIONE_ATTIVA }}
     # Ignora i commit del bot per evitare loop
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
 
@@ -42,8 +45,8 @@ jobs:
       # -----------------------------------------------------------------------
       # MODALITÀ "auto" (default) — vecchio fetch-news.js monolitico
       # -----------------------------------------------------------------------
-      - name: "🐬 [auto] Fetch monolitico"
-        if: "${{ secrets.REDAZIONE_ATTIVA != 'steps' && secrets.REDAZIONE_ATTIVA != 'false' }}"
+      - name: "🐬 [auto] Fetch monolitico
+        if: env.REDAZIONE_STATUS != 'steps' && env.REDAZIONE_STATUS != 'false' }}"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
@@ -54,20 +57,20 @@ jobs:
       # MODALITÀ "steps" — pipeline in 3 fasi
       # -----------------------------------------------------------------------
       - name: "⚓ [steps] FASE 1 — Fetch RSS + Gemini"
-        if: "${{ secrets.REDAZIONE_ATTIVA == 'steps' }}"
+        if: "${{ env.REDAZIONE_ATTIVA == 'steps' }}"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/1-fetch.js
 
       - name: "⚙️ [steps] FASE 2 — Elaborazione"
-        if: "${{ secrets.REDAZIONE_ATTIVA == 'steps' }}"
+        if: "${{ env.REDAZIONE_ATTIVA == 'steps' }}"
         env:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/2-elabora.js
 
       - name: "🚀 [steps] FASE 3 — Deploy dati"
-        if: "${{ secrets.REDAZIONE_ATTIVA == 'steps' }}"
+        if: "${{ env.REDAZIONE_ATTIVA == 'steps' }}"
         env:
           WORKFLOW_AUTOMATICO: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
         run: node scripts/3-deploy.js
@@ -76,14 +79,14 @@ jobs:
       # MODALITÀ "false" — redazione disabilitata
       # -----------------------------------------------------------------------
       - name: "⏸️ Redazione disabilitata"
-        if: "${{ secrets.REDAZIONE_ATTIVA == 'false' }}"
+        if: "${{ env.REDAZIONE_ATTIVA == 'false' }}"
         run: echo "Redazione disabilitata tramite secret REDAZIONE_ATTIVA."
 
       # -----------------------------------------------------------------------
       # ARCHIVIAZIONE E DEPLOY — sempre, indipendente dalla modalità
       # -----------------------------------------------------------------------
       - name: Archiviazione Dati
-        if: "${{ secrets.REDAZIONE_ATTIVA != 'false' }}"
+        if: "${{ env.REDAZIONE_ATTIVA != 'false' }}"
         run: |
           git add public/data/*.json public/data/*.log
           if git diff --staged --quiet; then
