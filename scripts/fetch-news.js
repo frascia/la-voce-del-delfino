@@ -164,7 +164,7 @@ async function callGemini(sys, prompt) {
     return null;
 }
 
-
+{
             const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
             
             if (!text) {
@@ -172,11 +172,7 @@ async function callGemini(sys, prompt) {
             }
             return text;
             
-        } catch (e) {
-            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
-        }
-    }
-    return null;
+       
 }
 
 /**
