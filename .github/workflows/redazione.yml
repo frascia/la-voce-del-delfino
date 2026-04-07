@@ -1,0 +1,106 @@
+name: Redazione e Pubblicazione Delfino
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 7-21/2 * * *'
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  turno_redazione:
+    runs-on: ubuntu-latest
+    # Ignora i commit del bot per evitare loop
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - name: Arrivo in Porto
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installazione Dipendenze
+        run: npm install
+
+      - name: Sincronizzazione Git
+        run: |
+          git config --global user.name "DelfinoBot"
+          git config --global user.email "bot@lavocedeldelfino.it"
+          git fetch origin main
+          git reset --hard origin/main
+
+      # -----------------------------------------------------------------------
+      # MODALITÀ "auto" (default) — vecchio fetch-news.js monolitico
+      # -----------------------------------------------------------------------
+      - name: "🐬 [auto] Fetch monolitico"
+        if: "${{ secrets.REDAZIONE_ATTIVA != 'steps' && secrets.REDAZIONE_ATTIVA != 'false' }}"
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
+        run: node scripts/fetch-news.js
+
+      # -----------------------------------------------------------------------
+      # MODALITÀ "steps" — pipeline in 3 fasi
+      # -----------------------------------------------------------------------
+      - name: "⚓ [steps] FASE 1 — Fetch RSS + Gemini"
+        if: "${{ secrets.REDAZIONE_ATTIVA == 'steps' }}"
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/1-fetch.js
+
+      - name: "⚙️ [steps] FASE 2 — Elaborazione"
+        if: "${{ secrets.REDAZIONE_ATTIVA == 'steps' }}"
+        env:
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
+        run: node scripts/2-elabora.js
+
+      - name: "🚀 [steps] FASE 3 — Deploy dati"
+        if: "${{ secrets.REDAZIONE_ATTIVA == 'steps' }}"
+        env:
+          WORKFLOW_AUTOMATICO: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
+        run: node scripts/3-deploy.js
+
+      # -----------------------------------------------------------------------
+      # MODALITÀ "false" — redazione disabilitata
+      # -----------------------------------------------------------------------
+      - name: "⏸️ Redazione disabilitata"
+        if: "${{ secrets.REDAZIONE_ATTIVA == 'false' }}"
+        run: echo "Redazione disabilitata tramite secret REDAZIONE_ATTIVA."
+
+      # -----------------------------------------------------------------------
+      # ARCHIVIAZIONE E DEPLOY — sempre, indipendente dalla modalità
+      # -----------------------------------------------------------------------
+      - name: Archiviazione Dati
+        if: "${{ secrets.REDAZIONE_ATTIVA != 'false' }}"
+        run: |
+          git add public/data/*.json public/data/*.log
+          if git diff --staged --quiet; then
+            echo "Nessuna novità da pubblicare."
+          else
+            git commit -m "🗞️ Redazione completata $(date +'%d-%m %H:%M') [skip ci]"
+            git push origin main --force
+          fi
+
+      - name: Configurazione Pages
+        uses: actions/configure-pages@v4
+
+      - name: Caricamento Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
