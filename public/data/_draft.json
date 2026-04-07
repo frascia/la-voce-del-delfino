@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "07/04, 16:57",
+  "oraAggiornamento": "07/04, 17:31",
   "configUsata": "/home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/config_mar.json",
   "sezioni": {
     "pescara": {
@@ -19,8 +19,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Venezia, tris e vetta solitaria. Il Monza si salva in 9. Sorriso Samp, dietro scattano Pescara e Bari",
-            "articolo": "Notizia battuta dalle agenzie: \"Venezia, tris e vetta solitaria. Il Monza si salva in 9. Sorriso Samp, dietro scattano Pescara e Bari\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Verso Pescara-Sampdoria: apre anche la Curva Sud",
+            "articolo": "Notizia battuta dalle agenzie: \"Verso Pescara-Sampdoria: apre anche la Curva Sud\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Calcio",
           "immagine": "Calcio.webp"
@@ -69,56 +69,6 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
-            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: Il taccagno compra qualcosa di costoso",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Il taccagno compra qualcosa di costoso\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
             "titolo": "Mistero su: Lo smartwork poco smart",
             "articolo": "Avevamo in serbo uno scoop clamoroso su \"Lo smartwork poco smart\", ma un gabbiano ci ha rubato gli appunti."
           },
@@ -129,8 +79,58 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
+            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
+            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
+            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
+            "titolo": "Mistero su: L'IA impara il dialetto pescarese",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'IA impara il dialetto pescarese\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
             "titolo": "Mistero su: L'uomo che dice glugluglu senza bere",
             "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'uomo che dice glugluglu senza bere\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
+            "titolo": "Mistero su: Lo smartwork poco smart",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Lo smartwork poco smart\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "Fake.webp"
@@ -254,8 +254,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Intelligenza artificiale e lavoro, cosa emerge dagli ultimi dati",
-            "articolo": "Notizia battuta dalle agenzie: \"Intelligenza artificiale e lavoro, cosa emerge dagli ultimi dati\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Mouser Electronics esplora come l'intelligenza artificiale modella le tecnologie e le esperienze di tutti i giorni",
+            "articolo": "Notizia battuta dalle agenzie: \"Mouser Electronics esplora come l'intelligenza artificiale modella le tecnologie e le esperienze di tutti i giorni\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Futuro",
           "immagine": "Ai.webp"
