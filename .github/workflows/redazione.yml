@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     # Mappiamo qui il secret per TUTTI gli step del job
     env:
-      REDAZIONE_STATUS: ${{ secrets.REDAZIONE_ATTIVA }}
+      REDAZIONE_STATUS: ${{ vars.REDAZIONE_ATTIVA }}
     # Ignora i commit del bot per evitare loop
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
 
