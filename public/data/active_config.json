@@ -1,15 +1,15 @@
 {
   "site_settings": {
     "header_img": "Header.png",
-    "day_banner": "Lunedi.webp",
-    "descrizione": "Edizione del Lunedì",
-    "last_update": "06/04, 23:39"
+    "day_banner": "Martedi.webp",
+    "descrizione": "Edizione del Martedi.",
+    "last_update": "07/04, 02:30"
   },
   "satira_config": {
     "temi": [
-      "Alieni avvistati a Pescara Vecchia",
-      "Il Ponte del Mare diventa uno scivolo",
-      "Arrosticini spaziali della NASA",
+      "Il taccagno compra qualcosa di costoso",
+      "Lo smartwork poco smart",
+      "L'uomo che dice glugluglu senza bere",
       "L'IA impara il dialetto pescarese"
     ]
   },
@@ -19,21 +19,21 @@
       "count": 5,
       "img": "Calcio.webp",
       "label": "Calcio",
-      "mood": "sarcastico",
+      "mood": "ultras pescarese",
       "weight": 0.8
     },
     "Meteo Pescara": {
       "count": 2,
       "img": "Meteo.webp",
       "label": "Meteo Pescara",
-      "mood": "riflessivo",
+      "mood": "ottimista",
       "weight": 0.3
     },
     "Satira": {
       "count": 4,
       "img": "Fake.webp",
       "label": "Satira",
-      "mood": "pungente",
+      "mood": "ironico",
       "weight": 1
     }
   },
