@@ -76,12 +76,11 @@ async function trovaUltimoModello() {
             // Idea di gemini
             // 2. La nostra "scala gerarchica" di priorità
            
-      const preferiti = [
-            "gemini-3.1-flash-latest", // Usa l'alias -latest per massima compatibilità
-            "gemini-1.5-flash-latest", 
-            "gemini-2.0-flash-lite-preview-0924", // Se vuoi provare le versioni specifiche
-            "gemini-flash-lite-latest"
-      ];
+        const preferiti = [
+                "gemini-3.1-flash-latest", 
+                "gemini-1.5-flash-latest", 
+                "gemini-flash-lite-latest" 
+            ];
 
             // 3. Il TEST: proviamo a scalare finché non ne troviamo uno libero
             for (const modello of preferiti) {
