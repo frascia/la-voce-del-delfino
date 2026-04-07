@@ -119,7 +119,7 @@ async function trovaUltimoModello() {
         
     } catch (e) {
         scriviLog(`[ATTENZIONE] Ricerca modelli fallita. Uso modello di riserva.`);
-        activeGeminiModel = "gemini-1.5-flash"; 
+        activeGeminiModel = "gemini-1.5-flash-latest"; 
     }
 
     /* // IL TUO VECCHIO CODICE (COMMENTATO) RIMANE QUI SOTTO COME VOLEVI
