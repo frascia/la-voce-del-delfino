@@ -231,8 +231,8 @@ async function main() {
         day: '2-digit', month: '2-digit'
     });
 
-    const sysPromptSatira = "Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, corposo e ben articolato (almeno 800-1000 caratteri), sviluppando la notizia con ricchezza di dettagli e umorismo assurdo.";
-    const sysPromptVera = "Sei un giornalista serio, fattuale e oggettivo. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, VERO, professionale e ben articolato (almeno 800-1000 caratteri), basandoti unicamente sui fatti reali forniti. Niente invenzioni o satira nell'articolo. Il 'commento' finale del Delfino può invece avere un tono saggio o ironico.";
+    const sysPromptSatira = "Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, corposo e ben articolato (almeno 400-800 caratteri), sviluppando la notizia con ricchezza di dettagli e umorismo assurdo.Il 'commento' finale del Delfino può invece avere lo stesso tono della notizia e ancora più pungente e non deve essre molto breve";
+    const sysPromptVera = "Sei un giornalista serio, fattuale e oggettivo. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, VERO, professionale e ben articolato (almeno 400-800 caratteri), basandoti unicamente sui fatti reali forniti. Niente invenzioni o satira nell'articolo. Il 'commento' finale del Delfino può invece avere un tono di un esperto in materia o ironico.";
 
     // draft = struttura dati grezza che passa alla fase 2
     const draft = {
