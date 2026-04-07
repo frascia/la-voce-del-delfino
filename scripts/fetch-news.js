@@ -141,8 +141,17 @@ async function callGemini(sys, prompt) {
             const d = await res.json();
 
             if (d.error) {
-                scriviLog(`[ERRORE API GEMINI] Richiesta rifiutata: ${d.error.message}`);
-                return null; 
+                scriviLog(`[ERRORE API GEMINI] ${d.error.message}`);
+
+                // Se l'errore è di quota, aspetta e riprova il ciclo
+                if (d.error.code === 429 || d.error.message.toLowerCase().includes("quota")) {
+                    const msAttesa = Math.pow(2, i) * 30000;
+                    scriviLog(`> ⏳ Quota superata. Attendo ${msAttesa / 1000}s prima del tentativo ${i + 2}...`);
+                    await new Promise(r => setTimeout(r, msAttesa));
+                    continue; // Torna all'inizio del ciclo 'for' per riprovare
+                }
+
+                return null; // Per altri tipi di errore (es. 400, 401), esce
             }
 
             const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
@@ -153,7 +162,7 @@ async function callGemini(sys, prompt) {
             return text;
             
         } catch (e) {
-            await new Promise(r => setTimeout(r, Math.pow(2, i) * 30000));
+            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
         }
     }
     return null;
