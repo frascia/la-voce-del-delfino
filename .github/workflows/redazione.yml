@@ -45,7 +45,7 @@ jobs:
       # -----------------------------------------------------------------------
       # MODALITÀ "auto" (default) — vecchio fetch-news.js monolitico
       # -----------------------------------------------------------------------
-      - name: "🐬 [auto] Fetch monolitico
+      - name: "🐬 [auto] Fetch monolitico"
         if: env.REDAZIONE_STATUS != 'steps' && env.REDAZIONE_STATUS != 'false'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
