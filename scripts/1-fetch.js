@@ -72,8 +72,46 @@ async function trovaUltimoModello() {
             const modelliValidi = data.models
                 .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
+                // Idea di gemini
+                // 2. La nostra "scala gerarchica" di priorità
+            const preferiti = [
+                "gemini-3.1-flash", 
+                "gemini-1.5-flash", 
+                "gemini-2.0-flash-lite", 
+                "gemini-flash-lite-latest"
+            ];
+            // 3. Il TEST: proviamo a scalare finché non ne troviamo uno libero
+        for (const modello da testare of preferiti) {
+            if (modelliValidi.includes(modello)) {
+                try {
+                    scriviLog(`[TEST] Verifico disponibilità di: ${modello}...`);
+                    
+                    // Facciamo una chiamata piccolissima di test
+                    const testUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modello}:generateContent?key=${apiKey}`;
+                    const testRes = await fetch(testUrl, {
+                        method: 'POST',
+                        body: JSON.stringify({ contents: [{ parts: [{ text: "hi" }] }] })
+                    });
 
-            const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
+                    if (testRes.status === 200) {
+                        activeGeminiModel = modello;
+                        scriviLog(`[OK] Modello agganciato e funzionante: [ ${activeGeminiModel} ]`);
+                        return; // ABBIAMO TROVATO IL VINCITORE! Esci dalla funzione.
+                    } else if (testRes.status === 503 || testRes.status === 429) {
+                        scriviLog(`[BUSY] ${modello} è intasato (Errore ${testRes.status}). Scalo al prossimo...`);
+                    }
+                } catch (err) {
+                    scriviLog(`[SALTO] Errore tecnico su ${modello}, provo il prossimo.`);
+                }
+              }
+           }
+            // 4. Ultima spiaggia: se nessuno dei preferiti risponde, prova il primo della lista generale
+        if (!activeGeminiModel && modelliValidi.length > 0) {
+            activeGeminiModel = modelliValidi[0];
+            scriviLog(`[AVVISO] Nessun preferito disponibile. Uso emergenza: ${activeGeminiModel}`);
+        }
+        // Idea di gemini fine
+         /*   const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
             modelliFlash.sort((a, b) => b.localeCompare(a));
 
             if (modelliFlash.length > 0) {
@@ -83,6 +121,7 @@ async function trovaUltimoModello() {
                 activeGeminiModel = modelliValidi[0];
             }
         }
+        */
     } catch (e) {
         scriviLog(`[ATTENZIONE] Ricerca modelli fallita. Uso modello di riserva.`);
     }
