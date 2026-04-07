@@ -72,61 +72,67 @@ async function trovaUltimoModello() {
             const modelliValidi = data.models
                 .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
-                // Idea di gemini
-                // 2. La nostra "scala gerarchica" di priorità
+            
+            // Idea di gemini
+            // 2. La nostra "scala gerarchica" di priorità
             const preferiti = [
                 "gemini-3.1-flash", 
                 "gemini-1.5-flash", 
                 "gemini-2.0-flash-lite", 
                 "gemini-flash-lite-latest"
             ];
+
             // 3. Il TEST: proviamo a scalare finché non ne troviamo uno libero
-        for (const modello of preferiti) {
-            if (modelliValidi.includes(modello)) {
-                try {
-                    scriviLog(`[TEST] Verifico disponibilità di: ${modello}...`);
-                    
-                    // Facciamo una chiamata piccolissima di test
-                    const testUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modello}:generateContent?key=${apiKey}`;
-                    const testRes = await fetch(testUrl, {
-                        method: 'POST',
-                        body: JSON.stringify({ contents: [{ parts: [{ text: "hi" }] }] })
-                    });
+            for (const modello of preferiti) {
+                if (modelliValidi.includes(modello)) {
+                    try {
+                        scriviLog(`[TEST] Verifico disponibilità di: ${modello}...`);
+                        
+                        // Facciamo una chiamata piccolissima di test
+                        const testUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modello}:generateContent?key=${apiKey}`;
+                        const testRes = await fetch(testUrl, {
+                            method: 'POST',
+                            body: JSON.stringify({ contents: [{ parts: [{ text: "hi" }] }] })
+                        });
 
-                    if (testRes.status === 200) {
-                        activeGeminiModel = modello;
-                        scriviLog(`[OK] Modello agganciato e funzionante: [ ${activeGeminiModel} ]`);
-                        return; // ABBIAMO TROVATO IL VINCITORE! Esci dalla funzione.
-                    } else if (testRes.status === 503 || testRes.status === 429) {
-                        scriviLog(`[BUSY] ${modello} è intasato (Errore ${testRes.status}). Scalo al prossimo...`);
+                        if (testRes.status === 200) {
+                            activeGeminiModel = modello;
+                            scriviLog(`[OK] Modello agganciato e funzionante: [ ${activeGeminiModel} ]`);
+                            return; // ABBIAMO TROVATO IL VINCITORE! Esci dalla funzione.
+                        } else if (testRes.status === 503 || testRes.status === 429) {
+                            scriviLog(`[BUSY] ${modello} è intasato (Errore ${testRes.status}). Scalo al prossimo...`);
+                        }
+                    } catch (err) {
+                        scriviLog(`[SALTO] Errore tecnico su ${modello}, provo il prossimo.`);
                     }
-                } catch (err) {
-                    scriviLog(`[SALTO] Errore tecnico su ${modello}, provo il prossimo.`);
                 }
-              }
-           }
-            // 4. Ultima spiaggia: se nessuno dei preferiti risponde, prova il primo della lista generale
-        if (!activeGeminiModel && modelliValidi.length > 0) {
-            activeGeminiModel = modelliValidi[0];
-            scriviLog(`[AVVISO] Nessun preferito disponibile. Uso emergenza: ${activeGeminiModel}`);
-        }
-        // Idea di gemini fine
-         /*   const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
-            modelliFlash.sort((a, b) => b.localeCompare(a));
+            } // Fine FOR
 
-            if (modelliFlash.length > 0) {
-                activeGeminiModel = modelliFlash[0];
-            } else if (modelliValidi.length > 0) {
-                modelliValidi.sort((a, b) => b.localeCompare(a));
+            // 4. Ultima spiaggia: se nessuno dei preferiti risponde, prova il primo della lista generale
+            if (!activeGeminiModel && modelliValidi.length > 0) {
                 activeGeminiModel = modelliValidi[0];
+                scriviLog(`[AVVISO] Nessun preferito disponibile. Uso emergenza: ${activeGeminiModel}`);
             }
-        }
-        */
+            // Idea di gemini fine
+        } // Fine IF (data.models)
+        
     } catch (e) {
         scriviLog(`[ATTENZIONE] Ricerca modelli fallita. Uso modello di riserva.`);
+        activeGeminiModel = "gemini-1.5-flash"; 
     }
-}
 
+    /* // IL TUO VECCHIO CODICE (COMMENTATO) RIMANE QUI SOTTO COME VOLEVI
+    const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
+    modelliFlash.sort((a, b) => b.localeCompare(a));
+
+    if (modelliFlash.length > 0) {
+        activeGeminiModel = modelliFlash[0];
+    } else if (modelliValidi.length > 0) {
+        modelliValidi.sort((a, b) => b.localeCompare(a));
+        activeGeminiModel = modelliValidi[0];
+    }
+    */
+} // Fine FUNZIONE
 // ---------------------------------------------------------------------------
 // FETCH RSS — solo notizie fresche (max 48 ore)
 // ---------------------------------------------------------------------------
