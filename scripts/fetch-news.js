@@ -143,32 +143,39 @@ async function callGemini(sys, prompt) {
             if (d.error) {
                 scriviLog(`[ERRORE API GEMINI] ${d.error.message}`);
 
-                // Se l'errore è di quota, aspetta e riprova il ciclo
-               if (d.error) {
-    const msg = d.error.message.toLowerCase();
-    
-    // CASO A: Quota Giornaliera (Blocco totale)
-    if (msg.includes("per day") || msg.includes("limit: 500")) {
-        scriviLog("❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.");
-        return null; // Esci subito dal ciclo, non serve aspettare 30s
-    }
+                const msg = d.error.message.toLowerCase();
 
-    // CASO B: Quota al Minuto (Blocco temporaneo)
-    if (d.error.code === 429 || msg.includes("quota")) {
-        const msAttesa = Math.pow(2, i) * 30000;
-        scriviLog(`⏳ [LIMITE AL MINUTO] Attendo ${msAttesa / 1000}s...`);
-        await new Promise(r => setTimeout(r, msAttesa));
-        continue;
+                // CASO A: Quota Giornaliera (Blocco totale)
+                if (msg.includes("per day") || msg.includes("limit: 500")) {
+                    scriviLog("❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.");
+                    return null;
+                }
+
+                // CASO B: Quota al Minuto (Blocco temporaneo)
+                if (d.error.code === 429 || msg.includes("quota")) {
+                    const msAttesa = Math.pow(2, i) * 30000;
+                    scriviLog(`⏳ [LIMITE AL MINUTO] Attendo ${msAttesa / 1000}s...`);
+                    await new Promise(r => setTimeout(r, msAttesa));
+                    continue;
+                }
+
+                return null;
+            }
+
+            // Se arriviamo qui, non c'è errore: estraiamo il testo
+            const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (!text) return null;
+
+            return text;
+
+        } catch (e) {
+            scriviLog(`[ECCEZIONE callGemini tentativo ${i + 1}] ${e.message}`);
+            if (i === 2) return null;
+        }
     }
-    
     return null;
 }
 
-// Se arriviamo qui, non c'è errore: estraiamo il testo
-            const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
-            if (!text) return null;
-            
-            return text;
 /**
  * Pulisce il JSON in modo chirurgico
  */
