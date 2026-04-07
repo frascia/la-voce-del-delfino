@@ -81,7 +81,7 @@ async function trovaUltimoModello() {
                 "gemini-flash-lite-latest"
             ];
             // 3. Il TEST: proviamo a scalare finché non ne troviamo uno libero
-        for (const modello da testare of preferiti) {
+        for (const modello of preferiti) {
             if (modelliValidi.includes(modello)) {
                 try {
                     scriviLog(`[TEST] Verifico disponibilità di: ${modello}...`);
