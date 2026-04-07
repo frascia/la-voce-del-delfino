@@ -77,26 +77,30 @@ async function trovaUltimoModello() {
             // 2. La nostra "scala gerarchica" di priorità
        
            
-        const preferiti = [
-            "gemini-3.1-flash-latest", // <--- Con il -latest non fallisce il "found"
-            "gemini-1.5-flash-latest", // <--- Con il -latest non fallisce il "found"
-            //"gemini-1.5-flash",        // Teniamo anche questo per sicurezza
-            "gemini-flash-lite-latest"
-];
+            const preferiti = [
+                "gemini-3.1-flash-latest",
+                "gemini-1.5-flash-latest",
+                "gemini-1.5-flash-002",
+                "gemini-flash-lite-latest" 
+            ];
 
             // 3. Il TEST: proviamo a scalare finché non ne troviamo uno libero
             for (const modello of preferiti) {
                 if (modelliValidi.includes(modello)) {
                     try {
-                        scriviLog(`[TEST] Verifico disponibilità di: ${modello}...`);
+                        scriviLog(`[STRESS-TEST] Provo carico reale su: ${modello}...`);
                         
-                        // Facciamo una chiamata piccolissima di test
                         const testUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modello}:generateContent?key=${apiKey}`;
                         const testRes = await fetch(testUrl, {
                             method: 'POST',
-                            body: JSON.stringify({ contents: [{ parts: [{ text: "hi" }] }] })
-                        });
-
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ 
+                                contents: [{ 
+                                    parts: [{ text: "Analizza brevemente questa frase: 'Il Delfino di Pescara nuota nel mare Adriatico'." }] 
+                                }],
+                                generationConfig: { maxOutputTokens: 10 } // Query piccola ma che richiede "ragionamento"
+                            })
+                        }); 
                         if (testRes.status === 200) {
                             activeGeminiModel = modello;
                             scriviLog(`[OK] Modello agganciato e funzionante: [ ${activeGeminiModel} ]`);
