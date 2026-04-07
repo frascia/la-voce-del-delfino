@@ -164,17 +164,11 @@ async function callGemini(sys, prompt) {
     return null;
 }
 
-{
+// Se arriviamo qui, non c'è errore: estraiamo il testo
             const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (!text) return null;
             
-            if (!text) {
-                return null;
-            }
             return text;
-            
-       
-}
-
 /**
  * Pulisce il JSON in modo chirurgico
  */
