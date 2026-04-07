@@ -1,0 +1,73 @@
+name: 🛠️ Redazione Manuale
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-trigger:
+    runs-on: ubuntu-latest
+    # Ignora i commit fatti dal bot stesso (evita loop infiniti)
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configura credenziali git
+        run: |
+          git config user.name "La Voce del Delfino Bot"
+          git config user.email "bot@lavocedeldelfino.it"
+
+      # -----------------------------------------------------------------------
+      # [run-1] → esegue FASE 1, poi 2, poi 3
+      # -----------------------------------------------------------------------
+      - name: "[run-1] FASE 1 — Fetch RSS + Gemini"
+        if: "contains(github.event.head_commit.message, '[run-1]')"
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
+        run: node scripts/1-fetch.js
+
+      - name: "[run-1] FASE 2 — Elaborazione"
+        if: "contains(github.event.head_commit.message, '[run-1]')"
+        env:
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
+        run: node scripts/2-elabora.js
+
+      - name: "[run-1] FASE 3 — Deploy"
+        if: "contains(github.event.head_commit.message, '[run-1]')"
+        run: node scripts/3-deploy.js
+
+      # -----------------------------------------------------------------------
+      # [run-2] → esegue solo FASE 2, poi 3 (riusa il _draft.json esistente)
+      # -----------------------------------------------------------------------
+      - name: "[run-2] FASE 2 — Elaborazione"
+        if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
+        env:
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
+        run: node scripts/2-elabora.js
+
+      - name: "[run-2] FASE 3 — Deploy"
+        if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
+        run: node scripts/3-deploy.js
+
+      # -----------------------------------------------------------------------
+      # [run-3] → esegue solo FASE 3 (riusa il _articles.json esistente)
+      # -----------------------------------------------------------------------
+      - name: "[run-3] FASE 3 — Deploy"
+        if: "contains(github.event.head_commit.message, '[run-3]') && !contains(github.event.head_commit.message, '[run-1]') && !contains(github.event.head_commit.message, '[run-2]')"
+        run: node scripts/3-deploy.js
