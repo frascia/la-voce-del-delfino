@@ -1,4 +1,4 @@
-    #!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * 1-fetch.js
  * FASE 1: Legge la config, chiama Google News RSS e Gemini AI.
