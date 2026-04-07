@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "07/04, 16:10",
+  "oraAggiornamento": "07/04, 16:29",
   "configUsata": "/home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/config_mar.json",
   "sezioni": {
     "pescara": {
@@ -39,8 +39,8 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
-            "titolo": "Mistero su: L'uomo che dice glugluglu senza bere",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'uomo che dice glugluglu senza bere\", ma un gabbiano ci ha rubato gli appunti."
+            "titolo": "Mistero su: Il taccagno compra qualcosa di costoso",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Il taccagno compra qualcosa di costoso\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "Fake.webp"
@@ -49,8 +49,38 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
-            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
+            "titolo": "Mistero su: L'IA impara il dialetto pescarese",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'IA impara il dialetto pescarese\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
+            "titolo": "Mistero su: Il taccagno compra qualcosa di costoso",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Il taccagno compra qualcosa di costoso\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
+            "titolo": "Mistero su: L'IA impara il dialetto pescarese",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'IA impara il dialetto pescarese\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
+            "titolo": "Mistero su: Il taccagno compra qualcosa di costoso",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Il taccagno compra qualcosa di costoso\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "Fake.webp"
@@ -89,8 +119,8 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
-            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
+            "titolo": "Mistero su: Il taccagno compra qualcosa di costoso",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Il taccagno compra qualcosa di costoso\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "Fake.webp"
@@ -101,36 +131,6 @@
           "fallback": {
             "titolo": "Mistero su: L'uomo che dice glugluglu senza bere",
             "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'uomo che dice glugluglu senza bere\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: L'uomo che dice glugluglu senza bere",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'uomo che dice glugluglu senza bere\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: L'uomo che dice glugluglu senza bere",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'uomo che dice glugluglu senza bere\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: Lo smartwork poco smart",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Lo smartwork poco smart\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "Fake.webp"
@@ -140,6 +140,16 @@
     "mondo": {
       "color": "#edcab4",
       "articoli": [
+        {
+          "tipo": "vera",
+          "raw": null,
+          "fallback": {
+            "titolo": "Novità streaming di aprile 2026: i film e le serie da non perdere",
+            "articolo": "Notizia battuta dalle agenzie: \"Novità streaming di aprile 2026: i film e le serie da non perdere\". L'Intelligenza Artificiale è in pausa caffè."
+          },
+          "categoria": "Streaming",
+          "immagine": "Concerti.webp"
+        },
         {
           "tipo": "vera",
           "raw": null,
@@ -154,10 +164,10 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "X-Men, ci sono importantissime novità per il film reboot dei Marvel Studios",
-            "articolo": "Notizia battuta dalle agenzie: \"X-Men, ci sono importantissime novità per il film reboot dei Marvel Studios\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Novità streaming di aprile 2026: i film e le serie da non perdere",
+            "articolo": "Notizia battuta dalle agenzie: \"Novità streaming di aprile 2026: i film e le serie da non perdere\". L'Intelligenza Artificiale è in pausa caffè."
           },
-          "categoria": "Streaming",
+          "categoria": "Prime",
           "immagine": "Concerti.webp"
         },
         {
@@ -174,18 +184,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Quattordici film e due serie tv da guardare su Prime Video nel weekend di Pasqua (3-6 aprile)",
-            "articolo": "Notizia battuta dalle agenzie: \"Quattordici film e due serie tv da guardare su Prime Video nel weekend di Pasqua (3-6 aprile)\". L'Intelligenza Artificiale è in pausa caffè."
-          },
-          "categoria": "Prime",
-          "immagine": "Concerti.webp"
-        },
-        {
-          "tipo": "vera",
-          "raw": null,
-          "fallback": {
-            "titolo": "Verso Vinitaly 2026: Giappone, Brasile, Cina, Vietnam, la nuova geografia del vino che fa bene alle cantine",
-            "articolo": "Notizia battuta dalle agenzie: \"Verso Vinitaly 2026: Giappone, Brasile, Cina, Vietnam, la nuova geografia del vino che fa bene alle cantine\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Giappone approva il bilancio più alto di sempre, 664 mld €",
+            "articolo": "Notizia battuta dalle agenzie: \"Giappone approva il bilancio più alto di sempre, 664 mld €\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Giappone",
           "immagine": "Giappone.webp"
@@ -194,8 +194,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Giappone approva il bilancio più alto di sempre, 664 mld €",
-            "articolo": "Notizia battuta dalle agenzie: \"Giappone approva il bilancio più alto di sempre, 664 mld €\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Allerta risveglio orsi in Giappone, scatta piano nazionale d'emergenza",
+            "articolo": "Notizia battuta dalle agenzie: \"Allerta risveglio orsi in Giappone, scatta piano nazionale d'emergenza\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Giappone",
           "immagine": "Giappone.webp"
@@ -254,8 +254,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Google lancia un’app di dettatura AI offline su iOS: cos’è Edge Eloquent",
-            "articolo": "Notizia battuta dalle agenzie: \"Google lancia un’app di dettatura AI offline su iOS: cos’è Edge Eloquent\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "AI, lavoro a rischio per i redditi alti: dalla finanza ai legali, i profili più esposti",
+            "articolo": "Notizia battuta dalle agenzie: \"AI, lavoro a rischio per i redditi alti: dalla finanza ai legali, i profili più esposti\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Futuro",
           "immagine": "Ai.webp"
