@@ -10,7 +10,8 @@
       "Il taccagno compra qualcosa di costoso",
       "Lo smartwork poco smart",
       "L'uomo che dice glugluglu senza bere",
-      "L'IA impara il dialetto pescarese"
+      "L'IA impara il dialetto pescarese",
+      "L'organizzazione che manca in ufficio"
     ]
   },
   "pescara": {
@@ -19,53 +20,60 @@
       "count": 5,
       "img": "Calcio.webp",
       "label": "Calcio",
-      "mood": "ultras pescarese",
-      "weight": 0.8
+      "mood": "fanatico ultras pescarese",
+      "weight": 1
     },
     "Meteo Pescara": {
       "count": 2,
       "img": "Meteo.webp",
       "label": "Meteo Pescara",
-      "mood": "ottimista",
-      "weight": 0.3
+      "mood": "menefreghista",
+      "weight": 0.8
     },
     "Satira": {
       "count": 4,
       "img": "Fake.webp",
       "label": "Satira",
-      "mood": "ironico",
-      "weight": 1
+      "mood": "ironico e credulone",
+      "weight": 0.6
     }
   },
   "mondo": {
     "color": "#edcab4",
-    "Netflix": {
+    "Novità serie Netflix": {
       "count": 2,
       "img": "Concerti.webp",
       "label": "Streaming",
-      "mood": "sarcastico",
+      "mood": "meravigliato",
+      "weight": 0.7
+    },
+    "Novità Prime": {
+      "count": 2,
+      "img": "Concerti.webp",
+      "label": "Streaming",
+      "mood": "dubbioso",
       "weight": 0.7
     },
     "Giappone": {
       "count": 2,
       "img": "Giappone.webp",
       "label": "Giappone",
-      "mood": "curioso",
+      "mood": "appassionato e sognante",
       "weight": 0.5
     },
     "Danimarca": {
       "count": 2,
       "img": "Danimarca.webp",
       "label": "Danimarca",
-      "mood": "nordico",
+      "mood": "meravigliato",
       "weight": 0.4
     },
     "Intelligenza Artificiale": {
       "count": 2,
       "img": "Ai.webp",
       "label": "Futuro",
-      "mood": "saggio",
-      "weight": 0.4
+      "mood": "conservatore",
+      "weight": 0.6
     }
   }
 }
