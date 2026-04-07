@@ -4740,3 +4740,330 @@ Please retry in 16.175005094s.
 [07/04/2026, 21:01:44] [3-deploy] [git] [main c7c0978] 🤖 Aggiornamento redazione 07/04, 20:44 [skip ci]
  7 files changed, 293 insertions(+), 198 deletions(-)
 [07/04/2026, 21:01:44] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[07/04/2026, 21:49:10] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[07/04/2026, 21:49:10] [1-fetch] [DEBUG] Modelli che Google mi offre: gemini-2.5-flash, gemini-2.5-pro, gemini-2.0-flash, gemini-2.0-flash-001, gemini-2.0-flash-lite-001, gemini-2.0-flash-lite, gemini-2.5-flash-preview-tts, gemini-2.5-pro-preview-tts, gemini-flash-latest, gemini-flash-lite-latest, gemini-pro-latest, gemini-2.5-flash-lite, gemini-2.5-flash-image, gemini-3-pro-preview, gemini-3-flash-preview, gemini-3.1-pro-preview, gemini-3.1-pro-preview-customtools, gemini-3.1-flash-lite-preview, gemini-3-pro-image-preview, gemini-3.1-flash-image-preview, gemini-robotics-er-1.5-preview, gemini-2.5-computer-use-preview-10-2025
+[07/04/2026, 21:49:10] [1-fetch] [STRESS-TEST] Provo carico reale su: gemini-2.0-flash...
+[07/04/2026, 21:49:10] [1-fetch] [BUSY] gemini-2.0-flash è intasato (Errore 429). Scalo al prossimo...
+[07/04/2026, 21:49:10] [1-fetch] [STRESS-TEST] Provo carico reale su: gemini-2.5-flash...
+[07/04/2026, 21:49:11] [1-fetch] [OK] Modello agganciato e funzionante: [ gemini-2.5-flash ]
+[07/04/2026, 21:49:11] [1-fetch] 🤖 Modello agganciato: [ gemini-2.5-flash ]
+[07/04/2026, 21:49:11] [1-fetch] Lancio le reti per: Pescara Calcio (target: 2)
+[07/04/2026, 21:49:11] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 48.22710708s.
+[07/04/2026, 21:49:11] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 21:49:42] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 17.915869497s.
+[07/04/2026, 21:49:42] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 21:50:42] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 17.655625213s.
+[07/04/2026, 21:50:42] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 21:52:42] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 17.294490487s.
+[07/04/2026, 21:52:42] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 21:53:12] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 47.087645076s.
+[07/04/2026, 21:53:12] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 21:54:25] [1-fetch] Lancio le reti per: Eventi e attività vicino Pescara (target: 5)
+[07/04/2026, 21:54:25] [1-fetch] [CASCATA] Solo 0 notizie fresche per Eventi e attività vicino Pescara. Passo 5 alla prossima categoria.
+[07/04/2026, 21:54:25] [1-fetch] Lancio le reti per: Meteo Pescara (target: 7)
+[07/04/2026, 21:54:26] [1-fetch] [CASCATA] Solo 1 notizie fresche per Meteo Pescara. Passo 6 alla prossima categoria.
+[07/04/2026, 21:54:26] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 33.51569616s.
+[07/04/2026, 21:54:26] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 21:54:56] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 3.340020546s.
+[07/04/2026, 21:54:56] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 21:55:56] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 3.1072875s.
+[07/04/2026, 21:55:56] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 21:57:57] [1-fetch] Lancio le reti per: Satira (target: 10)
+[07/04/2026, 21:57:57] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 2.832617666s.
+[07/04/2026, 21:57:57] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 21:58:27] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 32.605291703s.
+[07/04/2026, 21:58:27] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 21:59:27] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 32.270399071s.
+[07/04/2026, 21:59:27] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:01:28] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 32.009281549s.
+[07/04/2026, 22:01:28] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:01:58] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 1.814327043s.
+[07/04/2026, 22:01:58] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:02:58] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 1.422040563s.
+[07/04/2026, 22:02:58] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:04:58] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 1.166198101s.
+[07/04/2026, 22:04:58] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:05:29] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 30.876582745s.
+[07/04/2026, 22:05:29] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:06:29] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 30.527226899s.
+[07/04/2026, 22:06:29] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:08:29] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 30.105359097s.
+[07/04/2026, 22:08:29] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:09:00] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 59.882335541s.
+[07/04/2026, 22:09:00] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:10:00] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 59.594595192s.
+[07/04/2026, 22:10:00] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:12:00] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 59.239057212s.
+[07/04/2026, 22:12:00] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:12:31] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 29.032912707s.
+[07/04/2026, 22:12:31] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:13:31] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 28.709761574s.
+[07/04/2026, 22:13:31] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:15:31] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 28.25877994s.
+[07/04/2026, 22:15:31] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:16:02] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 58.058241092s.
+[07/04/2026, 22:16:02] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:17:02] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 57.790717727s.
+[07/04/2026, 22:17:02] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:19:02] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 57.576549909s.
+[07/04/2026, 22:19:02] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:19:32] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 27.373476626s.
+[07/04/2026, 22:19:32] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:20:32] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 27.13258297s.
+[07/04/2026, 22:20:32] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:22:33] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 26.819375953s.
+[07/04/2026, 22:22:33] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:23:03] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 56.463060656s.
+[07/04/2026, 22:23:03] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:24:03] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 56.24185419s.
+[07/04/2026, 22:24:03] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:26:04] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 55.97746064s.
+[07/04/2026, 22:26:04] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:26:34] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 25.78268183s.
+[07/04/2026, 22:26:34] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:27:34] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 25.24993523s.
+[07/04/2026, 22:27:34] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:29:35] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 24.957374523s.
+[07/04/2026, 22:29:35] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:30:05] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 54.751857466s.
+[07/04/2026, 22:30:05] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:31:05] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 54.534314998s.
+[07/04/2026, 22:31:05] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:33:05] [1-fetch] Sezione pescara: 13 elementi raccolti.
+[07/04/2026, 22:33:05] [1-fetch] Lancio le reti per: Novità serie Netflix (target: 2)
+[07/04/2026, 22:33:06] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 53.642536616s.
+[07/04/2026, 22:33:06] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:33:36] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 23.457921299s.
+[07/04/2026, 22:33:36] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:34:36] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 23.117528914s.
+[07/04/2026, 22:34:36] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:36:37] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 22.852827229s.
+[07/04/2026, 22:36:37] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:37:07] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 52.668099249s.
+[07/04/2026, 22:37:07] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:38:07] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 52.404020185s.
+[07/04/2026, 22:38:07] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:40:07] [1-fetch] Lancio le reti per: Novità Prime (target: 2)
+[07/04/2026, 22:40:08] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 51.393818452s.
+[07/04/2026, 22:40:08] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:40:38] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 21.097493711s.
+[07/04/2026, 22:40:38] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:41:39] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 20.868817853s.
+[07/04/2026, 22:41:39] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:43:39] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 20.570716852s.
+[07/04/2026, 22:43:39] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:44:09] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 50.352800813s.
+[07/04/2026, 22:44:09] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:45:09] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 50.079239142s.
+[07/04/2026, 22:45:09] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:47:10] [1-fetch] Lancio le reti per: Giappone (target: 2)
+[07/04/2026, 22:47:10] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 49.351756947s.
+[07/04/2026, 22:47:10] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:47:40] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 19.206904704s.
+[07/04/2026, 22:47:40] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:48:41] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 18.986314417s.
+[07/04/2026, 22:48:41] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:50:41] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 18.771976646s.
+[07/04/2026, 22:50:41] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:51:11] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 48.496586644s.
+[07/04/2026, 22:51:11] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:52:11] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 48.165602608s.
+[07/04/2026, 22:52:11] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:54:11] [1-fetch] Lancio le reti per: Danimarca (target: 2)
+[07/04/2026, 22:54:12] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 47.182293417s.
+[07/04/2026, 22:54:12] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:54:43] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 16.998958934s.
+[07/04/2026, 22:54:43] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:55:43] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 16.751056983s.
+[07/04/2026, 22:55:43] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 22:57:43] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 16.549569707s.
+[07/04/2026, 22:57:43] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 22:58:13] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 46.224397111s.
+[07/04/2026, 22:58:13] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 22:59:14] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 45.849058681s.
+[07/04/2026, 22:59:14] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 23:01:14] [1-fetch] Lancio le reti per: Brasile (target: 2)
+[07/04/2026, 23:01:15] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 44.869319839s.
+[07/04/2026, 23:01:15] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 23:01:45] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 14.699155866s.
+[07/04/2026, 23:01:45] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 23:02:45] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 14.467183315s.
+[07/04/2026, 23:02:45] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 23:04:46] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 14.089772439s.
+[07/04/2026, 23:04:46] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 23:05:16] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 43.872630666s.
+[07/04/2026, 23:05:16] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 23:06:16] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 43.624294922s.
+[07/04/2026, 23:06:16] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 23:08:16] [1-fetch] Lancio le reti per: Intelligenza Artificiale (target: 2)
+[07/04/2026, 23:08:17] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 42.645411485s.
+[07/04/2026, 23:08:17] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 23:08:47] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 12.34827049s.
+[07/04/2026, 23:08:47] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 23:09:47] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 12.100303847s.
+[07/04/2026, 23:09:47] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 23:11:48] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 11.813222987s.
+[07/04/2026, 23:11:48] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[07/04/2026, 23:12:18] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 41.617339582s.
+[07/04/2026, 23:12:18] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 60s...
+[07/04/2026, 23:13:18] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 41.383399768s.
+[07/04/2026, 23:13:18] [1-fetch] ⏳ [LIMITE AL MINUTO] Attendo 120s...
+[07/04/2026, 23:15:18] [1-fetch] Sezione mondo: 12 elementi raccolti.
+[07/04/2026, 23:15:18] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 75
+[07/04/2026, 23:15:18] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[07/04/2026, 23:15:18] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[07/04/2026, 23:15:18] [2-elabora] Sezione pescara: 13 articoli elaborati.
+[07/04/2026, 23:15:18] [2-elabora] Sezione mondo: 12 articoli elaborati.
+[07/04/2026, 23:15:18] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[07/04/2026, 23:15:18] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[07/04/2026, 23:15:18] [3-deploy] 📄 Scritto: news-pescara.json (13 articoli)
+[07/04/2026, 23:15:18] [3-deploy] 📄 Scritto: news-mondo.json (12 articoli)
+[07/04/2026, 23:15:18] [3-deploy] 🕐 Ora aggiornamento: 07/04, 21:49
