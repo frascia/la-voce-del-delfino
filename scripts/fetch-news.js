@@ -144,15 +144,26 @@ async function callGemini(sys, prompt) {
                 scriviLog(`[ERRORE API GEMINI] ${d.error.message}`);
 
                 // Se l'errore è di quota, aspetta e riprova il ciclo
-                if (d.error.code === 429 || d.error.message.toLowerCase().includes("quota")) {
-                    const msAttesa =30000;
-                    scriviLog(`> ⏳ Quota superata. Attendo ${msAttesa / 1000}s prima del tentativo ${i + 2}...`);
-                    await new Promise(r => setTimeout(r, msAttesa));
-                    continue; // Torna all'inizio del ciclo 'for' per riprovare
-                }
+               if (d.error) {
+    const msg = d.error.message.toLowerCase();
+    
+    // CASO A: Quota Giornaliera (Blocco totale)
+    if (msg.includes("per day") || msg.includes("limit: 500")) {
+        scriviLog("❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.");
+        return null; // Esci subito dal ciclo, non serve aspettare 30s
+    }
 
-                return null; // Per altri tipi di errore (es. 400, 401), esce
-            }
+    // CASO B: Quota al Minuto (Blocco temporaneo)
+    if (d.error.code === 429 || msg.includes("quota")) {
+        const msAttesa = Math.pow(2, i) * 30000;
+        scriviLog(`⏳ [LIMITE AL MINUTO] Attendo ${msAttesa / 1000}s...`);
+        await new Promise(r => setTimeout(r, msAttesa));
+        continue;
+    }
+    
+    return null;
+}
+
 
             const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
             
