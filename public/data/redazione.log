@@ -4262,3 +4262,55 @@ Please retry in 49.234792199s.
 [07/04/2026, 17:51:24] [3-deploy] [git] [main 87b9710] 🤖 Aggiornamento redazione 07/04, 17:51 [skip ci]
  7 files changed, 147 insertions(+), 94 deletions(-)
 [07/04/2026, 17:51:25] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[07/04/2026, 18:00:46] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[07/04/2026, 18:00:47] [1-fetch] [TEST] Verifico disponibilità di: gemini-flash-lite-latest...
+[07/04/2026, 18:00:53] [1-fetch] [OK] Modello agganciato e funzionante: [ gemini-flash-lite-latest ]
+[07/04/2026, 18:00:53] [1-fetch] 🤖 Modello agganciato: [ gemini-flash-lite-latest ]
+[07/04/2026, 18:00:53] [1-fetch] Lancio le reti per: Pescara Calcio (target: 2)
+[07/04/2026, 18:01:08] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:08] [1-fetch] Lancio le reti per: Eventi e attività vicino Pescara (target: 5)
+[07/04/2026, 18:01:09] [1-fetch] [CASCATA] Solo 0 notizie fresche per Eventi e attività vicino Pescara. Passo 5 alla prossima categoria.
+[07/04/2026, 18:01:09] [1-fetch] Lancio le reti per: Meteo Pescara (target: 7)
+[07/04/2026, 18:01:09] [1-fetch] [CASCATA] Solo 1 notizie fresche per Meteo Pescara. Passo 6 alla prossima categoria.
+[07/04/2026, 18:01:20] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:20] [1-fetch] Lancio le reti per: Satira (target: 10)
+[07/04/2026, 18:01:21] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:26] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:27] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:29] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:35] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:47] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:48] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:49] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:01:50] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:10] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:10] [1-fetch] Sezione pescara: 13 elementi raccolti.
+[07/04/2026, 18:02:10] [1-fetch] Lancio le reti per: Novità serie Netflix (target: 2)
+[07/04/2026, 18:02:11] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:13] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:13] [1-fetch] Lancio le reti per: Novità Prime (target: 2)
+[07/04/2026, 18:02:16] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:16] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:16] [1-fetch] Lancio le reti per: Giappone (target: 2)
+[07/04/2026, 18:02:17] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:17] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:17] [1-fetch] Lancio le reti per: Danimarca (target: 2)
+[07/04/2026, 18:02:20] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:21] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:21] [1-fetch] Lancio le reti per: Brasile (target: 2)
+[07/04/2026, 18:02:22] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:23] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:23] [1-fetch] Lancio le reti per: Intelligenza Artificiale (target: 2)
+[07/04/2026, 18:02:24] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:24] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[07/04/2026, 18:02:24] [1-fetch] Sezione mondo: 12 elementi raccolti.
+[07/04/2026, 18:02:24] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 25
+[07/04/2026, 18:02:24] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[07/04/2026, 18:02:24] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[07/04/2026, 18:02:24] [2-elabora] Sezione pescara: 13 articoli elaborati.
+[07/04/2026, 18:02:24] [2-elabora] Sezione mondo: 12 articoli elaborati.
+[07/04/2026, 18:02:24] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[07/04/2026, 18:02:24] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[07/04/2026, 18:02:24] [3-deploy] 📄 Scritto: news-pescara.json (13 articoli)
+[07/04/2026, 18:02:24] [3-deploy] 📄 Scritto: news-mondo.json (12 articoli)
+[07/04/2026, 18:02:24] [3-deploy] 🕐 Ora aggiornamento: 07/04, 18:00

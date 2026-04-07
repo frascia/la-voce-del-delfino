@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "07/04, 17:51",
+  "oraAggiornamento": "07/04, 18:00",
   "configUsata": "/home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/config_mar.json",
   "sezioni": {
     "pescara": {
@@ -7,7 +7,7 @@
       "articoli": [
         {
           "tipo": "vera",
-          "raw": null,
+          "raw": "{\n  \"titolo\": \"Il richiamo di Insigne: la crisi del calcio italiano non è anagrafica ma di identità\",\n  \"articolo\": \"Lorenzo Insigne, ex capitano del Napoli e attuale calciatore del Toronto FC, è tornato a far parlare di sé in merito allo stato di salute del calcio italiano. Durante una recente visita a Pescara, città che ha rappresentato un trampolino di lancio fondamentale per la sua carriera sotto la guida di Zdeněk Zeman, l'attaccante ha offerto una riflessione lucida sulla crisi della Nazionale azzurra. Secondo Insigne, il problema strutturale che affligge il sistema non risiede nella mancanza di talento dei giovani, né in una presunta carenza di ricambio generazionale, bensì in una progressiva erosione della passione e della cultura del lavoro quotidiano. L'ex azzurro ha sottolineato come il calcio italiano fatichi a trasmettere ai nuovi profili quel senso di appartenenza e quella fame agonistica che un tempo rendevano i giocatori tricolori ambiti in tutto il mondo. La riflessione tocca il cuore del dibattito sportivo nazionale: le infrastrutture carenti e la gestione dei vivai sono certamente nodi cruciali, ma il monito di Insigne sposta l'attenzione sull'aspetto motivazionale e sulla qualità della formazione tecnica. Senza una rinnovata dedizione al sacrificio e una valorizzazione reale del merito, il calcio italiano rischia di restare intrappolato in un limbo di mediocrità, incapace di competere ai massimi livelli internazionali nonostante la ricchezza di potenzialità individuali ancora presenti nel Paese.\",\n  \"commento\": \"Il Delfino osserva: quando un giocatore che ha scelto i dollari del Canada si permette di impartire lezioni di 'fame' e 'passione', la metafora del sistema italiano è completa. Si gioca per il contratto o per la maglia? La risposta è scritta nei risultati delle ultime qualificazioni mondiali.\"\n}",
           "fallback": {
             "titolo": "Non è questione di giovani, è questione di passione. Insigne al Pescara evidenzia i veri problemi della Nazionale",
             "articolo": "Notizia battuta dalle agenzie: \"Non è questione di giovani, è questione di passione. Insigne al Pescara evidenzia i veri problemi della Nazionale\". L'Intelligenza Artificiale è in pausa caffè."
@@ -39,8 +39,28 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
+            "titolo": "Mistero su: L'organizzazione che manca in ufficio",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'organizzazione che manca in ufficio\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
             "titolo": "Mistero su: Lo smartwork poco smart",
             "articolo": "Avevamo in serbo uno scoop clamoroso su \"Lo smartwork poco smart\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
+            "titolo": "Mistero su: L'IA impara il dialetto pescarese",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'IA impara il dialetto pescarese\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "Fake.webp"
@@ -59,6 +79,26 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
+            "titolo": "Mistero su: L'uomo che dice glugluglu senza bere",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'uomo che dice glugluglu senza bere\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
+            "titolo": "Mistero su: L'IA impara il dialetto pescarese",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'IA impara il dialetto pescarese\", ma un gabbiano ci ha rubato gli appunti."
+          },
+          "categoria": "Satira",
+          "immagine": "Fake.webp"
+        },
+        {
+          "tipo": "satira",
+          "raw": null,
+          "fallback": {
             "titolo": "Mistero su: L'IA impara il dialetto pescarese",
             "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'IA impara il dialetto pescarese\", ma un gabbiano ci ha rubato gli appunti."
           },
@@ -89,48 +129,8 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
-            "titolo": "Mistero su: Il taccagno compra qualcosa di costoso",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Il taccagno compra qualcosa di costoso\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: Il taccagno compra qualcosa di costoso",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Il taccagno compra qualcosa di costoso\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: L'IA impara il dialetto pescarese",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'IA impara il dialetto pescarese\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
             "titolo": "Mistero su: L'uomo che dice glugluglu senza bere",
             "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'uomo che dice glugluglu senza bere\", ma un gabbiano ci ha rubato gli appunti."
-          },
-          "categoria": "Satira",
-          "immagine": "Fake.webp"
-        },
-        {
-          "tipo": "satira",
-          "raw": null,
-          "fallback": {
-            "titolo": "Mistero su: Lo smartwork poco smart",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Lo smartwork poco smart\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "Fake.webp"
@@ -154,8 +154,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Netflix punta sui più piccoli: arriva Playground e si espande l’universo kids tra serie, giochi e apprendimento",
-            "articolo": "Notizia battuta dalle agenzie: \"Netflix punta sui più piccoli: arriva Playground e si espande l’universo kids tra serie, giochi e apprendimento\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Netflix punta sui più piccoli. Arriva Playground e si espande l’universo kids tra serie, giochi e apprendimento",
+            "articolo": "Notizia battuta dalle agenzie: \"Netflix punta sui più piccoli. Arriva Playground e si espande l’universo kids tra serie, giochi e apprendimento\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Streaming",
           "immagine": "Concerti.webp"
