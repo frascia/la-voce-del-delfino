@@ -1,9 +1,9 @@
 {
   "site_settings": {
-    "header_img": "Header2.webp",
+    "header_img": "Header.png",
     "day_banner": "Giovedi.webp",
     "descrizione": "Edizione del Giovedì (ci manca poco)",
-    "last_update": "09/04, 00:21"
+    "last_update": "09/04, 00:28"
   },
   "satira_config": {
     "temi": [
@@ -93,16 +93,16 @@
   },
   "Cultura": {
     "color": "#f5f2a4",
-    "Nuovi film da vedere": {
-      "count": 2,
+    "Libri": {
+      "count": 4,
       "img": "Tv.webp",
       "label": "Da Vedere",
       "mood": "meravigliato",
       "weight": 0.7
     },
-    "Viaggi entusiasmanti": {
-      "count": 2,
-      "img": "Escusioni.webp",
+    "Viaggi": {
+      "count": 6,
+      "img": "Escursioni.webp",
       "label": "Viaggi",
       "mood": "viaggiatore incallito",
       "weight": 0.7
