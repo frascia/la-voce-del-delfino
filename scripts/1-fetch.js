@@ -90,74 +90,23 @@ async function trovaUltimoModello() {
             const modelliValidi = data.models
                 .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
-            
-            // Idea di gemini
-            // 2. La nostra "scala gerarchica" di priorità
-       
-            scriviLog(`[DEBUG] Modelli che Google mi offre: ${modelliValidi.join(", ")}`);
-        const preferiti = [
-            "gemini-2.0-flash",        // Il top attuale nel tuo account
-            "gemini-2.5-flash",        // Velocissimo e molto stabile
-            "gemini-flash-latest",     // L'alias standard
-            "gemini-2.5-flash-lite",   // La versione lite nuova
-            "gemini-flash-lite-latest" // L'ultima spiaggia (quella lenta/busy)
-        ];
-
-            // 3. Il TEST: proviamo a scalare finché non ne troviamo uno libero
-            for (const modello of preferiti) {
-                if (modelliValidi.includes(modello)) {
-                    try {
-                        scriviLog(`[STRESS-TEST] Provo carico reale su: ${modello}...`);
-                        
-                        const testUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modello}:generateContent?key=${apiKey}`;
-                        const testRes = await fetch(testUrl, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ 
-                                contents: [{ 
-                                    parts: [{ text: "Analizza brevemente questa frase: 'Il Delfino di Pescara nuota nel mare Adriatico'." }] 
-                                }],
-                                generationConfig: { maxOutputTokens: 10 } // Query piccola ma che richiede "ragionamento"
-                            })
-                        }); 
-                        if (testRes.status === 200) {
-                            activeGeminiModel = modello;
-                            scriviLog(`[OK] Modello agganciato e funzionante: [ ${activeGeminiModel} ]`);
-                            return; // ABBIAMO TROVATO IL VINCITORE! Esci dalla funzione.
-                        } else if (testRes.status === 503 || testRes.status === 429) {
-                            scriviLog(`[BUSY] ${modello} è intasato (Errore ${testRes.status}). Scalo al prossimo...`);
-                        }
-                    } catch (err) {
-                        scriviLog(`[SALTO] Errore tecnico su ${modello}, provo il prossimo.`);
-                    }
-                }
-            } // Fine FOR
-
-            // 4. Ultima spiaggia: se nessuno dei preferiti risponde, prova il primo della lista generale
-            if (!activeGeminiModel && modelliValidi.length > 0) {
-                activeGeminiModel = modelliValidi[0];
-                scriviLog(`[AVVISO] Nessun preferito disponibile. Uso emergenza: ${activeGeminiModel}`);
-            }
-            // Idea di gemini fine
-        } // Fine IF (data.models)
-        
-    } catch (e) {
-        scriviLog(`[ATTENZIONE] Ricerca modelli fallita. Uso modello di riserva.`);
-        activeGeminiModel = "gemini-1.5-flash-latest"; 
-    }
-
+      
      // IL TUO VECCHIO CODICE (COMMENTATO) RIMANE QUI SOTTO COME VOLEVI
-    const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
-    modelliFlash.sort((a, b) => b.localeCompare(a));
+        const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
+        modelliFlash.sort((a, b) => b.localeCompare(a));
 
-    if (modelliFlash.length > 0) {
-        activeGeminiModel = modelliFlash[0];
-    } else if (modelliValidi.length > 0) {
-        modelliValidi.sort((a, b) => b.localeCompare(a));
-        activeGeminiModel = modelliValidi[0];
+        if (modelliFlash.length > 0) {
+            activeGeminiModel = modelliFlash[0];
+        } else if (modelliValidi.length > 0) {
+            modelliValidi.sort((a, b) => b.localeCompare(a));
+            activeGeminiModel = modelliValidi[0];
+        }
+            scriviLog(`[ECCOLO] ${activeGeminiModel} quello precedente ${modelliFlash?.[1] ?? 'NA'} `);
+       }
+    } catch (e) {
+        scriviLog(`[ERRORE] Impossibile recuperare i modelli: ${e.message}`);
     }
-    scriviLog(`[ECCOLO] ${activeGeminiModel} quello precedente ${modelliFlash?.[1]} `);
-} // Fine FUNZIONE
+} 
 // ---------------------------------------------------------------------------
 // FETCH RSS — solo notizie fresche (max 48 ore)
 // ---------------------------------------------------------------------------
