@@ -46,12 +46,22 @@ if (fs.existsSync(LOG_PATH)) {
     }
 }
 // idea Gemini
-const stats = fs.statSync(LOG_PATH);
-const orePassate = (new Date() - stats.mtime) / (1000 * 60 * 60);
+if (fs.existsSync(LOG_PATH)) {
+    const stats = fs.statSync(LOG_PATH);
+    // Usiamo birthtime per sapere quando il file è stato CREATO
+    const oreDallaCreazione = (new Date() - stats.birthtime) / (1000 * 60 * 60);
 
-// Se sono passate più di 12 ore, cancellalo (indipendentemente dal giorno solare)
-if (orePassate > 12) {
-    fs.unlinkSync(LOG_PATH);
+    console.log(`Il log è stato creato ${oreDallaCreazione.toFixed(1)} ore fa.`);
+
+    if (oreDallaCreazione > 12) {
+        try {
+            fs.unlinkSync(LOG_PATH);
+            console.log("Log vecchio eliminato.");
+            contatoreChiamateApi = 0;
+        } catch (err) {
+            console.error("Impossibile cancellare:", err.message);
+        }
+    }
 }
 // *************************
 // ---------------------------------------------------------------------------
