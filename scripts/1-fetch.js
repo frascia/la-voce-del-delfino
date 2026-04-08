@@ -235,6 +235,12 @@ async function callGemini(sys, prompt) {
 // ---------------------------------------------------------------------------
 
 async function main() {
+    const oraItalia = new Intl.DateTimeFormat("it-IT", {
+      timeZone: "Europe/Rome",
+      dateStyle: "full",
+      timeStyle: "medium",
+     }).format(new Date());
+    scriviLog(`NUOVO RUN  [ ${oraItalia} ]`);
     scriviLog("⚓️ FASE 1 — Avvio fetch RSS + Gemini...");
 
     await trovaUltimoModello();
