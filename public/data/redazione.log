@@ -5804,3 +5804,41 @@ Please retry in 6.575910441s.
 [08/04/2026, 08:41:57] [3-deploy] [git] [main 746dbcf] 🤖 Aggiornamento redazione 08/04, 08:31 [skip ci]
  7 files changed, 299 insertions(+), 96 deletions(-)
 [08/04/2026, 08:41:58] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[08/04/2026, 08:48:18] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[08/04/2026, 08:48:18] [1-fetch] [DEBUG] Modelli che Google mi offre: gemini-2.5-flash, gemini-2.5-pro, gemini-2.0-flash, gemini-2.0-flash-001, gemini-2.0-flash-lite-001, gemini-2.0-flash-lite, gemini-2.5-flash-preview-tts, gemini-2.5-pro-preview-tts, gemini-flash-latest, gemini-flash-lite-latest, gemini-pro-latest, gemini-2.5-flash-lite, gemini-2.5-flash-image, gemini-3-pro-preview, gemini-3-flash-preview, gemini-3.1-pro-preview, gemini-3.1-pro-preview-customtools, gemini-3.1-flash-lite-preview, gemini-3-pro-image-preview, gemini-3.1-flash-image-preview, gemini-robotics-er-1.5-preview, gemini-2.5-computer-use-preview-10-2025
+[08/04/2026, 08:48:18] [1-fetch] [STRESS-TEST] Provo carico reale su: gemini-2.0-flash...
+[08/04/2026, 08:48:19] [1-fetch] [BUSY] gemini-2.0-flash è intasato (Errore 429). Scalo al prossimo...
+[08/04/2026, 08:48:19] [1-fetch] [STRESS-TEST] Provo carico reale su: gemini-2.5-flash...
+[08/04/2026, 08:48:19] [1-fetch] [BUSY] gemini-2.5-flash è intasato (Errore 429). Scalo al prossimo...
+[08/04/2026, 08:48:19] [1-fetch] [STRESS-TEST] Provo carico reale su: gemini-flash-latest...
+[08/04/2026, 08:48:19] [1-fetch] [BUSY] gemini-flash-latest è intasato (Errore 429). Scalo al prossimo...
+[08/04/2026, 08:48:19] [1-fetch] [STRESS-TEST] Provo carico reale su: gemini-2.5-flash-lite...
+[08/04/2026, 08:48:19] [1-fetch] [BUSY] gemini-2.5-flash-lite è intasato (Errore 429). Scalo al prossimo...
+[08/04/2026, 08:48:19] [1-fetch] [STRESS-TEST] Provo carico reale su: gemini-flash-lite-latest...
+[08/04/2026, 08:48:38] [1-fetch] [OK] Modello agganciato e funzionante: [ gemini-flash-lite-latest ]
+[08/04/2026, 08:48:38] [1-fetch] 🤖 Modello agganciato: [ gemini-flash-lite-latest ]
+[08/04/2026, 08:48:38] [1-fetch] Lancio le reti per: Pescara Calcio (target: 1)
+[08/04/2026, 08:48:43] [1-fetch] Lancio le reti per: Eventi e attività vicino Pescara (target: 1)
+[08/04/2026, 08:48:43] [1-fetch] [CASCATA] Solo 0 notizie fresche per Eventi e attività vicino Pescara. Passo 1 alla prossima categoria.
+[08/04/2026, 08:48:43] [1-fetch] Lancio le reti per: Meteo Pescara (target: 2)
+[08/04/2026, 08:48:44] [1-fetch] [CASCATA] Solo 1 notizie fresche per Meteo Pescara. Passo 1 alla prossima categoria.
+[08/04/2026, 08:48:52] [1-fetch] Lancio le reti per: Satira (target: 3)
+[08/04/2026, 08:49:08] [1-fetch] Sezione pescara: 5 elementi raccolti.
+[08/04/2026, 08:49:08] [1-fetch] Lancio le reti per: Novità serie Netflix (target: 2)
+[08/04/2026, 08:49:20] [1-fetch] Lancio le reti per: Novità Prime (target: 2)
+[08/04/2026, 08:49:24] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+[08/04/2026, 08:49:30] [1-fetch] Lancio le reti per: Giappone (target: 2)
+[08/04/2026, 08:49:43] [1-fetch] Lancio le reti per: Danimarca (target: 2)
+[08/04/2026, 08:49:50] [1-fetch] Lancio le reti per: Brasile (target: 2)
+[08/04/2026, 08:49:57] [1-fetch] Lancio le reti per: Intelligenza Artificiale (target: 2)
+[08/04/2026, 08:50:05] [1-fetch] Sezione mondo: 12 elementi raccolti.
+[08/04/2026, 08:50:05] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 17
+[08/04/2026, 08:50:05] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[08/04/2026, 08:50:05] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[08/04/2026, 08:50:05] [2-elabora] Sezione pescara: 5 articoli elaborati.
+[08/04/2026, 08:50:05] [2-elabora] Sezione mondo: 12 articoli elaborati.
+[08/04/2026, 08:50:05] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[08/04/2026, 08:50:05] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[08/04/2026, 08:50:05] [3-deploy] 📄 Scritto: news-pescara.json (5 articoli)
+[08/04/2026, 08:50:05] [3-deploy] 📄 Scritto: news-mondo.json (12 articoli)
+[08/04/2026, 08:50:05] [3-deploy] 🕐 Ora aggiornamento: 08/04, 08:48
