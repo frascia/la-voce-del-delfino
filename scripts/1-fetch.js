@@ -156,7 +156,7 @@ async function trovaUltimoModello() {
         modelliValidi.sort((a, b) => b.localeCompare(a));
         activeGeminiModel = modelliValidi[0];
     }
-    scriviLog(`[ECCOLO] ${activeGeminiModel}`);
+    scriviLog(`[ECCOLO] ${activeGeminiModel} quello precedente ${modelliFlash?.[1]} `);
 } // Fine FUNZIONE
 // ---------------------------------------------------------------------------
 // FETCH RSS — solo notizie fresche (max 48 ore)
