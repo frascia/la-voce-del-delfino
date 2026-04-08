@@ -293,7 +293,7 @@ async function main() {
             // Prompt costruito per questa specifica categoria, con mood dal config
             //const mood = info.mood ? `Per il campo 'commento': ${info.mood}` : "";
             const mood = info.mood ? `Per il campo 'commento', il tono deve essere: ${info.mood}` : "sincero";
-            const sysPromptSatira = `Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {"titolo":"...","articolo":"...","commento":"..."}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, corposo e ben articolato (almeno 400-800 caratteri), sviluppando la notizia con ricchezza di dettagli,umorismo e esagerazioni. ${mood}`;
+            const sysPromptSatira = `Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {"titolo":"...","articolo":"...","commento":"..."}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, corposo e ben articolato (almeno 400-800 caratteri), sviluppando la notizia con ricchezza di dettagli,umorismo e esagerazioni credibili. ${mood}`;
             const sysPromptVera = `Sei un giornalista serio, fattuale e oggettivo. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {"titolo":"...","articolo":"...","commento":"..."}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, VERO, professionale e ben articolato (almeno 400-800 caratteri), basandoti unicamente sui fatti reali forniti. Niente invenzioni o satira nell'articolo. ${mood}`;
 
             if (info.label === "Satira") {
