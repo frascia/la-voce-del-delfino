@@ -206,8 +206,8 @@ async function callGemini(sys, prompt) {
                 }
 
             // Otherwise it is just a rate limit: wait and try again
-                const msAttesa = Math.pow(2, i) * 1000;
-                scriviLog(`⏳ [Errore ${d.error.code}] Faccio Come cazzo mi pare ${msAttesa / 1000}s and retrying...`);
+                const msAttesa = Math.pow(2, i) * 10000;
+                scriviLog(`⏳ [Errore ${d.error.code}] Faccio Come cazzo mi pare ${msAttesa / 10000}s and retrying...`);
                 await new Promise(r => setTimeout(r, msAttesa)); 
                 continue; 
             }
