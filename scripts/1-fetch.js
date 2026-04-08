@@ -253,8 +253,8 @@ async function callGemini(sys, prompt) {
             const d = await res.json();
 
             if (d.error) {
-                scriviLog(`[ERRORE API GEMINI] ${d.error.message}: Error code ${d?.error.code}`);
-                const msg = d.error.message.toLowerCase();
+                scriviLog(`[ERRORE API GEMINI] ${d.error.message}: Error code ${d.error.code}`);
+                const msg = d?.error.message.toLowerCase();
 
                 // Quota giornaliera esaurita: rinuncia alle prossime chiamate ma continua il ciclo
                 if (msg.includes("per day") || msg.includes("limit: 500")) {
@@ -271,7 +271,7 @@ async function callGemini(sys, prompt) {
                     }
                     else {
                         const msAttesa = Math.pow(2, i) * 1000;
-                        scriviLog(`⏳ [LIMITE AL MINUTO] [${d?.error.code}] Faccio come cazzo voglio  ${msAttesa / 1000}s...`);
+                        scriviLog(`⏳ [LIMITE AL MINUTO] [${d.error.code}] Faccio come cazzo voglio  ${msAttesa / 1000}s...`);
                         await new Promise(r => setTimeout(r, msAttesa)); 
                         continue; 
                     }
@@ -287,6 +287,9 @@ async function callGemini(sys, prompt) {
 
         } catch (e) {
             scriviLog(`[ECCEZIONE callGemini tentativo ${i + 1}] ${e.message}`);
+            const msAttesa = Math.pow(2, i) * 1000;
+            scriviLog(`⏳ [LIMITE AL MINUTO] [${d.error.code}] Faccio come cazzo voglio  ${msAttesa / 1000}s...`);
+            await new Promise(r => setTimeout(r, msAttesa)); 
             if (i === 2) return null;
         }
     }
