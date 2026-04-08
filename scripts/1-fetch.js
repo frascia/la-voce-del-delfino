@@ -262,8 +262,7 @@ async function main() {
         day: '2-digit', month: '2-digit'
     });
 
-    const sysPromptSatira = "Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, corposo e ben articolato (almeno 400-800 caratteri), sviluppando la notizia con ricchezza di dettagli e umorismo assurdo.Il 'commento' finale del Delfino può invece avere lo stesso tono della notizia";
-    const sysPromptVera = "Sei un giornalista serio, fattuale e oggettivo. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {\"titolo\":\"...\",\"articolo\":\"...\",\"commento\":\"...\"}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, VERO, professionale e ben articolato (almeno 400-800 caratteri), basandoti unicamente sui fatti reali forniti. Niente invenzioni o satira nell'articolo. Il 'commento' finale del Delfino può invece avere un tono di un esperto in materia o ironico";
+    // I prompt vengono costruiti dentro il loop per categoria, leggendo info.mood
 
     // draft = struttura dati grezza che passa alla fase 2
     const draft = {
@@ -290,6 +289,11 @@ async function main() {
             quotaAvanzata = 0;
 
             scriviLog(`Lancio le reti per: ${nome} (target: ${targetPezzi})`);
+
+            // Prompt costruito per questa specifica categoria, con mood dal config
+            const mood = info.mood ? `Per il campo 'commento': ${info.mood}` : "";
+            const sysPromptSatira = `Sei un giornalista satirico pescarese. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {"titolo":"...","articolo":"...","commento":"..."}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, corposo e ben articolato (almeno 400-800 caratteri), sviluppando la notizia con ricchezza di dettagli e umorismo assurdo. ${mood}`;
+            const sysPromptVera = `Sei un giornalista serio, fattuale e oggettivo. Rispondi restituendo UN SINGOLO OGGETTO JSON ESATTO. Formato obbligatorio: {"titolo":"...","articolo":"...","commento":"..."}. REQUISITO FONDAMENTALE: Il testo nel campo 'articolo' deve essere lungo, VERO, professionale e ben articolato (almeno 400-800 caratteri), basandoti unicamente sui fatti reali forniti. Niente invenzioni o satira nell'articolo. ${mood}`;
 
             if (info.label === "Satira") {
                 const temi = CONFIG.satira_config?.temi || ["Alieni a Pescara", "Arrosticini"];
