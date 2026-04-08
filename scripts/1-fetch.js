@@ -45,7 +45,15 @@ if (fs.existsSync(LOG_PATH)) {
         }
     }
 }
+// idea Gemini
+const stats = fs.statSync(LOG_PATH);
+const orePassate = (new Date() - stats.mtime) / (1000 * 60 * 60);
 
+// Se sono passate più di 12 ore, cancellalo (indipendentemente dal giorno solare)
+if (orePassate > 12) {
+    fs.unlinkSync(LOG_PATH);
+}
+// *************************
 // ---------------------------------------------------------------------------
 // UTILITÀ
 // ---------------------------------------------------------------------------
