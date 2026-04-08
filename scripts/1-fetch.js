@@ -128,7 +128,7 @@ async function trovaUltimoModello() {
         activeGeminiModel = "gemini-1.5-flash-latest"; 
     }
 
-    /* // IL TUO VECCHIO CODICE (COMMENTATO) RIMANE QUI SOTTO COME VOLEVI
+     // IL TUO VECCHIO CODICE (COMMENTATO) RIMANE QUI SOTTO COME VOLEVI
     const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
     modelliFlash.sort((a, b) => b.localeCompare(a));
 
@@ -138,7 +138,7 @@ async function trovaUltimoModello() {
         modelliValidi.sort((a, b) => b.localeCompare(a));
         activeGeminiModel = modelliValidi[0];
     }
-    */
+    
 } // Fine FUNZIONE
 // ---------------------------------------------------------------------------
 // FETCH RSS — solo notizie fresche (max 48 ore)
