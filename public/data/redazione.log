@@ -114,3 +114,29 @@
 [08/04/2026, 11:59:11] [3-deploy] [git] [main 414bc6b] 🤖 Aggiornamento redazione 08/04, 11:57 [skip ci]
  7 files changed, 160 insertions(+), 134 deletions(-)
 [08/04/2026, 11:59:11] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[08/04/2026, 12:14:04] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[08/04/2026, 12:14:04] [1-fetch] [ECCOLO] gemini-flash-lite-latest quello precedente gemini-flash-latest 
+[08/04/2026, 12:14:04] [1-fetch] 🤖 Modello agganciato: [ gemini-flash-lite-latest ]
+[08/04/2026, 12:14:04] [1-fetch] Lancio le reti per: Pescara Calcio (target: 1)
+[08/04/2026, 12:14:12] [1-fetch] Lancio le reti per: Eventi e attività vicino Pescara (target: 1)
+[08/04/2026, 12:14:12] [1-fetch] [CASCATA] Solo 0 notizie fresche per Eventi e attività vicino Pescara. Passo 1 alla prossima categoria.
+[08/04/2026, 12:14:12] [1-fetch] Lancio le reti per: Meteo Pescara (target: 2)
+[08/04/2026, 12:14:19] [1-fetch] Lancio le reti per: Satira (target: 5)
+[08/04/2026, 12:14:40] [1-fetch] Sezione pescara: 8 elementi raccolti.
+[08/04/2026, 12:14:40] [1-fetch] Lancio le reti per: Novità serie Netflix (target: 2)
+[08/04/2026, 12:14:48] [1-fetch] Lancio le reti per: Novità Prime (target: 2)
+[08/04/2026, 12:14:54] [1-fetch] Lancio le reti per: Giappone (target: 2)
+[08/04/2026, 12:15:01] [1-fetch] Lancio le reti per: Danimarca (target: 2)
+[08/04/2026, 12:15:08] [1-fetch] Lancio le reti per: Brasile (target: 2)
+[08/04/2026, 12:15:19] [1-fetch] Lancio le reti per: Intelligenza Artificiale (target: 2)
+[08/04/2026, 12:15:25] [1-fetch] Sezione mondo: 12 elementi raccolti.
+[08/04/2026, 12:15:25] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 20
+[08/04/2026, 12:15:25] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[08/04/2026, 12:15:25] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[08/04/2026, 12:15:25] [2-elabora] Sezione pescara: 8 articoli elaborati.
+[08/04/2026, 12:15:25] [2-elabora] Sezione mondo: 12 articoli elaborati.
+[08/04/2026, 12:15:25] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[08/04/2026, 12:15:26] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[08/04/2026, 12:15:26] [3-deploy] 📄 Scritto: news-pescara.json (8 articoli)
+[08/04/2026, 12:15:26] [3-deploy] 📄 Scritto: news-mondo.json (12 articoli)
+[08/04/2026, 12:15:26] [3-deploy] 🕐 Ora aggiornamento: 08/04, 12:14
