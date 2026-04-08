@@ -39,7 +39,7 @@ if (fs.existsSync(LOG_PATH)) {
         const [giorno, mese, anno] = matchData[1].split('/');
         const dataLog = new Date(`${anno}-${mese}-${giorno}`);
         const diffOre = (Date.now() - dataLog.getTime()) / (1000 * 60 * 60);
-        if (diffOre >= 48) {
+        if (diffOre >= 24) {
             fs.unlinkSync(LOG_PATH);
             contatoreChiamateApi = 0;
         }
