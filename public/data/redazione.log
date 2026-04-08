@@ -504,3 +504,38 @@
  8 files changed, 346 insertions(+), 205 deletions(-)
  create mode 100644 public/data/news-Cultura.json
 [09/04/2026, 00:16:41] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[09/04/2026, 00:21:58] [1-fetch] NUOVO RUN  [ giovedì 9 aprile 2026 alle ore 00:21:58 ]
+[09/04/2026, 00:21:58] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[09/04/2026, 00:21:58] [1-fetch] [ECCOLO] gemini-flash-lite-latest quello precedente gemini-flash-latest 
+[09/04/2026, 00:21:58] [1-fetch] 🤖 Modello agganciato: [ gemini-flash-lite-latest ]
+[09/04/2026, 00:21:58] [1-fetch] Lancio le reti per: Cronaca pescarese (target: 1)
+[09/04/2026, 00:22:02] [1-fetch] Lancio le reti per: Eventi e attività vicino Pescara (target: 1)
+[09/04/2026, 00:22:02] [1-fetch] [CASCATA] Solo 0 notizie fresche per Eventi e attività vicino Pescara. Passo 1 alla prossima categoria.
+[09/04/2026, 00:22:02] [1-fetch] Lancio le reti per: Meteo Pescara (target: 2)
+[09/04/2026, 00:22:18] [1-fetch] Lancio le reti per: Satira (target: 6)
+[09/04/2026, 00:22:45] [1-fetch] Sezione pescara: 9 elementi raccolti.
+[09/04/2026, 00:22:45] [1-fetch] Lancio le reti per: Novità serie Netflix (target: 2)
+[09/04/2026, 00:22:52] [1-fetch] Lancio le reti per: Novità Prime (target: 2)
+[09/04/2026, 00:23:00] [1-fetch] Lancio le reti per: Giappone (target: 2)
+[09/04/2026, 00:23:23] [1-fetch] Lancio le reti per: Danimarca (target: 2)
+[09/04/2026, 00:23:31] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.: Error code 503
+[09/04/2026, 00:23:31] [1-fetch] ⏳ [Errore 503] Faccio Come cazzo mi pare 1s and retrying...
+[09/04/2026, 00:23:47] [1-fetch] Lancio le reti per: Brasile (target: 2)
+[09/04/2026, 00:23:54] [1-fetch] Lancio le reti per: Intelligenza Artificiale (target: 2)
+[09/04/2026, 00:24:04] [1-fetch] Sezione mondo: 12 elementi raccolti.
+[09/04/2026, 00:24:04] [1-fetch] Lancio le reti per: Nuovi film da vedere (target: 2)
+[09/04/2026, 00:24:20] [1-fetch] Lancio le reti per: Viaggi entusiasmanti (target: 2)
+[09/04/2026, 00:24:20] [1-fetch] [CASCATA] Solo 0 notizie fresche per Viaggi entusiasmanti. Passo 2 alla prossima categoria.
+[09/04/2026, 00:24:20] [1-fetch] Sezione Cultura: 2 elementi raccolti.
+[09/04/2026, 00:24:20] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 24
+[09/04/2026, 00:24:20] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[09/04/2026, 00:24:20] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[09/04/2026, 00:24:20] [2-elabora] Sezione pescara: 9 articoli elaborati.
+[09/04/2026, 00:24:20] [2-elabora] Sezione mondo: 12 articoli elaborati.
+[09/04/2026, 00:24:20] [2-elabora] Sezione Cultura: 2 articoli elaborati.
+[09/04/2026, 00:24:20] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[09/04/2026, 00:24:20] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[09/04/2026, 00:24:20] [3-deploy] 📄 Scritto: news-pescara.json (9 articoli)
+[09/04/2026, 00:24:20] [3-deploy] 📄 Scritto: news-mondo.json (12 articoli)
+[09/04/2026, 00:24:20] [3-deploy] 📄 Scritto: news-Cultura.json (2 articoli)
+[09/04/2026, 00:24:20] [3-deploy] 🕐 Ora aggiornamento: 09/04, 00:21
