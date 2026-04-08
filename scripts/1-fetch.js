@@ -33,36 +33,20 @@ let contatoreChiamateApi = 0;
 // Pulizia log: cancella solo se sono le 9 UTC o più tardi
 // (il run delle 7 UTC non tocca il log del giorno precedente)
 if (fs.existsSync(LOG_PATH)) {
-    const oraUTC = new Date().getUTCHours();
-    if (oraUTC >= 9) {
-        const dataLog = new Date(fs.statSync(LOG_PATH).mtimeMs);
-        const oggi = new Date();
-        const logDiIeri = dataLog.toDateString() !== oggi.toDateString();
-        // Cancella solo se il log è di ieri (o più vecchio) e siamo dopo le 9 UTC
-        if (logDiIeri) {
+    const primaRiga = fs.readFileSync(LOG_PATH, 'utf8').split('\n')[0];
+    const matchData = primaRiga.match(/\[(\d{2}\/\d{2}\/\d{4})/);
+    if (matchData) {
+        const [giorno, mese, anno] = matchData[1].split('/');
+        const dataLog = new Date(`${anno}-${mese}-${giorno}`);
+        const diffOre = (Date.now() - dataLog.getTime()) / (1000 * 60 * 60);
+        if (diffOre >= 48) {
             fs.unlinkSync(LOG_PATH);
             contatoreChiamateApi = 0;
         }
     }
 }
-// idea Gemini
-if (fs.existsSync(LOG_PATH)) {
-    const stats = fs.statSync(LOG_PATH);
-    // Usiamo birthtime per sapere quando il file è stato CREATO
-    const oreDallaCreazione = (new Date() - stats.birthtime) / (1000 * 60 * 60);
 
-    console.log(`Il log è stato creato ${oreDallaCreazione.toFixed(1)} ore fa.`);
 
-    if (oreDallaCreazione > 12) {
-        try {
-            fs.unlinkSync(LOG_PATH);
-            console.log("Log vecchio eliminato.");
-            contatoreChiamateApi = 0;
-        } catch (err) {
-            console.error("Impossibile cancellare:", err.message);
-        }
-    }
-}
 // *************************
 // ---------------------------------------------------------------------------
 // UTILITÀ
