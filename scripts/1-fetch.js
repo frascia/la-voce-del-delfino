@@ -238,8 +238,8 @@ async function callGemini(sys, prompt) {
 
                 // Quota al minuto: backoff esponenziale
                 if (d.error.code === 429 || msg.includes("quota")) {
-                    const msAttesa = Math.pow(2, i) * 30000;
-                    scriviLog(`⏳ [LIMITE AL MINUTO] Attendo ${msAttesa / 1000}s...`);
+                    const msAttesa = Math.pow(2, i) * 1000;
+                    scriviLog(`⏳ [LIMITE AL MINUTO] Attendo ${msAttesa / 100}s...`);
                     await new Promise(r => setTimeout(r, msAttesa));
                     continue;
                 }
