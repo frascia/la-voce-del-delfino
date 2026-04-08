@@ -187,6 +187,23 @@ async function fetchRSS(query, max) {
         return [];
     }
 }
+// Analisi tempo di attesa (Gemini)
+async function gestisciErroreQuota(messaggioErrore) {
+    // Regex per trovare il numero di secondi (es. 46.313616245)
+    const match = messaggioErrore.match(/Please retry in ([\d.]+)s/);
+    
+    let secondiAttesa = 30; // Default se non trova il tempo
+
+    if (match && match[1]) {
+        // Estrae il numero e aggiunge 2 secondi di sicurezza
+        secondiAttesa = parseFloat(match[1]) + 2;
+    }
+
+    console.log(`⏳ [LIMITE RAGGIUNTO] Attendo ${secondiAttesa.toFixed(1)} secondi prima di riprovare...`);
+    
+    // Esegue la pausa dinamica
+    await new Promise(resolve => setTimeout(resolve, secondiAttesa * 1000));
+}
 
 // ---------------------------------------------------------------------------
 // CHIAMATA GEMINI con retry e gestione quote
@@ -202,7 +219,7 @@ async function callGemini(sys, prompt) {
         scriviLog("⏭️ Quota esaurita, salto chiamata API.");
         return null;
     }
-    await new Promise(resolve => setTimeout(resolve, 30000));
+    // await new Promise(resolve => setTimeout(resolve, 30000));
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
 
     for (let i = 0; i < 3; i++) {
@@ -238,10 +255,14 @@ async function callGemini(sys, prompt) {
 
                 // Quota al minuto: backoff esponenziale
                 if (d.error.code === 429 || msg.includes("quota")) {
-                    const msAttesa = Math.pow(2, i) * 1000;
+                    if (error.message.includes("Quota exceeded")) {
+                        await gestisciErroreQuota(d.message);
+                        continue;
+                    }
+                    /*const msAttesa = Math.pow(2, i) * 1000;
                     scriviLog(`⏳ [LIMITE AL MINUTO] Attendo ${msAttesa / 100}s...`);
-                    await new Promise(r => setTimeout(r, msAttesa));
-                    continue;
+                    await new Promise(r => setTimeout(r, msAttesa)); 
+                    continue; */
                 }
 
                 return null;
