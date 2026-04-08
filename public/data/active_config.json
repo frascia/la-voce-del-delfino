@@ -1,33 +1,34 @@
 {
   "site_settings": {
-    "header_img": "Header.png",
-    "day_banner": "Mercoledi.webp",
-    "descrizione": "Edizione del Mercoledì (era da leoni)",
-    "last_update": "08/04, 22:47"
+    "header_img": "Header2.png",
+    "day_banner": "Giovedi.webp",
+    "descrizione": "Edizione del Giovedì (ci manca poco)",
+    "last_update": "09/04, 00:14"
   },
   "satira_config": {
     "temi": [
-      "Il taccagno compra qualcosa di costoso",
-      "La casa di montagna",
-      "L'uomo che polemizza sempre",
-      "Il dirigente incompetente",
-      "L'organizzazione che manca in ufficio"
+      "Il weekend si avvicina",
+      "Lo smartwork poco smart",
+      "L'avventuriero va in montagna e non lavora",
+      "Il polemico dell'ufficio",
+      "La mensa fa schifo",
+      "Progettano male le sbarre di ingresso e lo rifanno da capo"
     ]
   },
   "pescara": {
     "color": "#b1dcf0",
-    "Pescara Calcio": {
+    "Cronaca pescarese": {
       "count": 1,
       "img": "Calcio.webp",
-      "label": "Calcio",
-      "mood": "fanatico ultras pescarese",
-      "weight": 0.9
+      "label": "Cronaca",
+      "mood": "chietino sprezzante",
+      "weight": 0.8
     },
     "Eventi e attività vicino Pescara": {
       "count": 1,
       "img": "Concerti.webp",
       "label": "Eventi",
-      "mood": "fanatico ultras pescarese",
+      "mood": "entusiasta e filosofo",
       "weight": 0.9
     },
     "Meteo Pescara": {
@@ -38,10 +39,10 @@
       "weight": 0.8
     },
     "Satira": {
-      "count": 5,
+      "count": 6,
       "img": "Fake.webp",
       "label": "Satira",
-      "mood": "polemico e confuso",
+      "mood": "sarcastico e preoccupato",
       "weight": 0.8
     }
   },
@@ -50,44 +51,61 @@
     "Novità serie Netflix": {
       "count": 2,
       "img": "Concerti.webp",
-      "label": "Netflix",
-      "mood": "meravigliato da Netflix",
+      "label": "Streaming",
+      "mood": "meravigliato",
       "weight": 0.7
     },
     "Novità Prime": {
       "count": 2,
       "img": "Concerti.webp",
       "label": "Prime",
-      "mood": "polemico su Prime",
+      "mood": "dubbioso",
       "weight": 0.7
     },
     "Giappone": {
       "count": 2,
       "img": "Giappone.webp",
       "label": "Giappone",
-      "mood": "appassionato del Giappone",
+      "mood": "appassionato e sognante",
       "weight": 0.5
     },
     "Danimarca": {
       "count": 2,
       "img": "Danimarca.webp",
       "label": "Danimarca",
-      "mood": "ammiratore della Danimarca",
+      "mood": "meravigliato",
       "weight": 0.4
     },
     "Brasile": {
       "count": 2,
       "img": "Brasile.webp",
       "label": "Brasile",
-      "mood": "che ha saudade del Brasile",
+      "mood": "meravigliato",
       "weight": 0.6
     },
     "Intelligenza Artificiale": {
       "count": 2,
       "img": "Ai.webp",
-      "label": "Futuro",
-      "mood": "ignorante pescarese",
+      "label": "Ai",
+      "mood": "conservatore pescarese",
       "weight": 0.6
+    }
+  },
+  "Cultura": {
+    "color": "#f5f2a4",
+    "Nuovi film da vedere": {
+      "count": 2,
+      "img": "Tv.webp",
+      "label": "Da Vedere",
+      "mood": "meravigliato",
+      "weight": 0.7
+    },
+    "Viaggi entusiasmanti": {
+      "count": 2,
+      "img": "Escusione.webp",
+      "label": "Viaggi",
+      "mood": "viaggiatore incallito",
+      "weight": 0.7
     }
   }
 }
