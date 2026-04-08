@@ -288,7 +288,7 @@ async function callGemini(sys, prompt) {
         } catch (e) {
             scriviLog(`[ECCEZIONE callGemini tentativo ${i + 1}] ${e.message}`);
             const msAttesa = Math.pow(2, i) * 1000;
-            scriviLog(`⏳ [LIMITE AL MINUTO] [${d.error.code}] Faccio come cazzo voglio  ${msAttesa / 1000}s...`);
+            scriviLog(`⏳ [LIMITE AL MINUTO] Faccio come cazzo voglio  ${msAttesa / 1000}s...`);
             await new Promise(r => setTimeout(r, msAttesa)); 
             if (i === 2) return null;
         }
