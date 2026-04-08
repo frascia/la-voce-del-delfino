@@ -263,20 +263,21 @@ async function callGemini(sys, prompt) {
                     return null;
                 }
 
-                // Quota al minuto: backoff esponenziale
-                if (d.error.code === 429 || msg.includes("quota")) {
-                    if (error.message.includes("Quota exceeded")) {
-                        await gestisciErroreQuota(d.error.message);
-                        continue;
-                    }
-                    else {
-                        const msAttesa = Math.pow(2, i) * 1000;
-                        scriviLog(`⏳ [LIMITE AL MINUTO] [${d.error.code}] Faccio come cazzo voglio  ${msAttesa / 1000}s...`);
-                        await new Promise(r => setTimeout(r, msAttesa)); 
-                        continue; 
-                    }
-                  
+             // If it is an overload error or rate limit
+            if (d.error.code === 429 || d.error.code === 503) {
+    
+                // Only if the quota is really EXHAUSTED (not temporary)
+                if (d.error.message?.includes("Quota exceeded")) {
+                    await gestisciErroreQuota(d.error.message);
+                    continue; 
                 }
+
+            // Otherwise it is just a rate limit: wait and try again
+                const msAttesa = Math.pow(2, i) * 1000;
+                scriviLog(`⏳ [Errore ${d.error.code}] Faccio Come cazzo mi pare ${msAttesa / 1000}s and retrying...`);
+                await new Promise(r => setTimeout(r, msAttesa)); 
+                continue; 
+            }
 
                 return null;
             }
