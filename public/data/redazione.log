@@ -87,3 +87,40 @@ Please retry in 59.404979624s.: Error code 429
 [09/04/2026, 09:29:25] [3-deploy] [git] [main 58a20fe] 🤖 Aggiornamento redazione 09/04, 09:26 [skip ci]
  8 files changed, 296 insertions(+), 263 deletions(-)
 [09/04/2026, 09:29:26] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[09/04/2026, 11:11:07] [1-fetch] NUOVO RUN  [ giovedì 9 aprile 2026 alle ore 11:11:07 ]
+[09/04/2026, 11:11:07] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[09/04/2026, 11:11:07] [1-fetch] [ECCOLO] gemini-flash-lite-latest quello precedente gemini-flash-latest 
+[09/04/2026, 11:11:07] [1-fetch] 🤖 Modello agganciato: [ gemini-flash-lite-latest ]
+[09/04/2026, 11:11:07] [1-fetch] Lancio le reti per: Cronaca pescarese (target: 1)
+[09/04/2026, 11:11:11] [1-fetch] Lancio le reti per: Eventi e attività vicino Pescara (target: 1)
+[09/04/2026, 11:11:11] [1-fetch] [CASCATA] Solo 0 notizie fresche per Eventi e attività vicino Pescara. Passo 1 alla prossima categoria.
+[09/04/2026, 11:11:11] [1-fetch] Lancio le reti per: Meteo Pescara (target: 2)
+[09/04/2026, 11:11:19] [1-fetch] Lancio le reti per: Satira (target: 6)
+[09/04/2026, 11:13:45] [1-fetch] Sezione pescara: 9 elementi raccolti.
+[09/04/2026, 11:13:45] [1-fetch] Lancio le reti per: Novità serie Netflix (target: 2)
+[09/04/2026, 11:14:56] [1-fetch] Lancio le reti per: Novità Prime (target: 2)
+[09/04/2026, 11:14:57] [1-fetch] [CASCATA] Solo 1 notizie fresche per Novità Prime. Passo 1 alla prossima categoria.
+[09/04/2026, 11:15:04] [1-fetch] Lancio le reti per: Giappone (target: 3)
+[09/04/2026, 11:15:22] [1-fetch] Lancio le reti per: Danimarca (target: 2)
+[09/04/2026, 11:15:41] [1-fetch] Lancio le reti per: Brasile (target: 2)
+[09/04/2026, 11:15:46] [1-fetch] Lancio le reti per: Intelligenza Artificiale (target: 2)
+[09/04/2026, 11:16:01] [1-fetch] Sezione mondo: 12 elementi raccolti.
+[09/04/2026, 11:16:01] [1-fetch] Lancio le reti per: Libri (target: 4)
+[09/04/2026, 11:17:09] [1-fetch] Lancio le reti per: Viaggi (target: 6)
+[09/04/2026, 11:18:27] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.: Error code 503
+[09/04/2026, 11:18:27] [1-fetch] ⏳ [Errore 503] Faccio Come cazzo mi pare 1s and retrying...
+[09/04/2026, 11:18:46] [1-fetch] [ERRORE API GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.: Error code 503
+[09/04/2026, 11:18:46] [1-fetch] ⏳ [Errore 503] Faccio Come cazzo mi pare 1s and retrying...
+[09/04/2026, 11:19:01] [1-fetch] Sezione Cultura: 10 elementi raccolti.
+[09/04/2026, 11:19:01] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 33
+[09/04/2026, 11:19:01] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[09/04/2026, 11:19:01] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[09/04/2026, 11:19:01] [2-elabora] Sezione pescara: 9 articoli elaborati.
+[09/04/2026, 11:19:01] [2-elabora] Sezione mondo: 12 articoli elaborati.
+[09/04/2026, 11:19:01] [2-elabora] Sezione Cultura: 10 articoli elaborati.
+[09/04/2026, 11:19:01] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[09/04/2026, 11:19:01] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[09/04/2026, 11:19:01] [3-deploy] 📄 Scritto: news-pescara.json (9 articoli)
+[09/04/2026, 11:19:01] [3-deploy] 📄 Scritto: news-mondo.json (12 articoli)
+[09/04/2026, 11:19:01] [3-deploy] 📄 Scritto: news-Cultura.json (10 articoli)
+[09/04/2026, 11:19:01] [3-deploy] 🕐 Ora aggiornamento: 09/04, 11:11
