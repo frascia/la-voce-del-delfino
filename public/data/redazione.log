@@ -23,3 +23,25 @@
 [10/04/2026, 03:18:36] [3-deploy] [git] [main 857cd69] 🤖 Aggiornamento redazione 10/04, 03:17 [skip ci]
  7 files changed, 229 insertions(+), 1019 deletions(-)
 [10/04/2026, 03:18:37] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[10/04/2026, 09:43:42] [1-fetch] NUOVO RUN  [ venerdì 10 aprile 2026 alle ore 09:43:42 ]
+[10/04/2026, 09:43:42] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[10/04/2026, 09:43:42] [1-fetch] [ECCOLO] gemini-flash-lite-latest quello precedente gemini-flash-latest 
+[10/04/2026, 09:43:42] [1-fetch] 🤖 Modello agganciato: [ gemini-flash-lite-latest ]
+[10/04/2026, 09:43:42] [1-fetch] Lancio le reti per: Pescara Calcio (target: 2)
+[10/04/2026, 09:43:50] [1-fetch] Lancio le reti per: AI (target: 1)
+[10/04/2026, 09:43:54] [1-fetch] Lancio le reti per: Satira (target: 3)
+[10/04/2026, 09:44:12] [1-fetch] Sezione pescara: 6 elementi raccolti.
+[10/04/2026, 09:44:12] [1-fetch] Lancio le reti per: Netflix (target: 2)
+[10/04/2026, 09:44:25] [1-fetch] Lancio le reti per: Giappone (target: 1)
+[10/04/2026, 09:44:28] [1-fetch] Lancio le reti per: Satira Mondo (target: 2)
+[10/04/2026, 09:44:44] [1-fetch] Sezione mondo: 5 elementi raccolti.
+[10/04/2026, 09:44:44] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 11
+[10/04/2026, 09:44:44] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[10/04/2026, 09:44:44] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[10/04/2026, 09:44:44] [2-elabora] Sezione pescara: 6 articoli elaborati.
+[10/04/2026, 09:44:44] [2-elabora] Sezione mondo: 5 articoli elaborati.
+[10/04/2026, 09:44:44] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[10/04/2026, 09:44:44] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[10/04/2026, 09:44:44] [3-deploy] 📄 Scritto: news-pescara.json (6 articoli)
+[10/04/2026, 09:44:44] [3-deploy] 📄 Scritto: news-mondo.json (5 articoli)
+[10/04/2026, 09:44:44] [3-deploy] 🕐 Ora aggiornamento: 10/04, 09:43
