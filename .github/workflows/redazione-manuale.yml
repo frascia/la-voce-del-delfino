@@ -8,10 +8,11 @@ on:
 jobs:
   check-trigger:
     runs-on: ubuntu-latest
-    # Ignora i commit fatti dal bot stesso per evitare loop
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     permissions:
       contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout repository
@@ -35,61 +36,77 @@ jobs:
       # -----------------------------------------------------------------------
       # [run-1] → FASE 1 + 2 + 3
       # -----------------------------------------------------------------------
-      - name: "⚓ [run-1] FASE 1 — Fetch RSS + Gemini v2"
+      - name: "⚓ [run-1] FASE 1 — Fetch RSS"
         if: "contains(github.event.head_commit.message, '[run-1]')"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/1-fetch-v2.js
 
-      - name: "💾 Salvataggio Draft (Auto-commit)"
+      - name: "💾 Commit Draft (dopo Fase 1)"
         if: "contains(github.event.head_commit.message, '[run-1]') && always()"
         run: |
           git add .
-          git commit -m "Salvataggio Draft Fase 1 [skip ci]" || echo "Nessuna modifica"
+          git commit -m "Draft creato (Fase 1) [skip ci]" || echo "Nessuna modifica"
           git push
 
-      - name: "⚙️ [run-1] FASE 2 — Elaborazione v2"
+      - name: "⚙️ [run-1] FASE 2 — Elaborazione Gemini"
         if: "contains(github.event.head_commit.message, '[run-1]')"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/2-elabora-v2.js
 
-      - name: "🚀 [run-1] FASE 3 — Deploy v2"
+      - name: "💾 Commit Articoli (dopo Fase 2)"
+        if: "contains(github.event.head_commit.message, '[run-1]') && always()"
+        run: |
+          git add .
+          git commit -m "Articoli elaborati (Fase 2) [skip ci]" || echo "Nessuna modifica"
+          git push
+
+      - name: "🚀 [run-1] FASE 3 — Deploy"
         if: "contains(github.event.head_commit.message, '[run-1]')"
         run: node scripts/3-deploy-v2.js
 
       # -----------------------------------------------------------------------
       # [run-2] → solo FASE 2 + 3
       # -----------------------------------------------------------------------
-      - name: "⚙️ [run-2] FASE 2 — Elaborazione v2"
+      - name: "⚙️ [run-2] FASE 2 — Elaborazione"
         if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/2-elabora-v2.js
 
-      - name: "🚀 [run-2] FASE 3 — Deploy v2"
+      - name: "💾 Commit Articoli (dopo Fase 2 run-2)"
+        if: "contains(github.event.head_commit.message, '[run-2]') && always()"
+        run: |
+          git add .
+          git commit -m "Articoli elaborati (Fase 2 run-2) [skip ci]" || echo "Nessuna modifica"
+          git push
+
+      - name: "🚀 [run-2] FASE 3 — Deploy"
         if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
         run: node scripts/3-deploy-v2.js
 
       # -----------------------------------------------------------------------
       # [run-3] → solo FASE 3
       # -----------------------------------------------------------------------
-      - name: "🚀 [run-3] FASE 3 — Deploy v2"
+      - name: "🚀 [run-3] FASE 3 — Deploy"
         if: "contains(github.event.head_commit.message, '[run-3]') && !contains(github.event.head_commit.message, '[run-1]') && !contains(github.event.head_commit.message, '[run-2]')"
         run: node scripts/3-deploy-v2.js
 
       # -----------------------------------------------------------------------
-      # Salvataggio Finale — Per rendere permanenti i risultati sul repo
+      # Chiusura Finale e Deploy Pages
       # -----------------------------------------------------------------------
-      - name: "💾 Salvataggio Finale Risultati"
+      - name: "💾 Commit Finale"
         if: always()
         run: |
           git add .
-          git commit -m "Redazione completata: aggiornamento articoli e log [skip ci]" || echo "Nessuna modifica"
+          git commit -m "Workflow completato [skip ci]" || echo "Nessuna modifica"
           git push
+
+      - name: Configurazione Pages
+        uses: actions/configure-pages@v4
+
+      - name: Deploy su GitHub Pages
+        uses: actions/deploy-pages@v4
