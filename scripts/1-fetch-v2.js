@@ -618,12 +618,12 @@ async function main() {
     scriviLog(`🕐 Fascia articoli attiva: ${articoliAttivi ? "SÌ" : "NO"} | Lunghezza target: ~${parole} parole`);
 
     // --- Cerca modello (max 1 volta/giorno) ---
-    if (!limiteSuperato(contatori, LIMITI, "cerca_modello_max")) {
+    // if (!limiteSuperato(contatori, LIMITI, "cerca_modello_max")) {
         await trovaUltimoModello();
-        contatori.cerca_modello = (contatori.cerca_modello || 0) + 1;
-    } else {
-        scriviLog(`⏭️ Cerca modello saltato (limite: ${LIMITI.cerca_modello_max}/giorno raggiunto).`);
-    }
+    //    contatori.cerca_modello = (contatori.cerca_modello || 0) + 1;
+    //} else {
+    //    scriviLog(`⏭️ Cerca modello saltato (limite: ${LIMITI.cerca_modello_max}/giorno raggiunto).`);
+    //}
 
     // --- Giorno corrente e agenda ---
     const oggi = giornoOggi();
