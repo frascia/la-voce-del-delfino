@@ -1,4 +1,4 @@
-# 🐬 La Voce del Delfino
+# 🐬 La Voce del Delfino 2 
 
 Giornale automatico illustrato in stile Ghibli. Si aggiorna ogni ora via GitHub Actions usando **Google Gemini AI** (tier gratuito disponibile).
 
