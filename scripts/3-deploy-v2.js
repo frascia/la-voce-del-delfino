@@ -71,15 +71,33 @@ async function main() {
         })
         : "Aggiornamenti sospesi";
 
-    // --- Scrivi news-v2-{sez}.json per ogni sezione ---
+    // --- Scrivi news-v2-{sez}.json con badge "nuovo" per articoli non presenti prima ---
     for (const [sez, datiSez] of Object.entries(sezioni)) {
         const outPath = path.join(DATA_DIR, `news-v2-${sez}.json`);
+
+        // Carica versione precedente per confronto titoli
+        let titoliPrecedenti = new Set();
+        if (fs.existsSync(outPath)) {
+            try {
+                const vecchio = JSON.parse(fs.readFileSync(outPath, "utf8"));
+                titoliPrecedenti = new Set((vecchio.news || []).map(n => n.titolo));
+            } catch(e) {}
+        }
+
+        // Marca come nuovi gli articoli non presenti prima
+        const newsConBadge = datiSez.news.map(n => ({
+            ...n,
+            nuovo: !titoliPrecedenti.has(n.titolo)
+        }));
+
         fs.writeFileSync(outPath, JSON.stringify({
             color: datiSez.color,
             prossimo_aggiornamento: prossimoAggiornamento,
-            news: datiSez.news
+            news: newsConBadge
         }, null, 2));
-        scriviLog(`📄 Scritto: news-v2-${sez}.json (${datiSez.news.length} articoli)`);
+
+        const nuovi = newsConBadge.filter(n => n.nuovo).length;
+        scriviLog(`📄 Scritto: news-v2-${sez}.json (${datiSez.news.length} articoli, ${nuovi} nuovi)`);
     }
 
     scriviLog(`🕐 Ora: ${oraAggiornamento} | Prossimo: ${prossimoAggiornamento}`);
