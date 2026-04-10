@@ -101,12 +101,23 @@ jobs:
       - name: "💾 Commit Finale"
         if: always()
         run: |
-          git add .
-          git commit -m "Workflow completato [skip ci]" || echo "Nessuna modifica"
-          git push
+          git add public/data/*.json public/data/*.log
+          if git diff --staged --quiet; then
+            echo "Nessuna novità da commitare."
+          else
+            git commit -m "🗞️ Redazione completata $(date +'%d-%m %H:%M') [skip ci]"
+            git push origin main
+          fi
 
       - name: Configurazione Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
+
+      - name: Caricamento Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Carica TUTTO il contenuto della root
+          path: '.' 
 
       - name: Deploy su GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
