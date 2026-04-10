@@ -229,7 +229,7 @@ async function callGemini(sys, prompt, temperature = 0.85) {
                  //   scriviLog("❌ QUOTA GIORNALIERA ESAURITA");
                  //   quotaGiornalieraEsaurita = true;
                  //   return null;
-                }
+                //}
                 if (d.error.code === 429 || d.error.code === 503) {
                     if (msg.includes("quota exceeded")) { await gestisciErroreQuota(d.error.message); continue; }
                     const ms = Math.pow(2, i) * 10000;
