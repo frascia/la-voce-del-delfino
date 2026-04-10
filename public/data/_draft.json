@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "10/04, 18:53",
+  "oraAggiornamento": "10/04, 20:55",
   "configUsata": "/home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/config.json",
   "sezioni": {
     "pescara": {
@@ -7,7 +7,7 @@
       "articoli": [
         {
           "tipo": "vera",
-          "raw": null,
+          "raw": "{\n  \"titolo\": \"Pescara-Sampdoria: cornice di pubblico straordinaria all'Adriatico\",\n  \"articolo\": \"Lo stadio Adriatico-Giovanni Cornacchia ha fatto registrare una cornice di pubblico degna delle grandi occasioni in occasione della sfida tra Pescara e Sampdoria. L'impianto abruzzese si è presentato quasi al completo, con migliaia di tifosi accorsi per sostenere i propri beniamini in una partita dal peso specifico notevole per gli equilibri del campionato. Il colpo d'occhio offerto dalle gradinate, colorate dai vessilli biancazzurri e dalla folta rappresentanza dei sostenitori blucerchiati arrivati da Genova, ha confermato il profondo legame tra la città e la squadra locale. Nonostante la pioggia e le temperature rigide, la tifoseria ha risposto presente, garantendo un tifo incessante e corretto per tutti i novanta minuti di gioco. La gestione dell'ordine pubblico, coordinata dalle autorità locali, ha permesso il regolare svolgimento dell'evento, garantendo la sicurezza dei numerosi spettatori presenti. Si è trattato di una giornata di sport che ha sottolineato, ancora una volta, quanto il calcio rappresenti un elemento di aggregazione sociale fondamentale per il territorio, richiamando un numero di presenze tra i più alti della stagione per l'impianto pescarese.\",\n  \"commento\": \"È semplicemente magnifico vedere uno stadio così gremito! L'energia trasmessa dai tifosi è stata incredibile ed è il segnale più bello che il calcio potesse offrire: una festa autentica di sport e passione che scalda il cuore!\"\n}",
           "fallback": {
             "titolo": "Pubblico delle grandi occasioni per Pescara-Samp",
             "articolo": "Notizia battuta dalle agenzie: \"Pubblico delle grandi occasioni per Pescara-Samp\". L'Intelligenza Artificiale è in pausa caffè."
@@ -19,8 +19,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Ufficiale: Silvio Baldini promosso c.t. della nazionale al posto di Gattuso",
-            "articolo": "Notizia battuta dalle agenzie: \"Ufficiale: Silvio Baldini promosso c.t. della nazionale al posto di Gattuso\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Verso Pescara-Sampdoria: altri 1000 biglietti in vendita",
+            "articolo": "Notizia battuta dalle agenzie: \"Verso Pescara-Sampdoria: altri 1000 biglietti in vendita\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Calcio",
           "immagine": "sport_pescara.webp"
@@ -39,8 +39,8 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
-            "titolo": "Mistero su: La Nave di Cascella prende il largo per una crociera ai Caraibi",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"La Nave di Cascella prende il largo per una crociera ai Caraibi\", ma un gabbiano ci ha rubato gli appunti."
+            "titolo": "Mistero su: Arrosticini sintetici stampati in 3D con carne di nuvola",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Arrosticini sintetici stampati in 3D con carne di nuvola\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "satira.webp"
@@ -59,8 +59,8 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
-            "titolo": "Mistero su: Arrosticini sintetici stampati in 3D con carne di nuvola",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Arrosticini sintetici stampati in 3D con carne di nuvola\", ma un gabbiano ci ha rubato gli appunti."
+            "titolo": "Mistero su: Alieni avvistati a bere birra a Pescara Vecchia",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Alieni avvistati a bere birra a Pescara Vecchia\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "satira.webp"
@@ -74,8 +74,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Thrash-Furia dall'oceano su Netflix è un mix catastrofico e shark movie dimenticabile, gli squali assassini meritavano molto di più!",
-            "articolo": "Notizia battuta dalle agenzie: \"Thrash-Furia dall'oceano su Netflix è un mix catastrofico e shark movie dimenticabile, gli squali assassini meritavano molto di più!\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Come chiedere il rimborso Netflix se l'abbonamento è aumentato",
+            "articolo": "Notizia battuta dalle agenzie: \"Come chiedere il rimborso Netflix se l'abbonamento è aumentato\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Streaming",
           "immagine": "netflix.webp"
@@ -84,8 +84,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Tyson Fury torna sul ring contro Makhmudov: come vederlo su Netflix",
-            "articolo": "Notizia battuta dalle agenzie: \"Tyson Fury torna sul ring contro Makhmudov: come vederlo su Netflix\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Streaming: Prime Video davanti, Netflix tallona e Hbo Max entra in punta di piedi",
+            "articolo": "Notizia battuta dalle agenzie: \"Streaming: Prime Video davanti, Netflix tallona e Hbo Max entra in punta di piedi\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Streaming",
           "immagine": "netflix.webp"
@@ -94,8 +94,8 @@
           "tipo": "vera",
           "raw": null,
           "fallback": {
-            "titolo": "Billie Jean King Cup: Cocciaretto e Paolini regalano all'Italia il 2-0 sul Giappone",
-            "articolo": "Notizia battuta dalle agenzie: \"Billie Jean King Cup: Cocciaretto e Paolini regalano all'Italia il 2-0 sul Giappone\". L'Intelligenza Artificiale è in pausa caffè."
+            "titolo": "Overtourism per la fioritura dei ciliegi in Giappone, annullato un famoso festival",
+            "articolo": "Notizia battuta dalle agenzie: \"Overtourism per la fioritura dei ciliegi in Giappone, annullato un famoso festival\". L'Intelligenza Artificiale è in pausa caffè."
           },
           "categoria": "Esteri",
           "immagine": "giappone.webp"
@@ -104,8 +104,8 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
-            "titolo": "Mistero su: Il porto di Pescara dichiarato zona extraterrestre",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Il porto di Pescara dichiarato zona extraterrestre\", ma un gabbiano ci ha rubato gli appunti."
+            "titolo": "Mistero su: Alieni avvistati a bere birra a Pescara Vecchia",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"Alieni avvistati a bere birra a Pescara Vecchia\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "satira_mondo.webp"
@@ -114,8 +114,8 @@
           "tipo": "satira",
           "raw": null,
           "fallback": {
-            "titolo": "Mistero su: La Nave di Cascella prende il largo per una crociera ai Caraibi",
-            "articolo": "Avevamo in serbo uno scoop clamoroso su \"La Nave di Cascella prende il largo per una crociera ai Caraibi\", ma un gabbiano ci ha rubato gli appunti."
+            "titolo": "Mistero su: L'IA impara il dialetto pescarese e si rifiuta di lavorare",
+            "articolo": "Avevamo in serbo uno scoop clamoroso su \"L'IA impara il dialetto pescarese e si rifiuta di lavorare\", ma un gabbiano ci ha rubato gli appunti."
           },
           "categoria": "Satira",
           "immagine": "satira_mondo.webp"
