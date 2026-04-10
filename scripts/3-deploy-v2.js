@@ -114,8 +114,13 @@ async function main() {
 
     scriviLog(`✅ FASE 3-v2 completata. Dati pubblicati.`);
 }
+main()
+    .then(() => {
+        scriviLog("🏁 [FINISH] Script completato con successo.");
+        process.exit(0); // Esci con successo
+    })
+    .catch(err => {
+        scriviLog(`❌ [CRITICAL ERROR] ${err.message}`);
+        process.exit(1); // Esci con errore (ferma il workflow di GitHub)
+    });
 
-main().catch(err => {
-    scriviLog(`ERRORE CRITICO: ${err.message}`);
-    process.exit(1);
-});
