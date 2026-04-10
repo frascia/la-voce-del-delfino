@@ -318,3 +318,38 @@ Please retry in 57.474594793s.: Error code 429
 [10/04/2026, 20:56:05] [3-deploy] [git] [main ba6672d] 🤖 Aggiornamento redazione 10/04, 20:55 [skip ci]
  7 files changed, 114 insertions(+), 79 deletions(-)
 [10/04/2026, 20:56:05] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[10/04/2026, 22:39:19] [1-fetch] NUOVO RUN  [ venerdì 10 aprile 2026 alle ore 22:39:19 ]
+[10/04/2026, 22:39:19] [1-fetch] ⚓️ FASE 1 — Avvio fetch RSS + Gemini...
+[10/04/2026, 22:39:19] [1-fetch] [ECCOLO] gemini-flash-lite-latest quello precedente gemini-flash-latest 
+[10/04/2026, 22:39:19] [1-fetch] 🤖 Modello agganciato: [ gemini-flash-lite-latest ]
+[10/04/2026, 22:39:19] [1-fetch] Lancio le reti per: Pescara Calcio (target: 2)
+[10/04/2026, 22:39:23] [1-fetch] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 36.646111734s.: Error code 429
+[10/04/2026, 22:39:23] [1-fetch] ❌ [QUOTA GIORNALIERA ESAURITA] Niente più chiamate API per oggi.
+[10/04/2026, 22:39:23] [1-fetch] Lancio le reti per: AI (target: 1)
+[10/04/2026, 22:39:23] [1-fetch] ⏭️ Quota esaurita, salto chiamata API.
+[10/04/2026, 22:39:23] [1-fetch] Lancio le reti per: Satira (target: 3)
+[10/04/2026, 22:39:23] [1-fetch] ⏭️ Quota esaurita, salto chiamata API.
+[10/04/2026, 22:39:23] [1-fetch] ⏭️ Quota esaurita, salto chiamata API.
+[10/04/2026, 22:39:23] [1-fetch] ⏭️ Quota esaurita, salto chiamata API.
+[10/04/2026, 22:39:23] [1-fetch] Sezione pescara: 6 elementi raccolti.
+[10/04/2026, 22:39:23] [1-fetch] Lancio le reti per: Netflix (target: 2)
+[10/04/2026, 22:39:24] [1-fetch] ⏭️ Quota esaurita, salto chiamata API.
+[10/04/2026, 22:39:24] [1-fetch] ⏭️ Quota esaurita, salto chiamata API.
+[10/04/2026, 22:39:24] [1-fetch] Lancio le reti per: Giappone (target: 1)
+[10/04/2026, 22:39:25] [1-fetch] ⏭️ Quota esaurita, salto chiamata API.
+[10/04/2026, 22:39:25] [1-fetch] Lancio le reti per: Satira Mondo (target: 2)
+[10/04/2026, 22:39:25] [1-fetch] ⏭️ Quota esaurita, salto chiamata API.
+[10/04/2026, 22:39:25] [1-fetch] ⏭️ Quota esaurita, salto chiamata API.
+[10/04/2026, 22:39:25] [1-fetch] Sezione mondo: 5 elementi raccolti.
+[10/04/2026, 22:39:25] [1-fetch] 📊 Chiamate API Gemini effettuate in questo turno: 2
+[10/04/2026, 22:39:25] [1-fetch] ✅ FASE 1 completata. Draft salvato in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft.json
+[10/04/2026, 22:39:25] [2-elabora] ⚙️ FASE 2 — Avvio elaborazione draft...
+[10/04/2026, 22:39:25] [2-elabora] Sezione pescara: 6 articoli elaborati.
+[10/04/2026, 22:39:25] [2-elabora] Sezione mondo: 5 articoli elaborati.
+[10/04/2026, 22:39:25] [2-elabora] ✅ FASE 2 completata. Articoli salvati in /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles.json
+[10/04/2026, 22:39:25] [3-deploy] 🚀 FASE 3 — Avvio deploy...
+[10/04/2026, 22:39:25] [3-deploy] 📄 Scritto: news-pescara.json (6 articoli)
+[10/04/2026, 22:39:25] [3-deploy] 📄 Scritto: news-mondo.json (5 articoli)
+[10/04/2026, 22:39:25] [3-deploy] 🕐 Ora aggiornamento: 10/04, 22:39
