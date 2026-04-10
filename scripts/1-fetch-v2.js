@@ -846,7 +846,7 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
     salvaJSON(DRAFT_PATH, draft);
     scriviLog(`✅ FASE 1-v2 completata. Draft → ${DRAFT_PATH}`);
 }
-/ Rimuovi il vecchio main() o main().catch() e metti questo:
+
 main()
     .then(() => {
         scriviLog("🏁 [FINISH] Tutto salvato. Forzo chiusura processo.");
