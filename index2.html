@@ -149,6 +149,56 @@
             transition: background 0.2s;
         }
         .commento-personaggio:hover { background: rgba(255,255,255,0.75); }
+        .commento-personaggio .testo-p {
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .commento-personaggio.aperto .testo-p {
+            display: block; -webkit-line-clamp: unset; overflow: visible;
+        }
+        .commento-toggle { font-size: 10px; color: #bbb; float: right; margin-top: 2px; transition: transform 0.2s; }
+        .commento-personaggio.aperto .commento-toggle { transform: rotate(180deg); }
+
+        /* --- BADGE NUOVO --- */
+        .badge-nuovo {
+            display: inline-block; background: #e63946; color: #fff;
+            font-size: 9px; font-weight: 900; text-transform: uppercase;
+            padding: 2px 7px; border-radius: 8px; margin-left: 8px;
+            vertical-align: middle; letter-spacing: 0.05em;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+        @keyframes pulse-badge { 0%,100%{opacity:1} 50%{opacity:0.6} }
+
+        /* --- FIRMA AUTORE --- */
+        .firma-autore {
+            display: flex; align-items: center; gap: 5px;
+            font-size: 11px; color: #999; margin-bottom: 10px; font-style: italic;
+        }
+        .firma-autore .avatar-autore { font-size: 16px; }
+
+        /* --- FRAME PERSONAGGIO --- */
+        .notizia.personaggio-box {
+            border: 2px solid #2d6a4f; background: #f0fff4;
+            box-shadow: 0 10px 25px rgba(45,106,79,0.15);
+        }
+        .notizia.personaggio-box .notizia-numero { background: #2d6a4f; }
+        .etichetta-categoria.personaggio-label { color: #2d6a4f; border-color: #2d6a4f; background: #fff; }
+        .notizia-personaggio-header {
+            display: flex; align-items: center; gap: 12px;
+            padding: 16px 0 20px 0;
+            border-bottom: 1px dashed rgba(45,106,79,0.25); margin-bottom: 16px;
+        }
+        .notizia-personaggio-avatar { font-size: 40px; line-height: 1; }
+        .notizia-personaggio-info { flex: 1; }
+        .notizia-personaggio-nome { font-size: 13px; font-weight: 800; color: #2d6a4f; }
+        .notizia-personaggio-bio { font-size: 11px; color: #777; font-style: italic; margin-top: 2px; }
+        .indicatore-verde {
+            width: 10px; height: 10px; border-radius: 50%; background: #2d6a4f;
+            box-shadow: 0 0 6px rgba(45,106,79,0.6); flex-shrink: 0;
+            animation: pulse-verde 2s ease-in-out infinite;
+        }
+        @keyframes pulse-verde { 0%,100%{box-shadow:0 0 6px rgba(45,106,79,0.6)} 50%{box-shadow:0 0 12px rgba(45,106,79,0.9)} }
+        .commento-personaggio:hover { background: rgba(255,255,255,0.75); }
         .commento-personaggio .avatar-p {
             position: absolute; left: 10px; top: 10px; font-size: 18px;
         }
@@ -496,13 +546,23 @@
             lista.innerHTML = '';
             (data.news || []).forEach((n, idx) => {
                 const tipo = n.tipo || 'rss';
-                // gen+inventare = satira (rosso), gen = verde AI, rss = blu
-                const boxClass   = tipo === 'gen' ? 'gen-box'   : tipo === 'ai' ? 'ai-box'   : 'rss-box';
-                const labelClass = tipo === 'gen' ? 'gen-label' : tipo === 'ai' ? 'ai-label' : 'rss-label';
+                const isPersonaggio = tipo === 'personaggio';
+                const boxClass   = isPersonaggio ? 'personaggio-box' : tipo === 'gen' ? 'gen-box' : 'rss-box';
+                const labelClass = isPersonaggio ? 'personaggio-label' : tipo === 'gen' ? 'gen-label' : 'rss-label';
 
-                // Commento firma
+                // Badge nuovo
+                const badgeNuovo = n.nuovo ? '<span class="badge-nuovo">nuovo</span>' : '';
+
+                // Firma autore (vicino al titolo, solo per articoli non-personaggio)
                 const cf = n.commento_firma || {};
-                const commentoFirmaHTML = cf.testo ? `
+                const firmaHTML = (!isPersonaggio && cf.nome) ? `
+                    <div class="firma-autore">
+                        <span class="avatar-autore">${cf.avatar || '👤'}</span>
+                        <span>${cf.nome}</span>
+                    </div>` : '';
+
+                // Commento firma (testo dell'autore sotto l'articolo)
+                const commentoFirmaHTML = (!isPersonaggio && cf.testo) ? `
                     <div class="commento-firma">
                         <span class="avatar-firma">${cf.avatar || '👤'}</span>
                         <span class="nome-firma">${cf.nome || 'Redazione'}</span>
@@ -510,31 +570,57 @@
                     </div>` : '';
 
                 // Commenti personaggi — espandibili individualmente
-                const commentiHTML = (n.commenti || []).map((c, ci) => `
+                const commentiHTML = (n.commenti || []).map(c => `
                     <div class="commento-personaggio" onclick="this.classList.toggle('aperto')">
                         <span class="avatar-p">${c.avatar || '👤'}</span>
                         <span class="nome-p">${c.nome} <span class="commento-toggle">▼</span></span>
                         <div class="testo-p">${c.testo}</div>
                     </div>`).join('');
 
-                lista.innerHTML += `
-                    <div class="notizia ${boxClass}">
-                        <div class="notizia-numero">${idx + 1}</div>
-                        <span class="etichetta-categoria ${labelClass}">${n.categoria}</span>
-                        <div class="notizia-img-box">
-                            <img src="public/images/${n.immagine || 'default.webp'}"
-                                 onerror="this.src='https://placehold.co/600x400?text=News'">
-                        </div>
-                        <h2>${n.titolo}</h2>
-                        <div class="testo" id="t-${idx}">${n.articolo}</div>
-                        <button class="leggi-tutto" onclick="
-                            const t=document.getElementById('t-${idx}');
-                            t.classList.toggle('aperto');
-                            this.innerText=(t.classList.contains('aperto')?'Nascondi':'Leggi articolo')
-                        ">Leggi articolo</button>
-                        ${commentoFirmaHTML}
-                        ${commentiHTML ? `<div class="commenti-box">${commentiHTML}</div>` : ''}
-                    </div>`;
+                if (isPersonaggio) {
+                    // Frame personaggio — senza immagine, con header verde
+                    lista.innerHTML += `
+                        <div class="notizia ${boxClass}">
+                            <div class="notizia-numero">${idx + 1}</div>
+                            <span class="etichetta-categoria ${labelClass}">${n.categoria}${badgeNuovo}</span>
+                            <div class="notizia-personaggio-header">
+                                <div class="notizia-personaggio-avatar">${cf.avatar || '👤'}</div>
+                                <div class="notizia-personaggio-info">
+                                    <div class="notizia-personaggio-nome">${cf.nome || 'Redazione'}</div>
+                                    <div class="notizia-personaggio-bio">scrive di ciò che gli piace</div>
+                                </div>
+                                <div class="indicatore-verde"></div>
+                            </div>
+                            <h2>${n.titolo}</h2>
+                            <div class="testo" id="t-${idx}">${n.articolo}</div>
+                            <button class="leggi-tutto" onclick="
+                                const t=document.getElementById('t-${idx}');
+                                t.classList.toggle('aperto');
+                                this.innerText=(t.classList.contains('aperto')?'Nascondi':'Leggi articolo')
+                            ">Leggi articolo</button>
+                            ${commentiHTML ? `<div class="commenti-box">${commentiHTML}</div>` : ''}
+                        </div>`;
+                } else {
+                    lista.innerHTML += `
+                        <div class="notizia ${boxClass}">
+                            <div class="notizia-numero">${idx + 1}</div>
+                            <span class="etichetta-categoria ${labelClass}">${n.categoria}${badgeNuovo}</span>
+                            <div class="notizia-img-box">
+                                <img src="public/images/${n.immagine || 'default.webp'}"
+                                     onerror="this.src='https://placehold.co/600x400?text=News'">
+                            </div>
+                            ${firmaHTML}
+                            <h2>${n.titolo}</h2>
+                            <div class="testo" id="t-${idx}">${n.articolo}</div>
+                            <button class="leggi-tutto" onclick="
+                                const t=document.getElementById('t-${idx}');
+                                t.classList.toggle('aperto');
+                                this.innerText=(t.classList.contains('aperto')?'Nascondi':'Leggi articolo')
+                            ">Leggi articolo</button>
+                            ${commentoFirmaHTML}
+                            ${commentiHTML ? `<div class="commenti-box">${commentiHTML}</div>` : ''}
+                        </div>`;
+                }
             });
         }
 

@@ -296,7 +296,7 @@ async function generaArticolo(voce, CHI, titolo) {
     // inventare è indipendente dal tipo — può essere true sia su GEN che su RSS
 
     // fantasia: true = inventa liberamente | false/assente = scrive cose vere (anche se senza RSS)
-    const puoInventare = voce.fantasia === true;
+    const puoInventare = voce.inventare === true;
 
     const sys = `Sei ${voce.firma}, giornalista con questo carattere: "${moodFirma}". ${bioFirma}
 Rispondi con UN SINGOLO OGGETTO JSON: {"titolo":"...","articolo":"...","commento":"..."}.
@@ -664,19 +664,14 @@ async function main() {
         }
     }
 
-    // --- Genera articoli (se entro il limite giornaliero) ---
-    const articoliAbilitati = !limiteSuperato(contatori, LIMITI, "articoli_run_max");
-    if (!articoliAbilitati) {
-        scriviLog(`⏭️ Generazione articoli saltata (limite: ${LIMITI.articoli_run_max} run/giorno raggiunto).`);
+    // --- Genera articoli solo se nella fascia oraria attiva ---
+    if (!articoliAttivi) {
+        scriviLog(`⏭️ Generazione articoli saltata — nessuna fascia oraria attiva ora.`);
     }
-    contatori.articoli_run = (contatori.articoli_run || 0) + (articoliAbilitati ? 1 : 0);
 
-    // Ogni tema da generare porta con sé la voce di appartenenza — così
-    // la cascata non mescola mai metadati (firma, label, icona) tra voci diverse.
-    // [ { voce, tema } ]
     const codaArticoli = [];
 
-    if (articoliAbilitati) {
+    if (articoliAttivi) {
         let quotaAvanzata = 0;
         let voceQuota = null; // la voce che ha generato la quota avanzata
 
@@ -727,7 +722,7 @@ async function main() {
 
         // 2. Genera commenti a cascata dei personaggi
         let commentiFinali = [];
-        const rawCommenti    = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, []);
+        const rawCommenti    = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI);
         const parsedCommenti = parseJSON(rawCommenti);
         if (parsedCommenti?.commenti?.length) {
             commentiFinali = parsedCommenti.commenti;

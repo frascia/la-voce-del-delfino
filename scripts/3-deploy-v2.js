@@ -105,11 +105,11 @@ async function main() {
     // --- Git ---
     eseguiGit(`git config user.name "DelfinoBot"`);
     eseguiGit(`git config user.email "bot@lavocedeldelfino.it"`);
-    // Prima allinea, poi scrivi i file, poi committa
+    // Allinea con il remoto PRIMA di aggiungere i file
     eseguiGit(`git fetch origin main`);
-    eseguiGit(`git reset --hard origin/main`);
     eseguiGit(`git add public/data/`);
     eseguiGit(`git commit -m "🤖 Redazione v2 ${oraAggiornamento} [skip ci]"`);
+    eseguiGit(`git rebase origin/main`);
     eseguiGit(`git push`);
 
     scriviLog(`✅ FASE 3-v2 completata. Dati pubblicati.`);

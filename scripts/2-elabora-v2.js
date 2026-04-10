@@ -124,7 +124,8 @@ async function main() {
                 commenti,
                 categoria:      art.categoria || "Generale",
                 colore_tipo:    art.colore_tipo || stili?.RSS || "#008cff",
-                immagine:       art.immagine || "Categoria.webp"
+                // immagine null = articolo personaggio (frame verde senza img)
+                immagine:       art.tipo === "personaggio" ? null : (art.immagine || "Categoria.webp")
             });
         }
 
