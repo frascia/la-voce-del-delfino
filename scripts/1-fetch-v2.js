@@ -846,8 +846,12 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
     salvaJSON(DRAFT_PATH, draft);
     scriviLog(`✅ FASE 1-v2 completata. Draft → ${DRAFT_PATH}`);
 }
-
-main().catch(err => {
-    scriviLog(`ERRORE CRITICO: ${err.message}`);
-    process.exit(1);
-});
+main()
+    .then(() => {
+        scriviLog("🏁 [FINISH] Script completato con successo.");
+        process.exit(0); // Esci con successo
+    })
+    .catch(err => {
+        scriviLog(`❌ [CRITICAL ERROR] ${err.message}`);
+        process.exit(1); // Esci con errore (ferma il workflow di GitHub)
+    });
