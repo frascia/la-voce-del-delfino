@@ -26,7 +26,7 @@ Giornale automatico illustrato in stile Ghibli. Si aggiorna ogni ora via GitHub 
 - **Actions → 🐬 Aggiorna Notizie → Run workflow**
 - Aspetta ~20 minuti (20 notizie + 21 illustrazioni SVG × 2 sezioni, con pause per il rate limit)
 
-Il sito sarà su `https://TUO_USERNAME.github.io/voce-del-delfino`
+Il sito sarà su `https://TUO_USERNAME.github.io /voce-del-delfino`
 
 ---
 
