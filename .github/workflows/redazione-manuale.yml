@@ -38,18 +38,18 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-        run: node scripts/1-fetch.js
+        run: node scripts/1-fetch-v2.js
 
       - name: "[run-1] FASE 2 — Elaborazione"
         if: "contains(github.event.head_commit.message, '[run-1]')"
         env:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-        run: node scripts/2-elabora.js
+        run: node scripts/2-elabora-v2.js
 
       - name: "[run-1] FASE 3 — Deploy"
         if: "contains(github.event.head_commit.message, '[run-1]')"
-        run: node scripts/3-deploy.js
+        run: node scripts/3-deploy-v2.js
 
       # -----------------------------------------------------------------------
       # [run-2] → esegue solo FASE 2, poi 3 (riusa il _draft.json esistente)
