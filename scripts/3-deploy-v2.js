@@ -109,7 +109,7 @@ async function main() {
     eseguiGit(`git fetch origin main`);
     eseguiGit(`git add public/data/`);
     eseguiGit(`git commit -m "🤖 Redazione v2 ${oraAggiornamento} [skip ci]"`);
-    eseguiGit(`git rebase origin/main`);
+    eseguiGit(`git rebase origin/main --autostash`);
     eseguiGit(`git push`);
 
     scriviLog(`✅ FASE 3-v2 completata. Dati pubblicati.`);
