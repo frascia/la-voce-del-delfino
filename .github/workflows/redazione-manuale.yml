@@ -8,7 +8,7 @@ on:
 jobs:
   check-trigger:
     runs-on: ubuntu-latest
-    # Ignora i commit fatti dal bot stesso (evita loop infiniti)
+    # Ignora i commit fatti dal bot stesso per evitare loop
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     permissions:
       contents: write
@@ -24,59 +24,72 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Installazione Dipendenze
+        run: npm install
+
       - name: Configura credenziali git
         run: |
-          git config user.name "La Voce del Delfino Bot"
-          git config user.email "bot@lavocedeldelfino.it"
+          git config --local user.name "GitHub Action Bot"
+          git config --local user.email "action@github.com"
 
       # -----------------------------------------------------------------------
-      # [run-1] → esegue FASE 1, poi 2, poi 3
+      # [run-1] → FASE 1 + 2 + 3
       # -----------------------------------------------------------------------
-      - name: "[run-1] FASE 1 — Fetch RSS + Gemini"
+      - name: "⚓ [run-1] FASE 1 — Fetch RSS + Gemini v2"
         if: "contains(github.event.head_commit.message, '[run-1]')"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-       run: node scripts/1-fetch-v2.js
-        # AGGIUNGI QUESTO QUI SOTTO:
-      - name: "💾 Commit dei file generati"
-        if: always() # Lo esegue anche se lo step prima ha avuto avvisi
+        run: node scripts/1-fetch-v2.js
+
+      - name: "💾 Salvataggio Draft (Auto-commit)"
+        if: "contains(github.event.head_commit.message, '[run-1]') && always()"
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
           git add .
-          git commit -m "Aggiornamento dati (auto-commit) [skip ci]" || echo "Nessuna modifica da caricare"
+          git commit -m "Salvataggio Draft Fase 1 [skip ci]" || echo "Nessuna modifica"
           git push
 
-      - name: "[run-1] FASE 2 — Elaborazione"
+      - name: "⚙️ [run-1] FASE 2 — Elaborazione v2"
         if: "contains(github.event.head_commit.message, '[run-1]')"
         env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/2-elabora-v2.js
 
-      - name: "[run-1] FASE 3 — Deploy"
+      - name: "🚀 [run-1] FASE 3 — Deploy v2"
         if: "contains(github.event.head_commit.message, '[run-1]')"
         run: node scripts/3-deploy-v2.js
 
       # -----------------------------------------------------------------------
-      # [run-2] → esegue solo FASE 2, poi 3 (riusa il _draft.json esistente)
+      # [run-2] → solo FASE 2 + 3
       # -----------------------------------------------------------------------
-      - name: "[run-2] FASE 2 — Elaborazione"
+      - name: "⚙️ [run-2] FASE 2 — Elaborazione v2"
         if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
         env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-        run: node scripts/2-elabora.js
+        run: node scripts/2-elabora-v2.js
 
-      - name: "[run-2] FASE 3 — Deploy"
+      - name: "🚀 [run-2] FASE 3 — Deploy v2"
         if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
-        run: node scripts/3-deploy.js
+        run: node scripts/3-deploy-v2.js
 
       # -----------------------------------------------------------------------
-      # [run-3] → esegue solo FASE 3 (riusa il _articles.json esistente)
+      # [run-3] → solo FASE 3
       # -----------------------------------------------------------------------
-      - name: "[run-3] FASE 3 — Deploy"
+      - name: "🚀 [run-3] FASE 3 — Deploy v2"
         if: "contains(github.event.head_commit.message, '[run-3]') && !contains(github.event.head_commit.message, '[run-1]') && !contains(github.event.head_commit.message, '[run-2]')"
-        run: node scripts/3-deploy.js
+        run: node scripts/3-deploy-v2.js
+
+      # -----------------------------------------------------------------------
+      # Salvataggio Finale — Per rendere permanenti i risultati sul repo
+      # -----------------------------------------------------------------------
+      - name: "💾 Salvataggio Finale Risultati"
+        if: always()
+        run: |
+          git add .
+          git commit -m "Redazione completata: aggiornamento articoli e log [skip ci]" || echo "Nessuna modifica"
+          git push
