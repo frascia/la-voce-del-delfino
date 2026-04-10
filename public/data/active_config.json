@@ -1,111 +1,67 @@
 {
   "site_settings": {
     "header_img": "Header.png",
-    "day_banner": "Giovedi.webp",
-    "descrizione": "Edizione del Giovedì (ci manca poco)",
-    "last_update": "09/04, 22:54"
+    "day_banner": "banner_default.webp",
+    "descrizione": "Edizione Settimanale",
+    "last_update": "10/04, 03:17"
   },
   "satira_config": {
     "temi": [
-      "Il weekend si avvicina",
-      "Lo smartwork poco smart",
-      "L'avventuriero va in montagna e non lavora",
-      "Il polemico dell'ufficio",
-      "La mensa fa schifo",
-      "Progettano male le sbarre di ingresso e lo rifanno da capo"
+      "Alieni avvistati a bere birra a Pescara Vecchia",
+      "Il Ponte del Mare diventa uno scivolo acquatico",
+      "Arrosticini sintetici stampati in 3D con carne di nuvola",
+      "L'IA impara il dialetto pescarese e si rifiuta di lavorare",
+      "La Nave di Cascella prende il largo per una crociera ai Caraibi",
+      "Tunnel sottomarino Pescara-Spalato percorribile in pedalò",
+      "Il porto di Pescara dichiarato zona extraterrestre"
     ]
   },
   "pescara": {
-    "color": "#b1dcf0",
-    "Cronaca pescarese": {
-      "count": 1,
-      "img": "Calcio.webp",
-      "label": "Cronaca",
-      "mood": "chietino sprezzante",
-      "weight": 0.8
+    "color": "#005f73",
+    "Pescara Calcio": {
+      "count": 2,
+      "img": "sport_pescara.webp",
+      "label": "Calcio",
+      "mood": "entusiasta",
+      "weight": 0.6
     },
-    "Eventi e attività vicino Pescara": {
+    "AI": {
       "count": 1,
-      "img": "Concerti.webp",
-      "label": "Eventi",
-      "mood": "entusiasta e filosofo",
-      "weight": 0.9
-    },
-    "Meteo Pescara": {
-      "count": 1,
-      "img": "Meteo.webp",
-      "label": "Meteo Pescara",
-      "mood": "menefreghista",
-      "weight": 0.8
+      "img": "ai_tech.webp",
+      "label": "Futuro",
+      "mood": "saggio",
+      "weight": 0.4
     },
     "Satira": {
-      "count": 6,
-      "img": "Fake.webp",
+      "count": 3,
+      "img": "satira.webp",
       "label": "Satira",
-      "mood": "sarcastico e preoccupato",
-      "weight": 0.8
+      "mood": "pungente",
+      "weight": 1
     }
   },
   "mondo": {
-    "color": "#edcab4",
-    "Novità serie Netflix": {
+    "color": "#0a9396",
+    "Netflix": {
       "count": 2,
-      "img": "Concerti.webp",
+      "img": "netflix.webp",
       "label": "Streaming",
-      "mood": "meravigliato",
-      "weight": 0.7
-    },
-    "Novità Prime": {
-      "count": 2,
-      "img": "Concerti.webp",
-      "label": "Prime",
-      "mood": "dubbioso",
+      "mood": "sarcastico",
       "weight": 0.7
     },
     "Giappone": {
-      "count": 2,
-      "img": "Giappone.webp",
-      "label": "Giappone",
-      "mood": "appassionato e sognante",
+      "count": 1,
+      "img": "giappone.webp",
+      "label": "Esteri",
+      "mood": "curioso",
       "weight": 0.5
     },
-    "Danimarca": {
+    "Satira Mondo": {
       "count": 2,
-      "img": "Danimarca.webp",
-      "label": "Danimarca",
-      "mood": "meravigliato",
-      "weight": 0.4
-    },
-    "Brasile": {
-      "count": 2,
-      "img": "Brasile.webp",
-      "label": "Brasile",
-      "mood": "meravigliato",
-      "weight": 0.6
-    },
-    "Intelligenza Artificiale": {
-      "count": 2,
-      "img": "Ai.webp",
-      "label": "Ai",
-      "mood": "conservatore pescarese",
-      "weight": 0.6
-    }
-  },
-  "Cultura": {
-    "color": "#f5f2a4",
-    "Libri": {
-      "count": 4,
-      "img": "Tv.webp",
-      "label": "Da Vedere",
-      "mood": "meravigliato",
-      "weight": 0.7
-    },
-    "Viaggi": {
-      "count": 6,
-      "img": "Escursioni.webp",
-      "label": "Viaggi",
-      "mood": "viaggiatore incallito",
-      "weight": 0.7
+      "img": "satira_mondo.webp",
+      "label": "Satira",
+      "mood": "assurdo",
+      "weight": 1
     }
   }
 }
