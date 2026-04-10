@@ -17,7 +17,7 @@ Giornale automatico illustrato in stile Ghibli. Si aggiorna ogni ora via GitHub 
 - Valore: la chiave copiata da AI Studio
 
 ### 4. Abilita GitHub Pages
-- **Settings → Pages → Source: GitHub Actions** → Salva
+- **Settings → Pages → Source: GitHub Actions** → Salva. 
 
 ### 5. Abilita i workflow
 - **Actions → "I understand my workflows, enable them"**
