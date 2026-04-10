@@ -1,0 +1,58 @@
+name: 🐬 Redazione Automatica v2
+
+on:
+  schedule:
+    # Ogni 2 ore dalle 7 alle 21 ora italiana (= 5 alle 19 UTC)
+    - cron: '0 5-19/2 * * *'
+  workflow_dispatch:  # avvio manuale dalla UI di GitHub
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  redazione-v2-auto:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installazione Dipendenze
+        run: npm install
+
+      - name: "⚓ FASE 1 — Fetch RSS + Gemini v2"
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/1-fetch-v2.js
+
+      - name: "⚙️ FASE 2 — Elaborazione v2"
+        env:
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
+        run: node scripts/2-elabora-v2.js
+
+      - name: "🚀 FASE 3 — Deploy v2"
+        env:
+          WORKFLOW_AUTOMATICO: "true"
+        run: node scripts/3-deploy-v2.js
+
+      - name: Configurazione Pages
+        uses: actions/configure-pages@v4
+
+      - name: Caricamento Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
