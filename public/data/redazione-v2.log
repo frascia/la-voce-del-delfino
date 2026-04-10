@@ -1,78 +1,280 @@
-[10/04/2026, 10:50:37] [1-fetch-v2] ═══════════════════════════════════
-[10/04/2026, 10:50:37] [1-fetch-v2] 🐬 NUOVO RUN v2 [ venerdì 10 aprile 2026 alle ore 10:50:37 ]
-[10/04/2026, 10:50:37] [1-fetch-v2] ═══════════════════════════════════
-[10/04/2026, 10:50:37] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
-[10/04/2026, 10:50:37] [1-fetch-v2] 🔄 Reset quote cumulative (10/04 10:50 IT).
-[10/04/2026, 10:50:37] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
-[10/04/2026, 10:50:37] [1-fetch-v2] 🕐 Fascia articoli attiva: NO | Lunghezza target: ~480 parole
-[10/04/2026, 10:50:37] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
-[10/04/2026, 10:50:37] [1-fetch-v2] 📅 Giorno: ven | Timbro: Resistenza Adriatica
-[10/04/2026, 10:50:37] [1-fetch-v2] 📋 Voci attive oggi: 7
-[10/04/2026, 10:50:37] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 3, firma: Ernesto, ~480 parole
-[10/04/2026, 10:50:37] [1-fetch-v2] 🎣 [pescara] Politica Locale Pescara — tipo: RSS, num: 2, firma: Ernesto, ~480 parole
-[10/04/2026, 10:50:38] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Politica Locale Pescara". Passo 1 alla voce successiva.
-[10/04/2026, 10:50:38] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 3, firma: Peppino, ~480 parole
-[10/04/2026, 10:50:38] [1-fetch-v2] 🎣 [pescara] Riflessioni di filosofia quotidiana — tipo: GEN, num: 1, firma: Peppino, ~480 parole
-[10/04/2026, 10:50:38] [1-fetch-v2] 🎣 [mondo] Intelligenza Artificiale novità — tipo: RSS, num: 2, firma: Peppino, ~480 parole
-[10/04/2026, 10:50:38] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Intelligenza Artificiale novità". Passo 1 alla voce successiva.
-[10/04/2026, 10:50:38] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 3, firma: Giovanni, ~480 parole
-[10/04/2026, 10:50:39] [1-fetch-v2] 🎣 [cultura] Nuovi film da vedere cinema — tipo: RSS, num: 2, firma: Giovanni, ~480 parole
-[10/04/2026, 10:50:53] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 10:50:53] [1-fetch-v2]   ✅ "Tragedia al campo: quando la burocrazia non basta ..." — 3 commenti
-[10/04/2026, 10:51:16] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 3 stati cambiati.
-[10/04/2026, 10:51:16] [1-fetch-v2]   ✅ "Tragedia al circolo: quando la burocrazia non può ..." — 3 commenti
-[10/04/2026, 10:51:26] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 3 stati cambiati.
-[10/04/2026, 10:51:26] [1-fetch-v2]   ✅ "L'ennesima tragedia che non trova spazio nei capit..." — 3 commenti
-[10/04/2026, 10:51:54] [1-fetch-v2] 🔄 Relazioni aggiornate: 2 delta, 3 stati cambiati.
-[10/04/2026, 10:51:54] [1-fetch-v2]   ✅ "Nuova Pescara: il referendum è l'ennesimo spreco d..." — 3 commenti
-[10/04/2026, 10:52:16] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 10:52:16] [1-fetch-v2]   ✅ "Il Lungomare come la caverna di Platone: luci, fum..." — 3 commenti
-[10/04/2026, 10:52:39] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 10:52:39] [1-fetch-v2]   ✅ "Il Ponte del Mare: tra vertigini esistenziali e bu..." — 3 commenti
-[10/04/2026, 10:53:08] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 10:53:08] [1-fetch-v2]   ✅ "La gabbianologia del lungomare: il rapace che ci m..." — 3 commenti
-[10/04/2026, 10:54:37] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
-[10/04/2026, 10:54:37] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
-[10/04/2026, 10:54:48] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 10:54:48] [1-fetch-v2]   ✅ "Il Bar del Tempo: Quando i denti cascano ma la ver..." — 3 commenti
-[10/04/2026, 10:55:00] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
-[10/04/2026, 10:55:00] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
-[10/04/2026, 10:56:01] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 10:56:01] [1-fetch-v2]   ✅ "L'Intelligenza Artificiale che ci ruba pure la spa..." — 3 commenti
-[10/04/2026, 10:56:32] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 10:56:32] [1-fetch-v2]   ✅ "Zerocalcare su Netflix: ancora un poster, ma la so..." — 3 commenti
-[10/04/2026, 10:57:20] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
-[10/04/2026, 10:57:20] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
-[10/04/2026, 10:59:13] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
-[10/04/2026, 10:59:13] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
-[10/04/2026, 11:02:38] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
-[10/04/2026, 11:02:38] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
-[10/04/2026, 11:02:51] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 11:02:51] [1-fetch-v2]   ✅ "Streaming o calvario? Il palinsesto è un rigore sb..." — 3 commenti
-[10/04/2026, 11:05:10] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 11:05:10] [1-fetch-v2]   ✅ "Zerocalcare e il ritorno di 'Due Spicci': l'ennesi..." — 3 commenti
-[10/04/2026, 11:06:04] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 3 stati cambiati.
-[10/04/2026, 11:06:04] [1-fetch-v2]   ✅ "Cinema in sala: il solito copione stanco che non c..." — 3 commenti
-[10/04/2026, 11:06:18] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
-[10/04/2026, 11:06:18] [1-fetch-v2]   ✅ "Cinema in crisi d'identità: tra popcorn e mediocri..." — 3 commenti
-[10/04/2026, 11:06:18] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
-[10/04/2026, 11:06:18] [1-fetch-v2] 📊 Totale giornata: chiamate=47, token_stimati≈21150, rss=0
-[10/04/2026, 11:06:18] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
-[10/04/2026, 11:06:18] [1-fetch-v2] 📊 Chiamate API totali: 47
-[10/04/2026, 11:06:18] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
-[10/04/2026, 11:06:18] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
-[10/04/2026, 11:06:18] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
-[10/04/2026, 11:06:18] [2-elabora-v2] 🔐 auth_info.json aggiornato.
-[10/04/2026, 11:06:18] [2-elabora-v2] ✅ Sezione pescara: 8 articoli normalizzati.
-[10/04/2026, 11:06:18] [2-elabora-v2] ✅ Sezione mondo: 4 articoli normalizzati.
-[10/04/2026, 11:06:18] [2-elabora-v2] ✅ Sezione cultura: 2 articoli normalizzati.
-[10/04/2026, 11:06:18] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
-[10/04/2026, 11:06:18] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
-[10/04/2026, 11:06:18] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (8 articoli)
-[10/04/2026, 11:06:18] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (4 articoli)
-[10/04/2026, 11:06:18] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (2 articoli)
-[10/04/2026, 11:06:18] [3-deploy-v2] 🕐 Ora: 10/04, 10:50 | Prossimo: Aggiornamenti sospesi
-[10/04/2026, 11:06:18] [3-deploy-v2] [git] HEAD is now at 0c0d560 🤖 Aggiornamento redazione 10/04, 10:50 [skip ci]
-[10/04/2026, 11:10:27] [3-deploy-v2] [git] HEAD is now at 4b277ac 🤖 Aggiornamento redazione 10/04, 10:50 [skip ci]
-[10/04/2026, 11:18:48] [3-deploy-v2] [git] HEAD is now at 82e8e8f [run-3]
-[10/04/2026, 11:20:13] [3-deploy-v2] [git] HEAD is now at 3a2c991 🤖 Aggiornamento redazione 10/04, 11:11 [skip ci]
+[10/04/2026, 18:26:18] [1-fetch-v2] ═══════════════════════════════════
+[10/04/2026, 18:26:18] [1-fetch-v2] 🐬 NUOVO RUN v2 [ venerdì 10 aprile 2026 alle ore 18:26:18 ]
+[10/04/2026, 18:26:18] [1-fetch-v2] ═══════════════════════════════════
+[10/04/2026, 18:26:18] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[10/04/2026, 18:26:18] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[10/04/2026, 18:26:18] [1-fetch-v2] 🕐 Fascia articoli attiva: SÌ | Lunghezza target: ~240 parole
+[10/04/2026, 18:26:18] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[10/04/2026, 18:26:18] [1-fetch-v2] 📅 Giorno: ven | Timbro: Resistenza Adriatica
+[10/04/2026, 18:26:18] [1-fetch-v2] 📋 Voci attive oggi: 8
+[10/04/2026, 18:26:18] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 3, firma: Cetteo, ~240 parole
+[10/04/2026, 18:26:19] [1-fetch-v2] 🎣 [pescara] Politica Locale Pescara — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 18:26:19] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Politica Locale Pescara". Passo 1 alla voce successiva.
+[10/04/2026, 18:26:19] [1-fetch-v2] 🎣 [pescara] Pescara Calcio — tipo: RSS, num: 4, firma: Cetteo, ~240 parole
+[10/04/2026, 18:26:20] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 2, firma: Hiroki, ~240 parole
+[10/04/2026, 18:26:20] [1-fetch-v2] 🎣 [pescara] Riflessioni di filosofia quotidiana — tipo: GEN, num: 1, firma: Juizinho, ~240 parole
+[10/04/2026, 18:26:20] [1-fetch-v2] 🎣 [mondo] Intelligenza Artificiale novità — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 18:26:20] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Intelligenza Artificiale novità". Passo 2 alla voce successiva.
+[10/04/2026, 18:26:20] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 4, firma: Lars, ~240 parole
+[10/04/2026, 18:26:21] [1-fetch-v2] [CASCATA] Solo 2/4 notizie per "Novità serie Netflix". Passo 2 alla voce successiva.
+[10/04/2026, 18:26:21] [1-fetch-v2] 🎣 [cultura] Nuovi film da vedere cinema — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 18:26:28] [1-fetch-v2] [ERRORE GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 31.21389221s. (code: 429)
+[10/04/2026, 18:26:28] [1-fetch-v2] ❌ QUOTA GIORNALIERA ESAURITA
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Senza acqua e senza vergogna: Pescara a secco e la..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Pescara, arresto cardiaco mentre fa sport: muore u..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Emergenza idrica: corsa alle scorte a Pescara prim..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Nuova Pescara/referendum. Di Marzio chiede di non ..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Pubblico delle grandi occasioni per Pescara-Samp..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Ufficiale: Silvio Baldini promosso c.t. della nazi..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Serie B Pescara Sampdoria, Gorgone: “Pubblico stra..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Pescara-Sampdoria: Settore Ospiti aperto ai reside..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Il traffico sul lungomare in agosto..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "La movida adriatica vista da un vecchio del posto..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Il tempo libero come illusione moderna..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Emily in Paris, novità in arrivo! La sesta stagion..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Due Spicci: la nuova serie Netflix di Zerocalcare..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Leggi le nostre recensioni delle uscite al cinema ..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2]   ✅ "Film da vedere al cinema: le uscite imperdibili de..." — 0 commenti
+[10/04/2026, 18:26:28] [1-fetch-v2] 💬 Chat oggi: sì
+[10/04/2026, 18:26:28] [1-fetch-v2] 📊 Totale giornata: chiamate=7, token_stimati≈3150, rss=0
+[10/04/2026, 18:26:28] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[10/04/2026, 18:26:28] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[10/04/2026, 18:26:28] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:26:28] [1-fetch-v2] 📊 Chiamate API totali: 2
+[10/04/2026, 18:26:28] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
+[10/04/2026, 18:26:28] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[10/04/2026, 18:26:31] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
+[10/04/2026, 18:26:31] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
+[10/04/2026, 18:26:31] [2-elabora-v2] 🔐 auth_info.json aggiornato.
+[10/04/2026, 18:26:31] [2-elabora-v2] ✅ Sezione pescara: 11 articoli normalizzati.
+[10/04/2026, 18:26:31] [2-elabora-v2] ✅ Sezione mondo: 2 articoli normalizzati.
+[10/04/2026, 18:26:31] [2-elabora-v2] ✅ Sezione cultura: 2 articoli normalizzati.
+[10/04/2026, 18:26:31] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[10/04/2026, 18:26:33] [3-deploy-v2] [git] HEAD is now at 53722f1 Articoli elaborati (Fase 2) [skip ci]
+[10/04/2026, 18:30:30] [1-fetch-v2] ═══════════════════════════════════
+[10/04/2026, 18:30:30] [1-fetch-v2] 🐬 NUOVO RUN v2 [ venerdì 10 aprile 2026 alle ore 18:30:30 ]
+[10/04/2026, 18:30:30] [1-fetch-v2] ═══════════════════════════════════
+[10/04/2026, 18:30:30] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[10/04/2026, 18:30:30] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[10/04/2026, 18:30:30] [1-fetch-v2] 🕐 Fascia articoli attiva: SÌ | Lunghezza target: ~240 parole
+[10/04/2026, 18:30:30] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[10/04/2026, 18:30:30] [1-fetch-v2] 📅 Giorno: ven | Timbro: Resistenza Adriatica
+[10/04/2026, 18:30:30] [1-fetch-v2] 📋 Voci attive oggi: 8
+[10/04/2026, 18:30:30] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 3, firma: Cetteo, ~240 parole
+[10/04/2026, 18:30:30] [1-fetch-v2] 🎣 [pescara] Politica Locale Pescara — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 18:30:31] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Politica Locale Pescara". Passo 1 alla voce successiva.
+[10/04/2026, 18:30:31] [1-fetch-v2] 🎣 [pescara] Pescara Calcio — tipo: RSS, num: 4, firma: Cetteo, ~240 parole
+[10/04/2026, 18:30:31] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 2, firma: Hiroki, ~240 parole
+[10/04/2026, 18:30:31] [1-fetch-v2] 🎣 [pescara] Riflessioni di filosofia quotidiana — tipo: GEN, num: 1, firma: Juizinho, ~240 parole
+[10/04/2026, 18:30:31] [1-fetch-v2] 🎣 [mondo] Intelligenza Artificiale novità — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 18:30:32] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Intelligenza Artificiale novità". Passo 2 alla voce successiva.
+[10/04/2026, 18:30:32] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 4, firma: Lars, ~240 parole
+[10/04/2026, 18:30:32] [1-fetch-v2] [CASCATA] Solo 2/4 notizie per "Novità serie Netflix". Passo 2 alla voce successiva.
+[10/04/2026, 18:30:32] [1-fetch-v2] 🎣 [cultura] Nuovi film da vedere cinema — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 18:30:33] [1-fetch-v2] [ERRORE GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 26.800199274s. (code: 429)
+[10/04/2026, 18:30:33] [1-fetch-v2] ❌ QUOTA GIORNALIERA ESAURITA
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "SOSPENSIONE EROGAZIONE ACQUA NEL PESCARESE: ASSALT..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Pescara, arresto cardiaco mentre fa sport: muore u..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Emergenza idrica: corsa alle scorte a Pescara prim..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Nuova Pescara/referendum. Di Marzio chiede di non ..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Pubblico delle grandi occasioni per Pescara-Samp..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Ufficiale: Silvio Baldini promosso c.t. della nazi..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Serie B Pescara Sampdoria, Gorgone: “Pubblico stra..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Pescara-Sampdoria: Settore Ospiti aperto ai reside..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Il traffico sul lungomare in agosto..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "La fila al bar per il caffè del mattino..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Perché il mare calma l'anima ma non il portafoglio..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Emily in Paris, novità in arrivo! La sesta stagion..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Due Spicci: la nuova serie Netflix di Zerocalcare..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "Leggi le nostre recensioni delle uscite al cinema ..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2]   ✅ "I nuovi film al cinema dal 9 aprile e quelli ancor..." — 0 commenti
+[10/04/2026, 18:30:33] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
+[10/04/2026, 18:30:33] [1-fetch-v2] 📊 Totale giornata: chiamate=8, token_stimati≈3600, rss=0
+[10/04/2026, 18:30:33] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[10/04/2026, 18:30:33] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[10/04/2026, 18:30:33] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:30:33] [1-fetch-v2] 📊 Chiamate API totali: 1
+[10/04/2026, 18:30:33] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
+[10/04/2026, 18:30:33] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[10/04/2026, 18:30:36] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
+[10/04/2026, 18:30:36] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
+[10/04/2026, 18:30:36] [2-elabora-v2] 🔐 auth_info.json aggiornato.
+[10/04/2026, 18:30:36] [2-elabora-v2] ✅ Sezione pescara: 11 articoli normalizzati.
+[10/04/2026, 18:30:36] [2-elabora-v2] ✅ Sezione mondo: 2 articoli normalizzati.
+[10/04/2026, 18:30:36] [2-elabora-v2] ✅ Sezione cultura: 2 articoli normalizzati.
+[10/04/2026, 18:30:36] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[10/04/2026, 18:30:37] [3-deploy-v2] [git] HEAD is now at 89b0d0f Articoli elaborati (Fase 2) [skip ci]
+[10/04/2026, 18:35:04] [1-fetch-v2] ═══════════════════════════════════
+[10/04/2026, 18:35:04] [1-fetch-v2] 🐬 NUOVO RUN v2 [ venerdì 10 aprile 2026 alle ore 18:35:04 ]
+[10/04/2026, 18:35:04] [1-fetch-v2] ═══════════════════════════════════
+[10/04/2026, 18:35:04] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[10/04/2026, 18:35:04] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[10/04/2026, 18:35:04] [1-fetch-v2] 🕐 Fascia articoli attiva: SÌ | Lunghezza target: ~240 parole
+[10/04/2026, 18:35:04] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[10/04/2026, 18:35:04] [1-fetch-v2] 📅 Giorno: ven | Timbro: Resistenza Adriatica
+[10/04/2026, 18:35:04] [1-fetch-v2] 📋 Voci attive oggi: 8
+[10/04/2026, 18:35:04] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 3, firma: Cetteo, ~240 parole
+[10/04/2026, 18:35:05] [1-fetch-v2] 🎣 [pescara] Politica Locale Pescara — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 18:35:05] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Politica Locale Pescara". Passo 1 alla voce successiva.
+[10/04/2026, 18:35:05] [1-fetch-v2] 🎣 [pescara] Pescara Calcio — tipo: RSS, num: 4, firma: Cetteo, ~240 parole
+[10/04/2026, 18:35:05] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 2, firma: Hiroki, ~240 parole
+[10/04/2026, 18:35:05] [1-fetch-v2] 🎣 [pescara] Riflessioni di filosofia quotidiana — tipo: GEN, num: 1, firma: Juizinho, ~240 parole
+[10/04/2026, 18:35:05] [1-fetch-v2] 🎣 [mondo] Intelligenza Artificiale novità — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 18:35:06] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Intelligenza Artificiale novità". Passo 2 alla voce successiva.
+[10/04/2026, 18:35:06] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 4, firma: Lars, ~240 parole
+[10/04/2026, 18:35:06] [1-fetch-v2] [CASCATA] Solo 2/4 notizie per "Novità serie Netflix". Passo 2 alla voce successiva.
+[10/04/2026, 18:35:06] [1-fetch-v2] 🎣 [cultura] Nuovi film da vedere cinema — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 18:35:07] [1-fetch-v2] [ERRORE GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 52.525601663s. (code: 429)
+[10/04/2026, 18:35:07] [1-fetch-v2] ❌ QUOTA GIORNALIERA ESAURITA
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "SOSPENSIONE EROGAZIONE ACQUA NEL PESCARESE: ASSALT..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Pescara, arresto cardiaco mentre fa sport: muore u..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Emergenza idrica: corsa alle scorte a Pescara prim..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Nuova Pescara/referendum. Di Marzio chiede di non ..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Pubblico delle grandi occasioni per Pescara-Samp..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Ufficiale: Silvio Baldini promosso c.t. della nazi..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Serie B Pescara Sampdoria, Gorgone: “Pubblico stra..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Pescara-Sampdoria: Settore Ospiti aperto ai reside..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Il traffico sul lungomare in agosto..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Il cantiere eterno di Pescara..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Perché il mare calma l'anima ma non il portafoglio..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Emily in Paris, novità in arrivo! La sesta stagion..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Due Spicci: la nuova serie Netflix di Zerocalcare..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "Leggi le nostre recensioni delle uscite al cinema ..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2]   ✅ "I nuovi film al cinema dal 9 aprile e quelli ancor..." — 0 commenti
+[10/04/2026, 18:35:07] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
+[10/04/2026, 18:35:07] [1-fetch-v2] 📊 Totale giornata: chiamate=9, token_stimati≈4050, rss=0
+[10/04/2026, 18:35:07] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[10/04/2026, 18:35:07] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[10/04/2026, 18:35:07] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 18:35:07] [1-fetch-v2] 📊 Chiamate API totali: 1
+[10/04/2026, 18:35:07] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
+[10/04/2026, 18:35:07] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[10/04/2026, 18:35:10] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
+[10/04/2026, 18:35:10] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
+[10/04/2026, 18:35:10] [2-elabora-v2] 🔐 auth_info.json aggiornato.
+[10/04/2026, 18:35:10] [2-elabora-v2] ✅ Sezione pescara: 11 articoli normalizzati.
+[10/04/2026, 18:35:10] [2-elabora-v2] ✅ Sezione mondo: 2 articoli normalizzati.
+[10/04/2026, 18:35:10] [2-elabora-v2] ✅ Sezione cultura: 2 articoli normalizzati.
+[10/04/2026, 18:35:10] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[10/04/2026, 18:35:11] [3-deploy-v2] [git] HEAD is now at b6e2f1a Articoli elaborati (Fase 2) [skip ci]
+[10/04/2026, 19:51:03] [1-fetch-v2] ═══════════════════════════════════
+[10/04/2026, 19:51:03] [1-fetch-v2] 🐬 NUOVO RUN v2 [ venerdì 10 aprile 2026 alle ore 19:51:03 ]
+[10/04/2026, 19:51:03] [1-fetch-v2] ═══════════════════════════════════
+[10/04/2026, 19:51:03] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[10/04/2026, 19:51:03] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[10/04/2026, 19:51:03] [1-fetch-v2] 🕐 Fascia articoli attiva: NO | Lunghezza target: ~240 parole
+[10/04/2026, 19:51:03] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[10/04/2026, 19:51:03] [1-fetch-v2] 📅 Giorno: ven | Timbro: Resistenza Adriatica
+[10/04/2026, 19:51:03] [1-fetch-v2] 📉 Decay settimanale relazioni applicato.
+[10/04/2026, 19:51:03] [1-fetch-v2] 📋 Voci attive oggi: 8
+[10/04/2026, 19:51:03] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 3, firma: Cetteo, ~240 parole
+[10/04/2026, 19:51:04] [1-fetch-v2] 🎣 [pescara] Politica Locale Pescara — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 19:51:04] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Politica Locale Pescara". Passo 1 alla voce successiva.
+[10/04/2026, 19:51:04] [1-fetch-v2] 🎣 [pescara] Pescara Calcio — tipo: RSS, num: 4, firma: Cetteo, ~240 parole
+[10/04/2026, 19:51:05] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 2, firma: Hiroki, ~240 parole
+[10/04/2026, 19:51:05] [1-fetch-v2] 🎣 [pescara] Riflessioni di filosofia quotidiana — tipo: GEN, num: 1, firma: Juizinho, ~240 parole
+[10/04/2026, 19:51:05] [1-fetch-v2] 🎣 [mondo] Intelligenza Artificiale novità — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 19:51:05] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Intelligenza Artificiale novità". Passo 1 alla voce successiva.
+[10/04/2026, 19:51:05] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 3, firma: Lars, ~240 parole
+[10/04/2026, 19:51:06] [1-fetch-v2] [CASCATA] Solo 2/3 notizie per "Novità serie Netflix". Passo 1 alla voce successiva.
+[10/04/2026, 19:51:06] [1-fetch-v2] 🎣 [cultura] Nuovi film da vedere cinema — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[10/04/2026, 19:51:12] [1-fetch-v2] [ERRORE GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 47.624670241s. (code: 429)
+[10/04/2026, 19:51:12] [1-fetch-v2] ❌ QUOTA GIORNALIERA ESAURITA
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Senza acqua e senza vergogna: Pescara a secco e la..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Pescara, arresto cardiaco mentre fa sport: muore u..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Emergenza idrica: corsa alle scorte a Pescara prim..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Nuova Pescara/referendum. Di Marzio chiede di non ..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Pubblico delle grandi occasioni per Pescara-Samp..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Verso Pescara-Sampdoria: altri 1000 biglietti in v..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Pescara-Sampdoria, probabili formazioni: le scelte..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Pescara-Sampdoria: Settore Ospiti aperto ai reside..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "La fila al bar per il caffè del mattino..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Il ponte del mare e le sue leggende metropolitane..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Il significato della pennichella pomeridiana..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Firenze, nasce la prima scuola in città sull’intel..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Emily in Paris, novità in arrivo! La sesta stagion..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Due Spicci: la nuova serie Netflix di Zerocalcare..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "Leggi le nostre recensioni delle uscite al cinema ..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2]   ✅ "I nuovi film al cinema dal 9 aprile e quelli ancor..." — 0 commenti
+[10/04/2026, 19:51:12] [1-fetch-v2] 🧊 Articoli congelati — aggiungo commenti alle notizie esistenti...
+[10/04/2026, 19:51:12] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
+[10/04/2026, 19:51:12] [1-fetch-v2] 📊 Totale giornata: chiamate=11, token_stimati≈4950, rss=0
+[10/04/2026, 19:51:12] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[10/04/2026, 19:51:12] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[10/04/2026, 19:51:12] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[10/04/2026, 19:51:12] [1-fetch-v2] 📊 Chiamate API totali: 2
+[10/04/2026, 19:51:12] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
+[10/04/2026, 19:51:12] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[10/04/2026, 19:51:15] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
+[10/04/2026, 19:51:15] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
+[10/04/2026, 19:51:15] [2-elabora-v2] 🔐 auth_info.json aggiornato.
+[10/04/2026, 19:51:15] [2-elabora-v2] ✅ Sezione pescara: 11 articoli normalizzati.
+[10/04/2026, 19:51:15] [2-elabora-v2] ✅ Sezione mondo: 2 articoli normalizzati.
+[10/04/2026, 19:51:15] [2-elabora-v2] ✅ Sezione cultura: 2 articoli normalizzati.
+[10/04/2026, 19:51:15] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[10/04/2026, 19:51:16] [3-deploy-v2] [git] HEAD is now at cf81e3a Articoli elaborati (Fase 2) [skip ci]

@@ -13,19 +13,19 @@
   "LIMITI": {
     "fasce_articoli": [
       "06",
-      "12",
+      "18",
       "19"
     ],
     "tolleranza_minuti": 45,
-    "lunghezza_articolo": 6,
+    "lunghezza_articolo": 3,
     "cerca_modello_max": 1,
     "chat": "sempre",
     "commenti": "sempre",
     "relazioni": "sempre",
     "fascia_reset_quote": "05",
     "commenti_min": 1,
-    "commenti_max": 3,
-    "commenti_max_totali": 6
+    "commenti_max": 6,
+    "commenti_max_totali": 20
   },
   "CHI": {
     "default": {
@@ -114,7 +114,7 @@
       "arg": "Cronaca Pescarese",
       "tipo": "RSS",
       "lab": "Cronaca",
-      "firma": "Ernesto",
+      "firma": "Cetteo",
       "mood": "burbero e sospettoso",
       "num": 3,
       "inventare": false,
@@ -127,7 +127,7 @@
       "arg": "Politica Locale Pescara",
       "tipo": "RSS",
       "lab": "Politica",
-      "firma": "Ernesto",
+      "firma": "Cetteo",
       "mood": "rassegnato e burocratico",
       "num": 2,
       "inventare": false,
@@ -148,12 +148,12 @@
       "weight_commento": 0.6
     },
     {
-      "g": "lun,dom",
+      "g": "lun,dom,ven",
       "sez": "pescara",
       "arg": "Pescara Calcio",
       "tipo": "RSS",
       "lab": "Sport",
-      "firma": "Giovanni",
+      "firma": "Cetteo",
       "mood": "polemico e drammatico",
       "num": 3,
       "inventare": false,
@@ -167,7 +167,7 @@
       "tipo": "GEN",
       "lab": "Satira",
       "firma": "Hiroki",
-      "mood": "tranquillo",
+      "mood": "tranquillo e nostalgico",
       "temi": [
         "Il traffico sul lungomare in agosto",
         "La fila al bar per il caffè del mattino",
@@ -188,8 +188,8 @@
       "arg": "Riflessioni di filosofia quotidiana",
       "tipo": "GEN",
       "lab": "Riflessioni",
-      "firma": "Peppino",
-      "mood": "profondo ma confuso",
+      "firma": "Juizinho",
+      "mood": "profondo ma nostalgico",
       "temi": [
         "Il tempo libero come illusione moderna",
         "Perché il mare calma l'anima ma non il portafoglio",
@@ -207,12 +207,12 @@
       "arg": "Intelligenza Artificiale novità",
       "tipo": "RSS",
       "lab": "Tecnologia",
-      "firma": "Peppino",
+      "firma": "Cetteo",
       "mood": "meravigliato e intimorito",
       "num": 2,
       "inventare": false,
-      "weight_articolo": 0.55,
-      "weight_commento": 0.6
+      "weight_articolo": 0.85,
+      "weight_commento": 0.9
     },
     {
       "g": "default",
@@ -220,7 +220,7 @@
       "arg": "Novità serie Netflix",
       "tipo": "RSS",
       "lab": "Streaming",
-      "firma": "Giovanni",
+      "firma": "Lars",
       "mood": "entusiasta ma critico",
       "num": 2,
       "inventare": false,
@@ -246,7 +246,7 @@
       "arg": "Nuovi film da vedere cinema",
       "tipo": "RSS",
       "lab": "Da Vedere",
-      "firma": "Giovanni",
+      "firma": "Cetteo",
       "mood": "entusiasta ma esigente",
       "num": 2,
       "inventare": false,

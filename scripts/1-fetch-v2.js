@@ -357,6 +357,7 @@ ${contestoCommenti}
 
 Scegli da ${LIMITI.commenti_min ?? 1} a ${LIMITI.commenti_max ?? 3} personaggi che commenterebbero questa notizia in modo coerente col loro carattere e le loro relazioni.
 Ogni personaggio commenta la notizia E i commenti precedenti (se presenti).
+IMPORTANTE: il personaggio "${voce.firma}" ha già scritto l'articolo — NON può commentare se stesso.
 Se un personaggio è in sciopero, decidi autonomamente se partecipa o meno.
 Rispondi SOLO con JSON: {"commenti": [{"nome":"...","avatar":"...","testo":"..."}]}`;
 
@@ -607,13 +608,8 @@ async function main() {
     scriviLog(`📊 Quote cumulative oggi: chiamate_gemini=${contatori.chiamate_gemini ?? 0}, rss_fetch=${contatori.rss_fetch ?? 0}, token_stimati≈${contatori.token_stimati ?? 0}`);
     scriviLog(`🕐 Fascia articoli attiva: ${articoliAttivi ? "SÌ" : "NO"} | Lunghezza target: ~${parole} parole`);
 
-    // --- Cerca modello (max 1 volta/giorno) ---
-    if (!limiteSuperato(contatori, LIMITI, "cerca_modello_max")) {
-        await trovaUltimoModello();
-        contatori.cerca_modello = (contatori.cerca_modello || 0) + 1;
-    } else {
-        scriviLog(`⏭️ Cerca modello saltato (limite: ${LIMITI.cerca_modello_max}/giorno raggiunto).`);
-    }
+    // --- Cerca modello — sempre, senza condizioni ---
+    await trovaUltimoModello();
 
     // --- Giorno corrente e agenda ---
     const oggi = giornoOggi();
@@ -815,13 +811,49 @@ async function main() {
     salvaJSON(PERSONAGGI_PATH, personaggi);
     scriviLog(`💾 Relazioni e personaggi salvati.`);
 
+    // --- Articolo personaggio: un personaggio casuale scrive qualcosa che gli piace ---
+    scriviLog("✍️ Generazione articolo personaggio casuale...");
+    const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
+    const personaggioCasuale = nomiPersonaggi[Math.floor(Math.random() * nomiPersonaggi.length)];
+    const datiPersonaggio = CHI[personaggioCasuale];
+    const sysPersonaggio = `Sei ${personaggioCasuale}, con questo carattere: "${datiPersonaggio.mood}". ${datiPersonaggio.bio_breve ? `La tua storia: "${datiPersonaggio.bio_breve}".` : ""}
+Scrivi un breve articolo (150-250 parole) su qualcosa che ti piace, ti ha colpito o ti ha fatto arrabbiare oggi.
+Scegli tu l'argomento in base alla tua personalità.
+Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
+    const rawPersonaggio = await callGemini(sysPersonaggio, "Scrivi il tuo articolo personale di oggi.", datiPersonaggio.peso ?? 0.8);
+    if (rawPersonaggio) {
+        const parsedPersonaggio = parseJSON(rawPersonaggio);
+        if (parsedPersonaggio?.titolo && parsedPersonaggio?.articolo) {
+            // Trova la prima sezione disponibile nel draft
+            const sezPers = Object.keys(draft.sezioni)[0] || "pescara";
+            if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: STILI[sezPers] || "#005f73", articoli: [] };
+            draft.sezioni[sezPers].articoli.push({
+                tipo: "personaggio",
+                titolo: parsedPersonaggio.titolo,
+                articolo: parsedPersonaggio.articolo,
+                commento_firma: { nome: personaggioCasuale, avatar: datiPersonaggio.avatar, testo: "" },
+                commenti: [],
+                categoria: "Dalla Redazione",
+                colore_tipo: STILI.GEN || "#2d6a4f",
+                immagine: null  // nessuna immagine — frame verde senza img
+            });
+            scriviLog(`✍️ Articolo personaggio scritto da ${personaggioCasuale}: "${parsedPersonaggio.titolo.substring(0,50)}..."`);
+        }
+    }
+
     // --- Salva draft ---
     scriviLog(`📊 Chiamate API totali: ${contatoreChiamateApi}`);
     salvaJSON(DRAFT_PATH, draft);
     scriviLog(`✅ FASE 1-v2 completata. Draft → ${DRAFT_PATH}`);
 }
 
-main().catch(err => {
-    scriviLog(`ERRORE CRITICO: ${err.message}`);
-    process.exit(1);
-});
+main()
+    .then(() => {
+        scriviLog("🏁 [FINISH] Tutto salvato. Forzo chiusura processo.");
+        // Il timeout di 500ms assicura che i log vengano scritti su disco prima di killare
+        setTimeout(() => process.exit(0), 2000); 
+    })
+    .catch(err => {
+        scriviLog(`❌ [CRITICAL ERROR] ${err.message}`);
+        setTimeout(() => process.exit(1), 2000);
+    });

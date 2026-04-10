@@ -1,12 +1,12 @@
-# 🐬 La Voce del Delfino 2 10 Aprile
-
+# 🐬 La Voce del Delfino 2 10 Aprile             
+          r
 Giornale automatico illustrato in stile Ghibli. Si aggiorna ogni ora via GitHub Actions usando **Google Gemini AI** (tier gratuito disponibile).
 
 ## Setup in 5 minuti
 
 ### 1. Crea il repo su GitHub e carica questi file (mantieni la struttura delle cartelle)
 
-### 2. Ottieni la GEMINI_API_KEY gratuita
+### 2. Ottieni la GEMINI_API_KEY.  gratuitas
 - Vai su [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
 - Clicca **"Create API Key"**
 - Copia la chiave (es. `AIzaSy...`)
@@ -17,7 +17,7 @@ Giornale automatico illustrato in stile Ghibli. Si aggiorna ogni ora via GitHub 
 - Valore: la chiave copiata da AI Studio
 
 ### 4. Abilita GitHub Pages
-- **Settings → Pages → Source: GitHub Actions** → Salva
+- **Settings → Pages → Source: GitHub Actions** → Salva. 
 
 ### 5. Abilita i workflow
 - **Actions → "I understand my workflows, enable them"**
@@ -26,7 +26,7 @@ Giornale automatico illustrato in stile Ghibli. Si aggiorna ogni ora via GitHub 
 - **Actions → 🐬 Aggiorna Notizie → Run workflow**
 - Aspetta ~20 minuti (20 notizie + 21 illustrazioni SVG × 2 sezioni, con pause per il rate limit)
 
-Il sito sarà su `https://TUO_USERNAME.github.io/voce-del-delfino`
+Il sito sarà su `https://TUO_USERNAME.github.io /voce-del-delfino`
 
 ---
 

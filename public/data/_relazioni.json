@@ -1,37 +1,62 @@
 {
-  "_runCount": 1,
+  "_runCount": 0,
   "Ernesto→Giovanni": {
-    "score": -0.1,
+    "score": -0.09,
     "label": "neutro",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Giovanni→Ernesto": {
-    "score": 0.1,
+    "score": 0.09,
     "label": "neutro",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Peppino→Ernesto": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Peppino→Giovanni": {
-    "score": 0.1,
+    "score": 0.09,
     "label": "neutro",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Ernesto→Peppino": {
-    "score": -0.25,
+    "score": -0.225,
     "label": "diffidente",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Giovanni→Peppino": {
-    "score": -0.8,
+    "score": -0.72,
     "label": "ostile",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Peppino→Autore": {
-    "score": 0.2,
+    "score": 0.18,
+    "label": "neutro",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Lars→Cetteo": {
+    "score": 0.18,
+    "label": "neutro",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Hiroki→Cetteo": {
+    "score": 0.18,
+    "label": "neutro",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Juizinho→Cetteo": {
+    "score": 0.18,
+    "label": "neutro",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Lars→Hiroki": {
+    "score": 0.09,
+    "label": "neutro",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Hiroki→Juizinho": {
+    "score": 0.09,
     "label": "neutro",
     "ultimo_aggiornamento": "10/04/2026"
   }

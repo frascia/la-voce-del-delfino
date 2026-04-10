@@ -1,73 +1,89 @@
-name: 🛠️ Redazione Manuale
+name: "🐬 La Voce del Delfino — Redazione Automatica"
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch: # Permette di lanciarlo a mano dal pannello GitHub
+
+# Permessi necessari per permettere al bot di fare "git push"
+permissions:
+  contents: write
 
 jobs:
-  check-trigger:
+  elaborazione:
     runs-on: ubuntu-latest
-    # Ignora i commit fatti dal bot stesso (evita loop infiniti)
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    permissions:
-      contents: write
+    
+    # Esportiamo gli output per rendere il workflow intelligente
+    outputs:
+      fase1_success: ${{ steps.fase1.outputs.draft_ready }}
+      fase2_success: ${{ steps.fase2.outputs.articles_ready }}
 
     steps:
-      - name: Checkout repository
+      - name: "📂 Checkout Repository"
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Recupera tutta la cronologia per evitare conflitti di push
 
-      - name: Setup Node.js
+      - name: "🟢 Setup Node.js"
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Configura credenziali git
+      - name: "📦 Installazione Dipendenze"
         run: |
-          git config user.name "La Voce del Delfino Bot"
-          git config user.email "bot@lavocedeldelfino.it"
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       # -----------------------------------------------------------------------
-      # [run-1] → esegue FASE 1, poi 2, poi 3
+      # ⚓ FASE 1: FETCH RSS (Si attiva solo con [run-1] nel messaggio)
       # -----------------------------------------------------------------------
-      - name: "[run-1] FASE 1 — Fetch RSS + Gemini"
+      - name: "⚓ FASE 1 — Fetch RSS"
+        id: fase1
         if: "contains(github.event.head_commit.message, '[run-1]')"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-        run: node scripts/1-fetch.js
+        run: |
+          node scripts/1-fetch-v2.js
+          echo "draft_ready=true" >> $GITHUB_OUTPUT
 
-      - name: "[run-1] FASE 2 — Elaborazione"
-        if: "contains(github.event.head_commit.message, '[run-1]')"
+      - name: "💾 Commit Draft (dopo Fase 1)"
+        if: steps.fase1.outputs.draft_ready == 'true' && always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Draft creato (Fase 1) [skip ci]" || echo "Nessuna modifica"
+          git push
+
+      # -----------------------------------------------------------------------
+      # ⚙️ FASE 2: ELABORAZIONE GEMINI (Commenti, Relazioni, Rancori)
+      # -----------------------------------------------------------------------
+      - name: "⚙️ FASE 2 — Elaborazione Gemini"
+        id: fase2
+        if: steps.fase1.outputs.draft_ready == 'true'
         env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-        run: node scripts/2-elabora.js
+        run: |
+          node scripts/2-elabora-v2.js
+          echo "articles_ready=true" >> $GITHUB_OUTPUT
 
-      - name: "[run-1] FASE 3 — Deploy"
-        if: "contains(github.event.head_commit.message, '[run-1]')"
-        run: node scripts/3-deploy.js
-
-      # -----------------------------------------------------------------------
-      # [run-2] → esegue solo FASE 2, poi 3 (riusa il _draft.json esistente)
-      # -----------------------------------------------------------------------
-      - name: "[run-2] FASE 2 — Elaborazione"
-        if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
-        env:
-          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-        run: node scripts/2-elabora.js
-
-      - name: "[run-2] FASE 3 — Deploy"
-        if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
-        run: node scripts/3-deploy.js
+      - name: "💾 Commit Articoli (dopo Fase 2)"
+        if: steps.fase2.outputs.articles_ready == 'true' && always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Articoli elaborati (Fase 2) [skip ci]" || echo "Nessuna modifica"
+          git push
 
       # -----------------------------------------------------------------------
-      # [run-3] → esegue solo FASE 3 (riusa il _articles.json esistente)
+      # 🚀 FASE 3: DEPLOY (Pubblicazione Finale)
       # -----------------------------------------------------------------------
-      - name: "[run-3] FASE 3 — Deploy"
-        if: "contains(github.event.head_commit.message, '[run-3]') && !contains(github.event.head_commit.message, '[run-1]') && !contains(github.event.head_commit.message, '[run-2]')"
-        run: node scripts/3-deploy.js
+      - name: "🚀 FASE 3 — Deploy"
+        if: steps.fase2.outputs.articles_ready == 'true'
+        run: node scripts/3-deploy-v2.js

@@ -13,16 +13,19 @@
   "LIMITI": {
     "fasce_articoli": [
       "06",
-      "12",
+      "18",
       "19"
     ],
     "tolleranza_minuti": 45,
-    "lunghezza_articolo": 6,
+    "lunghezza_articolo": 3,
     "cerca_modello_max": 1,
     "chat": "sempre",
     "commenti": "sempre",
     "relazioni": "sempre",
-    "fascia_reset_quote": "05"
+    "fascia_reset_quote": "05",
+    "commenti_min": 1,
+    "commenti_max": 6,
+    "commenti_max_totali": 20
   },
   "CHI": {
     "default": {
@@ -33,28 +36,36 @@
       "bio_breve": "",
       "bio_completa": ""
     },
-    "Peppino": {
-      "mood": "Filosofo pescarese ignorante ma convinto, cita i grandi pensatori storpiandoli",
-      "peso": 0.7,
+    "Lars": {
+      "mood": "Danese dello Jutland nord,vive sulle montagne a Roccamorice, parla spesso della natura ",
+      "peso": 0.8,
       "avatar": "🐬",
       "img": "peppino.webp",
-      "bio_breve": "Filosofo autodidatta del lungomare. Ha opinioni su tutto, ragione su niente.",
+      "bio_breve": "Danese , ossessionato dall'ordine, minimalista'",
       "bio_completa": "Peppino ha studiato fino alla terza media ma cita Aristotele ogni giorno. Vive sul lungomare e ha opinioni su tutto. Ama il silenzio, il mare e gli arrosticini. Non ama chi lo contraddice. Ha un diario segreto in cui raccoglie citazioni filosofiche storpiate. Sogna di aprire un bar sul mare dove si discute di Nietzsche e si mangiano arrosticini."
     },
-    "Giovanni": {
-      "mood": "Tifoso polemico sempre pronto alla critica sportiva, anche su argomenti non sportivi",
-      "peso": 0.6,
+    "Juizinho": {
+      "mood": "Sempre in vena di fare festa, parla sempre di donne",
+      "peso": 0.8,
       "avatar": "⚽",
       "img": "giovanni.webp",
-      "bio_breve": "Tifoso del Pescara dal 1987. Non ha mai visto una vittoria senza polemica.",
+      "bio_breve": "Tifoso del Pescara da sempre, è venuto a Pescara solo per tifare il Pescara",
       "bio_completa": "Giovanni non ha mai giocato a calcio ma sa come si fa. Abbonato al Pescara dal 1987, anno della sua prima delusione. Lavora in banca ma pensa solo al campionato. Tiene un foglio Excel con tutte le partite perse dal Pescara dal 1990. Lo aggiorna ogni lunedì mattina prima di andare in banca."
     },
-    "Ernesto": {
-      "mood": "Tecnico comunale ossessionato dai cantieri e dalla burocrazia, pessimista cronico",
+    "Cetteo": {
+      "mood": "Pescatore , abita alla marina, ultras del Pescara, polemico e sfacciato, parla molto il dialetto",
       "peso": 0.8,
       "avatar": "🚧",
-      "img": "ernesto.webp",
-      "bio_breve": "22 anni al Comune. Ha visto tutto, cambiato niente.",
+      "img": "cetteo.webp",
+      "bio_breve": "Pesce e mare, e poca voglia di lavorare",
+      "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+    },
+    "Hiroki": {
+      "mood": "E' sempre critico dell''Italia, vorrebbe portare un pò di civiltà",
+      "peso": 0.9,
+      "avatar": "🏯",
+      "img": "hiroki.webp",
+      "bio_breve": "vive a Pescara da anni.Fra poco torna in Giappone, e non sa se torna.Sognatore e pragmatico",
       "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
     }
   },
@@ -103,7 +114,7 @@
       "arg": "Cronaca Pescarese",
       "tipo": "RSS",
       "lab": "Cronaca",
-      "firma": "Ernesto",
+      "firma": "Cetteo",
       "mood": "burbero e sospettoso",
       "num": 3,
       "inventare": false,
@@ -116,7 +127,7 @@
       "arg": "Politica Locale Pescara",
       "tipo": "RSS",
       "lab": "Politica",
-      "firma": "Ernesto",
+      "firma": "Cetteo",
       "mood": "rassegnato e burocratico",
       "num": 2,
       "inventare": false,
@@ -129,7 +140,7 @@
       "arg": "Weekend a Pescara eventi",
       "tipo": "RSS",
       "lab": "Weekend",
-      "firma": "Peppino",
+      "firma": "Juizinho",
       "mood": "entusiasta e filosofo",
       "num": 3,
       "inventare": false,
@@ -137,12 +148,12 @@
       "weight_commento": 0.6
     },
     {
-      "g": "lun,dom",
+      "g": "lun,dom,ven",
       "sez": "pescara",
       "arg": "Pescara Calcio",
       "tipo": "RSS",
       "lab": "Sport",
-      "firma": "Giovanni",
+      "firma": "Cetteo",
       "mood": "polemico e drammatico",
       "num": 3,
       "inventare": false,
@@ -155,8 +166,8 @@
       "arg": "Vita quotidiana pescarese ironica",
       "tipo": "GEN",
       "lab": "Satira",
-      "firma": "Peppino",
-      "mood": "sarcastico e rassegnato",
+      "firma": "Hiroki",
+      "mood": "tranquillo e nostalgico",
       "temi": [
         "Il traffico sul lungomare in agosto",
         "La fila al bar per il caffè del mattino",
@@ -177,8 +188,8 @@
       "arg": "Riflessioni di filosofia quotidiana",
       "tipo": "GEN",
       "lab": "Riflessioni",
-      "firma": "Peppino",
-      "mood": "profondo ma confuso",
+      "firma": "Juizinho",
+      "mood": "profondo ma nostalgico",
       "temi": [
         "Il tempo libero come illusione moderna",
         "Perché il mare calma l'anima ma non il portafoglio",
@@ -196,12 +207,12 @@
       "arg": "Intelligenza Artificiale novità",
       "tipo": "RSS",
       "lab": "Tecnologia",
-      "firma": "Peppino",
+      "firma": "Cetteo",
       "mood": "meravigliato e intimorito",
       "num": 2,
       "inventare": false,
-      "weight_articolo": 0.55,
-      "weight_commento": 0.6
+      "weight_articolo": 0.85,
+      "weight_commento": 0.9
     },
     {
       "g": "default",
@@ -209,7 +220,7 @@
       "arg": "Novità serie Netflix",
       "tipo": "RSS",
       "lab": "Streaming",
-      "firma": "Giovanni",
+      "firma": "Lars",
       "mood": "entusiasta ma critico",
       "num": 2,
       "inventare": false,
@@ -222,7 +233,7 @@
       "arg": "Giappone cultura società",
       "tipo": "RSS",
       "lab": "Giappone",
-      "firma": "Peppino",
+      "firma": "Hiroki",
       "mood": "sognante e romantico",
       "num": 2,
       "inventare": false,
@@ -235,7 +246,7 @@
       "arg": "Nuovi film da vedere cinema",
       "tipo": "RSS",
       "lab": "Da Vedere",
-      "firma": "Giovanni",
+      "firma": "Cetteo",
       "mood": "entusiasta ma esigente",
       "num": 2,
       "inventare": false,
@@ -257,7 +268,7 @@
     }
   ],
   "site_settings": {
-    "last_update": "10/04, 10:50",
+    "last_update": "10/04, 19:51",
     "timbro": "Resistenza Adriatica",
     "banner": "Mare.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",

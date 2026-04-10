@@ -244,6 +244,70 @@
             padding: 20px;
         }
 
+        /* --- BADGE NUOVO --- */
+        .badge-nuovo {
+            display: inline-block;
+            background: #e63946;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 8px;
+            margin-left: 8px;
+            vertical-align: middle;
+            letter-spacing: 0.05em;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+        @keyframes pulse-badge {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* --- FIRMA AUTORE VICINO AL TITOLO --- */
+        .firma-autore {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .firma-autore .avatar-autore { font-size: 16px; }
+
+        /* --- FRAME PERSONAGGIO (senza immagine, con indicatore verde) --- */
+        .notizia.personaggio-box {
+            border: 2px solid #2d6a4f;
+            background: #f0fff4;
+            box-shadow: 0 10px 25px rgba(45,106,79,0.15);
+        }
+        .notizia.personaggio-box .notizia-numero { background: #2d6a4f; }
+        .etichetta-categoria.personaggio-label { color: #2d6a4f; border-color: #2d6a4f; background: #fff; }
+        .notizia-personaggio-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 0 20px 0;
+            border-bottom: 1px dashed rgba(45,106,79,0.25);
+            margin-bottom: 16px;
+        }
+        .notizia-personaggio-avatar { font-size: 40px; line-height: 1; }
+        .notizia-personaggio-info { flex: 1; }
+        .notizia-personaggio-nome { font-size: 13px; font-weight: 800; color: #2d6a4f; }
+        .notizia-personaggio-bio { font-size: 11px; color: #777; font-style: italic; margin-top: 2px; }
+        .indicatore-verde {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: #2d6a4f;
+            box-shadow: 0 0 6px rgba(45,106,79,0.6);
+            animation: pulse-verde 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        @keyframes pulse-verde {
+            0%, 100% { box-shadow: 0 0 6px rgba(45,106,79,0.6); }
+            50% { box-shadow: 0 0 12px rgba(45,106,79,0.9); }
+        }
+
         /* --- TERMINALE --- */
         #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; }
     </style>
@@ -278,7 +342,7 @@
         <div id="lista-notizie" class="notizia-container"></div>
 
         <!-- CHAT REDAZIONE -->
-        <div class="chat-section" id="chat-section" style="display:none;">
+        <div class="chat-section" id="chat-section">
             <div class="chat-section-title">💬 Dalla Redazione</div>
             <div id="chat-lista"></div>
         </div>
@@ -341,9 +405,13 @@
                     lista.appendChild(card);
                 });
 
-                section.style.display = 'block';
+                // section sempre visibile
+                if (!chatStorico?.length) {
+                    lista.innerHTML = '<div class="chat-vuota">La redazione è silenziosa... per ora. 🐬</div>';
+                }
             } catch(e) {
-                // Nessuna chat disponibile — silenzioso
+                document.getElementById('chat-lista').innerHTML = 
+                    '<div class="chat-vuota">La redazione è silenziosa... per ora. 🐬</div>';
             }
         }
 

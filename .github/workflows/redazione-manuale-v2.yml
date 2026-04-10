@@ -1,5 +1,5 @@
 name: 🛠️ Redazione Manuale v2
- 
+
 on:
   push:
     branches:
@@ -29,7 +29,7 @@ jobs:
         run: npm install
 
       # -----------------------------------------------------------------------
-      # [run-1] → FASE 1 + 2 + 3
+      # [run-1] → solo FASE 1 (fetch + Gemini → produce _draft-v2.json)
       # -----------------------------------------------------------------------
       - name: "⚓ [run-1] FASE 1 — Fetch RSS + Gemini v2"
         if: "contains(github.event.head_commit.message, '[run-1]')"
@@ -37,21 +37,8 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/1-fetch-v2.js
 
-      - name: "⚙️ [run-1] FASE 2 — Elaborazione v2"
-        if: "contains(github.event.head_commit.message, '[run-1]')"
-        env:
-          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-        run: node scripts/2-elabora-v2.js
-
-      - name: "🚀 [run-1] FASE 3 — Deploy v2"
-        if: "contains(github.event.head_commit.message, '[run-1]')"
-        env:
-          WORKFLOW_AUTOMATICO: "false"
-        run: node scripts/3-deploy-v2.js
-
       # -----------------------------------------------------------------------
-      # [run-2] → solo FASE 2 + 3 (riusa _draft-v2.json esistente)
+      # [run-2] → solo FASE 2 (elabora _draft-v2.json → produce _articles-v2.json)
       # -----------------------------------------------------------------------
       - name: "⚙️ [run-2] FASE 2 — Elaborazione v2"
         if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
@@ -60,14 +47,8 @@ jobs:
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/2-elabora-v2.js
 
-      - name: "🚀 [run-2] FASE 3 — Deploy v2"
-        if: "contains(github.event.head_commit.message, '[run-2]') && !contains(github.event.head_commit.message, '[run-1]')"
-        env:
-          WORKFLOW_AUTOMATICO: "false"
-        run: node scripts/3-deploy-v2.js
-
       # -----------------------------------------------------------------------
-      # [run-3] → solo FASE 3 (riusa _articles-v2.json esistente)
+      # [run-3] → solo FASE 3 (deploy → scrive JSON finali e fa git push)
       # -----------------------------------------------------------------------
       - name: "🚀 [run-3] FASE 3 — Deploy v2"
         if: "contains(github.event.head_commit.message, '[run-3]') && !contains(github.event.head_commit.message, '[run-1]') && !contains(github.event.head_commit.message, '[run-2]')"
