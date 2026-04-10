@@ -1,0 +1,38 @@
+{
+  "_runCount": 1,
+  "Ernesto→Giovanni": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Giovanni→Ernesto": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Peppino→Ernesto": {
+    "score": 1,
+    "label": "amico",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Peppino→Giovanni": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Ernesto→Peppino": {
+    "score": -0.25,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Giovanni→Peppino": {
+    "score": -0.8,
+    "label": "ostile",
+    "ultimo_aggiornamento": "10/04/2026"
+  },
+  "Peppino→Autore": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "10/04/2026"
+  }
+}

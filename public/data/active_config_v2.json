@@ -1,0 +1,273 @@
+{
+  "IMPOSTAZIONI": {
+    "header_fisso": "Header_Generale.webp",
+    "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
+    "stato_sito": "attivo",
+    "alert_api_rotto": "Onde troppo alte! Le API sono in tilt.",
+    "ticker_news": [
+      "AVVISTATO CALAMARO GIGANTE AL PORTO CANALE: CERCAVA UN LIMONE.",
+      "AUMENTO DEI PREZZI: GLI ARROSTICINI ORA SI PAGANO IN BITCOIN.",
+      "ERNESTO DICHIARA: 'IL PONTE DEL MARE È STORTO, MA È ARTE'."
+    ]
+  },
+  "LIMITI": {
+    "fasce_articoli": [
+      "06",
+      "12",
+      "19"
+    ],
+    "tolleranza_minuti": 45,
+    "lunghezza_articolo": 6,
+    "cerca_modello_max": 1,
+    "chat": "sempre",
+    "commenti": "sempre",
+    "relazioni": "sempre",
+    "fascia_reset_quote": "05"
+  },
+  "CHI": {
+    "default": {
+      "mood": "Serio e sintetico",
+      "peso": 0.6,
+      "avatar": "👤",
+      "img": "",
+      "bio_breve": "",
+      "bio_completa": ""
+    },
+    "Peppino": {
+      "mood": "Filosofo pescarese ignorante ma convinto, cita i grandi pensatori storpiandoli",
+      "peso": 0.7,
+      "avatar": "🐬",
+      "img": "peppino.webp",
+      "bio_breve": "Filosofo autodidatta del lungomare. Ha opinioni su tutto, ragione su niente.",
+      "bio_completa": "Peppino ha studiato fino alla terza media ma cita Aristotele ogni giorno. Vive sul lungomare e ha opinioni su tutto. Ama il silenzio, il mare e gli arrosticini. Non ama chi lo contraddice. Ha un diario segreto in cui raccoglie citazioni filosofiche storpiate. Sogna di aprire un bar sul mare dove si discute di Nietzsche e si mangiano arrosticini."
+    },
+    "Giovanni": {
+      "mood": "Tifoso polemico sempre pronto alla critica sportiva, anche su argomenti non sportivi",
+      "peso": 0.6,
+      "avatar": "⚽",
+      "img": "giovanni.webp",
+      "bio_breve": "Tifoso del Pescara dal 1987. Non ha mai visto una vittoria senza polemica.",
+      "bio_completa": "Giovanni non ha mai giocato a calcio ma sa come si fa. Abbonato al Pescara dal 1987, anno della sua prima delusione. Lavora in banca ma pensa solo al campionato. Tiene un foglio Excel con tutte le partite perse dal Pescara dal 1990. Lo aggiorna ogni lunedì mattina prima di andare in banca."
+    },
+    "Ernesto": {
+      "mood": "Tecnico comunale ossessionato dai cantieri e dalla burocrazia, pessimista cronico",
+      "peso": 0.8,
+      "avatar": "🚧",
+      "img": "ernesto.webp",
+      "bio_breve": "22 anni al Comune. Ha visto tutto, cambiato niente.",
+      "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+    }
+  },
+  "AGENDA": {
+    "default": {
+      "timbro": "Edizione quotidiana",
+      "banner": "Default.webp"
+    },
+    "lun": {
+      "timbro": "Il Trauma del Lunedì",
+      "banner": "Lavoro.webp"
+    },
+    "mer,ven": {
+      "timbro": "Resistenza Adriatica",
+      "banner": "Mare.webp"
+    },
+    "sab,dom": {
+      "timbro": "Relax, Mare e Brace",
+      "banner": "Weekend.webp"
+    }
+  },
+  "STILI": {
+    "pescara": "#005f73",
+    "mondo": "#edcab4",
+    "cultura": "#6a4c93",
+    "RSS": "#008cff",
+    "GEN": "#ff4d4d"
+  },
+  "ICONE": {
+    "default": "Categoria.webp",
+    "Cronaca": "Cronaca.webp",
+    "Politica": "Palazzo.webp",
+    "Sport": "Calcio.webp",
+    "Satira": "Fake.webp",
+    "Tecnologia": "Ai.webp",
+    "Streaming": "Concerti.webp",
+    "Giappone": "Giappone.webp",
+    "Viaggi": "Escusione.webp",
+    "Da Vedere": "Tv.webp",
+    "Riflessioni": "Fake.webp"
+  },
+  "REDAZIONE": [
+    {
+      "g": "default",
+      "sez": "pescara",
+      "arg": "Cronaca Pescarese",
+      "tipo": "RSS",
+      "lab": "Cronaca",
+      "firma": "Ernesto",
+      "mood": "burbero e sospettoso",
+      "num": 3,
+      "inventare": false,
+      "weight_articolo": 0.5,
+      "weight_commento": 0.4
+    },
+    {
+      "g": "lun,mer,ven",
+      "sez": "pescara",
+      "arg": "Politica Locale Pescara",
+      "tipo": "RSS",
+      "lab": "Politica",
+      "firma": "Ernesto",
+      "mood": "rassegnato e burocratico",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.5,
+      "weight_commento": 0.5
+    },
+    {
+      "g": "sab,dom",
+      "sez": "pescara",
+      "arg": "Weekend a Pescara eventi",
+      "tipo": "RSS",
+      "lab": "Weekend",
+      "firma": "Peppino",
+      "mood": "entusiasta e filosofo",
+      "num": 3,
+      "inventare": false,
+      "weight_articolo": 0.7,
+      "weight_commento": 0.6
+    },
+    {
+      "g": "lun,dom",
+      "sez": "pescara",
+      "arg": "Pescara Calcio",
+      "tipo": "RSS",
+      "lab": "Sport",
+      "firma": "Giovanni",
+      "mood": "polemico e drammatico",
+      "num": 3,
+      "inventare": false,
+      "weight_articolo": 0.6,
+      "weight_commento": 0.8
+    },
+    {
+      "g": "default",
+      "sez": "pescara",
+      "arg": "Vita quotidiana pescarese ironica",
+      "tipo": "GEN",
+      "lab": "Satira",
+      "firma": "Peppino",
+      "mood": "sarcastico e rassegnato",
+      "temi": [
+        "Il traffico sul lungomare in agosto",
+        "La fila al bar per il caffè del mattino",
+        "Gli arrosticini come soluzione ai problemi del mondo",
+        "Il cantiere eterno di Pescara",
+        "Il gabbiano che ruba il pranzo ai turisti",
+        "La movida adriatica vista da un vecchio del posto",
+        "Il ponte del mare e le sue leggende metropolitane"
+      ],
+      "num": 2,
+      "inventare": true,
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "default",
+      "sez": "pescara",
+      "arg": "Riflessioni di filosofia quotidiana",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Peppino",
+      "mood": "profondo ma confuso",
+      "temi": [
+        "Il tempo libero come illusione moderna",
+        "Perché il mare calma l'anima ma non il portafoglio",
+        "La saggezza degli anziani al bar",
+        "Il significato della pennichella pomeridiana"
+      ],
+      "num": 1,
+      "inventare": true,
+      "weight_articolo": 0.85,
+      "weight_commento": 0.7
+    },
+    {
+      "g": "default",
+      "sez": "mondo",
+      "arg": "Intelligenza Artificiale novità",
+      "tipo": "RSS",
+      "lab": "Tecnologia",
+      "firma": "Peppino",
+      "mood": "meravigliato e intimorito",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.55,
+      "weight_commento": 0.6
+    },
+    {
+      "g": "default",
+      "sez": "mondo",
+      "arg": "Novità serie Netflix",
+      "tipo": "RSS",
+      "lab": "Streaming",
+      "firma": "Giovanni",
+      "mood": "entusiasta ma critico",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.65,
+      "weight_commento": 0.7
+    },
+    {
+      "g": "mer,sab",
+      "sez": "mondo",
+      "arg": "Giappone cultura società",
+      "tipo": "RSS",
+      "lab": "Giappone",
+      "firma": "Peppino",
+      "mood": "sognante e romantico",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.7,
+      "weight_commento": 0.65
+    },
+    {
+      "g": "default",
+      "sez": "cultura",
+      "arg": "Nuovi film da vedere cinema",
+      "tipo": "RSS",
+      "lab": "Da Vedere",
+      "firma": "Giovanni",
+      "mood": "entusiasta ma esigente",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.65,
+      "weight_commento": 0.7
+    },
+    {
+      "g": "lun,gio",
+      "sez": "cultura",
+      "arg": "Viaggi mete insolite Europa",
+      "tipo": "RSS",
+      "lab": "Viaggi",
+      "firma": "Peppino",
+      "mood": "viaggiatore sognante con budget limitato",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.75,
+      "weight_commento": 0.65
+    }
+  ],
+  "site_settings": {
+    "last_update": "10/04, 10:50",
+    "timbro": "Resistenza Adriatica",
+    "banner": "Mare.webp",
+    "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
+    "header_img": "Header_Generale.webp",
+    "stato_sito": "attivo",
+    "alert_api_rotto": "Onde troppo alte! Le API sono in tilt.",
+    "ticker_news": [
+      "AVVISTATO CALAMARO GIGANTE AL PORTO CANALE: CERCAVA UN LIMONE.",
+      "AUMENTO DEI PREZZI: GLI ARROSTICINI ORA SI PAGANO IN BITCOIN.",
+      "ERNESTO DICHIARA: 'IL PONTE DEL MARE È STORTO, MA È ARTE'."
+    ]
+  }
+}
