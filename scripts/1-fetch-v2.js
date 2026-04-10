@@ -225,10 +225,10 @@ async function callGemini(sys, prompt, temperature = 0.85) {
                 scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
                 const msg = d.error.message.toLowerCase();
 
-                if (msg.includes("per day") || msg.includes("limit: 500")) {
-                    scriviLog("❌ QUOTA GIORNALIERA ESAURITA");
-                    quotaGiornalieraEsaurita = true;
-                    return null;
+                //if (msg.includes("per day") || msg.includes("limit: 500")) {
+                 //   scriviLog("❌ QUOTA GIORNALIERA ESAURITA");
+                 //   quotaGiornalieraEsaurita = true;
+                 //   return null;
                 }
                 if (d.error.code === 429 || d.error.code === 503) {
                     if (msg.includes("quota exceeded")) { await gestisciErroreQuota(d.error.message); continue; }
