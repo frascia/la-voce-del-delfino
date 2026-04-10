@@ -1,11 +1,11 @@
 {
-  "oraAggiornamento": "10/04, 21:11",
+  "oraAggiornamento": "10/04, 21:47",
   "agenda": {
     "timbro": "Resistenza Adriatica",
     "banner": "Mare.webp"
   },
   "impostazioni": {
-    "header_fisso": "Header_Generale.webp",
+    "header_fisso": "Header.png",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
     "stato_sito": "attivo",
     "alert_api_rotto": "Onde troppo alte! Le API sono in tilt.",
@@ -35,7 +35,23 @@
             "avatar": "🚧",
             "testo": "…"
           },
-          "commenti": [],
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Che caos inutile. In Danimarca gestiamo le risorse con una pianificazione rigorosa, qui a Roccamorice la natura ci insegna l'essenzialità. Accumulare beni in preda al panico è l'antitesi del minimalismo e dell'ordine mentale."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma quale acqua, Lars! Se manca l'acqua si beve birra, no? E poi, con tutte queste ragazze che corrono a fare la spesa, è l'occasione perfetta per offrire una mano e rimorchiare un po'. Forza Pescara sempre!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "L'incapacità di gestire un'infrastruttura di base come l'acqua è la prova definitiva che questo Paese non ha speranza. Juizinho, la tua superficialità è imbarazzante quanto l'inefficienza di questa città. Non vedo l'ora di tornare in Giappone."
+            }
+          ],
           "categoria": "Cronaca",
           "colore_tipo": "#008cff",
           "immagine": "Cronaca.webp"

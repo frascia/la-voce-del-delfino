@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "10/04, 23:12",
+  "prossimo_aggiornamento": "10/04, 23:47",
   "news": [
     {
       "tipo": "rss",
@@ -11,11 +11,27 @@
         "avatar": "🚧",
         "testo": "…"
       },
-      "commenti": [],
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🐬",
+          "testo": "Che caos inutile. In Danimarca gestiamo le risorse con una pianificazione rigorosa, qui a Roccamorice la natura ci insegna l'essenzialità. Accumulare beni in preda al panico è l'antitesi del minimalismo e dell'ordine mentale."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ma quale acqua, Lars! Se manca l'acqua si beve birra, no? E poi, con tutte queste ragazze che corrono a fare la spesa, è l'occasione perfetta per offrire una mano e rimorchiare un po'. Forza Pescara sempre!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "L'incapacità di gestire un'infrastruttura di base come l'acqua è la prova definitiva che questo Paese non ha speranza. Juizinho, la tua superficialità è imbarazzante quanto l'inefficienza di questa città. Non vedo l'ora di tornare in Giappone."
+        }
+      ],
       "categoria": "Cronaca",
       "colore_tipo": "#008cff",
       "immagine": "Cronaca.webp",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -150,7 +166,7 @@
       "categoria": "Satira",
       "colore_tipo": "#ff4d4d",
       "immagine": "Fake.webp",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "gen",
@@ -165,7 +181,7 @@
       "categoria": "Riflessioni",
       "colore_tipo": "#ff4d4d",
       "immagine": "Fake.webp",
-      "nuovo": true
+      "nuovo": false
     }
   ]
 }
