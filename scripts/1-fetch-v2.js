@@ -846,12 +846,14 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
     salvaJSON(DRAFT_PATH, draft);
     scriviLog(`✅ FASE 1-v2 completata. Draft → ${DRAFT_PATH}`);
 }
+/ Rimuovi il vecchio main() o main().catch() e metti questo:
 main()
     .then(() => {
-        scriviLog("🏁 [FINISH] Script completato con successo.");
-        process.exit(0); // Esci con successo
+        scriviLog("🏁 [FINISH] Tutto salvato. Forzo chiusura processo.");
+        // Il timeout di 500ms assicura che i log vengano scritti su disco prima di killare
+        setTimeout(() => process.exit(0), 2000); 
     })
     .catch(err => {
         scriviLog(`❌ [CRITICAL ERROR] ${err.message}`);
-        process.exit(1); // Esci con errore (ferma il workflow di GitHub)
+        setTimeout(() => process.exit(1), 2000);
     });
