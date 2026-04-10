@@ -31,7 +31,7 @@ if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 // ---------------------------------------------------------------------------
 
 const apiKey = process.env.GEMINI_API_KEY || "";
-let activeGeminiModel = "gemini-3-flash-001";
+let activeGeminiModel = "gemini-1.5-flash-latest";
 let quotaGiornalieraEsaurita = false;
 let contatoreChiamateApi = 0;
 
