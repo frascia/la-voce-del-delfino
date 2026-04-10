@@ -123,32 +123,31 @@ function labelDaScore(score) {
 async function trovaUltimoModello() {
     if (!apiKey) return;
     try {
-        const res  = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+        const url = `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`;
+        const res = await fetch(url);
         const data = await res.json();
-        scriviLog.log("Risposta API:", data)
-        if (data.models) {
-            // Estraiamo e puliamo i nomi (gemini)
-            const tuttiIDisponibili = data.models
-                .filter(m => m.supportedGenerationMethods?.includes("generateContent"))
-                .map(m => m.name.replace("models/", ""));
 
-            // Logghiamo la lista completa per tua curiosità
-            scriviLog("--- Modelli Disponibili ---");
-            tuttiIDisponibili.forEach(m => scriviLog(`> ${m}`));
-            scriviLog("---------------------------");
-            /// gemini
-            const validi = data.models
+        if (data.models) {
+            const modelliValidi = data.models
                 .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
-            const flash = validi.filter(m => m.includes("flash")).sort((a, b) => b.localeCompare(a));
-            if (flash.length > 0) activeGeminiModel = flash[0];
-            else if (validi.length > 0) activeGeminiModel = validi.sort((a, b) => b.localeCompare(a))[0];
-            scriviLog(`[MODELLO] ${activeGeminiModel}`);
+      
+     // IL TUO VECCHIO CODICE (COMMENTATO) RIMANE QUI SOTTO COME VOLEVI
+        const modelliFlash = modelliValidi.filter(m => m.includes("flash"));
+        modelliFlash.sort((a, b) => b.localeCompare(a));
+
+        if (modelliFlash.length > 0) {
+            activeGeminiModel = modelliFlash[0];
+        } else if (modelliValidi.length > 0) {
+            modelliValidi.sort((a, b) => b.localeCompare(a));
+            activeGeminiModel = modelliValidi[0];
         }
+            scriviLog(`[ECCOLO] ${activeGeminiModel} quello precedente ${modelliFlash?.[1] ?? 'NA'} `);
+       }
     } catch (e) {
-        scriviLog(`[WARN] Ricerca modello fallita, uso default: ${e.message}`);
+        scriviLog(`[ERRORE] Impossibile recuperare i modelli: ${e.message}`);
     }
-}
+} 
 
 // ---------------------------------------------------------------------------
 // FETCH RSS — notizie fresche (max 48 ore)
