@@ -126,6 +126,16 @@ async function trovaUltimoModello() {
         const res  = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
         const data = await res.json();
         if (data.models) {
+            // Estraiamo e puliamo i nomi (gemini)
+            const tuttiIDisponibili = data.models
+                .filter(m => m.supportedGenerationMethods?.includes("generateContent"))
+                .map(m => m.name.replace("models/", ""));
+
+            // Logghiamo la lista completa per tua curiosità
+            scriviLog("--- Modelli Disponibili ---");
+            tuttiIDisponibili.forEach(m => scriviLog(`> ${m}`));
+            scriviLog("---------------------------");
+            /// gemini
             const validi = data.models
                 .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
