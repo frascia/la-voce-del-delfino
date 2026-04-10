@@ -38,7 +38,16 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-        run: node scripts/1-fetch-v2.js
+       run: node scripts/1-fetch-v2.js
+        # AGGIUNGI QUESTO QUI SOTTO:
+      - name: "💾 Commit dei file generati"
+        if: always() # Lo esegue anche se lo step prima ha avuto avvisi
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Aggiornamento dati (auto-commit) [skip ci]" || echo "Nessuna modifica da caricare"
+          git push
 
       - name: "[run-1] FASE 2 — Elaborazione"
         if: "contains(github.event.head_commit.message, '[run-1]')"
