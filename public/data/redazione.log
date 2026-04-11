@@ -36,3 +36,58 @@ Please retry in 48.010930592s.: Error code 429
 [11/04/2026, 06:46:13] [3-deploy] [git] [main 1f3224d] 🤖 Aggiornamento redazione 11/04, 06:46 [skip ci]
  7 files changed, 98 insertions(+), 458 deletions(-)
 [11/04/2026, 06:46:14] [3-deploy] ✅ FASE 3 completata. Dati pubblicati su GitHub Pages.
+[11/04/2026, 06:53:45] ⚓️ Inizio turno di redazione (Fetch-News)...
+[11/04/2026, 06:53:45] 🤖 Modello Dinamico Agganciato: [ gemini-flash-lite-latest ]
+[11/04/2026, 06:53:45] Lancio le reti per: Pescara Calcio (Quota: 2 + 0 recuperati = 2 totali)
+[11/04/2026, 06:53:46] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 13.447459097s.
+[11/04/2026, 06:53:46] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:46] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 13.34660717s.
+[11/04/2026, 06:53:46] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:46] Lancio le reti per: AI (Quota: 1 + 0 recuperati = 1 totali)
+[11/04/2026, 06:53:47] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 12.725187746s.
+[11/04/2026, 06:53:47] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:47] Lancio le reti per: Satira (Quota: 3 + 0 recuperati = 3 totali)
+[11/04/2026, 06:53:47] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 12.636500779s.
+[11/04/2026, 06:53:47] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:47] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 12.470641227s.
+[11/04/2026, 06:53:47] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:47] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 12.378869048s.
+[11/04/2026, 06:53:47] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:47] Sezione pescara: 6 notizie pescate e confezionate.
+[11/04/2026, 06:53:47] Lancio le reti per: Netflix (Quota: 2 + 0 recuperati = 2 totali)
+[11/04/2026, 06:53:48] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 11.800282399s.
+[11/04/2026, 06:53:48] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:48] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 11.637501744s.
+[11/04/2026, 06:53:48] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:48] Lancio le reti per: Giappone (Quota: 1 + 0 recuperati = 1 totali)
+[11/04/2026, 06:53:49] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 10.797981966s.
+[11/04/2026, 06:53:49] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:49] Lancio le reti per: Satira Mondo (Quota: 2 + 0 recuperati = 2 totali)
+[11/04/2026, 06:53:49] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 10.633578967s.
+[11/04/2026, 06:53:49] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:49] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 10.548463266s.
+[11/04/2026, 06:53:49] ❌ [QUOTA GIORNALIERA ESAURITA] Inutile riprovare, ci vediamo domani.
+[11/04/2026, 06:53:49] Sezione mondo: 5 notizie pescate e confezionate.
+[11/04/2026, 06:53:49] 🏁 Turno completato con successo.
