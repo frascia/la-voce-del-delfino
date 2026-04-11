@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.09,
     "label": "neutro",
@@ -46,7 +46,7 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.1,
+    "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "11/04/2026"
   },
@@ -76,8 +76,8 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.9,
-    "label": "ostile",
+    "score": 1,
+    "label": "amico",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Cetteo→Hiroki": {
@@ -123,6 +123,26 @@
   "Hiroki→Autore": {
     "score": -0.6,
     "label": "diffidente",
+    "ultimo_aggiornamento": "11/04/2026"
+  },
+  "Lars→Questa terra": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "11/04/2026"
+  },
+  "Lars→Autore Articolo": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "11/04/2026"
+  },
+  "Cetteo→Autore Articolo": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "11/04/2026"
+  },
+  "Hiroki→Autore Articolo": {
+    "score": -0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "11/04/2026"
   }
 }
