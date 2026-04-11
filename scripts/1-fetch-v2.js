@@ -304,6 +304,7 @@ L'articolo deve essere di circa ${voce._parole || 400} parole, scritto con la tu
 ${puoInventare
     ? "Puoi inventare liberamente: non sei vincolato a fatti reali. Usa la tua fantasia, esagera, crea situazioni assurde coerenti col tuo carattere."
     : "Scrivi cose reali e veritiere. Puoi commentare, interpretare e usare il tuo stile, ma niente invenzioni o fatti falsi."}
+IMPORTANTE: non fare MAI riferimenti temporali specifici come oggi, ieri, questa mattina, in questo momento, adesso, attualmente, nelle ultime ore, questa settimana. L'articolo deve essere valido in qualsiasi momento venga letto.
 ${moodCommento}`;
 
     const userPrompt = isGenerato
