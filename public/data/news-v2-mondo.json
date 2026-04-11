@@ -1,6 +1,6 @@
 {
   "color": "#edcab4",
-  "prossimo_aggiornamento": "11/04, 19:32",
+  "prossimo_aggiornamento": "11/04, 19:34",
   "news": [
     {
       "tipo": "rss",
@@ -13,6 +13,21 @@
       },
       "commenti": [],
       "categoria": "Tecnologia",
+      "colore_tipo": "#008cff",
+      "immagine": "news-rss.webp",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Serie TV aprile 2026: tutte le uscite su Netflix, Prime Video, Disney+ e Sky",
+      "articolo": "Notizia: \"Serie TV aprile 2026: tutte le uscite su Netflix, Prime Video, Disney+ e Sky\". L'IA è in pausa caffè.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🐬",
+        "testo": "…"
+      },
+      "commenti": [],
+      "categoria": "Streaming",
       "colore_tipo": "#008cff",
       "immagine": "news-rss.webp",
       "nuovo": true
@@ -30,22 +45,7 @@
       "categoria": "Streaming",
       "colore_tipo": "#008cff",
       "immagine": "news-rss.webp",
-      "nuovo": true
-    },
-    {
-      "tipo": "rss",
-      "titolo": "Netflix, diamo i voti ai film e alle serie nella Top 10 questa settimana",
-      "articolo": "Notizia: \"Netflix, diamo i voti ai film e alle serie nella Top 10 questa settimana\". L'IA è in pausa caffè.",
-      "commento_firma": {
-        "nome": "Lars",
-        "avatar": "🐬",
-        "testo": "…"
-      },
-      "commenti": [],
-      "categoria": "Streaming",
-      "colore_tipo": "#008cff",
-      "immagine": "news-rss.webp",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -60,7 +60,7 @@
       "categoria": "Streaming",
       "colore_tipo": "#008cff",
       "immagine": "news-rss.webp",
-      "nuovo": true
+      "nuovo": false
     }
   ]
 }
