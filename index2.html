@@ -49,15 +49,23 @@
             pointer-events: none;
         }
 
-        .info-aggiornamento { 
-            font-size: 12px; color: #666; padding: 8px 15px; 
-            background: rgba(250, 247, 242, 0.85); 
-            border-bottom: 1px dashed #ddd; 
-            display: flex; align-items: center;
-            flex-wrap: wrap; gap: 4px;
+        .delfino-timestamp {
+            width: 100%;
+            text-align: center;
+            padding: 8px 15px;
+            background: linear-gradient(135deg, rgba(255,243,210,0.9) 0%, rgba(255,228,168,0.85) 100%);
+            border-bottom: 1.5px solid rgba(180,130,60,0.2);
+            font-size: 11px;
+            font-style: italic;
+            color: #7a5c2e;
+            letter-spacing: 0.02em;
         }
-        .info-aggiornamento .sinistra { display: flex; flex-direction: column; gap: 2px; }
-        .prossimo-update { font-size: 11px; color: #999; }
+        .prossimo-update { 
+            display: block;
+            font-size: 10px; 
+            color: #a08050;
+            margin-top: 2px;
+        }
 
         /* --- TICKER GHIBLI --- */
         .ticker-wrap {
@@ -377,11 +385,9 @@
             <div class="timbro-edizione" id="timbro-edizione"></div>
         </div>
 
-        <div class="info-aggiornamento">
-            <div class="sinistra">
-                <span id="ts-display">...</span>
-                <span class="prossimo-update" id="prossimo-display" style="display:none;"></span>
-            </div>
+        <div class="delfino-timestamp">
+            <span id="ts-display">🐬 Il Delfino sta nuotando...</span>
+            <span class="prossimo-update" id="prossimo-display"></span>
         </div>
 
         <div class="ticker-wrap" id="ticker-wrap" style="display:none;">
@@ -400,6 +406,17 @@
 
     <script>
         let clicks = 0, last = 0;
+
+        // Sanitizza contenuto generato da Gemini — previene XSS injection
+        function esc(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
 
         function toggleTerminale() { document.getElementById('terminale').style.display = 'none'; }
 
@@ -444,10 +461,10 @@
                         const row = document.createElement('div');
                         row.className = 'chat-messaggio';
                         row.innerHTML = `
-                            <div class="chat-avatar">${msg.avatar || '👤'}</div>
+                            <div class="chat-avatar">${esc(msg.avatar) || '👤'}</div>
                             <div class="chat-bubble">
-                                <span class="chat-nome">${msg.nome}</span>
-                                <span class="chat-testo">${msg.testo}</span>
+                                <span class="chat-nome">${esc(msg.nome)}</span>
+                                <span class="chat-testo">${esc(msg.testo)}</span>
                             </div>`;
                         card.appendChild(row);
                     });
@@ -480,7 +497,7 @@
                 }
 
                 const up = cfg.site_settings?.last_update || '---';
-                document.getElementById('ts-display').innerText = `Aggiornato: ${up}`;
+                document.getElementById('ts-display').innerText = up !== '---' ? `🐬 Il Delfino ha nuotato qui il ${up}` : '🐬 Il Delfino sta nuotando...';
 
                 // Ticker dai ticker_news del config
                 const tickerNews = cfg.site_settings?.ticker_news || [];
@@ -523,10 +540,9 @@
             // Prossimo aggiornamento
             const prossimoEl = document.getElementById('prossimo-display');
             if (data.prossimo_aggiornamento) {
-                prossimoEl.innerText = `Prossimo aggiornamento: ${data.prossimo_aggiornamento}`;
-                prossimoEl.style.display = 'block';
+                prossimoEl.innerText = data.prossimo_aggiornamento === 'Aggiornamenti sospesi' ? '🌊 Il mare è in pausa...' : `✨ Prossima nuotata: ${data.prossimo_aggiornamento}`;
             } else {
-                prossimoEl.style.display = 'none';
+                prossimoEl.innerText = '';
             }
 
             // Ticker dai titoli della sezione
@@ -535,7 +551,7 @@
                 const wrap  = document.getElementById('ticker-wrap');
                 const titoli = data.news.map(n => n.titolo);
                 const doppio = [...titoli, ...titoli];
-                track.innerHTML = doppio.map(t => `<span class="ticker-item">${t}</span>`).join('');
+                track.innerHTML = doppio.map(t => `<span class="ticker-item">${esc(t)}</span>`).join('');
                 const durata = Math.max(20, Math.min(60, titoli.join('').length * 0.18));
                 track.style.animationDuration = durata + 's';
                 wrap.style.display = 'block';
@@ -557,24 +573,24 @@
                 const cf = n.commento_firma || {};
                 const firmaHTML = (!isPersonaggio && cf.nome) ? `
                     <div class="firma-autore">
-                        <span class="avatar-autore">${cf.avatar || '👤'}</span>
-                        <span>${cf.nome}</span>
+                        <span class="avatar-autore">${esc(cf.avatar) || '👤'}</span>
+                        <span>${esc(cf.nome)}</span>
                     </div>` : '';
 
                 // Commento firma (testo dell'autore sotto l'articolo)
                 const commentoFirmaHTML = (!isPersonaggio && cf.testo) ? `
                     <div class="commento-firma">
-                        <span class="avatar-firma">${cf.avatar || '👤'}</span>
-                        <span class="nome-firma">${cf.nome || 'Redazione'}</span>
-                        ${cf.testo}
+                        <span class="avatar-firma">${esc(cf.avatar) || '👤'}</span>
+                        <span class="nome-firma">${esc(cf.nome) || 'Redazione'}</span>
+                        ${esc(cf.testo)}
                     </div>` : '';
 
                 // Commenti personaggi — espandibili individualmente
                 const commentiHTML = (n.commenti || []).map(c => `
                     <div class="commento-personaggio" onclick="this.classList.toggle('aperto')">
-                        <span class="avatar-p">${c.avatar || '👤'}</span>
-                        <span class="nome-p">${c.nome} <span class="commento-toggle">▼</span></span>
-                        <div class="testo-p">${c.testo}</div>
+                        <span class="avatar-p">${esc(c.avatar) || '👤'}</span>
+                        <span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span>
+                        <div class="testo-p">${esc(c.testo)}</div>
                     </div>`).join('');
 
                 if (isPersonaggio) {
@@ -582,17 +598,17 @@
                     lista.innerHTML += `
                         <div class="notizia ${boxClass}">
                             <div class="notizia-numero">${idx + 1}</div>
-                            <span class="etichetta-categoria ${labelClass}">${n.categoria}${badgeNuovo}</span>
+                            <span class="etichetta-categoria ${labelClass}">${esc(n.categoria)}${badgeNuovo}</span>
                             <div class="notizia-personaggio-header">
-                                <div class="notizia-personaggio-avatar">${cf.avatar || '👤'}</div>
+                                <div class="notizia-personaggio-avatar">${esc(cf.avatar) || '👤'}</div>
                                 <div class="notizia-personaggio-info">
-                                    <div class="notizia-personaggio-nome">${cf.nome || 'Redazione'}</div>
+                                    <div class="notizia-personaggio-nome">${esc(cf.nome) || 'Redazione'}</div>
                                     <div class="notizia-personaggio-bio">scrive di ciò che gli piace</div>
                                 </div>
                                 <div class="indicatore-verde"></div>
                             </div>
-                            <h2>${n.titolo}</h2>
-                            <div class="testo" id="t-${idx}">${n.articolo}</div>
+                            <h2>${esc(n.titolo)}</h2>
+                            <div class="testo" id="t-${idx}">${esc(n.articolo)}</div>
                             <button class="leggi-tutto" onclick="
                                 const t=document.getElementById('t-${idx}');
                                 t.classList.toggle('aperto');
@@ -604,14 +620,14 @@
                     lista.innerHTML += `
                         <div class="notizia ${boxClass}">
                             <div class="notizia-numero">${idx + 1}</div>
-                            <span class="etichetta-categoria ${labelClass}">${n.categoria}${badgeNuovo}</span>
+                            <span class="etichetta-categoria ${labelClass}">${esc(n.categoria)}${badgeNuovo}</span>
                             <div class="notizia-img-box">
-                                <img src="public/images/${n.immagine || 'default.webp'}"
+                                <img src="public/images/${esc(n.immagine) || 'default.webp'}"
                                      onerror="this.src='https://placehold.co/600x400?text=News'">
                             </div>
                             ${firmaHTML}
-                            <h2>${n.titolo}</h2>
-                            <div class="testo" id="t-${idx}">${n.articolo}</div>
+                            <h2>${esc(n.titolo)}</h2>
+                            <div class="testo" id="t-${idx}">${esc(n.articolo)}</div>
                             <button class="leggi-tutto" onclick="
                                 const t=document.getElementById('t-${idx}');
                                 t.classList.toggle('aperto');
