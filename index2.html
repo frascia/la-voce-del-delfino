@@ -51,20 +51,31 @@
 
         .delfino-timestamp {
             width: 100%;
-            text-align: center;
-            padding: 8px 15px;
+            box-sizing: border-box;
+            padding: 10px 20px;
             background: linear-gradient(135deg, rgba(255,243,210,0.9) 0%, rgba(255,228,168,0.85) 100%);
             border-bottom: 1.5px solid rgba(180,130,60,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .delfino-timestamp .dt-tempo {
             font-size: 11px;
             font-style: italic;
             color: #7a5c2e;
             letter-spacing: 0.02em;
+            white-space: nowrap;
         }
-        .prossimo-update { 
-            display: block;
-            font-size: 10px; 
-            color: #a08050;
-            margin-top: 2px;
+        .delfino-timestamp .dt-motto {
+            font-size: 12px;
+            font-weight: 700;
+            font-style: italic;
+            color: #5a3e1b;
+            text-align: center;
+            flex: 1;
+            letter-spacing: 0.03em;
         }
 
         /* --- TICKER GHIBLI --- */
@@ -386,8 +397,8 @@
         </div>
 
         <div class="delfino-timestamp">
-            <span id="ts-display">🐬 Il Delfino sta nuotando...</span>
-            <span class="prossimo-update" id="prossimo-display"></span>
+            <span class="dt-tempo" id="ts-display">🐬 Il Delfino sta nuotando...</span>
+            <span class="dt-motto" id="motto-display"></span>
         </div>
 
         <div class="ticker-wrap" id="ticker-wrap" style="display:none;">
@@ -498,6 +509,8 @@
 
                 const up = cfg.site_settings?.last_update || '---';
                 document.getElementById('ts-display').innerText = up !== '---' ? `🐬 Il Delfino ha nuotato qui il ${up}` : '🐬 Il Delfino sta nuotando...';
+                const motto = cfg.site_settings?.motto || '';
+                if (motto) document.getElementById('motto-display').innerText = `✦ ${motto} ✦`;
 
                 // Ticker dai ticker_news del config
                 const tickerNews = cfg.site_settings?.ticker_news || [];
@@ -537,13 +550,7 @@
             document.documentElement.style.setProperty('--blu-mare', mc);
             document.body.style.background = mc;
 
-            // Prossimo aggiornamento
-            const prossimoEl = document.getElementById('prossimo-display');
-            if (data.prossimo_aggiornamento) {
-                prossimoEl.innerText = data.prossimo_aggiornamento === 'Aggiornamenti sospesi' ? '🌊 Il mare è in pausa...' : `✨ Prossima nuotata: ${data.prossimo_aggiornamento}`;
-            } else {
-                prossimoEl.innerText = '';
-            }
+
 
             // Ticker dai titoli della sezione
             if (data.news?.length) {
