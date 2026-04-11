@@ -105,11 +105,16 @@ async function main() {
     // --- Git ---
     eseguiGit(`git config user.name "DelfinoBot"`);
     eseguiGit(`git config user.email "bot@lavocedeldelfino.it"`);
-    // Allinea con il remoto PRIMA di aggiungere i file
+    // 1. Fetch aggiorna il remoto tracking locale
     eseguiGit(`git fetch origin main`);
+    // 2. Stage i file nuovi/modificati
     eseguiGit(`git add public/data/`);
+    // 3. Committa — a questo punto non ci sono più unstaged changes
     eseguiGit(`git commit -m "🤖 Redazione v2 ${oraAggiornamento} [skip ci]"`);
-    eseguiGit(`git rebase origin/main --autostash`);
+    // 4. Pull con strategia "teniamo sempre i nostri file" in caso di conflitto
+    //    sui file _draft, _articles ecc. che vengono sovrascritti ad ogni run
+    eseguiGit(`git pull --rebase=false --strategy-option=theirs origin main`);
+    // 5. Push
     eseguiGit(`git push`);
 
     scriviLog(`✅ FASE 3-v2 completata. Dati pubblicati.`);
