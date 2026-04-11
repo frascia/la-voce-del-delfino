@@ -1,6 +1,6 @@
 {
   "IMPOSTAZIONI": {
-    "header_fisso": "Header.png",
+    "header_fisso": "Header_Generale.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
     "stato_sito": "attivo",
     "alert_api_rotto": "Onde troppo alte! Le API sono in tilt.",
@@ -13,7 +13,7 @@
   "LIMITI": {
     "fasce_articoli": [
       "06",
-      "12",
+      "18",
       "19"
     ],
     "tolleranza_minuti": 45,
@@ -259,7 +259,7 @@
       "arg": "Viaggi mete insolite Europa",
       "tipo": "RSS",
       "lab": "Viaggi",
-      "firma": "Juizinho",
+      "firma": "Peppino",
       "mood": "viaggiatore sognante con budget limitato",
       "num": 2,
       "inventare": false,
@@ -267,12 +267,17 @@
       "weight_commento": 0.65
     }
   ],
+  "IMMAGINI": {
+    "rss": "news-rss.webp",
+    "gen": "news-gen.webp",
+    "personaggio": "news-redazionale.webp"
+  },
   "site_settings": {
-    "last_update": "11/04, 10:31",
+    "last_update": "11/04, 11:19",
     "timbro": "Relax, Mare e Brace",
     "banner": "Weekend.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
-    "header_img": "Header.png",
+    "header_img": "Header_Generale.webp",
     "stato_sito": "attivo",
     "alert_api_rotto": "Onde troppo alte! Le API sono in tilt.",
     "ticker_news": [

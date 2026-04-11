@@ -722,3 +722,70 @@ Please retry in 21.354307521s. (code: 429)
 [11/04/2026, 10:34:04] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (4 articoli, 0 nuovi)
 [11/04/2026, 10:34:04] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (2 articoli, 0 nuovi)
 [11/04/2026, 10:34:04] [3-deploy-v2] 🕐 Ora: 11/04, 10:31 | Prossimo: 11/04, 12:34
+[11/04/2026, 11:19:58] [1-fetch-v2] ═══════════════════════════════════
+[11/04/2026, 11:19:58] [1-fetch-v2] 🐬 NUOVO RUN v2 [ sabato 11 aprile 2026 alle ore 11:19:58 ]
+[11/04/2026, 11:19:58] [1-fetch-v2] ═══════════════════════════════════
+[11/04/2026, 11:19:58] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[11/04/2026, 11:19:58] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[11/04/2026, 11:19:58] [1-fetch-v2] 🕐 Fascia articoli attiva: NO | Lunghezza target: ~240 parole
+[11/04/2026, 11:19:59] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[11/04/2026, 11:19:59] [1-fetch-v2] 📅 Giorno: sab | Timbro: Relax, Mare e Brace
+[11/04/2026, 11:19:59] [1-fetch-v2] 📋 Voci attive oggi: 8
+[11/04/2026, 11:19:59] [1-fetch-v2] ⏭️ Generazione articoli saltata — nessuna fascia oraria attiva ora.
+[11/04/2026, 11:19:59] [1-fetch-v2] 🧊 Articoli congelati — aggiungo commenti alle notizie esistenti...
+[11/04/2026, 11:20:09] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 4 stati cambiati.
+[11/04/2026, 11:20:09] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Senza acqua e senza vergogna: Pescara a ..."
+[11/04/2026, 11:20:15] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
+[11/04/2026, 11:20:15] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Pescara, 384 arresti e 30mila persone id..."
+[11/04/2026, 11:20:24] [1-fetch-v2] 🔄 Relazioni aggiornate: 10 delta, 4 stati cambiati.
+[11/04/2026, 11:20:24] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Ancora truffe scoperte dalla Finanza, Cr..."
+[11/04/2026, 11:20:31] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 3 stati cambiati.
+[11/04/2026, 11:20:31] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Pescara, weekend dedicato al vintage e a..."
+[11/04/2026, 11:20:39] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 3 stati cambiati.
+[11/04/2026, 11:20:39] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "La fila al bar per il caffè del mattino..."
+[11/04/2026, 11:20:42] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 3 stati cambiati.
+[11/04/2026, 11:20:42] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Il cantiere eterno di Pescara..."
+[11/04/2026, 11:20:49] [1-fetch-v2] 🔄 Relazioni aggiornate: 1 delta, 2 stati cambiati.
+[11/04/2026, 11:20:49] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Il traffico sul lungomare in agosto..."
+[11/04/2026, 11:20:57] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 4 stati cambiati.
+[11/04/2026, 11:20:57] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Il cantiere eterno di Pescara..."
+[11/04/2026, 11:21:14] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 4 stati cambiati.
+[11/04/2026, 11:21:14] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Perché il mare calma l'anima ma non il p..."
+[11/04/2026, 11:21:18] [1-fetch-v2] 🔄 Relazioni aggiornate: 2 delta, 3 stati cambiati.
+[11/04/2026, 11:21:18] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Delfino nel cuore e bionde nel mirino..."
+[11/04/2026, 11:21:32] [1-fetch-v2] 🔄 Relazioni aggiornate: 7 delta, 4 stati cambiati.
+[11/04/2026, 11:21:32] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Lu mare s'è magnate pure la dignità!..."
+[11/04/2026, 11:21:39] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 3 stati cambiati.
+[11/04/2026, 11:21:39] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Il silenzio della Majella e la tirannia ..."
+[11/04/2026, 11:21:58] [1-fetch-v2] 🔄 Relazioni aggiornate: 10 delta, 4 stati cambiati.
+[11/04/2026, 11:21:58] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Firenze, nasce la prima scuola in città ..."
+[11/04/2026, 11:22:02] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 3 stati cambiati.
+[11/04/2026, 11:22:02] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Emily in Paris, novità in arrivo! La ses..."
+[11/04/2026, 11:22:06] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 4 stati cambiati.
+[11/04/2026, 11:22:06] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Mercoledì 3, tra i nuovi membri del cast..."
+[11/04/2026, 11:22:13] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 3 stati cambiati.
+[11/04/2026, 11:22:13] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Due Spicci: la nuova serie Netflix di Ze..."
+[11/04/2026, 11:22:21] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
+[11/04/2026, 11:22:21] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "I nuovi film al cinema dal 9 aprile e qu..."
+[11/04/2026, 11:22:27] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
+[11/04/2026, 11:22:27] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Film da vedere al cinema: le uscite impe..."
+[11/04/2026, 11:22:27] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
+[11/04/2026, 11:22:27] [1-fetch-v2] 📊 Totale giornata: chiamate=139, token_stimati≈62550, rss=0
+[11/04/2026, 11:22:27] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[11/04/2026, 11:22:27] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[11/04/2026, 11:22:29] [1-fetch-v2] ✍️ Articolo personaggio scritto da Hiroki: "La danza del caos tra i binari di Pescara..."
+[11/04/2026, 11:22:29] [1-fetch-v2] 📊 Chiamate API totali: 37
+[11/04/2026, 11:22:29] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
+[11/04/2026, 11:22:29] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[11/04/2026, 11:22:31] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
+[11/04/2026, 11:22:31] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
+[11/04/2026, 11:22:31] [2-elabora-v2] 🔐 auth_info.json aggiornato.
+[11/04/2026, 11:22:31] [2-elabora-v2] ✅ Sezione pescara: 13 articoli normalizzati.
+[11/04/2026, 11:22:31] [2-elabora-v2] ✅ Sezione mondo: 4 articoli normalizzati.
+[11/04/2026, 11:22:31] [2-elabora-v2] ✅ Sezione cultura: 2 articoli normalizzati.
+[11/04/2026, 11:22:31] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[11/04/2026, 11:22:31] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[11/04/2026, 11:22:31] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (13 articoli, 1 nuovi)
+[11/04/2026, 11:22:31] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (4 articoli, 0 nuovi)
+[11/04/2026, 11:22:31] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (2 articoli, 0 nuovi)
+[11/04/2026, 11:22:31] [3-deploy-v2] 🕐 Ora: 11/04, 11:19 | Prossimo: 11/04, 13:22

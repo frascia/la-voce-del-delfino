@@ -1,5 +1,5 @@
 {
-  "_runCount": 9,
+  "_runCount": 10,
   "Ernesto→Giovanni": {
     "score": -0.09,
     "label": "neutro",
@@ -46,17 +46,17 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -1,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Hiroki": {
-    "score": -0.61,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Hiroki→Juizinho": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "11/04/2026"
   },
@@ -76,8 +76,8 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.5,
-    "label": "diffidente",
+    "score": -0.9,
+    "label": "ostile",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Cetteo→Hiroki": {
@@ -96,8 +96,18 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Hiroki→Redazione": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
+    "ultimo_aggiornamento": "11/04/2026"
+  },
+  "Hiroki→Questa comunità": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "11/04/2026"
+  },
+  "Lars→Redazione": {
+    "score": -0.4,
+    "label": "diffidente",
     "ultimo_aggiornamento": "11/04/2026"
   }
 }
