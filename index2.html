@@ -362,17 +362,128 @@
         @keyframes pulse-verde { 0%,100%{box-shadow:0 0 6px rgba(45,106,79,0.6)} 50%{box-shadow:0 0 12px rgba(45,106,79,0.9)} }
 
         /* --- TERMINALE --- */
-        #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; }
+        #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); color:#0f0; z-index:1000; padding:0; font-family:monospace; box-sizing:border-box; overflow:auto; flex-direction:column; }
+        .term-header { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #0f0; padding:12px 20px; flex-shrink:0; }
+        .term-tabs { display:flex; gap:6px; padding:10px 20px; border-bottom:1px solid #1a1a1a; flex-shrink:0; flex-wrap:wrap; }
+        .term-tab { padding:6px 14px; border-radius:6px; border:1px solid #333; background:transparent; color:#666; font-size:11px; font-family:monospace; cursor:pointer; transition:all 0.2s; }
+        .term-tab.attivo { background:#0f0; color:#000; border-color:#0f0; font-weight:700; }
+        .term-body { flex:1; overflow-y:auto; padding:16px 20px; }
+        .term-panel { display:none; }
+        .term-panel.attivo { display:block; }
+
+        /* --- EDITOR CONFIG --- */
+        .cfg-section { margin-bottom:24px; }
+        .cfg-section-title { color:#0f0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid #1a1a1a; }
+        .cfg-field { margin-bottom:12px; }
+        .cfg-label { color:#888; font-size:11px; display:block; margin-bottom:4px; }
+        .cfg-input { width:100%; box-sizing:border-box; background:#111; border:1px solid #333; color:#eee; font-family:monospace; font-size:12px; padding:7px 10px; border-radius:6px; outline:none; transition:border 0.2s; }
+        .cfg-input:focus { border-color:#0f0; }
+        .cfg-input.small { width:80px; }
+        .cfg-textarea { min-height:60px; resize:vertical; }
+        .cfg-row { display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap; }
+        .cfg-row .cfg-field { flex:1; min-width:120px; }
+        .cfg-card { background:#0d0d0d; border:1px solid #222; border-radius:8px; padding:12px; margin-bottom:10px; }
+        .cfg-card-title { color:#0f0; font-size:11px; font-weight:700; margin-bottom:10px; }
+        .cfg-btn { padding:7px 16px; border-radius:6px; border:none; font-family:monospace; font-size:12px; cursor:pointer; font-weight:700; transition:all 0.2s; }
+        .cfg-btn-add { background:#1a3a1a; color:#0f0; border:1px solid #0f0; }
+        .cfg-btn-add:hover { background:#0f0; color:#000; }
+        .cfg-btn-del { background:#3a1a1a; color:#f00; border:1px solid #f00; font-size:10px; padding:4px 10px; }
+        .cfg-btn-del:hover { background:#f00; color:#fff; }
+        .cfg-save { display:block; width:100%; padding:12px; background:#0f0; color:#000; border:none; font-family:monospace; font-size:14px; font-weight:900; cursor:pointer; border-radius:8px; margin-top:20px; letter-spacing:0.05em; }
+        .cfg-save:hover { background:#0d0; }
+        .cfg-status { text-align:center; font-size:12px; padding:8px; border-radius:6px; margin-top:10px; display:none; }
+        .cfg-status.ok { background:#0a2a0a; color:#0f0; display:block; }
+        .cfg-status.err { background:#2a0a0a; color:#f00; display:block; }
+        .cfg-select { background:#111; border:1px solid #333; color:#eee; font-family:monospace; font-size:12px; padding:7px 10px; border-radius:6px; width:100%; }
+        .cfg-checkbox-row { display:flex; align-items:center; gap:8px; }
+        .cfg-checkbox-row input { width:16px; height:16px; accent-color:#0f0; }
     </style>
 </head>
 <body>
     <div id="app">
-        <div id="terminale">
-            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #0f0; padding-bottom:10px;">
+        <div id="terminale" style="display:flex;">
+            <div class="term-header">
                 <span>> TERMINALE DIREZIONE</span>
                 <span onclick="toggleTerminale()" style="color:red; cursor:pointer;">[X] CHIUDI</span>
             </div>
-            <pre id="log-content" style="font-size:13px; color:#ccc; margin:20px 0; white-space: pre-wrap;"></pre>
+            <div class="term-tabs">
+                <button class="term-tab attivo" onclick="switchTab('log')">📋 LOG</button>
+                <button class="term-tab" onclick="switchTab('impostazioni')">⚙️ IMPOSTAZIONI</button>
+                <button class="term-tab" onclick="switchTab('limiti')">🎛️ LIMITI</button>
+                <button class="term-tab" onclick="switchTab('chi')">👥 PERSONAGGI</button>
+                <button class="term-tab" onclick="switchTab('agenda')">📅 AGENDA</button>
+                <button class="term-tab" onclick="switchTab('redazione')">📰 REDAZIONE</button>
+            </div>
+            <div class="term-body">
+                <!-- LOG -->
+                <div class="term-panel attivo" id="panel-log">
+                    <pre id="log-content" style="font-size:13px; color:#ccc; white-space:pre-wrap; margin:0;"></pre>
+                </div>
+                <!-- IMPOSTAZIONI -->
+                <div class="term-panel" id="panel-impostazioni">
+                    <div class="cfg-section">
+                        <div class="cfg-section-title">Impostazioni Sito</div>
+                        <div class="cfg-field"><label class="cfg-label">Header immagine (filename)</label><input class="cfg-input" id="cfg-header" /></div>
+                        <div class="cfg-field"><label class="cfg-label">Motto</label><input class="cfg-input" id="cfg-motto" /></div>
+                        <div class="cfg-field"><label class="cfg-label">Stato sito</label>
+                            <select class="cfg-select" id="cfg-stato">
+                                <option value="attivo">attivo</option>
+                                <option value="manutenzione">manutenzione</option>
+                                <option value="sospeso">sospeso</option>
+                            </select>
+                        </div>
+                        <div class="cfg-field"><label class="cfg-label">Alert API rotto</label><input class="cfg-input" id="cfg-alert" /></div>
+                        <div class="cfg-section-title" style="margin-top:16px;">Ticker News</div>
+                        <div id="cfg-ticker-list"></div>
+                        <button class="cfg-btn cfg-btn-add" onclick="aggiungiTicker()">+ Aggiungi</button>
+                    </div>
+                    <button class="cfg-save" onclick="salvaSezione('impostazioni')">💾 SALVA IMPOSTAZIONI</button>
+                    <div class="cfg-status" id="status-impostazioni"></div>
+                </div>
+                <!-- LIMITI -->
+                <div class="term-panel" id="panel-limiti">
+                    <div class="cfg-section">
+                        <div class="cfg-section-title">Fasce Orarie Articoli</div>
+                        <div id="cfg-fasce-list"></div>
+                        <button class="cfg-btn cfg-btn-add" onclick="aggiungiFascia()">+ Aggiungi fascia</button>
+                        <div class="cfg-row" style="margin-top:12px;">
+                            <div class="cfg-field"><label class="cfg-label">Tolleranza (minuti)</label><input class="cfg-input small" id="cfg-tolleranza" type="number" min="0" max="60" /></div>
+                            <div class="cfg-field"><label class="cfg-label">Fascia reset quote (ora IT)</label><input class="cfg-input small" id="cfg-fascia-reset" type="number" min="0" max="23" /></div>
+                        </div>
+                        <div class="cfg-section-title" style="margin-top:16px;">Articoli</div>
+                        <div class="cfg-row">
+                            <div class="cfg-field"><label class="cfg-label">Lunghezza (1-10)</label><input class="cfg-input small" id="cfg-lunghezza" type="number" min="1" max="10" /></div>
+                        </div>
+                        <div class="cfg-section-title" style="margin-top:16px;">Commenti</div>
+                        <div class="cfg-row">
+                            <div class="cfg-field"><label class="cfg-label">Min</label><input class="cfg-input small" id="cfg-comm-min" type="number" min="0" max="6" /></div>
+                            <div class="cfg-field"><label class="cfg-label">Max</label><input class="cfg-input small" id="cfg-comm-max" type="number" min="1" max="10" /></div>
+                            <div class="cfg-field"><label class="cfg-label">Max totali</label><input class="cfg-input small" id="cfg-comm-tot" type="number" min="1" max="30" /></div>
+                        </div>
+                    </div>
+                    <button class="cfg-save" onclick="salvaSezione('limiti')">💾 SALVA LIMITI</button>
+                    <div class="cfg-status" id="status-limiti"></div>
+                </div>
+                <!-- PERSONAGGI -->
+                <div class="term-panel" id="panel-chi">
+                    <div id="cfg-chi-list"></div>
+                    <button class="cfg-save" onclick="salvaSezione('chi')">💾 SALVA PERSONAGGI</button>
+                    <div class="cfg-status" id="status-chi"></div>
+                </div>
+                <!-- AGENDA -->
+                <div class="term-panel" id="panel-agenda">
+                    <div id="cfg-agenda-list"></div>
+                    <button class="cfg-save" onclick="salvaSezione('agenda')">💾 SALVA AGENDA</button>
+                    <div class="cfg-status" id="status-agenda"></div>
+                </div>
+                <!-- REDAZIONE -->
+                <div class="term-panel" id="panel-redazione">
+                    <div id="cfg-redazione-list"></div>
+                    <button class="cfg-btn cfg-btn-add" style="margin-bottom:12px;" onclick="aggiungiVoceRedazione()">+ Nuova voce</button>
+                    <button class="cfg-save" onclick="salvaSezione('redazione')">💾 SALVA REDAZIONE</button>
+                    <div class="cfg-status" id="status-redazione"></div>
+                </div>
+            </div>
         </div>
 
         <div class="testata" id="logo-innesco">
@@ -413,6 +524,272 @@
 
         function toggleTerminale() { document.getElementById('terminale').style.display = 'none'; }
 
+        // ---- EDITOR CONFIG ----
+        let cfgCorrente = null;
+        let nomiPersonaggi = [];
+
+        function switchTab(nome) {
+            document.querySelectorAll('.term-tab').forEach((t,i) => t.classList.remove('attivo'));
+            document.querySelectorAll('.term-panel').forEach(p => p.classList.remove('attivo'));
+            document.getElementById('panel-' + nome).classList.add('attivo');
+            event.target.classList.add('attivo');
+        }
+
+        async function apriEditor() {
+            try {
+                cfgCorrente = await fetch(`public/data/config_v2.json?v=${Date.now()}`).then(r => r.json());
+                nomiPersonaggi = Object.keys(cfgCorrente.CHI || {}).filter(n => n !== 'default');
+                popolaImpostazioni();
+                popolaLimiti();
+                popolaChi();
+                popolaAgenda();
+                popolaRedazione();
+            } catch(e) { console.error('Errore caricamento config:', e); }
+        }
+
+        // --- IMPOSTAZIONI ---
+        function popolaImpostazioni() {
+            const I = cfgCorrente.IMPOSTAZIONI || {};
+            document.getElementById('cfg-header').value = I.header_fisso || '';
+            document.getElementById('cfg-motto').value = I.motto || '';
+            document.getElementById('cfg-stato').value = I.stato_sito || 'attivo';
+            document.getElementById('cfg-alert').value = I.alert_api_rotto || '';
+            const tl = document.getElementById('cfg-ticker-list');
+            tl.innerHTML = '';
+            (I.ticker_news || []).forEach((t, i) => {
+                tl.innerHTML += `<div class="cfg-field" style="display:flex;gap:6px;">
+                    <input class="cfg-input" id="ticker-${i}" value="${esc(t)}" />
+                    <button class="cfg-btn cfg-btn-del" onclick="this.parentElement.remove()">✕</button>
+                </div>`;
+            });
+        }
+        function aggiungiTicker() {
+            const tl = document.getElementById('cfg-ticker-list');
+            const i = tl.children.length;
+            tl.innerHTML += `<div class="cfg-field" style="display:flex;gap:6px;">
+                <input class="cfg-input" id="ticker-${i}" value="" placeholder="Testo ticker..." />
+                <button class="cfg-btn cfg-btn-del" onclick="this.parentElement.remove()">✕</button>
+            </div>`;
+        }
+
+        // --- LIMITI ---
+        function popolaLimiti() {
+            const L = cfgCorrente.LIMITI || {};
+            document.getElementById('cfg-tolleranza').value = L.tolleranza_minuti ?? 30;
+            document.getElementById('cfg-fascia-reset').value = L.fascia_reset_quote ?? '05';
+            document.getElementById('cfg-lunghezza').value = L.lunghezza_articolo ?? 5;
+            document.getElementById('cfg-comm-min').value = L.commenti_min ?? 1;
+            document.getElementById('cfg-comm-max').value = L.commenti_max ?? 3;
+            document.getElementById('cfg-comm-tot').value = L.commenti_max_totali ?? 6;
+            const fl = document.getElementById('cfg-fasce-list');
+            fl.innerHTML = '';
+            (L.fasce_articoli || []).forEach((f, i) => {
+                fl.innerHTML += `<div class="cfg-field" style="display:flex;gap:6px;align-items:center;">
+                    <input class="cfg-input small" id="fascia-${i}" value="${esc(f)}" placeholder="es. 06" style="width:60px;" />
+                    <span style="color:#666;font-size:11px;">:00</span>
+                    <button class="cfg-btn cfg-btn-del" onclick="this.parentElement.remove()">✕</button>
+                </div>`;
+            });
+        }
+        function aggiungiFascia() {
+            const fl = document.getElementById('cfg-fasce-list');
+            const i = fl.children.length;
+            fl.innerHTML += `<div class="cfg-field" style="display:flex;gap:6px;align-items:center;">
+                <input class="cfg-input small" id="fascia-${i}" value="" placeholder="es. 12" style="width:60px;" />
+                <span style="color:#666;font-size:11px;">:00</span>
+                <button class="cfg-btn cfg-btn-del" onclick="this.parentElement.remove()">✕</button>
+            </div>`;
+        }
+
+        // --- PERSONAGGI ---
+        function popolaChi() {
+            const CHI = cfgCorrente.CHI || {};
+            const el = document.getElementById('cfg-chi-list');
+            el.innerHTML = '';
+            Object.entries(CHI).forEach(([nome, p]) => {
+                el.innerHTML += `<div class="cfg-card">
+                    <div class="cfg-card-title">${nome === 'default' ? '👤 Default' : (p.avatar||'👤') + ' ' + nome}</div>
+                    <div class="cfg-row">
+                        <div class="cfg-field"><label class="cfg-label">Avatar</label><input class="cfg-input small" id="chi-${nome}-avatar" value="${esc(p.avatar||'')}" /></div>
+                        <div class="cfg-field"><label class="cfg-label">Peso (0-1)</label><input class="cfg-input small" id="chi-${nome}-peso" type="number" step="0.1" min="0" max="1" value="${p.peso||0.6}" /></div>
+                    </div>
+                    <div class="cfg-field"><label class="cfg-label">Mood</label><input class="cfg-input" id="chi-${nome}-mood" value="${esc(p.mood||'')}" /></div>
+                    <div class="cfg-field"><label class="cfg-label">Bio breve</label><input class="cfg-input" id="chi-${nome}-bio_breve" value="${esc(p.bio_breve||'')}" /></div>
+                    <div class="cfg-field"><label class="cfg-label">Bio completa</label><textarea class="cfg-input cfg-textarea" id="chi-${nome}-bio_completa">${esc(p.bio_completa||'')}</textarea></div>
+                    <div class="cfg-field"><label class="cfg-label">Immagine (filename)</label><input class="cfg-input" id="chi-${nome}-img" value="${esc(p.img||'')}" /></div>
+                </div>`;
+            });
+        }
+
+        // --- AGENDA ---
+        function popolaAgenda() {
+            const AG = cfgCorrente.AGENDA || {};
+            const el = document.getElementById('cfg-agenda-list');
+            el.innerHTML = '';
+            Object.entries(AG).forEach(([giorno, val]) => {
+                el.innerHTML += `<div class="cfg-card">
+                    <div class="cfg-card-title">📅 ${giorno}</div>
+                    <div class="cfg-row">
+                        <div class="cfg-field"><label class="cfg-label">Timbro</label><input class="cfg-input" id="ag-${giorno}-timbro" value="${esc(val.timbro||'')}" /></div>
+                        <div class="cfg-field"><label class="cfg-label">Banner (filename)</label><input class="cfg-input" id="ag-${giorno}-banner" value="${esc(val.banner||'')}" /></div>
+                    </div>
+                </div>`;
+            });
+        }
+
+        // --- REDAZIONE ---
+        function popolaRedazione() {
+            const R = cfgCorrente.REDAZIONE || [];
+            const el = document.getElementById('cfg-redazione-list');
+            el.innerHTML = '';
+            R.forEach((v, i) => renderVoceRedazione(el, v, i));
+        }
+        function renderVoceRedazione(container, v, i) {
+            const firmaOpts = nomiPersonaggi.map(n => `<option value="${n}" ${v.firma===n?'selected':''}>${n}</option>`).join('');
+            const giorniOpts = ['default','lun','mar','mer','gio','ven','sab','dom',
+                'lun,mer,ven','sab,dom','lun,dom,ven','mer,sab','lun,gio'].map(g =>
+                `<option value="${g}" ${v.g===g?'selected':''}>${g}</option>`).join('');
+            container.innerHTML += `<div class="cfg-card" id="voce-${i}">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                    <div class="cfg-card-title" style="margin:0;">📰 Voce ${i+1} — ${esc(v.lab||'')}</div>
+                    <button class="cfg-btn cfg-btn-del" onclick="document.getElementById('voce-${i}').remove()">✕ Rimuovi</button>
+                </div>
+                <div class="cfg-row">
+                    <div class="cfg-field"><label class="cfg-label">Giorni</label>
+                        <select class="cfg-select" id="red-${i}-g">${giorniOpts}</select></div>
+                    <div class="cfg-field"><label class="cfg-label">Sezione</label>
+                        <input class="cfg-input" id="red-${i}-sez" value="${esc(v.sez||'')}" /></div>
+                    <div class="cfg-field"><label class="cfg-label">Label</label>
+                        <input class="cfg-input" id="red-${i}-lab" value="${esc(v.lab||'')}" /></div>
+                </div>
+                <div class="cfg-row">
+                    <div class="cfg-field"><label class="cfg-label">Argomento / Query RSS</label>
+                        <input class="cfg-input" id="red-${i}-arg" value="${esc(v.arg||'')}" /></div>
+                    <div class="cfg-field" style="max-width:80px;"><label class="cfg-label">Num</label>
+                        <input class="cfg-input small" id="red-${i}-num" type="number" min="1" max="10" value="${v.num||2}" /></div>
+                </div>
+                <div class="cfg-row">
+                    <div class="cfg-field"><label class="cfg-label">Tipo</label>
+                        <select class="cfg-select" id="red-${i}-tipo">
+                            <option value="RSS" ${v.tipo==='RSS'?'selected':''}>RSS</option>
+                            <option value="GEN" ${v.tipo==='GEN'?'selected':''}>GEN</option>
+                        </select></div>
+                    <div class="cfg-field"><label class="cfg-label">Firma</label>
+                        <select class="cfg-select" id="red-${i}-firma">${firmaOpts}</select></div>
+                </div>
+                <div class="cfg-field"><label class="cfg-label">Mood commento</label>
+                    <input class="cfg-input" id="red-${i}-mood" value="${esc(v.mood||'')}" /></div>
+                <div class="cfg-row">
+                    <div class="cfg-field"><label class="cfg-label">Weight articolo (0-1)</label>
+                        <input class="cfg-input small" id="red-${i}-wa" type="number" step="0.05" min="0" max="1" value="${v.weight_articolo||0.7}" /></div>
+                    <div class="cfg-field"><label class="cfg-label">Weight commento (0-1)</label>
+                        <input class="cfg-input small" id="red-${i}-wc" type="number" step="0.05" min="0" max="1" value="${v.weight_commento||0.6}" /></div>
+                </div>
+                <div class="cfg-checkbox-row" style="margin-top:8px;">
+                    <input type="checkbox" id="red-${i}-inventare" ${v.inventare?'checked':''} />
+                    <label class="cfg-label" style="margin:0;">Può inventare liberamente</label>
+                </div>
+                <div class="cfg-field" style="margin-top:8px;"><label class="cfg-label">Temi GEN (uno per riga)</label>
+                    <textarea class="cfg-input cfg-textarea" id="red-${i}-temi">${(v.temi||[]).join('\n')}</textarea></div>
+            </div>`;
+        }
+        function aggiungiVoceRedazione() {
+            const el = document.getElementById('cfg-redazione-list');
+            const i = el.children.length;
+            renderVoceRedazione(el, { g:'default', sez:'pescara', lab:'Nuova', arg:'', tipo:'RSS',
+                firma: nomiPersonaggi[0]||'', mood:'', num:2, weight_articolo:0.7, weight_commento:0.6,
+                inventare:false, temi:[] }, i);
+        }
+
+        // --- SALVA ---
+        function mostraStatus(id, ok, msg) {
+            const el = document.getElementById('status-' + id);
+            el.className = 'cfg-status ' + (ok ? 'ok' : 'err');
+            el.innerText = ok ? '✅ ' + msg : '❌ ' + msg;
+            setTimeout(() => { el.style.display = 'none'; el.className = 'cfg-status'; }, 4000);
+        }
+
+        function leggiConfigDaForm() {
+            // IMPOSTAZIONI
+            const tickers = Array.from(document.querySelectorAll('[id^="ticker-"]')).map(el => el.value.trim()).filter(Boolean);
+            cfgCorrente.IMPOSTAZIONI = {
+                ...cfgCorrente.IMPOSTAZIONI,
+                header_fisso: document.getElementById('cfg-header').value.trim(),
+                motto: document.getElementById('cfg-motto').value.trim(),
+                stato_sito: document.getElementById('cfg-stato').value,
+                alert_api_rotto: document.getElementById('cfg-alert').value.trim(),
+                ticker_news: tickers
+            };
+            // LIMITI
+            const fasce = Array.from(document.querySelectorAll('[id^="fascia-"]')).map(el => el.value.trim()).filter(Boolean);
+            cfgCorrente.LIMITI = {
+                ...cfgCorrente.LIMITI,
+                fasce_articoli: fasce,
+                tolleranza_minuti: parseInt(document.getElementById('cfg-tolleranza').value),
+                fascia_reset_quote: document.getElementById('cfg-fascia-reset').value.trim(),
+                lunghezza_articolo: parseInt(document.getElementById('cfg-lunghezza').value),
+                commenti_min: parseInt(document.getElementById('cfg-comm-min').value),
+                commenti_max: parseInt(document.getElementById('cfg-comm-max').value),
+                commenti_max_totali: parseInt(document.getElementById('cfg-comm-tot').value)
+            };
+            // CHI
+            Object.keys(cfgCorrente.CHI || {}).forEach(nome => {
+                const p = cfgCorrente.CHI[nome];
+                cfgCorrente.CHI[nome] = {
+                    ...p,
+                    avatar: document.getElementById(`chi-${nome}-avatar`)?.value.trim() || p.avatar,
+                    peso: parseFloat(document.getElementById(`chi-${nome}-peso`)?.value) || p.peso,
+                    mood: document.getElementById(`chi-${nome}-mood`)?.value.trim() || p.mood,
+                    bio_breve: document.getElementById(`chi-${nome}-bio_breve`)?.value.trim() || '',
+                    bio_completa: document.getElementById(`chi-${nome}-bio_completa`)?.value.trim() || '',
+                    img: document.getElementById(`chi-${nome}-img`)?.value.trim() || ''
+                };
+            });
+            // AGENDA
+            Object.keys(cfgCorrente.AGENDA || {}).forEach(giorno => {
+                cfgCorrente.AGENDA[giorno] = {
+                    timbro: document.getElementById(`ag-${giorno}-timbro`)?.value.trim() || '',
+                    banner: document.getElementById(`ag-${giorno}-banner`)?.value.trim() || ''
+                };
+            });
+            // REDAZIONE
+            const voci = [];
+            document.querySelectorAll('[id^="voce-"]').forEach((card, i) => {
+                const idx = card.id.replace('voce-', '');
+                const temiRaw = document.getElementById(`red-${idx}-temi`)?.value || '';
+                voci.push({
+                    g: document.getElementById(`red-${idx}-g`)?.value || 'default',
+                    sez: document.getElementById(`red-${idx}-sez`)?.value.trim() || 'pescara',
+                    arg: document.getElementById(`red-${idx}-arg`)?.value.trim() || '',
+                    tipo: document.getElementById(`red-${idx}-tipo`)?.value || 'RSS',
+                    lab: document.getElementById(`red-${idx}-lab`)?.value.trim() || '',
+                    firma: document.getElementById(`red-${idx}-firma`)?.value || '',
+                    mood: document.getElementById(`red-${idx}-mood`)?.value.trim() || '',
+                    num: parseInt(document.getElementById(`red-${idx}-num`)?.value) || 2,
+                    weight_articolo: parseFloat(document.getElementById(`red-${idx}-wa`)?.value) || 0.7,
+                    weight_commento: parseFloat(document.getElementById(`red-${idx}-wc`)?.value) || 0.6,
+                    inventare: document.getElementById(`red-${idx}-inventare`)?.checked || false,
+                    temi: temiRaw.split('\n').map(t => t.trim()).filter(Boolean)
+                });
+            });
+            cfgCorrente.REDAZIONE = voci;
+        }
+
+        async function salvaSezione(sezione) {
+            leggiConfigDaForm();
+            try {
+                // Scarica come file — l'utente lo troverà nella cartella download
+                const blob = new Blob([JSON.stringify(cfgCorrente, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; a.download = 'config_v2_draft.json'; a.click();
+                URL.revokeObjectURL(url);
+                mostraStatus(sezione, true, 'config_v2_draft.json scaricato!');
+            } catch(e) {
+                mostraStatus(sezione, false, 'Errore: ' + e.message);
+            }
+        }
+
         document.getElementById('logo-innesco').onclick = async () => {
             const ora = Date.now();
             if (ora - last > 1000) clicks = 0;
@@ -424,9 +801,10 @@
                 const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',
                     new TextEncoder().encode(p)))).map(b => b.toString(16).padStart(2,'0')).join('');
                 if (hash === a.check) {
-                    document.getElementById('terminale').style.display = 'block';
+                    document.getElementById('terminale').style.display = 'flex';
                     document.getElementById('log-content').innerText =
                         await fetch(`public/data/redazione-v2.log?v=${ora}`).then(r => r.text());
+                    await apriEditor();
                 }
             }
         };
