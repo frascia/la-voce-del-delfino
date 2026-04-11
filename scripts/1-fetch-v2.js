@@ -296,7 +296,7 @@ async function generaArticolo(voce, CHI, titolo) {
     // inventare è indipendente dal tipo — può essere true sia su GEN che su RSS
 
     // fantasia: true = inventa liberamente | false/assente = scrive cose vere (anche se senza RSS)
-    const puoInventare = voce.inventare === true;
+    const puoInventare = voce.fantasia === true;
 
     const sys = `Sei ${voce.firma}, giornalista con questo carattere: "${moodFirma}". ${bioFirma}
 Rispondi con UN SINGOLO OGGETTO JSON: {"titolo":"...","articolo":"...","commento":"..."}.
@@ -635,6 +635,16 @@ async function main() {
     // Applica decay settimanale
     relazioni = applicaDecay(relazioni);
 
+    // --- Primo aggiornamento del giorno: cancella il draft precedente ---
+    const isPrimoRun = contatori._primoRunOggi !== true;
+    if (isPrimoRun) {
+        if (fs.existsSync(DRAFT_PATH)) {
+            fs.unlinkSync(DRAFT_PATH);
+            scriviLog("🌅 Primo aggiornamento del giorno — draft precedente cancellato.");
+        }
+        contatori._primoRunOggi = true;
+    }
+
     // --- Filtra REDAZIONE per oggi ---
     const vociAttive = REDAZIONE.filter(voce => {
         if (voce.g === "default") return true;
@@ -664,14 +674,19 @@ async function main() {
         }
     }
 
-    // --- Genera articoli solo se nella fascia oraria attiva ---
-    if (!articoliAttivi) {
-        scriviLog(`⏭️ Generazione articoli saltata — nessuna fascia oraria attiva ora.`);
+    // --- Genera articoli (se entro il limite giornaliero) ---
+    const articoliAbilitati = !limiteSuperato(contatori, LIMITI, "articoli_run_max");
+    if (!articoliAbilitati) {
+        scriviLog(`⏭️ Generazione articoli saltata (limite: ${LIMITI.articoli_run_max} run/giorno raggiunto).`);
     }
+    contatori.articoli_run = (contatori.articoli_run || 0) + (articoliAbilitati ? 1 : 0);
 
+    // Ogni tema da generare porta con sé la voce di appartenenza — così
+    // la cascata non mescola mai metadati (firma, label, icona) tra voci diverse.
+    // [ { voce, tema } ]
     const codaArticoli = [];
 
-    if (articoliAttivi) {
+    if (articoliAbilitati) {
         let quotaAvanzata = 0;
         let voceQuota = null; // la voce che ha generato la quota avanzata
 
@@ -722,7 +737,7 @@ async function main() {
 
         // 2. Genera commenti a cascata dei personaggi
         let commentiFinali = [];
-        const rawCommenti    = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI);
+        const rawCommenti    = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, []);
         const parsedCommenti = parseJSON(rawCommenti);
         if (parsedCommenti?.commenti?.length) {
             commentiFinali = parsedCommenti.commenti;
@@ -730,7 +745,10 @@ async function main() {
             await aggiornaRelazioni(CHI, relazioni, personaggi, articoloTesto, commentiFinali);
         }
 
-        // 4. Push nel draft con metadati sempre coerenti alla voce originale
+        // 4. Push nel draft — immagine dal config IMMAGINI per tipo, fallback su icona categoria
+        const IMMAGINI = CONFIG.IMMAGINI || {};
+        const tipoChiave = voce.tipo === "GEN" ? "gen" : "rss";
+        const immagineTipo = IMMAGINI[tipoChiave] || icona;
         draft.sezioni[sez].articoli.push({
             tipo:           voce.tipo === "GEN" ? "gen" : "rss",
             titolo:         titoloFinale,
@@ -739,7 +757,7 @@ async function main() {
             commenti:       commentiFinali,
             categoria:      voce.lab,
             colore_tipo:    coloreTipo,
-            immagine:       icona
+            immagine:       immagineTipo
         });
 
         scriviLog(`  ✅ "${titoloFinale.substring(0, 50)}..." — ${commentiFinali.length} commenti`);
@@ -822,6 +840,7 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
             // Trova la prima sezione disponibile nel draft
             const sezPers = Object.keys(draft.sezioni)[0] || "pescara";
             if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: STILI[sezPers] || "#005f73", articoli: [] };
+            const immaginePersonaggio = (CONFIG.IMMAGINI || {}).personaggio || null;
             draft.sezioni[sezPers].articoli.push({
                 tipo: "personaggio",
                 titolo: parsedPersonaggio.titolo,
@@ -830,7 +849,7 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
                 commenti: [],
                 categoria: "Dalla Redazione",
                 colore_tipo: STILI.GEN || "#2d6a4f",
-                immagine: null  // nessuna immagine — frame verde senza img
+                immagine: immaginePersonaggio
             });
             scriviLog(`✍️ Articolo personaggio scritto da ${personaggioCasuale}: "${parsedPersonaggio.titolo.substring(0,50)}..."`);
         }

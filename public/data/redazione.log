@@ -278,14 +278,19 @@ Please retry in 20.725042133s.
 [11/04/2026, 11:17:21] Lancio le reti per: Satira Mondo (Quota: 2 + 0 recuperati = 2 totali)
 [11/04/2026, 11:17:29] Sezione mondo: 5 notizie pescate e confezionate.
 [11/04/2026, 11:17:29] 🏁 Turno completato con successo.
-[11/04/2026, 11:17:47] ⚓️ Inizio turno di redazione (Fetch-News)...
-[11/04/2026, 11:17:47] 🤖 Modello Dinamico Agganciato: [ gemini-flash-lite-latest ]
-[11/04/2026, 11:17:47] Lancio le reti per: Pescara Calcio (Quota: 2 + 0 recuperati = 2 totali)
-[11/04/2026, 11:17:56] Lancio le reti per: AI (Quota: 1 + 0 recuperati = 1 totali)
-[11/04/2026, 11:18:00] Lancio le reti per: Satira (Quota: 3 + 0 recuperati = 3 totali)
-[11/04/2026, 11:18:19] Sezione pescara: 6 notizie pescate e confezionate.
-[11/04/2026, 11:18:19] Lancio le reti per: Netflix (Quota: 2 + 0 recuperati = 2 totali)
-[11/04/2026, 11:18:38] Lancio le reti per: Giappone (Quota: 1 + 0 recuperati = 1 totali)
-[11/04/2026, 11:18:44] Lancio le reti per: Satira Mondo (Quota: 2 + 0 recuperati = 2 totali)
-[11/04/2026, 11:18:52] Sezione mondo: 5 notizie pescate e confezionate.
-[11/04/2026, 11:18:52] 🏁 Turno completato con successo.
+[11/04/2026, 11:18:25] ⚓️ Inizio turno di redazione (Fetch-News)...
+[11/04/2026, 11:18:25] 🤖 Modello Dinamico Agganciato: [ gemini-flash-lite-latest ]
+[11/04/2026, 11:18:25] Lancio le reti per: Pescara Calcio (Quota: 2 + 0 recuperati = 2 totali)
+[11/04/2026, 11:18:32] [ERRORE API GEMINI] The service is currently unavailable.
+[11/04/2026, 11:18:32] Lancio le reti per: AI (Quota: 1 + 0 recuperati = 1 totali)
+[11/04/2026, 11:18:38] Lancio le reti per: Satira (Quota: 3 + 0 recuperati = 3 totali)
+[11/04/2026, 11:18:56] Sezione pescara: 6 notizie pescate e confezionate.
+[11/04/2026, 11:18:56] Lancio le reti per: Netflix (Quota: 2 + 0 recuperati = 2 totali)
+[11/04/2026, 11:19:07] Lancio le reti per: Giappone (Quota: 1 + 0 recuperati = 1 totali)
+[11/04/2026, 11:19:10] Lancio le reti per: Satira Mondo (Quota: 2 + 0 recuperati = 2 totali)
+[11/04/2026, 11:19:10] [ERRORE API GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite
+Please retry in 49.334250532s.
+[11/04/2026, 11:19:10] ⏳ [LIMITE AL MINUTO] Attendo 30s...
+[11/04/2026, 11:19:50] Sezione mondo: 5 notizie pescate e confezionate.
+[11/04/2026, 11:19:50] 🏁 Turno completato con successo.
