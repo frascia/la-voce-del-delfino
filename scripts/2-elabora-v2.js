@@ -1,34 +1,24 @@
 #!/usr/bin/env node
 /**
- * 2-elabora-v2.js
- * FASE 2 — Nuova architettura v2
+ * 3-deploy-v2.js
+ * FASE 3 — Nuova architettura v2
  *
- * Legge _draft-v2.json prodotto da 1-fetch-v2.js.
- * Gli articoli sono già completi (testo, commenti, relazioni aggiornate).
- * Questa fase si occupa di:
- * - Validare e normalizzare i dati
- * - Aggiungere auth_info.json e active_config_v2.json
- * - Produrre _articles-v2.json pronto per il deploy
+ * Legge _articles-v2.json e scrive i file JSON finali in public/data/.
+ * Aggiunge prossimo_aggiornamento se il run è automatico.
+ * Fa git add + commit + push.
  */
 
 import fs from "fs";
 import path from "path";
-import crypto from "crypto";
+import { execSync } from "child_process";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE_DIR  = path.join(__dirname, "..");
 const DATA_DIR  = path.join(BASE_DIR, "public", "data");
 
-const LOG_PATH          = path.join(DATA_DIR, "redazione-v2.log");
-const DRAFT_PATH        = path.join(DATA_DIR, "_draft-v2.json");
-const ARTICLES_PATH     = path.join(DATA_DIR, "_articles-v2.json");
-const AUTH_PATH         = path.join(DATA_DIR, "auth_info.json");
-const ACTIVE_CONFIG_PATH = path.join(DATA_DIR, "active_config_v2.json");
-const CONFIG_PATH       = path.join(DATA_DIR, "config_v2.json");
-
-const adminPwd  = process.env.ADMIN_PASSWORD   || "delfino2026";
-const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto.";
+const LOG_PATH      = path.join(DATA_DIR, "redazione-v2.log");
+const ARTICLES_PATH = path.join(DATA_DIR, "_articles-v2.json");
 
 // ---------------------------------------------------------------------------
 // UTILITÀ
@@ -36,9 +26,24 @@ const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto.";
 
 function scriviLog(msg) {
     const ts = new Date().toLocaleString("it-IT", { timeZone: "Europe/Rome" });
-    const riga = `[${ts}] [2-elabora-v2] ${msg}\n`;
+    const riga = `[${ts}] [3-deploy-v2] ${msg}\n`;
     fs.appendFileSync(LOG_PATH, riga);
     console.log(`> ${msg}`);
+}
+
+function eseguiGit(cmd) {
+    try {
+        const out = execSync(cmd, { cwd: BASE_DIR, encoding: "utf8" });
+        if (out.trim()) scriviLog(`[git] ${out.trim()}`);
+    } catch (e) {
+        const msg = e.stderr?.trim() || e.stdout?.trim() || e.message;
+        if (msg.includes("nothing to commit") || msg.includes("nothing added")) {
+            scriviLog(`[git] Nessuna modifica da committare.`);
+        } else {
+            scriviLog(`[ERRORE git] ${msg}`);
+            throw e;
+        }
+    }
 }
 
 // ---------------------------------------------------------------------------
@@ -46,116 +51,89 @@ function scriviLog(msg) {
 // ---------------------------------------------------------------------------
 
 async function main() {
-    scriviLog("⚙️ FASE 2-v2 — Avvio elaborazione...");
+    scriviLog("🚀 FASE 3-v2 — Avvio deploy...");
 
-    if (!fs.existsSync(DRAFT_PATH)) {
-        scriviLog(`ERRORE: ${DRAFT_PATH} non trovato. Eseguire prima 1-fetch-v2.js`);
+    if (!fs.existsSync(ARTICLES_PATH)) {
+        scriviLog(`ERRORE: ${ARTICLES_PATH} non trovato. Eseguire prima le fasi 1 e 2.`);
         process.exit(1);
     }
 
-    const draft = JSON.parse(fs.readFileSync(DRAFT_PATH, "utf8"));
-    const { oraAggiornamento, agenda, impostazioni, stili, sezioni } = draft;
+    const articles = JSON.parse(fs.readFileSync(ARTICLES_PATH, "utf8"));
+    const { oraAggiornamento, sezioni, agenda, impostazioni, stili } = articles;
 
-    // --- Se le API hanno fallito o quota esaurita: aggiorna solo la data, non toccare gli articoli ---
-    if (draft.api_fallita) {
-        scriviLog(`⚠️ API fallita o quota esaurita — aggiorno solo la data in active_config_v2.json.`);
-        if (fs.existsSync(ACTIVE_CONFIG_PATH)) {
-            const configAttivo = JSON.parse(fs.readFileSync(ACTIVE_CONFIG_PATH, "utf8"));
-            configAttivo.site_settings = configAttivo.site_settings || {};
-            configAttivo.site_settings.last_update = oraAggiornamento;
-            fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(configAttivo, null, 2));
-            scriviLog(`📄 Solo data aggiornata: ${oraAggiornamento}`);
-        }
-        scriviLog(`✅ FASE 2-v2 completata (modalità solo-data).`);
-        return;
-    }
+    // Prossimo aggiornamento — solo se workflow automatico (cron)
+    const isAutomatico = process.env.WORKFLOW_AUTOMATICO === "true";
+    const prossimoAggiornamento = isAutomatico
+        ? new Date(Date.now() + 2 * 60 * 60 * 1000).toLocaleString("it-IT", {
+            timeZone: "Europe/Rome",
+            hour: "2-digit", minute: "2-digit",
+            day: "2-digit", month: "2-digit"
+        })
+        : "Aggiornamenti sospesi";
 
-    // --- Aggiorna active_config_v2.json ---
-    if (fs.existsSync(CONFIG_PATH)) {
-        const config = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
-        config.site_settings = {
-            ...(config.site_settings || {}),
-            last_update: oraAggiornamento,
-            timbro: agenda?.timbro || "",
-            banner: agenda?.banner || "",
-            motto: impostazioni?.motto || "",
-            header_img: impostazioni?.header_fisso || "",
-            stato_sito: impostazioni?.stato_sito || "attivo",
-            alert_api_rotto: impostazioni?.alert_api_rotto || "",
-            ticker_news: impostazioni?.ticker_news || []
-        };
-        fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(config, null, 2));
-        scriviLog("📄 active_config_v2.json aggiornato.");
-    }
-
-    // --- Aggiorna auth_info.json ---
-    const hash = crypto.createHash("sha256").update(adminPwd).digest("hex");
-    const encrypted = Buffer.from(secretData).toString("base64");
-    fs.writeFileSync(AUTH_PATH, JSON.stringify({
-        check: hash,
-        data: encrypted,
-        ts: oraAggiornamento
-    }));
-    scriviLog("🔐 auth_info.json aggiornato.");
-
-    // --- Normalizza e valida articoli ---
-    const scuseDelfino = [
-        "Il Delfino è in sciopero per carenza di arrosticini.",
-        "Lo stagista ha rovesciato la genziana sul server.",
-        "Notizia troppo assurda perfino per noi.",
-        "L'IA è andata a farsi il bagno a Pescara Vecchia."
-    ];
-    const scusa = () => scuseDelfino[Math.floor(Math.random() * scuseDelfino.length)];
-
-    const articles = {
-        oraAggiornamento,
-        agenda,
-        impostazioni,
-        stili,
-        sezioni: {}
-    };
-
+    // --- Scrivi news-v2-{sez}.json con badge "nuovo" per articoli non presenti prima ---
     for (const [sez, datiSez] of Object.entries(sezioni)) {
-        const articoliNormalizzati = [];
+        const outPath = path.join(DATA_DIR, `news-v2-${sez}.json`);
 
-        for (const art of (datiSez.articoli || [])) {
-            // Valida campi obbligatori
-            const titolo   = art.titolo?.trim()   || art.fallback?.titolo   || "Notizia senza titolo";
-            const articolo = art.articolo?.trim()  || art.fallback?.articolo || scusa();
-
-            // commento_firma
-            const commentoFirma = art.commento_firma || { nome: "Redazione", avatar: "🐬", testo: scusa() };
-            if (!commentoFirma.testo?.trim()) commentoFirma.testo = scusa();
-
-            // commenti personaggi — filtra eventuali vuoti
-            const commenti = (art.commenti || []).filter(c => c.nome && c.testo?.trim());
-
-            articoliNormalizzati.push({
-                tipo:           art.tipo || "rss",
-                titolo,
-                articolo,
-                commento_firma: commentoFirma,
-                commenti,
-                categoria:      art.categoria || "Generale",
-                colore_tipo:    art.colore_tipo || stili?.RSS || "#008cff",
-                // immagine null = articolo personaggio (frame verde senza img)
-                immagine:       art.tipo === "personaggio" ? null : (art.immagine || "Categoria.webp")
-            });
+        // Carica versione precedente per confronto titoli
+        let titoliPrecedenti = new Set();
+        if (fs.existsSync(outPath)) {
+            try {
+                const vecchio = JSON.parse(fs.readFileSync(outPath, "utf8"));
+                titoliPrecedenti = new Set((vecchio.news || []).map(n => n.titolo));
+            } catch(e) {}
         }
 
-        articles.sezioni[sez] = {
-            color: datiSez.color || "#005f73",
-            news: articoliNormalizzati
-        };
+        // Marca come nuovi gli articoli non presenti prima
+        const newsConBadge = datiSez.news.map(n => ({
+            ...n,
+            nuovo: !titoliPrecedenti.has(n.titolo)
+        }));
 
-        scriviLog(`✅ Sezione ${sez}: ${articoliNormalizzati.length} articoli normalizzati.`);
+        // Ordine: Redazionali → Riflessioni → nuovi → vecchi
+        const ordinate = [
+            ...newsConBadge.filter(n => n.tipo === 'personaggio'),
+            ...newsConBadge.filter(n => n.categoria === 'Riflessioni' && n.tipo !== 'personaggio'),
+            ...newsConBadge.filter(n => n.nuovo && n.tipo !== 'personaggio' && n.categoria !== 'Riflessioni'),
+            ...newsConBadge.filter(n => !n.nuovo && n.tipo !== 'personaggio' && n.categoria !== 'Riflessioni')
+        ];
+
+        fs.writeFileSync(outPath, JSON.stringify({
+            color: datiSez.color,
+            prossimo_aggiornamento: prossimoAggiornamento,
+            news: ordinate
+        }, null, 2));
+
+        const nuovi = newsConBadge.filter(n => n.nuovo).length;
+        scriviLog(`📄 Scritto: news-v2-${sez}.json (${ordinate.length} articoli, ${nuovi} nuovi)`);
     }
 
-    fs.writeFileSync(ARTICLES_PATH, JSON.stringify(articles, null, 2));
-    scriviLog(`✅ FASE 2-v2 completata. Articles → ${ARTICLES_PATH}`);
-}
+    scriviLog(`🕐 Ora: ${oraAggiornamento} | Prossimo: ${prossimoAggiornamento}`);
 
-main().catch(err => {
-    scriviLog(`ERRORE CRITICO: ${err.message}`);
-    process.exit(1);
-});
+    // --- Git ---
+    eseguiGit(`git config user.name "DelfinoBot"`);
+    eseguiGit(`git config user.email "bot@lavocedeldelfino.it"`);
+    // 1. Fetch aggiorna il remoto tracking locale
+    eseguiGit(`git fetch origin main`);
+    // 2. Stage i file nuovi/modificati
+    eseguiGit(`git add public/data/`);
+    // 3. Committa — a questo punto non ci sono più unstaged changes
+    eseguiGit(`git commit -m "🤖 Redazione v2 ${oraAggiornamento} [skip ci]"`);
+    // 4. Pull con strategia "teniamo sempre i nostri file" in caso di conflitto
+    //    sui file _draft, _articles ecc. che vengono sovrascritti ad ogni run
+    eseguiGit(`git pull --rebase=false --strategy-option=theirs origin main`);
+    // 5. Push
+    eseguiGit(`git push`);
+
+    scriviLog(`✅ FASE 3-v2 completata. Dati pubblicati.`);
+}
+main()
+    .then(() => {
+        scriviLog("🏁 [FINISH] Script completato con successo.");
+        process.exit(0); // Esci con successo
+    })
+    .catch(err => {
+        scriviLog(`❌ [CRITICAL ERROR] ${err.message}`);
+        process.exit(1); // Esci con errore (ferma il workflow di GitHub)
+    });
+
