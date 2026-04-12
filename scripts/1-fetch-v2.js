@@ -858,6 +858,18 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
 
     // --- Salva draft ---
     scriviLog(`📊 Chiamate API totali: ${contatoreChiamateApi}`);
+    // Conta articoli generati — se zero e quota esaurita, segnala fallimento API
+    const totArticoli = Object.values(draft.sezioni).reduce((acc, s) => acc + (s.articoli?.length || 0), 0);
+    if (quotaGiornalieraEsaurita && totArticoli === 0) {
+        draft.api_fallita = true;
+        scriviLog("⚠️ Nessun articolo generato per quota esaurita — fase 2 aggiornerà solo la data.");
+    } else if (!apiKey) {
+        draft.api_fallita = true;
+        scriviLog("⚠️ API key mancante — fase 2 aggiornerà solo la data.");
+    } else {
+        draft.api_fallita = false;
+    }
+
     salvaJSON(DRAFT_PATH, draft);
     scriviLog(`✅ FASE 1-v2 completata. Draft → ${DRAFT_PATH}`);
 }

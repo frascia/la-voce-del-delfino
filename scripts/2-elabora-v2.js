@@ -56,6 +56,20 @@ async function main() {
     const draft = JSON.parse(fs.readFileSync(DRAFT_PATH, "utf8"));
     const { oraAggiornamento, agenda, impostazioni, stili, sezioni } = draft;
 
+    // --- Se le API hanno fallito o quota esaurita: aggiorna solo la data, non toccare gli articoli ---
+    if (draft.api_fallita) {
+        scriviLog(`⚠️ API fallita o quota esaurita — aggiorno solo la data in active_config_v2.json.`);
+        if (fs.existsSync(ACTIVE_CONFIG_PATH)) {
+            const configAttivo = JSON.parse(fs.readFileSync(ACTIVE_CONFIG_PATH, "utf8"));
+            configAttivo.site_settings = configAttivo.site_settings || {};
+            configAttivo.site_settings.last_update = oraAggiornamento;
+            fs.writeFileSync(ACTIVE_CONFIG_PATH, JSON.stringify(configAttivo, null, 2));
+            scriviLog(`📄 Solo data aggiornata: ${oraAggiornamento}`);
+        }
+        scriviLog(`✅ FASE 2-v2 completata (modalità solo-data).`);
+        return;
+    }
+
     // --- Aggiorna active_config_v2.json ---
     if (fs.existsSync(CONFIG_PATH)) {
         const config = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
