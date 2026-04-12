@@ -191,6 +191,15 @@
                 <div class="cf"><label class="cl">Reset quote (ora IT)</label><input class="ci sm" id="ci-reset"></div>
                 <div class="cf"><label class="cl">Lunghezza art (1-10)</label><input class="ci sm" id="ci-lung" type="number" min="1" max="10"></div>
             </div>
+            <p class="cs" style="margin-top:16px;">API e Generazione</p>
+            <div class="crow">
+                <div class="cf"><label class="cl">Cerca modello max (volte/giorno)</label><input class="ci sm" id="ci-cermod" type="number" min="1" max="10"></div>
+            </div>
+            <div class="crow">
+                <div class="cf"><label class="cl">Chat</label><input class="ci sm" id="ci-chat" placeholder="sempre o numero"></div>
+                <div class="cf"><label class="cl">Commenti</label><input class="ci sm" id="ci-commenti" placeholder="sempre o numero"></div>
+                <div class="cf"><label class="cl">Relazioni</label><input class="ci sm" id="ci-relazioni" placeholder="sempre o numero"></div>
+            </div>
             <p class="cs" style="margin-top:16px;">Commenti</p>
             <div class="crow">
                 <div class="cf"><label class="cl">Min</label><input class="ci sm" id="ci-cmin" type="number" min="0" max="10"></div>
@@ -202,6 +211,7 @@
         </div>
         <div class="term-panel" id="panel-chi">
             <div id="chi-list"></div>
+            <button class="cbtn-add" onclick="addPersonaggio()" style="width:100%;margin-bottom:12px;">+ Nuovo personaggio</button>
             <button class="csave" onclick="salva('chi')">💾 SCARICA config_v2_draft.json</button>
             <div class="cstatus" id="st-chi"></div>
         </div>
@@ -291,6 +301,11 @@ function popolaTutti(){
     document.getElementById('ci-cmin').value=L.commenti_min??1;
     document.getElementById('ci-cmax').value=L.commenti_max??3;
     document.getElementById('ci-ctot').value=L.commenti_max_totali??6;
+    document.getElementById('ci-cermod').value=L.cerca_modello_max??1;
+    const parseLimite=v=>v==='sempre'?'sempre':(v??'sempre');
+    document.getElementById('ci-chat').value=parseLimite(L.chat);
+    document.getElementById('ci-commenti').value=parseLimite(L.commenti);
+    document.getElementById('ci-relazioni').value=parseLimite(L.relazioni);
     // CHI
     const chiEl=document.getElementById('chi-list');
     chiEl.innerHTML=Object.entries(CFG.CHI||{}).map(([nome,p])=>`
@@ -315,6 +330,23 @@ function popolaTutti(){
     document.getElementById('red-list').innerHTML=(CFG.REDAZIONE||[]).map((v,i)=>buildV(v,i)).join('');
 }
 
+function addPersonaggio(){
+    const nome=prompt('Nome del nuovo personaggio:');
+    if(!nome||!nome.trim())return;
+    const n=nome.trim();
+    if(CFG.CHI[n]){alert('Personaggio già esistente');return;}
+    CFG.CHI[n]={mood:'',peso:0.7,avatar:'👤',bio_breve:'',bio_completa:'',img:''};
+    // Aggiunge la card nel DOM senza ripopolare tutto
+    const chiEl=document.getElementById('chi-list');
+    chiEl.innerHTML+=`<div class="ccard"><div class="ccard-t">👤 ${esc(n)}</div>
+        <div class="crow"><div class="cf"><label class="cl">Avatar</label><input class="ci sm" id="c-${esc(n)}-av" value="👤"></div>
+        <div class="cf"><label class="cl">Peso</label><input class="ci sm" id="c-${esc(n)}-peso" type="number" step="0.1" min="0" max="1" value="0.7"></div></div>
+        <div class="cf"><label class="cl">Mood</label><input class="ci" id="c-${esc(n)}-mood" value=""></div>
+        <div class="cf"><label class="cl">Bio breve</label><input class="ci" id="c-${esc(n)}-bb" value=""></div>
+        <div class="cf"><label class="cl">Bio completa</label><textarea class="ci ta" id="c-${esc(n)}-bc"></textarea></div>
+        <div class="cf"><label class="cl">Img (filename)</label><input class="ci" id="c-${esc(n)}-img" value=""></div>
+        </div>`;
+}
 function addVoce(){
     const nomi=Object.keys(CFG.CHI||{}).filter(n=>n!=='default');
     document.getElementById('red-list').innerHTML+=buildV({g:'default',sez:'pescara',lab:'Nuova',arg:'',tipo:'RSS',firma:nomi[0]||'',mood:'',num:2,weight_articolo:0.7,weight_commento:0.6,inventare:false,temi:[]},VI++);
@@ -351,6 +383,7 @@ function buildV(v,i){
     </div>`;
 }
 
+function parseLimiteScrivi(v){const t=(v||'').trim().toLowerCase();return t==='sempre'||t===''?'sempre':parseInt(t)||'sempre';}
 function leggiForm(){
     CFG.IMPOSTAZIONI={...CFG.IMPOSTAZIONI,
         header_fisso:document.getElementById('ci-header').value.trim(),
@@ -366,11 +399,27 @@ function leggiForm(){
         lunghezza_articolo:parseInt(document.getElementById('ci-lung').value)||5,
         commenti_min:parseInt(document.getElementById('ci-cmin').value)||1,
         commenti_max:parseInt(document.getElementById('ci-cmax').value)||3,
-        commenti_max_totali:parseInt(document.getElementById('ci-ctot').value)||6
+        commenti_max_totali:parseInt(document.getElementById('ci-ctot').value)||6,
+        cerca_modello_max:parseInt(document.getElementById('ci-cermod').value)||1,
+        chat:parseLimiteScrivi(document.getElementById('ci-chat').value),
+        commenti:parseLimiteScrivi(document.getElementById('ci-commenti').value),
+        relazioni:parseLimiteScrivi(document.getElementById('ci-relazioni').value)
     };
+    // Leggi tutti i personaggi visibili nel DOM (inclusi i nuovi aggiunti)
+    const chiCards=document.querySelectorAll('#chi-list .ccard');
+    chiCards.forEach(card=>{
+        // Estrai il nome dalla prima input avatar trovata nell'id
+        const avEl=card.querySelector('[id$="-av"]');
+        if(!avEl)return;
+        const nome=avEl.id.replace('c-','').replace('-av','');
+        if(!CFG.CHI[nome])CFG.CHI[nome]={};
+        const g=id=>document.getElementById('c-'+nome+'-'+id)?.value;
+        CFG.CHI[nome]={...CFG.CHI[nome],avatar:g('av')||'👤',peso:parseFloat(g('peso'))||0.7,mood:g('mood')||'',bio_breve:g('bb')||'',bio_completa:g('bc')||'',img:g('img')||''};
+    });
+    // Legacy: mantieni compatibilità con il vecchio codice
     Object.keys(CFG.CHI||{}).forEach(nome=>{
         const g=id=>document.getElementById('c-'+nome+'-'+id)?.value;
-        CFG.CHI[nome]={...CFG.CHI[nome],avatar:g('av')||CFG.CHI[nome].avatar,peso:parseFloat(g('peso'))||CFG.CHI[nome].peso,mood:g('mood')||'',bio_breve:g('bb')||'',bio_completa:g('bc')||'',img:g('img')||''};
+        // già gestito sopra
     });
     Object.keys(CFG.AGENDA||{}).forEach(giorno=>{
         CFG.AGENDA[giorno]={timbro:document.getElementById('a-'+giorno+'-t')?.value.trim()||'',banner:document.getElementById('a-'+giorno+'-b')?.value.trim()||''};
