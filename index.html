@@ -11,7 +11,7 @@
 
         /* TESTATA */
         .testata { width:100%; background:var(--blu-mare); line-height:0; text-align:center; position:relative; }
-        .testata img#header-img { width:100%; height:auto; max-height:350px; object-fit:cover; display:block; }
+        .testata img#header-img { width:100%; height:auto; display:block; object-fit:contain; }
 
         /* TIMESTAMP */
         .delfino-timestamp { width:100%; box-sizing:border-box; padding:10px 20px; background:linear-gradient(135deg,rgba(255,243,210,0.9),rgba(255,228,168,0.85)); border-bottom:1.5px solid rgba(180,130,60,0.2); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
@@ -114,6 +114,7 @@
         .chat-msg { display:flex; gap:10px; margin-bottom:10px; align-items:flex-start; }
         .chat-msg:last-child { margin-bottom:0; }
         .chat-av { font-size:22px; flex-shrink:0; line-height:1; margin-top:2px; }
+        .chat-av-img { width:38px; height:38px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid rgba(180,130,60,0.3); }
         .chat-bubble { background:rgba(255,255,255,0.65); border-radius:0 14px 14px 14px; padding:8px 12px; flex:1; }
         .chat-nome { font-size:10px; font-weight:800; text-transform:uppercase; color:#5a3e1b; display:block; margin-bottom:3px; }
         .chat-testo { font-size:13px; color:#4a3010; line-height:1.5; font-style:italic; }
@@ -451,7 +452,8 @@ function salva(sezione){
 }
 
 // ── CHAT ───────────────────────────────────────────────────────────────────
-async function caricaChat(){
+async function caricaChat(imgMap){
+    imgMap=imgMap||{};
     const lista=document.getElementById('chat-lista');
     try{
         const st=await fetch('public/data/_chat.json?v='+Date.now()).then(r=>r.json());
@@ -464,7 +466,11 @@ async function caricaChat(){
             (s.messaggi||[]).forEach(m=>{
                 const row=document.createElement('div');
                 row.className='chat-msg';
-                row.innerHTML='<div class="chat-av">'+esc(m.avatar||'👤')+'</div><div class="chat-bubble"><span class="chat-nome">'+esc(m.nome)+'</span><span class="chat-testo">'+esc(m.testo)+'</span></div>';
+                const imgSrc=imgMap[m.nome];
+                const avHTML=imgSrc
+                    ?'<img class="chat-av-img" src="public/images/'+esc(imgSrc)+'" onerror="this.outerHTML='<span class=chat-av>'+esc(m.avatar||'👤')+'</span>'">'
+                    :'<div class="chat-av">'+esc(m.avatar||'👤')+'</div>';
+                row.innerHTML=avHTML+'<div class="chat-bubble"><span class="chat-nome">'+esc(m.nome)+'</span><span class="chat-testo">'+esc(m.testo)+'</span></div>';
                 card.appendChild(row);
             });
             lista.appendChild(card);
@@ -493,7 +499,10 @@ async function carica(){
             document.getElementById('menu-cat').appendChild(b);
         });
         if(sezioni[0])mostraSezione(sezioni[0],null,cfg.STILI||{});
-        await caricaChat();
+        // Costruisce mappa nome→img dai personaggi del config
+        const imgMap={};
+        Object.entries(cfg.CHI||{}).forEach(([n,p])=>{if(p.img)imgMap[n]=p.img;});
+        await caricaChat(imgMap);
     }catch(e){console.error(e);}
 }
 
