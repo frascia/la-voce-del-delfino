@@ -1178,3 +1178,70 @@ Please retry in 40.75952253s. (code: 429)
 [12/04/2026, 12:33:56] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (0 articoli, 0 nuovi)
 [12/04/2026, 12:33:56] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (0 articoli, 0 nuovi)
 [12/04/2026, 12:33:56] [3-deploy-v2] 🕐 Ora: 12/04, 12:30 | Prossimo: 12/04, 14:33
+[12/04/2026, 13:39:43] [1-fetch-v2] ═══════════════════════════════════
+[12/04/2026, 13:39:43] [1-fetch-v2] 🐬 NUOVO RUN v2 [ domenica 12 aprile 2026 alle ore 13:39:43 ]
+[12/04/2026, 13:39:43] [1-fetch-v2] ═══════════════════════════════════
+[12/04/2026, 13:39:43] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[12/04/2026, 13:39:43] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[12/04/2026, 13:39:43] [1-fetch-v2] 🕐 Fascia articoli attiva: SÌ | Lunghezza target: ~240 parole
+[12/04/2026, 13:39:43] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[12/04/2026, 13:39:43] [1-fetch-v2] 📅 Giorno: dom | Timbro: Relax, Mare e Brace
+[12/04/2026, 13:39:43] [1-fetch-v2] 📋 Voci attive oggi: 7
+[12/04/2026, 13:39:43] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[12/04/2026, 13:39:44] [1-fetch-v2] 🎣 [pescara] Weekend a Pescara eventi — tipo: RSS, num: 3, firma: Juizinho, ~240 parole
+[12/04/2026, 13:39:44] [1-fetch-v2] [CASCATA] Solo 0/3 notizie per "Weekend a Pescara eventi". Passo 3 alla voce successiva.
+[12/04/2026, 13:39:44] [1-fetch-v2] 🎣 [pescara] Pescara Calcio — tipo: RSS, num: 5, firma: Cetteo, ~240 parole
+[12/04/2026, 13:39:44] [1-fetch-v2] 🎣 [pescara] Riflessioni di filosofia quotidiana — tipo: GEN, num: 1, firma: Juizinho, ~240 parole
+[12/04/2026, 13:39:44] [1-fetch-v2] 🎣 [mondo] Intelligenza Artificiale novità — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[12/04/2026, 13:39:45] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Intelligenza Artificiale novità". Passo 2 alla voce successiva.
+[12/04/2026, 13:39:45] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 4, firma: Lars, ~240 parole
+[12/04/2026, 13:39:45] [1-fetch-v2] [CASCATA] Solo 2/4 notizie per "Novità serie Netflix". Passo 2 alla voce successiva.
+[12/04/2026, 13:39:45] [1-fetch-v2] 🎣 [cultura] Nuovi film da vedere cinema — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[12/04/2026, 13:39:46] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Nuovi film da vedere cinema". Passo 2 alla voce successiva.
+[12/04/2026, 13:41:01] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
+[12/04/2026, 13:41:01] [1-fetch-v2]   ✅ "Piazza della Repubblica, sempre la solita solfa: u..." — 3 commenti
+[12/04/2026, 13:41:48] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 4 stati cambiati.
+[12/04/2026, 13:41:48] [1-fetch-v2]   ✅ "Delfino ammainato: la solita storia che fa male al..." — 3 commenti
+[12/04/2026, 13:42:12] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 4 stati cambiati.
+[12/04/2026, 13:42:12] [1-fetch-v2]   ✅ "Pescara-Sampdoria: 'na scocciatura che brucia anco..." — 3 commenti
+[12/04/2026, 13:42:27] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 3 stati cambiati.
+[12/04/2026, 13:42:27] [1-fetch-v2]   ✅ "Pescara, chi sbaglia paga: ma chi controlla?..." — 3 commenti
+[12/04/2026, 13:42:36] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 4 stati cambiati.
+[12/04/2026, 13:42:36] [1-fetch-v2]   ✅ "Portieri che segnano e sogni che s'incagliano: il ..." — 3 commenti
+[12/04/2026, 13:42:48] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
+[12/04/2026, 13:42:48] [1-fetch-v2]   ✅ "Pescara, tra mare e malinconia: la città che scord..." — 3 commenti
+[12/04/2026, 13:42:58] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 4 stati cambiati.
+[12/04/2026, 13:42:58] [1-fetch-v2]   ✅ "Pescara-Sampdoria: nu scontro che sa de mare e de ..." — 3 commenti
+[12/04/2026, 13:46:06] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[12/04/2026, 13:46:06] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[12/04/2026, 13:46:19] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[12/04/2026, 13:46:19] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[12/04/2026, 13:47:23] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[12/04/2026, 13:47:23] [1-fetch-v2] ⏳ Errore 503, attendo 40s...
+[12/04/2026, 13:48:03] [1-fetch-v2]   ✅ "Il mare di Pescara: un balsamo per l'anima, un sal..." — 3 commenti
+[12/04/2026, 13:48:08] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[12/04/2026, 13:48:08] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[12/04/2026, 13:49:00] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 4 stati cambiati.
+[12/04/2026, 13:49:00] [1-fetch-v2]   ✅ "L'ordine del caos: riflessioni da Roccamorice..." — 3 commenti
+[12/04/2026, 13:51:18] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 4 stati cambiati.
+[12/04/2026, 13:51:18] [1-fetch-v2]   ✅ "L'ordine del caos: Emily in Paris e la montagna ch..." — 3 commenti
+[12/04/2026, 13:51:18] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
+[12/04/2026, 13:51:18] [1-fetch-v2] 📊 Totale giornata: chiamate=426, token_stimati≈191700, rss=0
+[12/04/2026, 13:51:18] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[12/04/2026, 13:51:18] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[12/04/2026, 13:51:23] [1-fetch-v2] ✍️ Articolo personaggio scritto da Juizinho: "Pescara, che strazio: tra un rigore e una bellezza..."
+[12/04/2026, 13:51:23] [1-fetch-v2] 📊 Chiamate API totali: 34
+[12/04/2026, 13:51:23] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
+[12/04/2026, 13:51:23] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[12/04/2026, 13:51:25] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
+[12/04/2026, 13:51:25] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
+[12/04/2026, 13:51:25] [2-elabora-v2] 🔐 auth_info.json aggiornato.
+[12/04/2026, 13:51:25] [2-elabora-v2] ✅ Sezione pescara: 9 articoli normalizzati.
+[12/04/2026, 13:51:25] [2-elabora-v2] ✅ Sezione mondo: 2 articoli normalizzati.
+[12/04/2026, 13:51:25] [2-elabora-v2] ✅ Sezione cultura: 0 articoli normalizzati.
+[12/04/2026, 13:51:25] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[12/04/2026, 13:51:25] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[12/04/2026, 13:51:25] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (9 articoli, 9 nuovi)
+[12/04/2026, 13:51:25] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (2 articoli, 2 nuovi)
+[12/04/2026, 13:51:25] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (0 articoli, 0 nuovi)
+[12/04/2026, 13:51:25] [3-deploy-v2] 🕐 Ora: 12/04, 13:39 | Prossimo: 12/04, 15:51
