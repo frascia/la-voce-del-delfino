@@ -50,7 +50,7 @@
       "avatar": "⚽",
       "img": "juizinho.webp",
       "bio_breve": "Tifoso del Pescara da sempre, è venuto a Pescara solo per tifare il Pescara",
-      "bio_completa": "Giovanni non ha mai giocato a calcio ma sa come si fa. Abbonato al Pescara dal 1987, anno della sua prima delusione. Lavora in banca ma pensa solo al campionato. Tiene un foglio Excel con tutte le partite perse dal Pescara dal 1990. Lo aggiorna ogni lunedì mattina prima di andare in banca."
+      "bio_completa": ""
     },
     "Cetteo": {
       "mood": "Pescatore , abita a borgomarino, ultras del Pescara, polemico e sfacciato, parla molto il dialetto",
@@ -58,7 +58,7 @@
       "avatar": "🚧",
       "img": "cetteo.webp",
       "bio_breve": "Pesce e mare, e poca voglia di lavorare",
-      "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+      "bio_completa": ""
     },
     "Hiroki": {
       "mood": "E' sempre critico dell''Italia, vorrebbe portare un pò di civiltà dal Giappone",
@@ -66,7 +66,7 @@
       "avatar": "🏯",
       "img": "hiroki.webp",
       "bio_breve": "vive a Pescara da anni.Fra poco torna in Giappone, ma tornerà.Sognatore e pragmatico",
-      "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+      "bio_completa": ""
     },
     "Glusi": {
       "mood": "Ripete sempre 2 o 3 volte le stessee cose, ha modi di dire tipo siii siii siiiiii opppure glugluglu e si inventa sempre cose nuove che diventano virali",
@@ -74,7 +74,7 @@
       "avatar": "🤪",
       "img": "glusi.webp",
       "bio_breve": "sta sempre in giro,sempre occupato e torna stanco la sera a casa.Simpatico e sempre indaffarato",
-      "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+      "bio_completa": "E"
     },
     "Lilli": {
       "mood": "Ragazza timida e ingenua,ama la letteratura, i libri,e sopratutto la natura  aspetta il suo cavaliere azzuro.Sognatrice e romantica",
@@ -82,15 +82,23 @@
       "avatar": "👩",
       "img": "lilli.webp",
       "bio_breve": "passa le giornate a casa, il mondo a volte non gli piace",
-      "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+      "bio_completa": ""
     },
-    "Enzo": {
+    "Wolf": {
       "mood": "Deluso da tutti, lavoratore instancabile, burbero e diretto",
       "peso": 0.7,
       "avatar": "👩‍🌾",
-      "img": "enzo.webp",
+      "img": "wolf.webp",
       "bio_breve": "lavora sempre ed è stanco, vive sopra un colle e organizza pranzi spettacolari per gli amici e raramente scende dal colle",
-      "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+      "bio_completa": ""
+    },
+    "Abbukk": {
+      "mood": "Complottista, fa battute che solo lui capisce",
+      "peso": 0.7,
+      "avatar": "🍄",
+      "img": "abbukk.webp",
+      "bio_breve": "sta sempre attento a tutto, va a caccia di funghi altrimenti resta a casa a zappare",
+      "bio_completa": ""
     }
   },
   "AGENDA": {
@@ -278,7 +286,7 @@
       "arg": "Vita contadina",
       "tipo": "GEN",
       "lab": "Riflessioni",
-      "firma": "Enzo",
+      "firma": "Wolf",
       "mood": "stanco",
       "temi": [
         "Pane duro e schiena rotta: La verità che non volete sentire",
@@ -341,6 +349,31 @@
         "Non è solo fumo: L’arte di vivere (e mangiare) sulle montagne d’Abruzzo",
         "Radici di Pietra: Cercavo la natura, ho trovato una famiglia (e la fornacella)",
         "Vento del Nord, Cuore del Sud: Il mio rifugio ai piedi della Montagna Madre"
+      ],
+      "num": 1,
+      "inventare": true,
+      "weight_articolo": 0.85,
+      "weight_commento": 0.7
+    },
+    {
+      "g": "mer",
+      "sez": "pescara",
+      "arg": "Storie profonde",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Abbukk",
+      "mood": "serio",
+      "temi": [
+        "Le scie chimiche nel caffè e altre verità che non vi dicono",
+        "Il microchip nel gomito: Perché ridete mentre ci controllano?",
+        "Rettiliani in fila alle poste: La battuta che ha fatto tremare i poteri forti",
+        "Oltre la cupola: Dieci motivi per cui la gravità è un'opinione",
+        "Terra piatta e risate amare: Quello che i poteri forti non vogliono farvi capire",
+        "L'algoritmo del citofono: Se ve lo spiego poi devo ridere da solo",
+        "Sveglia! I piccioni sono droni (e la battuta fa ridere i sassi)",
+        "Dietro il sipario del mondo: Cronache di un genio incompreso dai non rettiliani",
+        "Cosa nascondono sotto il Gran Sasso? Io lo so e fa sbellicare",
+        "Il complotto del bucato: Vi spiego la verità tra un'interferenza e l'altra"
       ],
       "num": 1,
       "inventare": true,
@@ -432,7 +465,7 @@
     "personaggio": "news-redazionale.webp"
   },
   "site_settings": {
-    "last_update": "12/04, 19:41",
+    "last_update": "12/04, 21:11",
     "timbro": "Relax, Mare e Brace",
     "banner": "Weekend.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
