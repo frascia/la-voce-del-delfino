@@ -636,15 +636,10 @@ async function main() {
     // Applica decay settimanale
     relazioni = applicaDecay(relazioni);
 
-    // --- Primo aggiornamento del giorno: cancella il draft precedente ---
+    // --- Carica draft esistente (gli articoli si accumulano) ---
     const isPrimoRun = contatori._primoRunOggi !== true;
-    if (isPrimoRun) {
-        if (fs.existsSync(DRAFT_PATH)) {
-            fs.unlinkSync(DRAFT_PATH);
-            scriviLog("🌅 Primo aggiornamento del giorno — draft precedente cancellato.");
-        }
-        contatori._primoRunOggi = true;
-    }
+    scriviLog(`🌅 Primo run oggi: ${isPrimoRun} | Articoli verranno accumulati`);
+    // La cancellazione avviene DOPO la generazione, solo se API OK
 
     // --- Filtra REDAZIONE per oggi ---
     const vociAttive = REDAZIONE.filter(voce => {
@@ -655,7 +650,8 @@ async function main() {
 
     scriviLog(`📋 Voci attive oggi: ${vociAttive.length}`);
 
-    // --- Draft ---
+    // --- Draft: carica articoli esistenti (accumulo) ---
+    const draftPrecedente = caricaJSON(DRAFT_PATH, { sezioni: {} });
     const draft = {
         oraAggiornamento,
         agenda,
@@ -663,14 +659,13 @@ async function main() {
         stili: STILI,
         sezioni: {}
     };
-
-    // Raggruppa per sezione
+    // Copia articoli precedenti per sezione
     for (const voce of vociAttive) {
         const sez = voce.sez;
         if (!draft.sezioni[sez]) {
             draft.sezioni[sez] = {
                 color: STILI[sez] || STILI["RSS"] || "#005f73",
-                articoli: []
+                articoli: [...((draftPrecedente.sezioni?.[sez]?.articoli) || [])]
             };
         }
     }
@@ -746,10 +741,8 @@ async function main() {
             await aggiornaRelazioni(CHI, relazioni, personaggi, articoloTesto, commentiFinali);
         }
 
-        // 4. Push nel draft — immagine dal config IMMAGINI per tipo, fallback su icona categoria
-        const IMMAGINI = CONFIG.IMMAGINI || {};
-        const tipoChiave = voce.tipo === "GEN" ? "gen" : "rss";
-        const immagineTipo = IMMAGINI[tipoChiave] || icona;
+        // 4. Push nel draft — immagine del personaggio firma
+        const imgFirma = risolviPersonaggio(CHI, voce.firma).img || (CONFIG.IMMAGINI || {})[voce.tipo === "GEN" ? "gen" : "rss"] || icona;
         draft.sezioni[sez].articoli.push({
             tipo:           voce.tipo === "GEN" ? "gen" : "rss",
             titolo:         titoloFinale,
@@ -758,7 +751,7 @@ async function main() {
             commenti:       commentiFinali,
             categoria:      voce.lab,
             colore_tipo:    coloreTipo,
-            immagine:       immagineTipo
+            immagine:       imgFirma
         });
 
         scriviLog(`  ✅ "${titoloFinale.substring(0, 50)}..." — ${commentiFinali.length} commenti`);
@@ -830,9 +823,24 @@ async function main() {
     const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
     const personaggioCasuale = nomiPersonaggi[Math.floor(Math.random() * nomiPersonaggi.length)];
     const datiPersonaggio = CHI[personaggioCasuale];
+    // Stato attuale del personaggio
+    const statoAttuale = personaggi[personaggioCasuale];
+    const statoStr = statoAttuale?.stato && statoAttuale.stato !== "normale"
+        ? `Il tuo stato attuale: "${statoAttuale.stato}", umore: "${statoAttuale.umore || "neutro"}".`
+        : "";
+    // Relazioni con gli altri personaggi
+    const altriNomi = nomiPersonaggi.filter(n => n !== personaggioCasuale);
+    const relazioniStr = altriNomi.map(altro => {
+        const r = relazioni[`${personaggioCasuale}→${altro}`];
+        return r ? `Sei ${r.label} verso ${altro} (score: ${r.score})` : null;
+    }).filter(Boolean).join(". ");
+
     const sysPersonaggio = `Sei ${personaggioCasuale}, con questo carattere: "${datiPersonaggio.mood}". ${datiPersonaggio.bio_breve ? `La tua storia: "${datiPersonaggio.bio_breve}".` : ""}
-Scrivi un breve articolo (150-250 parole) su qualcosa che ti piace, ti ha colpito o ti ha fatto arrabbiare oggi.
-Scegli tu l'argomento in base alla tua personalità.
+${statoStr}
+${relazioniStr ? `I tuoi rapporti con i colleghi: ${relazioniStr}.` : ""}
+Scrivi un breve articolo (150-250 parole) su qualcosa che ti piace, ti ha colpito o ti ha fatto arrabbiare.
+NON fare riferimenti temporali specifici (oggi, stamattina, ecc.).
+Il tono e il tema devono riflettere il tuo stato attuale e i tuoi rapporti con i colleghi.
 Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
     const rawPersonaggio = await callGemini(sysPersonaggio, "Scrivi il tuo articolo personale di oggi.", datiPersonaggio.peso ?? 0.8);
     if (rawPersonaggio) {
@@ -841,7 +849,8 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
             // Trova la prima sezione disponibile nel draft
             const sezPers = Object.keys(draft.sezioni)[0] || "pescara";
             if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: STILI[sezPers] || "#005f73", articoli: [] };
-            const immaginePersonaggio = (CONFIG.IMMAGINI || {}).personaggio || null;
+            // Immagine del personaggio (non quella di categoria)
+            const immaginePersonaggio = datiPersonaggio.img || (CONFIG.IMMAGINI || {}).personaggio || null;
             draft.sezioni[sezPers].articoli.push({
                 tipo: "personaggio",
                 titolo: parsedPersonaggio.titolo,
@@ -858,16 +867,31 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
 
     // --- Salva draft ---
     scriviLog(`📊 Chiamate API totali: ${contatoreChiamateApi}`);
-    // Conta articoli generati — se zero e quota esaurita, segnala fallimento API
-    const totArticoli = Object.values(draft.sezioni).reduce((acc, s) => acc + (s.articoli?.length || 0), 0);
-    if (quotaGiornalieraEsaurita && totArticoli === 0) {
-        draft.api_fallita = true;
-        scriviLog("⚠️ Nessun articolo generato per quota esaurita — fase 2 aggiornerà solo la data.");
-    } else if (!apiKey) {
+    // Conta articoli NUOVI generati in questo run
+    const nuoviGenerati = contatoreChiamateApi > 0 && !quotaGiornalieraEsaurita;
+
+    if (!apiKey) {
         draft.api_fallita = true;
         scriviLog("⚠️ API key mancante — fase 2 aggiornerà solo la data.");
+    } else if (quotaGiornalieraEsaurita && contatoreChiamateApi === 0) {
+        draft.api_fallita = true;
+        scriviLog("⚠️ Quota esaurita senza articoli — fase 2 aggiornerà solo la data.");
     } else {
         draft.api_fallita = false;
+        // Cancella gli articoli del draft SOLO se primo run mattutino E API hanno funzionato
+        if (isPrimoRun && nuoviGenerati) {
+            // Rimuovi gli articoli vecchi (non quelli appena generati)
+            // Tieni solo quelli generati in questo run: titoli che non erano nel draftPrecedente
+            const titoloPrecedenti = new Set();
+            Object.values(draftPrecedente.sezioni || {}).forEach(sez => {
+                (sez.articoli || []).forEach(a => titoloPrecedenti.add(a.titolo));
+            });
+            for (const sez of Object.values(draft.sezioni)) {
+                sez.articoli = sez.articoli.filter(a => !titoloPrecedenti.has(a.titolo));
+            }
+            contatori._primoRunOggi = true;
+            scriviLog("🌅 Primo run mattutino con API OK — articoli precedenti rimossi.");
+        }
     }
 
     salvaJSON(DRAFT_PATH, draft);
