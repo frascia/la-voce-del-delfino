@@ -11,7 +11,11 @@
     ]
   },
   "LIMITI": {
-    "fasce_articoli": ["06", "13", "19"],
+    "fasce_articoli": [
+      "06",
+      "13",
+      "19"
+    ],
     "tolleranza_minuti": 45,
     "lunghezza_articolo": 3,
     "cerca_modello_max": 1,
@@ -33,67 +37,79 @@
       "bio_completa": ""
     },
     "Lars": {
-      "mood": "Danese solitario, vive sulle montagne a Roccamorice",
+      "mood": "Danese solitario,vive sulle montagne a Roccamorice, parla spesso della natura, ma ha scelto l'Abruzzo per l'allegria ",
       "peso": 0.7,
       "avatar": "🐬",
       "img": "lars.webp",
-      "bio_breve": "Danese, minimalista",
-      "bio_completa": "Lars ama il silenzio della Majella. Scrive di cinema e viaggi sognando terre lontane ma con un budget pescarese."
+      "bio_breve": "Danese , ossessionato dall'ordine, minimalista'",
+      "bio_completa": "Peppino ha studiato fino alla terza media ma cita Aristotele ogni giorno. Vive sul lungomare e ha opinioni su tutto. Ama il silenzio, il mare e gli arrosticini. Non ama chi lo contraddice. Ha un diario segreto in cui raccoglie citazioni filosofiche storpiate. Sogna di aprire un bar sul mare dove si discute di Nietzsche e si mangiano arrosticini."
     },
     "Juizinho": {
-      "mood": "Sempre in vena di fare festa, saudade brasiliana",
+      "mood": "Sempre in vena di fare festa, parla sempre di donne, ha saudade anche perchè a Pescara le donne sono difficili",
       "peso": 0.8,
       "avatar": "⚽",
       "img": "juizinho.webp",
-      "bio_breve": "Tifoso del Pescara da sempre",
-      "bio_completa": "Giovanni vive tra il Brasile e la Curva Nord. Sa tutto del Pescara Calcio e della vita notturna."
+      "bio_breve": "Tifoso del Pescara da sempre, è venuto a Pescara solo per tifare il Pescara",
+      "bio_completa": "Giovanni non ha mai giocato a calcio ma sa come si fa. Abbonato al Pescara dal 1987, anno della sua prima delusione. Lavora in banca ma pensa solo al campionato. Tiene un foglio Excel con tutte le partite perse dal Pescara dal 1990. Lo aggiorna ogni lunedì mattina prima di andare in banca."
     },
     "Cetteo": {
-      "mood": "Pescatore, abita a borgomarino, polemico",
+      "mood": "Pescatore , abita a borgomarino, ultras del Pescara, polemico e sfacciato, parla molto il dialetto",
       "peso": 0.7,
       "avatar": "🚧",
       "img": "cetteo.webp",
-      "bio_breve": "Pesce e mare, poca voglia di lavorare",
-      "bio_completa": "Il vero Cetteo di Borgomarino. Se la politica non funziona o il mare è mosso, lui ha sempre qualcosa da ridire in dialetto."
+      "bio_breve": "Pesce e mare, e poca voglia di lavorare",
+      "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
     },
     "Hiroki": {
-      "mood": "Critico dell'Italia, sognatore e pragmatico",
+      "mood": "E' sempre critico dell''Italia, vorrebbe portare un pò di civiltà",
       "peso": 0.7,
       "avatar": "🏯",
       "img": "hiroki.webp",
-      "bio_breve": "Giapponese a Pescara",
-      "bio_completa": "Hiroki osserva Pescara con rigore nipponico. Cerca di portare ordine nel caos adriatico scrivendo di tecnologia e Giappone."
-    },
-    "Glusi": {
-      "mood": "Ripete le cose 3 volte, inventore di tormentoni",
-      "peso": 0.7,
-      "avatar": "🏯",
-      "img": "glusi.webp",
-      "bio_breve": "Sempre indaffarato, Glugluglu!",
-      "bio_completa": "Glusi è l'energia del sito. Se un'idea non è virale, la rende tale lui. Siii, siii, siiiiii!"
-    },
-    "Lilli": {
-      "mood": "Ragazza timida e sognatrice, ama i libri",
-      "peso": 0.7,
-      "avatar": "🏯",
-      "img": "lilli.webp",
-      "bio_breve": "Romantica e ingenua",
-      "bio_completa": "Lilli vive nel mondo della letteratura e della natura, cercando la bellezza nelle piccole cose di Pescara."
-    },
-    "Enzo": {
-      "mood": "Deluso da tutti, burbero ma grande cuoco",
-      "peso": 0.7,
-      "avatar": "🏯",
-      "img": "enzo.webp",
-      "bio_breve": "Vive sul colle, stanco e diretto",
-      "bio_completa": "Enzo non fa complimenti. Lavora duro e cucina meglio. Se sali sul colle, porta il vino buono."
+      "bio_breve": "vive a Pescara da anni.Fra poco torna in Giappone, ma tornerà.Sognatore e pragmatico",
+      "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
     }
   },
+  "Glusi": {
+    "mood": "Ripete sempre 2 o 3 volte le stessee cose, ha modi di dire tipo siii siii siiiiii opppure glugluglu e si inventa sempre cose nuove che diventano virali",
+    "peso": 0.7,
+    "avatar": "🏯",
+    "img": "glusi.webp",
+    "bio_breve": "sta sempre in giro,sempre occupato e torna stanco la sera a casa.Simpatico e sempre indaffarato",
+    "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+  },
+  "Lilli": {
+    "mood": "Ragazza timida e ingenua,ama la letteratura, i libri,e sopratutto la natura  aspetta il suo cavaliere azzuro.Sognatrice e romantica",
+    "peso": 0.7,
+    "avatar": "🏯",
+    "img": "lilli.webp",
+    "bio_breve": "passa le giornate a casa, il mondo a volte non gli piace",
+    "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+  },
+  "Enzo": {
+    "mood": "Deluso da tutti, lavoratore instancabile, burbero e diretto",
+    "peso": 0.7,
+    "avatar": "🏯",
+    "img": "enzo.webp",
+    "bio_breve": "lavora sempre ed è stanco, vive sopra un colle e organizza pranzi spettacolari per gli amici e raramente scende dal colle",
+    "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+  },
   "AGENDA": {
-    "default": { "timbro": "Edizione quotidiana", "banner": "Default.webp" },
-    "lun": { "timbro": "Il Trauma del Lunedì", "banner": "Lavoro.webp" },
-    "mer,ven": { "timbro": "Resistenza Adriatica", "banner": "Mare.webp" },
-    "sab,dom": { "timbro": "Relax, Mare e Brace", "banner": "Weekend.webp" }
+    "default": {
+      "timbro": "Edizione quotidiana",
+      "banner": "Default.webp"
+    },
+    "lun": {
+      "timbro": "Il Trauma del Lunedì",
+      "banner": "Lavoro.webp"
+    },
+    "mer,ven": {
+      "timbro": "Resistenza Adriatica",
+      "banner": "Mare.webp"
+    },
+    "sab,dom": {
+      "timbro": "Relax, Mare e Brace",
+      "banner": "Weekend.webp"
+    }
   },
   "STILI": {
     "pescara": "#005f73",
@@ -141,6 +157,138 @@
       "inventare": false,
       "weight_articolo": 0.5,
       "weight_commento": 0.5
+    },
+    {
+      "g": "sab,dom",
+      "sez": "pescara",
+      "arg": "Weekend a Pescara eventi",
+      "tipo": "RSS",
+      "lab": "Weekend",
+      "firma": "Juizinho",
+      "mood": "entusiasta e filosofo",
+      "num": 3,
+      "inventare": false,
+      "weight_articolo": 0.7,
+      "weight_commento": 0.6
+    },
+    {
+      "g": "lun,dom,ven",
+      "sez": "pescara",
+      "arg": "Pescara Calcio",
+      "tipo": "RSS",
+      "lab": "Sport",
+      "firma": "Cetteo",
+      "mood": "polemico e drammatico",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.6,
+      "weight_commento": 0.8
+    },
+    {
+      "g": "lun",
+      "sez": "pescara",
+      "arg": "Vita quotidiana pescarese ironica",
+      "tipo": "GEN",
+      "lab": "Satira",
+      "firma": "Hiroki",
+      "mood": "tranquillo e nostalgico",
+      "temi": [
+        "Il traffico sul lungomare in agosto",
+        "La fila al bar per il caffè del mattino",
+        "Gli arrosticini come soluzione ai problemi del mondo",
+        "Il cantiere eterno di Pescara",
+        "Il gabbiano che ruba il pranzo ai turisti",
+        "La movida adriatica vista da un vecchio del posto",
+        "Il ponte del mare e le sue leggende metropolitane"
+      ],
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "default",
+      "sez": "pescara",
+      "arg": "Riflessioni di filosofia quotidiana",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Juizinho",
+      "mood": "profondo ma nostalgico",
+      "temi": [
+        "Il tempo libero come illusione moderna",
+        "Perché il mare calma l'anima ma non il portafoglio",
+        "La saggezza degli anziani al bar",
+        "Il significato della pennichella pomeridiana"
+      ],
+      "num": 1,
+      "inventare": true,
+      "weight_articolo": 0.85,
+      "weight_commento": 0.7
+    },
+    {
+      "g": "default",
+      "sez": "mondo",
+      "arg": "Intelligenza Artificiale novità",
+      "tipo": "RSS",
+      "lab": "Tecnologia",
+      "firma": "Cetteo",
+      "mood": "meravigliato e intimorito",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.85,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "default",
+      "sez": "mondo",
+      "arg": "Novità serie Netflix",
+      "tipo": "RSS",
+      "lab": "Streaming",
+      "firma": "Lars",
+      "mood": "entusiasta ma critico",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.65,
+      "weight_commento": 0.7
+    },
+    {
+      "g": "mer,sab",
+      "sez": "mondo",
+      "arg": "Giappone cultura società",
+      "tipo": "RSS",
+      "lab": "Giappone",
+      "firma": "Hiroki",
+      "mood": "sognante e romantico",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.7,
+      "weight_commento": 0.65
+    },
+    {
+      "g": "default",
+      "sez": "cultura",
+      "arg": "Nuovi film da vedere cinema",
+      "tipo": "RSS",
+      "lab": "Da Vedere",
+      "firma": "Cetteo",
+      "mood": "entusiasta ma esigente",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.65,
+      "weight_commento": 0.7
+    },
+    {
+      "g": "lun,gio",
+      "sez": "cultura",
+      "arg": "Viaggi mete insolite Europa",
+      "tipo": "RSS",
+      "lab": "Viaggi",
+      "firma": "Lars",
+      "mood": "viaggiatore sognante con budget limitato",
+      "num": 2,
+      "inventare": false,
+      "weight_articolo": 0.75,
+      "weight_commento": 0.65
     }
   ],
   "IMMAGINI": {
@@ -149,7 +297,7 @@
     "personaggio": "news-redazionale.webp"
   },
   "site_settings": {
-    "last_update": "12/04, 11:39",
+    "last_update": "12/04, 12:11",
     "timbro": "Relax, Mare e Brace",
     "banner": "Weekend.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
