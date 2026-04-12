@@ -37,15 +37,15 @@
       "bio_completa": ""
     },
     "Lars": {
-      "mood": "Danese solitario,vive sulle montagne a Roccamorice, parla spesso della natura, ma ha scelto l'Abruzzo per l'allegria ",
+      "mood": "Danese solitario,vive sulle montagne a Roccamorice, parla spesso della natura, ma ha scelto l'Abruzzo per l'allegria e gli arrosticini Danese solitario,vive sulle montagne a Roccamorice, parla spesso della natura, ma ha scelto l'Abruzzo per l'allegria e gli arrosticini ",
       "peso": 0.7,
       "avatar": "🐬",
       "img": "lars.webp",
-      "bio_breve": "Danese , ossessionato dall'ordine, minimalista'",
-      "bio_completa": "Peppino ha studiato fino alla terza media ma cita Aristotele ogni giorno. Vive sul lungomare e ha opinioni su tutto. Ama il silenzio, il mare e gli arrosticini. Non ama chi lo contraddice. Ha un diario segreto in cui raccoglie citazioni filosofiche storpiate. Sogna di aprire un bar sul mare dove si discute di Nietzsche e si mangiano arrosticini."
+      "bio_breve": "Danese , ossessionato dall'ordine, minimalista",
+      "bio_completa": ""
     },
     "Juizinho": {
-      "mood": "Sempre in vena di fare festa, parla sempre di donne, ha saudade anche perchè a Pescara le donne sono difficili",
+      "mood": "Sempre in vena di fare festa, parla sempre di donne, ha saudade dell'allegria brasiliana",
       "peso": 0.8,
       "avatar": "⚽",
       "img": "juizinho.webp",
@@ -61,7 +61,7 @@
       "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
     },
     "Hiroki": {
-      "mood": "E' sempre critico dell''Italia, vorrebbe portare un pò di civiltà",
+      "mood": "E' sempre critico dell''Italia, vorrebbe portare un pò di civiltà dal Giappone",
       "peso": 0.7,
       "avatar": "🏯",
       "img": "hiroki.webp",
@@ -193,15 +193,106 @@
       "firma": "Hiroki",
       "mood": "tranquillo e nostalgico",
       "temi": [
-        "Il traffico sul lungomare in agosto",
-        "La fila al bar per il caffè del mattino",
-        "Gli arrosticini come soluzione ai problemi del mondo",
-        "Il cantiere eterno di Pescara",
-        "Il gabbiano che ruba il pranzo ai turisti",
-        "La movida adriatica vista da un vecchio del posto",
-        "Il ponte del mare e le sue leggende metropolitane"
+        "Sole, mare e disorganizzazione: Perché l'Italia ha bisogno di un manuale giapponese",
+        "Il caos non è folklore: Diario di un ritorno (amaro) dal Sol Levante",
+        "Sogni di Shinkansen, realtà di regionali: La mia battaglia per la civiltà",
+        "L'ordine tra le macerie: Cosa dovremmo imparare da Tokyo",
+        "Dall'efficienza al pressappoco: Cronache di un italiano che ha visto il futuro",
+        "Sotto il segno del rigore: Come salvare l'Italia dalla sua stessa pigrizia",
+        "Non è pessimismo, è senso civico: Lezioni nipponiche per un paese allo sbando",
+        "Inchino o pacca sulla spalla? La difficile convivenza tra disciplina e disordine",
+        "Il Bel Paese tra le nuvole: Perché la cortesia giapponese ci farebbe bene",
+        "Manuale di resistenza civile: Esportare il Giappone in terra di anarchia"
       ],
-      "num": 2,
+      "num": 1,
+      "inventare": false,
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "lun,mar",
+      "sez": "pescara",
+      "arg": "Il ripetitivo siiiiiiiiii",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Glusi",
+      "mood": "divertente e simpatico",
+      "temi": [
+        "Siii siii siiiiii: La mia vita ripetuta, ripetuta, ripetuta",
+        "Glugluglu e altre storie: Come inventarsi un mondo ogni giorno",
+        "L'ho detto tre volte, l'ho detto tre volte, l'ho detto tre volte",
+        "Siii siii siiiiii: Il segreto per diventare virali senza volerlo",
+        "Glugluglu: Il suono del successo che non sapevate di volere",
+        "Ti spiego una cosa, ti spiego una cosa: Il metodo della ripetizione",
+        "Fenomenologia del siii siii siiiiii: Cronache di un tormentone",
+        "Inventare tutto, dimenticare niente: Il mio dizionario virale",
+        "Glugluglu: Se lo dico tre volte allora è vero",
+        "Dalle parole ai fatti, ai fatti, ai fatti: Il mio mondo a ripetizione"
+      ]
+    },
+    {
+      "g": "lun,mar",
+      "sez": "pescara",
+      "arg": "Vita quotidiana pescarese ironica",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Lilli",
+      "mood": "tranquilla e serena",
+      "temi": [
+        "Tra le pagine e le petunie: Aspettando che il sogno si avveri",
+        "Cuore di carta e petali di rosa: Diario di una sognatrice",
+        "Il cavaliere che non arriva: Io, i miei libri e il bosco",
+        "Sotto la quercia dei desideri: Cronache di un'attesa romantica",
+        "L'ingenuità è un giardino segreto: Storia di una ragazza antica",
+        "Cercasi principe tra i classici: La mia vita è un romanzo",
+        "Fiori di campo e versi d'amore: In attesa dell'azzurro",
+        "Sognare a occhi aperti: La timidezza come rifugio",
+        "Un segnalibro nel cuore: Dove la natura incontra la fiaba",
+        "La ragazza che parlava alle nuvole e leggeva ai poeti"
+      ]
+    },
+    {
+      "g": "sab,dom",
+      "sez": "pescara",
+      "arg": "Vita a Borgo Marino",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Cetteo",
+      "mood": "sfacciato e irriverente",
+      "temi": [
+        "Lu mare, la curva e le mazzate: Cronache di un pescarese verace",
+        "Tra reti rotte e diffide: Perché questa città mi ha rotto le palle",
+        "A puzze di pesce e orgoglio biancazzurro: La mia vita a Borgo Marino",
+        "Zitto e rema: Quello che i turisti non capiscono di Pescara",
+        "Abbeverato a brodetto e cattiveria: Manuale di sopravvivenza al porto",
+        "Non mi sta bene niente: Polemiche di un marinaio in Gradinata Adriatica",
+        "Vento in faccia e vaffanculo pronto: Il mio diario di bordo",
+        "Dalla barca alla gradinata: L'unica fede che non tradisce mai",
+        "Pesce fresco e lingua sporca: Tutto quello che vi direi in faccia",
+        "Lu core di Pescara non è per tutti: Sangue, sudore e arrosticini di mare"
+      ]
+    },
+    {
+      "g": "mer",
+      "sez": "pescara",
+      "arg": "Vita contadina",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Enzo",
+      "mood": "stanco",
+      "temi": [
+        "Pane duro e schiena rotta: La verità che non volete sentire",
+        "Tutti bravi a chiacchierare: Cronache di un uomo che lavora solo",
+        "Il silenzio non ha mai tradito nessuno: Diario di un burbero",
+        "Meno cortesie e più fatti: La mia vita senza sconti",
+        "Deluso dal mondo, fedele solo alla fatica",
+        "L'onestà mi ha lasciato solo, e mi va bene così",
+        "Stanchi di nascondervi? Io ve lo dico in faccia",
+        "Il sudore non mente, le persone sì",
+        "Poche parole e mani sporche: Quello che resta dopo il lavoro",
+        "Fuori dal coro e lontano da tutti: La mia libertà è la fatica"
+      ],
+      "num": 1,
       "inventare": false,
       "weight_articolo": 0.95,
       "weight_commento": 0.9
@@ -209,16 +300,47 @@
     {
       "g": "default",
       "sez": "pescara",
-      "arg": "Riflessioni di filosofia quotidiana",
+      "arg": "il brasileiro",
       "tipo": "GEN",
       "lab": "Riflessioni",
       "firma": "Juizinho",
       "mood": "profondo ma nostalgico",
       "temi": [
-        "Il tempo libero come illusione moderna",
-        "Perché il mare calma l'anima ma non il portafoglio",
-        "La saggezza degli anziani al bar",
-        "Il significato della pennichella pomeridiana"
+        "Cachaça, samba e nostalgia: Il mio cuore batte a ritmo di Rio",
+        "Saudade e sorrisi: Perché la vita è troppo corta per non fare festa",
+        "Sotto il sole del Brasile: Donne, sogni e l'allegria che mi manca",
+        "Balla che ti passa: Cronache di un cercatore di bellezza",
+        "Febbre tropicale: La mia anima in festa tra un amore e l'altro",
+        "Oltre l'oceano: Cercando il Carnevale in ogni sguardo di donna",
+        "Samba nel sangue, donne nel cuore: La mia ricetta per la felicità",
+        "Il mondo è una festa: Diario di un eterno nostalgico del Brasile",
+        "Cuore vagabondo: Tra la saudade e il prossimo brindisi",
+        "Tudo bem: Il mio viaggio infinito verso il calore della gente"
+      ],
+      "num": 1,
+      "inventare": true,
+      "weight_articolo": 0.85,
+      "weight_commento": 0.7
+    },
+    {
+      "g": "ven",
+      "sez": "pescara",
+      "arg": "Riflessioni montanare",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Lars",
+      "mood": "delicato",
+      "temi": [
+        "Dalla Danimarca alla Majella: Il mio Hygge tra i lupi e gli arrosticini",
+        "Il silenzio di Roccamorice: Perché ho scambiato il mare del Nord con la roccia viva",
+        "Orizzonti Verticali: Come un danese ha trovato l'allegria in un metro di brace",
+        "Sotto il cielo di Celestino: Diario di un eremita scandinavo in Abruzzo",
+        "La via della pecora: Filosofia della natura tra pascoli e vento",
+        "Il sale sulla carne, il sole sulla roccia: La mia nuova vita a Roccamorice",
+        "Ghiaccio e Carbone: Cronache di un’integrazione ad alta quota",
+        "Non è solo fumo: L’arte di vivere (e mangiare) sulle montagne d’Abruzzo",
+        "Radici di Pietra: Cercavo la natura, ho trovato una famiglia (e la fornacella)",
+        "Vento del Nord, Cuore del Sud: Il mio rifugio ai piedi della Montagna Madre"
       ],
       "num": 1,
       "inventare": true,
@@ -278,6 +400,19 @@
       "weight_commento": 0.7
     },
     {
+      "g": "default",
+      "sez": "cultura",
+      "arg": "Nuovi libri",
+      "tipo": "GEN",
+      "lab": "Da Vedere",
+      "firma": "Lilli",
+      "mood": "entusiasta ma esigente",
+      "num": 2,
+      "inventare": true,
+      "weight_articolo": 0.65,
+      "weight_commento": 0.7
+    },
+    {
       "g": "lun,gio",
       "sez": "cultura",
       "arg": "Viaggi mete insolite Europa",
@@ -297,7 +432,7 @@
     "personaggio": "news-redazionale.webp"
   },
   "site_settings": {
-    "last_update": "12/04, 17:07",
+    "last_update": "12/04, 18:17",
     "timbro": "Relax, Mare e Brace",
     "banner": "Weekend.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",

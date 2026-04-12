@@ -1,5 +1,5 @@
 {
-  "_runCount": 7,
+  "_runCount": 8,
   "Ernesto→Giovanni": {
     "score": -0.073,
     "label": "neutro",
@@ -46,7 +46,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Juizinho→Cetteo": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "12/04/2026"
   },
@@ -121,9 +121,9 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.756,
+    "score": -0.956,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Lars→Questa terra": {
     "score": -0.243,
@@ -156,12 +156,12 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Enzo→Cetteo": {
-    "score": -0.6,
-    "label": "diffidente",
+    "score": -0.9,
+    "label": "ostile",
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Enzo→Hiroki": {
-    "score": -0.1,
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "12/04/2026"
   },
@@ -201,7 +201,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Enzo": {
-    "score": 0.3,
+    "score": 0.4,
     "label": "simpatico",
     "ultimo_aggiornamento": "12/04/2026"
   },
@@ -226,8 +226,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Enzo→Juizinho": {
-    "score": -0.3,
-    "label": "diffidente",
+    "score": -0.7,
+    "label": "ostile",
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Juizinho": {
@@ -248,6 +248,26 @@
   "Glusi→Lars": {
     "score": -0.1,
     "label": "neutro",
+    "ultimo_aggiornamento": "12/04/2026"
+  },
+  "Lars→Enzo": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "12/04/2026"
+  },
+  "Enzo→Cittadini di Pescara": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "12/04/2026"
+  },
+  "Juizinho→Autore": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "12/04/2026"
+  },
+  "Enzo→Autore": {
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "12/04/2026"
   }
 }
