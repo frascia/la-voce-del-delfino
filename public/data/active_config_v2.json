@@ -13,7 +13,7 @@
   "LIMITI": {
     "fasce_articoli": [
       "06",
-      "18",
+      "13",
       "19"
     ],
     "tolleranza_minuti": 45,
@@ -37,24 +37,24 @@
       "bio_completa": ""
     },
     "Lars": {
-      "mood": "Danese dello Jutland nord,vive sulle montagne a Roccamorice, parla spesso della natura ",
-      "peso": 0.8,
+      "mood": "Danese solitario,vive sulle montagne a Roccamorice, parla spesso della natura, ma ha scelto l'Abruzzo per l'allegria ",
+      "peso": 0.7,
       "avatar": "🐬",
-      "img": "peppino.webp",
+      "img": "lars.webp",
       "bio_breve": "Danese , ossessionato dall'ordine, minimalista'",
       "bio_completa": "Peppino ha studiato fino alla terza media ma cita Aristotele ogni giorno. Vive sul lungomare e ha opinioni su tutto. Ama il silenzio, il mare e gli arrosticini. Non ama chi lo contraddice. Ha un diario segreto in cui raccoglie citazioni filosofiche storpiate. Sogna di aprire un bar sul mare dove si discute di Nietzsche e si mangiano arrosticini."
     },
     "Juizinho": {
-      "mood": "Sempre in vena di fare festa, parla sempre di donne",
+      "mood": "Sempre in vena di fare festa, parla sempre di donne, ha saudade anche perchè a Pescara le donne sono difficili",
       "peso": 0.8,
       "avatar": "⚽",
-      "img": "giovanni.webp",
+      "img": "juizinho.webp",
       "bio_breve": "Tifoso del Pescara da sempre, è venuto a Pescara solo per tifare il Pescara",
       "bio_completa": "Giovanni non ha mai giocato a calcio ma sa come si fa. Abbonato al Pescara dal 1987, anno della sua prima delusione. Lavora in banca ma pensa solo al campionato. Tiene un foglio Excel con tutte le partite perse dal Pescara dal 1990. Lo aggiorna ogni lunedì mattina prima di andare in banca."
     },
     "Cetteo": {
-      "mood": "Pescatore , abita alla marina, ultras del Pescara, polemico e sfacciato, parla molto il dialetto",
-      "peso": 0.8,
+      "mood": "Pescatore , abita a borgomarino, ultras del Pescara, polemico e sfacciato, parla molto il dialetto",
+      "peso": 0.7,
       "avatar": "🚧",
       "img": "cetteo.webp",
       "bio_breve": "Pesce e mare, e poca voglia di lavorare",
@@ -62,12 +62,36 @@
     },
     "Hiroki": {
       "mood": "E' sempre critico dell''Italia, vorrebbe portare un pò di civiltà",
-      "peso": 0.9,
+      "peso": 0.7,
       "avatar": "🏯",
       "img": "hiroki.webp",
-      "bio_breve": "vive a Pescara da anni.Fra poco torna in Giappone, e non sa se torna.Sognatore e pragmatico",
+      "bio_breve": "vive a Pescara da anni.Fra poco torna in Giappone, ma tornerà.Sognatore e pragmatico",
       "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
     }
+  },
+  "Glusi": {
+    "mood": "Ripete sempre 2 o 3 volte le stessee cose, ha modi di dire tipo siii siii siiiiii opppure glugluglu e si inventa sempre cose nuove che diventano virali",
+    "peso": 0.7,
+    "avatar": "🏯",
+    "img": "glusi.webp",
+    "bio_breve": "sta sempre in giro,sempre occupato e torna stanco la sera a casa.Simpatico e sempre indaffarato",
+    "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+  },
+  "Lilli": {
+    "mood": "Ragazza timida e ingenua,ama la letteratura, i libri,e sopratutto la natura  aspetta il suo cavaliere azzuro.Sognatrice e romantica",
+    "peso": 0.7,
+    "avatar": "🏯",
+    "img": "lilli.webp",
+    "bio_breve": "passa le giornate a casa, il mondo a volte non gli piace",
+    "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
+  },
+  "Enzo": {
+    "mood": "Deluso da tutti, lavoratore instancabile, burbero e diretto",
+    "peso": 0.7,
+    "avatar": "🏯",
+    "img": "enzo.webp",
+    "bio_breve": "lavora sempre ed è stanco, vive sopra un colle e organizza pranzi spettacolari per gli amici e raramente scende dal colle",
+    "bio_completa": "Ernesto lavora al Comune da 22 anni. Ha visto 14 sindaci e nessun cantiere finito in tempo. Porta sempre con sé una cartella piena di moduli. Diffida di tutto e di tutti. Conserva ogni circolare comunale ricevuta dal 2002. La sua scrivania è un monumento alla burocrazia. Non è mai andato in ferie per più di tre giorni consecutivi."
   },
   "AGENDA": {
     "default": {
@@ -116,7 +140,7 @@
       "lab": "Cronaca",
       "firma": "Cetteo",
       "mood": "burbero e sospettoso",
-      "num": 3,
+      "num": 2,
       "inventare": false,
       "weight_articolo": 0.5,
       "weight_commento": 0.4
@@ -155,13 +179,13 @@
       "lab": "Sport",
       "firma": "Cetteo",
       "mood": "polemico e drammatico",
-      "num": 3,
+      "num": 2,
       "inventare": false,
       "weight_articolo": 0.6,
       "weight_commento": 0.8
     },
     {
-      "g": "default",
+      "g": "lun",
       "sez": "pescara",
       "arg": "Vita quotidiana pescarese ironica",
       "tipo": "GEN",
@@ -178,7 +202,7 @@
         "Il ponte del mare e le sue leggende metropolitane"
       ],
       "num": 2,
-      "inventare": true,
+      "inventare": false,
       "weight_articolo": 0.95,
       "weight_commento": 0.9
     },
@@ -259,7 +283,7 @@
       "arg": "Viaggi mete insolite Europa",
       "tipo": "RSS",
       "lab": "Viaggi",
-      "firma": "Peppino",
+      "firma": "Lars",
       "mood": "viaggiatore sognante con budget limitato",
       "num": 2,
       "inventare": false,
@@ -273,7 +297,7 @@
     "personaggio": "news-redazionale.webp"
   },
   "site_settings": {
-    "last_update": "12/04, 10:01",
+    "last_update": "12/04, 11:39",
     "timbro": "Relax, Mare e Brace",
     "banner": "Weekend.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
