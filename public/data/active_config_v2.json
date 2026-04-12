@@ -189,7 +189,7 @@
       "sez": "pescara",
       "arg": "Vita quotidiana pescarese ironica",
       "tipo": "GEN",
-      "lab": "Satira",
+      "lab": "Riflessioni",
       "firma": "Hiroki",
       "mood": "tranquillo e nostalgico",
       "temi": [
@@ -204,6 +204,50 @@
       "num": 2,
       "inventare": false,
       "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+      {
+      "g": "lun",
+      "sez": "pescara",
+      "arg": "Vita quotidiana pescarese ironica",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Glusi",
+      "mood": "indaffarato e deciso",
+      "temi": [
+        "Il traffico sul lungomare",
+        "Sono stanco",
+        "I modi di dire",
+        "Il cantiere eterno di Pescara",
+        "La spesa al supermercato",
+        "La mancanza di parcheggio",
+        "I prezzi dei ristoranti"
+      ],
+      "num": 1,
+      "inventare": false,
+      "weight_articolo": 0.7,
+      "weight_commento": 0.9
+    },
+          {
+      "g": "mar",
+      "sez": "pescara",
+      "arg": "Vita quotidiana pescarese seria",
+      "tipo": "GEN",
+      "lab": "Riflessioni",
+      "firma": "Lilli",
+      "mood": "sognatrice ad occhi aperti",
+      "temi": [
+        "L'arrivo della primavera",
+        "Leggere un libro",
+        "Pensiero laterale e psicologia",
+        "Fare escursioni",
+        "Le volgarità",
+        "Non ne posso più",
+        "Dove sono i gentiluomini"
+      ],
+      "num": 1,
+      "inventare": false,
+      "weight_articolo": 0.7,
       "weight_commento": 0.9
     },
     {
