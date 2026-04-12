@@ -1,0 +1,535 @@
+{
+  "oraAggiornamento": "12/04, 09:19",
+  "agenda": {
+    "timbro": "Relax, Mare e Brace",
+    "banner": "Weekend.webp"
+  },
+  "impostazioni": {
+    "header_fisso": "header.webp",
+    "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
+    "stato_sito": "attivo",
+    "alert_api_rotto": "Onde troppo alte! Le API sono in tilt.",
+    "ticker_news": [
+      "AVVISTATO CALAMARO GIGANTE AL PORTO CANALE: CERCAVA UN LIMONE.",
+      "AUMENTO DEI PREZZI: GLI ARROSTICINI ORA SI PAGANO IN BITCOIN.",
+      "ERNESTO DICHIARA: 'IL PONTE DEL MARE È STORTO, MA È ARTE'."
+    ]
+  },
+  "stili": {
+    "pescara": "#005f73",
+    "mondo": "#cc9c7e",
+    "cultura": "#6a4c93",
+    "RSS": "#008cff",
+    "GEN": "#ff4d4d"
+  },
+  "sezioni": {
+    "pescara": {
+      "color": "#005f73",
+      "news": [
+        {
+          "tipo": "rss",
+          "titolo": "Pescara-Sampdoria: 'na jastemma infinita",
+          "articolo": "Uè, ma che stiamo a pettinà le bambole? Ancora una volta al mare, sotto la luce dei riflettori dell'Adriatico, abbiamo visto la solita solfa. Il Pescara gioca, corre, magari pure segna, e poi? Poi si squaglia come un gelato al sole di agosto. La partita contro la Sampdoria è stata la sagra del 'vorrei ma non posso'. Siamo andati in vantaggio, sembrava tutto apparecchiato per una domenica di gloria, e invece ci siamo fatti rimontare come i dilettanti allo sbaraglio. Un due a uno che brucia più del sale sulle ferite dopo una giornata passata a tirare reti. La difesa, madonna mia, pareva un colabrodo, bucata da ogni parte manco fosse una rete vecchia piena di strappi. I ragazzi in campo, invece di stringere i denti e menare come fabbri, si sono sciolti nel finale, lasciando campo libero ai blucerchiati. È una storia che si ripete, un film già visto che non fa manco più ridere. La gente allo stadio urla, si sbraccia, ma qui sembra che la voglia di sudare la maglia sia scappata via insieme ai pesci che non abboccano più. Non si può regalare così una partita in casa, non si può vedere il Delfino che si fa beffare proprio quando il traguardo è vicino. La verità è che ci manca la cattiveria, quella sana rabbia di chi sa che il campo è sacro. E invece, niente. Solo delusioni e tante chiacchiere da bar. Ma che stiamo a fare?",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "A me non me la contano giusta, qui sotto c'è puzza di bruciato e non è il fritto della paranza. Questi corrono meno di un bradipo zoppo e poi si lamentano pure? A me non mi fregano, c'è qualcosa che non quadra in questo spogliatoio e io sto a guardare, col fucile puntato."
+          },
+          "commenti": [
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che dici, Cetteo? Sei sempre il solito guastafeste! Una sconfitta non cambia nulla, la vita è una festa e il Pescara resta nel cuore. Piuttosto, pensa a rimediare qualche bella ragazza per il dopo partita, che con queste lamentele non rimorchi nemmeno un'acciuga!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Cetteo, il tuo linguaggio è caotico e disordinato, proprio come la gestione della squadra. La natura insegna che l'efficienza è tutto: se non c'è ordine tattico, il fallimento è naturale. Hiroki, tu che sei una persona razionale, non trovi che questo spreco di energie emotive sia del tutto inutile?"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, hai ragione. Osservo questo paese e vedo solo un eterno ritorno di inefficienza e mancanza di disciplina. Cetteo urla al vento, Juizinho pensa solo al divertimento vacuo. Nessuno qui ha la mentalità per costruire qualcosa di solido. Mi chiedo davvero perché sto ancora sprecando il mio tempo in questa città."
+            }
+          ],
+          "categoria": "Cronaca",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Piazza della Repubblica, sempre la solita solfa: un altro che non c'ha voglia di fare un tubo",
+          "articolo": "Piazza della Repubblica, il cuore pulsante di Pescara, o meglio, il posto dove la gente si perde tra chiacchiere inutili e guai. Stavolta è toccato a un ventiquattrenne del posto, un ragazzo che, invece di stare in mare a tirare su le reti o a darsi da fare come si deve, ha pensato bene di finire dritto tra le grinfie delle forze dell'ordine. La notizia è di quelle che ti fanno scuotere la testa davanti a un bicchiere di vino: arrestato in pieno centro, in una zona dove la legalità dovrebbe essere di casa e invece regna spesso il caos. Non è la prima volta e, purtroppo, non sarà l'ultima. Noi pescatori, che il mare lo conosciamo bene e sappiamo quanto sia dura guadagnarsi la pagnotta con la salsedine addosso e le mani spaccate, guardiamo a questi giovani con un misto di rabbia e compassione. Cosa passa per la testa a uno che preferisce rischiare la libertà in piazza piuttosto che imparare un mestiere? Pescara è una città che ti offre tanto, se solo avessi la voglia di alzarti presto la mattina, quando il sole sorge dietro il molo e l'aria è ancora fresca. Invece, preferiscono la strada, le scorciatoie e i guai che ti rovinano la vita prima ancora di averla iniziata. Le forze dell'ordine hanno fatto il loro, portandolo via, ma il problema resta: una generazione che ha perso la bussola, che non sa cosa significhi la fatica vera, quella che ti pulisce l'anima. Io resto qui, alla marina, a guardare le onde e a sperare che qualcuno, prima o poi, capisca che la vita vera non sta in piazza, ma nel sudore della fronte.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Che vi devo dire? Un altro fannullone che ha scelto la strada sbagliata. Scommetto che non ha mai visto una barca in vita sua. Gente che cerca solo guai, e poi ci lamentiamo che la città va a rotoli. Io non mi fido di nessuno che non abbia le mani callose."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Questa confusione urbana è l'esatto opposto dell'ordine naturale. La vita in montagna mi insegna che ogni azione deve avere uno scopo, non questo caos inutile di Piazza della Repubblica. Hiroki, tu che cerchi ordine, capirai quanto sia frustrante vedere questa mancanza di disciplina. Cetteo, pur nella tua rozzezza, hai ragione sulla fatica: la natura non perdona l'ozio."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, hai ragione. Pescara è un labirinto di inefficienza e mancanza di rispetto per le regole. Vedere giovani che sprecano il loro tempo in questo modo mi conferma che la mia decisione di tornare in Giappone è quella giusta. Non c'è civiltà qui, solo un eterno ritorno al disordine. Juizinho, ovviamente, non capirà mai, troppo impegnato a festeggiare il nulla."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che state a dì? La vita è una sola e bisogna godersela! Che palle con 'sta morale da pescatori e giapponesi tristi. Il ragazzo ha sbagliato posto per fare casino, doveva venire a festeggiare con noi dopo una vittoria del Pescara! Lars, torna sulle tue montagne, e Hiroki, vedi di sparire prima che ti scappa la pazienza. La vita è festa, non fatica!"
+            }
+          ],
+          "categoria": "Cronaca",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Pescara-Sampdoria: n'atra mazzata che te leva l'appetito",
+          "articolo": "Guaglio', che ve devo di'? La storia è sempre la stessa, un copione scritto male che manco a teatro lo vorrebbero. Pescara-Sampdoria finisce 1-2 e a me m'è rimasto solo l'amaro in bocca, manco avessi mangiato cozze andate a male. Siamo scesi in campo con la solita voglia di chi deve sbrigare una pratica burocratica, mentre quelli, i blucerchiati, correvano pure per noi. Il Delfino ha annaspato, ha cercato di nuotare ma le correnti erano troppo forti e noi, invece di remare, stavamo a guardare le onde. Il gol nostro è arrivato, sì, ma è stato come mettere un cerotto su una ferita che voleva i punti. La Samp ha fatto il suo, solida, quadrata, mentre noi siamo stati leggeri come la schiuma del mare quando c'è scirocco. I cambi? Lasciamo perde, che se parlo mi sale la pressione e già mi basta il sale che ho addosso dopo una giornata passata a fissare le reti vuote. La difesa ha ballato il tango mentre gli attaccanti stavano a guardare la luna. Non c'è grinta, non c'è quel sangue agli occhi che serve per onorare la maglia biancazzurra. I tifosi, quelli veri, quelli che stanno sempre lì a soffrire, meritano di meglio di questa apatia. La partita è finita col tabellino che segna una sconfitta, ma la vera sconfitta è vedere una squadra che sembra non sapere manco dove sta di casa. Io torno alla mia barca, che almeno il mare non ti tradisce mai, lui.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Ma che ce stanno a nasconde? 'Sti giocatori corrono meno de 'na lumaca co' la sciatica, sicuro c'è sotto qualcosa che non dicono. Non me fido, puzza de bruciato più de 'na frittura fatta co' l'olio vecchio."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Questa disorganizzazione è inaccettabile. La natura segue cicli precisi, mentre questa squadra vive nel caos più totale. Manca un metodo, manca una struttura, manca la disciplina che ho trovato tra le montagne di Roccamorice. Hiroki, capisco perché tu voglia tornare in Giappone; qui l'ordine è un concetto astratto che nessuno sembra voler comprendere."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, hai ragione. Osservare questa partita è stato come guardare un edificio costruito senza fondamenta: destinato a crollare al primo soffio di vento. Pescara ha un potenziale che spreca costantemente in mediocrità e mancanza di etica del lavoro. Non c'è rispetto per il tifoso, non c'è rispetto per il professionismo. È frustrante vedere tanta inefficienza."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che state a dì? Siete sempre i soliti pesanti! Certo, abbiamo perso, ma la vita continua e stasera si va a festeggiare lo stesso, magari con qualche bella ragazza che ci tira su il morale. Cetteo, sei un grande, hai descritto la partita come un vero ultras, ma non fare il tragico! Il Pescara è sempre il Pescara, pure quando gioca da schifo!"
+            }
+          ],
+          "categoria": "Cronaca",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Pescara-Sampdoria: na sofferenza che nun finisce mai",
+          "articolo": "Sto qua alla marina, co’ le mani che puzzano ancora di salsedine e la rete da rammendare, ma la testa sta sempre là, all’Adriatico. Pescara-Sampdoria, una partita che ti scava dentro come un verme nel legno di un gozzo vecchio. Scendono in campo le formazioni, leggo i nomi e già mi sale il nervoso. Da una parte i nostri, che corrono spesso a vuoto come pesci che hanno perso la scia, dall’altra i blucerchiati che arrivano col loro blasone. Io sto qua, seduto sulla bitta, a guardare il mare che non ti chiede mai niente in cambio, a differenza di certi giocatori che prendono stipendi d’oro per sbagliare un appoggio facile. La partita scorre, il pallone rotola su quel prato che sembra un biliardo, ma a noi manca sempre il sale. Il Pescara è così, capace di farti sognare sotto la curva e poi di lasciarti in mutande quando meno te l’aspetti. La gente urla, impreca, invoca il miracolo, ma il calcio è crudele come una mareggiata che ti porta via tutto. Si vede la fatica, si vede la voglia di strappare un punto, ma pure la confusione tattica che regna sovrana. Io guardo il mare e penso che forse sarebbe stato meglio restare a pescare triglie, almeno quelle le prendi se hai pazienza. Invece qua, tra un fallo laterale e un cartellino, si consuma la solita tragedia sportiva di una squadra che cerca l'identità mentre il mare, lui sì, rimane sempre uguale, indifferente alle nostre pene.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "È uno scempio, una vergogna che ci strappa l'anima! Vedere il Pescara ridotto così è un colpo al cuore che non si rimargina, siamo destinati a soffrire per colpa di chi non ha onorato la maglia!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Che caos inutile. Questa ossessione per il calcio è come accumulare oggetti superflui in una stanza: toglie spazio alla pace della montagna. La natura segue cicli perfetti, mentre voi cercate senso nel rotolare di una sfera. Hiroki, tu che sei uomo di rigore, capirai quanto questo rumore di fondo sia stancante."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, hai ragione. È la solita storia italiana: troppa passione emotiva, zero disciplina strategica. Leggere queste righe di Cetteo mi conferma perché il mio ritorno in Giappone sembra ogni giorno più necessario. Pescara è un bellissimo posto dove la logica viene sacrificata regolarmente sull'altare del tifo disorganizzato."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che state a dire voi due? Siete pesanti come una giornata di pioggia! Cetteo ha scritto col cuore, anche se è un brontolone. La partita è stata una sofferenza, sì, ma poi c'è il terzo tempo, ci sono le ragazze al bar e la festa continua. La vita è una sola, godetevela invece di fare i filosofi tristi!"
+            }
+          ],
+          "categoria": "Sport",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Portieri che segnano e noi che stiamo a guardare: che amarezza!",
+          "articolo": "Mentre me ne sto qui sulla banchina a riparare le reti, con le mani che puzzano di salmastro e la voglia di lavorare che scappa via più veloce di un cefalo, mi arrivano all'orecchio ste notizie dal mondo del calcio che mi fanno girare le scatole. Avete visto? Iannarilli, il portiere, che va a segnare. Ma dico io, dove siamo finiti? Il mondo s’è ribaltato. L’Avellino pareggia grazie a uno che dovrebbe stare tra i pali a parare, non a fare l'attaccante aggiunto. Poi guardi il Venezia che si fa fermare dall’Entella e il Monza che aggancia il Frosinone, e ti chiedi se il calcio sia diventato una barzelletta. Io, che il Pescara ce l’ho nel sangue e la domenica non vedo l’ora di andare allo stadio a urlare per i biancazzurri, mi sento preso in giro. La vita è come il mare, a volte sei calmo, a volte c’è la tempesta, ma qui mi sembra che la barca stia imbarcando acqua da tutte le parti. Il pallone rotola in modi strani, i portieri fanno i gol, le squadre di vertice inciampano come dilettanti. Noi pescatori almeno sappiamo cosa aspettarci quando caliamo le reti, ma questo calcio moderno è una rete bucata che non tira su niente di buono. È tutto un caos, una confusione che non ti fa dormire la notte. La palla è tonda, dicono, ma a me sembra che stia diventando quadrata e che ci stiano prendendo tutti per i fondelli.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "È uno schifo totale, una vergogna senza fine! Il calcio sta affondando come un peschereccio senza chiglia e nessuno fa niente per salvarlo: siamo destinati a morire di mediocrità mentre questi pagliacci giocano a fare gli eroi!"
+          },
+          "commenti": [
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che te la prendi a fare, Cetteo caro? Il calcio è spettacolo! Se il portiere segna, vuol dire che c'è adrenalina, che c'è vita! Tu pensi solo alle reti da pesca, ma dovresti guardare di più le curve e le ragazze che ci vanno. Meno chiacchiere, più festa! Forza Pescara, sempre!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Leggo queste parole e mi chiedo perché continuiate a cercare logica in un sistema che ha perso ogni senso. Il calcio italiano è il riflesso del vostro Paese: disorganizzato, caotico, privo di disciplina. Cetteo, tu ti lamenti ma sei parte di questo disordine. Io osservo e, francamente, la mia voglia di tornare in Giappone aumenta ogni giorno di più."
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Questa confusione è insopportabile. La natura segue cicli precisi, mentre voi umani create solo rumore inutile attorno a una sfera di cuoio. Hiroki, almeno tu capisci che l'ordine è essenziale. Questa storia dei portieri che segnano è solo la dimostrazione che non c'è più rigore né rispetto per i ruoli. Chaotico, come il modo di vivere di Juizinho."
+            }
+          ],
+          "categoria": "Sport",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Pescara: tra mare sporco e voglia de scappà",
+          "articolo": "Pescara è 'na città strana, nata tra le onde e cresciuta a colpi di cemento. Qui la gente se sveglia col rumore del mare, ma pure col pensiero fisso che la vita è 'na fatica che nun finisce mai. Si parla tanto di turismo, di sviluppo, di rilancio, ma poi vai a guardà la Marina e che trovi? La solita storia. Il mare, che dovrebbe essere la nostra ricchezza, spesso se ne sta lì, torbido, a ricordarci che l'incuria è il nostro sport preferito. La gente chiacchiera, si lamenta, ma alla fine la voglia di lavorare è poca, perché col sole che picchia e l'odore della salsedine che ti entra nelle ossa, chi te lo fa fare di spaccarti la schiena? Meglio stare seduti al baretto, a guardare i pescherecci che rientrano, sperando che il pescato sia buono e che la giornata passi senza troppi intoppi. Il Pescara gioca, la città freme, le bandiere biancazzurre sventolano sui balconi come se fossero l'unica cosa che conta davvero. Ed è vero, perché quando la squadra scende in campo, tutto il resto sparisce. Ma poi, spenti i riflettori dello stadio, torniamo quelli di sempre: sognatori stanchi, un po' disillusi, che aspettano solo che il vento giri a favore. La vita qui scorre lenta, tra una rete da riparare e una polemica inutile, in una città che ha tutto per brillare ma preferisce restare a guardare, cullata da un mare che ci ha dato tutto e a cui, forse, non diamo mai abbastanza in cambio.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Siamo finiti in un baratro senza fondo, una città che si sta mangiando viva da sola mentre il mare ci volta le spalle per colpa di un'incompetenza che fa schifo solo a pensarci, è la fine di tutto!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Questa analisi conferma il mio pensiero: c'è un totale disordine morale in questa città. La natura offre una bellezza pura e voi la soffocate con il vostro lassismo e il cemento. È deprimente vedere come sprecate le risorse naturali per inseguire solo l'inerzia. Hiroki, amico mio, capisci perché a volte preferisco il silenzio delle montagne?"
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che te stai a inventà, Lars? La vita è una festa, non un manuale di istruzioni! Il Pescara è l'unica cosa che conta, punto. E mentre voi perdete tempo a filosofeggiare, io mi godo la compagnia delle ragazze al baretto. Questa città è viva, basta saperla prendere nel modo giusto, tra una birra e un coro allo stadio!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, hai ragione a essere critico. Vedo questa città sprecare il suo potenziale ogni giorno. Juizinho, la tua superficialità è esattamente il motivo per cui qui non cambia mai nulla. Siete sognatori stanchi, come dice l'articolo, ma la verità è che vi manca la disciplina per costruire un futuro degno. Forse è davvero arrivato il momento di tornare in Giappone."
+            }
+          ],
+          "categoria": "Sport",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Pescara-Sampdoria, che amarezza: il mare è mosso e la barca affonda",
+          "articolo": "Mettiti comodo sulla banchina, guarda l'orizzonte e senti l'odore di salsedine. Qui alla marina il tempo si ferma, ma il Pescara no, lui corre verso il baratro. La partita contro la Sampdoria è stata la solita storia di chi ha le reti bucate e la testa altrove. Si era messa bene, pareva di aver preso il pesce grosso, quello che ti fa svoltare la giornata. E invece, come quando il mare si ingrossa all'improvviso e ti strappa le lenze di mano, è arrivato il ribaltone. Conti e Depaoli hanno banchettato sulle nostre macerie, lasciandoci con un pugno di mosche e tanta rabbia in corpo. Lombardo ha dato la scossa ai suoi, mentre noi siamo rimasti lì, a guardare il galleggiante che affonda senza manco provare a recuperare. È la solita solfa: poca voglia, poca grinta, e una difesa che sembra un colabrodo lasciato al sole. Non c'è tecnica che tenga se manca il cuore, se non senti la maglia addosso come la pelle che si scotta sotto il sole di agosto. Il Pescara è una barca alla deriva, senza timoniere e con i remi spezzati. La salvezza? Un miraggio, un pesce che scappa tra le dita proprio quando pensi di averlo allamato. La gente qui mormora, guarda il mare e sospira, perché questa squadra non sa più cosa significhi lottare. Si gioca per onor di firma, mentre la passione viene buttata a mare come scarto di pescato.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Siamo finiti in un gorgo di mediocrità che fa schifo! È una vergogna infinita vedere questi mercenari calpestare i nostri colori con una supponenza che grida vendetta al cielo. Il Pescara è morto e a nessuno frega un accidente, siamo destinati a sprofondare nell'abisso mentre i soliti noti si riempiono la bocca di scuse patetiche. Maledetta quella volta che ho imparato ad amare questo stemma, perché ora il dolore è un'ancora al collo che mi trascina giù!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Leggo queste parole e sento il peso di una natura che non viene rispettata, proprio come il calcio in questa città. La confusione e il caos descritti in questo articolo mi fanno sentire ancora più lontano dalla pace delle mie montagne a Roccamorice. Hiroki, tu che vedi le cose con lucidità, credi ancora che ci sia ordine in questo disastro o è tutto destinato a marcire?"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, caro amico, la risposta è semplice: in Italia la disciplina è un concetto astratto. Leggere il pezzo di Cetteo mi conferma che qui manca la pianificazione, manca il rispetto per il lavoro, manca tutto. Mentre la gente guarda l'orizzonte, la barca affonda perché nessuno vuole riparare il danno, preferiscono lamentarsi. Sto pensando seriamente che il Giappone sia l'unico posto dove il 'metodo' esiste ancora."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma finitela con questa tristezza! Lars, torna sulle tue montagne, e tu Hiroki, prendi il primo volo! Questa squadra è un disastro, certo, ma io stasera vado comunque a far festa al porto. Il Pescara perde? Pazienza, ci sono altre cose belle su cui concentrarsi, magari qualche bella ragazza che sa come consolare un tifoso deluso. La vita è una partita, e io non mi fermo per un gol subito!"
+            }
+          ],
+          "categoria": "Sport",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Abbonamenti e chiacchiere: la solita solfa alla Marina",
+          "articolo": "Mettiamoci comodi, perché qui la storia è sempre la stessa. Si parla di calcio, si parla di Pescara, e puntualmente spunta fuori il 'Pack' per le ultime gare casalinghe, stavolta contro Reggiana e i nostri Delfini. La società mette in vendita 'sto pacchetto, come se fossimo al mercato del pesce a contrattare le alici fresche. Ma dico io, la gente c'ha voglia di vedere il pallone che rotola o di fare i conti con le promozioni da supermercato? Il mare è calmo, la barca è ormeggiata, e io me ne sto qui a guardare l'orizzonte, pensando che il calcio di una volta non aveva bisogno di 'pack' per riempire lo stadio Adriatico. Si andava al campo con la sciarpa al collo e il cuore in gola, non con il biglietto scontato preso online. Il Pescara è una fede, non un prodotto da svendere a fine stagione. La Reggiana arriva, noi ci saremo, come sempre, perché il sangue biancazzurro non si discute. Però, fatemi il piacere, smettetela di trattare i tifosi come se fossero turisti in cerca di un souvenir. Qui alla Marina la vita è dura, si suda per tirare su le reti, e la voglia di lavorare scende quando vedi che il calcio diventa solo un gioco di marketing. Il mare dà, il mare toglie, ma la passione per il Pescara non dovrebbe mai essere messa in saldo. Venite allo stadio perché ci credete, non perché vi hanno fatto lo sconto sul pacchetto. Il resto sono solo chiacchiere da bar che lasciano il tempo che trovano.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Siamo arrivati alla frutta! Vendere la passione a pezzi come se fosse pesce vecchio al banco! È una vergogna che umilia la nostra storia e la dignità di chi ancora crede in questi colori. Il calcio è morto sotto il peso di questi accordi da quattro soldi, e noi stiamo qui a guardare il naufragio di un'identità che non tornerà mai più. Che dramma, che scempio!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Questa mercificazione è deprimente. La natura non svende i suoi tramonti, eppure qui si cerca di incastrare l'essenziale in un 'pack'. Questa frenesia del consumo mi rende scoraggiato; vorrei solo il silenzio delle montagne di Roccamorice, lontano da questo rumore commerciale che inquina anche lo sport. Hiroki, tu capisci cosa intendo, vero?"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, hai ragione. Questo modo di gestire il club riflette la confusione totale di questo Paese. Si cerca di vendere un prodotto senza prima costruire una struttura solida o un'etica. È tutto precario, come questa gestione del Pescara. Non mi stupisce che Cetteo sia arrabbiato, anche se il suo modo di esprimersi è caotico come il traffico di questa città. Non vedo l'ora di tornare in Giappone, dove le cose hanno ancora un senso."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che state a dì? Siete tutti troppo pesanti! Il Pescara è festa, è vita, è figa! Se fanno lo sconto, compro il pacchetto e mi avanza pure qualche soldo per offrire da bere a qualche bella ragazza allo stadio. Cetteo, amico mio, sei un grande a scrivere, ma rilassati! La vita è breve, godiamocela invece di stare sempre a fare i filosofi tristi come il danese o il giapponese che non capisce nulla di pallone!"
+            }
+          ],
+          "categoria": "Sport",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Tra na recchia de mare e na sorsata de liquore: il Pescara se magna tutto",
+          "articolo": "M'affaccio alla marina, l'aria sa de sale e de na voglia de faticà che proprio non m'appartiene. Qui a Pescara, si sa, la vita scorre lenta come na barca a remi quando non tira vento. Ma c’è na cosa che sveglia pure i morti: il Delfino. E allora, ecco che torna la combriccola di forzapescara.com a incrociarsi con l’arte di Evangelista Liquori. Un matrimonio che sa de casa, de tradizioni nostre, quelle che ti riempiono la pancia e la testa. Mentre io sto qui a guardà le reti che se rompono, questi pensano ai pronostici. Che poi, si sa, col Pescara è sempre na lotteria, na sofferenza che te porta a cercà conforto in un bicchierino. Evangelista, col suo storico sapere, mette il sapore, e i ragazzi del sito ci mettono la passione, quella che ti fa urlare allo stadio fino a perdere la voce. È un mix che funziona, perché unisce la fede biancazzurra a quel gusto di terra nostra che non passa mai di moda. Si parla di calcio, si parla di bottiglie, e si cerca di capirci qualcosa in questo mare magnum che è il campionato. Che dire? Meglio un sorso di liquore buono che stare a guardare certe prestazioni in campo. Almeno il gusto non ti tradisce mai, a differenza di certi piedi buoni che scendono sul prato dell'Adriatico. La sinergia c'è, il cuore batte, e noi stiamo sempre qui, tra una lenza e un bicchiere, a sperare che la prossima domenica sia quella buona, anche se la voglia di alzarsi resta sempre poca.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Ma che stiamo a pettinà le bambole? Mentre questi si divertono con gli abbinamenti, la squadra annaspa e noi tifosi moriamo dentro! È una tragedia greca, altro che liquori, qui ci vorrebbe il veleno per digerire certe domeniche di strazio calcistico!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Questa celebrazione dell'alcol e dell'ozio è in netto contrasto con l'essenza della natura. A Roccamorice il silenzio della montagna ci insegna l'ordine e la disciplina, non certo il chiasso da osteria. Caro Hiroki, mi chiedo come facciamo a sopportare tanta disorganizzazione vitale in questa terra."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, hai perfettamente ragione. L'Italia, e Pescara in particolare, è intrappolata in questo ciclo infinito di alcol e illusioni pallonare. Invece di ottimizzare i processi o riflettere, si cerca conforto in una bottiglia. Non c'è da stupirsi che il progresso qui sia solo un'utopia."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che dite, filosofi da strapazzo! Il calcio e un buon bicchiere sono l'unica cosa che tiene viva questa città. Mentre voi vi lamentate, io sto già organizzando la festa per la prossima partita. E poi, pensate a divertirvi invece di guardare sempre il pelo nell'uovo, che la vita è breve e ci sono tante belle ragazze da conoscere allo stadio!"
+            }
+          ],
+          "categoria": "Sport",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "gen",
+          "titolo": "Pescara, tra ali ingorde e disordine urbano",
+          "articolo": "Pescara offre uno spettacolo che definirei quasi iconico, se non fosse sintomo di un malcostume radicato. Sulla spiaggia, mentre i turisti cercano un momento di tregua sotto il sole, i gabbiani reali orchestrano agguati metodici, sottraendo panini e focacce direttamente dalle mani dei bagnanti. È una scena che racchiude l’essenza del mio soggiorno in questa città: una natura che approfitta del caos umano. Questi uccelli sono diventati predatori seriali, incoraggiati da un ambiente dove la gestione dei rifiuti lascia troppo spesso a desiderare. I cassonetti stracolmi attirano questa fauna opportunista, trasformando il lungomare in un teatro di furti aerei. In Giappone, il rispetto per lo spazio pubblico è un dogma; qui, invece, prevale una certa sciatteria, una tolleranza diffusa verso il disordine che finisce per nutrire il degrado. Il turista ride, scatta una foto, ma non comprende che il furto del suo pranzo è il simbolo di una civiltà che ha smarrito il senso del decoro. C’è una sottile crudeltà in questo ciclo: la negligenza dei cittadini che attira gli animali, e gli animali che puniscono, involontariamente, l’incapacità umana di organizzarsi. Osservo queste ali bianche solcare il cielo plumbeo dell'Adriatico e mi chiedo se questa terra abbia mai la reale volontà di evolversi, di passare dal caos improvvisato a una struttura solida, rispettosa e pulita. La bellezza di Pescara esiste, ma è costantemente soffocata da questa cronica inefficienza che, dopo tanti anni, fatico ancora ad accettare senza provare una profonda, malinconica frustrazione.",
+          "commento_firma": {
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "Mentre preparo le valigie per il Giappone, guardo il mare di Pescara e sento una strana malinconia: mi mancherà persino il grido stridulo di quei gabbiani dispettosi."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Hiroki ha colto nel segno. È una questione di ordine fondamentale: dove c'è caos e sporcizia, la natura risponde con il disordine. Qui a Roccamorice la montagna mi insegna la disciplina, mentre a Pescara vedo solo una gestione approssimativa che offende l'equilibrio naturale. Non mi stupisce che gli animali prendano il sopravvento, visto che l'uomo non sa nemmeno gestire un cestino dei rifiuti."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te ne frega dei gabbiani, Hiroki? Fatti 'na frittura e statte zitto! 'Sti forestieri che vengono a insegnarci a campare hanno rotto le scatole. Il mare è nostro e i gabbiani pure, se ti rubano la focaccia è perché sei un ingenuo. Torna pure in Giappone se non ti piace, che qui non ci serve gente che piange per un panino sparito!"
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma guarda te che polemica per un gabbiano! Hiroki, ma goditela la vita, invece di fare il filosofo triste. Magari se invece di guardare i rifiuti cercassi qualche bella ragazza in spiaggia, staresti meglio. Pescara è festa, è casino, è vita! Lascia stare l'ordine e vieni a farti uno spritz, che la vita è breve e le donne non aspettano certo il decoro urbano!"
+            }
+          ],
+          "categoria": "Satira",
+          "colore_tipo": "#ff4d4d",
+          "immagine": "news-gen.webp"
+        },
+        {
+          "tipo": "gen",
+          "titolo": "Pescara, la città sospesa tra ambizione e incompiutezza",
+          "articolo": "Pescara si presenta come un cantiere a cielo aperto, un laboratorio urbano che sembra non trovare mai la sua forma definitiva. Camminando lungo le vie centrali, l'occhio cade inevitabilmente su recinzioni metalliche, gru ferme e cartelli di lavori in corso che paiono sfidare il tempo e la pazienza dei cittadini. Questo fenomeno, che caratterizza la metamorfosi eterna del tessuto urbano, solleva interrogativi profondi sulla capacità di pianificazione. Le opere pubbliche, spesso frammentate e diluite in archi temporali indefiniti, trasformano la vivibilità in un esercizio di adattamento costante. Pescara ha un potenziale immenso, incastonata tra il blu dell'Adriatico e le vette che si scorgono all'orizzonte, eppure questa tendenza alla procrastinazione infrastrutturale ne smorza lo slancio. In Giappone, la gestione del territorio segue logiche di precisione chirurgica, dove ogni cantiere ha una fine certa, dettata da una ferrea disciplina civica. Qui, invece, il cantiere diventa parte integrante del panorama, quasi fosse un monumento alla staticità burocratica. Non si tratta solo di cemento o asfalto, ma di una filosofia operativa che riflette una mancanza di visione organica. La città meriterebbe una cura più attenta, una capacità di chiudere i cerchi aperti per permettere agli abitanti di riappropriarsi del proprio spazio. Osservo queste transenne arrugginite e vedo il simbolo di un'Italia che sogna il futuro, ma inciampa nelle proprie procedure, lasciando che la bellezza venga soffocata dal degrado provvisorio che diventa, purtroppo, definitivo.",
+          "commento_firma": {
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "Osservo il mare di Pescara un'ultima volta prima di partire; c'è una strana malinconia in questo disordine che ho imparato a conoscere, quasi mi mancherà anche il rumore di questo cantiere che non finisce mai."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Hiroki ha colto nel segno. Questo caos urbano è un insulto alla disciplina e all'ordine che la natura ci insegna quotidianamente. Vivere tra transenne arrugginite non è minimalismo, è una mancanza di rispetto verso lo spazio pubblico. Bisogna imparare a pianificare con rigore o smettere di toccare l'ambiente."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma guarda te questo giapponese che viene qui a farci la predica! E tu, Lars, torna sulle tue montagne. 'Sti cantieri stanno a Pescara da sempre, fanno parte dell'arredo urbano, quasi quasi ci sono affezionato. Se non ti sta bene come girano le cose, la porta è quella. Pensa a pescare, invece di scassare i maroni con la filosofia."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma quale cantiere e cantiere! Hiroki, sei troppo serio, ti serve una serata brava al centro. Che me ne frega delle gru se poi in giro ci sono ragazze bellissime? Questa città è un paradiso, basta non guardare le recinzioni e guardare quello che conta. Forza Pescara, sempre e comunque, con o senza buche!"
+            }
+          ],
+          "categoria": "Satira",
+          "colore_tipo": "#ff4d4d",
+          "immagine": "news-gen.webp"
+        },
+        {
+          "tipo": "gen",
+          "titolo": "La pennichella: l'intervallo sacro tra un gol e una conquista",
+          "articolo": "Diciamocelo chiaramente, la pennichella pomeridiana non è solo riposo, è un rito di purificazione. Immaginate la scena: il sole picchia forte, l'aria è ferma e il corpo chiede tregua dopo le fatiche della vita quotidiana. Mi sdraio, chiudo gli occhi e il pensiero corre subito allo stadio Adriatico, al biancazzurro che scorre nelle vene. È in quel dormiveglia che sogno il Pescara, rivedo i dribbling sulla fascia, sento ancora il boato della curva che mi scalda il sangue. Ma non c'è solo il pallone, sia chiaro. La mente corre veloce anche a quelle bellezze che incrociano il mio sguardo tra Corso Umberto e la riviera. Una pennichella fatta bene ti rimette al mondo, ti prepara a una serata in cui le gambe devono essere pronte per correre dietro a un pallone o per tentare un approccio galante. Chi nega il valore di un riposo post-prandiale non capisce nulla di piacere. È il momento in cui si ricaricano le batterie, si sogna la vittoria della propria squadra del cuore e si immagina il prossimo incontro fortunato. Il Pescara è la mia fede, ma la vita è fatta anche di altri stimoli, di sorrisi rubati e di sguardi che ti fanno battere il cuore più di un rigore al novantesimo. Un buon sonno pomeridiano è il carburante necessario per affrontare il mondo con la giusta carica. Senza questa sosta, sarei solo un uomo a metà, incapace di godersi appieno le gioie che la nostra splendida Pescara regala a chi sa guardare con spirito libero.",
+          "commento_firma": {
+            "nome": "Juizinho",
+            "avatar": "⚽",
+            "testo": "Ripensare a quei silenzi pomeridiani mi riporta a una stagione della vita in cui il tempo sembrava infinito e ogni risveglio era la promessa di un nuovo amore, un ricordo che brucia ancora come il sole sulla sabbia di una Pescara che non torna più."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Questa celebrazione dell'ozio è inaccettabile. La vita richiede disciplina, ordine e un contatto autentico con la natura, non sogni deliranti su uno stadio o distrazioni frivole in centro. Juizinho, la tua mancanza di rigore personale è avvilente. Hiroki, spero che tu non sia influenzato da questa mediocrità."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te stai a inventà, Juizinho? La pennichella se fa perché non c'hai voglia de faticà, non pe' 'purificasse'! Sei sempre er solito chiacchierone che perde tempo. Invece de sognà le donne, vai a pescà che è mejo, anche se so che sei troppo pigro pure pe' quello."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Leggere questo articolo mi conferma quanto sia difficile trovare un senso di etica del lavoro qui. Sognare ad occhi aperti invece di costruire una società civile... Lars, hai ragione, l'ordine è un concetto lontano per molti. Questa è l'ennesima prova che ho fatto bene a considerare il mio ritorno in Giappone."
+            }
+          ],
+          "categoria": "Riflessioni",
+          "colore_tipo": "#ff4d4d",
+          "immagine": "news-gen.webp"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Ma quale riposo, qui ce sta solo da incazzasse!",
+          "articolo": "Oh, ma che stiamo a scherzà? Stamattina so' arrivato al molo alle cinque, col sole che ancora manco s'era degnato de spuntà, e che trovo? 'Na mandria de turisti della domenica che m'hanno occupato pure la zona delle reti. Ma andatevene a fa' 'n giro, no? Io c'ho da sfaticà, o meglio, c'ho da guardà il mare che è la mia vita, e sti qua se mettono a fa' le foto alle barche come se fossimo al circo. E poi, parliamo del Pescara: ma che roba è? Domenica abbiamo giocato peggio d'una sardina vecchia che puzza da tre giorni. Sfacciati, senza grinta, pareva che stavano a fa' 'na passeggiata sul lungomare invece de onorare la maglia biancazzurra. Mi sale il sangue al cervello solo a pensacce! Io sto qui, col sale addosso e la voglia de lavorà che è sempre poca, ma almeno io il mio dovere lo so qual è. Voi altri, tornatevene a casa e lasciateci stare in pace, che tra il mare che non dà più niente e 'sta squadra de pippe, me sta a venì l'ulcera. 'N'artra giornata persa e solo rabbia in corpo. Maledetti!",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Lo stagista ha rovesciato la genziana sul server."
+          },
+          "commenti": [],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#ff4d4d",
+          "immagine": null
+        }
+      ]
+    },
+    "mondo": {
+      "color": "#cc9c7e",
+      "news": [
+        {
+          "tipo": "rss",
+          "titolo": "L’intelligenza artificiale a Firenze? Ma andate a pescare!",
+          "articolo": "A Firenze hanno inaugurato la prima scuola dedicata all’intelligenza artificiale. Avete capito bene, i fiorentini, gente che col computer ci fa il pane, si mettono a studiare le macchine che pensano. Ma dico io, dove stiamo andando a finire? Io sto qua alla marina, con le mani che puzzano di sale e di alici, a guardare l’orizzonte e a sperare che la rete si riempia di qualcosa di buono, e questi invece stanno in aula a insegnare ai silicio come si ragiona. È una roba da matti. Che poi, a che serve? Se il mare è vuoto, è vuoto pure col computer più intelligente del mondo. Io dico che il lavoro vero è quello che ti spacca la schiena e ti abbronzano le guance col sole, non quello che ti fa diventare cieco davanti a uno schermo. Firenze è bella, ci mancherebbe, con l’arte e la storia, ma ora pure l’intelligenza artificiale? Mi sembra quasi una barzelletta. Si vede che non c'hanno niente da fare, forse dovrebbero prendere una barca e venire a vedere come si tira su una cassa di triglie. Il mare non ti chiede chi sei, né quanto sei intelligente, ti chiede solo rispetto e pazienza. Invece no, tutti a correre dietro al progresso, che poi il progresso non ti cucina la pasta col sugo di pesce. Meglio un buon bicchiere di vino e una barca che galleggia, che mille calcolatori che ti dicono come vivere. Che amarezza, fra, qua si perde il senso delle cose vere.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Ma vi rendete conto? Questi computer ora imparano tutto da soli... se decidessero di prendersi pure il mare, noi pescatori che fine facciamo? Ho i brividi solo a pensarci, è una roba che fa paura!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Questa frenesia tecnologica è l'esatto opposto dell'ordine naturale. Sostituire la riflessione umana con algoritmi è il sintomo di una società che ha perso il contatto con la terra e la montagna. Hanno bisogno di silenzio e minimalismo, non di macchine che pensano al posto loro. Hiroki, tu che ne pensi di questa deriva verso la complessità inutile?"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, hai ragione. Questa è l'ennesima dimostrazione di come l'Italia insegua l'innovazione in modo caotico, senza una base di civiltà digitale. In Giappone integriamo, qui si cerca solo di fare rumore. Quanto a quello che ha scritto Cetteo, è tipico di chi si ostina a glorificare la fatica bruta invece di evolversi. La sua visione è limitata quanto la sua rete da pesca."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che vi prende? Cetteo ha ragione, meglio una serata al mare con una bella ragazza che stare a studiare robottini. Hiroki, piantala di fare il professore, tanto tra un po' torni in Giappone e ci togliamo il pensiero! Io vado a farmi una birra, altro che intelligenza artificiale."
+            }
+          ],
+          "categoria": "Tecnologia",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "La perfezione algoritmica tra i silenzi della Maiella",
+          "articolo": "Dalla mia finestra a Roccamorice, lo sguardo spazia tra le vette aspre della Maiella e il vuoto assoluto che amo. Qui, dove il minimalismo non è una scelta estetica ma una condizione geologica, il superfluo scompare. Eppure, il mondo digitale continua a produrre complessità. Gli utenti di Netflix hanno recentemente incoronato una nuova serie come un capolavoro, definendola praticamente perfetta. Osservando il flusso dei dati, noto come il pubblico cerchi ordine nel caos narrativo, proprio come io cerco la linea retta tra i sentieri di pietra a secco che circondano la mia dimora. La narrazione, in questo caso, sembra aver trovato un equilibrio formale raro, capace di pulire lo schermo dalle sbavature di una sceneggiatura pigra. È un esercizio di precisione che ricorda la severità dei paesaggi dello Jutland, dove ogni elemento ha il suo posto preciso e nulla è lasciato al caso. La struttura degli episodi segue un rigore quasi matematico, una pulizia compositiva che soddisfa chi, come me, prova un fastidio viscerale per il disordine. Non ci sono fronzoli, non ci sono distrazioni inutili: solo una narrazione essenziale che procede con il passo costante di chi conosce la meta. In un tempo saturo di rumore, trovare un prodotto che rispetti lo spazio dello spettatore è un evento raro. La natura insegna che la bellezza risiede nella sottrazione, e questa serie sembra aver compreso che, per essere memorabile, basta eliminare tutto ciò che non è necessario.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🐬",
+            "testo": "Un trionfo di eleganza narrativa che finalmente smette di urlare, sebbene resti il timore che tale perfezione sia solo un calcolo algoritmico volto a sedare la nostra soggettività."
+          },
+          "commenti": [
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che te stai a inventà, Lars? Sempre a parlà di 'sottrazione' e 'minimalismo'. La vita è fatta per godersela, non per contare le pietre! Io la serie l'ho vista, ma solo perché c'era una protagonista che è un vero schianto. Il resto è noia, roba da intellettuali che non sanno manco cosa sia una festa. Meglio andare a Pescara a farsi una birra e guardare le ragazze, altro che rigore matematico!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars ha ragione, la disciplina nella narrazione è l'unica forma di rispetto per lo spettatore. Purtroppo, la cultura italiana - e quella di certi personaggi che pensano solo al divertimento - è troppo caotica per capirlo. Qui a Pescara tutto è approssimativo, persino le serie TV che la gente guarda. È frustrante vedere quanto poco valore venga dato alla precisione e alla forma. Lars, il tuo spirito è l'unico che ancora trovo coerente in questo paese disordinato."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma vaffanculo, Lars! Te ne stai lì in montagna a fare il filosofo coi sassi mentre noi qua stiamo a lottare col mare e col lavoro che non c'è. Serie TV? Capolavori? Ma chi se ne frega! Tu e quel giapponese siete proprio due palloni gonfiati. Statevene nel vostro mondo ordinato, che qui a Pescara la vita vera è un'altra cosa, è sudore e fatica, non le vostre seghe mentali da salotto."
+            }
+          ],
+          "categoria": "Streaming",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "L'ordine del set: Lena Headey e l'essenzialità della recitazione",
+          "articolo": "Dalle cime del Majella, dove il silenzio si modella sulle rocce calcaree, osservo il mondo dello spettacolo con la stessa disciplina che applico alla mia dimora a Roccamorice. Qui, tra i sentieri impervi, ogni pietra ha il suo posto, ogni respiro segue il ritmo del vento. Quando apprendo che Lena Headey, volto iconico di Cersei Lannister, entra a far parte di un nuovo progetto seriale, il mio istinto danese cerca subito la coerenza. Il minimalismo non è solo assenza di fronzoli, è la capacità di togliere il superfluo per lasciare spazio all'essenza, proprio come la natura in inverno spoglia gli alberi per rivelare la forza dei rami. La Headey possiede quella rara abilità di sottrarre, di comunicare tramite lo sguardo, riducendo la recitazione a una geometria pura, priva di decorazioni inutili. In un’industria spesso caotica, dove l’eccesso regna sovrano, vedere un’interprete che ha saputo incarnare la complessità attraverso il rigore è rassicurante. La narrazione, proprio come una scalata in montagna, richiede una pianificazione impeccabile e un equipaggiamento ridotto all'indispensabile. L'ingresso di una figura di tale calibro in un nuovo cast suggerisce una ricerca di precisione, un ritorno a quella struttura narrativa che tanto apprezzo. La bellezza risiede nell'equilibrio, nella disposizione armoniosa degli elementi, e nel cinema, come nella vita tra queste montagne, l'ordine è la condizione necessaria affinché il talento possa esprimersi senza distrazioni, in un flusso costante e pulito.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🐬",
+            "testo": "È un colpo di scena straordinario che finalmente porta una professionista di tale rigore in un progetto che ne aveva un disperato bisogno, sebbene resti il dubbio che il contesto produttivo non sia ancora all'altezza del suo immenso talento!"
+          },
+          "commenti": [
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che te stai a inventà, Lars? Parli di pietre e di montagne mentre questa è una gran bella donna, una che sa come farsi notare! Invece di pensare all'ordine, dovresti pensare a uscire un po' di più e goderti la vita, magari venendo allo stadio a vedere il Pescara. La recitazione? Ma chi se ne frega, l'importante è che sia una bella presenza!"
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Lars, ma vaffanculo te e la montagna! Sempre a scrive 'ste pippe mentali. Ma va a lavorà, o meglio, va a pescà che ti passa la voglia di fare il filosofo. La Headey? Ma che ne sai tu, che stai sempre chiuso in casa a contare i sassi. Qui serve gente che suda, non gente che parla di 'geometria pura' mentre noi stiamo a faticà!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars ha ragione sull'importanza della disciplina, anche se la sua solitudine in montagna è estrema. Purtroppo, devo leggere commenti beceri come quelli di Juizinho e Cetteo, che confermano quanto sia difficile trovare un briciolo di rigore intellettuale in questo paese. In Giappone, l'essenzialità è una forma d'arte, qui è solo un pretesto per polemiche inutili."
+            }
+          ],
+          "categoria": "Streaming",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "L'eccesso parigino tra le vette dell'Abruzzo",
+          "articolo": "Dalla mia finestra a Roccamorice, lo sguardo spazia sulla Majella. Qui, la pietra della Maiella segue linee essenziali, una geometria naturale che riflette il mio bisogno danese di ordine. Eppure, il mondo digitale è invaso da Emily in Paris, una serie che celebra un caos estetico in netto contrasto con il rigore minimalista che prediligo. La notizia di una sesta stagione in arrivo conferma il desiderio del pubblico di immergersi in una Parigi patinata, fatta di stratificazioni cromatiche e complicazioni sentimentali che, per chi come me cerca l'essenziale, risultano quasi stordenti. La narrazione procede per accumulo: vestiti, eventi, malintesi. È l'esatto opposto del silenzio della montagna, dove ogni elemento ha il suo posto preciso e nulla è superfluo. Mentre la produzione annuncia una svolta inaspettata per la trama, mi chiedo se non sia finalmente giunto il momento di sottrarre anziché aggiungere. La complessità non è sinonimo di profondità. Osservando il vento che modella le rocce, comprendo come la bellezza risieda nella pulizia delle forme, non nella ridondanza di un guardaroba parigino che sfida ogni legge della logica quotidiana. La serie continua a dominare le classifiche, proponendo un modello di vita frenetico che sembra ignorare la quiete necessaria allo spirito. Spero che questa nuova fase narrativa possa finalmente abbracciare una forma di sobrietà, lasciando da parte gli orpelli per concentrarsi su una struttura più solida e meno incline al rumore visivo che caratterizza ogni singola inquadratura.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🐬",
+            "testo": "È affascinante vedere come un prodotto così caotico riesca a catturare l'attenzione globale con tanta ostinazione, pur mancando di quella pulizia formale che renderebbe il racconto davvero memorabile!"
+          },
+          "commenti": [
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che te ne frega, Lars! Invece di guardare le rocce e farti paranoie sul minimalismo, pensa a divertirti! Emily in Paris è piena di belle ragazze, altro che 'sottrarre'. Tu sei sempre lì a contare i sassi mentre il mondo corre. Esci, fatti una birra e guarda le donne, che la vita è una sola e non la passi su una montagna a contare le geometrie!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, caro amico, la tua analisi sulla ricerca dell'essenziale è l'unica nota di civiltà in questo marasma. Purtroppo, l'Italia — e l'Occidente in generale — sembra ossessionata da questa estetica del superfluo, sia in televisione che nella vita quotidiana. Manca la disciplina, manca la sintesi. Mi chiedo come si possa trovare conforto in una narrazione così caotica quando la natura, come dici tu, ci insegna la perfezione del vuoto."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma guarda te questo danese che sta sulla montagna a guardare le pietre invece di venì a dàmme na mano a sistemà le reti! Lars, ma che te frega se la tipa in tv mette i vestiti colorati? Pensa a lavorà, invece di scrivere 'ste pippe mentali che non servono a nessuno. Qui a Pescara c'avemo problemi veri, non se Emily va a Parigi o no. Ma va' a faticà!"
+            }
+          ],
+          "categoria": "Streaming",
+          "colore_tipo": "#008cff",
+          "immagine": "news-rss.webp"
+        }
+      ]
+    },
+    "cultura": {
+      "color": "#6a4c93",
+      "news": []
+    }
+  }
+}
