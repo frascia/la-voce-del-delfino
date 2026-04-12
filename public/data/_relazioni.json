@@ -1,148 +1,153 @@
 {
-  "_runCount": 13,
+  "_runCount": 0,
   "Ernesto→Giovanni": {
-    "score": -0.081,
+    "score": -0.073,
     "label": "neutro",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Giovanni→Ernesto": {
-    "score": 0.081,
+    "score": 0.073,
     "label": "neutro",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Peppino→Ernesto": {
-    "score": 0.81,
+    "score": 0.729,
     "label": "amico",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Peppino→Giovanni": {
-    "score": 0.081,
+    "score": 0.073,
     "label": "neutro",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Ernesto→Peppino": {
-    "score": -0.203,
-    "label": "diffidente",
+    "score": -0.183,
+    "label": "neutro",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Giovanni→Peppino": {
-    "score": -0.648,
-    "label": "ostile",
+    "score": -0.583,
+    "label": "diffidente",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Peppino→Autore": {
-    "score": 0.162,
+    "score": 0.146,
     "label": "neutro",
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Juizinho→Cetteo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Lars→Hiroki": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Juizinho": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Cetteo→Lars": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Juizinho→Hiroki": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Lars": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Cetteo→Hiroki": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Lars→Juizinho": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Juizinho→Lars": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/04/2026"
+    "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Redazione": {
-    "score": -0.9,
+    "score": -0.81,
     "label": "ostile",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Hiroki→Questa comunità": {
-    "score": -0.27,
+    "score": -0.243,
     "label": "diffidente",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Redazione": {
-    "score": -0.36,
+    "score": -0.324,
     "label": "diffidente",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Autore": {
-    "score": -0.93,
+    "score": -0.837,
     "label": "ostile",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Cetteo→Autore": {
-    "score": -0.92,
+    "score": -0.828,
     "label": "ostile",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.84,
+    "score": -0.756,
     "label": "ostile",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Questa terra": {
-    "score": -0.27,
+    "score": -0.243,
     "label": "diffidente",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Autore Articolo": {
-    "score": -0.27,
+    "score": -0.243,
     "label": "diffidente",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Cetteo→Autore Articolo": {
-    "score": -0.18,
+    "score": -0.162,
     "label": "neutro",
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Hiroki→Autore Articolo": {
-    "score": -0.18,
+    "score": -0.162,
     "label": "neutro",
     "ultimo_aggiornamento": "11/04/2026"
+  },
+  "Hiroki→Pescara": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "12/04/2026"
   }
 }
