@@ -1,229 +1,230 @@
-<!DOCTYPE html><html lang="it">
+<!DOCTYPE html>
+<html lang="it">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Voce del Delfino 🐬</title><style>
-:root{
-  --blu-mare:#005f73;
-  --panna:#faf7f2;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Voce del Delfino 🐬</title>
+
+<style>
+
+/* ===== BASE (mantieni struttura originale) ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #faf7f2;
+  margin: 0;
+  padding: 10px;
 }
 
-body{
-  margin:0;
-  background:var(--blu-mare);
-  font-family:-apple-system,Segoe UI,Roboto;
+.container {
+  max-width: 800px;
+  margin: auto;
 }
 
-#app{min-height:100vh}
-
-.testata img{
-  width:100%;
-  max-height:320px;
-  object-fit:cover;
+/* ===== CARD ===== */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: #fff;
 }
 
-.menu{
-  display:flex;
-  gap:10px;
-  padding:15px;
-  overflow:auto;
+/* BORDI */
+.card.rss {
+  border: 2px solid #ffffff;
 }
 
-.tab{
-  padding:10px 16px;
-  border-radius:20px;
-  border:1px solid #fff;
-  color:#fff;
-  cursor:pointer;
+.card.gen,
+.card.redazionale {
+  border: 2px solid #005f73;
 }
 
-.tab.attiva{
-  background:#fff;
-  color:var(--blu-mare);
+/* HEADER */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
 }
 
-.notizia{
-  background:var(--panna);
-  margin:15px;
-  padding:18px;
-  border-radius:14px;
+/* AVATAR */
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
 }
 
-.autore{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  font-size:13px;
-  margin-bottom:8px;
+/* AUTORE */
+.autore {
+  font-weight: bold;
 }
 
-.autore span{
-  font-size:18px;
+/* BODY */
+.card-body {
+  padding: 10px;
 }
 
-.commenti-header{
-  margin-top:10px;
-  cursor:pointer;
-  font-size:12px;
-  display:flex;
-  align-items:center;
-  gap:8px;
+h3 {
+  margin: 5px 0;
 }
 
-.badge-new{
-  background:#e63946;
-  color:#fff;
-  font-size:10px;
-  padding:2px 6px;
-  border-radius:8px;
+/* TESTO */
+.testo.completo {
+  display: none;
 }
 
-.commenti-box{
-  display:none;
-  margin-top:10px;
+/* BUTTON */
+.toggle {
+  margin-top: 8px;
+  padding: 5px 10px;
+  border: none;
+  background: #005f73;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.commento{
-  background:#fff;
-  padding:10px;
-  border-radius:12px;
-  margin-bottom:8px;
-  font-size:13px;
-  display:flex;
-  gap:8px;
+/* COMMENTI */
+.commenti {
+  padding: 10px;
 }
 
-.avatar{font-size:20px}
-.nome{font-weight:700}
-.meta{font-size:10px;color:#888}
-</style></head><body>
-<div id="app"><div class="testata" id="logo">
-<img id="header-img" src="public/images/default.webp">
-</div><div class="menu" id="menu"></div>
-<div id="lista"></div></div><script>
-
-function esc(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]))}
-
-async function safeFetch(url){
- try{
-  const r=await fetch(url+"?v="+Date.now());
-  if(!r.ok) throw new Error();
-  return await r.json();
- }catch(e){return null}
+.commento {
+  padding: 6px;
+  margin: 5px 0;
+  border-left: 4px solid var(--colore-personaggio, #333);
 }
 
-let CFG=null;
+</style>
+</head>
 
-function setHeader(src){
- const img=document.getElementById('header-img');
- img.src='public/images/'+(src||'default.webp');
-}
+<body>
 
-function renderMenu(sezioni){
- const m=document.getElementById('menu');
- m.innerHTML='';
- sezioni.forEach((s,i)=>{
-  const b=document.createElement('button');
-  b.className='tab'+(i===0?' attiva':'');
-  b.textContent=s;
-  b.onclick=()=>{
-    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('attiva'));
-    b.classList.add('attiva');
-    loadSezione(s);
-  };
-  m.appendChild(b);
- });
-}
+<div class="container" id="app"></div>
 
-// 🎨 COLORE PERSONAGGIO
-function getColore(nome){
- if(!nome) return '#333';
- let hash=0;
- for(let i=0;i<nome.length;i++) hash=nome.charCodeAt(i)+((hash<<5)-hash);
- const h=hash%360;
- return `hsl(${h},60%,40%)`;
-}
+<script>
 
-function buildCommenti(commenti){
- if(!Array.isArray(commenti)||!commenti.length) return '';
+/* ===== CONFIG MOCK (usa il tuo JSON reale) ===== */
+const CONFIG = {
+  STILI: {
+    pescara: "#005f73",
+    mondo: "#cc9c7e",
+    cultura: "#6a4c93"
+  },
+  IMMAGINI: {
+    personaggio: "news-redazionale.webp"
+  },
+  CHI: {
+    Lars: { img: "lars.webp" },
+    Juizinho: { img: "juizinho.webp" },
+    Cetteo: { img: "cetteo.webp" },
+    Hiroki: { img: "hiroki.webp" },
+    Glusi: { img: "glusi.webp" },
+    Lilli: { img: "lilli.webp" },
+    Wolf: { img: "wolf.webp" },
+    Abbukk: { img: "abbukk.webp" },
+    default: { img: "" }
+  }
+};
 
- const nuovi=commenti.some(c=>c.nuovo);
+/* ===== DATI MOCK ===== */
+const articoli = [
+  {
+    titolo: "Calamaro gigante avvistato",
+    testoBreve: "Avvistamento incredibile al porto...",
+    testoCompleto: "Un calamaro gigante è stato avvistato vicino al porto canale...",
+    firma: "Cetteo",
+    tipo: "RSS",
+    sez: "pescara",
+    commenti: [
+      { nome: "Lars", testo: "Interessante fenomeno naturale." }
+    ]
+  },
+  {
+    titolo: "Riflessioni sul caos italiano",
+    testoBreve: "L'Italia è bella ma disordinata...",
+    testoCompleto: "Dopo anni in Giappone, noto differenze profonde...",
+    firma: "Hiroki",
+    tipo: "GEN",
+    sez: "pescara",
+    commenti: [
+      { nome: "Glusi", testo: "Siii siii siii vero vero vero!" }
+    ]
+  }
+];
 
- const list=commenti.map(c=>{
-  const colore=getColore(c.nome);
+/* ===== RENDER ===== */
+function renderArticolo(articolo) {
+  const personaggio = CONFIG.CHI[articolo.firma] || CONFIG.CHI.default;
+
+  const basePath = "/images";
+
+  const imgPersonaggio = personaggio.img
+    ? `${basePath}/${personaggio.img}`
+    : `${basePath}/${CONFIG.IMMAGINI.personaggio}`;
+
+  const colore = CONFIG.STILI[articolo.sez] || "#333";
+
+  const tipoClasse =
+    articolo.tipo === "RSS" ? "rss" :
+    articolo.tipo === "GEN" ? "gen" : "redazionale";
+
   return `
-  <div class="commento" style="border-left:4px solid ${colore}">
-    <div class="avatar">${esc(c.avatar||'👤')}</div>
-    <div>
-      <div class="nome" style="color:${colore}">${esc(c.nome||'Anon')}</div>
-      <div class="meta">${esc(c.data||'')}</div>
-      <div>${esc(c.testo||'')}</div>
+    <div class="card ${tipoClasse}" style="--colore-personaggio:${colore}">
+      
+      <div class="card-header">
+        <img 
+          class="avatar"
+          src="${imgPersonaggio}"
+          onerror="this.onerror=null; this.src='${basePath}/${CONFIG.IMMAGINI.personaggio}'"
+        >
+        <div class="autore">${articolo.firma}</div>
+      </div>
+
+      <div class="card-body">
+        <h3>${articolo.titolo}</h3>
+
+        <p class="testo corto">${articolo.testoBreve}</p>
+        <p class="testo completo">${articolo.testoCompleto}</p>
+
+        <button class="toggle">Leggi di più</button>
+      </div>
+
+      <div class="commenti">
+        ${articolo.commenti.map(c => `
+          <div class="commento">
+            <strong>${c.nome}:</strong> ${c.testo}
+          </div>
+        `).join("")}
+      </div>
+
     </div>
-  </div>`;
- }).join('');
-
- return `
- <div class="commenti-header" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
- 💬 ${commenti.length} commenti ${nuovi?'<span class="badge-new">NEW</span>':''}
- </div>
- <div class="commenti-box">${list}</div>`;
-}
-
-function renderNews(news){
- const lista=document.getElementById('lista');
- lista.innerHTML='';
-
- news.forEach(n=>{
-  const autore=CFG?.CHI?.[n.firma];
-
-  // 📸 SEMPRE PERSONAGGIO
-  let img='public/images/default.webp';
-  if(autore?.img) img='public/images/'+autore.img;
-
-  const colore=getColore(n.firma);
-
-  const div=document.createElement('div');
-  div.className='notizia';
-
-  div.innerHTML=`
-   <img src="${img}" style="width:100%;border-radius:12px;margin-bottom:10px">
-
-   <div class="autore" style="color:${colore}">
-     <span>${esc(autore?.avatar||'👤')}</span>
-     <strong>${esc(n.firma||'Redazione')}</strong>
-   </div>
-
-   <h2>${esc(n.titolo)}</h2>
-   <p>${esc(n.articolo||'')}</p>
-
-   ${buildCommenti(n.commenti)}
   `;
-
-  lista.appendChild(div);
- });
 }
 
-async function loadSezione(sez){
- const data=await safeFetch('public/data/news-v2-'+sez+'.json');
- if(!data) return;
- document.body.style.background=data.color||'#005f73';
- renderNews(data.news||[]);
-}
+/* ===== INIT ===== */
+const app = document.getElementById("app");
+app.innerHTML = articoli.map(renderArticolo).join("");
 
-async function init(){
- const cfg=await safeFetch('public/data/active_config_v2.json');
- if(!cfg) return;
- CFG=cfg;
+/* ===== TOGGLE ===== */
+document.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("toggle")) return;
 
- setHeader(cfg.site_settings?.header_img);
+  const card = e.target.closest(".card");
+  const corto = card.querySelector(".corto");
+  const completo = card.querySelector(".completo");
 
- const sezioni=[...new Set((cfg.REDAZIONE||[]).map(v=>v.sez))];
- renderMenu(sezioni);
+  if (completo.style.display === "none" || completo.style.display === "") {
+    completo.style.display = "block";
+    corto.style.display = "none";
+    e.target.innerText = "Leggi di meno";
+  } else {
+    completo.style.display = "none";
+    corto.style.display = "block";
+    e.target.innerText = "Leggi di più";
+  }
+});
 
- if(sezioni[0]) loadSezione(sezioni[0]);
-}
+</script>
 
-init();
-
-</script></body>
+</body>
 </html>
