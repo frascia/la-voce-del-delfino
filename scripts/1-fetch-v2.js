@@ -293,6 +293,7 @@ async function generaArticolo(voce, CHI, titolo) {
     const bioFirma = (firma.bio_breve || firma.bio) ? `La tua storia: "${firma.bio_breve || firma.bio}".` : "";
     const moodCommento = voce.mood ? `Il tono del commento finale deve essere: ${voce.mood}` : "";
     const isGenerato = voce.tipo === "GEN";
+    const imgFirma = firma.img; // <<<<<<<<<<<<<======================================================
     // inventare è indipendente dal tipo — può essere true sia su GEN che su RSS
 
     // fantasia: true = inventa liberamente | false/assente = scrive cose vere (anche se senza RSS)
