@@ -1,5 +1,22 @@
+# 1. Ignora tutto
+*
+
+# 2. Escludi specificamente la cartella .vs (e altre simili se vuoi)
+# Metterlo qui assicura che Git non ci entri nemmeno
+.vs/
+.vscode/
 node_modules/
-build/
-.env
-.env.local
-.DS_Store
+
+# 3. Permetti di esplorare le altre cartelle
+!**/
+
+# 4. Eccezioni per i tuoi file
+!**/*.yaml
+!**/*.json
+!**/*.js
+!.gitignore
+!**/*.png
+!**/*.webP
+/.vs/VSWorkspaceState.json
+/.vs/la-voce-del-delfino/v17
+/.vs/slnx.sqlite
