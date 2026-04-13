@@ -150,7 +150,7 @@
       "lab": "Cronaca",
       "firma": "Cetteo",
       "mood": "burbero e sospettoso",
-      "num": 2,
+      "num": 1,
       "inventare": false,
       "weight_articolo": 0.5,
       "weight_commento": 0.4
@@ -163,7 +163,7 @@
       "lab": "Politica",
       "firma": "Cetteo",
       "mood": "rassegnato e burocratico",
-      "num": 2,
+      "num": 1,
       "inventare": false,
       "weight_articolo": 0.5,
       "weight_commento": 0.5
@@ -189,7 +189,7 @@
       "lab": "Sport",
       "firma": "Cetteo",
       "mood": "polemico e drammatico",
-      "num": 2,
+      "num": 1,
       "inventare": false,
       "weight_articolo": 0.6,
       "weight_commento": 0.8
@@ -238,7 +238,11 @@
         "Inventare tutto, dimenticare niente: Il mio dizionario virale",
         "Glugluglu: Se lo dico tre volte allora è vero",
         "Dalle parole ai fatti, ai fatti, ai fatti: Il mio mondo a ripetizione"
-      ]
+      ],
+      "num": 1,
+      "inventare": false,
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
     },
     {
       "g": "lun,mar",
@@ -259,7 +263,11 @@
         "Sognare a occhi aperti: La timidezza come rifugio",
         "Un segnalibro nel cuore: Dove la natura incontra la fiaba",
         "La ragazza che parlava alle nuvole e leggeva ai poeti"
-      ]
+      ],
+      "num": 1,
+      "inventare": false,
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
     },
     {
       "g": "sab,dom",
@@ -280,7 +288,11 @@
         "Dalla barca alla gradinata: L'unica fede che non tradisce mai",
         "Pesce fresco e lingua sporca: Tutto quello che vi direi in faccia",
         "Lu core di Pescara non è per tutti: Sangue, sudore e arrosticini di mare"
-      ]
+      ],
+      "num": 1,
+      "inventare": false,
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
     },
     {
       "g": "mer",
@@ -383,7 +395,7 @@
       "weight_commento": 0.7
     },
     {
-      "g": "default",
+      "g": "mer",
       "sez": "mondo",
       "arg": "Intelligenza Artificiale novità",
       "tipo": "RSS",
@@ -396,7 +408,7 @@
       "weight_commento": 0.9
     },
     {
-      "g": "default",
+      "g": "mar",
       "sez": "mondo",
       "arg": "Novità serie Netflix",
       "tipo": "RSS",
@@ -422,7 +434,7 @@
       "weight_commento": 0.65
     },
     {
-      "g": "default",
+      "g": "gio",
       "sez": "cultura",
       "arg": "Nuovi film da vedere cinema",
       "tipo": "RSS",
@@ -442,13 +454,13 @@
       "lab": "Da Leggere",
       "firma": "Lilli",
       "mood": "entusiasta ma esigente",
-      "num": 2,
+      "num": 1,
       "inventare": true,
       "weight_articolo": 0.65,
       "weight_commento": 0.7
     },
     {
-      "g": "lun,gio",
+      "g": "ven,gio",
       "sez": "cultura",
       "arg": "Viaggi mete insolite Europa",
       "tipo": "RSS",
