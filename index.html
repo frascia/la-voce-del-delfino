@@ -11,25 +11,9 @@
 
         /* TESTATA */
         .testata { width:100%; background:var(--blu-mare); line-height:0; text-align:center; position:relative; }
-        /*testata img#header-img { width:100%; height:auto; max-height:350px; object-fit:cover; display:block; }
-        */
-    .testata img#header-img {
-        width: 100%;
-        height: auto;
-        /* Su mobile lo teniamo basso, su PC lo alziamo */
-        max-height: 250px; 
-        object-fit: cover;
-        /* Fondamentale: tiene il logo centrato e non taglia la "testa" */
-        object-position: center center; 
-        display: block;
-    }
-
-    /* Solo per schermi PC grandi */
-    @media (min-width: 1024px) {
-        .testata img#header-img {
-            max-height: 450px; /* Più respiro per il logo su PC */
-            object-fit: cover; /* O 'contain' se il logo ha scritte ai bordi */
-    }
+        testata img#header-img { width:100%; height:auto; max-height:450px; object-fit:cover; display:block; }
+        
+ 
 }
         ////
         /* TIMESTAMP */
