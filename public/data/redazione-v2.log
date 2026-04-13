@@ -418,3 +418,122 @@ Please retry in 37.468716305s. (code: 429)
 [13/04/2026, 08:38:25] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (2 articoli, 0 nuovi)
 [13/04/2026, 08:38:25] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (4 articoli, 0 nuovi)
 [13/04/2026, 08:38:25] [3-deploy-v2] 🕐 Ora: 12/04, 21:33 | Prossimo: 13/04, 10:38
+[13/04/2026, 10:16:42] [1-fetch-v2] ═══════════════════════════════════
+[13/04/2026, 10:16:42] [1-fetch-v2] 🐬 NUOVO RUN v2 [ lunedì 13 aprile 2026 alle ore 10:16:42 ]
+[13/04/2026, 10:16:42] [1-fetch-v2] ═══════════════════════════════════
+[13/04/2026, 10:16:42] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[13/04/2026, 10:16:42] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[13/04/2026, 10:16:42] [1-fetch-v2] 🕐 Fascia articoli attiva: NO | Lunghezza target: ~240 parole
+[13/04/2026, 10:16:42] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[13/04/2026, 10:16:42] [1-fetch-v2] 📅 Giorno: lun | Timbro: Il Trauma del Lunedì
+[13/04/2026, 10:16:42] [1-fetch-v2] 🌅 Primo run oggi: true | Articoli verranno accumulati
+[13/04/2026, 10:16:42] [1-fetch-v2] 📋 Voci attive oggi: 12
+[13/04/2026, 10:16:42] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 10:16:42] [1-fetch-v2] 🎣 [pescara] Politica Locale Pescara — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 10:16:43] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Politica Locale Pescara". Passo 2 alla voce successiva.
+[13/04/2026, 10:16:43] [1-fetch-v2] 🎣 [pescara] Pescara Calcio — tipo: RSS, num: 4, firma: Cetteo, ~240 parole
+[13/04/2026, 10:16:43] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 1, firma: Hiroki, ~240 parole
+[13/04/2026, 10:16:43] [1-fetch-v2] 🎣 [pescara] Il ripetitivo siiiiiiiiii — tipo: GEN, num: 1, firma: Glusi, ~240 parole
+[13/04/2026, 10:16:43] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 1, firma: Lilli, ~240 parole
+[13/04/2026, 10:16:43] [1-fetch-v2] 🎣 [pescara] Il brasileiro — tipo: GEN, num: 1, firma: Juizinho, ~240 parole
+[13/04/2026, 10:16:43] [1-fetch-v2] 🎣 [mondo] Intelligenza Artificiale novità — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 10:16:44] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Intelligenza Artificiale novità". Passo 1 alla voce successiva.
+[13/04/2026, 10:16:44] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 3, firma: Lars, ~240 parole
+[13/04/2026, 10:16:44] [1-fetch-v2] [CASCATA] Solo 2/3 notizie per "Novità serie Netflix". Passo 1 alla voce successiva.
+[13/04/2026, 10:16:44] [1-fetch-v2] 🎣 [cultura] Nuovi film da vedere cinema — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 10:16:45] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Nuovi film da vedere cinema". Passo 2 alla voce successiva.
+[13/04/2026, 10:16:45] [1-fetch-v2] 🎣 [cultura] Nuovi libri — tipo: GEN, num: 4, firma: Lilli, ~240 parole
+[13/04/2026, 10:16:45] [1-fetch-v2] 🎣 [cultura] Viaggi mete insolite Europa — tipo: RSS, num: 2, firma: Lars, ~240 parole
+[13/04/2026, 10:16:45] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Viaggi mete insolite Europa". Passo 1 alla voce successiva.
+[13/04/2026, 10:17:16] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 4 stati cambiati.
+[13/04/2026, 10:17:16] [1-fetch-v2]   ✅ "Pescara-Sampdoria: na mazzata che ancora brucia..." — 3 commenti
+[13/04/2026, 10:17:36] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
+[13/04/2026, 10:17:36] [1-fetch-v2]   ✅ "Piazza della Repubblica, il solito teatrino..." — 3 commenti
+[13/04/2026, 10:18:06] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
+[13/04/2026, 10:18:06] [1-fetch-v2]   ✅ "Carrara, na trasferta che puzza de mare e de soffe..." — 3 commenti
+[13/04/2026, 10:18:16] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
+[13/04/2026, 10:18:16] [1-fetch-v2]   ✅ "Pescara, che strazio: tra mare e miseria..." — 3 commenti
+[13/04/2026, 10:18:27] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 3 stati cambiati.
+[13/04/2026, 10:18:27] [1-fetch-v2]   ✅ "Carrarese, ma che ne sapete del mare vero?..." — 3 commenti
+[13/04/2026, 10:18:47] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:18:47] [1-fetch-v2]   ✅ "Pescara: tra il mare che piange e la città che dor..." — 3 commenti
+[13/04/2026, 10:18:55] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:18:55] [1-fetch-v2]   ✅ "Manuale di resistenza civile: tra Pescara e il Sol..." — 3 commenti
+[13/04/2026, 10:19:18] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:19:18] [1-fetch-v2]   ✅ "La forza della ripetizione: il potere di dire le c..." — 3 commenti
+[13/04/2026, 10:19:33] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:19:33] [1-fetch-v2]   ✅ "Il rifugio segreto tra le pagine e le foglie..." — 3 commenti
+[13/04/2026, 10:20:09] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:20:09] [1-fetch-v2]   ✅ "Pescara e l'Anima: Un Incrocio di Passioni..." — 3 commenti
+[13/04/2026, 10:20:24] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[13/04/2026, 10:20:24] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[13/04/2026, 10:20:38] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:20:38] [1-fetch-v2]   ✅ "Auto che guidano da sole? Ma vaffanculo!..." — 3 commenti
+[13/04/2026, 10:20:58] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:20:58] [1-fetch-v2]   ✅ "La perfezione digitale e il calore della Maiella..." — 3 commenti
+[13/04/2026, 10:21:30] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:21:30] [1-fetch-v2]   ✅ "Dalle vette della Majella al chiacchiericcio di co..." — 3 commenti
+[13/04/2026, 10:25:38] [1-fetch-v2] 🔄 Relazioni aggiornate: 7 delta, 4 stati cambiati.
+[13/04/2026, 10:25:38] [1-fetch-v2]   ✅ "Il rifugio silenzioso tra le pagine di carta..." — 3 commenti
+[13/04/2026, 10:26:38] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 4 stati cambiati.
+[13/04/2026, 10:26:38] [1-fetch-v2]   ✅ "Il profumo della carta: un rifugio tra le pagine..." — 3 commenti
+[13/04/2026, 10:28:33] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 4 stati cambiati.
+[13/04/2026, 10:28:33] [1-fetch-v2]   ✅ "Il profumo della carta: un rifugio tra le pagine..." — 3 commenti
+[13/04/2026, 10:29:07] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[13/04/2026, 10:29:07] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[13/04/2026, 10:29:22] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:29:22] [1-fetch-v2]   ✅ "Il profumo della carta: un rifugio tra le pagine..." — 3 commenti
+[13/04/2026, 10:29:36] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:29:36] [1-fetch-v2]   ✅ "Oltre il minimalismo: la bellezza condivisa nelle ..." — 3 commenti
+[13/04/2026, 10:29:36] [1-fetch-v2] 🧊 Articoli congelati — aggiungo commenti alle notizie esistenti...
+[13/04/2026, 10:29:46] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:29:46] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Pescara-Sampdoria: il Delfino s'affoga d..."
+[13/04/2026, 10:29:47] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[13/04/2026, 10:29:47] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[13/04/2026, 10:30:10] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 4 stati cambiati.
+[13/04/2026, 10:30:10] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Piazza della Repubblica, sempre la solit..."
+[13/04/2026, 10:30:50] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[13/04/2026, 10:30:50] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[13/04/2026, 10:31:00] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[13/04/2026, 10:31:00] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[13/04/2026, 10:31:36] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 6 stati cambiati.
+[13/04/2026, 10:31:36] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Pescara..."
+[13/04/2026, 10:31:58] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 6 stati cambiati.
+[13/04/2026, 10:31:58] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Gol del portiere Iannarilli, l'Avellino ..."
+[13/04/2026, 10:32:08] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 10:32:08] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Pescara-Sampdoria 1-2: ribaltone da urlo..."
+[13/04/2026, 10:32:20] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 6 stati cambiati.
+[13/04/2026, 10:32:20] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Pack 2 gare valido per le ultime sfide c..."
+[13/04/2026, 10:32:30] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 6 stati cambiati.
+[13/04/2026, 10:32:30] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Pescara, chi sbaglia paga..."
+[13/04/2026, 10:34:35] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 7 stati cambiati.
+[13/04/2026, 10:34:35] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Lu core di Pescara non è per tutti: Sang..."
+[13/04/2026, 10:35:02] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 6 stati cambiati.
+[13/04/2026, 10:35:02] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Samba nel sangue, donne nel cuore: La mi..."
+[13/04/2026, 10:35:48] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 6 stati cambiati.
+[13/04/2026, 10:35:48] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Bridgerton ha una nuova rivale? Questa s..."
+[13/04/2026, 10:36:53] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 6 stati cambiati.
+[13/04/2026, 10:36:53] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "«Un capolavoro del suo genere»: per gli ..."
+[13/04/2026, 10:37:30] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 6 stati cambiati.
+[13/04/2026, 10:37:30] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Nuovi libri..."
+[13/04/2026, 10:37:51] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 7 stati cambiati.
+[13/04/2026, 10:37:51] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Nuovi libri..."
+[13/04/2026, 10:38:03] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 6 stati cambiati.
+[13/04/2026, 10:38:03] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Nuovi libri..."
+[13/04/2026, 10:38:13] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 7 stati cambiati.
+[13/04/2026, 10:38:13] [1-fetch-v2]   💬 Nuovi commenti aggiunti a: "Nuovi libri..."
+[13/04/2026, 10:38:13] [1-fetch-v2] 💬 Chat oggi: sì
+[13/04/2026, 10:38:19] [1-fetch-v2] 💬 Chat salvata: 5 messaggi.
+[13/04/2026, 10:38:19] [1-fetch-v2] 📊 Totale giornata: chiamate=95, token_stimati≈42750, rss=0
+[13/04/2026, 10:38:19] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[13/04/2026, 10:38:19] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[13/04/2026, 10:38:27] [1-fetch-v2] ✍️ Articolo personaggio scritto da Wolf: "L'inutile chiasso della pianura..."
+[13/04/2026, 10:38:27] [1-fetch-v2] 📊 Chiamate API totali: 91
+[13/04/2026, 10:38:27] [1-fetch-v2] 🌅 Primo run mattutino con API OK — articoli precedenti rimossi.
+[13/04/2026, 10:38:27] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
+[13/04/2026, 10:38:27] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[13/04/2026, 10:38:30] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[13/04/2026, 10:38:30] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (9 articoli, 0 nuovi)
+[13/04/2026, 10:38:30] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (2 articoli, 0 nuovi)
+[13/04/2026, 10:38:30] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (4 articoli, 0 nuovi)
+[13/04/2026, 10:38:30] [3-deploy-v2] 🕐 Ora: 12/04, 21:33 | Prossimo: Aggiornamenti sospesi
