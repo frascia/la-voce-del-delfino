@@ -735,7 +735,13 @@ async function main() {
         // 1. Genera articolo
         const rawArticolo    = await generaArticolo(voce, CHI, tema);
         const parsedArticolo = parseJSON(rawArticolo);
-
+        // --- CONTROLLO DI QUALITÀ ---
+        // Se parsedArticolo è null o non ha il testo, saltiamo completamente questo giro.
+        // Niente scuse del tipo "IA in pausa caffè" nel database!
+        if (!parsedArticolo || !parsedArticolo.articolo || parsedArticolo.articolo.length < 50) {
+            scriviLog(`⚠️  [SKIP] Articolo su "${tema.substring(0,30)}..." fallito o vuoto. Non registrato.`);
+            continue; // Passa alla prossima notizia senza fare nulla
+        }
         const articoloTesto  = parsedArticolo?.articolo ||
             (voce.tipo === "GEN"
                 ? `Avevamo uno scoop su "${tema}", ma un gabbiano ha rubato gli appunti.`
