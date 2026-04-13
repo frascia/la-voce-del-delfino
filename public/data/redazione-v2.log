@@ -1641,3 +1641,61 @@ Please retry in 59.955636055s. (code: 429)
 [13/04/2026, 19:34:02] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (1 articoli, 0 nuovi)
 [13/04/2026, 19:34:02] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (0 articoli, 0 nuovi)
 [13/04/2026, 19:34:02] [3-deploy-v2] 🕐 Ora: 13/04, 19:33 | Prossimo: 13/04, 21:34
+[13/04/2026, 21:16:16] [1-fetch-v2] ═══════════════════════════════════
+[13/04/2026, 21:16:16] [1-fetch-v2] 🐬 NUOVO RUN v2 [ lunedì 13 aprile 2026 alle ore 21:16:16 ]
+[13/04/2026, 21:16:16] [1-fetch-v2] ═══════════════════════════════════
+[13/04/2026, 21:16:16] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[13/04/2026, 21:16:16] [1-fetch-v2] 🔄 Reset quote cumulative (13/04 21:16 IT).
+[13/04/2026, 21:16:16] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[13/04/2026, 21:16:16] [1-fetch-v2] 🕐 Fascia articoli attiva: NO | Lunghezza target: ~160 parole
+[13/04/2026, 21:16:17] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[13/04/2026, 21:16:17] [1-fetch-v2] 📅 Giorno: lun | Timbro: Il Trauma del Lunedì
+[13/04/2026, 21:16:17] [1-fetch-v2] 📋 Voci attive oggi: 8
+[13/04/2026, 21:16:17] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 1, firma: Cetteo, ~160 parole
+[13/04/2026, 21:16:17] [1-fetch-v2] 🎣 [pescara] Politica Locale Pescara — tipo: RSS, num: 1, firma: Cetteo, ~160 parole
+[13/04/2026, 21:16:18] [1-fetch-v2] [CASCATA] Solo 0/1 notizie per "Politica Locale Pescara". Passo 1 alla voce successiva.
+[13/04/2026, 21:16:18] [1-fetch-v2] 🎣 [pescara] Pescara Calcio — tipo: RSS, num: 2, firma: Cetteo, ~160 parole
+[13/04/2026, 21:16:18] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 1, firma: Hiroki, ~160 parole
+[13/04/2026, 21:16:18] [1-fetch-v2] 🎣 [pescara] Il ripetitivo siiiiiiiiii — tipo: GEN, num: 1, firma: Glusi, ~160 parole
+[13/04/2026, 21:16:18] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 1, firma: Lilli, ~160 parole
+[13/04/2026, 21:16:18] [1-fetch-v2] 🎣 [pescara] Il brasileiro — tipo: GEN, num: 1, firma: Juizinho, ~160 parole
+[13/04/2026, 21:16:18] [1-fetch-v2] 🎣 [cultura] Nuovi libri — tipo: GEN, num: 1, firma: Lilli, ~160 parole
+[13/04/2026, 21:16:21] [1-fetch-v2] [ERRORE GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.1-flash-lite
+Please retry in 38.221669209s. (code: 429)
+[13/04/2026, 21:16:21] [1-fetch-v2] ❌ QUOTA GIORNALIERA ESAURITA
+[13/04/2026, 21:16:21] [1-fetch-v2]   ✅ "Cocaina a Borgomarino: ma la gente non ha niente d..." — 0 commenti
+[13/04/2026, 21:16:21] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Verso Carrarese-Pescara: entra..." fallito o vuoto. Non registrato.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Pescara, la corsa salvezza rip..." fallito o vuoto. Non registrato.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Sole, mare e disorganizzazione..." fallito o vuoto. Non registrato.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Glugluglu: Se lo dico tre volt..." fallito o vuoto. Non registrato.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Cercasi principe tra i classic..." fallito o vuoto. Non registrato.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Saudade e sorrisi: Perché la v..." fallito o vuoto. Non registrato.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[13/04/2026, 21:16:21] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Nuovi libri..." fallito o vuoto. Non registrato.
+[13/04/2026, 21:16:21] [1-fetch-v2] 🧊 Articoli congelati — aggiungo commenti alle notizie esistenti...
+[13/04/2026, 21:16:21] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
+[13/04/2026, 21:16:21] [1-fetch-v2] 📊 Totale giornata: chiamate=2, token_stimati≈900, rss=0
+[13/04/2026, 21:16:21] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[13/04/2026, 21:16:21] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[13/04/2026, 21:16:21] [1-fetch-v2] ⏭️ Quota esaurita, salto.
+[13/04/2026, 21:16:21] [1-fetch-v2] 📊 Chiamate API totali: 2
+[13/04/2026, 21:16:21] [1-fetch-v2] 💾 Draft salvato in modo sicuro (1 articoli).
+[13/04/2026, 21:16:21] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft aggiornato.
+[13/04/2026, 21:16:21] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[13/04/2026, 21:16:23] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
+[13/04/2026, 21:16:23] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
+[13/04/2026, 21:16:23] [2-elabora-v2] 🔐 auth_info.json aggiornato.
+[13/04/2026, 21:16:23] [2-elabora-v2] ✅ Sezione pescara: 1 articoli normalizzati.
+[13/04/2026, 21:16:23] [2-elabora-v2] ✅ Sezione cultura: 0 articoli normalizzati.
+[13/04/2026, 21:16:23] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[13/04/2026, 21:16:23] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[13/04/2026, 21:16:23] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (1 articoli, 0 nuovi)
+[13/04/2026, 21:16:23] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (0 articoli, 0 nuovi)
+[13/04/2026, 21:16:23] [3-deploy-v2] 🕐 Ora: 13/04, 21:16 | Prossimo: 13/04, 23:16
