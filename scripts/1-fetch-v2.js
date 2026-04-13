@@ -640,10 +640,11 @@ async function main() {
 
     // Applica decay settimanale
     relazioni = applicaDecay(relazioni);
-
+    const oggi = now.toISOString().slice(0, 10); // "YYYY-MM-DD"
+    
     // --- Primo aggiornamento del giorno: cancella il draft precedente ---
     const isPrimoRun = contatori._primoRunOggi !== true;
-    if (isPrimoRun) {
+    if (isPrimoRun && contatori.data.giorno !== oggi)) {
         if (fs.existsSync(DRAFT_PATH)) {
             fs.unlinkSync(DRAFT_PATH);
             scriviLog("🌅 Primo aggiornamento del giorno — draft precedente cancellato.");
