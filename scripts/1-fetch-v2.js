@@ -759,7 +759,7 @@ async function main() {
             commenti:       commentiFinali,
             categoria:      voce.lab,
             colore_tipo:    coloreTipo,
-            immagine:       voce.imgFirma
+            immagine:       imgFirma
         });
 
         scriviLog(`  ✅ "${titoloFinale.substring(0, 50)}..." — ${commentiFinali.length} commenti`);
