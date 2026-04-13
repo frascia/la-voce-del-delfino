@@ -725,7 +725,9 @@ async function main() {
         const sez        = voce.sez;
         const icona      = ICONE[voce.lab] || ICONE["default"] || "Categoria.webp";
         const coloreTipo = STILI[voce.tipo] || STILI["RSS"];
-
+        // Recupera i dati del personaggio per avere l'immagine
+        const infoFirma = risolviPersonaggio(CHI, voce.firma);
+        const immagineDaUsare = infoFirma.img || ICONE[voce.lab] || "default_personaggio.webp";
         // 1. Genera articolo
         const rawArticolo    = await generaArticolo(voce, CHI, tema);
         const parsedArticolo = parseJSON(rawArticolo);
@@ -759,7 +761,7 @@ async function main() {
             commenti:       commentiFinali,
             categoria:      voce.lab,
             colore_tipo:    coloreTipo,
-            immagine:       imgFirma
+            immagine:       risolviPersonaggio(CHI, voce.firma).img || "default_personaggio.webp"
         });
 
         scriviLog(`  ✅ "${titoloFinale.substring(0, 50)}..." — ${commentiFinali.length} commenti`);
