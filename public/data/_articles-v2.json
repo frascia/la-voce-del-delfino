@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "13/04, 13:03",
+  "oraAggiornamento": "13/04, 13:41",
   "agenda": {
     "timbro": "Il Trauma del Lunedì",
     "banner": "Lavoro.webp"
@@ -54,7 +54,7 @@
           ],
           "categoria": "Cronaca",
           "colore_tipo": "#008cff",
-          "immagine": "Categoria.webp"
+          "immagine": "default_personaggio.webp"
         },
         {
           "tipo": "rss",
@@ -84,7 +84,7 @@
           ],
           "categoria": "Sport",
           "colore_tipo": "#008cff",
-          "immagine": "Categoria.webp"
+          "immagine": "default_personaggio.webp"
         },
         {
           "tipo": "rss",
@@ -114,7 +114,7 @@
           ],
           "categoria": "Sport",
           "colore_tipo": "#008cff",
-          "immagine": "Categoria.webp"
+          "immagine": "default_personaggio.webp"
         },
         {
           "tipo": "gen",
@@ -144,7 +144,7 @@
           ],
           "categoria": "Riflessioni",
           "colore_tipo": "#ff4d4d",
-          "immagine": "Categoria.webp"
+          "immagine": "default_personaggio.webp"
         },
         {
           "tipo": "gen",
@@ -174,7 +174,7 @@
           ],
           "categoria": "Riflessioni",
           "colore_tipo": "#ff4d4d",
-          "immagine": "Categoria.webp"
+          "immagine": "default_personaggio.webp"
         },
         {
           "tipo": "gen",
@@ -204,7 +204,7 @@
           ],
           "categoria": "Riflessioni",
           "colore_tipo": "#ff4d4d",
-          "immagine": "Categoria.webp"
+          "immagine": "default_personaggio.webp"
         },
         {
           "tipo": "gen",
@@ -234,7 +234,7 @@
           ],
           "categoria": "Riflessioni",
           "colore_tipo": "#ff4d4d",
-          "immagine": "Categoria.webp"
+          "immagine": "default_personaggio.webp"
         },
         {
           "tipo": "personaggio",
@@ -243,12 +243,12 @@
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "L'IA è andata a farsi il bagno a Pescara Vecchia."
+            "testo": "Lo stagista ha rovesciato la genziana sul server."
           },
           "commenti": [],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#ff4d4d",
-          "immagine": null
+          "immagine": "news-redazionale.webp"
         }
       ]
     },
@@ -283,7 +283,7 @@
           ],
           "categoria": "Da Leggere",
           "colore_tipo": "#ff4d4d",
-          "immagine": "Categoria.webp"
+          "immagine": "default_personaggio.webp"
         }
       ]
     }
