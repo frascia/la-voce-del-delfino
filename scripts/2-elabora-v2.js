@@ -125,7 +125,7 @@ async function main() {
                 categoria:      art.categoria || "Generale",
                 colore_tipo:    art.colore_tipo || stili?.RSS || "#008cff",
                 // immagine null = articolo personaggio (frame verde senza img)
-                immagine:       art.tipo === "personaggio" ? null : (art.immagine || "Categoria.webp")
+                immagine:       art.immagine || "default_personaggio.webp"
             });
         }
 
