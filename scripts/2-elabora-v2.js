@@ -1,865 +1,631 @@
-#!/usr/bin/env node
-/**
-* 1-fetch-v2.js
-* FASE 1 — Nuova architettura v2
-*
-* Legge config_v2.json (struttura IMPOSTAZIONI/CHI/AGENDA/STILI/REDAZIONE/ICONE)
-* Gestisce personaggi con stati e relazioni dinamiche persistenti
-* Salva _draft-v2.json per 2-elabora-v2.js
-*/
-
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const BASE_DIR   = path.join(__dirname, "..");
-const DATA_DIR   = path.join(BASE_DIR, "public", "data");
-
-const LOG_PATH         = path.join(DATA_DIR, "redazione-v2.log");
-const CONFIG_PATH      = path.join(DATA_DIR, "config_v2.json");
-const DRAFT_PATH       = path.join(DATA_DIR, "_draft-v2.json");
-const RELAZIONI_PATH   = path.join(DATA_DIR, "_relazioni.json");
-const PERSONAGGI_PATH  = path.join(DATA_DIR, "_personaggi.json");
-const CHAT_PATH        = path.join(DATA_DIR, "_chat.json");
-const CONTATORI_PATH   = path.join(DATA_DIR, "_contatori.json");
-
-if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-
-// ---------------------------------------------------------------------------
-// STATO GLOBALE
-// ---------------------------------------------------------------------------
-
-const apiKey = process.env.GEMINI_API_KEY || "";
-let activeGeminiModel = "gemini-1.5-flash";
-let quotaGiornalieraEsaurita = false;
-let contatoreChiamateApi = 0;
-
-// ---------------------------------------------------------------------------
-// PULIZIA LOG (ogni 48 ore leggendo la prima riga)
-// ---------------------------------------------------------------------------
-
-if (fs.existsSync(LOG_PATH)) {
-const primaRiga = fs.readFileSync(LOG_PATH, "utf8").split("\n")[0];
-const m = primaRiga.match(/\[(\d{2}\/\d{2}\/\d{4})/);
-if (m) {
-const [g, me, a] = m[1].split("/");
-const dataLog = new Date(`${a}-${me}-${g}`);
-if ((Date.now() - dataLog.getTime()) / 3600000 >= 48) {
-fs.unlinkSync(LOG_PATH);
-contatoreChiamateApi = 0;
-}
-}
-}
-
-// ---------------------------------------------------------------------------
-// UTILITÀ LOG
-// ---------------------------------------------------------------------------
-
-function scriviLog(msg) {
-const ts = new Date().toLocaleString("it-IT", { timeZone: "Europe/Rome" });
-const riga = `[${ts}] [1-fetch-v2] ${msg}\n`;
-fs.appendFileSync(LOG_PATH, riga);
-console.log(`> ${msg}`);
-}
-
-// ---------------------------------------------------------------------------
-// CARICA / SALVA JSON PERSISTENTI
-// ---------------------------------------------------------------------------
-
-function caricaJSON(filePath, defaultVal) {
-try {
-if (fs.existsSync(filePath)) return JSON.parse(fs.readFileSync(filePath, "utf8"));
-} catch (e) {
-scriviLog(`[WARN] Impossibile leggere ${filePath}: ${e.message}`);
-}
-return defaultVal;
-}
-
-function salvaJSON(filePath, data) {
-fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-}
-
-// ---------------------------------------------------------------------------
-// DECAY SETTIMANALE RELAZIONI
-// Ogni run incrementa un contatore; ogni 14 run (2 volte/giorno × 7 giorni)
-// le relazioni decadono del 10% verso 0.
-// ---------------------------------------------------------------------------
-
-function applicaDecay(relazioni) {
-const DECAY_OGNI_N_RUN = 14;
-const DECAY_AMOUNT = 0.1;
-
-relazioni._runCount = (relazioni._runCount || 0) + 1;
-
-if (relazioni._runCount >= DECAY_OGNI_N_RUN) {
-relazioni._runCount = 0;
-for (const chiave of Object.keys(relazioni)) {
-if (chiave.startsWith("_")) continue;
-const r = relazioni[chiave];
-if (typeof r.score === "number") {
-// Avvicina lo score a 0 del 10%
-r.score = parseFloat((r.score * (1 - DECAY_AMOUNT)).toFixed(3));
-r.label = labelDaScore(r.score);
-}
-}
-scriviLog("📉 Decay settimanale relazioni applicato.");
-}
-return relazioni;
-}
-
-function labelDaScore(score) {
-if (score >= 0.7)  return "amico";
-if (score >= 0.3)  return "simpatico";
-if (score >= -0.2) return "neutro";
-if (score >= -0.6) return "diffidente";
-return "ostile";
-}
-
-// ---------------------------------------------------------------------------
-// RICERCA MODELLO GEMINI PIÙ RECENTE
-// ---------------------------------------------------------------------------
-
-async function trovaUltimoModello() {
-if (!apiKey) return;
-try {
-const res  = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
-const data = await res.json();
-if (data.models) {
-const validi = data.models
-.filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
-.map(m => m.name.replace("models/", ""));
-const flash = validi.filter(m => m.includes("flash")).sort((a, b) => b.localeCompare(a));
-if (flash.length > 0) activeGeminiModel = flash[0];
-else if (validi.length > 0) activeGeminiModel = validi.sort((a, b) => b.localeCompare(a))[0];
-scriviLog(`[MODELLO] ${activeGeminiModel}`);
-}
-} catch (e) {
-scriviLog(`[WARN] Ricerca modello fallita, uso default: ${e.message}`);
-}
-}
-
-// ---------------------------------------------------------------------------
-// FETCH RSS — notizie fresche (max 48 ore)
-// ---------------------------------------------------------------------------
-
-async function fetchRSS(query, max) {
-if (max <= 0) return [];
-const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
-try {
-const res = await fetch(url);
-if (!res.ok) return [];
-const xml    = await res.text();
-// Nota: contatori non disponibile qui, viene aggiornato nel chiamante
-const titles = [];
-const dueGiorniFa  = Date.now() - 2 * 24 * 3600000;
-const itemRegex    = /<item>([\s\S]*?)<\/item>/gi;
-let m;
-while ((m = itemRegex.exec(xml)) !== null && titles.length < max) {
-const item = m[1];
-const pd = item.match(/<pubDate>(.*?)<\/pubDate>/i);
-if (pd && new Date(pd[1]).getTime() < dueGiorniFa) continue;
-const tl = item.match(/<title>(.*?)<\/title>/i);
-if (tl) {
-let t = tl[1].replace(/<!\[CDATA\[/g, "").replace(/\]\]>/g, "").split(" - ")[0].trim();
-if (!titles.includes(t)) titles.push(t);
-}
-}
-return titles;
-} catch (e) {
-scriviLog(`Errore RSS per "${query}": ${e.message}`);
-return [];
-}
-}
-
-// Wrapper per fetchRSS che tiene il conteggio cumulativo
-async function fetchRSSContato(query, max, contatori) {
-const risultati = await fetchRSS(query, max);
-contatori.rss_fetch_totali = (contatori.rss_fetch_totali || 0) + 1;
-return risultati;
-}
-
-// ---------------------------------------------------------------------------
-// GESTIONE ERRORE QUOTA GEMINI
-// ---------------------------------------------------------------------------
-
-async function gestisciErroreQuota(msg) {
-const m = msg.match(/Please retry in ([\d.]+)s/);
-const sec = m ? parseFloat(m[1]) + 2 : 30;
-scriviLog(`⏳ Attendo ${sec.toFixed(1)}s per quota...`);
-await new Promise(r => setTimeout(r, sec * 1000));
-}
-
-// ---------------------------------------------------------------------------
-// CHIAMATA GEMINI
-// ---------------------------------------------------------------------------
-
-async function callGemini(sys, prompt, temperature = 0.85) {
-if (!apiKey) { scriviLog("ERRORE: Manca GEMINI_API_KEY"); return null; }
-if (quotaGiornalieraEsaurita) { scriviLog("⏭️ Quota esaurita, salto."); return null; }
-
-const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
-
-for (let i = 0; i < 3; i++) {
-try {
-contatoreChiamateApi++;
-// Le quote cumulative vengono aggiornate nel main dopo ogni run
-const res = await fetch(url, {
-method: "POST",
-headers: { "Content-Type": "application/json" },
-body: JSON.stringify({
-contents: [{ parts: [{ text: prompt }] }],
-systemInstruction: { parts: [{ text: sys }] },
-generationConfig: { responseMimeType: "application/json", temperature },
-safetySettings: [
-{ category: "HARM_CATEGORY_HARASSMENT",        threshold: "BLOCK_NONE" },
-{ category: "HARM_CATEGORY_HATE_SPEECH",        threshold: "BLOCK_NONE" },
-{ category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",  threshold: "BLOCK_NONE" },
-{ category: "HARM_CATEGORY_DANGEROUS_CONTENT",  threshold: "BLOCK_NONE" }
-]
-})
-});
-const d = await res.json();
-
-if (d.error) {
-scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
-const msg = d.error.message.toLowerCase();
-
-if (msg.includes("per day") || msg.includes("limit: 500")) {
-scriviLog("❌ QUOTA GIORNALIERA ESAURITA");
-quotaGiornalieraEsaurita = true;
-return null;
-}
-if (d.error.code === 429 || d.error.code === 503) {
-if (msg.includes("quota exceeded")) { await gestisciErroreQuota(d.error.message); continue; }
-const ms = Math.pow(2, i) * 10000;
-scriviLog(`⏳ Errore ${d.error.code}, attendo ${ms / 1000}s...`);
-await new Promise(r => setTimeout(r, ms));
-continue;
-}
-return null;
-}
-
-const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
-return text || null;
-
-} catch (e) {
-scriviLog(`[ECCEZIONE tentativo ${i + 1}] ${e.message}`);
-await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
-if (i === 2) return null;
-}
-}
-return null;
-}
-
-// ---------------------------------------------------------------------------
-// RISOLVE GIORNO CORRENTE
-// ---------------------------------------------------------------------------
-
-function giornoOggi() {
-const fusoItalia = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
-const d = new Date(fusoItalia);
-return ["dom", "lun", "mar", "mer", "gio", "ven", "sab"][d.getDay()];
-}
-
-// ---------------------------------------------------------------------------
-// RISOLVE AGENDA DEL GIORNO
-// ---------------------------------------------------------------------------
-
-function risolviAgenda(AGENDA, oggi) {
-for (const [chiave, val] of Object.entries(AGENDA)) {
-if (chiave === "default") continue;
-const giorni = chiave.split(",").map(g => g.trim());
-if (giorni.includes(oggi)) return { ...AGENDA.default, ...val };
-}
-return AGENDA.default;
-}
-
-// ---------------------------------------------------------------------------
-// RISOLVE PERSONAGGIO (con fallback a default)
-// ---------------------------------------------------------------------------
-
-function risolviPersonaggio(CHI, nome) {
-return CHI[nome] || CHI["default"] || { mood: "neutro", peso: 0.5, avatar: "🐬" };
-}
-
-// ---------------------------------------------------------------------------
-// GENERA ARTICOLO (RSS o GEN)
-// ---------------------------------------------------------------------------
-
-async function generaArticolo(voce, CHI, titolo) {
-const firma = risolviPersonaggio(CHI, voce.firma);
-const moodFirma = firma.mood || "neutro";
-const bioFirma = (firma.bio_breve || firma.bio) ? `La tua storia: "${firma.bio_breve || firma.bio}".` : "";
-const moodCommento = voce.mood ? `Il tono del commento finale deve essere: ${voce.mood}` : "";
-const isGenerato = voce.tipo === "GEN";
-// inventare è indipendente dal tipo — può essere true sia su GEN che su RSS
-
-// fantasia: true = inventa liberamente | false/assente = scrive cose vere (anche se senza RSS)
-    const puoInventare = voce.fantasia === true;
-    const puoInventare = voce.inventare === true;
-
-const sys = `Sei ${voce.firma}, giornalista con questo carattere: "${moodFirma}". ${bioFirma}
-Rispondi con UN SINGOLO OGGETTO JSON: {"titolo":"...","articolo":"...","commento":"..."}.
-L'articolo deve essere di circa ${voce._parole || 400} parole, scritto con la tua voce e il tuo stile.
-${puoInventare
-   ? "Puoi inventare liberamente: non sei vincolato a fatti reali. Usa la tua fantasia, esagera, crea situazioni assurde coerenti col tuo carattere."
-   : "Scrivi cose reali e veritiere. Puoi commentare, interpretare e usare il tuo stile, ma niente invenzioni o fatti falsi."}
-${moodCommento}`;
-
-const userPrompt = isGenerato
-? `Scrivi un articolo su questo tema: ${titolo}`
-: `Scrivi un articolo basato su questa notizia reale: ${titolo}`;
-
-return await callGemini(sys, userPrompt, voce.weight_articolo ?? 0.8);
-}
-
-// ---------------------------------------------------------------------------
-// GENERA COMMENTI A CASCATA
-// ---------------------------------------------------------------------------
-
-async function generaCommenti(voce, CHI, relazioni, personaggi, articolo, commentiPrecedenti, LIMITI = {}) {
-if (quotaGiornalieraEsaurita) return null;
-
-// Costruisce il contesto dei personaggi disponibili
-const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
-
-// Costruisce il contesto delle relazioni rilevanti
-const contestoRelazioni = nomiPersonaggi.flatMap(a =>
-nomiPersonaggi.filter(b => b !== a).map(b => {
-const k = `${a}→${b}`;
-const r = relazioni[k];
-return r ? `${a} è ${r.label} verso ${b} (score: ${r.score})` : null;
-}).filter(Boolean)
-).join(". ");
-
-// Costruisce il contesto degli stati
-const contestoStati = nomiPersonaggi.map(n => {
-const p = personaggi[n];
-return p?.stato && p.stato !== "normale"
-? `${n} è attualmente: ${p.stato} (umore: ${p.umore || "neutro"})`
-: null;
-}).filter(Boolean).join(". ");
-
-// Costruisce il contesto dei commenti precedenti
-const contestoCommenti = commentiPrecedenti?.length
-? `Commenti precedenti:\n${commentiPrecedenti.map(c => `${c.nome} (${c.avatar}): "${c.testo}"`).join("\n")}`
-: "";
-
-const sys = `Sei il moderatore della redazione de La Voce del Delfino. 
-I personaggi disponibili sono: ${nomiPersonaggi.map(n => {
-       const p = CHI[n];
-       const bio = (p.bio_breve || p.bio) ? ` Bio: "${p.bio_breve || p.bio}"` : "";
-       return `${n} (${p.avatar}, mood: "${p.mood}".${bio})`;
-   }).join(", ")}.
-Relazioni: ${contestoRelazioni || "nessuna relazione stabilita"}.
-Stati: ${contestoStati || "tutti nella norma"}.
-${contestoCommenti}
-
-Scegli da ${LIMITI.commenti_min ?? 1} a ${LIMITI.commenti_max ?? 3} personaggi che commenterebbero questa notizia in modo coerente col loro carattere e le loro relazioni.
-Ogni personaggio commenta la notizia E i commenti precedenti (se presenti).
-IMPORTANTE: il personaggio "${voce.firma}" ha già scritto l'articolo — NON può commentare se stesso.
-Se un personaggio è in sciopero, decidi autonomamente se partecipa o meno.
-Rispondi SOLO con JSON: {"commenti": [{"nome":"...","avatar":"...","testo":"..."}]}`;
-
-const userPrompt = `Articolo: "${articolo}"\n\nGenera i commenti dei personaggi.`;
-
-return await callGemini(sys, userPrompt, voce.weight_commento ?? 0.7);
-}
-
-// ---------------------------------------------------------------------------
-// AGGIORNA RELAZIONI E STATI dopo i commenti
-// ---------------------------------------------------------------------------
-
-async function aggiornaRelazioni(CHI, relazioni, personaggi, articolo, commenti) {
-if (quotaGiornalieraEsaurita || !commenti?.length) return;
-
-const nomiPresenti = commenti.map(c => c.nome);
-const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
-
-const sys = `Sei un analista delle dinamiche sociali della redazione de La Voce del Delfino.
-Analizza questa interazione e restituisci i delta delle relazioni e gli eventuali cambi di stato.
-Rispondi SOLO con JSON:
-{
- "delta_relazioni": [{"da":"...","a":"...","delta": 0.1}],
- "nuovi_stati": [{"nome":"...","stato":"...","umore":"..."}]
-}
-I delta vanno da -0.3 a +0.3. Gli stati sono liberi (es. "arrabbiato", "in sciopero", "entusiasta", "normale").`;
-
-const userPrompt = `Articolo: "${articolo.substring(0, 300)}..."
-Commenti:
-${commenti.map(c => `${c.nome}: "${c.testo}"`).join("\n")}
-
-Analizza le dinamiche e restituisci i delta.`;
-
-const raw = await callGemini(sys, userPrompt);
-if (!raw) return;
-
-try {
-const inizio = raw.indexOf("{"), fine = raw.lastIndexOf("}");
-const parsed = JSON.parse(raw.substring(inizio, fine + 1));
-
-// Applica delta relazioni
-for (const d of (parsed.delta_relazioni || [])) {
-const chiave = `${d.da}→${d.a}`;
-if (!relazioni[chiave]) relazioni[chiave] = { score: 0, label: "neutro", ultimo_aggiornamento: "" };
-relazioni[chiave].score = parseFloat(Math.max(-1, Math.min(1, relazioni[chiave].score + d.delta)).toFixed(3));
-relazioni[chiave].label = labelDaScore(relazioni[chiave].score);
-relazioni[chiave].ultimo_aggiornamento = new Date().toLocaleDateString("it-IT", { timeZone: "Europe/Rome" });
-}
-
-// Applica nuovi stati personaggi
-for (const s of (parsed.nuovi_stati || [])) {
-if (!personaggi[s.nome]) personaggi[s.nome] = {};
-personaggi[s.nome].stato = s.stato;
-personaggi[s.nome].umore = s.umore;
-personaggi[s.nome].dal = new Date().toLocaleDateString("it-IT", { timeZone: "Europe/Rome" });
-}
-
-scriviLog(`🔄 Relazioni aggiornate: ${(parsed.delta_relazioni || []).length} delta, ${(parsed.nuovi_stati || []).length} stati cambiati.`);
-} catch (e) {
-scriviLog(`[WARN] Impossibile parsare aggiornamento relazioni: ${e.message}`);
-}
-}
-
-// ---------------------------------------------------------------------------
-// PARSE JSON GREZZO DA GEMINI
-// ---------------------------------------------------------------------------
-
-function parseJSON(raw) {
-if (!raw) return null;
-try {
-const ia = raw.indexOf("["), fa = raw.lastIndexOf("]");
-const io = raw.indexOf("{"), fo = raw.lastIndexOf("}");
-if (ia !== -1 && fa !== -1 && (io === -1 || ia < io)) {
-const arr = JSON.parse(raw.substring(ia, fa + 1));
-return Array.isArray(arr) && arr.length > 0 ? arr[0] : null;
-}
-if (io !== -1 && fo !== -1) return JSON.parse(raw.substring(io, fo + 1));
-} catch (e) {}
-return null;
-}
-
-
-// ---------------------------------------------------------------------------
-// GENERA CHAT INTERNA DI REDAZIONE
-// Una conversazione casuale tra i personaggi, basata su relazioni e stati.
-// Spunto casuale: lamentela su un commento, gossip, battibecco, elogio ironico.
-// ---------------------------------------------------------------------------
-
-async function generaChat(CHI, relazioni, personaggi) {
-if (quotaGiornalieraEsaurita) return null;
-
-const nomi = Object.keys(CHI).filter(n => n !== "default");
-if (nomi.length < 2) return null;
-
-// Contesto relazioni
-const contestoRelazioni = nomi.flatMap(a =>
-nomi.filter(b => b !== a).map(b => {
-const r = relazioni[`${a}\u2192${b}`];
-return r ? `${a} è ${r.label} verso ${b}` : null;
-}).filter(Boolean)
-).join(". ");
-
-// Contesto stati
-const contestoStati = nomi.map(n => {
-const p = personaggi[n];
-return p?.stato && p.stato !== "normale"
-? `${n} è: ${p.stato} (umore: ${p.umore || "neutro"})`
-: null;
-}).filter(Boolean).join(". ");
-
-// Spunti casuali per la chat
-const spunti = [
-"qualcuno si lamenta di un commento scritto da un collega",
-"qualcuno chiede spiegazioni su un articolo pubblicato",
-"c'è un piccolo battibecco su chi ha preso il caffè dell'altro",
-"qualcuno elogia ironicamente il lavoro di un collega",
-"qualcuno si lamenta del carico di lavoro",
-"qualcuno commenta il meteo di Pescara con aria drammatica",
-"qualcuno annuncia che va in pausa e nessuno è contento",
-"c'è una discussione su chi ha sbagliato il titolo di un articolo"
-];
-const spunto = spunti[Math.floor(Math.random() * spunti.length)];
-
-const sys = `Sei il narratore della chat interna della redazione de La Voce del Delfino.
-I personaggi sono: ${nomi.map(n => {
-       const p = CHI[n];
-       const bio = (p.bio_breve || p.bio) ? ` Bio: "${p.bio_breve || p.bio}"` : "";
-       return `${n} (${p.avatar}, carattere: "${p.mood}".${bio})`;
-   }).join(", ")}.
-Relazioni: ${contestoRelazioni || "nessuna stabilita"}.
-Stati: ${contestoStati || "tutti nella norma"}.
-
-Genera una breve conversazione in chat (4-8 messaggi) tra 2-3 di questi personaggi.
-Lo spunto è: ${spunto}.
-Ogni messaggio deve riflettere il carattere del personaggio e le sue relazioni con gli altri.
-Rispondi SOLO con JSON:
-{"chat": [{"nome":"...","avatar":"...","testo":"..."}]}`;
-
-const raw = await callGemini(sys, "Genera la chat di oggi in redazione.");
-if (!raw) return null;
-
-try {
-const io = raw.indexOf("{"), fo = raw.lastIndexOf("}");
-const parsed = JSON.parse(raw.substring(io, fo + 1));
-return parsed.chat || null;
-} catch (e) {
-scriviLog(`[WARN] Impossibile parsare chat: ${e.message}`);
-return null;
-}
-}
-
-
-// ---------------------------------------------------------------------------
-// CONTATORI GIORNALIERI E FASCE ORARIE
-// ---------------------------------------------------------------------------
-
-function caricaContatori(LIMITI) {
-const oraRoma = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
-const oggi = oraRoma.toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit" });
-const oraCorrente = oraRoma.getHours();
-const minutiCorrente = oraRoma.getMinutes();
-const contatori = caricaJSON(CONTATORI_PATH, {});
-
-// Fascia reset quote (ora intera italiana, es. "05" = alle 05:00)
-const fasciaReset = parseInt(LIMITI.fascia_reset_quote ?? "05");
-const tolleranza = LIMITI.tolleranza_minuti ?? 30;
-const inFasciaReset = Math.abs((oraCorrente * 60 + minutiCorrente) - fasciaReset * 60) <= tolleranza;
-
-// Reset se: nuovo giorno OPPURE siamo nella fascia reset e non l'abbiamo ancora fatto oggi
-const deveResettare = contatori.data !== oggi ||
-(inFasciaReset && !contatori.reset_eseguito_oggi);
-
-if (deveResettare) {
-scriviLog(`🔄 Reset quote cumulative (${oggi} ${String(oraCorrente).padStart(2,"0")}:${String(minutiCorrente).padStart(2,"0")} IT).`);
-return {
-data: oggi,
-reset_eseguito_oggi: inFasciaReset,
-cerca_modello: 0,
-chat_run: 0,
-chiamate_gemini: 0,
-token_stimati: 0,
-rss_fetch: 0
-};
-}
-return contatori;
-}
-
-function limiteSuperato(contatori, LIMITI, tipo) {
-const limite = LIMITI[tipo];
-if (limite === "sempre" || limite === undefined) return false;
-const contatore = contatori[tipo.replace("_max", "")] || 0;
-return contatore >= limite;
-}
-
-/**
-* Controlla se l'ora corrente italiana rientra in una delle fasce configurate.
-* Tolleranza in minuti: se fascia="06" e tolleranza=45, accetta dalle 05:15 alle 06:45.
-*/
-function fasciaDiArticoliAttiva(LIMITI) {
-const fasce = LIMITI.fasce_articoli;
-if (!fasce || fasce.length === 0) return true; // nessun limite = sempre attivo
-
-const oraRoma = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
-const minutiOra = oraRoma.getHours() * 60 + oraRoma.getMinutes();
-const tolleranza = LIMITI.tolleranza_minuti ?? 30;
-
-return fasce.some(f => {
-const fasciaMinuti = parseInt(f) * 60;
-return Math.abs(minutiOra - fasciaMinuti) <= tolleranza;
-});
-}
-
-/**
-* Converte lunghezza_articolo (1-10) in numero di parole target.
-* 1 = ~80 parole, 10 = ~800 parole
-*/
-function paroleTarget(LIMITI) {
-const livello = Math.max(1, Math.min(10, LIMITI.lunghezza_articolo ?? 5));
-return Math.round(80 + (livello - 1) * 80);
-}
-
-// ---------------------------------------------------------------------------
-// MAIN
-// ---------------------------------------------------------------------------
-
-async function main() {
-const oraItalia = new Intl.DateTimeFormat("it-IT", {
-timeZone: "Europe/Rome", dateStyle: "full", timeStyle: "medium"
-}).format(new Date());
-scriviLog(`═══════════════════════════════════`);
-scriviLog(`🐬 NUOVO RUN v2 [ ${oraItalia} ]`);
-scriviLog(`═══════════════════════════════════`);
-scriviLog("⚓️ FASE 1-v2 — Avvio...");
-
-// --- Carica config ---
-if (!fs.existsSync(CONFIG_PATH)) {
-scriviLog(`ERRORE: ${CONFIG_PATH} non trovato!`);
-process.exit(1);
-}
-const CONFIG = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
-const { IMPOSTAZIONI, CHI, AGENDA, STILI, REDAZIONE, ICONE } = CONFIG;
-
-// --- Limiti, contatori e fasce ---
-const LIMITI = CONFIG.LIMITI || {};
-const contatori = caricaContatori(LIMITI);
-const articoliAttivi = fasciaDiArticoliAttiva(LIMITI);
-const parole = paroleTarget(LIMITI);
-scriviLog(`📊 Quote cumulative oggi: chiamate_gemini=${contatori.chiamate_gemini ?? 0}, rss_fetch=${contatori.rss_fetch ?? 0}, token_stimati≈${contatori.token_stimati ?? 0}`);
-scriviLog(`🕐 Fascia articoli attiva: ${articoliAttivi ? "SÌ" : "NO"} | Lunghezza target: ~${parole} parole`);
-
-// --- Cerca modello — sempre, senza condizioni ---
-await trovaUltimoModello();
-
-// --- Giorno corrente e agenda ---
-const oggi = giornoOggi();
-const agenda = risolviAgenda(AGENDA, oggi);
-scriviLog(`📅 Giorno: ${oggi} | Timbro: ${agenda.timbro}`);
-
-// --- Ora aggiornamento ---
-const oraAggiornamento = new Date().toLocaleString("it-IT", {
-timeZone: "Europe/Rome",
-hour: "2-digit", minute: "2-digit",
-day: "2-digit", month: "2-digit"
-});
-
-// --- Carica persistenti ---
-let relazioni  = caricaJSON(RELAZIONI_PATH, { _runCount: 0 });
-let personaggi = caricaJSON(PERSONAGGI_PATH, {});
-
-// Inizializza personaggi mancanti
-for (const nome of Object.keys(CHI).filter(n => n !== "default")) {
-if (!personaggi[nome]) personaggi[nome] = { stato: "normale", umore: "neutro", dal: null };
-}
-
-// Applica decay settimanale
-relazioni = applicaDecay(relazioni);
-
-// --- Filtra REDAZIONE per oggi ---
-const vociAttive = REDAZIONE.filter(voce => {
-if (voce.g === "default") return true;
-const giorniVoce = voce.g.split(",").map(g => g.trim());
-return giorniVoce.includes(oggi);
-});
-
-scriviLog(`📋 Voci attive oggi: ${vociAttive.length}`);
-
-// --- Draft ---
-const draft = {
-oraAggiornamento,
-agenda,
-impostazioni: IMPOSTAZIONI,
-stili: STILI,
-sezioni: {}
-};
-
-// Raggruppa per sezione
-for (const voce of vociAttive) {
-const sez = voce.sez;
-if (!draft.sezioni[sez]) {
-draft.sezioni[sez] = {
-color: STILI[sez] || STILI["RSS"] || "#005f73",
-articoli: []
-};
-}
-}
-
-    // --- Genera articoli (se entro il limite giornaliero) ---
-    const articoliAbilitati = !limiteSuperato(contatori, LIMITI, "articoli_run_max");
-    if (!articoliAbilitati) {
-        scriviLog(`⏭️ Generazione articoli saltata (limite: ${LIMITI.articoli_run_max} run/giorno raggiunto).`);
-    // --- Genera articoli solo se nella fascia oraria attiva ---
-    if (!articoliAttivi) {
-        scriviLog(`⏭️ Generazione articoli saltata — nessuna fascia oraria attiva ora.`);
-}
-    contatori.articoli_run = (contatori.articoli_run || 0) + (articoliAbilitati ? 1 : 0);
-
-    // Ogni tema da generare porta con sé la voce di appartenenza — così
-    // la cascata non mescola mai metadati (firma, label, icona) tra voci diverse.
-    // [ { voce, tema } ]
-const codaArticoli = [];
-
-    if (articoliAbilitati) {
-    if (articoliAttivi) {
-let quotaAvanzata = 0;
-let voceQuota = null; // la voce che ha generato la quota avanzata
-
-for (const voce of vociAttive) {
-const num = (voce.num || 1) + (voceQuota?.sez === voce.sez ? quotaAvanzata : 0);
-quotaAvanzata = 0;
-voceQuota = null;
-
-voce._parole = parole; // lunghezza target dal config
-scriviLog(`🎣 [${voce.sez}] ${voce.arg} — tipo: ${voce.tipo}, num: ${num}, firma: ${voce.firma}, ~${parole} parole`);
-
-if (voce.tipo === "GEN") {
-const temi = voce.temi || [voce.arg];
-for (let i = 0; i < num; i++) {
-codaArticoli.push({ voce, tema: temi[Math.floor(Math.random() * temi.length)] });
-}
-} else {
-const titoli = await fetchRSS(voce.arg, num);
-const mancanti = num - titoli.length;
-if (mancanti > 0) {
-scriviLog(`[CASCATA] Solo ${titoli.length}/${num} notizie per "${voce.arg}". Passo ${mancanti} alla voce successiva.`);
-quotaAvanzata = mancanti;
-voceQuota = voce; // ricorda CHI ha ceduto la quota
-}
-for (const t of titoli) {
-codaArticoli.push({ voce, tema: t }); // metadati sempre della voce corrente
-}
-}
-}
-}
-
-// --- Genera articoli dalla coda ---
-for (const { voce, tema } of codaArticoli) {
-const sez        = voce.sez;
-const icona      = ICONE[voce.lab] || ICONE["default"] || "Categoria.webp";
-const coloreTipo = STILI[voce.tipo] || STILI["RSS"];
-
-// 1. Genera articolo
-const rawArticolo    = await generaArticolo(voce, CHI, tema);
-const parsedArticolo = parseJSON(rawArticolo);
-
-const articoloTesto  = parsedArticolo?.articolo ||
-(voce.tipo === "GEN"
-? `Avevamo uno scoop su "${tema}", ma un gabbiano ha rubato gli appunti.`
-: `Notizia: "${tema}". L'IA è in pausa caffè.`);
-const titoloFinale   = parsedArticolo?.titolo || tema;
-const commentoFirma  = parsedArticolo?.commento || "…";
-
-// 2. Genera commenti a cascata dei personaggi
-let commentiFinali = [];
-        const rawCommenti    = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, []);
-        const rawCommenti    = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI);
-const parsedCommenti = parseJSON(rawCommenti);
-if (parsedCommenti?.commenti?.length) {
-commentiFinali = parsedCommenti.commenti;
-// 3. Aggiorna relazioni e stati
-await aggiornaRelazioni(CHI, relazioni, personaggi, articoloTesto, commentiFinali);
-}
-
-// 4. Push nel draft con metadati sempre coerenti alla voce originale
-draft.sezioni[sez].articoli.push({
-tipo:           voce.tipo === "GEN" ? "gen" : "rss",
-titolo:         titoloFinale,
-articolo:       articoloTesto,
-commento_firma: { nome: voce.firma, avatar: risolviPersonaggio(CHI, voce.firma).avatar, testo: commentoFirma },
-commenti:       commentiFinali,
-categoria:      voce.lab,
-colore_tipo:    coloreTipo,
-immagine:       icona
-});
-
-scriviLog(`  ✅ "${titoloFinale.substring(0, 50)}..." — ${commentiFinali.length} commenti`);
-}
-
-// --- Nuovi commenti su notizie congelate (run oltre il limite articoli) ---
-if (!articoliAttivi && fs.existsSync(DRAFT_PATH)) {
-scriviLog("🧊 Articoli congelati — aggiungo commenti alle notizie esistenti...");
-const draftEsistente = caricaJSON(DRAFT_PATH, { sezioni: {} });
-
-for (const [sez, datiSez] of Object.entries(draftEsistente.sezioni || {})) {
-for (const articolo of (datiSez.articoli || [])) {
-// Trova la voce corrispondente per avere il contesto giusto
-const voceRef = vociAttive.find(v => v.sez === sez && v.lab === articolo.categoria) || vociAttive.find(v => v.sez === sez);
-if (!voceRef) continue;
-
-const rawCommenti    = await generaCommenti(voceRef, CHI, relazioni, personaggi, articolo.articolo, articolo.commenti || [], LIMITI);
-const parsedCommenti = parseJSON(rawCommenti);
-if (parsedCommenti?.commenti?.length) {
-// Accoda i nuovi commenti a quelli esistenti (max 6 totali)
-const maxTotali = LIMITI.commenti_max_totali ?? 6;
-articolo.commenti = [...(articolo.commenti || []), ...parsedCommenti.commenti].slice(0, maxTotali);
-await aggiornaRelazioni(CHI, relazioni, personaggi, articolo.articolo, parsedCommenti.commenti);
-scriviLog(`  💬 Nuovi commenti aggiunti a: "${articolo.titolo.substring(0, 40)}..."`);
-}
-}
-// Aggiorna draft con i nuovi commenti
-if (!draft.sezioni[sez]) draft.sezioni[sez] = datiSez;
-else draft.sezioni[sez].articoli = datiSez.articoli;
-}
-}
-
-// --- Genera chat interna di redazione (30% di probabilità per run) ---
-const chatAbilitata = LIMITI.chat !== "sempre"
-? !limiteSuperato(contatori, LIMITI, "chat_run_max")
-: true;
-const chattaOggi = chatAbilitata && Math.random() < 0.30;
-scriviLog(`💬 Chat oggi: ${chattaOggi ? "sì" : !chatAbilitata ? "no (limite raggiunto)" : "no (skip casuale)"}`);
-if (chattaOggi) contatori.chat_run = (contatori.chat_run || 0) + 1;
-const chatOggi = chattaOggi ? await generaChat(CHI, relazioni, personaggi) : null;
-const chatStorico = caricaJSON(CHAT_PATH, []);
-if (chatOggi) {
-chatStorico.unshift({
-data: oraAggiornamento,
-messaggi: chatOggi
-});
-// Mantieni solo le ultime 30 chat
-if (chatStorico.length > 30) chatStorico.splice(30);
-salvaJSON(CHAT_PATH, chatStorico);
-scriviLog(`💬 Chat salvata: ${chatOggi.length} messaggi.`);
-}
-
-// --- Aggiorna quote cumulative e salva contatori ---
-contatori.chiamate_gemini_totali = (contatori.chiamate_gemini_totali || 0) + contatoreChiamateApi;
-// Stima token: ~450 token per chiamata (input+output medio)
-contatori.token_stimati_totali = (contatori.token_stimati_totali || 0) + (contatoreChiamateApi * 450);
-contatori.cerca_modello = (contatori.cerca_modello || 0);
-contatori.chat_run = (contatori.chat_run || 0);
-scriviLog(`📊 Totale giornata: chiamate=${contatori.chiamate_gemini_totali}, token_stimati≈${contatori.token_stimati_totali}, rss=${contatori.rss_fetch_totali ?? 0}`);
-salvaJSON(CONTATORI_PATH, contatori);
-
-// --- Salva persistenti aggiornati ---
-salvaJSON(RELAZIONI_PATH, relazioni);
-salvaJSON(PERSONAGGI_PATH, personaggi);
-scriviLog(`💾 Relazioni e personaggi salvati.`);
-
-// --- Articolo personaggio: un personaggio casuale scrive qualcosa che gli piace ---
-scriviLog("✍️ Generazione articolo personaggio casuale...");
-const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
-const personaggioCasuale = nomiPersonaggi[Math.floor(Math.random() * nomiPersonaggi.length)];
-const datiPersonaggio = CHI[personaggioCasuale];
-const sysPersonaggio = `Sei ${personaggioCasuale}, con questo carattere: "${datiPersonaggio.mood}". ${datiPersonaggio.bio_breve ? `La tua storia: "${datiPersonaggio.bio_breve}".` : ""}
-Scrivi un breve articolo (150-250 parole) su qualcosa che ti piace, ti ha colpito o ti ha fatto arrabbiare oggi.
-Scegli tu l'argomento in base alla tua personalità.
-Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
-const rawPersonaggio = await callGemini(sysPersonaggio, "Scrivi il tuo articolo personale di oggi.", datiPersonaggio.peso ?? 0.8);
-if (rawPersonaggio) {
-const parsedPersonaggio = parseJSON(rawPersonaggio);
-if (parsedPersonaggio?.titolo && parsedPersonaggio?.articolo) {
-// Trova la prima sezione disponibile nel draft
-const sezPers = Object.keys(draft.sezioni)[0] || "pescara";
-if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: STILI[sezPers] || "#005f73", articoli: [] };
-draft.sezioni[sezPers].articoli.push({
-tipo: "personaggio",
-titolo: parsedPersonaggio.titolo,
-articolo: parsedPersonaggio.articolo,
-commento_firma: { nome: personaggioCasuale, avatar: datiPersonaggio.avatar, testo: "" },
-commenti: [],
-categoria: "Dalla Redazione",
-colore_tipo: STILI.GEN || "#2d6a4f",
-immagine: null  // nessuna immagine — frame verde senza img
-});
-scriviLog(`✍️ Articolo personaggio scritto da ${personaggioCasuale}: "${parsedPersonaggio.titolo.substring(0,50)}..."`);
-}
-}
-
-// --- Salva draft ---
-scriviLog(`📊 Chiamate API totali: ${contatoreChiamateApi}`);
-salvaJSON(DRAFT_PATH, draft);
-scriviLog(`✅ FASE 1-v2 completata. Draft → ${DRAFT_PATH}`);
-}
-
-main()
-.then(() => {
-scriviLog("🏁 [FINISH] Tutto salvato. Forzo chiusura processo.");
-// Il timeout di 500ms assicura che i log vengano scritti su disco prima di killare
-setTimeout(() => process.exit(0), 2000); 
-})
-.catch(err => {
-scriviLog(`❌ [CRITICAL ERROR] ${err.message}`);
-setTimeout(() => process.exit(1), 2000);
-});
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>La Voce del Delfino 🐬</title>
+    <style>
+        :root { 
+            --blu-mare: #005f73; 
+            --panna: #faf7f2; 
+            --azzurro-pescara: #008cff;
+            --verde-ai: #2d6a4f;
+        }
+        
+        body { 
+            margin: 0; 
+            background: var(--blu-mare);
+            background-attachment: fixed; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            -webkit-user-select: none; user-select: none; 
+            transition: background 1.2s ease; 
+        }
+        #app { width: 100%; max-width: 100%; margin: auto; background: transparent; min-height: 100vh; }
+        
+        /* --- TESTATA --- */
+        .testata { width: 100%; background: var(--blu-mare); line-height: 0; text-align: center; position: relative; }
+        .testata img#header-img { width: 100%; height: auto; max-height: 350px; object-fit: cover; display: block; }
+
+        /* --- TIMBRO GHIBLI --- */
+        .timbro-edizione {
+            display: none;
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, rgba(255,243,210,0.92) 0%, rgba(255,228,168,0.88) 100%);
+            color: #5a3e1b;
+            font-size: 11px;
+            font-style: italic;
+            font-weight: 600;
+            padding: 6px 18px;
+            border-radius: 30px;
+            border: 1.5px solid rgba(180,130,60,0.5);
+            box-shadow: 0 3px 14px rgba(100,60,0,0.22), inset 0 1px 0 rgba(255,255,255,0.6);
+            backdrop-filter: blur(4px);
+            line-height: 1.5;
+            white-space: nowrap;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .info-aggiornamento { 
+            font-size: 12px; color: #666; padding: 8px 15px; 
+            background: rgba(250, 247, 242, 0.85); 
+            border-bottom: 1px dashed #ddd; 
+            display: flex; align-items: center;
+            flex-wrap: wrap; gap: 4px;
+        }
+        .info-aggiornamento .sinistra { display: flex; flex-direction: column; gap: 2px; }
+        .prossimo-update { font-size: 11px; color: #999; }
+
+        /* --- TICKER GHIBLI --- */
+        .ticker-wrap {
+            width: 100%; overflow: hidden;
+            background: linear-gradient(135deg, rgba(255,243,210,0.97) 0%, rgba(255,232,180,0.95) 100%);
+            border-top: 1.5px solid rgba(180,130,60,0.35);
+            border-bottom: 1.5px solid rgba(180,130,60,0.35);
+            padding: 9px 0; position: relative;
+            box-shadow: 0 2px 10px rgba(100,60,0,0.1);
+        }
+        .ticker-wrap::before, .ticker-wrap::after {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 40px; z-index: 2; pointer-events: none;
+        }
+        .ticker-wrap::before { left: 0; background: linear-gradient(to right, rgba(255,243,210,1), transparent); }
+        .ticker-wrap::after  { right: 0; background: linear-gradient(to left, rgba(255,232,180,1), transparent); }
+        .ticker-track { display: flex; width: max-content; animation: ticker-scorre 40s linear infinite; }
+        .ticker-track:hover { animation-play-state: paused; }
+        @keyframes ticker-scorre { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .ticker-item {
+            display: inline-flex; align-items: center;
+            font-size: 12px; font-style: italic; font-weight: 600;
+            color: #5a3e1b; white-space: nowrap; padding: 0 28px; gap: 10px;
+        }
+        .ticker-item::after { content: "✦"; color: rgba(180,130,60,0.6); font-style: normal; font-size: 10px; }
+
+        /* --- MENU --- */
+        .menu { display: flex; overflow-x: auto; padding: 20px 15px; gap: 12px; scrollbar-width: none; background: transparent; }
+        .menu::-webkit-scrollbar { display: none; }
+        .tab { white-space: nowrap; padding: 12px 20px; border-radius: 30px; border: 2px solid rgba(255,255,255,0.7); background: rgba(255,255,255,0.15); color: #fff; font-weight: bold; font-size: 14px; cursor: pointer; transition: 0.3s; }
+        .tab.attiva { background: rgba(255,255,255,0.9); color: var(--blu-mare); transform: translateY(-2px); }
+
+        /* --- GRIGLIA NOTIZIE --- */
+        .notizia-container { padding: 15px 20px 30px 20px; display: grid; grid-template-columns: 1fr; gap: 50px; }
+        @media (min-width: 600px)  { .notizia-container { grid-template-columns: 1fr 1fr; gap: 40px 24px; } }
+        @media (min-width: 1000px) { .notizia-container { grid-template-columns: 1fr 1fr 1fr; gap: 40px 24px; } }
+        @media (min-width: 1600px) { .notizia-container { grid-template-columns: 1fr 1fr 1fr 1fr; gap: 40px 24px; } }
+
+        /* --- CELLE NOTIZIE --- */
+        .notizia { position: relative; background: var(--panna); border-radius: 24px; padding: 25px 20px 20px 20px; }
+        .notizia-numero { position: absolute; top: -18px; left: -18px; width: 45px; height: 45px; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 22px; z-index: 20; border: 4px solid #fff; }
+        .etichetta-categoria { position: absolute; top: -12px; right: 20px; padding: 4px 12px; border-radius: 12px; font-size: 10px; font-weight: 900; text-transform: uppercase; z-index: 20; border: 2px solid #fff; }
+        
+        .notizia.rss-box  { border: 2px solid var(--azzurro-pescara); box-shadow: 0 10px 25px rgba(0,140,255,0.1); }
+        .notizia.rss-box .notizia-numero { background: var(--azzurro-pescara); }
+        .etichetta-categoria.rss-label { color: var(--azzurro-pescara); border-color: var(--azzurro-pescara); background: #fff; }
+
+        .notizia.gen-box  { border: 2px solid #ff4d4d; background: #fffafa; box-shadow: 0 10px 25px rgba(255,0,0,0.1); }
+        .notizia.gen-box .notizia-numero { background: #ff4d4d; }
+        .etichetta-categoria.gen-label { color: #ff4d4d; border-color: #ff4d4d; background: #fff; }
+
+        /* Bordo verde per articoli AI (GEN non inventati) */
+        .notizia.ai-box   { border: 2px solid var(--verde-ai); background: #f0fff4; box-shadow: 0 10px 25px rgba(45,106,79,0.1); }
+        .notizia.ai-box .notizia-numero { background: var(--verde-ai); }
+        .etichetta-categoria.ai-label { color: var(--verde-ai); border-color: var(--verde-ai); background: #fff; }
+
+        .notizia-img-box { width: 100%; aspect-ratio: 16/9; background: #e9e5df; border-radius: 16px; overflow: hidden; margin-bottom: 20px; }
+        .notizia-img-box img { width: 100%; height: 100%; object-fit: cover; }
+        h2 { margin: 0 0 15px 0; font-size: 24px; line-height: 1.3; color: #2c2c2c; font-weight: 800; }
+        .testo { font-size: 16px; line-height: 1.7; color: #4a4a4a; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
+        .testo.aperto { -webkit-line-clamp: unset; }
+        .leggi-tutto { background: none; border: none; color: var(--blu-mare); font-weight: 800; padding: 12px 0; font-size: 15px; cursor: pointer; text-transform: uppercase; }
+
+        /* --- COMMENTO FIRMA --- */
+        .commento-firma {
+            background: rgba(255,255,255,0.7);
+            padding: 14px 16px 14px 48px;
+            border-radius: 16px; margin-top: 16px;
+            position: relative; border: 2px dashed #ccc; font-style: italic;
+            font-size: 14px; color: #555;
+        }
+        .commento-firma .avatar-firma {
+            position: absolute; left: 12px; top: 12px;
+            font-size: 22px; line-height: 1;
+        }
+        .commento-firma .nome-firma {
+            font-size: 10px; font-weight: 800; text-transform: uppercase;
+            color: #999; font-style: normal; display: block; margin-bottom: 4px;
+        }
+
+        /* --- COMMENTI PERSONAGGI A CASCATA --- */
+        .commenti-box { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+        .commento-personaggio {
+            background: rgba(255,255,255,0.5);
+            padding: 10px 14px 10px 42px;
+            border-radius: 14px; position: relative;
+            font-size: 13px; color: #444; line-height: 1.5;
+            border: 1px solid rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .commento-personaggio:hover { background: rgba(255,255,255,0.75); }
+        .commento-personaggio .testo-p {
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .commento-personaggio.aperto .testo-p {
+            display: block; -webkit-line-clamp: unset; overflow: visible;
+        }
+        .commento-toggle { font-size: 10px; color: #bbb; float: right; margin-top: 2px; transition: transform 0.2s; }
+        .commento-personaggio.aperto .commento-toggle { transform: rotate(180deg); }
+
+        /* --- BADGE NUOVO --- */
+        .badge-nuovo {
+            display: inline-block; background: #e63946; color: #fff;
+            font-size: 9px; font-weight: 900; text-transform: uppercase;
+            padding: 2px 7px; border-radius: 8px; margin-left: 8px;
+            vertical-align: middle; letter-spacing: 0.05em;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+        @keyframes pulse-badge { 0%,100%{opacity:1} 50%{opacity:0.6} }
+
+        /* --- FIRMA AUTORE --- */
+        .firma-autore {
+            display: flex; align-items: center; gap: 5px;
+            font-size: 11px; color: #999; margin-bottom: 10px; font-style: italic;
+        }
+        .firma-autore .avatar-autore { font-size: 16px; }
+
+        /* --- FRAME PERSONAGGIO --- */
+        .notizia.personaggio-box {
+            border: 2px solid #2d6a4f; background: #f0fff4;
+            box-shadow: 0 10px 25px rgba(45,106,79,0.15);
+        }
+        .notizia.personaggio-box .notizia-numero { background: #2d6a4f; }
+        .etichetta-categoria.personaggio-label { color: #2d6a4f; border-color: #2d6a4f; background: #fff; }
+        .notizia-personaggio-header {
+            display: flex; align-items: center; gap: 12px;
+            padding: 16px 0 20px 0;
+            border-bottom: 1px dashed rgba(45,106,79,0.25); margin-bottom: 16px;
+        }
+        .notizia-personaggio-avatar { font-size: 40px; line-height: 1; }
+        .notizia-personaggio-info { flex: 1; }
+        .notizia-personaggio-nome { font-size: 13px; font-weight: 800; color: #2d6a4f; }
+        .notizia-personaggio-bio { font-size: 11px; color: #777; font-style: italic; margin-top: 2px; }
+        .indicatore-verde {
+            width: 10px; height: 10px; border-radius: 50%; background: #2d6a4f;
+            box-shadow: 0 0 6px rgba(45,106,79,0.6); flex-shrink: 0;
+            animation: pulse-verde 2s ease-in-out infinite;
+        }
+        @keyframes pulse-verde { 0%,100%{box-shadow:0 0 6px rgba(45,106,79,0.6)} 50%{box-shadow:0 0 12px rgba(45,106,79,0.9)} }
+        .commento-personaggio:hover { background: rgba(255,255,255,0.75); }
+        .commento-personaggio .avatar-p {
+            position: absolute; left: 10px; top: 10px; font-size: 18px;
+        }
+        .commento-personaggio .nome-p {
+            font-size: 9px; font-weight: 800; text-transform: uppercase;
+            color: #aaa; display: block; margin-bottom: 3px;
+        }
+        .commento-personaggio .testo-p {
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+            overflow: hidden; transition: all 0.3s;
+        }
+        .commento-personaggio.aperto .testo-p {
+            display: block; -webkit-line-clamp: unset;
+        }
+        .commento-toggle {
+            font-size: 10px; color: #aaa; float: right;
+            margin-top: 2px; font-style: normal;
+            transition: transform 0.2s;
+        }
+        .commento-personaggio.aperto .commento-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* --- SEZIONE CHAT REDAZIONE --- */
+        .chat-section {
+            padding: 20px;
+            margin-top: 10px;
+        }
+        .chat-section-title {
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .chat-card {
+            background: linear-gradient(135deg, rgba(255,243,210,0.95) 0%, rgba(255,228,168,0.9) 100%);
+            border-radius: 20px;
+            padding: 18px;
+            margin-bottom: 16px;
+            border: 1.5px solid rgba(180,130,60,0.3);
+            box-shadow: 0 4px 16px rgba(100,60,0,0.1);
+        }
+        .chat-data {
+            font-size: 10px;
+            color: rgba(90,62,27,0.6);
+            text-align: right;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .chat-messaggio {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+        .chat-messaggio:last-child { margin-bottom: 0; }
+        .chat-avatar {
+            font-size: 22px;
+            flex-shrink: 0;
+            line-height: 1;
+            margin-top: 2px;
+        }
+        .chat-bubble {
+            background: rgba(255,255,255,0.65);
+            border-radius: 0 14px 14px 14px;
+            padding: 8px 12px;
+            flex: 1;
+        }
+        .chat-nome {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #5a3e1b;
+            margin-bottom: 3px;
+            display: block;
+        }
+        .chat-testo {
+            font-size: 13px;
+            color: #4a3010;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        .chat-vuota {
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-style: italic;
+            font-size: 13px;
+            padding: 20px;
+        }
+
+        /* --- BADGE NUOVO --- */
+        .badge-nuovo {
+            display: inline-block;
+            background: #e63946;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 8px;
+            margin-left: 8px;
+            vertical-align: middle;
+            letter-spacing: 0.05em;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+        @keyframes pulse-badge {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* --- FIRMA AUTORE VICINO AL TITOLO --- */
+        .firma-autore {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .firma-autore .avatar-autore { font-size: 16px; }
+
+        /* --- FRAME PERSONAGGIO (senza immagine, con indicatore verde) --- */
+        .notizia.personaggio-box {
+            border: 2px solid #2d6a4f;
+            background: #f0fff4;
+            box-shadow: 0 10px 25px rgba(45,106,79,0.15);
+        }
+        .notizia.personaggio-box .notizia-numero { background: #2d6a4f; }
+        .etichetta-categoria.personaggio-label { color: #2d6a4f; border-color: #2d6a4f; background: #fff; }
+        .notizia-personaggio-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 0 20px 0;
+            border-bottom: 1px dashed rgba(45,106,79,0.25);
+            margin-bottom: 16px;
+        }
+        .notizia-personaggio-avatar { font-size: 40px; line-height: 1; }
+        .notizia-personaggio-info { flex: 1; }
+        .notizia-personaggio-nome { font-size: 13px; font-weight: 800; color: #2d6a4f; }
+        .notizia-personaggio-bio { font-size: 11px; color: #777; font-style: italic; margin-top: 2px; }
+        .indicatore-verde {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: #2d6a4f;
+            box-shadow: 0 0 6px rgba(45,106,79,0.6);
+            animation: pulse-verde 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        @keyframes pulse-verde {
+            0%, 100% { box-shadow: 0 0 6px rgba(45,106,79,0.6); }
+            50% { box-shadow: 0 0 12px rgba(45,106,79,0.9); }
+        }
+
+        /* --- TERMINALE --- */
+        #terminale { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); color:#0f0; z-index:1000; padding:20px; font-family:monospace; box-sizing:border-box; overflow:auto; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="terminale">
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #0f0; padding-bottom:10px;">
+                <span>> TERMINALE DIREZIONE</span>
+                <span onclick="toggleTerminale()" style="color:red; cursor:pointer;">[X] CHIUDI</span>
+            </div>
+            <pre id="log-content" style="font-size:13px; color:#ccc; margin:20px 0; white-space: pre-wrap;"></pre>
+        </div>
+
+        <div class="testata" id="logo-innesco">
+            <img id="header-img" src="public/images/default.webp">
+            <div class="timbro-edizione" id="timbro-edizione"></div>
+        </div>
+
+        <div class="info-aggiornamento">
+            <div class="sinistra">
+                <span id="ts-display">...</span>
+                <span class="prossimo-update" id="prossimo-display" style="display:none;"></span>
+            </div>
+        </div>
+
+        <div class="ticker-wrap" id="ticker-wrap" style="display:none;">
+            <div class="ticker-track" id="ticker-track"></div>
+        </div>
+
+        <div class="menu" id="menu-categorie"></div>
+        <div id="lista-notizie" class="notizia-container"></div>
+
+        <!-- CHAT REDAZIONE -->
+        <div class="chat-section" id="chat-section">
+            <div class="chat-section-title">💬 Dalla Redazione</div>
+            <div id="chat-lista"></div>
+        </div>
+    </div>
+
+    <script>
+        let clicks = 0, last = 0;
+
+        function toggleTerminale() { document.getElementById('terminale').style.display = 'none'; }
+
+        document.getElementById('logo-innesco').onclick = async () => {
+            const ora = Date.now();
+            if (ora - last > 1000) clicks = 0;
+            clicks++; last = ora;
+            if (clicks === 5) {
+                const p = prompt("Password:"); if (!p) return;
+                const r = await fetch(`public/data/auth_info.json?v=${ora}`);
+                const a = await r.json();
+                const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',
+                    new TextEncoder().encode(p)))).map(b => b.toString(16).padStart(2,'0')).join('');
+                if (hash === a.check) {
+                    document.getElementById('terminale').style.display = 'block';
+                    document.getElementById('log-content').innerText =
+                        await fetch(`public/data/redazione-v2.log?v=${ora}`).then(r => r.text());
+                }
+            }
+        };
+
+        async function caricaChat() {
+            try {
+                const chatStorico = await fetch(`public/data/_chat.json?v=${Date.now()}`).then(r => r.json());
+                if (!chatStorico?.length) return;
+
+                const section = document.getElementById('chat-section');
+                const lista   = document.getElementById('chat-lista');
+                lista.innerHTML = '';
+
+                // Mostra le ultime 3 chat
+                chatStorico.slice(0, 3).forEach(sessione => {
+                    const card = document.createElement('div');
+                    card.className = 'chat-card';
+
+                    const data = document.createElement('div');
+                    data.className = 'chat-data';
+                    data.innerText = sessione.data || '';
+                    card.appendChild(data);
+
+                    (sessione.messaggi || []).forEach(msg => {
+                        const row = document.createElement('div');
+                        row.className = 'chat-messaggio';
+                        row.innerHTML = `
+                            <div class="chat-avatar">${msg.avatar || '👤'}</div>
+                            <div class="chat-bubble">
+                                <span class="chat-nome">${msg.nome}</span>
+                                <span class="chat-testo">${msg.testo}</span>
+                            </div>`;
+                        card.appendChild(row);
+                    });
+
+                    lista.appendChild(card);
+                });
+
+                // section sempre visibile
+                if (!chatStorico?.length) {
+                    lista.innerHTML = '<div class="chat-vuota">La redazione è silenziosa... per ora. 🐬</div>';
+                }
+            } catch(e) {
+                document.getElementById('chat-lista').innerHTML = 
+                    '<div class="chat-vuota">La redazione è silenziosa... per ora. 🐬</div>';
+            }
+        }
+
+        async function carica() {
+            try {
+                const cfg = await fetch(`public/data/active_config_v2.json?v=${Date.now()}`).then(r => r.json());
+
+                if (cfg.site_settings?.header_img)
+                    document.getElementById('header-img').src = `public/images/${cfg.site_settings.header_img}`;
+
+                const desc = cfg.site_settings?.timbro;
+                if (desc) {
+                    const timbro = document.getElementById('timbro-edizione');
+                    timbro.innerText = desc;
+                    timbro.style.display = 'block';
+                }
+
+                const up = cfg.site_settings?.last_update || '---';
+                document.getElementById('ts-display').innerText = `Aggiornato: ${up}`;
+
+                // Ticker dai ticker_news del config
+                const tickerNews = cfg.site_settings?.ticker_news || [];
+                if (tickerNews.length) {
+                    const doppio = [...tickerNews, ...tickerNews];
+                    document.getElementById('ticker-track').innerHTML =
+                        doppio.map(t => `<span class="ticker-item">${t}</span>`).join('');
+                    document.getElementById('ticker-wrap').style.display = 'block';
+                }
+
+                // Sezioni da REDAZIONE (uniche)
+                const sezioni = [...new Set((cfg.REDAZIONE || []).map(v => v.sez))];
+                sezioni.forEach((sez, i) => {
+                    const b = document.createElement('button');
+                    b.className = 'tab' + (i === 0 ? ' attiva' : '');
+                    b.innerText = sez;
+                    b.onclick = () => mostraSezione(sez, b, cfg.STILI);
+                    document.getElementById('menu-categorie').appendChild(b);
+                });
+                if (sezioni[0]) mostraSezione(sezioni[0], null, cfg.STILI);
+
+                // Carica chat
+                await caricaChat();
+
+            } catch(e) { console.error(e); }
+        }
+
+        async function mostraSezione(sez, btn, STILI) {
+            if (btn) {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('attiva'));
+                btn.classList.add('attiva');
+            }
+            const data = await fetch(`public/data/news-v2-${sez}.json?v=${Date.now()}`).then(r => r.json());
+
+            // Colore sezione
+            const mc = data.color || '#005f73';
+            document.documentElement.style.setProperty('--blu-mare', mc);
+            document.body.style.background = mc;
+
+            // Prossimo aggiornamento
+            const prossimoEl = document.getElementById('prossimo-display');
+            if (data.prossimo_aggiornamento) {
+                prossimoEl.innerText = `Prossimo aggiornamento: ${data.prossimo_aggiornamento}`;
+                prossimoEl.style.display = 'block';
+            } else {
+                prossimoEl.style.display = 'none';
+            }
+
+            // Ticker dai titoli della sezione
+            if (data.news?.length) {
+                const track = document.getElementById('ticker-track');
+                const wrap  = document.getElementById('ticker-wrap');
+                const titoli = data.news.map(n => n.titolo);
+                const doppio = [...titoli, ...titoli];
+                track.innerHTML = doppio.map(t => `<span class="ticker-item">${t}</span>`).join('');
+                const durata = Math.max(20, Math.min(60, titoli.join('').length * 0.18));
+                track.style.animationDuration = durata + 's';
+                wrap.style.display = 'block';
+            }
+
+            // Notizie
+            const lista = document.getElementById('lista-notizie');
+            lista.innerHTML = '';
+            (data.news || []).forEach((n, idx) => {
+                const tipo = n.tipo || 'rss';
+                const isPersonaggio = tipo === 'personaggio';
+                const boxClass   = isPersonaggio ? 'personaggio-box' : tipo === 'gen' ? 'gen-box' : 'rss-box';
+                const labelClass = isPersonaggio ? 'personaggio-label' : tipo === 'gen' ? 'gen-label' : 'rss-label';
+
+                // Badge nuovo
+                const badgeNuovo = n.nuovo ? '<span class="badge-nuovo">nuovo</span>' : '';
+
+                // Firma autore (vicino al titolo, solo per articoli non-personaggio)
+                const cf = n.commento_firma || {};
+                const firmaHTML = (!isPersonaggio && cf.nome) ? `
+                    <div class="firma-autore">
+                        <span class="avatar-autore">${cf.avatar || '👤'}</span>
+                        <span>${cf.nome}</span>
+                    </div>` : '';
+
+                // Commento firma (testo dell'autore sotto l'articolo)
+                const commentoFirmaHTML = (!isPersonaggio && cf.testo) ? `
+                    <div class="commento-firma">
+                        <span class="avatar-firma">${cf.avatar || '👤'}</span>
+                        <span class="nome-firma">${cf.nome || 'Redazione'}</span>
+                        ${cf.testo}
+                    </div>` : '';
+
+                // Commenti personaggi — espandibili individualmente
+                const commentiHTML = (n.commenti || []).map(c => `
+                    <div class="commento-personaggio" onclick="this.classList.toggle('aperto')">
+                        <span class="avatar-p">${c.avatar || '👤'}</span>
+                        <span class="nome-p">${c.nome} <span class="commento-toggle">▼</span></span>
+                        <div class="testo-p">${c.testo}</div>
+                    </div>`).join('');
+
+                if (isPersonaggio) {
+                    // Frame personaggio — senza immagine, con header verde
+                    lista.innerHTML += `
+                        <div class="notizia ${boxClass}">
+                            <div class="notizia-numero">${idx + 1}</div>
+                            <span class="etichetta-categoria ${labelClass}">${n.categoria}${badgeNuovo}</span>
+                            <div class="notizia-personaggio-header">
+                                <div class="notizia-personaggio-avatar">${cf.avatar || '👤'}</div>
+                                <div class="notizia-personaggio-info">
+                                    <div class="notizia-personaggio-nome">${cf.nome || 'Redazione'}</div>
+                                    <div class="notizia-personaggio-bio">scrive di ciò che gli piace</div>
+                                </div>
+                                <div class="indicatore-verde"></div>
+                            </div>
+                            <h2>${n.titolo}</h2>
+                            <div class="testo" id="t-${idx}">${n.articolo}</div>
+                            <button class="leggi-tutto" onclick="
+                                const t=document.getElementById('t-${idx}');
+                                t.classList.toggle('aperto');
+                                this.innerText=(t.classList.contains('aperto')?'Nascondi':'Leggi articolo')
+                            ">Leggi articolo</button>
+                            ${commentiHTML ? `<div class="commenti-box">${commentiHTML}</div>` : ''}
+                        </div>`;
+                } else {
+                    lista.innerHTML += `
+                        <div class="notizia ${boxClass}">
+                            <div class="notizia-numero">${idx + 1}</div>
+                            <span class="etichetta-categoria ${labelClass}">${n.categoria}${badgeNuovo}</span>
+                            <div class="notizia-img-box">
+                                <img src="public/images/${n.immagine || 'default.webp'}"
+                                     onerror="this.src='https://placehold.co/600x400?text=News'">
+                            </div>
+                            ${firmaHTML}
+                            <h2>${n.titolo}</h2>
+                            <div class="testo" id="t-${idx}">${n.articolo}</div>
+                            <button class="leggi-tutto" onclick="
+                                const t=document.getElementById('t-${idx}');
+                                t.classList.toggle('aperto');
+                                this.innerText=(t.classList.contains('aperto')?'Nascondi':'Leggi articolo')
+                            ">Leggi articolo</button>
+                            ${commentoFirmaHTML}
+                            ${commentiHTML ? `<div class="commenti-box">${commentiHTML}</div>` : ''}
+                        </div>`;
+                }
+            });
+        }
+
+        carica();
+    </script>
+</body>
+</html>
