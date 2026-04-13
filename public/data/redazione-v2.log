@@ -722,3 +722,171 @@ Please retry in 28.555027455s. (code: 429)
 [13/04/2026, 11:12:00] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (2 articoli, 0 nuovi)
 [13/04/2026, 11:12:00] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (4 articoli, 0 nuovi)
 [13/04/2026, 11:12:00] [3-deploy-v2] 🕐 Ora: 12/04, 21:33 | Prossimo: 13/04, 13:12
+[13/04/2026, 11:35:54] [1-fetch-v2] ═══════════════════════════════════
+[13/04/2026, 11:35:54] [1-fetch-v2] 🐬 NUOVO RUN v2 [ lunedì 13 aprile 2026 alle ore 11:35:54 ]
+[13/04/2026, 11:35:54] [1-fetch-v2] ═══════════════════════════════════
+[13/04/2026, 11:35:54] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[13/04/2026, 11:35:54] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[13/04/2026, 11:35:54] [1-fetch-v2] 🕐 Fascia articoli attiva: SÌ | Lunghezza target: ~240 parole
+[13/04/2026, 11:35:54] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[13/04/2026, 11:35:54] [1-fetch-v2] 📅 Giorno: lun | Timbro: Il Trauma del Lunedì
+[13/04/2026, 11:35:54] [1-fetch-v2] 📋 Voci attive oggi: 12
+[13/04/2026, 11:35:54] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 11:35:55] [1-fetch-v2] 🎣 [pescara] Politica Locale Pescara — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 11:35:55] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Politica Locale Pescara". Passo 2 alla voce successiva.
+[13/04/2026, 11:35:55] [1-fetch-v2] 🎣 [pescara] Pescara Calcio — tipo: RSS, num: 4, firma: Cetteo, ~240 parole
+[13/04/2026, 11:35:56] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 1, firma: Hiroki, ~240 parole
+[13/04/2026, 11:35:56] [1-fetch-v2] 🎣 [pescara] Il ripetitivo siiiiiiiiii — tipo: GEN, num: 1, firma: Glusi, ~240 parole
+[13/04/2026, 11:35:56] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 1, firma: Lilli, ~240 parole
+[13/04/2026, 11:35:56] [1-fetch-v2] 🎣 [pescara] Il brasileiro — tipo: GEN, num: 1, firma: Juizinho, ~240 parole
+[13/04/2026, 11:35:56] [1-fetch-v2] 🎣 [mondo] Intelligenza Artificiale novità — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 11:35:56] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Intelligenza Artificiale novità". Passo 2 alla voce successiva.
+[13/04/2026, 11:35:56] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 4, firma: Lars, ~240 parole
+[13/04/2026, 11:35:57] [1-fetch-v2] [CASCATA] Solo 3/4 notizie per "Novità serie Netflix". Passo 1 alla voce successiva.
+[13/04/2026, 11:35:57] [1-fetch-v2] 🎣 [cultura] Nuovi film da vedere cinema — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 11:35:57] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Nuovi film da vedere cinema". Passo 2 alla voce successiva.
+[13/04/2026, 11:35:57] [1-fetch-v2] 🎣 [cultura] Nuovi libri — tipo: GEN, num: 4, firma: Lilli, ~240 parole
+[13/04/2026, 11:35:57] [1-fetch-v2] 🎣 [cultura] Viaggi mete insolite Europa — tipo: RSS, num: 2, firma: Lars, ~240 parole
+[13/04/2026, 11:35:57] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Viaggi mete insolite Europa". Passo 1 alla voce successiva.
+[13/04/2026, 11:36:09] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 11:36:09] [1-fetch-v2]   ✅ "Delfino ammainato: la solita storia che fa male al..." — 3 commenti
+[13/04/2026, 11:36:27] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 11:36:27] [1-fetch-v2]   ✅ "Piazza della Repubblica, un altro guaio sotto il n..." — 3 commenti
+[13/04/2026, 11:36:49] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 3 stati cambiati.
+[13/04/2026, 11:36:49] [1-fetch-v2]   ✅ "Carrara, na trasferta che puzza de mare e de soffe..." — 3 commenti
+[13/04/2026, 11:37:12] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 4 stati cambiati.
+[13/04/2026, 11:37:12] [1-fetch-v2]   ✅ "Pescara: tra mare e miseria, la classifica fa pian..." — 3 commenti
+[13/04/2026, 11:37:23] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 3 stati cambiati.
+[13/04/2026, 11:37:23] [1-fetch-v2]   ✅ "Carrarese, che amarezza: il Delfino annaspa tra le..." — 3 commenti
+[13/04/2026, 11:37:40] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 4 stati cambiati.
+[13/04/2026, 11:37:40] [1-fetch-v2]   ✅ "Pescara: tra il mare che piange e la panchina che ..." — 3 commenti
+[13/04/2026, 11:37:56] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 11:37:56] [1-fetch-v2]   ✅ "Tra l'inchino e la pacca: il caos ordinato di Pesc..." — 3 commenti
+[13/04/2026, 11:38:16] [1-fetch-v2] 🔄 Relazioni aggiornate: 4 delta, 4 stati cambiati.
+[13/04/2026, 11:38:16] [1-fetch-v2]   ✅ "La saggezza del ripetersi: il metodo Glusi per non..." — 3 commenti
+[13/04/2026, 11:38:24] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[13/04/2026, 11:38:24] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[13/04/2026, 11:38:52] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 11:38:52] [1-fetch-v2]   ✅ "Tra le pagine e le petunie: il rifugio dell'anima..." — 3 commenti
+[13/04/2026, 11:39:02] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 11:39:02] [1-fetch-v2]   ✅ "Pescara, tra biancazzurro e saudade: la vita è un ..." — 3 commenti
+[13/04/2026, 11:39:18] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 11:39:18] [1-fetch-v2]   ✅ "L'ordine del caos: tra serie TV e l'essenza dell'A..." — 3 commenti
+[13/04/2026, 11:39:28] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 11:39:28] [1-fetch-v2]   ✅ "Tra la neve della Majella e il caos di Parigi..." — 3 commenti
+[13/04/2026, 11:39:38] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 4 stati cambiati.
+[13/04/2026, 11:39:38] [1-fetch-v2]   ✅ "Dalle vette della Majella al chiacchiericcio dei s..." — 3 commenti
+[13/04/2026, 11:39:47] [1-fetch-v2] 🔄 Relazioni aggiornate: 3 delta, 4 stati cambiati.
+[13/04/2026, 11:39:47] [1-fetch-v2]   ✅ "Il rifugio silenzioso tra le pagine di carta..." — 3 commenti
+[13/04/2026, 11:40:01] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 4 stati cambiati.
+[13/04/2026, 11:40:01] [1-fetch-v2]   ✅ "Il rifugio silenzioso tra le pagine di carta..." — 3 commenti
+[13/04/2026, 11:40:05] [1-fetch-v2] [ERRORE GEMINI] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite
+Please retry in 54.924527031s. (code: 429)
+[13/04/2026, 11:40:05] [1-fetch-v2] ⏳ Attendo 56.9s per quota...
+[13/04/2026, 11:41:09] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 4 stati cambiati.
+[13/04/2026, 11:41:09] [1-fetch-v2]   ✅ "Il rifugio silenzioso tra le pagine di carta..." — 3 commenti
+[13/04/2026, 11:41:27] [1-fetch-v2] 🔄 Relazioni aggiornate: 6 delta, 4 stati cambiati.
+[13/04/2026, 11:41:27] [1-fetch-v2]   ✅ "Il profumo della carta: un rifugio tra le pagine..." — 3 commenti
+[13/04/2026, 11:41:43] [1-fetch-v2] 🔄 Relazioni aggiornate: 5 delta, 4 stati cambiati.
+[13/04/2026, 11:41:43] [1-fetch-v2]   ✅ "Oltre il minimalismo: viaggiare insieme nell'anima..." — 3 commenti
+[13/04/2026, 11:41:43] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
+[13/04/2026, 11:41:43] [1-fetch-v2] 📊 Totale giornata: chiamate=256, token_stimati≈115200, rss=0
+[13/04/2026, 11:41:43] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[13/04/2026, 11:41:43] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[13/04/2026, 11:41:47] [1-fetch-v2] ✍️ Articolo personaggio scritto da Wolf: "La solita invasione di idioti..."
+[13/04/2026, 11:41:47] [1-fetch-v2] 📊 Chiamate API totali: 57
+[13/04/2026, 11:41:47] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
+[13/04/2026, 11:41:47] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[13/04/2026, 11:41:49] [1-fetch-v2] ═══════════════════════════════════
+[13/04/2026, 11:41:49] [1-fetch-v2] 🐬 NUOVO RUN v2 [ lunedì 13 aprile 2026 alle ore 11:41:49 ]
+[13/04/2026, 11:41:49] [1-fetch-v2] ═══════════════════════════════════
+[13/04/2026, 11:41:49] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[13/04/2026, 11:41:49] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[13/04/2026, 11:41:49] [1-fetch-v2] 🕐 Fascia articoli attiva: SÌ | Lunghezza target: ~240 parole
+[13/04/2026, 11:41:49] [1-fetch-v2] 📅 Giorno: lun | Timbro: Il Trauma del Lunedì
+[13/04/2026, 11:41:49] [1-fetch-v2] 📋 Voci attive oggi: 12
+[13/04/2026, 11:41:49] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 11:41:49] [1-fetch-v2] 🎣 [pescara] Politica Locale Pescara — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 11:41:50] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Politica Locale Pescara". Passo 2 alla voce successiva.
+[13/04/2026, 11:41:50] [1-fetch-v2] 🎣 [pescara] Pescara Calcio — tipo: RSS, num: 4, firma: Cetteo, ~240 parole
+[13/04/2026, 11:41:50] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 1, firma: Hiroki, ~240 parole
+[13/04/2026, 11:41:50] [1-fetch-v2] 🎣 [pescara] Il ripetitivo siiiiiiiiii — tipo: GEN, num: 1, firma: Glusi, ~240 parole
+[13/04/2026, 11:41:50] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 1, firma: Lilli, ~240 parole
+[13/04/2026, 11:41:50] [1-fetch-v2] 🎣 [pescara] Il brasileiro — tipo: GEN, num: 1, firma: Juizinho, ~240 parole
+[13/04/2026, 11:41:50] [1-fetch-v2] 🎣 [mondo] Intelligenza Artificiale novità — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 11:41:50] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Intelligenza Artificiale novità". Passo 2 alla voce successiva.
+[13/04/2026, 11:41:50] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 4, firma: Lars, ~240 parole
+[13/04/2026, 11:41:51] [1-fetch-v2] [CASCATA] Solo 3/4 notizie per "Novità serie Netflix". Passo 1 alla voce successiva.
+[13/04/2026, 11:41:51] [1-fetch-v2] 🎣 [cultura] Nuovi film da vedere cinema — tipo: RSS, num: 2, firma: Cetteo, ~240 parole
+[13/04/2026, 11:41:51] [1-fetch-v2] [CASCATA] Solo 0/2 notizie per "Nuovi film da vedere cinema". Passo 2 alla voce successiva.
+[13/04/2026, 11:41:51] [1-fetch-v2] 🎣 [cultura] Nuovi libri — tipo: GEN, num: 4, firma: Lilli, ~240 parole
+[13/04/2026, 11:41:51] [1-fetch-v2] 🎣 [cultura] Viaggi mete insolite Europa — tipo: RSS, num: 2, firma: Lars, ~240 parole
+[13/04/2026, 11:41:51] [1-fetch-v2] [CASCATA] Solo 1/2 notizie per "Viaggi mete insolite Europa". Passo 1 alla voce successiva.
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Pescara-Sampdoria 1-2, Delfino rimontato e beffato..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Arrestato in piazza della Repubblica: nei guai 24e..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Pescara, la corsa salvezza riparte da Carrara..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Carrarese..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Pescara calcio: play out sempre a -2, salvezza dir..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Pescara..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Sogni di Shinkansen, realtà di regionali: La mia b..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Ti spiego una cosa, ti spiego una cosa: Il metodo ..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "L'ingenuità è un giardino segreto: Storia di una r..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Saudade e sorrisi: Perché la vita è troppo corta p..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "«Un capolavoro del suo genere»: per gli utenti Net..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Serie tv romance Emily in Paris con Lily Collins, ..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Bridgerton ha una nuova rivale? Questa serie in ar..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Nuovi libri..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Nuovi libri..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Nuovi libri..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Nuovi libri..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2]   ✅ "Migliori travel company per viaggi condivisi in Eu..." — 0 commenti
+[13/04/2026, 11:41:52] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
+[13/04/2026, 11:41:52] [1-fetch-v2] 📊 Totale giornata: chiamate=256, token_stimati≈115200, rss=0
+[13/04/2026, 11:41:52] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[13/04/2026, 11:41:52] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[13/04/2026, 11:41:52] [1-fetch-v2] ERRORE: Manca GEMINI_API_KEY
+[13/04/2026, 11:41:52] [1-fetch-v2] 📊 Chiamate API totali: 0
+[13/04/2026, 11:41:52] [1-fetch-v2] ✅ FASE 1-v2 completata. Draft → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_draft-v2.json
+[13/04/2026, 11:41:52] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[13/04/2026, 11:41:54] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[13/04/2026, 11:41:54] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (9 articoli, 0 nuovi)
+[13/04/2026, 11:41:54] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (2 articoli, 0 nuovi)
+[13/04/2026, 11:41:54] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (4 articoli, 0 nuovi)
+[13/04/2026, 11:41:54] [3-deploy-v2] 🕐 Ora: 12/04, 21:33 | Prossimo: 13/04, 13:41
