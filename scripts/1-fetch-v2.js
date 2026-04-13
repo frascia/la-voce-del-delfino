@@ -23,9 +23,81 @@ const RELAZIONI_PATH   = path.join(DATA_DIR, "_relazioni.json");
 const PERSONAGGI_PATH  = path.join(DATA_DIR, "_personaggi.json");
 const CHAT_PATH        = path.join(DATA_DIR, "_chat.json");
 const CONTATORI_PATH   = path.join(DATA_DIR, "_contatori.json");
+const TEMP_PATH   = DRAFT_PATH + ".tmp";
+const BACKUP_PATH = DRAFT_PATH + ".bak";
 
+// ---------------------------------------------------------------------------
+// UTILITY SICURE DRAFT
+// ---------------------------------------------------------------------------
+
+function contaArticoli(draft) {
+    return Object.values(draft.sezioni || {})
+        .reduce((acc, s) => acc + (s.articoli?.length || 0), 0);
+}
+
+function safeWriteDraft(draft) {
+    const totale = contaArticoli(draft);
+
+    if (totale === 0) {
+        scriviLog("⚠️ Draft vuoto → NON sovrascrivo.");
+        return false;
+    }
+
+    try {
+        // 1. Scrivi TEMP
+        salvaJSON(TEMP_PATH, draft);
+
+        // 2. Backup vecchio
+        if (fs.existsSync(DRAFT_PATH)) {
+            fs.copyFileSync(DRAFT_PATH, BACKUP_PATH);
+        }
+
+        // 3. Commit atomico
+        fs.renameSync(TEMP_PATH, DRAFT_PATH);
+
+        // 4. Cleanup backup
+        if (fs.existsSync(BACKUP_PATH)) {
+            fs.unlinkSync(BACKUP_PATH);
+        }
+
+        scriviLog(`💾 Draft salvato in modo sicuro (${totale} articoli).`);
+        return true;
+
+    } catch (e) {
+        scriviLog(`❌ Errore scrittura draft: ${e.message}`);
+
+        // Recovery
+        if (fs.existsSync(BACKUP_PATH)) {
+            fs.copyFileSync(BACKUP_PATH, DRAFT_PATH);
+            scriviLog("♻️ Ripristinato backup.");
+        }
+
+        return false;
+    }
+}
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+// ---------------------------------------------------------------------------
+// RECOVERY AUTOMATICO POST-CRASH
+// ---------------------------------------------------------------------------
 
+if (fs.existsSync(TEMP_PATH)) {
+    scriviLog("♻️ TEMP trovato → possibile crash precedente.");
+
+    try {
+        const temp = caricaJSON(TEMP_PATH, null);
+
+        if (temp && contaArticoli(temp) > 0) {
+            fs.renameSync(TEMP_PATH, DRAFT_PATH);
+            scriviLog("✅ Draft recuperato da TEMP.");
+        } else {
+            fs.unlinkSync(TEMP_PATH);
+            scriviLog("🧹 TEMP corrotto eliminato.");
+        }
+
+    } catch (e) {
+        scriviLog(`⚠️ Errore recovery TEMP: ${e.message}`);
+    }
+}
 // ---------------------------------------------------------------------------
 // STATO GLOBALE
 // ---------------------------------------------------------------------------
@@ -649,13 +721,7 @@ async function main() {
     
     // --- Primo aggiornamento del giorno: cancella il draft precedente ---
     const isPrimoRun = contatori._primoRunOggi !== true;
-    if (isPrimoRun) {
-        if (fs.existsSync(DRAFT_PATH)) {
-            fs.unlinkSync(DRAFT_PATH);
-            scriviLog("🌅 Primo aggiornamento del giorno — draft precedente cancellato.");
-        }
-        contatori._primoRunOggi = true;
-    }
+ 
 
     // --- Filtra REDAZIONE per oggi ---
     const vociAttive = REDAZIONE.filter(voce => {
@@ -877,8 +943,18 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
 
     // --- Salva draft ---
     scriviLog(`📊 Chiamate API totali: ${contatoreChiamateApi}`);
-    salvaJSON(DRAFT_PATH, draft);
-    scriviLog(`✅ FASE 1-v2 completata. Draft → ${DRAFT_PATH}`);
+    const totaleArticoli = contaArticoli(draft);
+    if (totaleArticoli === 0) {
+        scriviLog("⚠️ Nessun articolo valido → skip salvataggio.");
+    return;
+    }
+    const successo = safeWriteDraft(draft);
+    if (successo) {
+        contatori._primoRunOggi = true;
+        scriviLog(`✅ FASE 1-v2 completata. Draft aggiornato.`);
+    } else {
+        scriviLog("⚠️ Draft NON aggiornato — mantenuto quello precedente.");
+    }
 }
 
 main()
