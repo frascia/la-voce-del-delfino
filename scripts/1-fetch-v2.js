@@ -280,9 +280,13 @@ function risolviAgenda(AGENDA, oggi) {
 // ---------------------------------------------------------------------------
 
 function risolviPersonaggio(CHI, nome) {
-    return CHI[nome] || CHI["default"] || { mood: "neutro", peso: 0.5, avatar: "🐬" };
+    return CHI[nome] || CHI["default"] || { 
+        mood: "neutro", 
+        peso: 0.5, 
+        avatar: "🐬", 
+        img: "default_personaggio.webp" // <--- Aggiungi questo come paracadute finale
+    };
 }
-
 // ---------------------------------------------------------------------------
 // GENERA ARTICOLO (RSS o GEN)
 // ---------------------------------------------------------------------------
