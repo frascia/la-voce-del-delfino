@@ -12,17 +12,20 @@
         /* TESTATA */
         .testata { width:100%; background:var(--blu-mare); line-height:0; text-align:center; position:relative; }
         .testata img#header-img {
-            width: 100%;
-            /* 1. Evitiamo che "esploda" oltre la sua qualità originale */
-            max-width: 1040px;   
-           /* 2. Permettiamo all'altezza di adattarsi proporzionalmente */
-            height: auto;     
-           /* 3. Manteniamo il suo rapporto originale 1040/452 */
-            aspect-ratio: 1040 / 441; 
-          /* 4. La centriamo se lo schermo è più largo di 1040px */
-            margin: 20px auto 0; /* 20px è l'OFFSET dal bordo superiore */ 
-            object-fit: cover;
+        /* 1. L'OFFSET: lo spazio dal bordo superiore */
+        margin-top: 5px; 
+        /* 2. LARGHEZZA TOTALE: occupa sempre il 100% del browser */
+        width: 100%; 
         display: block;
+        /* 3. IL COMPROMESSO: su desktop la blocchiamo a 450px */
+        height: 450px; 
+        /* 4. LA MAGIA: riempie tutto lo spazio senza distorcere */
+        object-fit: cover; 
+        object-position: center; /* Centra il delfino così non tagliamo la testa! */
+        /* 5. FIX PER MOBILE: evita che diventi "enorme" sui telefoni */
+            @media (max-width: 600px) {
+            height: 250px; /* Sul cellulare la teniamo più bassa e snella */
+            }
         }
         
         /* TIMESTAMP */
