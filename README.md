@@ -6,7 +6,7 @@ Giornale automatico illustrato in stile Ghibli. Si aggiorna ogni ora via GitHub 
 
 ### 1. Crea il repo su GitHub e carica questi file (mantieni la struttura delle cartelle)sss
 
-### 2. Ottieni la GEMINI_API_KEY.  gratuitas
+### 2. Ottieni la GEMINI_API_KEY.  gratuitas 
 - Vai su [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
 - Clicca **"Create API Key"**ss
 - Copia la chiave (es. `AIzaSy...`)sdd
