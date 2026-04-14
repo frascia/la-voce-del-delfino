@@ -202,7 +202,7 @@ async function trovaUltimoModello() {
                 .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
             const flash = validi.filter(m => m.includes("flash")).sort((a, b) => b.localeCompare(a));
-            if (flash.length > 0) activeGeminiModel = flash[0];
+            if (flash.length > 0) activeGeminiModel = flash[1];
             else if (validi.length > 0) activeGeminiModel = validi.sort((a, b) => b.localeCompare(a))[0];
             scriviLog(`[MODELLO] ${activeGeminiModel}`);
         }
@@ -307,11 +307,16 @@ async function callGemini(sys, prompt, temperature = 0.85) {
             if (d.error) {
                 scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
                 const msg = d.error.message.toLowerCase();
+                // 🚫 SOLO QUI dichiari quota esaurita
+                if (msg.includes("limit") && msg.includes("per day")) {
+                scriviLog("❌ QUOTA GIORNALIERA ESAURITA (detto da Gemini)");
 
-                if (msg.includes("per day") || msg.includes("limit: 500")) {
-                    scriviLog("❌ QUOTA GIORNALIERA ESAURITA");
-                    quotaGiornalieraEsaurita = true;
-                    return null;
+                return `{
+                  "titolo": "${(prompt || "").substring(0, 60)}",
+                  "articolo": "Contenuto non generato per limite giornaliero API.",
+                  "commento": ""
+                }`;
+            }
                 }
                 if (d.error.code === 429 || d.error.code === 503) {
                     if (msg.includes("quota exceeded")) { await gestisciErroreQuota(d.error.message); continue; }
@@ -407,7 +412,9 @@ ${moodCommento}`;
 // ---------------------------------------------------------------------------
 
 async function generaCommenti(voce, CHI, relazioni, personaggi, articolo, commentiPrecedenti, LIMITI = {}) {
-    if (quotaGiornalieraEsaurita) return null;
+    if (quotaGiornalieraEsaurita) {
+        scriviLog("⚠️ modalità degradate attiva")
+    }
 
     // Costruisce il contesto dei personaggi disponibili
     const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
