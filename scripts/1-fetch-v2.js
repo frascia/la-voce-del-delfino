@@ -2,7 +2,7 @@
 /**
  * 1-fetch-v2.js
  * FASE 1 — Nuova architettura v2
- */
+ */ 
 
 import fs from "fs";
 import path from "path";
