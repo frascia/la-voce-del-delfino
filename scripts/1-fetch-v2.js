@@ -837,8 +837,9 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
         const parsedPersonaggio = parseJSON(rawPersonaggio);
         if (parsedPersonaggio?.titolo && parsedPersonaggio?.articolo) {
             const sezPers = Object.keys(draft.sezioni)[0] || "pescara";
+            const immaginePers=parsedPersonaggio.img; //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: STILI[sezPers] || "#005f73", articoli: [] };
-            const immaginePersonaggio = (CONFIG.IMMAGINI || {}).personaggio || null;
+            const immaginePersonaggio = (CONFIG.IMMAGINI || {}).personaggio || null; //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             draft.sezioni[sezPers].articoli.push({
                 tipo: "personaggio",
                 titolo: parsedPersonaggio.titolo,
@@ -847,7 +848,7 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
                 commenti: [],
                 categoria: "Dalla Redazione",
                 colore_tipo: STILI.GEN || "#2d6a4f",
-                immagine: immaginePersonaggio
+                immagine: immaginePers //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             });
             scriviLog(`✍️ Articolo personaggio scritto da ${personaggioCasuale}: "${parsedPersonaggio.titolo.substring(0, 50)}..."`);
         }
