@@ -848,7 +848,7 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
                 commenti: [],
                 categoria: "Dalla Redazione",
                 colore_tipo: STILI.GEN || "#2d6a4f",
-                immagine: immaginePers //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+                immagine: datiPersonaggio.img //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             });
             scriviLog(`✍️ Articolo personaggio scritto da ${personaggioCasuale}: "${parsedPersonaggio.titolo.substring(0, 50)}..."`);
         }
