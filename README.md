@@ -20,7 +20,7 @@ ss
 - **Settings → Pages → Source: GitHub Actions** → Salva. ss
 
 ### 5. Abilita i workflow
-- **Actions → "I understand my workflows, enable them"**
+- **Actions → "I understand my workflows, enable them"** 
 
 ### 6. Primo avvio manuale
 - **Actions → 🐬 Aggiorna Notizie → Run workflow**
