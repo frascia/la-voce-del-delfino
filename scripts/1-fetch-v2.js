@@ -317,29 +317,40 @@ async function callGemini(sys, prompt, temperature = 0.85) {
                   "commento": ""
                 }`;
             }
-                }
-                if (d.error.code === 429 || d.error.code === 503) {
-                    if (msg.includes("quota exceeded")) { await gestisciErroreQuota(d.error.message); continue; }
-                    const ms = Math.pow(2, i) * 10000;
-                    scriviLog(`⏳ Errore ${d.error.code}, attendo ${ms / 1000}s...`);
-                    await new Promise(r => setTimeout(r, ms));
-                    continue;
-                }
-                return null;
-            }
+                
+           // ⏳ RATE LIMIT / OVERLOAD
+    if (d.error) {
+    scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
 
-            const text = d.candidates?.[0]?.content?.parts?.[0]?.text;
-            return text || null;
+    const code = d.error.code;
+    const msg = (d.error.message || "").toLowerCase();
 
-        } catch (e) {
-            scriviLog(`[ECCEZIONE tentativo ${i + 1}] ${e.message}`);
-            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
-            if (i === 2) return null;
-        }
+    // ❌ quota giornaliera reale
+    if (msg.includes("limit") && msg.includes("per day")) {
+        return `{
+          "titolo": "${(prompt || "").substring(0, 60)}",
+          "articolo": "Contenuto non generato per limite giornaliero API.",
+          "commento": ""
+        }`;
     }
+
+    // ⏳ RATE LIMIT / OVERLOAD
+    if (code === 429 || code === 503) {
+
+        if (msg.includes("quota exceeded")) {
+            await gestisciErroreQuota(d.error.message);
+            continue;
+        }
+
+        const ms = Math.pow(2, i) * 10000;
+        scriviLog(`⏳ Errore ${code}, attendo ${ms / 1000}s...`);
+
+        await new Promise(r => setTimeout(r, ms));
+        continue;
+    }
+
     return null;
 }
-
 // ---------------------------------------------------------------------------
 // RISOLVE GIORNO CORRENTE
 // ---------------------------------------------------------------------------
