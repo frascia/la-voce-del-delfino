@@ -303,22 +303,8 @@ async function callGemini(sys, prompt, temperature = 0.85) {
                 })
             });
             const d = await res.json();
-
-            if (d.error) {
-                scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
-                const msg = d.error.message.toLowerCase();
-                // 🚫 SOLO QUI dichiari quota esaurita
-                if (msg.includes("limit") && msg.includes("per day")) {
-                scriviLog("❌ QUOTA GIORNALIERA ESAURITA (detto da Gemini)");
-
-                return `{
-                  "titolo": "${(prompt || "").substring(0, 60)}",
-                  "articolo": "Contenuto non generato per limite giornaliero API.",
-                  "commento": ""
-                }`;
-            }
-                
-           // ⏳ RATE LIMIT / OVERLOAD
+         
+    // ⏳ RATE LIMIT / OVERLOAD
     if (d.error) {
     scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
 
