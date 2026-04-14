@@ -2,10 +2,6 @@
 /**
  * 1-fetch-v2.js
  * FASE 1 — Nuova architettura v2
- *
- * Legge config_v2.json (struttura IMPOSTAZIONI/CHI/AGENDA/STILI/REDAZIONE/ICONE)
- * Gestisce personaggi con stati e relazioni dinamiche persistenti
- * Salva _draft-v2.json per 2-elabora-v2.js
  */
 
 import fs from "fs";
@@ -16,15 +12,46 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE_DIR   = path.join(__dirname, "..");
 const DATA_DIR   = path.join(BASE_DIR, "public", "data");
 
-const LOG_PATH         = path.join(DATA_DIR, "redazione-v2.log");
-const CONFIG_PATH      = path.join(DATA_DIR, "config_v2.json");
-const DRAFT_PATH       = path.join(DATA_DIR, "_draft-v2.json");
-const RELAZIONI_PATH   = path.join(DATA_DIR, "_relazioni.json");
-const PERSONAGGI_PATH  = path.join(DATA_DIR, "_personaggi.json");
-const CHAT_PATH        = path.join(DATA_DIR, "_chat.json");
-const CONTATORI_PATH   = path.join(DATA_DIR, "_contatori.json");
-const TEMP_PATH   = DRAFT_PATH + ".tmp";
-const BACKUP_PATH = DRAFT_PATH + ".bak";
+const LOG_PATH        = path.join(DATA_DIR, "redazione-v2.log");
+const CONFIG_PATH     = path.join(DATA_DIR, "config_v2.json");
+const DRAFT_PATH      = path.join(DATA_DIR, "_draft-v2.json");
+const RELAZIONI_PATH  = path.join(DATA_DIR, "_relazioni.json");
+const PERSONAGGI_PATH = path.join(DATA_DIR, "_personaggi.json");
+const CHAT_PATH       = path.join(DATA_DIR, "_chat.json");
+const CONTATORI_PATH  = path.join(DATA_DIR, "_contatori.json");
+const TEMP_PATH       = DRAFT_PATH + ".tmp";
+const BACKUP_PATH     = DRAFT_PATH + ".bak";
+
+if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+
+// ---------------------------------------------------------------------------
+// UTILITÀ LOG  (deve stare PRIMA di tutto il resto)
+// ---------------------------------------------------------------------------
+
+function scriviLog(msg) {
+    const ts = new Date().toLocaleString("it-IT", { timeZone: "Europe/Rome" });
+    const riga = `[${ts}] [1-fetch-v2] ${msg}\n`;
+    fs.appendFileSync(LOG_PATH, riga);
+    console.log(`> ${msg}`);
+}
+
+// ---------------------------------------------------------------------------
+// CARICA / SALVA JSON
+// ---------------------------------------------------------------------------
+
+function caricaJSON(filePath, defaultVal) {
+    try {
+        if (fs.existsSync(filePath))
+            return JSON.parse(fs.readFileSync(filePath, "utf8"));
+    } catch (e) {
+        scriviLog(`[WARN] Impossibile leggere ${filePath}: ${e.message}`);
+    }
+    return defaultVal;
+}
+
+function salvaJSON(filePath, data) {
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+}
 
 // ---------------------------------------------------------------------------
 // UTILITY SICURE DRAFT
@@ -37,55 +64,35 @@ function contaArticoli(draft) {
 
 function safeWriteDraft(draft) {
     const totale = contaArticoli(draft);
-
     if (totale === 0) {
         scriviLog("⚠️ Draft vuoto → NON sovrascrivo.");
         return false;
     }
-
     try {
-        // 1. Scrivi TEMP
         salvaJSON(TEMP_PATH, draft);
-
-        // 2. Backup vecchio
-        if (fs.existsSync(DRAFT_PATH)) {
-            fs.copyFileSync(DRAFT_PATH, BACKUP_PATH);
-        }
-
-        // 3. Commit atomico
+        if (fs.existsSync(DRAFT_PATH)) fs.copyFileSync(DRAFT_PATH, BACKUP_PATH);
         fs.renameSync(TEMP_PATH, DRAFT_PATH);
-
-        // 4. Cleanup backup
-        if (fs.existsSync(BACKUP_PATH)) {
-            fs.unlinkSync(BACKUP_PATH);
-        }
-
+        if (fs.existsSync(BACKUP_PATH)) fs.unlinkSync(BACKUP_PATH);
         scriviLog(`💾 Draft salvato in modo sicuro (${totale} articoli).`);
         return true;
-
     } catch (e) {
         scriviLog(`❌ Errore scrittura draft: ${e.message}`);
-
-        // Recovery
         if (fs.existsSync(BACKUP_PATH)) {
             fs.copyFileSync(BACKUP_PATH, DRAFT_PATH);
             scriviLog("♻️ Ripristinato backup.");
         }
-
         return false;
     }
 }
-if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+
 // ---------------------------------------------------------------------------
 // RECOVERY AUTOMATICO POST-CRASH
 // ---------------------------------------------------------------------------
 
 if (fs.existsSync(TEMP_PATH)) {
     scriviLog("♻️ TEMP trovato → possibile crash precedente.");
-
     try {
         const temp = caricaJSON(TEMP_PATH, null);
-
         if (temp && contaArticoli(temp) > 0) {
             fs.renameSync(TEMP_PATH, DRAFT_PATH);
             scriviLog("✅ Draft recuperato da TEMP.");
@@ -93,22 +100,13 @@ if (fs.existsSync(TEMP_PATH)) {
             fs.unlinkSync(TEMP_PATH);
             scriviLog("🧹 TEMP corrotto eliminato.");
         }
-
     } catch (e) {
         scriviLog(`⚠️ Errore recovery TEMP: ${e.message}`);
     }
 }
-// ---------------------------------------------------------------------------
-// STATO GLOBALE
-// ---------------------------------------------------------------------------
-
-const apiKey = process.env.GEMINI_API_KEY || "";
-let activeGeminiModel = "gemini-1.5-flash";
-let quotaGiornalieraEsaurita = false;
-let contatoreChiamateApi = 0;
 
 // ---------------------------------------------------------------------------
-// PULIZIA LOG (ogni 48 ore leggendo la prima riga)
+// PULIZIA LOG (ogni 48 ore)
 // ---------------------------------------------------------------------------
 
 if (fs.existsSync(LOG_PATH)) {
@@ -119,58 +117,33 @@ if (fs.existsSync(LOG_PATH)) {
         const dataLog = new Date(`${a}-${me}-${g}`);
         if ((Date.now() - dataLog.getTime()) / 3600000 >= 48) {
             fs.unlinkSync(LOG_PATH);
-            contatoreChiamateApi = 0;
         }
     }
 }
 
 // ---------------------------------------------------------------------------
-// UTILITÀ LOG
+// STATO GLOBALE
 // ---------------------------------------------------------------------------
 
-function scriviLog(msg) {
-    const ts = new Date().toLocaleString("it-IT", { timeZone: "Europe/Rome" });
-    const riga = `[${ts}] [1-fetch-v2] ${msg}\n`;
-    fs.appendFileSync(LOG_PATH, riga);
-    console.log(`> ${msg}`);
-}
-
-// ---------------------------------------------------------------------------
-// CARICA / SALVA JSON PERSISTENTI
-// ---------------------------------------------------------------------------
-
-function caricaJSON(filePath, defaultVal) {
-    try {
-        if (fs.existsSync(filePath)) return JSON.parse(fs.readFileSync(filePath, "utf8"));
-    } catch (e) {
-        scriviLog(`[WARN] Impossibile leggere ${filePath}: ${e.message}`);
-    }
-    return defaultVal;
-}
-
-function salvaJSON(filePath, data) {
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-}
+const apiKey = process.env.GEMINI_API_KEY || "";
+let activeGeminiModel = "gemini-1.5-flash";
+let quotaGiornalieraEsaurita = false;
+let contatoreChiamateApi = 0;
 
 // ---------------------------------------------------------------------------
 // DECAY SETTIMANALE RELAZIONI
-// Ogni run incrementa un contatore; ogni 14 run (2 volte/giorno × 7 giorni)
-// le relazioni decadono del 10% verso 0.
 // ---------------------------------------------------------------------------
 
 function applicaDecay(relazioni) {
     const DECAY_OGNI_N_RUN = 14;
     const DECAY_AMOUNT = 0.1;
-
     relazioni._runCount = (relazioni._runCount || 0) + 1;
-
     if (relazioni._runCount >= DECAY_OGNI_N_RUN) {
         relazioni._runCount = 0;
         for (const chiave of Object.keys(relazioni)) {
             if (chiave.startsWith("_")) continue;
             const r = relazioni[chiave];
             if (typeof r.score === "number") {
-                // Avvicina lo score a 0 del 10%
                 r.score = parseFloat((r.score * (1 - DECAY_AMOUNT)).toFixed(3));
                 r.label = labelDaScore(r.score);
             }
@@ -199,10 +172,11 @@ async function trovaUltimoModello() {
         const data = await res.json();
         if (data.models) {
             const validi = data.models
-                .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
+                .filter(m => m.name.includes("gemini") &&
+                             m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
             const flash = validi.filter(m => m.includes("flash")).sort((a, b) => b.localeCompare(a));
-            if (flash.length > 0) activeGeminiModel = flash[1];
+            if (flash.length > 0) activeGeminiModel = flash[0]; // FIX: era flash[1], poteva essere undefined
             else if (validi.length > 0) activeGeminiModel = validi.sort((a, b) => b.localeCompare(a))[0];
             scriviLog(`[MODELLO] ${activeGeminiModel}`);
         }
@@ -212,7 +186,7 @@ async function trovaUltimoModello() {
 }
 
 // ---------------------------------------------------------------------------
-// FETCH RSS — notizie fresche (max 48 ore)
+// FETCH RSS
 // ---------------------------------------------------------------------------
 
 async function fetchRSS(query, max) {
@@ -221,11 +195,10 @@ async function fetchRSS(query, max) {
     try {
         const res = await fetch(url);
         if (!res.ok) return [];
-        const xml    = await res.text();
-        // Nota: contatori non disponibile qui, viene aggiornato nel chiamante
+        const xml = await res.text();
         const titles = [];
-        const dueGiorniFa  = Date.now() - 2 * 24 * 3600000;
-        const itemRegex    = /<item>([\s\S]*?)<\/item>/gi;
+        const dueGiorniFa = Date.now() - 2 * 24 * 3600000;
+        const itemRegex   = /<item>([\s\S]*?)<\/item>/gi;
         let m;
         while ((m = itemRegex.exec(xml)) !== null && titles.length < max) {
             const item = m[1];
@@ -244,16 +217,14 @@ async function fetchRSS(query, max) {
     }
 }
 
-// Wrapper per fetchRSS che tiene il conteggio cumulativo
-async function fetchRSSContato(query, max, contatori) {
-    const risultati = await fetchRSS(query, max);
-    contatori.rss_fetch_totali = (contatori.rss_fetch_totali || 0) + 1;
-    return risultati;
-}
+// ---------------------------------------------------------------------------
+// GESTIONE PAUSA / QUOTA GEMINI
+// ---------------------------------------------------------------------------
 
-// ---------------------------------------------------------------------------
-// GESTIONE ERRORE QUOTA GEMINI
-// ---------------------------------------------------------------------------
+const ATTESA_GEMINI_MS = 1500;
+async function pausaGemini() {
+    await new Promise(r => setTimeout(r, ATTESA_GEMINI_MS));
+}
 
 async function gestisciErroreQuota(msg) {
     const m = msg.match(/Please retry in ([\d.]+)s/);
@@ -261,60 +232,18 @@ async function gestisciErroreQuota(msg) {
     scriviLog(`⏳ Attendo ${sec.toFixed(1)}s per quota...`);
     await new Promise(r => setTimeout(r, sec * 1000));
 }
-const ATTESA_GEMINI_MS = 1500; // 1.5 secondi (puoi tararla)
-async function pausaGemini() {
-    await new Promise(r => setTimeout(r, ATTESA_GEMINI_MS));
-}
+
 // ---------------------------------------------------------------------------
-// CHIAMATA GEMINI
+// CHIAMATA GEMINI  (definita una sola volta)
 // ---------------------------------------------------------------------------
 
 async function callGemini(sys, prompt, temperature = 0.85) {
     if (!apiKey) { scriviLog("ERRORE: Manca GEMINI_API_KEY"); return null; }
-     if (quotaGiornalieraEsaurita) {
-        scriviLog("⏭️ Quota esaurita → uso fallback articolo minimo.");
-        return JSON.stringify({
-            titolo: prompt?.substring(0, 60) || "Articolo non disponibile",
-            articolo: "Contenuto non generato per limite temporaneo di quota API.",
-            commento: ""
-        });
-     }
 
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
-
-    for (let i = 0; i < 3; i++) {
-        if (i === 0) await pausaGemini(); // ✅ solo prima chiamata
-        try {
-            contatoreChiamateApi++;
-            // Le quote cumulative vengono aggiornate nel main dopo ogni run
-            const res = await fetch(url, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: prompt }] }],
-                    systemInstruction: { parts: [{ text: sys }] },
-                    generationConfig: { responseMimeType: "application/json", temperature },
-                    safetySettings: [
-                        { category: "HARM_CATEGORY_HARASSMENT",        threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_HATE_SPEECH",        threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",  threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT",  threshold: "BLOCK_NONE" }
-                    ]
-                })
-            });
-            const d = await res.json();
-         
-// ---------------------------------------------------------------------------
-// CHIAMATA GEMINI
-// ---------------------------------------------------------------------------
-
-async function callGemini(sys, prompt, temperature = 0.85) {
-    if (!apiKey) { scriviLog("ERRORE: Manca GEMINI_API_KEY"); return null; }
-    
     if (quotaGiornalieraEsaurita) {
         scriviLog("⏭️ Quota esaurita → uso fallback articolo minimo.");
         return JSON.stringify({
-            titolo: prompt?.substring(0, 60) || "Articolo non disponibile",
+            titolo: (prompt || "").substring(0, 60),
             articolo: "Contenuto non generato per limite temporaneo di quota API.",
             commento: ""
         });
@@ -323,11 +252,9 @@ async function callGemini(sys, prompt, temperature = 0.85) {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
 
     for (let i = 0; i < 3; i++) {
-        if (i === 0) await pausaGemini(); // ✅ solo prima chiamata
-        
+        await pausaGemini();
         try {
             contatoreChiamateApi++;
-            // Le quote cumulative vengono aggiornate nel main dopo ogni run
             const res = await fetch(url, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -336,27 +263,24 @@ async function callGemini(sys, prompt, temperature = 0.85) {
                     systemInstruction: { parts: [{ text: sys }] },
                     generationConfig: { responseMimeType: "application/json", temperature },
                     safetySettings: [
-                        { category: "HARM_CATEGORY_HARASSMENT",        threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_HATE_SPEECH",       threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
+                        { category: "HARM_CATEGORY_HARASSMENT",       threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_HATE_SPEECH",      threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT",threshold: "BLOCK_NONE" }
                     ]
                 })
             });
-            
+
             const d = await res.json();
 
-            // GESTIONE ERRORI
             if (d.error) {
                 scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
-                
                 const code = d.error.code;
-                const msg = (d.error.message || "").toLowerCase();
+                const msg  = (d.error.message || "").toLowerCase();
 
-                // ❌ quota giornaliera reale
                 if (msg.includes("limit") && msg.includes("per day")) {
                     scriviLog("❌ QUOTA GIORNALIERA ESAURITA (detto da Gemini)");
-                    quotaGiornalieraEsaurita = true; // Segna la quota esaurita per le prossime chiamate
+                    quotaGiornalieraEsaurita = true;
                     return JSON.stringify({
                         titolo: (prompt || "").substring(0, 60),
                         articolo: "Contenuto non generato per limite giornaliero API.",
@@ -364,7 +288,6 @@ async function callGemini(sys, prompt, temperature = 0.85) {
                     });
                 }
 
-                // ⏳ RATE LIMIT / OVERLOAD
                 if (code === 429 || code === 503) {
                     if (msg.includes("quota exceeded")) {
                         await gestisciErroreQuota(d.error.message);
@@ -379,23 +302,23 @@ async function callGemini(sys, prompt, temperature = 0.85) {
                 return null;
             }
 
-            // ✅ GESTIONE SUCCESSO (mancava nel tuo codice!)
-            if (d.candidates && d.candidates.length > 0) {
+            if (d.candidates?.length > 0) {
                 return d.candidates[0].content.parts[0].text;
             }
-            
-            return null; // Risposta valida ma senza contenuto
+
+            return null;
 
         } catch (e) {
             scriviLog(`[ERRORE RETE] Impossibile contattare API: ${e.message}`);
-            await new Promise(r => setTimeout(r, 5000)); // Pausa prima di riprovare
+            await new Promise(r => setTimeout(r, 5000));
         }
-    } // Chiude il for
-    
+    }
+
     return null;
-} // Chiude la funzione
+}
+
 // ---------------------------------------------------------------------------
-// RISOLVE GIORNO CORRENTE
+// UTILITIES CALENDARIO
 // ---------------------------------------------------------------------------
 
 function giornoOggi() {
@@ -403,10 +326,6 @@ function giornoOggi() {
     const d = new Date(fusoItalia);
     return ["dom", "lun", "mar", "mer", "gio", "ven", "sab"][d.getDay()];
 }
-
-// ---------------------------------------------------------------------------
-// RISOLVE AGENDA DEL GIORNO
-// ---------------------------------------------------------------------------
 
 function risolviAgenda(AGENDA, oggi) {
     for (const [chiave, val] of Object.entries(AGENDA)) {
@@ -417,32 +336,23 @@ function risolviAgenda(AGENDA, oggi) {
     return AGENDA.default;
 }
 
-// ---------------------------------------------------------------------------
-// RISOLVE PERSONAGGIO (con fallback a default)
-// ---------------------------------------------------------------------------
-
 function risolviPersonaggio(CHI, nome) {
-    return CHI[nome] || CHI["default"] || { 
-        mood: "neutro", 
-        peso: 0.5, 
-        avatar: "🐬", 
-        img: "default_personaggio.webp" // <--- Aggiungi questo come paracadute finale
+    return CHI[nome] || CHI["default"] || {
+        mood: "neutro", peso: 0.5, avatar: "🐬", img: "default_personaggio.webp"
     };
 }
+
 // ---------------------------------------------------------------------------
-// GENERA ARTICOLO (RSS o GEN)
+// GENERA ARTICOLO
 // ---------------------------------------------------------------------------
 
 async function generaArticolo(voce, CHI, titolo) {
-    const firma = risolviPersonaggio(CHI, voce.firma);
-    const moodFirma = firma.mood || "neutro";
-    const bioFirma = (firma.bio_breve || firma.bio) ? `La tua storia: "${firma.bio_breve || firma.bio}".` : "";
+    const firma       = risolviPersonaggio(CHI, voce.firma);
+    const moodFirma   = firma.mood || "neutro";
+    const bioFirma    = (firma.bio_breve || firma.bio)
+        ? `La tua storia: "${firma.bio_breve || firma.bio}".` : "";
     const moodCommento = voce.mood ? `Il tono del commento finale deve essere: ${voce.mood}` : "";
-    const isGenerato = voce.tipo === "GEN";
-    const imgFirma = firma.img; // <<<<<<<<<<<<<======================================================
-    // inventare è indipendente dal tipo — può essere true sia su GEN che su RSS
-
-    // fantasia: true = inventa liberamente | false/assente = scrive cose vere (anche se senza RSS)
+    const isGenerato  = voce.tipo === "GEN";
     const puoInventare = voce.fantasia === true;
 
     const sys = `Sei ${voce.firma}, giornalista con questo carattere: "${moodFirma}". ${bioFirma}
@@ -462,18 +372,17 @@ ${moodCommento}`;
 }
 
 // ---------------------------------------------------------------------------
-// GENERA COMMENTI A CASCATA
+// GENERA COMMENTI
 // ---------------------------------------------------------------------------
 
 async function generaCommenti(voce, CHI, relazioni, personaggi, articolo, commentiPrecedenti, LIMITI = {}) {
     if (quotaGiornalieraEsaurita) {
-        scriviLog("⚠️ modalità degradate attiva")
+        scriviLog("⚠️ Modalità degradata attiva — commenti saltati.");
+        return null;
     }
 
-    // Costruisce il contesto dei personaggi disponibili
     const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
 
-    // Costruisce il contesto delle relazioni rilevanti
     const contestoRelazioni = nomiPersonaggi.flatMap(a =>
         nomiPersonaggi.filter(b => b !== a).map(b => {
             const k = `${a}→${b}`;
@@ -482,20 +391,17 @@ async function generaCommenti(voce, CHI, relazioni, personaggi, articolo, commen
         }).filter(Boolean)
     ).join(". ");
 
-    // Costruisce il contesto degli stati
     const contestoStati = nomiPersonaggi.map(n => {
         const p = personaggi[n];
         return p?.stato && p.stato !== "normale"
-            ? `${n} è attualmente: ${p.stato} (umore: ${p.umore || "neutro"})`
-            : null;
+            ? `${n} è attualmente: ${p.stato} (umore: ${p.umore || "neutro"})` : null;
     }).filter(Boolean).join(". ");
 
-    // Costruisce il contesto dei commenti precedenti
     const contestoCommenti = commentiPrecedenti?.length
         ? `Commenti precedenti:\n${commentiPrecedenti.map(c => `${c.nome} (${c.avatar}): "${c.testo}"`).join("\n")}`
         : "";
 
-    const sys = `Sei il moderatore della redazione de La Voce del Delfino. 
+    const sys = `Sei il moderatore della redazione de La Voce del Delfino.
 I personaggi disponibili sono: ${nomiPersonaggi.map(n => {
         const p = CHI[n];
         const bio = (p.bio_breve || p.bio) ? ` Bio: "${p.bio_breve || p.bio}"` : "";
@@ -512,19 +418,15 @@ Se un personaggio è in sciopero, decidi autonomamente se partecipa o meno.
 Rispondi SOLO con JSON: {"commenti": [{"nome":"...","avatar":"...","testo":"..."}]}`;
 
     const userPrompt = `Articolo: "${articolo}"\n\nGenera i commenti dei personaggi.`;
-
     return await callGemini(sys, userPrompt, voce.weight_commento ?? 0.7);
 }
 
 // ---------------------------------------------------------------------------
-// AGGIORNA RELAZIONI E STATI dopo i commenti
+// AGGIORNA RELAZIONI E STATI
 // ---------------------------------------------------------------------------
 
 async function aggiornaRelazioni(CHI, relazioni, personaggi, articolo, commenti) {
     if (quotaGiornalieraEsaurita || !commenti?.length) return;
-
-    const nomiPresenti = commenti.map(c => c.nome);
-    const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
 
     const sys = `Sei un analista delle dinamiche sociali della redazione de La Voce del Delfino.
 Analizza questa interazione e restituisci i delta delle relazioni e gli eventuali cambi di stato.
@@ -548,7 +450,6 @@ Analizza le dinamiche e restituisci i delta.`;
         const inizio = raw.indexOf("{"), fine = raw.lastIndexOf("}");
         const parsed = JSON.parse(raw.substring(inizio, fine + 1));
 
-        // Applica delta relazioni
         for (const d of (parsed.delta_relazioni || [])) {
             const chiave = `${d.da}→${d.a}`;
             if (!relazioni[chiave]) relazioni[chiave] = { score: 0, label: "neutro", ultimo_aggiornamento: "" };
@@ -557,12 +458,11 @@ Analizza le dinamiche e restituisci i delta.`;
             relazioni[chiave].ultimo_aggiornamento = new Date().toLocaleDateString("it-IT", { timeZone: "Europe/Rome" });
         }
 
-        // Applica nuovi stati personaggi
         for (const s of (parsed.nuovi_stati || [])) {
             if (!personaggi[s.nome]) personaggi[s.nome] = {};
             personaggi[s.nome].stato = s.stato;
             personaggi[s.nome].umore = s.umore;
-            personaggi[s.nome].dal = new Date().toLocaleDateString("it-IT", { timeZone: "Europe/Rome" });
+            personaggi[s.nome].dal   = new Date().toLocaleDateString("it-IT", { timeZone: "Europe/Rome" });
         }
 
         scriviLog(`🔄 Relazioni aggiornate: ${(parsed.delta_relazioni || []).length} delta, ${(parsed.nuovi_stati || []).length} stati cambiati.`);
@@ -589,11 +489,8 @@ function parseJSON(raw) {
     return null;
 }
 
-
 // ---------------------------------------------------------------------------
-// GENERA CHAT INTERNA DI REDAZIONE
-// Una conversazione casuale tra i personaggi, basata su relazioni e stati.
-// Spunto casuale: lamentela su un commento, gossip, battibecco, elogio ironico.
+// GENERA CHAT INTERNA
 // ---------------------------------------------------------------------------
 
 async function generaChat(CHI, relazioni, personaggi) {
@@ -602,23 +499,19 @@ async function generaChat(CHI, relazioni, personaggi) {
     const nomi = Object.keys(CHI).filter(n => n !== "default");
     if (nomi.length < 2) return null;
 
-    // Contesto relazioni
     const contestoRelazioni = nomi.flatMap(a =>
         nomi.filter(b => b !== a).map(b => {
-            const r = relazioni[`${a}\u2192${b}`];
+            const r = relazioni[`${a}→${b}`];
             return r ? `${a} è ${r.label} verso ${b}` : null;
         }).filter(Boolean)
     ).join(". ");
 
-    // Contesto stati
     const contestoStati = nomi.map(n => {
         const p = personaggi[n];
         return p?.stato && p.stato !== "normale"
-            ? `${n} è: ${p.stato} (umore: ${p.umore || "neutro"})`
-            : null;
+            ? `${n} è: ${p.stato} (umore: ${p.umore || "neutro"})` : null;
     }).filter(Boolean).join(". ");
 
-    // Spunti casuali per la chat
     const spunti = [
         "qualcuno si lamenta di un commento scritto da un collega",
         "qualcuno chiede spiegazioni su un articolo pubblicato",
@@ -659,24 +552,22 @@ Rispondi SOLO con JSON:
     }
 }
 
-
 // ---------------------------------------------------------------------------
 // CONTATORI GIORNALIERI E FASCE ORARIE
 // ---------------------------------------------------------------------------
 
 function caricaContatori(LIMITI) {
     const oraRoma = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
-    const oggi = oraRoma.toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit" });
-    const oraCorrente = oraRoma.getHours();
+    const oggi    = oraRoma.toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit" });
+    const oraCorrente    = oraRoma.getHours();
     const minutiCorrente = oraRoma.getMinutes();
     const contatori = caricaJSON(CONTATORI_PATH, {});
 
-    // Fascia reset quote (ora intera italiana, es. "05" = alle 05:00)
-    const fasciaReset = parseInt(LIMITI.fascia_reset_quote ?? "05");
-    const tolleranza = LIMITI.tolleranza_minuti ?? 30;
+    const fasciaReset  = parseInt(LIMITI.fascia_reset_quote ?? "05");
+    const tolleranza   = LIMITI.tolleranza_minuti ?? 30;
     const inFasciaReset = Math.abs((oraCorrente * 60 + minutiCorrente) - fasciaReset * 60) <= tolleranza;
 
-    // Reset se: nuovo giorno OPPURE siamo nella fascia reset e non l'abbiamo ancora fatto oggi
+    // FIX: contatori.data è una stringa (es. "14/04"), non un oggetto
     const deveResettare = contatori.data !== oggi ||
         (inFasciaReset && !contatori.reset_eseguito_oggi);
 
@@ -685,11 +576,13 @@ function caricaContatori(LIMITI) {
         return {
             data: oggi,
             reset_eseguito_oggi: inFasciaReset,
+            _primoRunOggi: false,
             cerca_modello: 0,
             chat_run: 0,
             chiamate_gemini: 0,
             token_stimati: 0,
-            rss_fetch: 0
+            rss_fetch: 0,
+            articoli_run: 0
         };
     }
     return contatori;
@@ -698,32 +591,20 @@ function caricaContatori(LIMITI) {
 function limiteSuperato(contatori, LIMITI, tipo) {
     const limite = LIMITI[tipo];
     if (limite === "sempre" || limite === undefined) return false;
-    const contatore = contatori[tipo.replace("_max", "")] || 0;
-    return contatore >= limite;
+    return (contatori[tipo.replace("_max", "")] || 0) >= limite;
 }
 
-/**
- * Controlla se l'ora corrente italiana rientra in una delle fasce configurate.
- * Tolleranza in minuti: se fascia="06" e tolleranza=45, accetta dalle 05:15 alle 06:45.
- */
 function fasciaDiArticoliAttiva(LIMITI) {
     const fasce = LIMITI.fasce_articoli;
-    if (!fasce || fasce.length === 0) return true; // nessun limite = sempre attivo
+    if (!fasce || fasce.length === 0) return true;
 
-    const oraRoma = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
-    const minutiOra = oraRoma.getHours() * 60 + oraRoma.getMinutes();
+    const oraRoma    = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
+    const minutiOra  = oraRoma.getHours() * 60 + oraRoma.getMinutes();
     const tolleranza = LIMITI.tolleranza_minuti ?? 30;
 
-    return fasce.some(f => {
-        const fasciaMinuti = parseInt(f) * 60;
-        return Math.abs(minutiOra - fasciaMinuti) <= tolleranza;
-    });
+    return fasce.some(f => Math.abs(minutiOra - parseInt(f) * 60) <= tolleranza);
 }
 
-/**
- * Converte lunghezza_articolo (1-10) in numero di parole target.
- * 1 = ~80 parole, 10 = ~800 parole
- */
 function paroleTarget(LIMITI) {
     const livello = Math.max(1, Math.min(10, LIMITI.lunghezza_articolo ?? 5));
     return Math.round(80 + (livello - 1) * 80);
@@ -742,7 +623,6 @@ async function main() {
     scriviLog(`═══════════════════════════════════`);
     scriviLog("⚓️ FASE 1-v2 — Avvio...");
 
-    // --- Carica config ---
     if (!fs.existsSync(CONFIG_PATH)) {
         scriviLog(`ERRORE: ${CONFIG_PATH} non trovato!`);
         process.exit(1);
@@ -750,77 +630,52 @@ async function main() {
     const CONFIG = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
     const { IMPOSTAZIONI, CHI, AGENDA, STILI, REDAZIONE, ICONE } = CONFIG;
 
-    // --- Limiti, contatori e fasce ---
-    const LIMITI = CONFIG.LIMITI || {};
+    const LIMITI    = CONFIG.LIMITI || {};
     const contatori = caricaContatori(LIMITI);
-    const articoliAttivi = fasciaDiArticoliAttiva(LIMITI);
-    const parole = paroleTarget(LIMITI);
-    scriviLog(`📊 Quote cumulative oggi: chiamate_gemini=${contatori.chiamate_gemini ?? 0}, rss_fetch=${contatori.rss_fetch ?? 0}, token_stimati≈${contatori.token_stimati ?? 0}`);
+
+    // FIX: isPrimoRun letto DOPO caricaContatori (che può aver resettato il flag)
+    const isPrimoRun      = contatori._primoRunOggi !== true;
+    const articoliAttivi  = fasciaDiArticoliAttiva(LIMITI);
+    const parole          = paroleTarget(LIMITI);
+
+    scriviLog(`📊 Quote oggi: chiamate_gemini=${contatori.chiamate_gemini ?? 0}, rss_fetch=${contatori.rss_fetch ?? 0}, token_stimati≈${contatori.token_stimati ?? 0}`);
     scriviLog(`🕐 Fascia articoli attiva: ${articoliAttivi ? "SÌ" : "NO"} | Lunghezza target: ~${parole} parole`);
 
-    // --- Cerca modello — sempre, senza condizioni ---
     await trovaUltimoModello();
 
-    // --- Giorno corrente e agenda ---
-    const oggi = giornoOggi();
+    const oggi   = giornoOggi();
     const agenda = risolviAgenda(AGENDA, oggi);
     scriviLog(`📅 Giorno: ${oggi} | Timbro: ${agenda.timbro}`);
 
-    // --- Ora aggiornamento ---
     const oraAggiornamento = new Date().toLocaleString("it-IT", {
-        timeZone: "Europe/Rome",
-        hour: "2-digit", minute: "2-digit",
+        timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit",
         day: "2-digit", month: "2-digit"
     });
 
-    // --- Carica persistenti ---
     let relazioni  = caricaJSON(RELAZIONI_PATH, { _runCount: 0 });
     let personaggi = caricaJSON(PERSONAGGI_PATH, {});
 
-    // Inizializza personaggi mancanti
     for (const nome of Object.keys(CHI).filter(n => n !== "default")) {
         if (!personaggi[nome]) personaggi[nome] = { stato: "normale", umore: "neutro", dal: null };
     }
 
-    // Applica decay settimanale
     relazioni = applicaDecay(relazioni);
-   
-    if (contatori.data?.giorno !== oggi) {
-    // 🔁 Nuovo giorno → reset
-    contatori._primoRunOggi = false;
-    contatori.data = { giorno: oggi };
-}
-    
-    // --- Primo aggiornamento del giorno: cancella il draft precedente ---
-    const isPrimoRun = contatori._primoRunOggi !== true;
- 
 
-    // --- Filtra REDAZIONE per oggi ---
     const vociAttive = REDAZIONE.filter(voce => {
         if (voce.g === "default") return true;
-        const giorniVoce = voce.g.split(",").map(g => g.trim());
-        return giorniVoce.includes(oggi);
+        return voce.g.split(",").map(g => g.trim()).includes(oggi);
     });
-
     scriviLog(`📋 Voci attive oggi: ${vociAttive.length}`);
 
     // --- Draft ---
-  let draft;
-
+    let draft;
     if (!isPrimoRun && fs.existsSync(DRAFT_PATH)) {
         draft = caricaJSON(DRAFT_PATH, {});
         draft.oraAggiornamento = oraAggiornamento;
     } else {
-        draft = {
-            oraAggiornamento,
-            agenda,
-            impostazioni: IMPOSTAZIONI,
-            stili: STILI,
-            sezioni: {}
-        };
+        draft = { oraAggiornamento, agenda, impostazioni: IMPOSTAZIONI, stili: STILI, sezioni: {} };
     }
 
-    // Raggruppa per sezione
     for (const voce of vociAttive) {
         const sez = voce.sez;
         if (!draft.sezioni[sez]) {
@@ -831,29 +686,26 @@ async function main() {
         }
     }
 
-    // --- Genera articoli (se entro il limite giornaliero) ---
+    // --- Genera articoli ---
     const articoliAbilitati = !limiteSuperato(contatori, LIMITI, "articoli_run_max");
     if (!articoliAbilitati) {
         scriviLog(`⏭️ Generazione articoli saltata (limite: ${LIMITI.articoli_run_max} run/giorno raggiunto).`);
     }
     contatori.articoli_run = (contatori.articoli_run || 0) + (articoliAbilitati ? 1 : 0);
 
-    // Ogni tema da generare porta con sé la voce di appartenenza — così
-    // la cascata non mescola mai metadati (firma, label, icona) tra voci diverse.
-    // [ { voce, tema } ]
     const codaArticoli = [];
 
     if (articoliAbilitati) {
         let quotaAvanzata = 0;
-        let voceQuota = null; // la voce che ha generato la quota avanzata
+        let voceQuota = null;
 
         for (const voce of vociAttive) {
             const num = (voce.num || 1) + (voceQuota?.sez === voce.sez ? quotaAvanzata : 0);
             quotaAvanzata = 0;
             voceQuota = null;
+            voce._parole = parole;
 
-            voce._parole = parole; // lunghezza target dal config
-        scriviLog(`🎣 [${voce.sez}] ${voce.arg} — tipo: ${voce.tipo}, num: ${num}, firma: ${voce.firma}, ~${parole} parole`);
+            scriviLog(`🎣 [${voce.sez}] ${voce.arg} — tipo: ${voce.tipo}, num: ${num}, firma: ${voce.firma}, ~${parole} parole`);
 
             if (voce.tipo === "GEN") {
                 const temi = voce.temi || [voce.arg];
@@ -862,153 +714,128 @@ async function main() {
                 }
             } else {
                 const titoli = await fetchRSS(voce.arg, num);
+                contatori.rss_fetch = (contatori.rss_fetch || 0) + 1; // FIX: conteggio qui, non in wrapper inutilizzato
                 const mancanti = num - titoli.length;
                 if (mancanti > 0) {
                     scriviLog(`[CASCATA] Solo ${titoli.length}/${num} notizie per "${voce.arg}". Passo ${mancanti} alla voce successiva.`);
                     quotaAvanzata = mancanti;
-                    voceQuota = voce; // ricorda CHI ha ceduto la quota
+                    voceQuota = voce;
                 }
-                for (const t of titoli) {
-                    codaArticoli.push({ voce, tema: t }); // metadati sempre della voce corrente
-                }
+                for (const t of titoli) codaArticoli.push({ voce, tema: t });
             }
         }
     }
 
-    // --- Genera articoli dalla coda ---
     for (const { voce, tema } of codaArticoli) {
-        const sez        = voce.sez;
-        const icona      = ICONE[voce.lab] || ICONE["default"] || "Categoria.webp";
-        const coloreTipo = STILI[voce.tipo] || STILI["RSS"];
-        // Recupera i dati del personaggio per avere l'immagine
-        const infoFirma = risolviPersonaggio(CHI, voce.firma);
-        const immagineDaUsare = infoFirma.img || ICONE[voce.lab] || "default_personaggio.webp";
-        // 1. Genera articolo
+        const sez         = voce.sez;
+        const icona       = ICONE[voce.lab] || ICONE["default"] || "Categoria.webp";
+        const coloreTipo  = STILI[voce.tipo] || STILI["RSS"];
+        const infoFirma   = risolviPersonaggio(CHI, voce.firma);
+
         const rawArticolo    = await generaArticolo(voce, CHI, tema);
         const parsedArticolo = parseJSON(rawArticolo);
-        // --- CONTROLLO DI QUALITÀ ---
-        // Se parsedArticolo è null o non ha il testo, saltiamo completamente questo giro.
-        // Niente scuse del tipo "IA in pausa caffè" nel database!
-        if (!parsedArticolo || !parsedArticolo.articolo || parsedArticolo.articolo.length < 50) {
-            scriviLog(`⚠️  [SKIP] Articolo su "${tema.substring(0,30)}..." fallito o vuoto. Non registrato.`);
-            continue; // Passa alla prossima notizia senza fare nulla
+
+        if (!parsedArticolo?.articolo || parsedArticolo.articolo.length < 50) {
+            scriviLog(`⚠️ [SKIP] Articolo su "${tema.substring(0, 30)}..." fallito o vuoto.`);
+            continue;
         }
-        const articoloTesto  = parsedArticolo?.articolo ||
-            (voce.tipo === "GEN"
-                ? `Avevamo uno scoop su "${tema}", ma un gabbiano ha rubato gli appunti.`
-                : `Notizia: "${tema}". L'IA è in pausa caffè.`);
-        const titoloFinale   = parsedArticolo?.titolo || tema;
-        const commentoFirma  = parsedArticolo?.commento || "…";
 
-        // 2. Genera commenti a cascata dei personaggi
-       let commentiFinali = [];
+        const articoloTesto = parsedArticolo.articolo;
+        const titoloFinale  = parsedArticolo.titolo || tema;
+        const commentoFirma = parsedArticolo.commento || "…";
 
-    const rawCommenti = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI);
-
-    if (rawCommenti) {
-        const parsedCommenti = parseJSON(rawCommenti);
-        if (parsedCommenti?.commenti?.length) {
-            commentiFinali = parsedCommenti.commenti;
-            await aggiornaRelazioni(CHI, relazioni, personaggi, articoloTesto, commentiFinali);
+        let commentiFinali = [];
+        const rawCommenti = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI);
+        if (rawCommenti) {
+            const parsedCommenti = parseJSON(rawCommenti);
+            if (parsedCommenti?.commenti?.length) {
+                commentiFinali = parsedCommenti.commenti;
+                await aggiornaRelazioni(CHI, relazioni, personaggi, articoloTesto, commentiFinali);
+            }
         }
-    }
 
-        // 4. Push nel draft — immagine dal config IMMAGINI per tipo, fallback su icona categoria
         const IMMAGINI = CONFIG.IMMAGINI || {};
-        const tipoChiave = voce.tipo === "GEN" ? "gen" : "rss";
-        const immagineTipo = IMMAGINI[tipoChiave] || icona;
         draft.sezioni[sez].articoli.push({
             tipo:           voce.tipo === "GEN" ? "gen" : "rss",
             titolo:         titoloFinale,
             articolo:       articoloTesto,
-            commento_firma: { nome: voce.firma, avatar: risolviPersonaggio(CHI, voce.firma).avatar, testo: commentoFirma },
+            commento_firma: { nome: voce.firma, avatar: infoFirma.avatar, testo: commentoFirma },
             commenti:       commentiFinali,
             categoria:      voce.lab,
             colore_tipo:    coloreTipo,
-            immagine:       risolviPersonaggio(CHI, voce.firma).img || "default_personaggio.webp"
+            immagine:       infoFirma.img || "default_personaggio.webp"
         });
 
         scriviLog(`  ✅ "${titoloFinale.substring(0, 50)}..." — ${commentiFinali.length} commenti`);
     }
 
-    // --- Nuovi commenti su notizie congelate (run oltre il limite articoli) ---
+    // --- Nuovi commenti su notizie congelate ---
+    // FIX: usa draftEsistente (il file su disco), non il draft appena costruito
     if (!articoliAttivi && fs.existsSync(DRAFT_PATH)) {
         scriviLog("🧊 Articoli congelati — aggiungo commenti alle notizie esistenti...");
         const draftEsistente = caricaJSON(DRAFT_PATH, { sezioni: {} });
 
         for (const [sez, datiSez] of Object.entries(draftEsistente.sezioni || {})) {
             for (const articolo of (datiSez.articoli || [])) {
-                // Trova la voce corrispondente per avere il contesto giusto
-                const voceRef = vociAttive.find(v => v.sez === sez && v.lab === articolo.categoria) || vociAttive.find(v => v.sez === sez);
+                const voceRef = vociAttive.find(v => v.sez === sez && v.lab === articolo.categoria)
+                    || vociAttive.find(v => v.sez === sez);
                 if (!voceRef) continue;
 
                 const rawCommenti    = await generaCommenti(voceRef, CHI, relazioni, personaggi, articolo.articolo, articolo.commenti || [], LIMITI);
                 const parsedCommenti = parseJSON(rawCommenti);
                 if (parsedCommenti?.commenti?.length) {
-                    // Accoda i nuovi commenti a quelli esistenti (max 6 totali)
                     const maxTotali = LIMITI.commenti_max_totali ?? 6;
                     articolo.commenti = [...(articolo.commenti || []), ...parsedCommenti.commenti].slice(0, maxTotali);
                     await aggiornaRelazioni(CHI, relazioni, personaggi, articolo.articolo, parsedCommenti.commenti);
                     scriviLog(`  💬 Nuovi commenti aggiunti a: "${articolo.titolo.substring(0, 40)}..."`);
                 }
             }
-            // Aggiorna draft con i nuovi commenti
-            if (!draft.sezioni[sez]) draft.sezioni[sez] = datiSez;
-            draft.sezioni[sez].articoli = [
-            ...(draft.sezioni[sez].articoli || []),
-            ...(datiSez.articoli || [])
-];
+            // FIX: sovrascrive (non accoda) gli articoli della sezione con quelli aggiornati
+            draft.sezioni[sez] = datiSez;
         }
     }
 
-    // --- Genera chat interna di redazione (30% di probabilità per run) ---
+    // --- Chat interna ---
     const chatAbilitata = LIMITI.chat !== "sempre"
-        ? !limiteSuperato(contatori, LIMITI, "chat_run_max")
-        : true;
+        ? !limiteSuperato(contatori, LIMITI, "chat_run_max") : true;
     const chattaOggi = chatAbilitata && Math.random() < 0.30;
     scriviLog(`💬 Chat oggi: ${chattaOggi ? "sì" : !chatAbilitata ? "no (limite raggiunto)" : "no (skip casuale)"}`);
     if (chattaOggi) contatori.chat_run = (contatori.chat_run || 0) + 1;
-    const chatOggi = chattaOggi ? await generaChat(CHI, relazioni, personaggi) : null;
+
+    const chatOggi   = chattaOggi ? await generaChat(CHI, relazioni, personaggi) : null;
     const chatStorico = caricaJSON(CHAT_PATH, []);
     if (chatOggi) {
-        chatStorico.unshift({
-            data: oraAggiornamento,
-            messaggi: chatOggi
-        });
-        // Mantieni solo le ultime 30 chat
+        chatStorico.unshift({ data: oraAggiornamento, messaggi: chatOggi });
         if (chatStorico.length > 30) chatStorico.splice(30);
         salvaJSON(CHAT_PATH, chatStorico);
         scriviLog(`💬 Chat salvata: ${chatOggi.length} messaggi.`);
     }
 
-    // --- Aggiorna quote cumulative e salva contatori ---
+    // --- Aggiorna contatori ---
     contatori.chiamate_gemini_totali = (contatori.chiamate_gemini_totali || 0) + contatoreChiamateApi;
-    // Stima token: ~450 token per chiamata (input+output medio)
-    contatori.token_stimati_totali = (contatori.token_stimati_totali || 0) + (contatoreChiamateApi * 450);
-    contatori.cerca_modello = (contatori.cerca_modello || 0);
-    contatori.chat_run = (contatori.chat_run || 0);
-    scriviLog(`📊 Totale giornata: chiamate=${contatori.chiamate_gemini_totali}, token_stimati≈${contatori.token_stimati_totali}, rss=${contatori.rss_fetch_totali ?? 0}`);
+    contatori.token_stimati_totali   = (contatori.token_stimati_totali   || 0) + (contatoreChiamateApi * 450);
+    scriviLog(`📊 Totale giornata: chiamate=${contatori.chiamate_gemini_totali}, token_stimati≈${contatori.token_stimati_totali}, rss=${contatori.rss_fetch ?? 0}`);
     salvaJSON(CONTATORI_PATH, contatori);
 
-    // --- Salva persistenti aggiornati ---
     salvaJSON(RELAZIONI_PATH, relazioni);
     salvaJSON(PERSONAGGI_PATH, personaggi);
     scriviLog(`💾 Relazioni e personaggi salvati.`);
 
-    // --- Articolo personaggio: un personaggio casuale scrive qualcosa che gli piace ---
+    // --- Articolo personaggio casuale ---
     scriviLog("✍️ Generazione articolo personaggio casuale...");
-    const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
+    const nomiPersonaggi     = Object.keys(CHI).filter(n => n !== "default");
     const personaggioCasuale = nomiPersonaggi[Math.floor(Math.random() * nomiPersonaggi.length)];
-    const datiPersonaggio = CHI[personaggioCasuale];
+    const datiPersonaggio    = CHI[personaggioCasuale];
+
     const sysPersonaggio = `Sei ${personaggioCasuale}, con questo carattere: "${datiPersonaggio.mood}". ${datiPersonaggio.bio_breve ? `La tua storia: "${datiPersonaggio.bio_breve}".` : ""}
 Scrivi un breve articolo (150-250 parole) su qualcosa che ti piace, ti ha colpito o ti ha fatto arrabbiare oggi.
 Scegli tu l'argomento in base alla tua personalità.
 Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
+
     const rawPersonaggio = await callGemini(sysPersonaggio, "Scrivi il tuo articolo personale di oggi.", datiPersonaggio.peso ?? 0.8);
     if (rawPersonaggio) {
         const parsedPersonaggio = parseJSON(rawPersonaggio);
         if (parsedPersonaggio?.titolo && parsedPersonaggio?.articolo) {
-            // Trova la prima sezione disponibile nel draft
             const sezPers = Object.keys(draft.sezioni)[0] || "pescara";
             if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: STILI[sezPers] || "#005f73", articoli: [] };
             const immaginePersonaggio = (CONFIG.IMMAGINI || {}).personaggio || null;
@@ -1022,7 +849,7 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
                 colore_tipo: STILI.GEN || "#2d6a4f",
                 immagine: immaginePersonaggio
             });
-            scriviLog(`✍️ Articolo personaggio scritto da ${personaggioCasuale}: "${parsedPersonaggio.titolo.substring(0,50)}..."`);
+            scriviLog(`✍️ Articolo personaggio scritto da ${personaggioCasuale}: "${parsedPersonaggio.titolo.substring(0, 50)}..."`);
         }
     }
 
@@ -1031,11 +858,12 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
     const totaleArticoli = contaArticoli(draft);
     if (totaleArticoli === 0) {
         scriviLog("⚠️ Nessun articolo valido → skip salvataggio.");
-    return;
+        return;
     }
     const successo = safeWriteDraft(draft);
     if (successo) {
         contatori._primoRunOggi = true;
+        salvaJSON(CONTATORI_PATH, contatori); // FIX: salva il flag aggiornato
         scriviLog(`✅ FASE 1-v2 completata. Draft aggiornato.`);
     } else {
         scriviLog("⚠️ Draft NON aggiornato — mantenuto quello precedente.");
@@ -1045,8 +873,7 @@ Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
 main()
     .then(() => {
         scriviLog("🏁 [FINISH] Tutto salvato. Forzo chiusura processo.");
-        // Il timeout di 500ms assicura che i log vengano scritti su disco prima di killare
-        setTimeout(() => process.exit(0), 2000); 
+        setTimeout(() => process.exit(0), 2000);
     })
     .catch(err => {
         scriviLog(`❌ [CRITICAL ERROR] ${err.message}`);
