@@ -304,42 +304,96 @@ async function callGemini(sys, prompt, temperature = 0.85) {
             });
             const d = await res.json();
          
-            // ⏳ RATE LIMIT / OVERLOAD
+// ---------------------------------------------------------------------------
+// CHIAMATA GEMINI
+// ---------------------------------------------------------------------------
+
+async function callGemini(sys, prompt, temperature = 0.85) {
+    if (!apiKey) { scriviLog("ERRORE: Manca GEMINI_API_KEY"); return null; }
+    
+    if (quotaGiornalieraEsaurita) {
+        scriviLog("⏭️ Quota esaurita → uso fallback articolo minimo.");
+        return JSON.stringify({
+            titolo: prompt?.substring(0, 60) || "Articolo non disponibile",
+            articolo: "Contenuto non generato per limite temporaneo di quota API.",
+            commento: ""
+        });
+    }
+
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
+
+    for (let i = 0; i < 3; i++) {
+        if (i === 0) await pausaGemini(); // ✅ solo prima chiamata
+        
+        try {
+            contatoreChiamateApi++;
+            // Le quote cumulative vengono aggiornate nel main dopo ogni run
+            const res = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }],
+                    systemInstruction: { parts: [{ text: sys }] },
+                    generationConfig: { responseMimeType: "application/json", temperature },
+                    safetySettings: [
+                        { category: "HARM_CATEGORY_HARASSMENT",        threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_HATE_SPEECH",       threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
+                    ]
+                })
+            });
+            
+            const d = await res.json();
+
+            // GESTIONE ERRORI
             if (d.error) {
                 scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
-
+                
                 const code = d.error.code;
                 const msg = (d.error.message || "").toLowerCase();
 
                 // ❌ quota giornaliera reale
                 if (msg.includes("limit") && msg.includes("per day")) {
-                return `{
-                "titolo": "${(prompt || "").substring(0, 60)}",
-                 "articolo": "Contenuto non generato per limite giornaliero API.",
-                "commento": ""
-                 }`;
+                    scriviLog("❌ QUOTA GIORNALIERA ESAURITA (detto da Gemini)");
+                    quotaGiornalieraEsaurita = true; // Segna la quota esaurita per le prossime chiamate
+                    return JSON.stringify({
+                        titolo: (prompt || "").substring(0, 60),
+                        articolo: "Contenuto non generato per limite giornaliero API.",
+                        commento: ""
+                    });
                 }
 
-            // ⏳ RATE LIMIT / OVERLOAD
-            if (code === 429 || code === 503) {
+                // ⏳ RATE LIMIT / OVERLOAD
+                if (code === 429 || code === 503) {
+                    if (msg.includes("quota exceeded")) {
+                        await gestisciErroreQuota(d.error.message);
+                        continue;
+                    }
+                    const ms = Math.pow(2, i) * 10000;
+                    scriviLog(`⏳ Errore ${code}, attendo ${ms / 1000}s...`);
+                    await new Promise(r => setTimeout(r, ms));
+                    continue;
+                }
 
-            if (msg.includes("quota exceeded")) {
-                await gestisciErroreQuota(d.error.message);
-            continue;
+                return null;
             }
 
-            const ms = Math.pow(2, i) * 10000;
-            scriviLog(`⏳ Errore ${code}, attendo ${ms / 1000}s...`);
+            // ✅ GESTIONE SUCCESSO (mancava nel tuo codice!)
+            if (d.candidates && d.candidates.length > 0) {
+                return d.candidates[0].content.parts[0].text;
+            }
+            
+            return null; // Risposta valida ma senza contenuto
 
-            await new Promise(r => setTimeout(r, ms));
-            continue;
-    }
-    catch (e) {
-            scriviLog(`[ECCEZIONE tentativo ${i + 1}] ${e.message}`);
-            await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
-            if (i === 2) return null;
+        } catch (e) {
+            scriviLog(`[ERRORE RETE] Impossibile contattare API: ${e.message}`);
+            await new Promise(r => setTimeout(r, 5000)); // Pausa prima di riprovare
+        }
+    } // Chiude il for
+    
     return null;
-}
+} // Chiude la funzione
 // ---------------------------------------------------------------------------
 // RISOLVE GIORNO CORRENTE
 // ---------------------------------------------------------------------------
