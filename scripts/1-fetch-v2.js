@@ -176,7 +176,7 @@ async function trovaUltimoModello() {
                              m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
             const flash = validi.filter(m => m.includes("flash")).sort((a, b) => b.localeCompare(a));
-            if (flash.length > 0) activeGeminiModel = flash[1]; // FIX: era flash[1], poteva essere undefined
+            if (flash.length > 0) activeGeminiModel = flash[2]; // FIX: era flash[1], poteva essere undefined
             else if (validi.length > 0) activeGeminiModel = validi.sort((a, b) => b.localeCompare(a))[0];
             scriviLog(`[MODELLO] ${activeGeminiModel}`);
         }
