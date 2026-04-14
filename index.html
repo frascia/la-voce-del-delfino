@@ -542,9 +542,24 @@ async function mostraSezione(sez,btn,STILI){
         const nuoviC=comm.some(c=>c.nuovo);
         const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')"><span class="avatar-p">${esc(c.avatar)||'👤'}</span><span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span><div class="testo-p">${esc(c.testo)}</div></div>`).join('');
         const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')"><span class="commenti-count${nuoviC?' nuovo':''}">${comm.length}</span><span class="commenti-label">Comment${comm.length===1?'o':'i'}</span><span class="commenti-arrow">▼</span></div><div class="commenti-panel">${cListH}</div>`:'';
-        if(isP){
-            //lista.innerHTML+=`<div class="notizia ${bx}"><div class="notizia-numero">${idx+1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-personaggio-header"><div class="notizia-personaggio-avatar">${esc(cf.avatar)||'👤'}</div><div class="notizia-personaggio-info"><div class="notizia-personaggio-nome">${esc(cf.nome)||'Redazione'}</div><div class="notizia-personaggio-bio">scrive di ciò che gli piace</div></div><div class="indicatore-verde"></div></div><h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cH}</div>`;
-            lista.innerHTML+=`<div class="notizia ${bx}"><div class="notizia-numero">${idx+1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-img-box"><img src="public/images/${esc(n.immagine)||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>${firmaH}<h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cfH}${cH}</div>`;
+       if(isP){
+            // Ricreiamo la firma a mano per bypassare il blocco !isP
+            const firmaPersonaggio = cf.nome ? `<div class="firma-autore"><span class="avatar-autore">${esc(cf.avatar)||'👤'}</span><span>${esc(cf.nome)}</span></div>` : '';
+            
+            lista.innerHTML+=`<div class="notizia ${bx}">
+                <div class="notizia-numero">${idx+1}</div>
+                <span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span>
+                <div class="notizia-img-box">
+                    <img src="public/images/${esc(n.immagine)||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'">
+                </div>
+                ${firmaPersonaggio}
+                <h2>${esc(n.titolo)}</h2>
+                <div class="testo" id="t${idx}">${esc(n.articolo)}</div>
+                <button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>
+                ${cfH}
+                ${cH}
+            </div>`;
+        }
         }else{
             //lista.innerHTML+=`<div class="notizia ${bx}"><div class="notizia-numero">${idx+1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-img-box"><img src="public/images/${esc(imgAutore)}||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>${firmaH}<h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cfH}${cH}</div>`;
             lista.innerHTML+=`<div class="notizia ${bx}"><div class="notizia-numero">${idx+1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-img-box"><img src="public/images/${esc(n.immagine)||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>${firmaH}<h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cfH}${cH}</div>`;
