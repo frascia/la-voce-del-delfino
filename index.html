@@ -542,24 +542,22 @@ async function mostraSezione(sez,btn,STILI){
         const nuoviC=comm.some(c=>c.nuovo);
         const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')"><span class="avatar-p">${esc(c.avatar)||'👤'}</span><span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span><div class="testo-p">${esc(c.testo)}</div></div>`).join('');
         const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')"><span class="commenti-count${nuoviC?' nuovo':''}">${comm.length}</span><span class="commenti-label">Comment${comm.length===1?'o':'i'}</span><span class="commenti-arrow">▼</span></div><div class="commenti-panel">${cListH}</div>`:'';
- if(isP){
-            // 1. Creiamo la firma dell'autore reale dell'articolo
-            // Usiamo i dati dell'autore presenti nella notizia, non quelli del commento 'cf'
-            const firmaAutoreReale = n.firma ? `<div class="firma-autore"><span class="avatar-autore">${esc(n.autore_avatar)||'👤'}</span><span>${esc(n.firma)}</span></div>` : '';
-
-            // 2. Usiamo l'immagine del profilo del personaggio reale come foto principale
-            // Se non c'è n.autore_immagine_profilo, usiamo n.immagine (la foto della notizia)
-            const immagineDaMostrare = n.autore_immagine_profilo || n.immagine || 'default.webp';
+         if(isP){
+            // Scegliamo l'immagine: se n.immagine è vuoto, prendiamo quella del personaggio (cf.immagine)
+            const imgDaUsare = n.immagine || cf.immagine || 'default.webp';
             
+            // Creiamo la firma in alto (ora visibile per tutti)
+            const firmaH_sempre = cf.nome ? `<div class="firma-autore"><span class="avatar-autore">${esc(cf.avatar)||'👤'}</span><span>${esc(cf.nome)}</span></div>` : '';
+
             lista.innerHTML+=`<div class="notizia ${bx}">
                 <div class="notizia-numero">${idx+1}</div>
                 <span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span>
                 
                 <div class="notizia-img-box">
-                    <img src="public/images/${esc(immagineDaMostrare)}" onerror="this.src='https://placehold.co/600x400?text=News'">
+                    <img src="public/images/${esc(imgDaUsare)}" onerror="this.src='https://placehold.co/600x400?text=News'">
                 </div>
                 
-                ${firmaAutoreReale}
+                ${firmaH_sempre}
                 
                 <h2>${esc(n.titolo)}</h2>
                 <div class="testo" id="t${idx}">${esc(n.articolo)}</div>
@@ -570,6 +568,7 @@ async function mostraSezione(sez,btn,STILI){
                 ${cH}
             </div>`;
         }
+
         }else{
             //lista.innerHTML+=`<div class="notizia ${bx}"><div class="notizia-numero">${idx+1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-img-box"><img src="public/images/${esc(imgAutore)}||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>${firmaH}<h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cfH}${cH}</div>`;
             lista.innerHTML+=`<div class="notizia ${bx}"><div class="notizia-numero">${idx+1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-img-box"><img src="public/images/${esc(n.immagine)||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>${firmaH}<h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cfH}${cH}</div>`;
