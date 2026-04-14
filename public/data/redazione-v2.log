@@ -134,3 +134,93 @@ Please retry in 24.193343844s. (code: 429)
 [14/04/2026, 08:41:37] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (0 articoli, 0 nuovi)
 [14/04/2026, 08:41:37] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (0 articoli, 0 nuovi)
 [14/04/2026, 08:41:37] [3-deploy-v2] 🕐 Ora: 14/04, 08:41 | Prossimo: 14/04, 10:41
+[14/04/2026, 11:09:28] [1-fetch-v2] ═══════════════════════════════════
+[14/04/2026, 11:09:28] [1-fetch-v2] 🐬 NUOVO RUN v2 [ martedì 14 aprile 2026 alle ore 11:09:28 ]
+[14/04/2026, 11:09:28] [1-fetch-v2] ═══════════════════════════════════
+[14/04/2026, 11:09:28] [1-fetch-v2] ⚓️ FASE 1-v2 — Avvio...
+[14/04/2026, 11:09:28] [1-fetch-v2] 🔄 Reset quote cumulative (14/04 11:09 IT).
+[14/04/2026, 11:09:28] [1-fetch-v2] 📊 Quote cumulative oggi: chiamate_gemini=0, rss_fetch=0, token_stimati≈0
+[14/04/2026, 11:09:28] [1-fetch-v2] 🕐 Fascia articoli attiva: SÌ | Lunghezza target: ~160 parole
+[14/04/2026, 11:09:29] [1-fetch-v2] [MODELLO] gemini-flash-lite-latest
+[14/04/2026, 11:09:29] [1-fetch-v2] 📅 Giorno: mar | Timbro: Edizione quotidiana
+[14/04/2026, 11:09:29] [1-fetch-v2] 📋 Voci attive oggi: 6
+[14/04/2026, 11:09:29] [1-fetch-v2] 🎣 [pescara] Cronaca Pescarese — tipo: RSS, num: 1, firma: Cetteo, ~160 parole
+[14/04/2026, 11:09:29] [1-fetch-v2] 🎣 [pescara] Il ripetitivo siiiiiiiiii — tipo: GEN, num: 1, firma: Glusi, ~160 parole
+[14/04/2026, 11:09:29] [1-fetch-v2] 🎣 [pescara] Vita quotidiana pescarese ironica — tipo: GEN, num: 1, firma: Lilli, ~160 parole
+[14/04/2026, 11:09:29] [1-fetch-v2] 🎣 [pescara] Il brasileiro — tipo: GEN, num: 1, firma: Juizinho, ~160 parole
+[14/04/2026, 11:09:29] [1-fetch-v2] 🎣 [mondo] Novità serie Netflix — tipo: RSS, num: 2, firma: Lars, ~160 parole
+[14/04/2026, 11:09:29] [1-fetch-v2] 🎣 [cultura] Nuovi libri — tipo: GEN, num: 1, firma: Lilli, ~160 parole
+[14/04/2026, 11:09:31] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:09:31] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[14/04/2026, 11:09:48] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:09:48] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[14/04/2026, 11:10:08] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:10:08] [1-fetch-v2] ⏳ Errore 503, attendo 40s...
+[14/04/2026, 11:10:48] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Stupefacenti sia in auto che i..." fallito o vuoto. Non registrato.
+[14/04/2026, 11:10:49] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:10:49] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[14/04/2026, 11:10:59] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:10:59] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[14/04/2026, 11:11:19] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:11:19] [1-fetch-v2] ⏳ Errore 503, attendo 40s...
+[14/04/2026, 11:11:59] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Fenomenologia del siii siii si..." fallito o vuoto. Non registrato.
+[14/04/2026, 11:12:00] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:12:00] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[14/04/2026, 11:12:15] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:12:15] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[14/04/2026, 11:12:35] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:12:35] [1-fetch-v2] ⏳ Errore 503, attendo 40s...
+[14/04/2026, 11:13:15] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Sotto la quercia dei desideri:..." fallito o vuoto. Non registrato.
+[14/04/2026, 11:13:16] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:13:16] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[14/04/2026, 11:13:26] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:13:26] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[14/04/2026, 11:13:49] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:13:49] [1-fetch-v2] ⏳ Errore 503, attendo 40s...
+[14/04/2026, 11:14:29] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Febbre tropicale: La mia anima..." fallito o vuoto. Non registrato.
+[14/04/2026, 11:14:54] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:14:54] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[14/04/2026, 11:15:04] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:15:04] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[14/04/2026, 11:15:24] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:15:24] [1-fetch-v2] ⏳ Errore 503, attendo 40s...
+[14/04/2026, 11:16:04] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Le serie Netflix più attese di..." fallito o vuoto. Non registrato.
+[14/04/2026, 11:16:06] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:16:06] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[14/04/2026, 11:16:23] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:16:23] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[14/04/2026, 11:16:44] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:16:44] [1-fetch-v2] ⏳ Errore 503, attendo 40s...
+[14/04/2026, 11:17:24] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Roommates: tutto sulla nuova c..." fallito o vuoto. Non registrato.
+[14/04/2026, 11:17:24] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:17:24] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[14/04/2026, 11:17:34] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:17:34] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[14/04/2026, 11:17:55] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:17:55] [1-fetch-v2] ⏳ Errore 503, attendo 40s...
+[14/04/2026, 11:18:35] [1-fetch-v2] ⚠️  [SKIP] Articolo su "Nuovi libri..." fallito o vuoto. Non registrato.
+[14/04/2026, 11:18:35] [1-fetch-v2] 💬 Chat oggi: no (skip casuale)
+[14/04/2026, 11:18:35] [1-fetch-v2] 📊 Totale giornata: chiamate=21, token_stimati≈9450, rss=0
+[14/04/2026, 11:18:35] [1-fetch-v2] 💾 Relazioni e personaggi salvati.
+[14/04/2026, 11:18:35] [1-fetch-v2] ✍️ Generazione articolo personaggio casuale...
+[14/04/2026, 11:18:37] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:18:37] [1-fetch-v2] ⏳ Errore 503, attendo 10s...
+[14/04/2026, 11:18:48] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:18:48] [1-fetch-v2] ⏳ Errore 503, attendo 20s...
+[14/04/2026, 11:19:15] [1-fetch-v2] [ERRORE GEMINI] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later. (code: 503)
+[14/04/2026, 11:19:15] [1-fetch-v2] ⏳ Errore 503, attendo 40s...
+[14/04/2026, 11:19:55] [1-fetch-v2] 📊 Chiamate API totali: 24
+[14/04/2026, 11:19:55] [1-fetch-v2] ⚠️ Nessun articolo valido → skip salvataggio.
+[14/04/2026, 11:19:55] [1-fetch-v2] 🏁 [FINISH] Tutto salvato. Forzo chiusura processo.
+[14/04/2026, 11:19:57] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
+[14/04/2026, 11:19:57] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
+[14/04/2026, 11:19:57] [2-elabora-v2] 🔐 auth_info.json aggiornato.
+[14/04/2026, 11:19:57] [2-elabora-v2] ✅ Sezione pescara: 1 articoli normalizzati.
+[14/04/2026, 11:19:57] [2-elabora-v2] ✅ Sezione mondo: 0 articoli normalizzati.
+[14/04/2026, 11:19:57] [2-elabora-v2] ✅ Sezione cultura: 0 articoli normalizzati.
+[14/04/2026, 11:19:57] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[14/04/2026, 11:19:58] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[14/04/2026, 11:19:58] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (1 articoli, 0 nuovi)
+[14/04/2026, 11:19:58] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (0 articoli, 0 nuovi)
+[14/04/2026, 11:19:58] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (0 articoli, 0 nuovi)
+[14/04/2026, 11:19:58] [3-deploy-v2] 🕐 Ora: 14/04, 08:41 | Prossimo: 14/04, 13:19
