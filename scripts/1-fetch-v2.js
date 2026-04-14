@@ -261,18 +261,29 @@ async function gestisciErroreQuota(msg) {
     scriviLog(`⏳ Attendo ${sec.toFixed(1)}s per quota...`);
     await new Promise(r => setTimeout(r, sec * 1000));
 }
-
+const ATTESA_GEMINI_MS = 1500; // 1.5 secondi (puoi tararla)
+async function pausaGemini() {
+    await new Promise(r => setTimeout(r, ATTESA_GEMINI_MS));
+}
 // ---------------------------------------------------------------------------
 // CHIAMATA GEMINI
 // ---------------------------------------------------------------------------
 
 async function callGemini(sys, prompt, temperature = 0.85) {
     if (!apiKey) { scriviLog("ERRORE: Manca GEMINI_API_KEY"); return null; }
-    if (quotaGiornalieraEsaurita) { scriviLog("⏭️ Quota esaurita, salto."); return null; }
+     if (quotaGiornalieraEsaurita) {
+        scriviLog("⏭️ Quota esaurita → uso fallback articolo minimo.");
+        return JSON.stringify({
+            titolo: prompt?.substring(0, 60) || "Articolo non disponibile",
+            articolo: "Contenuto non generato per limite temporaneo di quota API.",
+            commento: ""
+        });
+     }
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
 
     for (let i = 0; i < 3; i++) {
+        if (i === 0) await pausaGemini(); // ✅ solo prima chiamata
         try {
             contatoreChiamateApi++;
             // Le quote cumulative vengono aggiornate nel main dopo ogni run
@@ -733,13 +744,20 @@ async function main() {
     scriviLog(`📋 Voci attive oggi: ${vociAttive.length}`);
 
     // --- Draft ---
-    const draft = {
-        oraAggiornamento,
-        agenda,
-        impostazioni: IMPOSTAZIONI,
-        stili: STILI,
-        sezioni: {}
-    };
+  let draft;
+
+    if (!isPrimoRun && fs.existsSync(DRAFT_PATH)) {
+        draft = caricaJSON(DRAFT_PATH, {});
+        draft.oraAggiornamento = oraAggiornamento;
+    } else {
+        draft = {
+            oraAggiornamento,
+            agenda,
+            impostazioni: IMPOSTAZIONI,
+            stili: STILI,
+            sezioni: {}
+        };
+    }
 
     // Raggruppa per sezione
     for (const voce of vociAttive) {
@@ -822,14 +840,17 @@ async function main() {
         const commentoFirma  = parsedArticolo?.commento || "…";
 
         // 2. Genera commenti a cascata dei personaggi
-        let commentiFinali = [];
-        const rawCommenti    = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, []);
+       let commentiFinali = [];
+
+    const rawCommenti = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI);
+
+    if (rawCommenti) {
         const parsedCommenti = parseJSON(rawCommenti);
         if (parsedCommenti?.commenti?.length) {
             commentiFinali = parsedCommenti.commenti;
-            // 3. Aggiorna relazioni e stati
             await aggiornaRelazioni(CHI, relazioni, personaggi, articoloTesto, commentiFinali);
         }
+    }
 
         // 4. Push nel draft — immagine dal config IMMAGINI per tipo, fallback su icona categoria
         const IMMAGINI = CONFIG.IMMAGINI || {};
@@ -872,7 +893,10 @@ async function main() {
             }
             // Aggiorna draft con i nuovi commenti
             if (!draft.sezioni[sez]) draft.sezioni[sez] = datiSez;
-            else draft.sezioni[sez].articoli = datiSez.articoli;
+            draft.sezioni[sez].articoli = [
+            ...(draft.sezioni[sez].articoli || []),
+            ...(datiSez.articoli || [])
+];
         }
     }
 
