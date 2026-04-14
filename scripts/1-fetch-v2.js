@@ -202,7 +202,7 @@ async function trovaUltimoModello() {
                 .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
             const flash = validi.filter(m => m.includes("flash")).sort((a, b) => b.localeCompare(a));
-            if (flash.length > 0) activeGeminiModel = flash[0];
+            if (flash.length > 0) activeGeminiModel = flash[1];
             else if (validi.length > 0) activeGeminiModel = validi.sort((a, b) => b.localeCompare(a))[0];
             scriviLog(`[MODELLO] ${activeGeminiModel}`);
         }
