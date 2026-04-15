@@ -14,7 +14,7 @@ ss
 ### 3. Aggiungi il secret nel repo GitHubdd
 - **Settings → Secrets and variables → Actions → New repository secret**
 - Nome: `GEMINI_API_KEY`
-- Valore: la chiave copiata da AI Studio
+- Valore: la chiave copiata da AI Studio  
 
 ### 4. Abilita GitHub Pages
 - **Settings → Pages → Source: GitHub Actions** → Salva. ss
