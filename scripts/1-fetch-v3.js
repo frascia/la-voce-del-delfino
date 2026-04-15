@@ -361,7 +361,7 @@ async function callGroq(sys, prompt, temperature = 0.85) {
                     "Authorization": `Bearer ${groqApiKey}`
                 },
                 body: JSON.stringify({
-                    model: "llama3-70b-8192", // può essere modificato
+                    model: "Llama 3.1 405B", // può essere modificato
                     messages: messages,
                     temperature: temperature,
                     response_format: { type: "json_object" }
