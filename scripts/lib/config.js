@@ -77,4 +77,3 @@ export function getVociAttive(oggi) {
         return voce.g.split(",").map(g => g.trim()).includes(oggi);
     });
 }
-}
