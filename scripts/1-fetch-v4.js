@@ -34,7 +34,6 @@ function log(msg) { scriviLog(msg, LOG_PATH); }
 async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
     
-    // Inizializza tutti i moduli con la stessa funzione di log
     initConfig(CONFIG_PATH, log);
     initNews(process.env.GNEWS_API_KEY || "", process.env.NEWS_SOURCE || "gnews", log);
     initLLM(process.env.GEMINI_API_KEY || "", process.env.GROQ_API_KEY || "", PROVIDER_STATE_PATH, log);
@@ -87,29 +86,32 @@ async function main() {
     for (const { voce, tema } of codaArticoli) {
         const sez = voce.sez;
         const infoFirma = risolviPersonaggio(CHI, voce.firma);
-        const parsed = await generaArticolo(voce, CHI, tema, callLLM);
-        if (!parsed?.articolo || parsed.articolo.length < 50) {
+        // Ora generaArticolo restituisce { provider, titolo, articolo, commento }
+        const { provider, titolo, articolo: articoloTesto, commento } = await generaArticolo(voce, CHI, tema, callLLM);
+        if (!articoloTesto || articoloTesto.length < 50) {
             log(`⚠️ SKIP articolo su "${tema.substring(0,30)}..."`);
             continue;
         }
-        const commenti = await generaCommenti(voce, CHI, relazioni, personaggi, parsed.articolo, [], LIMITI, callLLM);
+        const commenti = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI, callLLM);
         if (commenti.length) {
-            await aggiornaRelazioni(CHI, relazioni, personaggi, parsed.articolo, commenti, callLLM);
+            await aggiornaRelazioni(CHI, relazioni, personaggi, articoloTesto, commenti, callLLM);
         }
         draft.sezioni[sez].articoli.push({
             tipo: voce.tipo==="GEN"?"gen":"rss",
-            titolo: parsed.titolo || tema,
-            articolo: parsed.articolo,
-            commento_firma: { nome: voce.firma, avatar: infoFirma.avatar, testo: parsed.commento || "…" },
+            titolo: titolo || tema,
+            articolo: articoloTesto,
+            commento_firma: { nome: voce.firma, avatar: infoFirma.avatar, testo: commento || "…" },
             commenti: commenti,
             categoria: voce.lab,
             colore_tipo: STILI[voce.tipo] || STILI["RSS"],
-            immagine: infoFirma.img || "default_personaggio.webp"
+            immagine: infoFirma.img || "default_personaggio.webp",
+            provider: provider   // <<< SALVA IL PROVIDER NEL DRAFT
         });
         articoliGenerati++;
-        log(`  ✅ "${(parsed.titolo||tema).substring(0,50)}..." (${commenti.length} commenti)`);
+        log(`  ✅ "${(titolo||tema).substring(0,50)}..." (${commenti.length} commenti) [${provider}]`);
     }
     
+    // Chat
     const chatAbilitata = LIMITI.chat!=="sempre" ? !limiteSuperato(contatori, LIMITI, "chat_run_max") : true;
     const chattaOggi = chatAbilitata && Math.random()<0.30;
     if (chattaOggi) contatori.chat_run = (contatori.chat_run||0)+1;
@@ -128,6 +130,7 @@ async function main() {
     salvaJSON(RELAZIONI_PATH, relazioni);
     salvaJSON(PERSONAGGI_PATH, personaggi);
     
+    // Articolo personaggio casuale
     const nomiPers = Object.keys(CHI).filter(n=>n!=="default");
     if (nomiPers.length) {
         const pers = nomiPers[Math.floor(Math.random()*nomiPers.length)];
@@ -135,7 +138,7 @@ async function main() {
         const sysPers = `Sei ${pers} (${dati.mood}). ${dati.bio_breve?`Bio: "${dati.bio_breve}"` : ""}
 Scrivi breve articolo (150-250 parole) su un argomento personale.
 Rispondi JSON: {"titolo":"...","articolo":"..."}`;
-        const { text: rawPers } = await callLLM(sysPers, "Scrivi articolo personale.", dati.peso??0.8);
+        const { text: rawPers, provider: provPers } = await callLLM(sysPers, "Scrivi articolo personale.", dati.peso??0.8);
         const parsedPers = parseJSON(rawPers);
         if (parsedPers?.titolo && parsedPers?.articolo) {
             const sezPers = Object.keys(draft.sezioni)[0] || "generale";
@@ -144,10 +147,11 @@ Rispondi JSON: {"titolo":"...","articolo":"..."}`;
                 tipo: "personaggio", titolo: parsedPers.titolo, articolo: parsedPers.articolo,
                 commento_firma: { nome: pers, avatar: dati.avatar, testo: "" }, commenti: [],
                 categoria: "Dalla Redazione", colore_tipo: STILI.GEN || "#2d6a4f",
-                immagine: dati.img
+                immagine: dati.img,
+                provider: provPers   // anche per l'articolo personaggio
             });
             articoliGenerati++;
-            log(`✍️ Articolo personaggio da ${pers}: "${parsedPers.titolo.substring(0,50)}..."`);
+            log(`✍️ Articolo personaggio da ${pers} (${provPers}): "${parsedPers.titolo.substring(0,50)}..."`);
         }
     }
     
