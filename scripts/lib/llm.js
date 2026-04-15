@@ -1,10 +1,10 @@
 /**
  * FILE: lib/llm.js
  * DATA: 2025-04-15
- * VERSIONE: 2.6
+ * VERSIONE: 2.7
  * DESCRIZIONE: Gestione chiamate LLM (Gemini/Groq), provider persistente,
  *              contatore fallimenti consecutivi, modalità scheduled/manuale.
- *              Selezione automatica dei modelli Gemini gratuiti con test attivo.
+ *              Supporto per forzare un modello Gemini specifico via variabile d'ambiente.
  */
 
 import { pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
@@ -22,6 +22,9 @@ let isScheduledRun = false;
 let consecutiveFailures = 0;
 let failuresThreshold = parseInt(process.env.RUN_FAILURES_THRESHOLD || "3");
 
+// Variabile per forzare un modello Gemini specifico
+const FORCED_GEMINI_MODEL = process.env.FORCED_GEMINI_MODEL || "";
+
 const log = (msg) => logFn("[llm] " + msg);
 
 export function initLLM(geminiKey, groqKey, providerStateFile, logFunction) {
@@ -33,6 +36,12 @@ export function initLLM(geminiKey, groqKey, providerStateFile, logFunction) {
     currentProvider = saved.provider;
     consecutiveFailures = saved.consecutiveFailures || 0;
     log(`⚙️ Provider inizializzato: ${currentProvider} | Fallimenti consecutivi: ${consecutiveFailures}`);
+    
+    // Se è stata forzata una variabile d'ambiente per il modello Gemini
+    if (FORCED_GEMINI_MODEL) {
+        activeGeminiModel = FORCED_GEMINI_MODEL;
+        log(`🔒 Modello Gemini forzato da ambiente: ${activeGeminiModel}`);
+    }
 }
 
 function salvaStatoProvider() {
@@ -82,25 +91,87 @@ export function getCurrentProvider() {
 }
 
 export function setActiveGeminiModel(model) {
-    activeGeminiModel = model;
-    log(`🎯 Modello Gemini impostato a: ${activeGeminiModel}`);
+    if (!FORCED_GEMINI_MODEL) {
+        activeGeminiModel = model;
+        log(`🎯 Modello Gemini impostato a: ${activeGeminiModel}`);
+    } else {
+        log(`⚠️ Modello forzato da ambiente (${FORCED_GEMINI_MODEL}), ignoro richiesta di cambio a ${model}`);
+    }
 }
 
-async function trovaUltimoModelloGemini() {
+async function testaModelloGemini(modelName) {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKeyGemini}`;
+    try {
+        const res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                contents: [{ parts: [{ text: "Rispondi solo con la parola 'ok'" }] }],
+                generationConfig: { temperature: 0.1, maxOutputTokens: 5 }
+            })
+        });
+        const d = await res.json();
+        return d.candidates?.length > 0;
+    } catch(e) {
+        return false;
+    }
+}
+
+async function trovaModelliGemini() {
+    // Se il modello è forzato da ambiente, salta la ricerca
+    if (FORCED_GEMINI_MODEL) {
+        log(`🔒 Ricerca modelli saltata (modello forzato: ${FORCED_GEMINI_MODEL})`);
+        return;
+    }
+    
     if (!apiKeyGemini) return;
     try {
         const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKeyGemini}`);
         const data = await res.json();
         if (data.models) {
-            const validi = data.models
-                .filter(m => m.name.includes("gemini") && m.supportedGenerationMethods?.includes("generateContent"))
+            const tutti = data.models
+                .filter(m => m.name.includes("gemini") && 
+                             m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
-            const flash = validi.filter(m => m.includes("flash")).sort((a,b)=>b.localeCompare(a));
-            if (flash.length) activeGeminiModel = flash[0];
-            else if (validi.length) activeGeminiModel = validi.sort((a,b)=>b.localeCompare(a))[0];
-            log(`🤖 Gemini: modello selezionato → ${activeGeminiModel}`);
+            
+            // Escludi modelli Pro (a pagamento)
+            const senzaPro = tutti.filter(m => !m.includes("pro"));
+            
+            // Separa per famiglia
+            const flash = senzaPro.filter(m => m.includes("flash"));
+            const altri = senzaPro.filter(m => !m.includes("flash"));
+            
+            log(`🤖 Modelli Gemini disponibili (gratuiti):`);
+            if (flash.length) log(`   ├─ Flash: ${flash.join(", ")}`);
+            if (altri.length) log(`   └─ Altri: ${altri.join(", ")}`);
+            
+            // Testa i modelli in ordine: Flash recenti → altri
+            const ordine = [...flash.sort((a,b)=>b.localeCompare(a)), ...altri];
+            let modelloFunzionante = null;
+            
+            for (const model of ordine.slice(0, 5)) {
+                log(`   🔍 Test ${model}...`);
+                const funziona = await testaModelloGemini(model);
+                if (funziona) {
+                    modelloFunzionante = model;
+                    log(`   ✅ ${model} funzionante`);
+                    break;
+                } else {
+                    log(`   ❌ ${model} non risponde`);
+                }
+            }
+            
+            if (modelloFunzionante) {
+                activeGeminiModel = modelloFunzionante;
+                log(`🎯 Modello Gemini selezionato: ${activeGeminiModel}`);
+            } else if (senzaPro.length > 0) {
+                activeGeminiModel = senzaPro[0];
+                log(`⚠️ Nessun modello testato funziona, uso default: ${activeGeminiModel}`);
+            }
         }
-    } catch(e) { log(`⚠️ Ricerca modello Gemini fallita: ${e.message}`); }
+    } catch(e) {
+        log(`⚠️ Ricerca modelli Gemini fallita: ${e.message}`);
+    }
 }
 
 async function trovaUltimoModelloGroq() {
@@ -290,6 +361,11 @@ export async function callLLM(sys, prompt, temperature = 0.85) {
 }
 
 export async function initModels() {
-    await trovaUltimoModelloGemini();
+    // Se il modello è forzato da ambiente, salta la ricerca
+    if (FORCED_GEMINI_MODEL) {
+        log(`🔒 Ricerca modelli Gemini saltata (modello forzato: ${FORCED_GEMINI_MODEL})`);
+    } else {
+        await trovaModelliGemini();
+    }
     if (apiKeyGroq) await trovaUltimoModelloGroq();
 }
