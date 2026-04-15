@@ -1,10 +1,10 @@
 /**
  * FILE: lib/llm.js
  * DATA: 2025-04-15
- * VERSIONE: 2.4
+ * VERSIONE: 2.6
  * DESCRIZIONE: Gestione chiamate LLM (Gemini/Groq), provider persistente,
  *              contatore fallimenti consecutivi, modalità scheduled/manuale.
- *              Log dettagliati con tentativi di retry.
+ *              Selezione automatica dei modelli Gemini gratuiti con test attivo.
  */
 
 import { pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
@@ -20,7 +20,7 @@ let providerStatePath = "";
 let activeGeminiModel = "gemini-1.5-flash";
 let isScheduledRun = false;
 let consecutiveFailures = 0;
-let failuresThreshold = parseInt(process.env.RUN_FAILURES_THRESHOLD || "2");
+let failuresThreshold = parseInt(process.env.RUN_FAILURES_THRESHOLD || "3");
 
 const log = (msg) => logFn("[llm] " + msg);
 
@@ -79,6 +79,11 @@ export function resetConsecutiveFailures() {
 
 export function getCurrentProvider() {
     return currentProvider;
+}
+
+export function setActiveGeminiModel(model) {
+    activeGeminiModel = model;
+    log(`🎯 Modello Gemini impostato a: ${activeGeminiModel}`);
 }
 
 async function trovaUltimoModelloGemini() {
