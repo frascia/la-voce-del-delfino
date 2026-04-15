@@ -33,62 +33,84 @@ function log(msg) { scriviLog(msg, LOG_PATH); }
 
 async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
-    
-    // Determina se il run è schedulato (GitHub Actions) o manuale
+
+    // Reset opzionale del draft
+    if (process.env.RESET_DRAFT === 'true') {
+        if (fs.existsSync(DRAFT_PATH)) {
+            fs.unlinkSync(DRAFT_PATH);
+            log(`🗑️ Draft cancellato su richiesta (RESET_DRAFT=true)`);
+        }
+        [TEMP_PATH, BACKUP_PATH].forEach(p => {
+            if (fs.existsSync(p)) {
+                fs.unlinkSync(p);
+                log(`🗑️ Cancellato anche ${path.basename(p)}`);
+            }
+        });
+    }
+
     const isScheduled = process.env.SCHEDULED_RUN === "true";
     log(`🏷️ Run ${isScheduled ? "SCHEDULATO (automatico)" : "MANUALE"}`);
-    
+
     initConfig(CONFIG_PATH, log);
     initNews(process.env.GNEWS_API_KEY || "", process.env.NEWS_SOURCE || "gnews", log);
     initLLM(process.env.GEMINI_API_KEY || "", process.env.GROQ_API_KEY || "", PROVIDER_STATE_PATH, log);
-    setScheduledRun(isScheduled);               // importa per llm.js
+    setScheduledRun(isScheduled);
     initDraft(log);
     initRelations(log);
     initChat(log);
     initArticoli(log);
-    
+
     await initModels();
-    
+
     const CONFIG = loadConfig();
     const { IMPOSTAZIONI, CHI, AGENDA, STILI, REDAZIONE, ICONE } = CONFIG;
     const LIMITI = CONFIG.LIMITI || {};
-    
+
     let contatori = caricaContatori(CONTATORI_PATH, LIMITI, log);
     const articoliAttivi = fasciaDiArticoliAttiva(LIMITI);
     const parole = paroleTarget(LIMITI);
     log(`📊 Quote: chiamate=${contatori.chiamate_gemini??0}, rss=${contatori.rss_fetch??0}`);
     log(`🕐 Fascia attiva: ${articoliAttivi?"SÌ":"NO"} | Parole target: ~${parole}`);
-    
+
     const oggi = giornoOggi();
     const agenda = risolviAgenda(AGENDA, oggi);
     const oraAggiornamento = new Date().toLocaleString("it-IT",{timeZone:"Europe/Rome", hour:"2-digit", minute:"2-digit", day:"2-digit", month:"2-digit"});
-    
+
     let relazioni = caricaJSON(RELAZIONI_PATH, { _runCount:0 });
     let personaggi = caricaJSON(PERSONAGGI_PATH, {});
     for (const nome of Object.keys(CHI).filter(n=>n!=="default")) {
         if (!personaggi[nome]) personaggi[nome] = { stato:"normale", umore:"neutro", dal:null };
     }
     relazioni = applicaDecay(relazioni);
-    
+
     const vociAttive = getVociAttive(oggi);
     log(`📋 Voci attive: ${vociAttive.length}`);
-    
+
     const oggiStr = new Date().toLocaleDateString("it-IT",{timeZone:"Europe/Rome", day:"2-digit", month:"2-digit"});
     const { draft, isNuovoGiorno, oldDraft } = await caricaDraft(DRAFT_PATH, oggiStr, agenda, IMPOSTAZIONI, STILI);
     draft.oraAggiornamento = oraAggiornamento;
     inizializzaSezioni(draft, vociAttive, STILI);
-    
+
     const articoliAbilitati = !limiteSuperato(contatori, LIMITI, "articoli_run_max");
     if (!articoliAbilitati) log("⏭️ Limite articoli_run raggiunto");
     contatori.articoli_run = (contatori.articoli_run||0) + (articoliAbilitati?1:0);
-    
+
     let codaArticoli = [];
     let articoliGenerati = 0;
     if (articoliAbilitati) {
         codaArticoli = await raccoltaNotizie(vociAttive, parole, contatori);
     }
-    
+
+    const generatiSet = new Set(); // evita duplicati
+
     for (const { voce, tema } of codaArticoli) {
+        const key = `${voce.sez}|${tema}`;
+        if (generatiSet.has(key)) {
+            log(`⚠️ Duplicato evitato: ${tema}`);
+            continue;
+        }
+        generatiSet.add(key);
+
         const sez = voce.sez;
         const infoFirma = risolviPersonaggio(CHI, voce.firma);
         const { provider, titolo, articolo: articoloTesto, commento } = await generaArticolo(voce, CHI, tema, callLLM);
@@ -114,7 +136,7 @@ async function main() {
         articoliGenerati++;
         log(`  ✅ "${(titolo||tema).substring(0,50)}..." (${commenti.length} commenti) [${provider}]`);
     }
-    
+
     const chatAbilitata = LIMITI.chat!=="sempre" ? !limiteSuperato(contatori, LIMITI, "chat_run_max") : true;
     const chattaOggi = chatAbilitata && Math.random()<0.30;
     if (chattaOggi) contatori.chat_run = (contatori.chat_run||0)+1;
@@ -126,13 +148,13 @@ async function main() {
         salvaJSON(CHAT_PATH, storico);
         log(`💬 Chat salvata (${chat.length} messaggi)`);
     }
-    
+
     contatori.chiamate_gemini_totali = (contatori.chiamate_gemini_totali||0) + (globalThis._chiamateApi || 0);
     contatori.token_stimati_totali = (contatori.token_stimati_totali||0) + ((globalThis._chiamateApi||0) * 450);
     salvaJSON(CONTATORI_PATH, contatori);
     salvaJSON(RELAZIONI_PATH, relazioni);
     salvaJSON(PERSONAGGI_PATH, personaggi);
-    
+
     // Articolo personaggio casuale
     const nomiPers = Object.keys(CHI).filter(n=>n!=="default");
     if (nomiPers.length) {
@@ -157,7 +179,7 @@ Rispondi JSON: {"titolo":"...","articolo":"..."}`;
             log(`✍️ Articolo personaggio da ${pers} (${provPers}): "${parsedPers.titolo.substring(0,50)}..."`);
         }
     }
-    
+
     // Aggiornamento contatore fallimenti consecutivi per Gemini (solo run schedulati)
     const currentProvider = getCurrentProvider();
     if (currentProvider === "gemini") {
@@ -167,7 +189,7 @@ Rispondi JSON: {"titolo":"...","articolo":"..."}`;
             incrementConsecutiveFailures();
         }
     }
-    
+
     if (articoliGenerati === 0) {
         log("⚠️ Nessun articolo generato. Draft non modificato.");
         if (isNuovoGiorno && oldDraft) log(`   → Mantenuto draft del ${oldDraft.dataRiferimento}`);
