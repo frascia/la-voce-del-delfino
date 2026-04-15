@@ -24,7 +24,9 @@ ${moodCommento}`;
     const userPrompt = isGenerato ? `Scrivi un articolo su: ${titolo}` : `Notizia reale: ${titolo}. Scrivi un articolo.`;
     const { provider, text } = await callLLMFn(sys, userPrompt, voce.weight_articolo ?? 0.8);
     log(`📝 ${voce.firma} (${provider}) ha scritto: "${text.substring(0, 60)}..."`);
-    return parseJSON(text);
+    const parsed = parseJSON(text);
+    // restituisce l'oggetto parsato più il provider
+    return { ...parsed, provider };
 }
 
 export async function generaCommenti(voce, CHI, relazioni, personaggi, articolo, commentiPrecedenti, LIMITI, callLLMFn) {
