@@ -3,7 +3,7 @@ name: 🐬 Redazione Automatica v3
 on:
   schedule:
     # Ogni 2 ore dalle 7 alle 21 ora italiana (= 5 alle 19 UTC)
-    - cron: '0 4,8,10,16 * * *'
+    - cron: '0 4-22/3 * * *'
   workflow_dispatch:  # avvio manuale dalla UI di GitHub
 
 permissions:
