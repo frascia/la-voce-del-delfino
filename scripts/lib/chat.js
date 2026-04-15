@@ -22,10 +22,17 @@ export async function generaChat(CHI, relazioni, personaggi, callLLMFn) {
 Relazioni: ${contestoRelazioni||"nessuna"}. Stati: ${contestoStati||"normali"}.
 Spunto: ${spunto}. Genera chat 4-8 messaggi tra 2-3 personaggi.
 Rispondi JSON: {"chat":[{"nome":"...","avatar":"...","testo":"..."}]}`;
-    const { text: raw } = await callLLMFn(sys, "Genera chat.");
-    if (!raw) return null;
+    const llmResult = await callLLMFn(sys, "Genera chat.");
+    if (!llmResult) {
+        log(`⚠️ Nessuna chat generata (LLM ha restituito null)`);
+        return null;
+    }
+    const { text: raw } = llmResult;
     try {
         const parsed = JSON.parse(raw.substring(raw.indexOf("{"), raw.lastIndexOf("}")+1));
         return parsed.chat || null;
-    } catch(e) { return null; }
+    } catch(e) {
+        log(`⚠️ Errore parsing chat: ${e.message}`);
+        return null;
+    }
 }
