@@ -1,3 +1,12 @@
+/**
+ * FILE: lib/llm.js
+ * DATA: 2025-04-15
+ * VERSIONE: 2.4
+ * DESCRIZIONE: Gestione chiamate LLM (Gemini/Groq), provider persistente,
+ *              contatore fallimenti consecutivi, modalità scheduled/manuale.
+ *              Log dettagliati con tentativi di retry.
+ */
+
 import { pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
 
 let logFn = null;
@@ -23,7 +32,7 @@ export function initLLM(geminiKey, groqKey, providerStateFile, logFunction) {
     const saved = caricaJSON(providerStatePath, { provider: "gemini", consecutiveFailures: 0 });
     currentProvider = saved.provider;
     consecutiveFailures = saved.consecutiveFailures || 0;
-    log(`Provider inizializzato: ${currentProvider}, fallimenti consecutivi: ${consecutiveFailures}`);
+    log(`⚙️ Provider inizializzato: ${currentProvider} | Fallimenti consecutivi: ${consecutiveFailures}`);
 }
 
 function salvaStatoProvider() {
@@ -32,15 +41,15 @@ function salvaStatoProvider() {
 
 export function setScheduledRun(scheduled) {
     isScheduledRun = scheduled;
-    log(`Run ${scheduled ? "schedulato" : "manuale"} – i fallimenti ${scheduled ? "verranno" : "NON verranno"} conteggiati`);
+    log(`📌 Run ${scheduled ? "SCHEDULATO" : "MANUALE"} – i fallimenti ${scheduled ? "verranno" : "NON verranno"} conteggiati`);
     if (!isScheduledRun) {
         if (currentProvider !== "gemini") {
-            log(`Run manuale: forzato provider a gemini (ignoro contatore fallimenti)`);
+            log(`🔁 Run manuale: forzato provider a GEMINI (ignoro contatore fallimenti)`);
             currentProvider = "gemini";
         }
     } else {
         if (consecutiveFailures >= failuresThreshold && currentProvider === "gemini") {
-            log(`Soglia raggiunta (${consecutiveFailures}/${failuresThreshold}), forzo passaggio a groq`);
+            log(`⚠️ Soglia raggiunta (${consecutiveFailures}/${failuresThreshold}) → passaggio a GROQ`);
             currentProvider = "groq";
         }
     }
@@ -48,22 +57,22 @@ export function setScheduledRun(scheduled) {
 
 export function incrementConsecutiveFailures() {
     if (!isScheduledRun) {
-        log(`Avvio manuale: fallimenti non incrementati`);
+        log(`⏭️ Run manuale: fallimenti NON incrementati`);
         return;
     }
     consecutiveFailures++;
-    log(`Incremento fallimenti consecutivi a ${consecutiveFailures}`);
+    log(`📊 Fallimenti consecutivi: ${consecutiveFailures} (soglia: ${failuresThreshold})`);
     salvaStatoProvider();
 }
 
 export function resetConsecutiveFailures() {
     if (!isScheduledRun) {
-        log(`Avvio manuale: reset fallimenti non eseguito`);
+        log(`⏭️ Run manuale: reset fallimenti NON eseguito`);
         return;
     }
     if (consecutiveFailures > 0) {
         consecutiveFailures = 0;
-        log(`Reset fallimenti consecutivi (Gemini ha prodotto articoli)`);
+        log(`✅ Reset fallimenti consecutivi (Gemini ha prodotto articoli)`);
         salvaStatoProvider();
     }
 }
@@ -84,9 +93,9 @@ async function trovaUltimoModelloGemini() {
             const flash = validi.filter(m => m.includes("flash")).sort((a,b)=>b.localeCompare(a));
             if (flash.length) activeGeminiModel = flash[0];
             else if (validi.length) activeGeminiModel = validi.sort((a,b)=>b.localeCompare(a))[0];
-            log(`Modello Gemini selezionato: ${activeGeminiModel}`);
+            log(`🤖 Gemini: modello selezionato → ${activeGeminiModel}`);
         }
-    } catch(e) { log(`Ricerca modello Gemini fallita: ${e.message}`); }
+    } catch(e) { log(`⚠️ Ricerca modello Gemini fallita: ${e.message}`); }
 }
 
 async function trovaUltimoModelloGroq() {
@@ -106,7 +115,7 @@ async function trovaUltimoModelloGroq() {
         daOrdinare.sort((a,b)=> (b.created||0) - (a.created||0));
         const migliore = daOrdinare[0].id;
         if (migliore !== groqModelCorrente) {
-            log(`Modello Groq aggiornato: ${migliore} (era ${groqModelCorrente})`);
+            log(`🤖 Groq: modello aggiornato → ${migliore} (era ${groqModelCorrente})`);
             groqModelCorrente = migliore;
         }
         if (groqModelCorrente.includes("gemma")) groqMaxTokens = 512;
@@ -114,8 +123,8 @@ async function trovaUltimoModelloGroq() {
         else if (groqModelCorrente.includes("llama3-8b")) groqMaxTokens = 1024;
         else if (groqModelCorrente.includes("mixtral")) groqMaxTokens = 2000;
         else groqMaxTokens = 1024;
-        log(`Groq max_tokens=${groqMaxTokens} per ${groqModelCorrente}`);
-    } catch(e) { log(`Errore lista modelli Groq: ${e.message}`); }
+        log(`🤖 Groq: max_tokens=${groqMaxTokens} per ${groqModelCorrente}`);
+    } catch(e) { log(`⚠️ Ricerca modelli Groq fallita: ${e.message}`); }
 }
 
 async function callGemini(sys, prompt, temperature) {
@@ -144,30 +153,30 @@ async function callGemini(sys, prompt, temperature) {
                 const msg = (d.error.message || "").toLowerCase();
                 if (msg.includes("limit") && msg.includes("per day")) {
                     if (!quotaLogSent) {
-                        log("❌ QUOTA GIORNALIERA GEMINI (429)");
+                        log(`⚠️ Gemini: quota giornaliera esaurita (429)`);
                         quotaLogSent = true;
                     }
                     return null;
                 }
                 if (d.error.code === 429 || d.error.code === 503) {
                     if (msg.includes("quota exceeded")) {
-                        if (!quotaLogSent) log("⏳ Quota exceeded, attendo retry...");
+                        if (!quotaLogSent) log(`⏳ Gemini: quota exceeded, attendo...`);
                         quotaLogSent = true;
                         await gestisciErroreQuota(d.error.message, log);
                         continue;
                     }
-                    const ms = Math.pow(2,i)*10000;
-                    if (i===0) log(`⏳ Errore ${d.error.code}, retry in ${ms/1000}s`);
+                    const ms = Math.pow(2,i) * 10000;
+                    log(`⏳ Gemini: errore ${d.error.code} (tentativo ${i+1}/3) – ritento tra ${ms/1000}s`);
                     await new Promise(r => setTimeout(r, ms));
                     continue;
                 }
-                if (!msg.includes("quota")) log(`ERRORE GEMINI: ${d.error.message} (code: ${d.error.code})`);
+                if (!msg.includes("quota")) log(`❌ Gemini: ${d.error.message} (code: ${d.error.code})`);
                 return null;
             }
             if (d.candidates?.length) return d.candidates[0].content.parts[0].text;
             return null;
         } catch(e) {
-            log(`ERRORE RETE GEMINI: ${e.message}`);
+            log(`❌ Gemini: errore rete - ${e.message}`);
             await new Promise(r => setTimeout(r, 5000));
         }
     }
@@ -185,7 +194,7 @@ async function callGroq(sys, prompt, temperature) {
     let finalSys = sys.length > MAX_SYS ? sys.substring(0, MAX_SYS) + "... [troncato]" : sys;
     let finalPrompt = prompt.length > MAX_PROMPT ? prompt.substring(0, MAX_PROMPT) + "... [troncato]" : prompt;
     
-    if (sys.length > MAX_SYS) log(`System message troncato da ${sys.length} a ${MAX_SYS} caratteri`);
+    if (sys.length > MAX_SYS) log(`⚠️ Groq: system message troncato (${sys.length} → ${MAX_SYS} caratteri)`);
     
     let messages = [{ role: "system", content: finalSys }, { role: "user", content: finalPrompt }];
     let currentMax = groqMaxTokens;
@@ -202,16 +211,19 @@ async function callGroq(sys, prompt, temperature) {
             if (!res.ok || d.error) {
                 const msg = (d.error?.message || "").toLowerCase();
                 if (d.error?.code === 400 && msg.includes("single user message")) {
-                    log(`Modello richiede un solo messaggio, unisco system+user.`);
+                    log(`🔄 Groq: modello richiede un solo messaggio, unisco system+user`);
                     messages = [{ role: "user", content: finalSys + "\n\n" + finalPrompt }];
                     continue;
                 }
-                log(`ERRORE GROQ: ${d.error?.message || res.status} (code: ${d.error?.code || res.status})`);
-                if (msg.includes("limit") || d.error?.code === 429) return null;
+                log(`❌ Groq: ${d.error?.message || res.status} (code: ${d.error?.code || res.status})`);
+                if (msg.includes("limit") || d.error?.code === 429) {
+                    log(`⚠️ Groq: quota esaurita (429)`);
+                    return null;
+                }
                 if (d.error?.code === 400 && (msg.includes("max_tokens") || msg.includes("context_window"))) {
                     if (currentMax > 128) {
                         currentMax = Math.max(128, Math.floor(currentMax*0.6));
-                        log(`Riduzione max_tokens a ${currentMax}`);
+                        log(`🔄 Groq: riduzione max_tokens a ${currentMax}`);
                         continue;
                     }
                     return null;
@@ -220,12 +232,12 @@ async function callGroq(sys, prompt, temperature) {
                     finalPrompt = finalPrompt.substring(0, Math.floor(finalPrompt.length*0.6)) + "... [troncato 2]";
                     if (messages.length===1) messages[0].content = finalSys + "\n\n" + finalPrompt;
                     else messages[1].content = finalPrompt;
-                    log(`Prompt ridotto a ${finalPrompt.length} char`);
+                    log(`🔄 Groq: prompt ridotto a ${finalPrompt.length} caratteri`);
                     continue;
                 }
                 if ([429,503,500].includes(d.error?.code)) {
-                    const ms = Math.pow(2,i)*10000;
-                    log(`⏳ Errore ${d.error.code}, retry in ${ms/1000}s`);
+                    const ms = Math.pow(2,i) * 10000;
+                    log(`⏳ Groq: errore ${d.error.code} (tentativo ${i+1}/3) – ritento tra ${ms/1000}s`);
                     await new Promise(r => setTimeout(r, ms));
                     continue;
                 }
@@ -237,7 +249,7 @@ async function callGroq(sys, prompt, temperature) {
             JSON.parse(jsonText);
             return jsonText;
         } catch(e) {
-            log(`ERRORE RETE GROQ: ${e.message}`);
+            log(`❌ Groq: errore rete - ${e.message}`);
             await new Promise(r => setTimeout(r, 5000));
         }
     }
@@ -264,11 +276,11 @@ export async function callLLM(sys, prompt, temperature = 0.85) {
     }
     
     if (isValido(result)) {
-        log(`✅ Articolo generato da ${provider}`);
+        log(`✅ Generazione riuscita (${provider})`);
         return { provider, text: result };
     }
     
-    log(`⚠️ Nessun articolo valido da ${provider}, salto la generazione`);
+    log(`⚠️ ${provider}: nessun output valido, salto generazione`);
     return null;
 }
 
