@@ -1,4 +1,3 @@
-// lib/relations.js
 import { labelDaScore } from "./utils.js";
 
 let logFn = null;
