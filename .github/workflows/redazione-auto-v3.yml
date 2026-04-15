@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  redazione-v2-auto:
+  redazione-v3-auto:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +29,7 @@ jobs:
       - name: Installazione Dipendenze
         run: npm install
 
-      - name: "⚓ FASE 1 — Fetch RSS + Gemini v2"
+      - name: "⚓ FASE 1 — Fetch RSS + Gemini v2 o Groq"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
