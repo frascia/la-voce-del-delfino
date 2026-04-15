@@ -23,7 +23,7 @@ import { scriviLog, caricaJSON, salvaJSON, parseJSON,
          caricaContatori, limiteSuperato, fasciaDiArticoliAttiva, paroleTarget } from "./lib/utils.js";
 import { initConfig, loadConfig, getVociAttive } from "./lib/config.js";
 import { initNews, raccoltaNotizie } from "./lib/news.js";
-import { initLLM, callLLM, initModels } from "./lib/llm.js";
+import { initLLM, callLLM, initModels, setScheduledRun, incrementConsecutiveFailures, resetConsecutiveFailures, getCurrentProvider } from "./lib/llm.js";
 import { initDraft, caricaDraft, inizializzaSezioni, safeWriteDraft } from "./lib/draft.js";
 import { initRelations, applicaDecay, aggiornaRelazioni } from "./lib/relations.js";
 import { initChat, generaChat } from "./lib/chat.js";
@@ -34,9 +34,14 @@ function log(msg) { scriviLog(msg, LOG_PATH); }
 async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
     
+    // Determina se il run è schedulato (GitHub Actions) o manuale
+    const isScheduled = process.env.SCHEDULED_RUN === "true";
+    log(`🏷️ Run ${isScheduled ? "SCHEDULATO (automatico)" : "MANUALE"}`);
+    
     initConfig(CONFIG_PATH, log);
     initNews(process.env.GNEWS_API_KEY || "", process.env.NEWS_SOURCE || "gnews", log);
     initLLM(process.env.GEMINI_API_KEY || "", process.env.GROQ_API_KEY || "", PROVIDER_STATE_PATH, log);
+    setScheduledRun(isScheduled);               // importa per llm.js
     initDraft(log);
     initRelations(log);
     initChat(log);
@@ -86,7 +91,6 @@ async function main() {
     for (const { voce, tema } of codaArticoli) {
         const sez = voce.sez;
         const infoFirma = risolviPersonaggio(CHI, voce.firma);
-        // Ora generaArticolo restituisce { provider, titolo, articolo, commento }
         const { provider, titolo, articolo: articoloTesto, commento } = await generaArticolo(voce, CHI, tema, callLLM);
         if (!articoloTesto || articoloTesto.length < 50) {
             log(`⚠️ SKIP articolo su "${tema.substring(0,30)}..."`);
@@ -105,13 +109,12 @@ async function main() {
             categoria: voce.lab,
             colore_tipo: STILI[voce.tipo] || STILI["RSS"],
             immagine: infoFirma.img || "default_personaggio.webp",
-            provider: provider   // <<< SALVA IL PROVIDER NEL DRAFT
+            provider: provider
         });
         articoliGenerati++;
         log(`  ✅ "${(titolo||tema).substring(0,50)}..." (${commenti.length} commenti) [${provider}]`);
     }
     
-    // Chat
     const chatAbilitata = LIMITI.chat!=="sempre" ? !limiteSuperato(contatori, LIMITI, "chat_run_max") : true;
     const chattaOggi = chatAbilitata && Math.random()<0.30;
     if (chattaOggi) contatori.chat_run = (contatori.chat_run||0)+1;
@@ -148,10 +151,20 @@ Rispondi JSON: {"titolo":"...","articolo":"..."}`;
                 commento_firma: { nome: pers, avatar: dati.avatar, testo: "" }, commenti: [],
                 categoria: "Dalla Redazione", colore_tipo: STILI.GEN || "#2d6a4f",
                 immagine: dati.img,
-                provider: provPers   // anche per l'articolo personaggio
+                provider: provPers
             });
             articoliGenerati++;
             log(`✍️ Articolo personaggio da ${pers} (${provPers}): "${parsedPers.titolo.substring(0,50)}..."`);
+        }
+    }
+    
+    // Aggiornamento contatore fallimenti consecutivi per Gemini (solo run schedulati)
+    const currentProvider = getCurrentProvider();
+    if (currentProvider === "gemini") {
+        if (articoliGenerati > 0) {
+            resetConsecutiveFailures();
+        } else {
+            incrementConsecutiveFailures();
         }
     }
     
