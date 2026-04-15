@@ -1,4 +1,3 @@
-// lib/llm.js
 import { pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
 
 let logFn = null;
@@ -11,6 +10,10 @@ let failureCount = 0;
 let quotaLogSent = false;
 let providerStatePath = "";
 let activeGeminiModel = "gemini-1.5-flash";
+let isScheduledRun = false;
+let consecutiveFailures = 0;
+let failuresThreshold = parseInt(process.env.RUN_FAILURES_THRESHOLD || "3");
+
 const log = (msg) => logFn("[llm] " + msg);
 
 export function initLLM(geminiKey, groqKey, providerStateFile, logFunction) {
@@ -18,14 +21,57 @@ export function initLLM(geminiKey, groqKey, providerStateFile, logFunction) {
     apiKeyGroq = groqKey;
     providerStatePath = providerStateFile;
     logFn = logFunction;
-    const saved = caricaJSON(providerStatePath, { provider: "gemini", failureCount: 0 });
+    const saved = caricaJSON(providerStatePath, { provider: "gemini", failureCount: 0, consecutiveFailures: 0 });
     currentProvider = saved.provider;
-    failureCount = saved.failureCount;
-    log(`Provider inizializzato: ${currentProvider}`);
+    failureCount = saved.failureCount || 0;
+    consecutiveFailures = saved.consecutiveFailures || 0;
+    log(`Provider inizializzato: ${currentProvider}, fallimenti consecutivi: ${consecutiveFailures}`);
 }
 
 function salvaStatoProvider() {
-    salvaJSON(providerStatePath, { provider: currentProvider, failureCount: 0 });
+    salvaJSON(providerStatePath, { provider: currentProvider, failureCount: 0, consecutiveFailures });
+}
+
+export function setScheduledRun(scheduled) {
+    isScheduledRun = scheduled;
+    log(`Run ${scheduled ? "schedulato" : "manuale"} – i fallimenti ${scheduled ? "verranno" : "NON verranno"} conteggiati`);
+    if (!isScheduledRun) {
+        // Forza Gemini per i run manuali, ignora contatore
+        currentProvider = "gemini";
+        log(`Run manuale: forzato provider a gemini (ignoro contatore fallimenti)`);
+    } else {
+        // Per run schedulati, applica la soglia
+        if (consecutiveFailures >= failuresThreshold && currentProvider === "gemini") {
+            log(`Soglia raggiunta (${consecutiveFailures}/${failuresThreshold}), forzo passaggio a groq`);
+            currentProvider = "groq";
+        }
+    }
+}
+
+export function incrementConsecutiveFailures() {
+    if (!isScheduledRun) {
+        log(`Avvio manuale: fallimenti non incrementati`);
+        return;
+    }
+    consecutiveFailures++;
+    log(`Incremento fallimenti consecutivi a ${consecutiveFailures}`);
+    salvaStatoProvider();
+}
+
+export function resetConsecutiveFailures() {
+    if (!isScheduledRun) {
+        log(`Avvio manuale: reset fallimenti non eseguito`);
+        return;
+    }
+    if (consecutiveFailures > 0) {
+        consecutiveFailures = 0;
+        log(`Reset fallimenti consecutivi (Gemini ha prodotto articoli)`);
+        salvaStatoProvider();
+    }
+}
+
+export function getCurrentProvider() {
+    return currentProvider;
 }
 
 async function trovaUltimoModelloGemini() {
