@@ -2057,3 +2057,117 @@ Please retry in 56.314279296s. (code: 429)
 [15/04/2026, 18:05:10] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (3 articoli, 0 nuovi)
 [15/04/2026, 18:05:10] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (1 articoli, 0 nuovi)
 [15/04/2026, 18:05:10] [3-deploy-v2] 🕐 Ora: 15/04, 12:53 | Prossimo: Aggiornamenti sospesi
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH] 🏷️ Run MANUALE
+[15/04/2026, 18:17:35] [1-fetch-v2] [llm] ⚙️ Provider inizializzato: groq | Fallimenti consecutivi: 0
+[15/04/2026, 18:17:35] [1-fetch-v2] [llm] 📌 Run MANUALE – i fallimenti NON verranno conteggiati
+[15/04/2026, 18:17:35] [1-fetch-v2] [llm] 🔁 Run manuale: forzato provider a GEMINI (ignoro contatore fallimenti)
+[15/04/2026, 18:17:35] [1-fetch-v2] [llm] 🤖 Gemini: modello selezionato → gemini-flash-lite-latest
+[15/04/2026, 18:17:35] [1-fetch-v2] [llm] 🤖 Groq: modello aggiornato → meta-llama/llama-4-scout-17b-16e-instruct (era llama3-70b-8192)
+[15/04/2026, 18:17:35] [1-fetch-v2] [llm] 🤖 Groq: max_tokens=1024 per meta-llama/llama-4-scout-17b-16e-instruct
+[15/04/2026, 18:17:35] [1-fetch-v2] [config] 📁 Config caricata: /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/config_v2.json
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    ├─ 📅 Agenda: 4 voci
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    ├─ 👥 Personaggi: 9 (+ default)
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    ├─ 📰 Redazione: 19 voci (RSS:9, GEN:1, RED:9)
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    ├─ ⏰ Fasce orarie: 10, 11, 13, 19
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    ├─ 📏 Lunghezza articoli: livello 2 (~160 parole)
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    ├─ 💬 Commenti: min 1, max 4, totali max 10
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    ├─ 🔄 Reset quote: ore 10 (toll. 10 min)
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    ├─ 🤖 Modelli: cerca max 1 volte/giorno
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    └─ 🎛️ Limiti: chat=sempre, commenti=sempre, relazioni=sempre
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    └─ 📢 Ticker: AVVISTATO CALAMARO GIGANTE AL PORTO CANA… | AUMENTO DEI PREZZI: GLI ARROSTICINI ORA … +1
+[15/04/2026, 18:17:35] [1-fetch-v2] [config]    └─ 👤 Personaggi: Lars(🐬), Juizinho(⚽), Cetteo(🚧), Hiroki(🏯), Glusi(🤪) +4
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH] 📊 Quote: chiamate=0, rss=32
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH] 🕐 Fascia attiva: NO | Parole target: ~160
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH] 📋 Voci attive: 8
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH] 
+📌 REDAZIONALI OGGI:
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH]    ✍️ Wolf (pescara) – 10 temi
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH]    ✍️ Juizinho (pescara) – 10 temi
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH]    ✍️ Abbukk (pescara) – 10 temi
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH] 🔍 Verifica disponibilità provider...
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH]    📡 Recupero modelli Gemini disponibili...
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH]    📋 Modelli Flash trovati: gemini-flash-lite-latest, gemini-flash-latest, gemini-3.1-flash-lite-preview, gemini-3-flash-preview, gemini-2.5-flash-lite, gemini-2.5-flash, gemini-2.0-flash-lite-001, gemini-2.0-flash-lite, gemini-2.0-flash-001, gemini-2.0-flash
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH]    📡 Test Gemini...
+[15/04/2026, 18:17:35] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-flash-lite-latest...
+[15/04/2026, 18:17:38] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:17:50] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:18:12] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:18:52] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:18:52] [1-fetch-v2] [FETCH]       ❌ gemini-flash-lite-latest non risponde
+[15/04/2026, 18:18:52] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-flash-latest...
+[15/04/2026, 18:18:54] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:19:06] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:19:28] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:20:08] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:20:08] [1-fetch-v2] [FETCH]       ❌ gemini-flash-latest non risponde
+[15/04/2026, 18:20:08] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-3.1-flash-lite-preview...
+[15/04/2026, 18:20:10] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:20:22] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:20:44] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:21:24] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:21:24] [1-fetch-v2] [FETCH]       ❌ gemini-3.1-flash-lite-preview non risponde
+[15/04/2026, 18:21:24] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-3-flash-preview...
+[15/04/2026, 18:21:26] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:21:38] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:22:00] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:22:40] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:22:40] [1-fetch-v2] [FETCH]       ❌ gemini-3-flash-preview non risponde
+[15/04/2026, 18:22:40] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.5-flash-lite...
+[15/04/2026, 18:22:42] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:22:54] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:23:16] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:23:56] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:23:56] [1-fetch-v2] [FETCH]       ❌ gemini-2.5-flash-lite non risponde
+[15/04/2026, 18:23:56] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.5-flash...
+[15/04/2026, 18:23:58] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:24:13] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:24:35] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:25:15] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:25:15] [1-fetch-v2] [FETCH]       ❌ gemini-2.5-flash non risponde
+[15/04/2026, 18:25:15] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.0-flash-lite-001...
+[15/04/2026, 18:25:17] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:25:29] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:25:51] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:26:31] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:26:31] [1-fetch-v2] [FETCH]       ❌ gemini-2.0-flash-lite-001 non risponde
+[15/04/2026, 18:26:31] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.0-flash-lite...
+[15/04/2026, 18:26:33] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:26:45] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:27:07] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:27:47] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:27:47] [1-fetch-v2] [FETCH]       ❌ gemini-2.0-flash-lite non risponde
+[15/04/2026, 18:27:47] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.0-flash-001...
+[15/04/2026, 18:27:49] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:28:01] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:28:23] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:29:03] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:29:03] [1-fetch-v2] [FETCH]       ❌ gemini-2.0-flash-001 non risponde
+[15/04/2026, 18:29:03] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.0-flash...
+[15/04/2026, 18:29:05] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:29:17] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:29:39] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:30:19] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:30:19] [1-fetch-v2] [FETCH]       ❌ gemini-2.0-flash non risponde
+[15/04/2026, 18:30:19] [1-fetch-v2] [FETCH]    ❌ Gemini NON disponibile (nessun modello Flash risponde)
+[15/04/2026, 18:30:19] [1-fetch-v2] [FETCH]    📡 Test Groq...
+[15/04/2026, 18:30:21] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 1/3) – ritento tra 10s
+[15/04/2026, 18:30:33] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 2/3) – ritento tra 20s
+[15/04/2026, 18:30:58] [1-fetch-v2] [llm] ⏳ Gemini: errore 503 (tentativo 3/3) – ritento tra 40s
+[15/04/2026, 18:31:38] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 18:31:38] [1-fetch-v2] [FETCH]    ❌ Groq NON disponibile
+[15/04/2026, 18:31:38] [1-fetch-v2] [FETCH] ❌ NESSUN PROVIDER DISPONIBILE (Gemini e Groq non rispondono)
+[15/04/2026, 18:31:38] [1-fetch-v2] [FETCH] 📁 Mantengo draft esistente del 15/04 (9 articoli)
+[15/04/2026, 18:31:38] [1-fetch-v2] [FETCH] ⏭️ Salto generazione articoli, la fase 2 elaborerà il draft esistente
+[15/04/2026, 18:31:38] [2-elabora-v3] ⚙️ FASE 2-v3 — Avvio elaborazione...
+[15/04/2026, 18:31:38] [2-elabora-v3] 🔍 Provider LLM rilevato: groq (9 articoli)
+[15/04/2026, 18:31:38] [2-elabora-v3] 📄 active_config_v3.json aggiornato.
+[15/04/2026, 18:31:38] [2-elabora-v3] 🔐 auth_info.json aggiornato.
+[15/04/2026, 18:31:38] [2-elabora-v3] ✅ Sezione pescara: 5 articoli normalizzati.
+[15/04/2026, 18:31:38] [2-elabora-v3] ✅ Sezione mondo: 3 articoli normalizzati.
+[15/04/2026, 18:31:38] [2-elabora-v3] ✅ Sezione cultura: 1 articoli normalizzati.
+[15/04/2026, 18:31:38] [2-elabora-v3] ✅ FASE 2-v3 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[15/04/2026, 18:31:39] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[15/04/2026, 18:31:39] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (5 articoli, 0 nuovi)
+[15/04/2026, 18:31:39] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (3 articoli, 0 nuovi)
+[15/04/2026, 18:31:39] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (1 articoli, 0 nuovi)
+[15/04/2026, 18:31:39] [3-deploy-v2] 🕐 Ora: 15/04, 12:53 | Prossimo: 15/04, 20:31
