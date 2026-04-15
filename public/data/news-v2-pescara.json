@@ -1,102 +1,86 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "Aggiornamenti sospesi",
+  "prossimo_aggiornamento": "15/04, 14:54",
   "news": [
     {
-      "tipo": "gen",
-      "titolo": "Scrivi un articolo su: Il silenzio non ha mai tradito nessun",
-      "articolo": "Contenuto non generato per problemi temporanei del provider LLM.",
+      "tipo": "personaggio",
+      "titolo": "La frustrazione del giornalista: stanco di nascondere la verità",
+      "articolo": "Sono stanco di lavorare in un mondo dove la verità viene nascosta e distorta. Come giornalista, ho sempre cercato di fare il mio lavoro con integrità e professionalità, ma è sempre più difficile. I fatti vengono nascosti, le informazioni vengono manipolate e la gente viene ingannata. È una situazione che mi lascia senza fiato e mi fa sentire come se stessi perorando nel vuoto. La mia vita è dedicata al lavoro, passo ore a ricercare e a scrivere, ma sembra che nessuno voglia ascoltare. Vivo sopra un colle, lontano dalla confusione della città, ma anche lì sento il peso della mia stanchezza.",
       "commento_firma": {
         "nome": "Wolf",
         "avatar": "👩‍🌾",
-        "testo": "…"
+        "testo": "Sono davvero stanco..."
       },
       "commenti": [],
-      "categoria": "Riflessioni",
-      "colore_tipo": "#ff4d4d",
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
       "immagine": "wolf.webp",
-      "provider": "gemini",
-      "nuovo": false
+      "provider": "groq",
+      "nuovo": true
     },
     {
-      "tipo": "gen",
-      "titolo": "Scrivi un articolo su: Cuore vagabondo: Tra la saudade e il",
-      "articolo": "Contenuto non generato per problemi temporanei del provider LLM.",
+      "tipo": "personaggio",
+      "titolo": "Cuore vagabondo: Tra la saudade e il prossimo brindisi",
+      "articolo": "Sono un giornalista con un carattere festoso e un cuore che batte per le donne. La mia vita è un susseguirsi di momenti di allegria e di riflessioni profonde. Cresciuto con la musica brasiliana e la sua energia contagiosa, ho imparato ad apprezzare la bellezza della vita e a non prendere mai nulla troppo sul serio. La mia passione per il calcio mi ha portato a tifare per il Pescara, una squadra che incarna lo spirito di gioco e di divertimento che tanto amo. Pescara è diventata la mia casa, non solo per la squadra del cuore, ma anche per la sua gente accogliente e la sua bellezza naturale.",
       "commento_firma": {
         "nome": "Juizinho",
         "avatar": "⚽",
-        "testo": "…"
+        "testo": "Ecco, sono qui, in questo posto meraviglioso, a guardare il mare e a pensare a tutte le donne che hanno illuminato la mia vita. La saudade, questo sentimento che mi pervade, è un misto di nostalgia e di speranza. Spero che il prossimo brindisi sia sempre all'orizzonte, e che la vita continui a sorprendermi con la sua bellezza e la sua magia."
       },
       "commenti": [],
-      "categoria": "Riflessioni",
-      "colore_tipo": "#ff4d4d",
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
       "immagine": "juizinho.webp",
-      "provider": "gemini",
-      "nuovo": false
+      "provider": "groq",
+      "nuovo": true
     },
     {
-      "tipo": "gen",
-      "titolo": "Scrivi un articolo su: Oltre la cupola: Dieci motivi per cui",
-      "articolo": "Contenuto non generato per problemi temporanei del provider LLM.",
+      "tipo": "personaggio",
+      "titolo": "Il microchip nel gomito: una questione di libertà",
+      "articolo": "La notizia del microchip impiantato nel gomito ha suscitato grande interesse e dibattito. L'idea di un dispositivo che possa monitorare e controllare le nostre azioni quotidiane sembra essere oggetto di scherno per molti, ma è importante considerare le implicazioni più ampie di questa tecnologia. I microchip impiantabili sono già utilizzati in alcuni settori, come ad esempio nella medicina, per monitorare le condizioni di salute dei pazienti o per fornire accesso a informazioni importanti in caso di emergenza. Tuttavia, l'estensione di questa tecnologia a scopo di controllo e monitoraggio solleva questioni importanti sulla privacy e sulla libertà individuale. È fondamentale che la società nel suo complesso si confronti con queste tematiche e consideri attentamente i pro e i contro di una tecnologia che potrebbe avere un impatto significativo sulla nostra vita quotidiana.",
       "commento_firma": {
         "nome": "Abbukk",
         "avatar": "🍄",
-        "testo": "…"
+        "testo": "È importante essere consapevoli delle implicazioni di questa tecnologia e non prenderla sottogamba. La libertà individuale e la privacy sono diritti fondamentali che devono essere protetti."
       },
       "commenti": [],
-      "categoria": "Riflessioni",
-      "colore_tipo": "#ff4d4d",
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
-      "provider": "gemini",
-      "nuovo": false
+      "provider": "groq",
+      "nuovo": true
     },
     {
       "tipo": "rss",
-      "titolo": "Notizia reale: [Generico] Cronaca Pescarese - approfondiment",
-      "articolo": "Contenuto non generato per problemi temporanei del provider LLM.",
+      "titolo": "Il mare, il pesce e la mia vita a Borgomarino",
+      "articolo": "Vivo a Borgomarino, un piccolo paese di pescatori vicino a Pescara. La mia vita è legata al mare e al pesce. Sono un pescatore, anzi, un 'pescatorino' come mi piace chiamarmi. La mia giornata inizia all'alba, quando vado a pesca con gli amici. Il mare è la mia passione, il mio lavoro e la mia vita. Ma, onestamente, non sono uno di quei tipi che si alza presto per lavorare sodo. No, io preferisco godermi la vita e fare le cose con calma. E quando non sono a pesca, sono allo stadio a tifare per il Pescara, la mia squadra del cuore. Sono un ultras, sì, e me ne vanto. La mia vita è semplice, ma piena di passioni.",
       "commento_firma": {
         "nome": "Cetteo",
         "avatar": "🚧",
-        "testo": "…"
+        "testo": "E che ci credete? Che io sia davvero un tipo così? Mah, non sono mica così fesso. C'è sempre qualcuno che vuole sapere cosa faccio e come vivo. E io, che ci crediate o no, non ho mica voglia di raccontare tutta la mia vita a chiunque. Quindi, lasciatemi stare e non fate troppe domande, capito?"
       },
       "commenti": [],
       "categoria": "Cronaca",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
-      "provider": "gemini",
-      "nuovo": false
+      "provider": "groq",
+      "nuovo": true
     },
     {
       "tipo": "rss",
-      "titolo": "Notizia reale: [Generico] Politica Locale Pescara - approfon",
-      "articolo": "Contenuto non generato per problemi temporanei del provider LLM.",
+      "titolo": "Pescara, la politica locale: tra promesse e realtà",
+      "articolo": "La politica locale a Pescara è sempre stata un tema caldo, soprattutto quando si parla di sviluppo economico e turismo. I cittadini di Pescara aspettano risposte concrete alle loro esigenze, ma spesso le promesse dei politici sembrano rimanere tali. Il porto di Pescara, ad esempio, è stato oggetto di numerosi progetti di riqualificazione, ma i lavori procedono a rilento. La città ha bisogno di investimenti seri per rilanciare l'economia locale e migliorare la qualità della vita dei suoi abitanti. I pescatori, come me, aspettano una maggiore attenzione per le loro esigenze e una gestione più efficiente delle risorse marine.",
       "commento_firma": {
         "nome": "Cetteo",
         "avatar": "🚧",
-        "testo": "…"
+        "testo": "In attesa di una svolta concreta, ci limitiamo a prendere atto della situazione. La politica locale deve tornare a essere al servizio dei cittadini, con azioni e progetti reali."
       },
       "commenti": [],
       "categoria": "Politica",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Scrivi articolo personale.",
-      "articolo": "Contenuto non generato per problemi temporanei del provider LLM.",
-      "commento_firma": {
-        "nome": "Cetteo",
-        "avatar": "🚧",
-        "testo": "L'IA è andata a farsi il bagno a Pescara Vecchia."
-      },
-      "commenti": [],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#ff4d4d",
-      "immagine": "cetteo.webp",
-      "provider": "gemini",
-      "nuovo": false
+      "provider": "groq",
+      "nuovo": true
     }
   ]
 }

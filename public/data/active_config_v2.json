@@ -100,6 +100,14 @@
       "img": "abbukk.webp",
       "bio_breve": "sta sempre attento a tutto, va a caccia di funghi altrimenti resta a casa a zappare",
       "bio_completa": ""
+    },
+    "Bartender": {
+      "mood": "Nonostante le cadute, va sempre in bicicletta anche di notte, taciturno e a volte espansivo",
+      "peso": 0.7,
+      "avatar": "🚴",
+      "img": "bartender.webp",
+      "bio_breve": "finito il lavoro tardi, o corre o va in bicicletta, beve alcool e fa i cocktails ma non si ubriaca mai, e nonostante mangi tanto resta uno smilzo",
+      "bio_completa": ""
     }
   },
   "AGENDA": {
@@ -197,7 +205,7 @@
       "g": "lun",
       "sez": "pescara",
       "arg": "Vita quotidiana pescarese ironica",
-      "tipo": "GEN",
+      "tipo": "RED",
       "lab": "Riflessioni",
       "firma": "Hiroki",
       "mood": "tranquillo e nostalgico",
@@ -222,7 +230,7 @@
       "g": "lun,mar",
       "sez": "pescara",
       "arg": "Il ripetitivo siiiiiiiiii",
-      "tipo": "GEN",
+      "tipo": "RED",
       "lab": "Riflessioni",
       "firma": "Glusi",
       "mood": "divertente e simpatico",
@@ -247,7 +255,7 @@
       "g": "lun,mar",
       "sez": "pescara",
       "arg": "Vita quotidiana pescarese ironica",
-      "tipo": "GEN",
+      "tipo": "RED",
       "lab": "Riflessioni",
       "firma": "Lilli",
       "mood": "tranquilla e serena",
@@ -272,7 +280,7 @@
       "g": "sab,dom",
       "sez": "pescara",
       "arg": "Vita a Borgo Marino",
-      "tipo": "GEN",
+      "tipo": "RED",
       "lab": "Riflessioni",
       "firma": "Cetteo",
       "mood": "sfacciato e irriverente",
@@ -297,7 +305,7 @@
       "g": "mer",
       "sez": "pescara",
       "arg": "Vita contadina",
-      "tipo": "GEN",
+      "tipo": "RED",
       "lab": "Riflessioni",
       "firma": "Wolf",
       "mood": "stanco",
@@ -322,7 +330,7 @@
       "g": "default",
       "sez": "pescara",
       "arg": "Il brasileiro",
-      "tipo": "GEN",
+      "tipo": "RED",
       "lab": "Riflessioni",
       "firma": "Juizinho",
       "mood": "profondo ma nostalgico",
@@ -347,7 +355,7 @@
       "g": "ven",
       "sez": "pescara",
       "arg": "Riflessioni montanare",
-      "tipo": "GEN",
+      "tipo": "RED",
       "lab": "Riflessioni",
       "firma": "Lars",
       "mood": "delicato",
@@ -372,7 +380,7 @@
       "g": "mer",
       "sez": "pescara",
       "arg": "Storie profonde",
-      "tipo": "GEN",
+      "tipo": "RED",
       "lab": "Riflessioni",
       "firma": "Abbukk",
       "mood": "serio",
@@ -392,6 +400,30 @@
       "inventare": true,
       "weight_articolo": 0.85,
       "weight_commento": 0.7
+    },
+    {
+      "g": "lun",
+      "sez": "pescara",
+      "arg": "Storie divertenti",
+      "tipo": "RED",
+      "lab": "Riflessioni",
+      "firma": "Bartender",
+      "mood": "scansonato",
+      "temi": [
+        "L'ombra del bancone corre veloce",
+        "Ciclisti notturni e cocktail all'alba",
+        "Il segreto del metabolismo d'acciaio",
+        "Cadere sull'asfalto, rialzarsi dietro il vetro",
+        "L'ultima pedalata prima del turno",
+        "Ghiaccio, gin e catene sporche d'olio",
+        "Lo smilzo che sfidava la notte -Cronache di un barman in volata",
+        "Senza fiato tra un Negroni e la salita",
+        "Raggi d’argento e bicchieri di cristallo"
+      ],
+      "num": 2,
+      "inventare": true,
+      "weight_articolo": 0.85,
+      "weight_commento": 0.8
     },
     {
       "g": "mer",
@@ -478,9 +510,8 @@
     "personaggio": "news-redazionale.webp"
   },
   "site_settings": {
-    "last_update": "15/04, 08:48",
+    "last_update": "15/04, 12:53",
     "timbro": "Resistenza Adriatica",
-    "llm_provider": "nessuno",
     "banner": "Mare.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
     "header_img": "header.webp",
@@ -490,6 +521,7 @@
       "AVVISTATO CALAMARO GIGANTE AL PORTO CANALE: CERCAVA UN LIMONE.",
       "AUMENTO DEI PREZZI: GLI ARROSTICINI ORA SI PAGANO IN BITCOIN.",
       "ERNESTO DICHIARA: 'IL PONTE DEL MARE È STORTO, MA È ARTE'."
-    ]
+    ],
+    "llm_provider": "groq"
   }
 }
