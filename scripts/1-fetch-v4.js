@@ -2,10 +2,11 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-15
- * VERSIONE: 4.5
+ * VERSIONE: 4.8
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
+ *              Gestione provider KO: mantiene draft esistente o crea vuoto.
  */
 
 import fs from "fs";
@@ -29,7 +30,7 @@ const BACKUP_PATH = DRAFT_PATH + ".bak";
 
 import { scriviLog, caricaJSON, salvaJSON, parseJSON, 
          giornoOggi, risolviAgenda, risolviPersonaggio, 
-         caricaContatori, limiteSuperato, fasciaDiArticoliAttiva, paroleTarget } from "./lib/utils.js";
+         caricaContatori, limiteSuperato, fasciaDiArticoliAttiva, paroleTarget, contaArticoli } from "./lib/utils.js";
 import { initConfig, loadConfig, getVociAttive } from "./lib/config.js";
 import { initNews, raccoltaNotizie } from "./lib/news.js";
 import { initLLM, callLLM, initModels, setScheduledRun, incrementConsecutiveFailures, resetConsecutiveFailures, getCurrentProvider } from "./lib/llm.js";
@@ -39,6 +40,18 @@ import { initChat, generaChat } from "./lib/chat.js";
 import { initArticoli, generaArticolo, generaCommenti } from "./lib/articoli.js";
 
 function log(msg) { scriviLog(msg, LOG_PATH); }
+
+// Test rapido provider
+async function testProvider(provider) {
+    const testSys = "Rispondi solo con 'ok' in JSON: {\"risposta\":\"ok\"}";
+    const testPrompt = "Test";
+    try {
+        const result = await callLLM(testSys, testPrompt, 0.1);
+        return result !== null;
+    } catch(e) {
+        return false;
+    }
+}
 
 async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -106,12 +119,55 @@ async function main() {
     }
 
     const oggiStr = new Date().toLocaleDateString("it-IT",{timeZone:"Europe/Rome", day:"2-digit", month:"2-digit"});
-    const { draft, isNuovoGiorno, oldDraft } = await caricaDraft(DRAFT_PATH, oggiStr, agenda, IMPOSTAZIONI, STILI);
+    const draftEsistente = fs.existsSync(DRAFT_PATH) ? caricaJSON(DRAFT_PATH, null) : null;
+    const isNuovoGiorno = !draftEsistente || draftEsistente.dataRiferimento !== oggiStr;
+
+    // Test provider
+    log(`🔍 Verifica disponibilità provider...`);
+    const geminiOk = await testProvider("gemini");
+    const groqOk = await testProvider("groq");
+
+    if (!geminiOk && !groqOk) {
+        log(`❌ NESSUN PROVIDER DISPONIBILE (Gemini e Groq non rispondono)`);
+        
+        if (draftEsistente) {
+            log(`📁 Mantengo draft esistente del ${draftEsistente.dataRiferimento} (${contaArticoli(draftEsistente)} articoli)`);
+            log(`⏭️ Salto generazione articoli, la fase 2 elaborerà il draft esistente`);
+            return;
+        } else {
+            log(`⚠️ Nessun draft esistente – creo draft vuoto per evitare crash fase 2`);
+            
+            const draftVuoto = {
+                dataRiferimento: oggiStr,
+                oraAggiornamento: oraAggiornamento,
+                agenda: agenda,
+                impostazioni: IMPOSTAZIONI,
+                stili: STILI,
+                sezioni: {}
+            };
+            
+            for (const voce of vociAttive) {
+                const sez = voce.sez;
+                if (!draftVuoto.sezioni[sez]) {
+                    draftVuoto.sezioni[sez] = { color: STILI[sez] || STILI["RSS"] || "#005f73", articoli: [] };
+                }
+            }
+            
+            salvaJSON(DRAFT_PATH, draftVuoto);
+            log(`💾 Draft vuoto creato per il ${oggiStr}`);
+            log(`⏭️ La fase 2 avrà un file da elaborare (senza articoli)`);
+            return;
+        }
+    }
+
+    log(`✅ Provider disponibili: ${geminiOk ? "Gemini" : ""} ${groqOk ? "Groq" : ""}`);
+
+    const { draft, oldDraft } = await caricaDraft(DRAFT_PATH, oggiStr, agenda, IMPOSTAZIONI, STILI);
     draft.oraAggiornamento = oraAggiornamento;
     inizializzaSezioni(draft, vociAttive, STILI);
 
     const articoliAbilitati = !limiteSuperato(contatori, LIMITI, "articoli_run_max");
-    if (!articoliAbilitati) log("⏭️ Limite articoli_run raggiunto");
+    if (!articoliAbilitati) log(`⏭️ Limite articoli_run raggiunto`);
     contatori.articoli_run = (contatori.articoli_run||0) + (articoliAbilitati?1:0);
 
     let codaArticoli = [];
@@ -125,7 +181,7 @@ async function main() {
     for (const { voce, tema } of codaArticoli) {
         const key = `${voce.sez}|${tema}`;
         if (generatiSet.has(key)) {
-            log(`⚠️ Duplicato evitato: ${tema}`);
+            log(`⚠️ [FETCH] Duplicato evitato: ${tema}`);
             continue;
         }
         generatiSet.add(key);
@@ -134,12 +190,12 @@ async function main() {
         const infoFirma = risolviPersonaggio(CHI, voce.firma);
         const result = await generaArticolo(voce, CHI, tema, callLLM);
         if (!result) {
-            log(`⚠️ SKIP articolo per "${tema.substring(0, 40)}..." (nessun output valido)`);
+            log(`⚠️ [FETCH] SKIP articolo per "${tema.substring(0, 40)}..." – nessun output valido da ${voce.firma}`);
             continue;
         }
         const { provider, titolo, articolo: articoloTesto, commento } = result;
         if (!articoloTesto || articoloTesto.length < 50) {
-            log(`⚠️ SKIP articolo su "${tema.substring(0, 40)}..." (testo troppo corto)`);
+            log(`⚠️ [FETCH] SKIP articolo per "${tema.substring(0, 40)}..." – testo troppo corto (${articoloTesto?.length || 0} caratteri) da ${voce.firma}`);
             continue;
         }
         const commenti = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI, callLLM);
@@ -147,7 +203,6 @@ async function main() {
             await aggiornaRelazioni(CHI, relazioni, personaggi, articoloTesto, commenti, callLLM);
         }
         
-        // Determina il tipo per il frontend
         let tipoOutput = voce.tipo === "RED" ? "personaggio" : (voce.tipo === "GEN" ? "gen" : "rss");
         let categoriaOutput = voce.tipo === "RED" ? "Dalla Redazione" : voce.lab;
         
@@ -164,11 +219,10 @@ async function main() {
         });
         articoliGenerati++;
         
-        // Log differenziato per tipo
         if (voce.tipo === "RED") {
-            log(`✍️ [Dalla Redazione] ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." (${articoloTesto.length} parole)`);
+            log(`✍️ [FETCH] [Dalla Redazione] ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri`);
         } else {
-            log(`✓ ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." (${commenti.length} commenti)`);
+            log(`✅ [FETCH] ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri, ${commenti.length} commenti`);
         }
     }
 
@@ -199,39 +253,27 @@ async function main() {
         }
     }
 
-    // Se nessun articolo è stato generato, crea comunque un draft vuoto
+    // Se nessun articolo è stato generato, mantieni il draft esistente (non sovrascrivere)
     if (articoliGenerati === 0) {
-        log("⚠️ Nessun articolo generato. Creo un draft vuoto per non interrompere la catena.");
-        
-        if (!draft.sezioni || Object.keys(draft.sezioni).length === 0) {
-            for (const voce of vociAttive) {
-                const sez = voce.sez;
-                if (!draft.sezioni[sez]) {
-                    draft.sezioni[sez] = { color: STILI[sez] || STILI["RSS"] || "#005f73", articoli: [] };
-                }
-            }
+        log(`⚠️ Nessun articolo generato in questo run.`);
+        if (draftEsistente && isNuovoGiorno) {
+            log(`📁 Nuovo giorno ma nessun articolo – mantengo draft del ${draftEsistente.dataRiferimento} (${contaArticoli(draftEsistente)} articoli)`);
+        } else if (draftEsistente && !isNuovoGiorno) {
+            log(`📁 Stesso giorno – mantengo draft esistente (${contaArticoli(draftEsistente)} articoli)`);
+        } else {
+            log(`⚠️ Nessun draft esistente e nessun articolo generato – impossibile salvare`);
         }
-        
-        try {
-            salvaJSON(DRAFT_PATH, draft);
-            log(`💾 Draft vuoto salvato in ${DRAFT_PATH} (nessun articolo, ma la catena continua)`);
-        } catch(e) {
-            log(`❌ Errore salvataggio draft vuoto: ${e.message}`);
-        }
-        
-        contatori._primoRunOggi = true;
-        salvaJSON(CONTATORI_PATH, contatori);
-        log("✅ FASE 1-v4 completata (nessun articolo, ma draft vuoto creato).");
         return;
     }
 
+    // Salvataggio normale con safeWriteDraft (draft non vuoto)
     const ok = await safeWriteDraft(draft, DRAFT_PATH, TEMP_PATH, BACKUP_PATH);
     if (ok) {
         contatori._primoRunOggi = true;
         salvaJSON(CONTATORI_PATH, contatori);
         log(`✅ FASE 1-v4 completata. ${articoliGenerati} nuovi articoli.`);
     } else {
-        log("⚠️ Salvataggio draft fallito.");
+        log(`⚠️ Salvataggio draft fallito.`);
     }
 }
 
