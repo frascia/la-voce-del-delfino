@@ -1,4 +1,5 @@
-import { scriviLog, pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
+// lib/llm.js
+import { pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
 
 let logFn = null;
 let apiKeyGemini = "", apiKeyGroq = "";
@@ -10,6 +11,7 @@ let failureCount = 0;
 let quotaLogSent = false;
 let providerStatePath = "";
 let activeGeminiModel = "gemini-1.5-flash";
+const log = (msg) => logFn("[llm] " + msg);
 
 export function initLLM(geminiKey, groqKey, providerStateFile, logFunction) {
     apiKeyGemini = geminiKey;
@@ -19,6 +21,7 @@ export function initLLM(geminiKey, groqKey, providerStateFile, logFunction) {
     const saved = caricaJSON(providerStatePath, { provider: "gemini", failureCount: 0 });
     currentProvider = saved.provider;
     failureCount = saved.failureCount;
+    log(`Provider inizializzato: ${currentProvider}`);
 }
 
 function salvaStatoProvider() {
@@ -37,9 +40,9 @@ async function trovaUltimoModelloGemini() {
             const flash = validi.filter(m => m.includes("flash")).sort((a,b)=>b.localeCompare(a));
             if (flash.length) activeGeminiModel = flash[0];
             else if (validi.length) activeGeminiModel = validi.sort((a,b)=>b.localeCompare(a))[0];
-            logFn(`[MODELLO] Gemini: ${activeGeminiModel}`);
+            log(`Modello Gemini selezionato: ${activeGeminiModel}`);
         }
-    } catch(e) { logFn(`[WARN] Ricerca modello Gemini: ${e.message}`); }
+    } catch(e) { log(`Ricerca modello Gemini fallita: ${e.message}`); }
 }
 
 async function trovaUltimoModelloGroq() {
@@ -59,7 +62,7 @@ async function trovaUltimoModelloGroq() {
         daOrdinare.sort((a,b)=> (b.created||0) - (a.created||0));
         const migliore = daOrdinare[0].id;
         if (migliore !== groqModelCorrente) {
-            logFn(`[GROQ] Modello aggiornato: ${migliore} (era ${groqModelCorrente})`);
+            log(`Modello Groq aggiornato: ${migliore} (era ${groqModelCorrente})`);
             groqModelCorrente = migliore;
         }
         if (groqModelCorrente.includes("gemma")) groqMaxTokens = 512;
@@ -67,8 +70,8 @@ async function trovaUltimoModelloGroq() {
         else if (groqModelCorrente.includes("llama3-8b")) groqMaxTokens = 1024;
         else if (groqModelCorrente.includes("mixtral")) groqMaxTokens = 2000;
         else groqMaxTokens = 1024;
-        logFn(`[GROQ] max_tokens=${groqMaxTokens} per ${groqModelCorrente}`);
-    } catch(e) { logFn(`[GROQ] Errore lista modelli: ${e.message}`); }
+        log(`Groq max_tokens=${groqMaxTokens} per ${groqModelCorrente}`);
+    } catch(e) { log(`Errore lista modelli Groq: ${e.message}`); }
 }
 
 async function callGemini(sys, prompt, temperature) {
@@ -97,30 +100,30 @@ async function callGemini(sys, prompt, temperature) {
                 const msg = (d.error.message || "").toLowerCase();
                 if (msg.includes("limit") && msg.includes("per day")) {
                     if (!quotaLogSent) {
-                        logFn("❌ QUOTA GIORNALIERA GEMINI (429)");
+                        log("❌ QUOTA GIORNALIERA GEMINI (429)");
                         quotaLogSent = true;
                     }
                     return null;
                 }
                 if (d.error.code === 429 || d.error.code === 503) {
                     if (msg.includes("quota exceeded")) {
-                        if (!quotaLogSent) logFn("⏳ Quota exceeded, attendo retry...");
+                        if (!quotaLogSent) log("⏳ Quota exceeded, attendo retry...");
                         quotaLogSent = true;
-                        await gestisciErroreQuota(d.error.message, logFn);
+                        await gestisciErroreQuota(d.error.message, log);
                         continue;
                     }
                     const ms = Math.pow(2,i)*10000;
-                    if (i===0) logFn(`⏳ Errore ${d.error.code}, retry in ${ms/1000}s`);
+                    if (i===0) log(`⏳ Errore ${d.error.code}, retry in ${ms/1000}s`);
                     await new Promise(r => setTimeout(r, ms));
                     continue;
                 }
-                if (!msg.includes("quota")) logFn(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
+                if (!msg.includes("quota")) log(`ERRORE GEMINI: ${d.error.message} (code: ${d.error.code})`);
                 return null;
             }
             if (d.candidates?.length) return d.candidates[0].content.parts[0].text;
             return null;
         } catch(e) {
-            logFn(`[ERRORE RETE GEMINI] ${e.message}`);
+            log(`ERRORE RETE GEMINI: ${e.message}`);
             await new Promise(r => setTimeout(r, 5000));
         }
     }
@@ -133,8 +136,13 @@ async function callGroq(sys, prompt, temperature) {
         await trovaUltimoModelloGroq();
         ricercaEffettuata = true;
     }
-    let finalSys = sys.length > 4000 ? sys.substring(0,4000)+"... [troncato]" : sys;
-    let finalPrompt = prompt.length > 15000 ? prompt.substring(0,15000)+"... [troncato]" : prompt;
+    const MAX_SYS = 6000;
+    const MAX_PROMPT = 15000;
+    let finalSys = sys.length > MAX_SYS ? sys.substring(0, MAX_SYS) + "... [troncato]" : sys;
+    let finalPrompt = prompt.length > MAX_PROMPT ? prompt.substring(0, MAX_PROMPT) + "... [troncato]" : prompt;
+    
+    if (sys.length > MAX_SYS) log(`System message troncato da ${sys.length} a ${MAX_SYS} caratteri`);
+    
     let messages = [{ role: "system", content: finalSys }, { role: "user", content: finalPrompt }];
     let currentMax = groqMaxTokens;
     const url = "https://api.groq.com/openai/v1/chat/completions";
@@ -150,16 +158,16 @@ async function callGroq(sys, prompt, temperature) {
             if (!res.ok || d.error) {
                 const msg = (d.error?.message || "").toLowerCase();
                 if (d.error?.code === 400 && msg.includes("single user message")) {
-                    logFn(`[GROQ] Modello richiede un solo messaggio, unisco system+user.`);
+                    log(`Modello richiede un solo messaggio, unisco system+user.`);
                     messages = [{ role: "user", content: finalSys + "\n\n" + finalPrompt }];
                     continue;
                 }
-                logFn(`[ERRORE GROQ] ${d.error?.message || res.status} (code: ${d.error?.code || res.status})`);
+                log(`ERRORE GROQ: ${d.error?.message || res.status} (code: ${d.error?.code || res.status})`);
                 if (msg.includes("limit") || d.error?.code === 429) return null;
                 if (d.error?.code === 400 && (msg.includes("max_tokens") || msg.includes("context_window"))) {
                     if (currentMax > 128) {
                         currentMax = Math.max(128, Math.floor(currentMax*0.6));
-                        logFn(`[GROQ] Riduzione max_tokens a ${currentMax}`);
+                        log(`Riduzione max_tokens a ${currentMax}`);
                         continue;
                     }
                     return null;
@@ -168,12 +176,12 @@ async function callGroq(sys, prompt, temperature) {
                     finalPrompt = finalPrompt.substring(0, Math.floor(finalPrompt.length*0.6)) + "... [troncato 2]";
                     if (messages.length===1) messages[0].content = finalSys + "\n\n" + finalPrompt;
                     else messages[1].content = finalPrompt;
-                    logFn(`[GROQ] Prompt ridotto a ${finalPrompt.length} char`);
+                    log(`Prompt ridotto a ${finalPrompt.length} char`);
                     continue;
                 }
                 if ([429,503,500].includes(d.error?.code)) {
                     const ms = Math.pow(2,i)*10000;
-                    logFn(`⏳ Errore ${d.error.code}, retry in ${ms/1000}s`);
+                    log(`⏳ Errore ${d.error.code}, retry in ${ms/1000}s`);
                     await new Promise(r => setTimeout(r, ms));
                     continue;
                 }
@@ -185,36 +193,63 @@ async function callGroq(sys, prompt, temperature) {
             JSON.parse(jsonText);
             return jsonText;
         } catch(e) {
-            logFn(`[ERRORE RETE GROQ] ${e.message}`);
+            log(`ERRORE RETE GROQ: ${e.message}`);
             await new Promise(r => setTimeout(r, 5000));
         }
     }
     return null;
 }
 
+function generaFallback(prompt) {
+    return JSON.stringify({
+        titolo: (prompt || "").substring(0, 60),
+        articolo: "Contenuto non generato per problemi temporanei del provider LLM.",
+        commento: ""
+    });
+}
+
 export async function callLLM(sys, prompt, temperature = 0.85) {
     const tryProvider = async (provider) => {
-        return provider === "groq" ? await callGroq(sys, prompt, temperature) : await callGemini(sys, prompt, temperature);
+        const text = provider === "groq" ? await callGroq(sys, prompt, temperature) : await callGemini(sys, prompt, temperature);
+        return { provider, text };
     };
-    let result = await tryProvider(currentProvider);
-    if (result && !result.includes("contenuto non generato") && JSON.parse(result).articolo?.length > 50) {
-        failureCount = 0;
-        return result;
+    
+    let { provider, text: result } = await tryProvider(currentProvider);
+    
+    function isValido(jsonStr) {
+        if (!jsonStr) return false;
+        try {
+            const obj = JSON.parse(jsonStr);
+            if (obj.articolo && obj.articolo.length > 50 && !obj.articolo.includes("contenuto non generato")) {
+                return true;
+            }
+        } catch(e) {}
+        return false;
     }
+    
+    if (isValido(result)) {
+        log(`✅ Articolo generato da ${provider}`);
+        failureCount = 0;
+        return { provider, text: result };
+    }
+    
     failureCount++;
-    logFn(`⚠️ Fallimento ${currentProvider} (${failureCount}/2)`);
+    log(`⚠️ Fallimento ${provider} (${failureCount}/2)`);
     if (failureCount >= 2) {
         const old = currentProvider;
         currentProvider = currentProvider === "gemini" ? "groq" : "gemini";
-        logFn(`🔄 Cambio provider: ${old} → ${currentProvider}`);
+        log(`🔄 Cambio provider: ${old} → ${currentProvider}`);
         failureCount = 0;
         salvaStatoProvider();
-        const newResult = await tryProvider(currentProvider);
-        if (newResult && !newResult.includes("contenuto non generato")) return newResult;
-        logFn(`❌ Anche ${currentProvider} fallisce.`);
-        return JSON.stringify({ titolo: prompt.substring(0,60), articolo: "Contenuto non generato per problemi del provider.", commento: "" });
+        const { provider: newProvider, text: newResult } = await tryProvider(currentProvider);
+        if (isValido(newResult)) {
+            log(`✅ Articolo generato da ${newProvider} (dopo cambio)`);
+            return { provider: newProvider, text: newResult };
+        }
+        log(`❌ Anche ${newProvider} fallisce.`);
+        return { provider: newProvider, text: generaFallback(prompt) };
     }
-    return JSON.stringify({ titolo: prompt.substring(0,60), articolo: "Contenuto non generato per problemi temporanei.", commento: "" });
+    return { provider, text: generaFallback(prompt) };
 }
 
 export async function initModels() {
