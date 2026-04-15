@@ -1,4 +1,3 @@
-// lib/chat.js
 let logFn = null;
 const log = (msg) => logFn("[chat] " + msg);
 
