@@ -1,3 +1,4 @@
+// lib/draft.js
 import { caricaJSON, salvaJSON, contaArticoli } from "./utils.js";
 import fs from "fs";
 
