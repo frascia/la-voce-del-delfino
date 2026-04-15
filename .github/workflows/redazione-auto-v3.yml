@@ -34,7 +34,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
-        run: node scripts/1-fetch-v3.js
+        run: node scripts/1-fetch-v4.js
 
       - name: "⚙️ FASE 2 — Elaborazione v2"
         env:
