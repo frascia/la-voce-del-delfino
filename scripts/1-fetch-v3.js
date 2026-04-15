@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 /**
- * 1-fetch-v2.js
- * FASE 1 — Nuova architettura v2 con supporto Gemini/Groq e fallback automatico
- */ 
+ * 1-fetch-v3.js
+ * FASE 1 — Nuova architettura v3
+ * Supporto Gemini/Groq con fallback persistente, modello Groq dinamico,
+ * ricerca notizie via GNews API (fallback RSS), gestione sicura draft.
+ */
 
 import fs from "fs";
 import path from "path";
@@ -128,11 +130,16 @@ if (fs.existsSync(LOG_PATH)) {
 
 const apiKey = process.env.GEMINI_API_KEY || "";
 const groqApiKey = process.env.GROQ_API_KEY || "";
+let groqModelCorrente = process.env.GROQ_MODEL || "llama3-70b-8192";
+let ricercaModelloGroqEffettuata = false;
+
+const gnewsApiKey = process.env.GNEWS_API_KEY || "";
+const newsSource = process.env.NEWS_SOURCE || "gnews"; // "gnews" o "rss"
 let activeGeminiModel = "gemini-1.5-flash";
-let quotaGiornalieraEsaurita = false; // usato solo per log, non blocca più il fallback
+let quotaGiornalieraEsaurita = false;
 let contatoreChiamateApi = 0;
 
-// Provider persistente
+// Provider LLM persistente
 const MAX_FAILURES_BEFORE_SWITCH = 2;
 let providerState = { provider: "gemini", failureCount: 0 };
 let currentProvider = "gemini";
@@ -208,16 +215,107 @@ async function trovaUltimoModello() {
             const flash = validi.filter(m => m.includes("flash")).sort((a, b) => b.localeCompare(a));
             if (flash.length > 0) activeGeminiModel = flash[0];
             else if (validi.length > 0) activeGeminiModel = validi.sort((a, b) => b.localeCompare(a))[0];
-            scriviLog(`[MODELLO] ${activeGeminiModel}`);
+            scriviLog(`[MODELLO] Gemini: ${activeGeminiModel}`);
         }
     } catch (e) {
-        scriviLog(`[WARN] Ricerca modello fallita, uso default: ${e.message}`);
+        scriviLog(`[WARN] Ricerca modello Gemini fallita, uso default: ${e.message}`);
     }
 }
 
 // ---------------------------------------------------------------------------
-// FETCH RSS
+// RICERCA MODELLO GROQ PIÙ RECENTE
 // ---------------------------------------------------------------------------
+
+async function trovaUltimoModelloGroq() {
+    if (!groqApiKey) {
+        scriviLog("ERRORE: Impossibile trovare modelli Groq, GROQ_API_KEY mancante.");
+        return;
+    }
+
+    const url = "https://api.groq.com/openai/v1/models";
+    const headers = {
+        "Authorization": `Bearer ${groqApiKey}`,
+        "Content-Type": "application/json"
+    };
+
+    try {
+        scriviLog(`[GROQ] Richiesta modelli a: ${url}`);
+        const response = await fetch(url, { headers });
+        if (!response.ok) {
+            const errorText = await response.text();
+            scriviLog(`[GROQ ERRORE] Impossibile ottenere la lista dei modelli: ${response.status} ${response.statusText} - ${errorText}`);
+            return;
+        }
+
+        const data = await response.json();
+        if (!data.data || !Array.isArray(data.data)) {
+            scriviLog("[GROQ ERRORE] Risposta API modelli inaspettata.");
+            return;
+        }
+
+        // Filtra modelli testuali
+        const modelliTestuali = data.data.filter(model =>
+            model.id &&
+            (model.id.includes("llama") ||
+             model.id.includes("mixtral") ||
+             model.id.includes("gemma")) &&
+            !model.id.includes("embed")
+        );
+
+        if (modelliTestuali.length === 0) {
+            scriviLog("[GROQ] Nessun modello testuale valido trovato. Verrà usato il modello predefinito.");
+            return;
+        }
+
+        // Priorità ai modelli llama
+        const modelliPrioritari = modelliTestuali.filter(m => m.id.includes("llama"));
+        const modelliDaOrdinare = modelliPrioritari.length > 0 ? modelliPrioritari : modelliTestuali;
+
+        // Ordina per data di creazione (se disponibile)
+        modelliDaOrdinare.sort((a, b) => {
+            if (a.created && b.created) return b.created - a.created;
+            return 0;
+        });
+
+        const migliorModello = modelliDaOrdinare[0].id;
+        if (migliorModello !== groqModelCorrente) {
+            scriviLog(`[GROQ] Modello trovato: ${migliorModello} (predefinito era ${groqModelCorrente})`);
+            groqModelCorrente = migliorModello;
+        } else {
+            scriviLog(`[GROQ] Modello già aggiornato: ${migliorModello}`);
+        }
+    } catch (error) {
+        scriviLog(`[GROQ ECCEZIONE] Durante la lista dei modelli: ${error.message}`);
+    }
+}
+
+// ---------------------------------------------------------------------------
+// FETCH NOTIZIE: GNews API (primaria) o RSS (fallback)
+// ---------------------------------------------------------------------------
+
+async function fetchGNews(query, max) {
+    if (!gnewsApiKey) {
+        scriviLog("ERRORE: Manca GNEWS_API_KEY");
+        return [];
+    }
+    if (max <= 0) return [];
+    const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=it&country=it&max=${max}&token=${gnewsApiKey}`;
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            const err = await res.json();
+            scriviLog(`[GNews ERRORE] ${err.errors?.join(", ") || res.statusText}`);
+            return [];
+        }
+        const data = await res.json();
+        const titles = data.articles.map(art => art.title);
+        scriviLog(`[GNews] Ottenuti ${titles.length} titoli per "${query}"`);
+        return titles;
+    } catch (e) {
+        scriviLog(`[GNews ECCEZIONE] ${e.message}`);
+        return [];
+    }
+}
 
 async function fetchRSS(query, max) {
     if (max <= 0) return [];
@@ -247,8 +345,19 @@ async function fetchRSS(query, max) {
     }
 }
 
+async function fetchNotizie(query, max) {
+    if (newsSource === "gnews") {
+        const titoli = await fetchGNews(query, max);
+        if (titoli.length > 0) return titoli;
+        scriviLog(`⚠️ GNews fallito, fallback su RSS per "${query}"`);
+        return await fetchRSS(query, max);
+    } else {
+        return await fetchRSS(query, max);
+    }
+}
+
 // ---------------------------------------------------------------------------
-// GESTIONE PAUSA / QUOTA GEMINI
+// GESTIONE PAUSA / QUOTA
 // ---------------------------------------------------------------------------
 
 const ATTESA_GEMINI_MS = 1500;
@@ -264,7 +373,7 @@ async function gestisciErroreQuota(msg) {
 }
 
 // ---------------------------------------------------------------------------
-// CHIAMATA GEMINI (stessa interfaccia)
+// CHIAMATA GEMINI
 // ---------------------------------------------------------------------------
 
 async function callGemini(sys, prompt, temperature = 0.85) {
@@ -301,7 +410,6 @@ async function callGemini(sys, prompt, temperature = 0.85) {
 
                 if (msg.includes("limit") && msg.includes("per day")) {
                     scriviLog("❌ QUOTA GIORNALIERA ESAURITA (Gemini)");
-                    // Non settiamo più il flag globale, restituiamo null per attivare fallback
                     return null;
                 }
 
@@ -335,13 +443,19 @@ async function callGemini(sys, prompt, temperature = 0.85) {
 }
 
 // ---------------------------------------------------------------------------
-// CHIAMATA GROQ (stessa interfaccia di Gemini)
+// CHIAMATA GROQ (con modello dinamico)
 // ---------------------------------------------------------------------------
 
 async function callGroq(sys, prompt, temperature = 0.85) {
     if (!groqApiKey) {
         scriviLog("ERRORE: Manca GROQ_API_KEY");
         return null;
+    }
+
+    // Ricerca modello migliore alla prima chiamata
+    if (!ricercaModelloGroqEffettuata) {
+        await trovaUltimoModelloGroq();
+        ricercaModelloGroqEffettuata = true;
     }
 
     const url = "https://api.groq.com/openai/v1/chat/completions";
@@ -361,7 +475,7 @@ async function callGroq(sys, prompt, temperature = 0.85) {
                     "Authorization": `Bearer ${groqApiKey}`
                 },
                 body: JSON.stringify({
-                    model: "Llama 3.1 405B", // può essere modificato
+                    model: groqModelCorrente,
                     messages: messages,
                     temperature: temperature,
                     response_format: { type: "json_object" }
@@ -393,10 +507,9 @@ async function callGroq(sys, prompt, temperature = 0.85) {
             const content = d.choices?.[0]?.message?.content;
             if (!content) return null;
 
-            // Pulisci eventuali marcatori markdown
             let jsonText = content.trim();
             jsonText = jsonText.replace(/^```json\s*/, "").replace(/```$/, "");
-            JSON.parse(jsonText); // test
+            JSON.parse(jsonText);
             return jsonText;
 
         } catch (e) {
@@ -444,7 +557,6 @@ async function callLLM(sys, prompt, temperature = 0.85) {
     let result = await tentaProvider(currentProvider);
     
     if (result && !isFallbackErrore(result)) {
-        // Successo: resetta contatore e salva stato se necessario
         failureCount = 0;
         if (providerState.provider !== currentProvider) {
             providerState.provider = currentProvider;
@@ -454,7 +566,6 @@ async function callLLM(sys, prompt, temperature = 0.85) {
         return result;
     }
     
-    // Fallimento: incrementa contatore
     failureCount++;
     scriviLog(`⚠️ Fallimento provider ${currentProvider} (${failureCount}/${MAX_FAILURES_BEFORE_SWITCH})`);
     
@@ -467,7 +578,6 @@ async function callLLM(sys, prompt, temperature = 0.85) {
         providerState.failureCount = 0;
         salvaStatoProvider(providerState);
         
-        // Ritenta con il nuovo provider una volta
         const newResult = await tentaProvider(currentProvider);
         if (newResult && !isFallbackErrore(newResult)) {
             return newResult;
@@ -785,6 +895,7 @@ async function main() {
     failureCount = 0;
     providerState = statoPersistente;
     scriviLog(`🔌 Provider attivo all'avvio: ${currentProvider}`);
+    scriviLog(`🤖 Modello Groq corrente: ${groqModelCorrente}`);
 
     const oraItalia = new Intl.DateTimeFormat("it-IT", {
         timeZone: "Europe/Rome", dateStyle: "full", timeStyle: "medium"
@@ -895,7 +1006,7 @@ async function main() {
                     codaArticoli.push({ voce, tema: temi[Math.floor(Math.random() * temi.length)] });
                 }
             } else {
-                const titoli = await fetchRSS(voce.arg, numDesiderati);
+                const titoli = await fetchNotizie(voce.arg, numDesiderati);
                 contatori.rss_fetch = (contatori.rss_fetch || 0) + 1;
                 for (const t of titoli) codaArticoli.push({ voce, tema: t });
                 if (titoli.length < numDesiderati) {
@@ -911,7 +1022,6 @@ async function main() {
 
     for (const { voce, tema } of codaArticoli) {
         const sez         = voce.sez;
-        const icona       = ICONE[voce.lab] || ICONE["default"] || "Categoria.webp";
         const coloreTipo  = STILI[voce.tipo] || STILI["RSS"];
         const infoFirma   = risolviPersonaggio(CHI, voce.firma);
 
@@ -937,7 +1047,6 @@ async function main() {
             }
         }
 
-        const IMMAGINI = CONFIG.IMMAGINI || {};
         draft.sezioni[sez].articoli.push({
             tipo:           voce.tipo === "GEN" ? "gen" : "rss",
             titolo:         titoloFinale,
@@ -953,7 +1062,7 @@ async function main() {
         scriviLog(`  ✅ "${titoloFinale.substring(0, 50)}..." — ${commentiFinali.length} commenti`);
     }
 
-    // --- Nuovi commenti su notizie congelate (solo se non è il primo run senza articoli) ---
+    // --- Nuovi commenti su notizie congelate ---
     if (!articoliAttivi && fs.existsSync(DRAFT_PATH)) {
         scriviLog("🧊 Articoli congelati — aggiungo commenti alle notizie esistenti...");
         const draftEsistente = caricaJSON(DRAFT_PATH, { sezioni: {} });
@@ -977,7 +1086,6 @@ async function main() {
                     scriviLog(`  💬 Nuovi commenti aggiunti a: "${articolo.titolo.substring(0, 40)}..."`);
                 }
             }
-            // Aggiorna la sezione nel draft se non esiste già
             if (!draft.sezioni[sez]) draft.sezioni[sez] = datiSez;
         }
     }
