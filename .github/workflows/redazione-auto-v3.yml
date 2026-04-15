@@ -41,7 +41,7 @@ jobs:
         env:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
-        run: node scripts/2-elabora-v2.js
+        run: node scripts/2-elabora-v3.js
 
       - name: "🚀 FASE 3 — Deploy v2"
         env:
