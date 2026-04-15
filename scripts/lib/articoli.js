@@ -1,4 +1,3 @@
-// lib/articoli.js
 import { parseJSON, risolviPersonaggio } from "./utils.js";
 
 let logFn = null;
@@ -25,7 +24,6 @@ ${moodCommento}`;
     const { provider, text } = await callLLMFn(sys, userPrompt, voce.weight_articolo ?? 0.8);
     log(`📝 ${voce.firma} (${provider}) ha scritto: "${text.substring(0, 60)}..."`);
     const parsed = parseJSON(text);
-    // restituisce l'oggetto parsato più il provider
     return { ...parsed, provider };
 }
 
