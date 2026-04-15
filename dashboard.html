@@ -3,202 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>La Voce del Delfino 🐬</title>
+    <title>Dashboard Redazione - La Voce del Delfino 🐬</title>
     <style>
-        :root { --blu-mare:#005f73; --panna:#faf7f2; --azzurro-pescara:#008cff; }
-        body { margin:0; background:var(--blu-mare); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; transition:background 1.2s ease; }
-        #app { width:100%; max-width:100%; margin:auto; background:transparent; min-height:100vh; }
-
-        /* TESTATA */
-        .testata { width:100%; background:var(--blu-mare); line-height:0; text-align:center; position:relative; }
-        .testata img#header-img { margin-top:5px; width:100%; display:block; height:450px; object-fit:cover; object-position:center; }
-        @media (max-width:600px) { .testata img#header-img { height:250px; } }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1e1e1e;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
         
-        /* TIMESTAMP */
-        .delfino-timestamp { width:100%; box-sizing:border-box; padding:10px 20px; background:linear-gradient(135deg,rgba(255,243,210,0.9),rgba(255,228,168,0.85)); border-bottom:1.5px solid rgba(180,130,60,0.2); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-        .dt-tempo { font-size:11px; font-style:italic; color:#7a5c2e; white-space:nowrap; }
-        .dt-motto { font-size:12px; font-weight:700; font-style:italic; color:#5a3e1b; text-align:center; flex:1; }
-
-        /* TIMBRO */
-        .timbro-edizione { display:none; width:100%; box-sizing:border-box; text-align:center; padding:7px 20px; background:var(--blu-mare); color:rgba(255,255,255,0.85); font-size:12px; font-style:italic; font-weight:600; border-bottom:1px solid rgba(255,255,255,0.1); }
-
-        /* MENU */
-        .menu { display:flex; overflow-x:auto; padding:20px 15px; gap:12px; scrollbar-width:none; }
-        .menu::-webkit-scrollbar { display:none; }
-        .tab { white-space:nowrap; padding:12px 20px; border-radius:30px; border:2px solid rgba(255,255,255,0.7); background:rgba(255,255,255,0.15); color:#fff; font-weight:bold; font-size:14px; cursor:pointer; transition:0.3s; }
-        .tab.attiva { background:rgba(255,255,255,0.9); color:var(--blu-mare); transform:translateY(-2px); }
-
-        /* GRIGLIA */
-        .notizia-container { padding:15px 20px 30px; display:grid; grid-template-columns:1fr; gap:50px; }
-        @media(min-width:600px)  { .notizia-container { grid-template-columns:1fr 1fr; gap:40px 24px; } }
-        @media(min-width:1000px) { .notizia-container { grid-template-columns:1fr 1fr 1fr; gap:40px 24px; } }
-        @media(min-width:1600px) { .notizia-container { grid-template-columns:1fr 1fr 1fr 1fr; gap:40px 24px; } }
-
-        /* NOTIZIE */
-        .notizia { position:relative; background:var(--panna); border-radius:24px; padding:25px 20px 20px; }
-        .notizia-numero { position:absolute; top:-18px; left:-18px; width:45px; height:45px; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:22px; z-index:20; border:4px solid #fff; }
-        .etichetta-categoria { position:absolute; top:-12px; right:20px; padding:4px 12px; border-radius:12px; font-size:10px; font-weight:900; text-transform:uppercase; z-index:20; border:2px solid #fff; }
-        .notizia.rss-box { border:2px solid var(--azzurro-pescara); box-shadow:0 10px 25px rgba(0,140,255,0.1); }
-        .notizia.rss-box .notizia-numero { background:var(--azzurro-pescara); }
-        .etichetta-categoria.rss-label { color:var(--azzurro-pescara); border-color:var(--azzurro-pescara); background:#fff; }
-        .notizia.gen-box { border:2px solid #ff4d4d; background:#fffafa; box-shadow:0 10px 25px rgba(255,0,0,0.1); }
-        .notizia.gen-box .notizia-numero { background:#ff4d4d; }
-        .etichetta-categoria.gen-label { color:#ff4d4d; border-color:#ff4d4d; background:#fff; }
-        .notizia.personaggio-box { border:2px solid #2d6a4f; background:#f0fff4; box-shadow:0 10px 25px rgba(45,106,79,0.15); }
-        .notizia.personaggio-box .notizia-numero { background:#2d6a4f; }
-        .etichetta-categoria.personaggio-label { color:#2d6a4f; border-color:#2d6a4f; background:#fff; }
-        .notizia-img-box { width:100%; aspect-ratio:16/9; background:#e9e5df; border-radius:16px; overflow:hidden; margin-bottom:20px; }
-        .notizia-img-box img { width:100%; height:100%; object-fit:cover; }
-        h2 { margin:0 0 15px; font-size:24px; line-height:1.3; color:#2c2c2c; font-weight:800; }
-        .testo { font-size:16px; line-height:1.7; color:#4a4a4a; overflow:hidden; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; }
-        .testo.aperto { -webkit-line-clamp:unset; }
-        .leggi-tutto { background:none; border:none; color:var(--blu-mare); font-weight:800; padding:12px 0; font-size:15px; cursor:pointer; text-transform:uppercase; }
-        .firma-autore { display:flex; align-items:center; gap:5px; font-size:11px; color:#999; margin-bottom:10px; font-style:italic; }
-        .badge-nuovo { display:inline-block; background:#e63946; color:#fff; font-size:9px; font-weight:900; text-transform:uppercase; padding:2px 7px; border-radius:8px; margin-left:8px; animation:pulse-badge 2s ease-in-out infinite; }
-        @keyframes pulse-badge { 0%,100%{opacity:1} 50%{opacity:0.6} }
-
-        /* COMMENTO FIRMA */
-        .commento-firma { background:rgba(255,255,255,0.7); padding:12px 14px 12px 46px; border-radius:16px; margin-top:16px; position:relative; border:2px dashed #ccc; font-style:italic; font-size:13px; color:#555; cursor:pointer; }
-        .commento-firma .avatar-firma { position:absolute; left:12px; top:10px; font-size:20px; }
-        .commento-firma .nome-firma { font-size:9px; font-weight:800; text-transform:uppercase; color:#bbb; display:block; margin-bottom:3px; }
-        .commento-firma .testo-firma { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-        .commento-firma.aperto .testo-firma { display:block; }
-        .firma-toggle { font-size:10px; color:#bbb; float:right; }
-        .commento-firma.aperto .firma-toggle { transform:rotate(180deg); }
-
-        /* COMMENTI */
-        .commenti-header { display:flex; align-items:center; gap:8px; margin-top:14px; cursor:pointer; padding:8px 12px; border-radius:12px; background:rgba(0,0,0,0.03); border:1px solid rgba(0,0,0,0.06); }
-        .commenti-count { display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:22px; border-radius:11px; background:var(--azzurro-pescara); color:#fff; font-size:11px; font-weight:900; padding:0 6px; }
-        .commenti-label { font-size:11px; font-weight:700; color:#888; text-transform:uppercase; flex:1; }
-        .commenti-arrow { font-size:10px; color:#bbb; transition:transform 0.2s; }
-        .commenti-panel { display:none; flex-direction:column; gap:8px; margin-top:8px; }
-        .commenti-panel.aperto { display:flex; }
-        .commenti-header.aperto .commenti-arrow { transform:rotate(180deg); }
-        .commento-personaggio { background:rgba(0,0,0,0.02); padding:10px 14px 10px 42px; border-radius:14px; position:relative; font-size:13px; color:#444; border:1px solid rgba(0,0,0,0.06); cursor:pointer; }
-        .commento-personaggio .avatar-p { position:absolute; left:10px; top:10px; font-size:18px; }
-        .commento-personaggio .nome-p { font-size:9px; font-weight:800; text-transform:uppercase; color:#aaa; display:block; margin-bottom:3px; }
-        .commento-personaggio .testo-p { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-        .commento-personaggio.aperto .testo-p { display:block; }
-        .commento-toggle { font-size:10px; color:#aaa; float:right; }
-        .commento-personaggio.aperto .commento-toggle { transform:rotate(180deg); }
-
-        /* CHAT */
-        .chat-section { padding:20px; margin-top:10px; }
-        .chat-title { font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:rgba(255,255,255,0.7); margin-bottom:16px; }
-        .chat-card { background:linear-gradient(135deg,rgba(255,243,210,0.95),rgba(255,228,168,0.9)); border-radius:20px; padding:18px; margin-bottom:16px; border:1.5px solid rgba(180,130,60,0.3); }
-        .chat-data { font-size:10px; color:rgba(90,62,27,0.6); text-align:right; margin-bottom:12px; font-style:italic; }
-        .chat-msg { display:flex; gap:10px; margin-bottom:10px; align-items:flex-start; }
-        .chat-av { font-size:22px; flex-shrink:0; line-height:1; margin-top:2px; }
-        .chat-bubble { background:rgba(255,255,255,0.65); border-radius:0 14px 14px 14px; padding:8px 12px; flex:1; }
-        .chat-nome { font-size:10px; font-weight:800; text-transform:uppercase; color:#5a3e1b; display:block; margin-bottom:3px; }
-        .chat-testo { font-size:13px; color:#4a3010; line-height:1.5; font-style:italic; }
-        .chat-vuota { text-align:center; color:rgba(255,255,255,0.4); font-style:italic; font-size:13px; padding:20px; }
-
-        /* BOTTONE DASHBOARD */
-        .dashboard-btn { position:fixed; bottom:20px; right:20px; background:#005f73; color:white; border:none; border-radius:50px; padding:12px 20px; font-size:14px; font-weight:bold; cursor:pointer; z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.2); transition:transform 0.2s; }
-        .dashboard-btn:hover { transform:scale(1.05); background:#008cff; }
-
-        /* Footer */
-        .footer { text-align:center; padding:20px; color:#888; font-size:0.7rem; border-top:1px solid #ddd; margin-top:30px; }
+        /* Header */
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { font-size: 2rem; color: #0f0; margin-bottom: 5px; }
+        .header p { color: #888; font-style: italic; }
+        
+        /* Tabs */
+        .main-tabs { display: flex; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .main-tab { background: none; border: none; padding: 10px 20px; font-size: 1rem; font-weight: 600; color: #888; cursor: pointer; border-radius: 30px; transition: all 0.2s; }
+        .main-tab:hover { background: #333; color: #fff; }
+        .main-tab.active { background: #0f0; color: #000; }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        
+        /* Log */
+        .log-section { background: #0d0d0d; border-radius: 16px; padding: 20px; margin-bottom: 30px; border: 1px solid #333; }
+        .log-section h2 { color: #0f0; font-family: monospace; font-size: 1.2rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .log-tabs { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+        .log-tab { background: #2a2a2a; border: none; color: #aaa; padding: 6px 14px; border-radius: 20px; font-family: monospace; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
+        .log-tab:hover { background: #3a3a3a; }
+        .log-tab.active { background: #0f0; color: #000; font-weight: bold; }
+        .log-panel { display: none; }
+        .log-panel.active { display: block; }
+        .log-content { font-family: monospace; font-size: 0.75rem; color: #ccc; white-space: pre-wrap; background: #0a0a0a; padding: 12px; border-radius: 8px; max-height: 400px; overflow-y: auto; }
+        
+        /* Schede */
+        .info-section { background: #2a2a2a; border-radius: 20px; padding: 24px; margin-bottom: 30px; }
+        .info-section h2 { font-size: 1.3rem; color: #0f0; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+        
+        /* Personaggio card */
+        .personaggio-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; }
+        .personaggio-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .personaggio-avatar { font-size: 2.5rem; }
+        .personaggio-nome { font-weight: bold; font-size: 1.1rem; color: #0f0; }
+        .personaggio-mood { font-size: 0.7rem; color: #888; margin-top: 2px; }
+        .personaggio-bio { font-size: 0.75rem; color: #aaa; margin-top: 8px; padding-top: 8px; border-top: 1px solid #333; }
+        
+        /* Relazioni */
+        .relazione-card { background: #1e1e1e; border-radius: 16px; padding: 12px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; border: 1px solid #333; }
+        .relazione-da { font-weight: bold; min-width: 100px; color: #0f0; }
+        .relazione-arrow { color: #888; }
+        .relazione-a { font-weight: bold; min-width: 100px; }
+        .relazione-score { font-family: monospace; font-weight: bold; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; }
+        .relazione-score.amico { background: #2e7d3220; color: #4caf50; }
+        .relazione-score.simpatico { background: #558b2f20; color: #8bc34a; }
+        .relazione-score.neutro { background: #88888820; color: #aaa; }
+        .relazione-score.diffidente { background: #ef6c0020; color: #ff9800; }
+        .relazione-score.ostile { background: #c6282820; color: #f44336; }
+        
+        /* Programmazione */
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+        .schedule-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; border: 1px solid #333; }
+        .schedule-day { font-size: 0.7rem; text-transform: uppercase; color: #0f0; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; }
+        .schedule-personaggio { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+        .schedule-avatar { font-size: 1.8rem; }
+        .schedule-nome { font-weight: bold; font-size: 1rem; color: #0f0; }
+        .schedule-sezione { font-size: 0.75rem; color: #888; margin-bottom: 8px; }
+        .schedule-tipo { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: bold; margin-bottom: 8px; }
+        .schedule-tipo.rss { background: #008cff20; color: #008cff; }
+        .schedule-tipo.gen { background: #ff4d4d20; color: #ff4d4d; }
+        .schedule-tipo.red { background: #2d6a4f20; color: #2d6a4f; }
+        .schedule-temi { font-size: 0.7rem; color: #aaa; margin-top: 8px; padding-top: 8px; border-top: 1px solid #333; }
+        .schedule-temi span { display: inline-block; background: #2a2a2a; padding: 2px 8px; border-radius: 12px; margin: 2px 4px 2px 0; font-size: 0.65rem; }
+        
+        /* Statistiche */
+        .stats-section { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
+        .stat-card { background: #2a2a2a; border-radius: 16px; padding: 16px 20px; flex: 1; min-width: 120px; text-align: center; border: 1px solid #333; }
+        .stat-number { font-size: 2rem; font-weight: bold; color: #0f0; }
+        .stat-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Bottone torna indietro */
+        .back-btn { position: fixed; bottom: 20px; right: 20px; background: #005f73; color: white; border: none; border-radius: 50px; padding: 12px 20px; font-size: 14px; font-weight: bold; cursor: pointer; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: transform 0.2s; }
+        .back-btn:hover { transform: scale(1.05); background: #008cff; }
+        
+        @media (max-width: 700px) {
+            .schedule-grid, .info-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-<div id="app">
-    <div class="testata" id="logo-innesco">
-        <img id="header-img" src="public/images/default.webp">
+<div class="container">
+    <div class="header">
+        <h1>🐬 Dashboard Redazione</h1>
+        <p>Personaggi, relazioni, log e programmazione</p>
     </div>
-    <div class="delfino-timestamp">
-        <span class="dt-tempo" id="ts-display">🐬 Il Delfino sta nuotando...</span>
-        <span class="dt-motto" id="motto-display"></span>
-    </div>
-    <div class="timbro-edizione" id="timbro-edizione"></div>
-    <div class="menu" id="menu-cat"></div>
-    <div id="lista-notizie" class="notizia-container"></div>
-    <div class="chat-section">
-        <div class="chat-title">💬 Dalla Redazione</div>
-        <div id="chat-lista"><div class="chat-vuota">La redazione è silenziosa... 🐬</div></div>
-    </div>
-    <div class="footer">
-        La Voce del Delfino - Testata giornalistica immaginaria
+
+    <div id="messages"></div>
+    <div id="protected-content">
+        <div class="stats-section" id="stats"></div>
+        
+        <div class="main-tabs">
+            <button class="main-tab active" data-tab="schedule">📅 Programmazione</button>
+            <button class="main-tab" data-tab="personaggi">👥 Personaggi</button>
+            <button class="main-tab" data-tab="relazioni">💞 Relazioni</button>
+            <button class="main-tab" data-tab="log">📋 Log</button>
+        </div>
+        
+        <div class="tab-panel active" id="tab-schedule">
+            <div class="info-section">
+                <h2>Programmazione Redazione</h2>
+                <div id="schedule-grid" class="schedule-grid"></div>
+            </div>
+        </div>
+        
+        <div class="tab-panel" id="tab-personaggi">
+            <div class="info-section">
+                <h2>Personaggi</h2>
+                <div id="personaggi-grid" class="info-grid"></div>
+            </div>
+        </div>
+        
+        <div class="tab-panel" id="tab-relazioni">
+            <div class="info-section">
+                <h2>Relazioni tra Personaggi</h2>
+                <div id="relazioni-list"></div>
+            </div>
+        </div>
+        
+        <div class="tab-panel" id="tab-log">
+            <div class="log-section">
+                <h2>📋 Log di sistema</h2>
+                <div class="log-tabs" id="log-tabs"></div>
+                <div id="log-panels"></div>
+            </div>
+        </div>
     </div>
 </div>
 
-<button class="dashboard-btn" onclick="window.location.href='dashboard.html'">📊 Dashboard Redazione</button>
+<button class="back-btn" onclick="window.location.href='index.html'">🏠 Torna al giornale</button>
 
 <script>
-function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+    const giorniMap = {
+        'dom': 'Domenica', 'lun': 'Lunedì', 'mar': 'Martedì', 'mer': 'Mercoledì',
+        'gio': 'Giovedì', 'ven': 'Venerdì', 'sab': 'Sabato', 'default': 'Tutti i giorni'
+    };
 
-async function carica(){
-    try{
-        const cfg=await fetch('public/data/active_config_v2.json?v='+Date.now()).then(r=>r.json());
-        const ss=cfg.site_settings||{};
-        if(ss.header_img)document.getElementById('header-img').src='public/images/'+ss.header_img;
-        if(ss.timbro){const t=document.getElementById('timbro-edizione');t.innerText=ss.timbro;t.style.display='block';}
-        const up=ss.last_update||'---';
-        const providerText = ss.llm_provider ? ` (${ss.llm_provider})` : '';
-        document.getElementById('ts-display').innerHTML = up !== '---' ? `🐬 Il Delfino ha nuotato qui il ${up}${providerText}` : '🐬 Il Delfino sta nuotando...';
-        if(ss.motto)document.getElementById('motto-display').innerText='✦ '+ss.motto+' ✦';
-        const sezioni=[...new Set((cfg.REDAZIONE||[]).map(v=>v.sez))];
-        sezioni.forEach((sez,i)=>{
-            const b=document.createElement('button');
-            b.className='tab'+(i===0?' attiva':'');
-            b.innerText=sez;
-            b.onclick=()=>mostraSezione(sez,b,cfg.STILI||{});
-            document.getElementById('menu-cat').appendChild(b);
-        });
-        if(sezioni[0])mostraSezione(sezioni[0],null,cfg.STILI||{});
-        await caricaChat();
-    }catch(e){console.error(e);}
-}
+    function mostraMessaggio(tipo, testo) {
+        const container = document.getElementById('messages');
+        const msg = document.createElement('div');
+        msg.style.cssText = tipo === 'error' ? 'background:#ffebee;color:#c62828;padding:15px;border-radius:12px;margin-bottom:20px;' : 'background:#e8f5e9;color:#2e7d32;padding:15px;border-radius:12px;margin-bottom:20px;';
+        msg.innerText = testo;
+        container.appendChild(msg);
+        setTimeout(() => msg.remove(), 8000);
+    }
 
-async function mostraSezione(sez,btn,STILI){
-    if(btn){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('attiva'));btn.classList.add('attiva');}
-    const data=await fetch('public/data/news-v2-'+sez+'.json?v='+Date.now()).then(r=>r.json());
-    const mc=data.color||'#005f73';
-    document.documentElement.style.setProperty('--blu-mare',mc);
-    document.body.style.background=mc;
-    const news=data.news||[];
-    const ord=[...news.filter(n=>n.tipo==='personaggio'),...news.filter(n=>n.tipo==='rss'),...news.filter(n=>n.tipo==='gen')];
-    const lista=document.getElementById('lista-notizie');
-    lista.innerHTML='';
-    ord.forEach((n,idx)=>{
-        const tipo=n.tipo||'rss';
-        const isP=tipo==='personaggio';
-        const bx=isP?'personaggio-box':tipo==='gen'?'gen-box':'rss-box';
-        const lx=isP?'personaggio-label':tipo==='gen'?'gen-label':'rss-label';
-        const bn=n.nuovo?'<span class="badge-nuovo">nuovo</span>':'';
-        const cf=n.commento_firma||{};
-        const firmaH=!isP&&cf.nome?`<div class="firma-autore"><span class="avatar-autore">${esc(cf.avatar)||'👤'}</span><span>${esc(cf.nome)}</span></div>`:'';
-        const cfH=cf.testo?`<div class="commento-firma" onclick="this.classList.toggle('aperto')"><span class="avatar-firma">${esc(cf.avatar)||'👤'}</span><span class="nome-firma">${esc(cf.nome)||'Redazione'} <span class="firma-toggle">▼</span></span><div class="testo-firma">${esc(cf.testo)}</div></div>`:'';
-        const comm=n.commenti||[];
-        const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')"><span class="avatar-p">${esc(c.avatar)||'👤'}</span><span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span><div class="testo-p">${esc(c.testo)}</div></div>`).join('');
-        const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')"><span class="commenti-count">${comm.length}</span><span class="commenti-label">Comment${comm.length===1?'o':'i'}</span><span class="commenti-arrow">▼</span></div><div class="commenti-panel">${cListH}</div>`:'';
-        lista.innerHTML+=`<div class="notizia ${bx}"><div class="notizia-numero">${idx+1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-img-box"><img src="public/images/${esc(n.immagine)||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>${firmaH}<h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cfH}${cH}</div>`;
-    });
-}
-
-async function caricaChat(){
-    const lista=document.getElementById('chat-lista');
-    try{
-        const st=await fetch('public/data/_chat.json?v='+Date.now()).then(r=>r.json());
-        if(!st?.length)return;
-        lista.innerHTML='';
-        st.slice(0,3).forEach(s=>{
-            const card=document.createElement('div');
-            card.className='chat-card';
-            card.innerHTML='<div class="chat-data">'+esc(s.data||'')+'</div>';
-            (s.messaggi||[]).forEach(m=>{
-                const row=document.createElement('div');
-                row.className='chat-msg';
-                row.innerHTML='<div class="chat-av">'+esc(m.avatar||'👤')+'</div><div class="chat-bubble"><span class="chat-nome">'+esc(m.nome)+'</span><span class="chat-testo">'+esc(m.testo)+'</span></div>';
-                card.appendChild(row);
-            });
-            lista.appendChild(card);
-        });
-    }catch(e){}
-}
-
-carica();
-</script>
-</body>
-</html>
+    async function verificaPassword() {
+        const pwd = prompt('🔐 Inserisci password per accedere alla Dashboard:');
+        if (!pwd) return false;
+        try {
+            const auth = await fetch('public/data/auth_info.json?v=' + Date.now()).then(r => r.json());
+            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
+                .map(b => b.toString(16).padStart(2, '0')).join('');
+            return hash === auth.check;
+        } catch(e
