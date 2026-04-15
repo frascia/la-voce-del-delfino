@@ -11,7 +11,7 @@ let providerStatePath = "";
 let activeGeminiModel = "gemini-1.5-flash";
 let isScheduledRun = false;
 let consecutiveFailures = 0;
-let failuresThreshold = parseInt(process.env.RUN_FAILURES_THRESHOLD || "2");  // default 2
+let failuresThreshold = parseInt(process.env.RUN_FAILURES_THRESHOLD || "2");
 
 const log = (msg) => logFn("[llm] " + msg);
 
@@ -34,13 +34,11 @@ export function setScheduledRun(scheduled) {
     isScheduledRun = scheduled;
     log(`Run ${scheduled ? "schedulato" : "manuale"} – i fallimenti ${scheduled ? "verranno" : "NON verranno"} conteggiati`);
     if (!isScheduledRun) {
-        // Forza Gemini per i run manuali, ignora contatore
         if (currentProvider !== "gemini") {
             log(`Run manuale: forzato provider a gemini (ignoro contatore fallimenti)`);
             currentProvider = "gemini";
         }
     } else {
-        // Per run schedulati, applica la soglia
         if (consecutiveFailures >= failuresThreshold && currentProvider === "gemini") {
             log(`Soglia raggiunta (${consecutiveFailures}/${failuresThreshold}), forzo passaggio a groq`);
             currentProvider = "groq";
@@ -246,14 +244,6 @@ async function callGroq(sys, prompt, temperature) {
     return null;
 }
 
-function generaFallback(prompt) {
-    return JSON.stringify({
-        titolo: (prompt || "").substring(0, 60),
-        articolo: "Contenuto non generato per problemi temporanei del provider LLM.",
-        commento: ""
-    });
-}
-
 export async function callLLM(sys, prompt, temperature = 0.85) {
     const tryProvider = async (provider) => {
         const text = provider === "groq" ? await callGroq(sys, prompt, temperature) : await callGemini(sys, prompt, temperature);
@@ -278,8 +268,8 @@ export async function callLLM(sys, prompt, temperature = 0.85) {
         return { provider, text: result };
     }
     
-    log(`⚠️ Fallimento ${provider} per questa chiamata, restituisco fallback`);
-    return { provider, text: generaFallback(prompt) };
+    log(`⚠️ Nessun articolo valido da ${provider}, salto la generazione`);
+    return null;
 }
 
 export async function initModels() {
