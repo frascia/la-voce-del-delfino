@@ -1,4 +1,12 @@
-export async function generaChat(CHI, relazioni, personaggi, callLLMFn, logFn) {
+// lib/chat.js
+let logFn = null;
+const log = (msg) => logFn("[chat] " + msg);
+
+export function initChat(logFunction) {
+    logFn = logFunction;
+}
+
+export async function generaChat(CHI, relazioni, personaggi, callLLMFn) {
     const nomi = Object.keys(CHI).filter(n=>n!=="default");
     if (nomi.length<2) return null;
     const contestoRelazioni = nomi.flatMap(a=>nomi.filter(b=>b!==a).map(b=>{
@@ -15,7 +23,7 @@ export async function generaChat(CHI, relazioni, personaggi, callLLMFn, logFn) {
 Relazioni: ${contestoRelazioni||"nessuna"}. Stati: ${contestoStati||"normali"}.
 Spunto: ${spunto}. Genera chat 4-8 messaggi tra 2-3 personaggi.
 Rispondi JSON: {"chat":[{"nome":"...","avatar":"...","testo":"..."}]}`;
-    const raw = await callLLMFn(sys, "Genera chat.");
+    const { text: raw } = await callLLMFn(sys, "Genera chat.");
     if (!raw) return null;
     try {
         const parsed = JSON.parse(raw.substring(raw.indexOf("{"), raw.lastIndexOf("}")+1));
