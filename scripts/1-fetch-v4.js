@@ -2,7 +2,7 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-15
- * VERSIONE: 4.9
+ * VERSIONE: 4.10
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
@@ -33,7 +33,7 @@ import { scriviLog, caricaJSON, salvaJSON, parseJSON,
          caricaContatori, limiteSuperato, fasciaDiArticoliAttiva, paroleTarget, contaArticoli } from "./lib/utils.js";
 import { initConfig, loadConfig, getVociAttive } from "./lib/config.js";
 import { initNews, raccoltaNotizie } from "./lib/news.js";
-import { initLLM, callLLM, initModels, setScheduledRun, incrementConsecutiveFailures, resetConsecutiveFailures, getCurrentProvider } from "./lib/llm.js";
+import { initLLM, callLLM, initModels, setScheduledRun, incrementConsecutiveFailures, resetConsecutiveFailures, getCurrentProvider, setActiveGeminiModel } from "./lib/llm.js";
 import { initDraft, caricaDraft, inizializzaSezioni, safeWriteDraft } from "./lib/draft.js";
 import { initRelations, applicaDecay, aggiornaRelazioni } from "./lib/relations.js";
 import { initChat, generaChat } from "./lib/chat.js";
@@ -42,17 +42,12 @@ import { initArticoli, generaArticolo, generaCommenti } from "./lib/articoli.js"
 function log(msg) { scriviLog(msg, LOG_PATH); }
 
 // Test rapido provider con modello specifico
-let activeGeminiModelGlobal = "gemini-1.5-flash";
-
 async function testProvider(provider, modelName = null) {
     const testSys = "Rispondi solo con 'ok' in JSON: {\"risposta\":\"ok\"}";
     const testPrompt = "Test";
     try {
         if (provider === "gemini" && modelName) {
-            const originalModel = activeGeminiModelGlobal;
-            activeGeminiModelGlobal = modelName;
             const result = await callLLM(testSys, testPrompt, 0.1);
-            activeGeminiModelGlobal = originalModel;
             return result !== null;
         }
         const result = await callLLM(testSys, testPrompt, 0.1);
@@ -143,7 +138,8 @@ async function main() {
         const ok = await testProvider("gemini", model);
         if (ok) {
             geminiModelloFunzionante = model;
-            log(`[FETCH]       ✅ ${model} disponibile`);
+            setActiveGeminiModel(model);
+            log(`[FETCH]       ✅ ${model} disponibile e impostato`);
             break;
         } else {
             log(`[FETCH]       ❌ ${model} non risponde`);
@@ -153,7 +149,6 @@ async function main() {
     const geminiOk = geminiModelloFunzionante !== null;
     if (geminiOk) {
         log(`[FETCH]    ✅ Gemini disponibile (modello selezionato: ${geminiModelloFunzionante})`);
-        activeGeminiModelGlobal = geminiModelloFunzionante;
     } else {
         log(`[FETCH]    ❌ Gemini NON disponibile (nessun modello risponde)`);
     }
@@ -196,7 +191,7 @@ async function main() {
     }
 
     const providerScelto = geminiOk ? "Gemini" : "Groq";
-    log(`[FETCH] 🎯 Provider scelto per questo run: ${providerScelto}${geminiOk ? ` (modello: ${activeGeminiModelGlobal})` : ""}`);
+    log(`[FETCH] 🎯 Provider scelto per questo run: ${providerScelto}${geminiOk ? ` (modello: ${geminiModelloFunzionante})` : ""}`);
 
     const { draft, oldDraft } = await caricaDraft(DRAFT_PATH, oggiStr, agenda, IMPOSTAZIONI, STILI);
     draft.oraAggiornamento = oraAggiornamento;
