@@ -37,8 +37,10 @@ export function setScheduledRun(scheduled) {
     log(`Run ${scheduled ? "schedulato" : "manuale"} – i fallimenti ${scheduled ? "verranno" : "NON verranno"} conteggiati`);
     if (!isScheduledRun) {
         // Forza Gemini per i run manuali, ignora contatore
-        currentProvider = "gemini";
-        log(`Run manuale: forzato provider a gemini (ignoro contatore fallimenti)`);
+        if (currentProvider !== "gemini") {
+            log(`Run manuale: forzato provider a gemini (ignoro contatore fallimenti)`);
+            currentProvider = "gemini";
+        }
     } else {
         // Per run schedulati, applica la soglia
         if (consecutiveFailures >= failuresThreshold && currentProvider === "gemini") {
@@ -282,6 +284,10 @@ export async function callLLM(sys, prompt, temperature = 0.85) {
     failureCount++;
     log(`⚠️ Fallimento ${provider} (${failureCount}/2)`);
     if (failureCount >= 2) {
+        if (!isScheduledRun) {
+            log(`Run manuale: cambio provider disabilitato, restituisco fallback`);
+            return { provider, text: generaFallback(prompt) };
+        }
         const old = currentProvider;
         currentProvider = currentProvider === "gemini" ? "groq" : "gemini";
         log(`🔄 Cambio provider: ${old} → ${currentProvider}`);
