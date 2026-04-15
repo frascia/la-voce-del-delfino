@@ -15,21 +15,21 @@
             --ghibli-wood: #7c6e4f;
             --ghibli-cream: #fef9e6;
             --ghibli-moss: #6a9c6e;
-            --ghibli-cloud: #d4e8e0;
-            --ghibli-sea: #5f9c8b;
+            --section-color: #8db596;
         }
         
         body {
             margin: 0;
-            background: linear-gradient(145deg, var(--ghibli-sky) 0%, #c2e0d4 100%);
+            background: linear-gradient(145deg, var(--ghibli-sky) 0%, var(--section-color) 100%);
             font-family: 'Segoe UI', 'Quicksand', system-ui, -apple-system, 'Georgia', serif;
             color: #3a4a3c;
             position: relative;
             min-height: 100vh;
             overflow-x: hidden;
+            transition: background 0.6s ease;
         }
         
-        /* Elementi Ghibli fluttuanti nello sfondo */
+        /* Elementi Ghibli fluttuanti */
         .ghibli-float {
             position: fixed;
             pointer-events: none;
@@ -72,12 +72,15 @@
             max-width: 600px;
             border-radius: 60px 60px 30px 30px;
             box-shadow: 0 20px 35px rgba(0,0,0,0.15), 0 0 0 8px rgba(255,245,220,0.5);
-            transition: transform 0.4s ease;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
             object-fit: cover;
             height: 300px;
         }
         
-        .testata img#header-img:hover { transform: scale(1.01); }
+        .testata img#header-img:hover {
+            transform: scale(1.01);
+            box-shadow: 0 25px 40px rgba(0,0,0,0.2), 0 0 0 8px rgba(255,245,220,0.7);
+        }
         
         /* Info bar */
         .info-bar {
@@ -95,6 +98,12 @@
             max-width: 90%;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             border: 1px solid rgba(140,120,80,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .info-bar:hover {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            transform: translateY(-1px);
         }
         
         .dt-tempo {
@@ -149,6 +158,12 @@
             border: 1px solid rgba(100, 80, 40, 0.2);
         }
         
+        .tab:hover {
+            transform: translateY(-2px);
+            background: rgba(245, 230, 200, 0.9);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
         .tab.attiva {
             background: var(--ghibli-moss);
             color: white;
@@ -157,7 +172,7 @@
             transform: translateY(-2px);
         }
         
-        /* Griglia unificata per notizie e chat */
+        /* Griglia unificata */
         .grid-container {
             padding: 20px 0 40px;
             display: grid;
@@ -165,7 +180,7 @@
             gap: 35px;
         }
         
-        /* Card generica (sia notizia che chat) */
+        /* Card generica */
         .card {
             background: var(--ghibli-cream);
             border-radius: 32px;
@@ -183,7 +198,7 @@
             box-shadow: 0 20px 30px rgba(0,0,0,0.12);
         }
         
-        /* Badge numerico per le notizie */
+        /* Badge numerico */
         .card-numero {
             position: absolute;
             top: -15px;
@@ -200,6 +215,11 @@
             font-size: 1.3rem;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border: 3px solid white;
+            transition: transform 0.2s ease;
+        }
+        
+        .card:hover .card-numero {
+            transform: scale(1.05);
         }
         
         /* Etichetta categoria */
@@ -215,19 +235,18 @@
             background: white;
             color: #6b8c5c;
             border: 1px solid #cbd5b0;
+            transition: all 0.2s ease;
+        }
+        
+        .card:hover .card-categoria {
+            transform: translateY(-2px);
         }
         
         /* Box colori per tipo notizia */
         .card.rss-box { border-left: 6px solid #6f9e7c; }
         .card.gen-box { border-left: 6px solid #e0a878; }
         .card.personaggio-box { border-left: 6px solid #9b9e6f; background: #fef8ed; }
-        
-        /* Chat box - stile speciale */
-        .card.chat-box { 
-            border-left: 6px solid #9ec07c; 
-            background: #fefcf5;
-            cursor: pointer;
-        }
+        .card.chat-box { border-left: 6px solid #9ec07c; background: #fefcf5; }
         
         .card-img-box {
             width: 100%;
@@ -245,7 +264,7 @@
             transition: transform 0.4s ease;
         }
         
-        .card-img-box img:hover { transform: scale(1.02); }
+        .card-img-box img:hover { transform: scale(1.03); }
         
         h2 {
             font-size: 1.5rem;
@@ -253,6 +272,11 @@
             font-weight: 600;
             color: #4a5b3e;
             line-height: 1.3;
+            transition: color 0.2s ease;
+        }
+        
+        .card:hover h2 {
+            color: #6a8e4a;
         }
         
         .testo {
@@ -278,11 +302,15 @@
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: color 0.2s;
+            transition: color 0.2s, transform 0.2s;
             margin-top: auto;
+            width: fit-content;
         }
         
-        .leggi-tutto:hover { color: #4e6b3e; }
+        .leggi-tutto:hover {
+            color: #4e6b3e;
+            transform: translateX(4px);
+        }
         
         .firma-autore {
             display: flex;
@@ -302,6 +330,12 @@
             border-radius: 30px;
             margin-left: 8px;
             font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
         }
         
         /* Commento firma */
@@ -314,10 +348,13 @@
             border: 1px dashed #cdc2a0;
             font-size: 0.85rem;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: background 0.2s, transform 0.2s;
         }
         
-        .commento-firma:hover { background: #ede5cf; }
+        .commento-firma:hover {
+            background: #ede5cf;
+            transform: translateX(4px);
+        }
         
         .avatar-firma {
             position: absolute;
@@ -338,6 +375,7 @@
             float: right;
             font-size: 0.7rem;
             color: #bcae84;
+            transition: transform 0.2s;
         }
         
         .commento-firma.aperto .firma-toggle { transform: rotate(180deg); }
@@ -351,6 +389,12 @@
             padding: 6px 0;
             cursor: pointer;
             border-top: 1px solid #e0d6be;
+            transition: background 0.2s;
+        }
+        
+        .commenti-header:hover {
+            background: rgba(0,0,0,0.02);
+            border-radius: 12px;
         }
         
         .commenti-count {
@@ -394,6 +438,12 @@
             font-size: 0.8rem;
             border: 1px solid #e6ddc0;
             cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .commento-personaggio:hover {
+            background: #f5efdf;
+            transform: translateX(4px);
         }
         
         .avatar-p {
@@ -424,27 +474,37 @@
             float: right;
             font-size: 0.65rem;
             color: #bcae84;
+            transition: transform 0.2s;
         }
         
         .commento-personaggio.aperto .commento-toggle { transform: rotate(180deg); }
         
-        /* Intestazione chat (cliccabile) */
-        .chat-header {
+        /* ========== CHAT UNIFICATA ========== */
+        .chat-main-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #e0d6be;
+            padding: 8px 0 12px;
+            border-bottom: 2px solid #e0d6be;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
         }
         
-        .chat-date {
-            font-size: 0.7rem;
-            color: #b0a27a;
-            font-style: italic;
+        .chat-main-header:hover {
+            background: rgba(0,0,0,0.02);
+            border-radius: 16px;
+            padding-left: 8px;
+            padding-right: 8px;
         }
         
-        .chat-badge {
+        .chat-main-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #6a8e4a;
+        }
+        
+        .chat-main-badge {
             background: #9ec07c20;
             color: #6a8e4a;
             padding: 4px 12px;
@@ -453,23 +513,86 @@
             font-weight: 600;
         }
         
-        .chat-expand-icon {
-            font-size: 0.8rem;
+        .chat-main-expand {
+            font-size: 0.9rem;
             color: #bcae84;
             transition: transform 0.2s;
         }
         
-        .card.aperto .chat-expand-icon { transform: rotate(180deg); }
-        
-        /* Messaggi chat */
-        .chat-messages {
-            display: none;
-            flex-direction: column;
-            gap: 14px;
+        .card.chat-box.aperto .chat-main-expand {
+            transform: rotate(180deg);
         }
         
-        .card.aperto .chat-messages { display: flex; }
+        .chat-conversazioni {
+            display: none;
+            flex-direction: column;
+            gap: 16px;
+        }
         
+        .card.chat-box.aperto .chat-conversazioni {
+            display: flex;
+        }
+        
+        /* Singola conversazione */
+        .chat-conversazione {
+            background: #fefcf5;
+            border-radius: 24px;
+            padding: 12px 16px;
+            border: 1px solid #e6ddc0;
+            transition: all 0.2s;
+        }
+        
+        .chat-conversazione:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .chat-conversazione-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 4px 0;
+        }
+        
+        .chat-conversazione-date {
+            font-size: 0.7rem;
+            color: #b0a27a;
+            font-style: italic;
+        }
+        
+        .chat-conversazione-badge {
+            background: #cbd5b0;
+            color: #4a5b3e;
+            padding: 2px 10px;
+            border-radius: 30px;
+            font-size: 0.65rem;
+            font-weight: 600;
+        }
+        
+        .chat-conversazione-expand {
+            font-size: 0.7rem;
+            color: #bcae84;
+            transition: transform 0.2s;
+        }
+        
+        .chat-conversazione.aperto .chat-conversazione-expand {
+            transform: rotate(180deg);
+        }
+        
+        .chat-conversazione-messages {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e6ddc0;
+        }
+        
+        .chat-conversazione.aperto .chat-conversazione-messages {
+            display: flex;
+        }
+        
+        /* Messaggi chat */
         .chat-message {
             display: flex;
             gap: 12px;
@@ -478,9 +601,13 @@
             border-left: 3px solid;
             border-radius: 0 16px 16px 0;
             padding-left: 14px;
+            transition: transform 0.2s;
         }
         
-        /* Colori personaggi */
+        .chat-message:hover {
+            transform: translateX(4px);
+        }
+        
         .chat-message[data-personaggio="Wolf"] { border-left-color: #8b5e3c; }
         .chat-message[data-personaggio="Juizinho"] { border-left-color: #e0a878; }
         .chat-message[data-personaggio="Cetteo"] { border-left-color: #5f9c8b; }
@@ -492,16 +619,16 @@
         .chat-message[data-personaggio="Bartender"] { border-left-color: #c2a15b; }
         .chat-message { border-left-color: #9ec07c; }
         
-        .chat-avatar { font-size: 1.8rem; flex-shrink: 0; }
+        .chat-avatar { font-size: 1.6rem; flex-shrink: 0; }
         .chat-content { flex: 1; }
         
         .chat-message-nome {
             font-weight: bold;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             display: inline-block;
             padding: 2px 10px;
             border-radius: 20px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         
         .chat-message[data-personaggio="Wolf"] .chat-message-nome { background: #8b5e3c20; color: #8b5e3c; }
@@ -555,7 +682,6 @@
             margin-top: 20px;
         }
         
-        /* Messaggi di feedback */
         .success-msg {
             background: #e8f5e9;
             color: #2e7d32;
@@ -564,6 +690,14 @@
             margin-bottom: 15px;
             text-align: center;
             font-size: 0.85rem;
+            animation: fadeInOut 5s ease;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(-10px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-10px); }
         }
         
         @media (max-width: 700px) {
@@ -629,7 +763,6 @@ document.getElementById('logo-innesco').onclick = async () => {
             if (hash === a.check) {
                 dashboardSbloccata = true;
                 document.getElementById('dashboard-btn').style.display = 'flex';
-                // Messaggio di conferma
                 const container = document.getElementById('grid-container');
                 const msgDiv = document.createElement('div');
                 msgDiv.className = 'success-msg';
@@ -663,7 +796,6 @@ async function carica(){
             document.getElementById('menu-cat').appendChild(b);
         });
         if(sezioni[0])mostraSezione(sezioni[0],null,cfg.STILI||{});
-        await caricaChat();
     }catch(e){console.error(e);}
 }
 
@@ -671,17 +803,16 @@ async function mostraSezione(sez,btn,STILI){
     if(btn){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('attiva'));btn.classList.add('attiva');}
     const data=await fetch('public/data/news-v2-'+sez+'.json?v='+Date.now()).then(r=>r.json());
     const mc=data.color||'#8db596';
-    document.documentElement.style.setProperty('--ghibli-moss', mc);
-    document.body.style.background = `linear-gradient(145deg, #b8e1d4 0%, ${mc}80 100%)`;
+    document.documentElement.style.setProperty('--section-color', mc);
+    document.body.style.background = `linear-gradient(145deg, #b8e1d4 0%, ${mc} 100%)`;
     
     const news=data.news||[];
     const chatData = await fetch('public/data/_chat.json?v='+Date.now()).then(r=>r.json()).catch(()=>[]);
     
-    // Combina notizie e chat nella stessa griglia
     const container = document.getElementById('grid-container');
     container.innerHTML = '';
     
-    // Aggiungi notizie
+    // Notizie
     const ord = [...news.filter(n=>n.tipo==='personaggio'), ...news.filter(n=>n.tipo==='rss'), ...news.filter(n=>n.tipo==='gen')];
     ord.forEach((n,idx)=>{
         const tipo=n.tipo||'rss';
@@ -712,37 +843,48 @@ async function mostraSezione(sez,btn,STILI){
         container.appendChild(card);
     });
     
-    // Aggiungi chat della redazione (solo se ci sono)
-    if(chatData && chatData.length>0){
-        chatData.forEach((chat, chatIdx)=>{
+    // Chat unificata (una sola card)
+    if(chatData && chatData.length > 0){
+        const chatCard = document.createElement('div');
+        chatCard.className = 'card chat-box';
+        
+        let conversazioniHtml = '';
+        chatData.forEach((chat, chatIdx) => {
             const numMsg = (chat.messaggi || []).length;
-            const card = document.createElement('div');
-            card.className = 'card chat-box';
-            card.innerHTML = `
-                <div class="chat-header" onclick="this.parentElement.classList.toggle('aperto')">
-                    <div class="chat-date">📅 ${esc(chat.data || '')}</div>
-                    <div class="chat-badge">💬 ${numMsg} messaggi</div>
-                    <div class="chat-expand-icon">▼</div>
-                </div>
-                <div class="chat-messages">
-                    ${(chat.messaggi || []).map(m => `
-                        <div class="chat-message" data-personaggio="${esc(m.nome)}">
-                            <div class="chat-avatar">${esc(m.avatar || '👤')}</div>
-                            <div class="chat-content">
-                                <div class="chat-message-nome">${esc(m.nome)}</div>
-                                <div class="chat-message-testo">${esc(m.testo)}</div>
+            conversazioniHtml += `
+                <div class="chat-conversazione">
+                    <div class="chat-conversazione-header" onclick="this.parentElement.classList.toggle('aperto')">
+                        <div class="chat-conversazione-date">📅 ${esc(chat.data || '')}</div>
+                        <div class="chat-conversazione-badge">💬 ${numMsg} messaggi</div>
+                        <div class="chat-conversazione-expand">▼</div>
+                    </div>
+                    <div class="chat-conversazione-messages">
+                        ${(chat.messaggi || []).map(m => `
+                            <div class="chat-message" data-personaggio="${esc(m.nome)}">
+                                <div class="chat-avatar">${esc(m.avatar || '👤')}</div>
+                                <div class="chat-content">
+                                    <div class="chat-message-nome">${esc(m.nome)}</div>
+                                    <div class="chat-message-testo">${esc(m.testo)}</div>
+                                </div>
                             </div>
-                        </div>
-                    `).join('')}
+                        `).join('')}
+                    </div>
                 </div>
             `;
-            container.appendChild(card);
         });
+        
+        chatCard.innerHTML = `
+            <div class="chat-main-header" onclick="this.parentElement.classList.toggle('aperto')">
+                <div class="chat-main-title">💬 Dalla Redazione</div>
+                <div class="chat-main-badge">📨 ${chatData.length} conversazioni</div>
+                <div class="chat-main-expand">▼</div>
+            </div>
+            <div class="chat-conversazioni">
+                ${conversazioniHtml}
+            </div>
+        `;
+        container.appendChild(chatCard);
     }
-}
-
-async function caricaChat(){
-    await mostraSezione(document.querySelector('.tab.attiva')?.innerText || 'pescara', null, {});
 }
 
 carica();
