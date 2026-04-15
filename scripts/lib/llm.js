@@ -6,13 +6,12 @@ let groqModelCorrente = "llama3-70b-8192";
 let groqMaxTokens = 1024;
 let ricercaEffettuata = false;
 let currentProvider = "gemini";
-let failureCount = 0;
 let quotaLogSent = false;
 let providerStatePath = "";
 let activeGeminiModel = "gemini-1.5-flash";
 let isScheduledRun = false;
 let consecutiveFailures = 0;
-let failuresThreshold = parseInt(process.env.RUN_FAILURES_THRESHOLD || "3");
+let failuresThreshold = parseInt(process.env.RUN_FAILURES_THRESHOLD || "2");  // default 2
 
 const log = (msg) => logFn("[llm] " + msg);
 
@@ -21,15 +20,14 @@ export function initLLM(geminiKey, groqKey, providerStateFile, logFunction) {
     apiKeyGroq = groqKey;
     providerStatePath = providerStateFile;
     logFn = logFunction;
-    const saved = caricaJSON(providerStatePath, { provider: "gemini", failureCount: 0, consecutiveFailures: 0 });
+    const saved = caricaJSON(providerStatePath, { provider: "gemini", consecutiveFailures: 0 });
     currentProvider = saved.provider;
-    failureCount = saved.failureCount || 0;
     consecutiveFailures = saved.consecutiveFailures || 0;
     log(`Provider inizializzato: ${currentProvider}, fallimenti consecutivi: ${consecutiveFailures}`);
 }
 
 function salvaStatoProvider() {
-    salvaJSON(providerStatePath, { provider: currentProvider, failureCount: 0, consecutiveFailures });
+    salvaJSON(providerStatePath, { provider: currentProvider, consecutiveFailures });
 }
 
 export function setScheduledRun(scheduled) {
@@ -277,30 +275,10 @@ export async function callLLM(sys, prompt, temperature = 0.85) {
     
     if (isValido(result)) {
         log(`✅ Articolo generato da ${provider}`);
-        failureCount = 0;
         return { provider, text: result };
     }
     
-    failureCount++;
-    log(`⚠️ Fallimento ${provider} (${failureCount}/2)`);
-    if (failureCount >= 2) {
-        if (!isScheduledRun) {
-            log(`Run manuale: cambio provider disabilitato, restituisco fallback`);
-            return { provider, text: generaFallback(prompt) };
-        }
-        const old = currentProvider;
-        currentProvider = currentProvider === "gemini" ? "groq" : "gemini";
-        log(`🔄 Cambio provider: ${old} → ${currentProvider}`);
-        failureCount = 0;
-        salvaStatoProvider();
-        const { provider: newProvider, text: newResult } = await tryProvider(currentProvider);
-        if (isValido(newResult)) {
-            log(`✅ Articolo generato da ${newProvider} (dopo cambio)`);
-            return { provider: newProvider, text: newResult };
-        }
-        log(`❌ Anche ${newProvider} fallisce.`);
-        return { provider: newProvider, text: generaFallback(prompt) };
-    }
+    log(`⚠️ Fallimento ${provider} per questa chiamata, restituisco fallback`);
     return { provider, text: generaFallback(prompt) };
 }
 
