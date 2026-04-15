@@ -2,12 +2,12 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-15
- * VERSIONE: 4.11
+ * VERSIONE: 4.12
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
  *              Log con prefisso [FETCH] per chiarezza.
- *              Recupero dinamico dei modelli Gemini dall'API.
+ *              Recupero dinamico dei modelli Gemini Flash (esclude Pro, image, tts).
  */
 
 import fs from "fs";
@@ -58,7 +58,7 @@ async function testProvider(provider, modelName = null) {
     }
 }
 
-// Funzione per ottenere i modelli Gemini disponibili (gratuiti, senza Pro)
+// Funzione per ottenere i modelli Gemini disponibili (solo Flash testuali)
 async function getGeminiModels() {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) return [];
@@ -66,11 +66,17 @@ async function getGeminiModels() {
         const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
         const data = await res.json();
         if (data.models) {
-            // Filtra solo modelli gemini con generateContent, escludi Pro
+            // Filtra solo modelli Flash testuali
             const modelli = data.models
-                .filter(m => m.name.includes("gemini") && 
-                             !m.name.includes("pro") &&
-                             m.supportedGenerationMethods?.includes("generateContent"))
+                .filter(m => {
+                    const name = m.name;
+                    return name.includes("gemini") && 
+                           name.includes("flash") &&      
+                           !name.includes("pro") &&
+                           !name.includes("image") &&     // escludi modelli per immagini
+                           !name.includes("tts") &&       // escludi text-to-speech
+                           m.supportedGenerationMethods?.includes("generateContent");
+                })
                 .map(m => m.name.replace("models/", ""))
                 .sort((a, b) => b.localeCompare(a)); // ordine decrescente (più recente prima)
             return modelli;
@@ -156,10 +162,10 @@ async function main() {
     log(`[FETCH]    📡 Recupero modelli Gemini disponibili...`);
     let modelliGemini = await getGeminiModels();
     if (modelliGemini.length === 0) {
-        log(`[FETCH]    ⚠️ Nessun modello Gemini trovato, uso lista di fallback`);
+        log(`[FETCH]    ⚠️ Nessun modello Flash trovato, uso lista di fallback`);
         modelliGemini = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash"];
     }
-    log(`[FETCH]    📋 Modelli trovati: ${modelliGemini.join(", ")}`);
+    log(`[FETCH]    📋 Modelli Flash trovati: ${modelliGemini.join(", ")}`);
 
     log(`[FETCH]    📡 Test Gemini...`);
     let geminiModelloFunzionante = null;
@@ -181,7 +187,7 @@ async function main() {
     if (geminiOk) {
         log(`[FETCH]    ✅ Gemini disponibile (modello selezionato: ${geminiModelloFunzionante})`);
     } else {
-        log(`[FETCH]    ❌ Gemini NON disponibile (nessun modello risponde)`);
+        log(`[FETCH]    ❌ Gemini NON disponibile (nessun modello Flash risponde)`);
     }
 
     log(`[FETCH]    📡 Test Groq...`);
