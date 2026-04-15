@@ -48,7 +48,7 @@ jobs:
           GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
           SCHEDULED_RUN: ${{ github.event_name == 'schedule' }}
           # FORCED_GEMINI_MODEL: "gemini-1.5-flash"  # Decommenta per forzare un modello specifico
-          GEMINI_API_VERSION: "v1"  # v1 (stabile) o v1beta (beta)
+          GEMINI_API_VERSION: "v1beta"  # v1 (stabile) o v1beta (beta)
         run: node scripts/1-fetch-v4.js
 
       - name: "⚙️ FASE 2 — Elaborazione"
