@@ -516,7 +516,6 @@
             display: flex;
         }
         
-        /* Gruppo di date */
         .chat-date-group {
             background: #fefcf5;
             border-radius: 24px;
@@ -574,7 +573,6 @@
             display: flex;
         }
         
-        /* Singola conversazione */
         .chat-conversazione {
             background: #fefcf5;
             border-radius: 20px;
@@ -692,7 +690,6 @@
             transform: scale(1.05);
         }
         
-        /* Popup legenda */
         .legend-popup {
             position: fixed;
             bottom: 70px;
@@ -878,6 +875,7 @@ function getColorFromName(nome) {
     return `hsl(${hue}, 65%, 55%)`;
 }
 
+// Controlla se il bottone era già stato sbloccato in precedenza
 if (localStorage.getItem('dashboard_sbloccata') === 'true') {
     dashboardSbloccata = true;
     document.getElementById('dashboard-btn').style.display = 'flex';
@@ -885,9 +883,10 @@ if (localStorage.getItem('dashboard_sbloccata') === 'true') {
 
 function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 
-document.getElementById('logo-innesco').onclick = async () => {
+document.getElementById('logo-innesco').onclick = () => {
     const ora = Date.now();
     
+    // Gestione doppio click per nascondere (se il bottone è visibile)
     if (dashboardSbloccata && document.getElementById('dashboard-btn').style.display === 'flex') {
         if (ora - hideLastClick > 1000) hideClicks = 0;
         hideClicks++;
@@ -909,31 +908,21 @@ document.getElementById('logo-innesco').onclick = async () => {
         }
     }
     
+    // Gestione 5 click per sbloccare (senza password)
     if (!dashboardSbloccata) {
         if (ora - lastClick > 1000) clicks = 0;
         clicks++;
         lastClick = ora;
         if (clicks === 5) {
-            const pwd = prompt('🔐 Inserisci password per sbloccare la Dashboard:');
-            if (!pwd) return;
-            try {
-                const a = await fetch('public/data/auth_info.json?v=' + ora).then(r => r.json());
-                const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
-                    .map(b => b.toString(16).padStart(2, '0')).join('');
-                if (hash === a.check) {
-                    dashboardSbloccata = true;
-                    localStorage.setItem('dashboard_sbloccata', 'true');
-                    document.getElementById('dashboard-btn').style.display = 'flex';
-                    const container = document.getElementById('grid-container');
-                    const msgDiv = document.createElement('div');
-                    msgDiv.className = 'success-msg';
-                    msgDiv.innerText = '🔓 Dashboard sbloccata! Puoi accedere al pannello di controllo.';
-                    container.parentNode.insertBefore(msgDiv, container);
-                    setTimeout(() => msgDiv.remove(), 5000);
-                } else {
-                    alert('Password errata');
-                }
-            } catch(e) { alert('Errore verifica password'); }
+            dashboardSbloccata = true;
+            localStorage.setItem('dashboard_sbloccata', 'true');
+            document.getElementById('dashboard-btn').style.display = 'flex';
+            const container = document.getElementById('grid-container');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'success-msg';
+            msgDiv.innerText = '🔓 Dashboard sbloccata! Puoi accedere al pannello di controllo.';
+            container.parentNode.insertBefore(msgDiv, container);
+            setTimeout(() => msgDiv.remove(), 5000);
             clicks = 0;
         }
     }
@@ -989,7 +978,6 @@ async function mostraSezione(sez,btn,STILI){
         const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')"><span class="avatar-p">${esc(c.avatar)||'👤'}</span><span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span><div class="testo-p">${esc(c.testo)}</div></div>`).join('');
         const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')"><span class="commenti-count">${comm.length}</span><span class="commenti-label">Comment${comm.length===1?'o':'i'}</span><span class="commenti-arrow">▼</span></div><div class="commenti-panel">${cListH}</div>`:'';
         
-        // Colori dinamici per numero ed etichetta
         let frameColor, badgeColor;
         if (tipo === 'rss') { frameColor = '#008cff'; badgeColor = '#008cff'; }
         else if (tipo === 'gen') { frameColor = '#ff4d4d'; badgeColor = '#ff4d4d'; }
@@ -1015,7 +1003,6 @@ async function mostraSezione(sez,btn,STILI){
     
     // Chat raggruppate per data
     if(chatData && chatData.length > 0){
-        // Raggruppa per data
         const chatPerData = {};
         chatData.forEach(chat => {
             const data = chat.data || 'Data sconosciuta';
@@ -1024,7 +1011,6 @@ async function mostraSezione(sez,btn,STILI){
             chatPerData[soloData].push(chat);
         });
         
-        // Ordina le date dalla più recente alla più vecchia
         const dateOrdinate = Object.keys(chatPerData).sort((a, b) => {
             const parseData = (d) => {
                 const match = d.match(/(\d{2})\/(\d{2})/);
