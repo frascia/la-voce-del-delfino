@@ -1,10 +1,10 @@
 /**
  * FILE: lib/llm.js
  * DATA: 2025-04-15
- * VERSIONE: 2.7
+ * VERSIONE: 2.8
  * DESCRIZIONE: Gestione chiamate LLM (Gemini/Groq), provider persistente,
  *              contatore fallimenti consecutivi, modalità scheduled/manuale.
- *              Supporto per forzare un modello Gemini specifico via variabile d'ambiente.
+ *              Supporto per forzare un modello Gemini specifico e versione API.
  */
 
 import { pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
@@ -22,8 +22,9 @@ let isScheduledRun = false;
 let consecutiveFailures = 0;
 let failuresThreshold = parseInt(process.env.RUN_FAILURES_THRESHOLD || "3");
 
-// Variabile per forzare un modello Gemini specifico
+// Variabili configurabili da ambiente
 const FORCED_GEMINI_MODEL = process.env.FORCED_GEMINI_MODEL || "";
+const GEMINI_API_VERSION = process.env.GEMINI_API_VERSION || "v1";
 
 const log = (msg) => logFn("[llm] " + msg);
 
@@ -36,8 +37,8 @@ export function initLLM(geminiKey, groqKey, providerStateFile, logFunction) {
     currentProvider = saved.provider;
     consecutiveFailures = saved.consecutiveFailures || 0;
     log(`⚙️ Provider inizializzato: ${currentProvider} | Fallimenti consecutivi: ${consecutiveFailures}`);
+    log(`🔧 API Gemini versione: ${GEMINI_API_VERSION}`);
     
-    // Se è stata forzata una variabile d'ambiente per il modello Gemini
     if (FORCED_GEMINI_MODEL) {
         activeGeminiModel = FORCED_GEMINI_MODEL;
         log(`🔒 Modello Gemini forzato da ambiente: ${activeGeminiModel}`);
@@ -100,7 +101,7 @@ export function setActiveGeminiModel(model) {
 }
 
 async function testaModelloGemini(modelName) {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKeyGemini}`;
+    const url = `https://generativelanguage.googleapis.com/${GEMINI_API_VERSION}/models/${modelName}:generateContent?key=${apiKeyGemini}`;
     try {
         const res = await fetch(url, {
             method: "POST",
@@ -118,7 +119,6 @@ async function testaModelloGemini(modelName) {
 }
 
 async function trovaModelliGemini() {
-    // Se il modello è forzato da ambiente, salta la ricerca
     if (FORCED_GEMINI_MODEL) {
         log(`🔒 Ricerca modelli saltata (modello forzato: ${FORCED_GEMINI_MODEL})`);
         return;
@@ -126,7 +126,8 @@ async function trovaModelliGemini() {
     
     if (!apiKeyGemini) return;
     try {
-        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKeyGemini}`);
+        const url = `https://generativelanguage.googleapis.com/${GEMINI_API_VERSION}/models?key=${apiKeyGemini}`;
+        const res = await fetch(url);
         const data = await res.json();
         if (data.models) {
             const tutti = data.models
@@ -134,10 +135,7 @@ async function trovaModelliGemini() {
                              m.supportedGenerationMethods?.includes("generateContent"))
                 .map(m => m.name.replace("models/", ""));
             
-            // Escludi modelli Pro (a pagamento)
             const senzaPro = tutti.filter(m => !m.includes("pro"));
-            
-            // Separa per famiglia
             const flash = senzaPro.filter(m => m.includes("flash"));
             const altri = senzaPro.filter(m => !m.includes("flash"));
             
@@ -145,7 +143,6 @@ async function trovaModelliGemini() {
             if (flash.length) log(`   ├─ Flash: ${flash.join(", ")}`);
             if (altri.length) log(`   └─ Altri: ${altri.join(", ")}`);
             
-            // Testa i modelli in ordine: Flash recenti → altri
             const ordine = [...flash.sort((a,b)=>b.localeCompare(a)), ...altri];
             let modelloFunzionante = null;
             
@@ -205,7 +202,7 @@ async function trovaUltimoModelloGroq() {
 
 async function callGemini(sys, prompt, temperature) {
     if (!apiKeyGemini) return null;
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKeyGemini}`;
+    const url = `https://generativelanguage.googleapis.com/${GEMINI_API_VERSION}/models/${activeGeminiModel}:generateContent?key=${apiKeyGemini}`;
     for (let i=0; i<3; i++) {
         await pausaGemini();
         try {
@@ -361,7 +358,6 @@ export async function callLLM(sys, prompt, temperature = 0.85) {
 }
 
 export async function initModels() {
-    // Se il modello è forzato da ambiente, salta la ricerca
     if (FORCED_GEMINI_MODEL) {
         log(`🔒 Ricerca modelli Gemini saltata (modello forzato: ${FORCED_GEMINI_MODEL})`);
     } else {
