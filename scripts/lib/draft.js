@@ -1,16 +1,24 @@
-import { caricaJSON, salvaJSON, contaArticoli, scriviLog } from "./utils.js";
+// lib/draft.js
+import { caricaJSON, salvaJSON, contaArticoli } from "./utils.js";
 import fs from "fs";
 
-export async function caricaDraft(draftPath, oggiStr, agenda, IMPOSTAZIONI, STILI, logFn) {
+let logFn = null;
+const log = (msg) => logFn("[draft] " + msg);
+
+export function initDraft(logFunction) {
+    logFn = logFunction;
+}
+
+export async function caricaDraft(draftPath, oggiStr, agenda, IMPOSTAZIONI, STILI) {
     let oldDraft = fs.existsSync(draftPath) ? caricaJSON(draftPath, null) : null;
     const isNuovoGiorno = !oldDraft || oldDraft.dataRiferimento !== oggiStr;
     let draft;
     if (isNuovoGiorno) {
         draft = { dataRiferimento: oggiStr, oraAggiornamento: null, agenda, impostazioni: IMPOSTAZIONI, stili: STILI, sezioni: {} };
-        logFn(`🆕 Nuovo draft per ${oggiStr}`);
+        log(`🆕 Nuovo draft per ${oggiStr}`);
     } else {
         draft = JSON.parse(JSON.stringify(oldDraft));
-        logFn(`📰 Accumulo su ${contaArticoli(draft)} articoli esistenti`);
+        log(`📰 Accumulo su ${contaArticoli(draft)} articoli esistenti`);
     }
     return { draft, isNuovoGiorno, oldDraft };
 }
@@ -24,10 +32,10 @@ export function inizializzaSezioni(draft, vociAttive, STILI) {
     }
 }
 
-export async function safeWriteDraft(draft, draftPath, tempPath, backupPath, logFn) {
+export async function safeWriteDraft(draft, draftPath, tempPath, backupPath) {
     const totale = contaArticoli(draft);
     if (totale === 0) {
-        logFn("⚠️ Draft vuoto → NON sovrascrivo.");
+        log("⚠️ Draft vuoto → NON sovrascrivo.");
         return false;
     }
     try {
@@ -35,10 +43,10 @@ export async function safeWriteDraft(draft, draftPath, tempPath, backupPath, log
         if (fs.existsSync(draftPath)) fs.copyFileSync(draftPath, backupPath);
         fs.renameSync(tempPath, draftPath);
         if (fs.existsSync(backupPath)) fs.unlinkSync(backupPath);
-        logFn(`💾 Draft salvato in modo sicuro (${totale} articoli).`);
+        log(`💾 Draft salvato in modo sicuro (${totale} articoli).`);
         return true;
     } catch (e) {
-        logFn(`❌ Errore scrittura draft: ${e.message}`);
+        log(`❌ Errore scrittura draft: ${e.message}`);
         if (fs.existsSync(backupPath)) fs.copyFileSync(backupPath, draftPath);
         return false;
     }
