@@ -3,123 +3,656 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>La Voce del Delfino 🐬</title>
+    <title>La Voce del Delfino 🐬 - Edizione Ghibli</title>
     <style>
-        :root { --blu-mare:#005f73; --panna:#faf7f2; --azzurro-pescara:#008cff; }
-        body { margin:0; background:var(--blu-mare); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; transition:background 1.2s ease; }
-        #app { width:100%; max-width:100%; margin:auto; background:transparent; min-height:100vh; }
-
-        /* TESTATA */
-        .testata { width:100%; background:var(--blu-mare); line-height:0; text-align:center; position:relative; }
-        .testata img#header-img { margin-top:5px; width:100%; display:block; height:450px; object-fit:cover; object-position:center; }
-        @media (max-width:600px) { .testata img#header-img { height:250px; } }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* TIMESTAMP */
-        .delfino-timestamp { width:100%; box-sizing:border-box; padding:10px 20px; background:linear-gradient(135deg,rgba(255,243,210,0.9),rgba(255,228,168,0.85)); border-bottom:1.5px solid rgba(180,130,60,0.2); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-        .dt-tempo { font-size:11px; font-style:italic; color:#7a5c2e; white-space:nowrap; }
-        .dt-motto { font-size:12px; font-weight:700; font-style:italic; color:#5a3e1b; text-align:center; flex:1; }
-
-        /* TIMBRO */
-        .timbro-edizione { display:none; width:100%; box-sizing:border-box; text-align:center; padding:7px 20px; background:var(--blu-mare); color:rgba(255,255,255,0.85); font-size:12px; font-style:italic; font-weight:600; border-bottom:1px solid rgba(255,255,255,0.1); }
-
-        /* MENU */
-        .menu { display:flex; overflow-x:auto; padding:20px 15px; gap:12px; scrollbar-width:none; }
-        .menu::-webkit-scrollbar { display:none; }
-        .tab { white-space:nowrap; padding:12px 20px; border-radius:30px; border:2px solid rgba(255,255,255,0.7); background:rgba(255,255,255,0.15); color:#fff; font-weight:bold; font-size:14px; cursor:pointer; transition:0.3s; }
-        .tab.attiva { background:rgba(255,255,255,0.9); color:var(--blu-mare); transform:translateY(-2px); }
-
-        /* GRIGLIA */
-        .notizia-container { padding:15px 20px 30px; display:grid; grid-template-columns:1fr; gap:50px; }
-        @media(min-width:600px)  { .notizia-container { grid-template-columns:1fr 1fr; gap:40px 24px; } }
-        @media(min-width:1000px) { .notizia-container { grid-template-columns:1fr 1fr 1fr; gap:40px 24px; } }
-        @media(min-width:1600px) { .notizia-container { grid-template-columns:1fr 1fr 1fr 1fr; gap:40px 24px; } }
-
-        /* NOTIZIE */
-        .notizia { position:relative; background:var(--panna); border-radius:24px; padding:25px 20px 20px; }
-        .notizia-numero { position:absolute; top:-18px; left:-18px; width:45px; height:45px; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:22px; z-index:20; border:4px solid #fff; }
-        .etichetta-categoria { position:absolute; top:-12px; right:20px; padding:4px 12px; border-radius:12px; font-size:10px; font-weight:900; text-transform:uppercase; z-index:20; border:2px solid #fff; }
-        .notizia.rss-box { border:2px solid var(--azzurro-pescara); box-shadow:0 10px 25px rgba(0,140,255,0.1); }
-        .notizia.rss-box .notizia-numero { background:var(--azzurro-pescara); }
-        .etichetta-categoria.rss-label { color:var(--azzurro-pescara); border-color:var(--azzurro-pescara); background:#fff; }
-        .notizia.gen-box { border:2px solid #ff4d4d; background:#fffafa; box-shadow:0 10px 25px rgba(255,0,0,0.1); }
-        .notizia.gen-box .notizia-numero { background:#ff4d4d; }
-        .etichetta-categoria.gen-label { color:#ff4d4d; border-color:#ff4d4d; background:#fff; }
-        .notizia.personaggio-box { border:2px solid #2d6a4f; background:#f0fff4; box-shadow:0 10px 25px rgba(45,106,79,0.15); }
-        .notizia.personaggio-box .notizia-numero { background:#2d6a4f; }
-        .etichetta-categoria.personaggio-label { color:#2d6a4f; border-color:#2d6a4f; background:#fff; }
-        .notizia-img-box { width:100%; aspect-ratio:16/9; background:#e9e5df; border-radius:16px; overflow:hidden; margin-bottom:20px; }
-        .notizia-img-box img { width:100%; height:100%; object-fit:cover; }
-        h2 { margin:0 0 15px; font-size:24px; line-height:1.3; color:#2c2c2c; font-weight:800; }
-        .testo { font-size:16px; line-height:1.7; color:#4a4a4a; overflow:hidden; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; }
-        .testo.aperto { -webkit-line-clamp:unset; }
-        .leggi-tutto { background:none; border:none; color:var(--blu-mare); font-weight:800; padding:12px 0; font-size:15px; cursor:pointer; text-transform:uppercase; }
-        .firma-autore { display:flex; align-items:center; gap:5px; font-size:11px; color:#999; margin-bottom:10px; font-style:italic; }
-        .badge-nuovo { display:inline-block; background:#e63946; color:#fff; font-size:9px; font-weight:900; text-transform:uppercase; padding:2px 7px; border-radius:8px; margin-left:8px; animation:pulse-badge 2s ease-in-out infinite; }
-        @keyframes pulse-badge { 0%,100%{opacity:1} 50%{opacity:0.6} }
-
-        /* COMMENTO FIRMA */
-        .commento-firma { background:rgba(255,255,255,0.7); padding:12px 14px 12px 46px; border-radius:16px; margin-top:16px; position:relative; border:2px dashed #ccc; font-style:italic; font-size:13px; color:#555; cursor:pointer; }
-        .commento-firma .avatar-firma { position:absolute; left:12px; top:10px; font-size:20px; }
-        .commento-firma .nome-firma { font-size:9px; font-weight:800; text-transform:uppercase; color:#bbb; display:block; margin-bottom:3px; }
-        .commento-firma .testo-firma { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-        .commento-firma.aperto .testo-firma { display:block; }
-        .firma-toggle { font-size:10px; color:#bbb; float:right; }
-        .commento-firma.aperto .firma-toggle { transform:rotate(180deg); }
-
-        /* COMMENTI */
-        .commenti-header { display:flex; align-items:center; gap:8px; margin-top:14px; cursor:pointer; padding:8px 12px; border-radius:12px; background:rgba(0,0,0,0.03); border:1px solid rgba(0,0,0,0.06); }
-        .commenti-count { display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:22px; border-radius:11px; background:var(--azzurro-pescara); color:#fff; font-size:11px; font-weight:900; padding:0 6px; }
-        .commenti-label { font-size:11px; font-weight:700; color:#888; text-transform:uppercase; flex:1; }
-        .commenti-arrow { font-size:10px; color:#bbb; transition:transform 0.2s; }
-        .commenti-panel { display:none; flex-direction:column; gap:8px; margin-top:8px; }
-        .commenti-panel.aperto { display:flex; }
-        .commenti-header.aperto .commenti-arrow { transform:rotate(180deg); }
-        .commento-personaggio { background:rgba(0,0,0,0.02); padding:10px 14px 10px 42px; border-radius:14px; position:relative; font-size:13px; color:#444; border:1px solid rgba(0,0,0,0.06); cursor:pointer; }
-        .commento-personaggio .avatar-p { position:absolute; left:10px; top:10px; font-size:18px; }
-        .commento-personaggio .nome-p { font-size:9px; font-weight:800; text-transform:uppercase; color:#aaa; display:block; margin-bottom:3px; }
-        .commento-personaggio .testo-p { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-        .commento-personaggio.aperto .testo-p { display:block; }
-        .commento-toggle { font-size:10px; color:#aaa; float:right; }
-        .commento-personaggio.aperto .commento-toggle { transform:rotate(180deg); }
-
-        /* CHAT */
-        .chat-section { padding:20px; margin-top:10px; }
-        .chat-title { font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:rgba(255,255,255,0.7); margin-bottom:16px; }
-        .chat-card { background:linear-gradient(135deg,rgba(255,243,210,0.95),rgba(255,228,168,0.9)); border-radius:20px; padding:18px; margin-bottom:16px; border:1.5px solid rgba(180,130,60,0.3); }
-        .chat-data { font-size:10px; color:rgba(90,62,27,0.6); text-align:right; margin-bottom:12px; font-style:italic; }
-        .chat-msg { display:flex; gap:10px; margin-bottom:10px; align-items:flex-start; }
-        .chat-av { font-size:22px; flex-shrink:0; line-height:1; margin-top:2px; }
-        .chat-bubble { background:rgba(255,255,255,0.65); border-radius:0 14px 14px 14px; padding:8px 12px; flex:1; }
-        .chat-nome { font-size:10px; font-weight:800; text-transform:uppercase; color:#5a3e1b; display:block; margin-bottom:3px; }
-        .chat-testo { font-size:13px; color:#4a3010; line-height:1.5; font-style:italic; }
-        .chat-vuota { text-align:center; color:rgba(255,255,255,0.4); font-style:italic; font-size:13px; padding:20px; }
-
-        /* BOTTONE DASHBOARD */
-        .dashboard-btn { position:fixed; bottom:20px; right:20px; background:#005f73; color:white; border:none; border-radius:50px; padding:12px 20px; font-size:14px; font-weight:bold; cursor:pointer; z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.2); transition:transform 0.2s; }
-        .dashboard-btn:hover { transform:scale(1.05); background:#008cff; }
-
-        /* Footer */
-        .footer { text-align:center; padding:20px; color:#888; font-size:0.7rem; border-top:1px solid #ddd; margin-top:30px; }
+        :root {
+            --ghibli-sky: #b8e1d4;
+            --ghibli-meadow: #8db596;
+            --ghibli-warm: #f5e6ca;
+            --ghibli-sunset: #e8b88a;
+            --ghibli-wood: #7c6e4f;
+            --ghibli-cream: #fef9e6;
+            --ghibli-moss: #6a9c6e;
+            --ghibli-cloud: #d4e8e0;
+            --ghibli-sea: #5f9c8b;
+        }
+        
+        body {
+            margin: 0;
+            background: linear-gradient(145deg, var(--ghibli-sky) 0%, #c2e0d4 100%);
+            font-family: 'Segoe UI', 'Quicksand', system-ui, -apple-system, 'Georgia', serif;
+            color: #3a4a3c;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Elementi Ghibli fluttuanti nello sfondo */
+        .ghibli-float {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            font-size: 2rem;
+            opacity: 0.2;
+            animation: floatAround 20s infinite ease-in-out;
+        }
+        
+        @keyframes floatAround {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(30px, -20px) rotate(5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        
+        .float-1 { top: 10%; left: 2%; animation-duration: 25s; font-size: 2.5rem; }
+        .float-2 { bottom: 15%; right: 3%; animation-duration: 18s; font-size: 2rem; }
+        .float-3 { top: 30%; right: 8%; animation-duration: 22s; font-size: 1.8rem; }
+        .float-4 { bottom: 30%; left: 5%; animation-duration: 30s; font-size: 2.2rem; }
+        .float-5 { top: 60%; left: 12%; animation-duration: 20s; font-size: 1.5rem; }
+        .float-6 { top: 15%; right: 20%; animation-duration: 28s; font-size: 2rem; }
+        
+        #app {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .testata {
+            text-align: center;
+            margin: 20px 0 20px;
+        }
+        
+        .testata img#header-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 60px 60px 30px 30px;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.15), 0 0 0 8px rgba(255,245,220,0.5);
+            transition: transform 0.4s ease;
+            object-fit: cover;
+            height: 300px;
+        }
+        
+        .testata img#header-img:hover {
+            transform: scale(1.01);
+        }
+        
+        /* Info bar */
+        .info-bar {
+            background: rgba(255,248,225,0.85);
+            backdrop-filter: blur(4px);
+            border-radius: 50px;
+            padding: 8px 20px;
+            margin: 10px auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: auto;
+            max-width: 90%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid rgba(140,120,80,0.2);
+        }
+        
+        .dt-tempo {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #6b5e3a;
+            background: rgba(245,230,200,0.7);
+            padding: 4px 12px;
+            border-radius: 30px;
+        }
+        
+        .dt-motto {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #5c6e4a;
+            letter-spacing: 0.5px;
+            flex: 1;
+            text-align: center;
+        }
+        
+        .timbro-edizione {
+            font-size: 0.7rem;
+            color: #9e8b64;
+            background: rgba(245,230,200,0.6);
+            padding: 3px 10px;
+            border-radius: 30px;
+            font-style: italic;
+        }
+        
+        /* Menu categorie */
+        .menu {
+            display: flex;
+            overflow-x: auto;
+            padding: 15px 0 25px;
+            gap: 15px;
+            scrollbar-width: thin;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            white-space: nowrap;
+            padding: 8px 24px;
+            border-radius: 40px;
+            background: rgba(245, 230, 200, 0.7);
+            backdrop-filter: blur(2px);
+            color: #5c6e4a;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(100, 80, 40, 0.2);
+        }
+        
+        .tab.attiva {
+            background: var(--ghibli-moss);
+            color: white;
+            border-color: var(--ghibli-moss);
+            box-shadow: 0 6px 14px rgba(90, 120, 70, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Griglia notizie */
+        .notizia-container {
+            padding: 20px 0 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
+        }
+        
+        /* Card articolo */
+        .notizia {
+            background: var(--ghibli-cream);
+            border-radius: 32px;
+            padding: 24px 22px 22px;
+            transition: all 0.3s ease;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+            border: 1px solid rgba(140, 120, 70, 0.15);
+            position: relative;
+        }
+        
+        .notizia:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+        }
+        
+        .notizia-numero {
+            position: absolute;
+            top: -15px;
+            left: -12px;
+            width: 44px;
+            height: 44px;
+            background: var(--ghibli-sunset);
+            color: #5a3e2e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 3px solid white;
+        }
+        
+        .etichetta-categoria {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            background: white;
+            color: #6b8c5c;
+            border: 1px solid #cbd5b0;
+        }
+        
+        .notizia.rss-box { border-left: 6px solid #6f9e7c; }
+        .notizia.gen-box { border-left: 6px solid #e0a878; }
+        .notizia.personaggio-box { border-left: 6px solid #9b9e6f; background: #fef8ed; }
+        
+        .notizia-img-box {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        
+        .notizia-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin: 12px 0 14px;
+            font-weight: 600;
+            color: #4a5b3e;
+            line-height: 1.3;
+        }
+        
+        .testo {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4e5e48;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-family: 'Georgia', serif;
+        }
+        
+        .testo.aperto { -webkit-line-clamp: unset; }
+        
+        .leggi-tutto {
+            background: none;
+            border: none;
+            color: #7c9a6e;
+            font-weight: 600;
+            padding: 12px 0 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        
+        .firma-autore {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            color: #8faa7e;
+            margin: 10px 0 8px;
+            font-style: italic;
+        }
+        
+        .badge-nuovo {
+            background: #e6b17e;
+            color: #5a3e2e;
+            font-size: 0.65rem;
+            padding: 2px 10px;
+            border-radius: 30px;
+            margin-left: 8px;
+            font-weight: bold;
+        }
+        
+        /* Commento firma */
+        .commento-firma {
+            background: #f3efdf;
+            border-radius: 24px;
+            padding: 12px 16px 12px 48px;
+            margin-top: 18px;
+            position: relative;
+            border: 1px dashed #cdc2a0;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .commento-firma:hover { background: #ede5cf; }
+        
+        .avatar-firma {
+            position: absolute;
+            left: 14px;
+            top: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .nome-firma {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #a38b60;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .firma-toggle {
+            float: right;
+            font-size: 0.7rem;
+            color: #bcae84;
+        }
+        
+        /* Commenti personaggi */
+        .commenti-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 16px;
+            padding: 6px 0;
+            cursor: pointer;
+            border-top: 1px solid #e0d6be;
+        }
+        
+        .commenti-count {
+            background: #cbd5b0;
+            color: #4a5b3e;
+            border-radius: 30px;
+            padding: 2px 10px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        
+        .commenti-label {
+            font-size: 0.7rem;
+            color: #8faa7e;
+            text-transform: uppercase;
+            flex: 1;
+        }
+        
+        .commenti-arrow {
+            font-size: 0.7rem;
+            color: #bcae84;
+            transition: transform 0.2s;
+        }
+        
+        .commenti-header.aperto .commenti-arrow { transform: rotate(180deg); }
+        
+        .commenti-panel {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        
+        .commenti-panel.aperto { display: flex; }
+        
+        .commento-personaggio {
+            background: #fbf7eb;
+            padding: 10px 12px 10px 44px;
+            border-radius: 24px;
+            position: relative;
+            font-size: 0.8rem;
+            border: 1px solid #e6ddc0;
+            cursor: pointer;
+        }
+        
+        .avatar-p {
+            position: absolute;
+            left: 12px;
+            top: 8px;
+            font-size: 1.3rem;
+        }
+        
+        .nome-p {
+            font-weight: bold;
+            font-size: 0.65rem;
+            color: #9b8862;
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        .testo-p {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .commento-personaggio.aperto .testo-p { display: block; -webkit-line-clamp: unset; }
+        
+        .commento-toggle {
+            float: right;
+            font-size: 0.65rem;
+            color: #bcae84;
+        }
+        
+        /* ========== CHAT DELLA REDAZIONE - STILE ESPANDIBILE ========== */
+        .chat-redazione {
+            background: rgba(235, 220, 185, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 48px;
+            padding: 25px;
+            margin: 40px 0 30px;
+            border: 1px solid rgba(160, 140, 80, 0.3);
+        }
+        
+        .chat-redazione-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #7e966a;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Card chat (ogni singola conversazione) */
+        .chat-card {
+            background: #fffdf5;
+            border-radius: 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: all 0.2s;
+            overflow: hidden;
+        }
+        
+        .chat-card:hover {
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+        }
+        
+        /* Intestazione della chat (cliccabile) */
+        .chat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background: #fdf8ed;
+            cursor: pointer;
+            transition: background 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .chat-card.aperto .chat-header {
+            background: #f5efdf;
+            border-bottom-color: #e0d6be;
+        }
+        
+        .chat-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .chat-date {
+            font-size: 0.7rem;
+            color: #b0a27a;
+            font-style: italic;
+        }
+        
+        .chat-badge {
+            background: #9ec07c20;
+            color: #6a8e4a;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        .chat-expand-icon {
+            font-size: 0.8rem;
+            color: #bcae84;
+            transition: transform 0.2s;
+        }
+        
+        .chat-card.aperto .chat-expand-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Corpo della chat (messaggi) */
+        .chat-messages {
+            display: none;
+            padding: 16px 20px;
+            background: #fefcf5;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        .chat-card.aperto .chat-messages {
+            display: flex;
+        }
+        
+        /* Singolo messaggio nella chat */
+        .chat-message {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 8px 0;
+            border-left: 3px solid;
+            border-radius: 0 16px 16px 0;
+            padding-left: 14px;
+            transition: background 0.2s;
+        }
+        
+        /* Colori diversi per ogni personaggio (basati sul nome) */
+        .chat-message[data-personaggio="Wolf"] { border-left-color: #8b5e3c; }
+        .chat-message[data-personaggio="Juizinho"] { border-left-color: #e0a878; }
+        .chat-message[data-personaggio="Cetteo"] { border-left-color: #5f9c8b; }
+        .chat-message[data-personaggio="Hiroki"] { border-left-color: #c48b5e; }
+        .chat-message[data-personaggio="Glusi"] { border-left-color: #9b9e6f; }
+        .chat-message[data-personaggio="Lilli"] { border-left-color: #e8b88a; }
+        .chat-message[data-personaggio="Abbukk"] { border-left-color: #6a9c6e; }
+        .chat-message[data-personaggio="Lars"] { border-left-color: #7c9a6e; }
+        .chat-message[data-personaggio="Bartender"] { border-left-color: #c2a15b; }
+        
+        /* Default per altri personaggi */
+        .chat-message { border-left-color: #9ec07c; }
+        
+        .chat-avatar {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+        
+        .chat-content {
+            flex: 1;
+        }
+        
+        .chat-message-nome {
+            font-weight: bold;
+            font-size: 0.75rem;
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-bottom: 6px;
+        }
+        
+        /* Badge colorato per ogni personaggio */
+        .chat-message[data-personaggio="Wolf"] .chat-message-nome { background: #8b5e3c20; color: #8b5e3c; }
+        .chat-message[data-personaggio="Juizinho"] .chat-message-nome { background: #e0a87820; color: #c88a4a; }
+        .chat-message[data-personaggio="Cetteo"] .chat-message-nome { background: #5f9c8b20; color: #5f9c8b; }
+        .chat-message[data-personaggio="Hiroki"] .chat-message-nome { background: #c48b5e20; color: #c48b5e; }
+        .chat-message[data-personaggio="Glusi"] .chat-message-nome { background: #9b9e6f20; color: #7a7c4a; }
+        .chat-message[data-personaggio="Lilli"] .chat-message-nome { background: #e8b88a20; color: #d49a5e; }
+        .chat-message[data-personaggio="Abbukk"] .chat-message-nome { background: #6a9c6e20; color: #6a9c6e; }
+        .chat-message[data-personaggio="Lars"] .chat-message-nome { background: #7c9a6e20; color: #7c9a6e; }
+        .chat-message[data-personaggio="Bartender"] .chat-message-nome { background: #c2a15b20; color: #a8843a; }
+        
+        .chat-message-testo {
+            font-size: 0.85rem;
+            color: #4e5e48;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        
+        .chat-vuota {
+            text-align: center;
+            color: #b0a27a;
+            padding: 40px;
+            font-style: italic;
+            background: #fffdf5;
+            border-radius: 28px;
+        }
+        
+        /* Bottone Dashboard */
+        .dashboard-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #9ec07c;
+            color: #2d3e1f;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.2s;
+            font-family: inherit;
+            font-size: 0.85rem;
+            z-index: 99;
+        }
+        
+        .dashboard-btn:hover {
+            background: #bcdd9a;
+            transform: scale(1.02);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0 20px;
+            font-size: 0.7rem;
+            color: #7e966a;
+            border-top: 1px solid #cfcaad;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 700px) {
+            #app { padding: 0 12px; }
+            .testata img#header-img { height: 180px; }
+            .notizia-container { grid-template-columns: 1fr; gap: 25px; }
+            .info-bar { flex-direction: column; text-align: center; }
+            .chat-header-left { flex-direction: column; align-items: flex-start; gap: 5px; }
+        }
     </style>
 </head>
 <body>
+<!-- Elementi Ghibli fluttuanti -->
+<div class="ghibli-float float-1">🐚</div>
+<div class="ghibli-float float-2">🍃</div>
+<div class="ghibli-float float-3">🐌</div>
+<div class="ghibli-float float-4">🌿</div>
+<div class="ghibli-float float-5">🐞</div>
+<div class="ghibli-float float-6">🕊️</div>
+
 <div id="app">
     <div class="testata" id="logo-innesco">
-        <img id="header-img" src="public/images/default.webp">
+        <img id="header-img" src="public/images/default.webp" alt="La Voce del Delfino">
     </div>
-    <div class="delfino-timestamp">
-        <span class="dt-tempo" id="ts-display">🐬 Il Delfino sta nuotando...</span>
-        <span class="dt-motto" id="motto-display"></span>
+    
+    <div style="display: flex; justify-content: center;">
+        <div class="info-bar">
+            <span class="dt-tempo" id="ts-display">🐬 Il Delfino sta nuotando...</span>
+            <span class="dt-motto" id="motto-display"></span>
+            <span class="timbro-edizione" id="timbro-edizione">🌊 Resistenza Adriatica</span>
+        </div>
     </div>
-    <div class="timbro-edizione" id="timbro-edizione"></div>
+    
     <div class="menu" id="menu-cat"></div>
     <div id="lista-notizie" class="notizia-container"></div>
-    <div class="chat-section">
-        <div class="chat-title">💬 Dalla Redazione</div>
-        <div id="chat-lista"><div class="chat-vuota">La redazione è silenziosa... 🐬</div></div>
+    
+    <!-- Chat della Redazione - stile espandibile -->
+    <div class="chat-redazione">
+        <div class="chat-redazione-title">
+            <span>💬</span> Dalla Redazione
+        </div>
+        <div id="chat-lista"></div>
     </div>
+    
     <div class="footer">
-        La Voce del Delfino - Testata giornalistica immaginaria
+        🌿 La Voce del Delfino - Edizione Ghibli 🌿
     </div>
 </div>
 
@@ -133,7 +666,7 @@ async function carica(){
         const cfg=await fetch('public/data/active_config_v2.json?v='+Date.now()).then(r=>r.json());
         const ss=cfg.site_settings||{};
         if(ss.header_img)document.getElementById('header-img').src='public/images/'+ss.header_img;
-        if(ss.timbro){const t=document.getElementById('timbro-edizione');t.innerText=ss.timbro;t.style.display='block';}
+        if(ss.timbro){const t=document.getElementById('timbro-edizione');t.innerText=ss.timbro;t.style.display='inline-flex';}
         const up=ss.last_update||'---';
         const providerText = ss.llm_provider ? ` (${ss.llm_provider})` : '';
         document.getElementById('ts-display').innerHTML = up !== '---' ? `🐬 Il Delfino ha nuotato qui il ${up}${providerText}` : '🐬 Il Delfino sta nuotando...';
@@ -147,16 +680,16 @@ async function carica(){
             document.getElementById('menu-cat').appendChild(b);
         });
         if(sezioni[0])mostraSezione(sezioni[0],null,cfg.STILI||{});
-        await caricaChat();
+        await caricaChatRedazione();
     }catch(e){console.error(e);}
 }
 
 async function mostraSezione(sez,btn,STILI){
     if(btn){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('attiva'));btn.classList.add('attiva');}
     const data=await fetch('public/data/news-v2-'+sez+'.json?v='+Date.now()).then(r=>r.json());
-    const mc=data.color||'#005f73';
-    document.documentElement.style.setProperty('--blu-mare',mc);
-    document.body.style.background=mc;
+    const mc=data.color||'#8db596';
+    document.documentElement.style.setProperty('--ghibli-moss', mc);
+    document.body.style.background = `linear-gradient(145deg, #b8e1d4 0%, ${mc}80 100%)`;
     const news=data.news||[];
     const ord=[...news.filter(n=>n.tipo==='personaggio'),...news.filter(n=>n.tipo==='rss'),...news.filter(n=>n.tipo==='gen')];
     const lista=document.getElementById('lista-notizie');
@@ -177,25 +710,46 @@ async function mostraSezione(sez,btn,STILI){
     });
 }
 
-async function caricaChat(){
-    const lista=document.getElementById('chat-lista');
+// Nuova funzione per la chat della redazione con stile espandibile e colori
+async function caricaChatRedazione(){
+    const container = document.getElementById('chat-lista');
     try{
-        const st=await fetch('public/data/_chat.json?v='+Date.now()).then(r=>r.json());
-        if(!st?.length)return;
-        lista.innerHTML='';
-        st.slice(0,3).forEach(s=>{
-            const card=document.createElement('div');
-            card.className='chat-card';
-            card.innerHTML='<div class="chat-data">'+esc(s.data||'')+'</div>';
-            (s.messaggi||[]).forEach(m=>{
-                const row=document.createElement('div');
-                row.className='chat-msg';
-                row.innerHTML='<div class="chat-av">'+esc(m.avatar||'👤')+'</div><div class="chat-bubble"><span class="chat-nome">'+esc(m.nome)+'</span><span class="chat-testo">'+esc(m.testo)+'</span></div>';
-                card.appendChild(row);
-            });
-            lista.appendChild(card);
+        const st = await fetch('public/data/_chat.json?v='+Date.now()).then(r=>r.json());
+        if(!st?.length){
+            container.innerHTML = '<div class="chat-vuota">💬 Nessuna conversazione in redazione...</div>';
+            return;
+        }
+        container.innerHTML = '';
+        st.forEach((chat, idx) => {
+            const card = document.createElement('div');
+            card.className = 'chat-card';
+            // Determina il numero di messaggi
+            const numMsg = (chat.messaggi || []).length;
+            card.innerHTML = `
+                <div class="chat-header" onclick="this.parentElement.classList.toggle('aperto')">
+                    <div class="chat-header-left">
+                        <span class="chat-date">📅 ${esc(chat.data || '')}</span>
+                        <span class="chat-badge">💬 ${numMsg} messaggi</span>
+                    </div>
+                    <div class="chat-expand-icon">▼</div>
+                </div>
+                <div class="chat-messages">
+                    ${(chat.messaggi || []).map(m => `
+                        <div class="chat-message" data-personaggio="${esc(m.nome)}">
+                            <div class="chat-avatar">${esc(m.avatar || '👤')}</div>
+                            <div class="chat-content">
+                                <div class="chat-message-nome">${esc(m.nome)}</div>
+                                <div class="chat-message-testo">${esc(m.testo)}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            container.appendChild(card);
         });
-    }catch(e){}
+    } catch(e){
+        container.innerHTML = '<div class="chat-vuota">💬 La redazione è silenziosa...</div>';
+    }
 }
 
 carica();
