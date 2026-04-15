@@ -1,4 +1,12 @@
+// lib/articoli.js
 import { parseJSON, risolviPersonaggio } from "./utils.js";
+
+let logFn = null;
+const log = (msg) => logFn("[articoli] " + msg);
+
+export function initArticoli(logFunction) {
+    logFn = logFunction;
+}
 
 export async function generaArticolo(voce, CHI, titolo, callLLMFn) {
     const firma = risolviPersonaggio(CHI, voce.firma);
@@ -14,11 +22,12 @@ ${puoInventare ? "Puoi inventare liberamente." : "Scrivi cose reali, senza inven
 Nessun riferimento temporale specifico (oggi, ieri, ecc.).
 ${moodCommento}`;
     const userPrompt = isGenerato ? `Scrivi un articolo su: ${titolo}` : `Notizia reale: ${titolo}. Scrivi un articolo.`;
-    const raw = await callLLMFn(sys, userPrompt, voce.weight_articolo ?? 0.8);
-    return parseJSON(raw);
+    const { provider, text } = await callLLMFn(sys, userPrompt, voce.weight_articolo ?? 0.8);
+    log(`📝 ${voce.firma} (${provider}) ha scritto: "${text.substring(0, 60)}..."`);
+    return parseJSON(text);
 }
 
-export async function generaCommenti(voce, CHI, relazioni, personaggi, articolo, commentiPrecedenti, LIMITI, callLLMFn, logFn) {
+export async function generaCommenti(voce, CHI, relazioni, personaggi, articolo, commentiPrecedenti, LIMITI, callLLMFn) {
     const nomi = Object.keys(CHI).filter(n => n !== "default");
     const contestoRelazioni = nomi.flatMap(a => nomi.filter(b=>b!==a).map(b=>{
         const r = relazioni[`${a}→${b}`];
@@ -37,7 +46,7 @@ Scegli da ${LIMITI.commenti_min??1} a ${LIMITI.commenti_max??3} personaggi che c
 Il personaggio "${voce.firma}" non può commentare se stesso.
 Rispondi solo JSON: {"commenti":[{"nome":"...","avatar":"...","testo":"..."}]}`;
     const userPrompt = `Articolo: "${articolo}"\nGenera commenti.`;
-    const raw = await callLLMFn(sys, userPrompt, voce.weight_commento ?? 0.7);
-    const parsed = parseJSON(raw);
+    const { text } = await callLLMFn(sys, userPrompt, voce.weight_commento ?? 0.7);
+    const parsed = parseJSON(text);
     return parsed?.commenti || [];
 }
