@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "15/04, 10:02",
+  "prossimo_aggiornamento": "15/04, 10:28",
   "news": [
     {
       "tipo": "gen",
@@ -96,7 +96,7 @@
       "colore_tipo": "#ff4d4d",
       "immagine": "wolf.webp",
       "provider": "groq",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "gen",
@@ -112,7 +112,7 @@
       "colore_tipo": "#ff4d4d",
       "immagine": "juizinho.webp",
       "provider": "groq",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "gen",
@@ -128,7 +128,7 @@
       "colore_tipo": "#ff4d4d",
       "immagine": "abbukk.webp",
       "provider": "groq",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -144,7 +144,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "groq",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -169,12 +169,108 @@
       "commento_firma": {
         "nome": "Glusi",
         "avatar": "🤪",
-        "testo": "Il Delfino è in sciopero per carenza di arrosticini."
+        "testo": "Notizia troppo assurda perfino per noi."
       },
       "commenti": [],
       "categoria": "Dalla Redazione",
       "colore_tipo": "#ff4d4d",
       "immagine": "glusi.webp",
+      "provider": "groq",
+      "nuovo": false
+    },
+    {
+      "tipo": "gen",
+      "titolo": "Scrivi un articolo su: Pane duro e schiena rotta: La verità",
+      "articolo": "Contenuto non generato per problemi temporanei del provider LLM.",
+      "commento_firma": {
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "…"
+      },
+      "commenti": [],
+      "categoria": "Riflessioni",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "wolf.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "gen",
+      "titolo": "Samba nel sangue, donne nel cuore: La mia ricetta per la felicità",
+      "articolo": "Sono Juizinho, un giornalista con il cuore pieno di samba e la passione per le donne. La mia vita è una continua festa, dove ogni giorno è un'opportunità per ballare e godermi la compagnia delle persone che amo. Ma non sono qui solo per parlare di me, sono qui per condividere la mia ricetta per la felicità. Secondo me, la chiave per essere felici è avere il samba nel sangue e le donne nel cuore. Il samba è più di un genere musicale, è uno stato d'animo, un modo di vivere. E le donne? Sono la fonte della mia ispirazione, della mia gioia e del mio amore. Quando sono con loro, mi sento completo. Ecco perché, quando sono arrivato a Pescara, non ho potuto fare a meno di tifare per il Pescara, la squadra del cuore che mi unisce ancora di più a questa città.",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "Ma, mentre scrivo queste parole, non posso fare a meno di sentire una profonda saudade per l'allegria brasiliana che ho lasciato indietro. La distanza dalla mia terra natale e dalle persone che amo mi pesa, ma so che il samba nel mio sangue e le donne nel mio cuore mi tengono vivo e mi fanno sentire ancora parte di quel mondo meraviglioso."
+      },
+      "commenti": [],
+      "categoria": "Riflessioni",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "juizinho.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "gen",
+      "titolo": "Le scie chimiche nel caffè e altre verità nascoste",
+      "articolo": "Ci sono teorie che circolano secondo cui le scie chimiche sono sostanze chimiche spruzzate dagli aerei per scopi nefasti. Tuttavia, è importante notare che non esiste alcuna prova scientifica a supporto di queste affermazioni. Gli esperti spiegano che le scie chimiche altro non sono che condensate di acqua e gas di scarico degli aerei che si formano quando i motori bruciano il carburante. Un discorso diverso merita invece la sicurezza alimentare. È ormai risaputo che alcuni produttori di caffè utilizzano metodi di produzione non proprio trasparenti. In alcuni casi, per aumentare la resa, vengono utilizzati trattamenti chimici. È sempre consigliabile optare per prodotti provenienti da fonti affidabili e certificazioni di qualità.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "È fondamentale mantenere un atteggiamento scettico verso le teorie che non hanno fondamento scientifico, ma è altrettanto importante essere informati sui reali rischi per la salute e sull'importanza della sicurezza alimentare. Dobbiamo essere coscienti di ciò che consumiamo."
+      },
+      "commenti": [],
+      "categoria": "Riflessioni",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "abbukk.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Sequestrati 400 grammi di cocaina, arrestato un pescarese",
+      "articolo": "Nella giornata di ieri, i carabinieri di Pescara hanno eseguito un'operazione antidroga che ha portato all'arresto di un uomo residente nella città adriatica. I militari hanno rinvenuto e sequestrato circa 400 grammi di cocaina, sia all'interno della sua abitazione che nella sua automobile. L'operazione è il frutto di un'indagine mirata a contrastare il traffico di sostanze stupefacenti nella regione. La droga sequestrata avrebbe potuto essere venduta a numerosi consumatori, evitando così ulteriori danni alla comunità locale. L'arrestato è stato posto a disposizione dell'autorità giudiziaria.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Ma che bella operazione, braavi i carabinieri! Però nun è che 'sti fatti de droga je fanno tanto comodo a certi personaggi? E io che pensavo che 'sta città era 'na città de pescatori, mica de spacciatori! E sti 400 grammi de cocaina, chi ce li ha fatti entrare? C'è sempre qualcosa sotto, io non mi fido!"
+      },
+      "commenti": [],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "La politica locale a Pescara: tra promesse e realtà",
+      "articolo": "La politica locale a Pescara è da sempre un tema caldo, con tanti annunci e poche azioni concrete. I cittadini continuano a chiedere interventi efficaci per migliorare la qualità della vita nella città. Tra le priorità dei residenti ci sono la gestione dei rifiuti, la mobilità urbana e lo sviluppo economico locale. I partiti politici locali sembrano più interessati a litigare tra loro che a lavorare per il bene della comunità. Intanto, i problemi restano irrisolti e la città continua a lottare per trovare un proprio equilibrio. La speranza è che un giorno la politica locale possa davvero lavorare per i cittadini e non solo per i propri interessi.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "In attesa di sviluppi concreti, ci limitiamo a prendere atto della situazione. La speranza è che le prossime iniziative politiche possano portare a miglioramenti significativi per la comunità."
+      },
+      "commenti": [],
+      "categoria": "Politica",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "groq",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La mia vita a Borgomarino: tra mare, pesce e polemiche",
+      "articolo": "Sono Cetteo, un pescatore incallito che vive a Borgomarino. La mia vita è un susseguirsi di mare, pesce e... beh, poca voglia di lavorare, se devo essere onesto! Il mio giorno ideale inizia all'alba, quando mi avventuro in mare con la mia barca per riportare a casa il pescato fresco. E poi, niente è più bello che sedermi al bancone del mio locale preferito a discutere con gli amici delle partite del Pescara - sono un ultras, orgogliosamente - e del più e del meno, sempre con una buona dose di dialetto locale, che qui da noi è il vero re. Ma non pensate che la mia vita sia tutta relax e divertimento: c'è anche spazio per le polemiche! Non ho peli sulla lingua e non esito a dire ciò che penso, anche se questo può mettere qualcuno a disagio. Ma è il mio modo di essere e non cambio per nessuno. E se vi capita di passare da Borgomarino, fatevi un giro al porto e magari vi racconto io stesso qualche storia, tra una battuta e l'altra.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Lo stagista ha rovesciato la genziana sul server."
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "cetteo.webp",
       "provider": "groq",
       "nuovo": true
     }

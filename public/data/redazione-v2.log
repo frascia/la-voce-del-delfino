@@ -1460,3 +1460,95 @@ Please retry in 56.314279296s. (code: 429)
 [15/04/2026, 08:02:06] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (8 articoli, 2 nuovi)
 [15/04/2026, 08:02:06] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (2 articoli, 1 nuovi)
 [15/04/2026, 08:02:06] [3-deploy-v2] 🕐 Ora: 15/04, 08:01 | Prossimo: 15/04, 10:02
+[15/04/2026, 08:24:51] [1-fetch-v2] 🏷️ Run MANUALE
+[15/04/2026, 08:24:51] [1-fetch-v2] [llm] Provider inizializzato: groq, fallimenti consecutivi: 0
+[15/04/2026, 08:24:51] [1-fetch-v2] [llm] Run manuale – i fallimenti NON verranno conteggiati
+[15/04/2026, 08:24:51] [1-fetch-v2] [llm] Run manuale: forzato provider a gemini (ignoro contatore fallimenti)
+[15/04/2026, 08:24:51] [1-fetch-v2] [llm] Modello Gemini selezionato: gemini-flash-lite-latest
+[15/04/2026, 08:24:51] [1-fetch-v2] [llm] Modello Groq aggiornato: meta-llama/llama-4-scout-17b-16e-instruct (era llama3-70b-8192)
+[15/04/2026, 08:24:51] [1-fetch-v2] [llm] Groq max_tokens=1024 per meta-llama/llama-4-scout-17b-16e-instruct
+[15/04/2026, 08:24:51] [1-fetch-v2] 📊 Quote: chiamate=0, rss=16
+[15/04/2026, 08:24:51] [1-fetch-v2] 🕐 Fascia attiva: NO | Parole target: ~160
+[15/04/2026, 08:24:51] [1-fetch-v2] 📋 Voci attive: 8
+[15/04/2026, 08:24:51] [1-fetch-v2] [draft] 📰 Accumulo su 21 articoli esistenti
+[15/04/2026, 08:24:51] [1-fetch-v2] [GNews] 0 titoli per "Cronaca Pescarese"
+[15/04/2026, 08:24:51] [1-fetch-v2] [GNews ERR] Status 429
+[15/04/2026, 08:24:51] [1-fetch-v2] [GNews ERR] Status 429
+[15/04/2026, 08:24:51] [1-fetch-v2] [GNews ERR] Status 429
+[15/04/2026, 08:24:51] [1-fetch-v2] ⚠️ GNews zero titoli per tutte le voci. Passo a RSS.
+[15/04/2026, 08:24:53] [1-fetch-v2] [CASCATA] Solo 0/1 per "Politica Locale Pescara". Aggiungo 1 generici.
+[15/04/2026, 08:24:53] [1-fetch-v2] [CASCATA] Solo 0/2 per "Giappone cultura società". Aggiungo 2 generici.
+[15/04/2026, 08:24:55] [1-fetch-v2] [llm] ⏳ Quota exceeded, attendo retry...
+[15/04/2026, 08:24:55] [1-fetch-v2] [llm] ⏳ Attendo 6.9s...
+[15/04/2026, 08:25:03] [1-fetch-v2] [llm] ⏳ Attendo 58.4s...
+[15/04/2026, 08:26:03] [1-fetch-v2] [llm] ⏳ Attendo 58.3s...
+[15/04/2026, 08:27:02] [1-fetch-v2] [llm] ⚠️ Fallimento gemini (1/2)
+[15/04/2026, 08:27:02] [1-fetch-v2] [articoli] 📝 Wolf (gemini) ha scritto: "{"titolo":"Scrivi un articolo su: Pane duro e schiena rotta:..."
+[15/04/2026, 08:27:03] [1-fetch-v2] [llm] ⏳ Attendo 58.4s...
+[15/04/2026, 08:28:07] [1-fetch-v2] [llm] ⚠️ Fallimento gemini (2/2)
+[15/04/2026, 08:28:07] [1-fetch-v2] [llm] 🔄 Cambio provider: gemini → groq
+[15/04/2026, 08:28:08] [1-fetch-v2] [llm] Groq max_tokens=1024 per meta-llama/llama-4-scout-17b-16e-instruct
+[15/04/2026, 08:28:10] [1-fetch-v2] [llm] ❌ Anche groq fallisce.
+[15/04/2026, 08:28:10] [1-fetch-v2]   ✅ "Scrivi un articolo su: Pane duro e schiena rotta: ..." (0 commenti) [gemini]
+[15/04/2026, 08:28:13] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:13] [1-fetch-v2] [articoli] 📝 Juizinho (groq) ha scritto: "{
+"titolo": "Samba nel sangue, donne nel cuore: La mia ricet..."
+[15/04/2026, 08:28:15] [1-fetch-v2] [llm] ⚠️ Fallimento groq (1/2)
+[15/04/2026, 08:28:15] [1-fetch-v2]   ✅ "Samba nel sangue, donne nel cuore: La mia ricetta ..." (0 commenti) [groq]
+[15/04/2026, 08:28:18] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:18] [1-fetch-v2] [articoli] 📝 Abbukk (groq) ha scritto: "{
+"titolo": "Le scie chimiche nel caffè e altre verità nasco..."
+[15/04/2026, 08:28:21] [1-fetch-v2] [llm] ⚠️ Fallimento groq (1/2)
+[15/04/2026, 08:28:21] [1-fetch-v2]   ✅ "Le scie chimiche nel caffè e altre verità nascoste..." (0 commenti) [groq]
+[15/04/2026, 08:28:23] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:23] [1-fetch-v2] [articoli] 📝 Lilli (groq) ha scritto: "{
+"titolo": "Scoprire nuovi mondi tra le pagine",
+  "articol..."
+[15/04/2026, 08:28:25] [1-fetch-v2] [llm] ⚠️ Fallimento groq (1/2)
+[15/04/2026, 08:28:25] [1-fetch-v2]   ✅ "Scoprire nuovi mondi tra le pagine..." (0 commenti) [groq]
+[15/04/2026, 08:28:28] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:28] [1-fetch-v2] [articoli] 📝 Cetteo (groq) ha scritto: "{
+"titolo": "Sequestrati 400 grammi di cocaina, arrestato un..."
+[15/04/2026, 08:28:31] [1-fetch-v2] [llm] ⚠️ Fallimento groq (1/2)
+[15/04/2026, 08:28:31] [1-fetch-v2]   ✅ "Sequestrati 400 grammi di cocaina, arrestato un pe..." (0 commenti) [groq]
+[15/04/2026, 08:28:33] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:33] [1-fetch-v2] [articoli] 📝 Cetteo (groq) ha scritto: "{
+"titolo": "La politica locale a Pescara: tra promesse e re..."
+[15/04/2026, 08:28:35] [1-fetch-v2] [llm] ⚠️ Fallimento groq (1/2)
+[15/04/2026, 08:28:35] [1-fetch-v2]   ✅ "La politica locale a Pescara: tra promesse e realt..." (0 commenti) [groq]
+[15/04/2026, 08:28:38] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:38] [1-fetch-v2] [articoli] 📝 Cetteo (groq) ha scritto: "{
+"titolo": "Android 17 e l'IA: cosa ci riserva il futuro?",..."
+[15/04/2026, 08:28:40] [1-fetch-v2] [llm] ⚠️ Fallimento groq (1/2)
+[15/04/2026, 08:28:40] [1-fetch-v2]   ✅ "Android 17 e l'IA: cosa ci riserva il futuro?..." (0 commenti) [groq]
+[15/04/2026, 08:28:43] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:43] [1-fetch-v2] [articoli] 📝 Cetteo (groq) ha scritto: "{
+"titolo": "La rivoluzione digitale approda con Callandor G..."
+[15/04/2026, 08:28:46] [1-fetch-v2] [llm] ⚠️ Fallimento groq (1/2)
+[15/04/2026, 08:28:46] [1-fetch-v2]   ✅ "La rivoluzione digitale approda con Callandor Grou..." (0 commenti) [groq]
+[15/04/2026, 08:28:48] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:48] [1-fetch-v2] [articoli] 📝 Hiroki (groq) ha scritto: "{
+"titolo": "Il Giappone: una cultura unica tra tradizione e..."
+[15/04/2026, 08:28:51] [1-fetch-v2] [llm] ⚠️ Fallimento groq (1/2)
+[15/04/2026, 08:28:51] [1-fetch-v2]   ✅ "Il Giappone: una cultura unica tra tradizione e in..." (0 commenti) [groq]
+[15/04/2026, 08:28:53] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:53] [1-fetch-v2] [articoli] 📝 Hiroki (groq) ha scritto: "{
+"titolo": "La cultura giapponese: un incontro di tradizion..."
+[15/04/2026, 08:28:55] [1-fetch-v2] [llm] ⚠️ Fallimento groq (1/2)
+[15/04/2026, 08:28:55] [1-fetch-v2]   ✅ "La cultura giapponese: un incontro di tradizione e..." (0 commenti) [groq]
+[15/04/2026, 08:28:58] [1-fetch-v2] [llm] ✅ Articolo generato da groq
+[15/04/2026, 08:28:58] [1-fetch-v2] ✍️ Articolo personaggio da Cetteo (groq): "La mia vita a Borgomarino: tra mare, pesce e polem..."
+[15/04/2026, 08:28:58] [1-fetch-v2] [draft] 💾 Draft salvato in modo sicuro (32 articoli).
+[15/04/2026, 08:28:58] [1-fetch-v2] ✅ FASE 1-v4 completata. 11 nuovi articoli.
+[15/04/2026, 08:28:58] [2-elabora-v2] ⚙️ FASE 2-v2 — Avvio elaborazione...
+[15/04/2026, 08:28:58] [2-elabora-v2] 📄 active_config_v2.json aggiornato.
+[15/04/2026, 08:28:58] [2-elabora-v2] 🔐 auth_info.json aggiornato.
+[15/04/2026, 08:28:58] [2-elabora-v2] ✅ Sezione pescara: 17 articoli normalizzati.
+[15/04/2026, 08:28:58] [2-elabora-v2] ✅ Sezione mondo: 12 articoli normalizzati.
+[15/04/2026, 08:28:58] [2-elabora-v2] ✅ Sezione cultura: 3 articoli normalizzati.
+[15/04/2026, 08:28:58] [2-elabora-v2] ✅ FASE 2-v2 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[15/04/2026, 08:28:58] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[15/04/2026, 08:28:58] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (17 articoli, 5 nuovi)
+[15/04/2026, 08:28:58] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (12 articoli, 3 nuovi)
+[15/04/2026, 08:28:58] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (3 articoli, 1 nuovi)
+[15/04/2026, 08:28:58] [3-deploy-v2] 🕐 Ora: 15/04, 08:24 | Prossimo: 15/04, 10:28
