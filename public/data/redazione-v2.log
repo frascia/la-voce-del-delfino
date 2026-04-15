@@ -2252,3 +2252,96 @@ Please retry in 56.314279296s. (code: 429)
 [15/04/2026, 20:08:20] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (3 articoli, 0 nuovi)
 [15/04/2026, 20:08:20] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (1 articoli, 0 nuovi)
 [15/04/2026, 20:08:20] [3-deploy-v2] 🕐 Ora: 15/04, 12:53 | Prossimo: 15/04, 22:08
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH] 🏷️ Run MANUALE
+[15/04/2026, 20:12:59] [1-fetch-v2] [llm] ⚙️ Provider inizializzato: groq | Fallimenti consecutivi: 0
+[15/04/2026, 20:12:59] [1-fetch-v2] [llm] 🔒 Modello Gemini forzato da ambiente: gemini-1.5-flash
+[15/04/2026, 20:12:59] [1-fetch-v2] [llm] 📌 Run MANUALE – i fallimenti NON verranno conteggiati
+[15/04/2026, 20:12:59] [1-fetch-v2] [llm] 🔁 Run manuale: forzato provider a GEMINI (ignoro contatore fallimenti)
+[15/04/2026, 20:12:59] [1-fetch-v2] [llm] 🔒 Ricerca modelli Gemini saltata (modello forzato: gemini-1.5-flash)
+[15/04/2026, 20:12:59] [1-fetch-v2] [llm] 🤖 Groq: modello aggiornato → meta-llama/llama-4-scout-17b-16e-instruct (era llama3-70b-8192)
+[15/04/2026, 20:12:59] [1-fetch-v2] [llm] 🤖 Groq: max_tokens=1024 per meta-llama/llama-4-scout-17b-16e-instruct
+[15/04/2026, 20:12:59] [1-fetch-v2] [config] 📁 Config caricata: /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/config_v2.json
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    ├─ 📅 Agenda: 4 voci
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    ├─ 👥 Personaggi: 9 (+ default)
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    ├─ 📰 Redazione: 19 voci (RSS:9, GEN:1, RED:9)
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    ├─ ⏰ Fasce orarie: 10, 11, 13, 19
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    ├─ 📏 Lunghezza articoli: livello 2 (~160 parole)
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    ├─ 💬 Commenti: min 1, max 4, totali max 10
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    ├─ 🔄 Reset quote: ore 10 (toll. 10 min)
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    ├─ 🤖 Modelli: cerca max 1 volte/giorno
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    └─ 🎛️ Limiti: chat=sempre, commenti=sempre, relazioni=sempre
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    └─ 📢 Ticker: AVVISTATO CALAMARO GIGANTE AL PORTO CANA… | AUMENTO DEI PREZZI: GLI ARROSTICINI ORA … +1
+[15/04/2026, 20:12:59] [1-fetch-v2] [config]    └─ 👤 Personaggi: Lars(🐬), Juizinho(⚽), Cetteo(🚧), Hiroki(🏯), Glusi(🤪) +4
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH] 📊 Quote: chiamate=0, rss=32
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH] 🕐 Fascia attiva: NO | Parole target: ~160
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH] 📋 Voci attive: 8
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH] 
+📌 REDAZIONALI OGGI:
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH]    ✍️ Wolf (pescara) – 10 temi
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH]    ✍️ Juizinho (pescara) – 10 temi
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH]    ✍️ Abbukk (pescara) – 10 temi
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH] 🔍 Verifica disponibilità provider...
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH]    📡 Recupero modelli Gemini disponibili...
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH]    📋 Modelli Flash trovati: gemini-flash-lite-latest, gemini-flash-latest, gemini-3.1-flash-lite-preview, gemini-3-flash-preview, gemini-2.5-flash-lite, gemini-2.5-flash, gemini-2.0-flash-lite-001, gemini-2.0-flash-lite, gemini-2.0-flash-001, gemini-2.0-flash
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH]    📡 Test Gemini...
+[15/04/2026, 20:12:59] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-flash-lite-latest...
+[15/04/2026, 20:13:01] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:01] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:01] [1-fetch-v2] [FETCH]       ❌ gemini-flash-lite-latest non risponde
+[15/04/2026, 20:13:01] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-flash-latest...
+[15/04/2026, 20:13:03] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:03] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:03] [1-fetch-v2] [FETCH]       ❌ gemini-flash-latest non risponde
+[15/04/2026, 20:13:03] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-3.1-flash-lite-preview...
+[15/04/2026, 20:13:04] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:04] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:04] [1-fetch-v2] [FETCH]       ❌ gemini-3.1-flash-lite-preview non risponde
+[15/04/2026, 20:13:04] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-3-flash-preview...
+[15/04/2026, 20:13:06] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:06] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:06] [1-fetch-v2] [FETCH]       ❌ gemini-3-flash-preview non risponde
+[15/04/2026, 20:13:06] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.5-flash-lite...
+[15/04/2026, 20:13:07] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:07] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:07] [1-fetch-v2] [FETCH]       ❌ gemini-2.5-flash-lite non risponde
+[15/04/2026, 20:13:07] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.5-flash...
+[15/04/2026, 20:13:09] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:09] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:09] [1-fetch-v2] [FETCH]       ❌ gemini-2.5-flash non risponde
+[15/04/2026, 20:13:09] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.0-flash-lite-001...
+[15/04/2026, 20:13:11] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:11] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:11] [1-fetch-v2] [FETCH]       ❌ gemini-2.0-flash-lite-001 non risponde
+[15/04/2026, 20:13:11] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.0-flash-lite...
+[15/04/2026, 20:13:12] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:12] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:12] [1-fetch-v2] [FETCH]       ❌ gemini-2.0-flash-lite non risponde
+[15/04/2026, 20:13:12] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.0-flash-001...
+[15/04/2026, 20:13:14] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:14] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:14] [1-fetch-v2] [FETCH]       ❌ gemini-2.0-flash-001 non risponde
+[15/04/2026, 20:13:14] [1-fetch-v2] [FETCH]       🔍 Test modello gemini-2.0-flash...
+[15/04/2026, 20:13:15] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:15] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:15] [1-fetch-v2] [FETCH]       ❌ gemini-2.0-flash non risponde
+[15/04/2026, 20:13:15] [1-fetch-v2] [FETCH]    ❌ Gemini NON disponibile (nessun modello Flash risponde)
+[15/04/2026, 20:13:15] [1-fetch-v2] [FETCH]    📡 Test Groq...
+[15/04/2026, 20:13:17] [1-fetch-v2] [llm] ❌ Gemini: models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. (code: 404)
+[15/04/2026, 20:13:17] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[15/04/2026, 20:13:17] [1-fetch-v2] [FETCH]    ❌ Groq NON disponibile
+[15/04/2026, 20:13:17] [1-fetch-v2] [FETCH] ❌ NESSUN PROVIDER DISPONIBILE (Gemini e Groq non rispondono)
+[15/04/2026, 20:13:17] [1-fetch-v2] [FETCH] 📁 Mantengo draft esistente del 15/04 (9 articoli)
+[15/04/2026, 20:13:17] [1-fetch-v2] [FETCH] ⏭️ Salto generazione articoli, la fase 2 elaborerà il draft esistente
+[15/04/2026, 20:13:17] [2-elabora-v3] ⚙️ FASE 2-v3 — Avvio elaborazione...
+[15/04/2026, 20:13:17] [2-elabora-v3] 🔍 Provider LLM rilevato: groq (9 articoli)
+[15/04/2026, 20:13:17] [2-elabora-v3] 📄 active_config_v3.json aggiornato.
+[15/04/2026, 20:13:17] [2-elabora-v3] 🔐 auth_info.json aggiornato.
+[15/04/2026, 20:13:17] [2-elabora-v3] ✅ Sezione pescara: 5 articoli normalizzati.
+[15/04/2026, 20:13:17] [2-elabora-v3] ✅ Sezione mondo: 3 articoli normalizzati.
+[15/04/2026, 20:13:17] [2-elabora-v3] ✅ Sezione cultura: 1 articoli normalizzati.
+[15/04/2026, 20:13:17] [2-elabora-v3] ✅ FASE 2-v3 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[15/04/2026, 20:13:17] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[15/04/2026, 20:13:17] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (5 articoli, 0 nuovi)
+[15/04/2026, 20:13:17] [3-deploy-v2] 📄 Scritto: news-v2-mondo.json (3 articoli, 0 nuovi)
+[15/04/2026, 20:13:17] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (1 articoli, 0 nuovi)
+[15/04/2026, 20:13:17] [3-deploy-v2] 🕐 Ora: 15/04, 12:53 | Prossimo: 15/04, 22:13
