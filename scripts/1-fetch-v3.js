@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /**
- * 1-fetch-v3.js
+ * 1-fetch-v2.js
  * FASE 1 — Nuova architettura v2
  * Supporto Gemini/Groq con fallback persistente, modello Groq dinamico,
- * GNews API + fallback RSS, gestione sicura draft.
+ * GNews API (zero risultati non è fallimento, ma se tutti zero si passa a RSS),
+ * gestione sicura draft, log ridotto per quota Gemini.
  */
 
 import fs from "fs";
@@ -131,14 +132,15 @@ if (fs.existsSync(LOG_PATH)) {
 const apiKey = process.env.GEMINI_API_KEY || "";
 const groqApiKey = process.env.GROQ_API_KEY || "";
 let groqModelCorrente = process.env.GROQ_MODEL || "llama3-70b-8192";
-let groqMaxTokens = 1024; // verrà impostato dinamicamente
+let groqMaxTokens = 1024;
 let ricercaModelloGroqEffettuata = false;
 
 const gnewsApiKey = process.env.GNEWS_API_KEY || "";
-const newsSource = process.env.NEWS_SOURCE || "gnews";
+let newsSource = process.env.NEWS_SOURCE || "gnews";
 let activeGeminiModel = "gemini-1.5-flash";
 let quotaGiornalieraEsaurita = false;
 let contatoreChiamateApi = 0;
+let quotaLogSent = false; // per evitare spam di log quota Gemini
 
 const MAX_FAILURES_BEFORE_SWITCH = 2;
 let providerState = { provider: "gemini", failureCount: 0 };
@@ -223,7 +225,7 @@ async function trovaUltimoModello() {
 }
 
 // ---------------------------------------------------------------------------
-// RICERCA MODELLO GROQ PIÙ RECENTE (con max_tokens dinamico)
+// RICERCA MODELLO GROQ PIÙ RECENTE (esclude modelli non testuali)
 // ---------------------------------------------------------------------------
 
 async function trovaUltimoModelloGroq() {
@@ -241,13 +243,19 @@ async function trovaUltimoModelloGroq() {
         }
         const data = await response.json();
         if (!data.data) return;
-        // Filtra modelli testuali
+        // Escludi modelli di classification, guard, safety, embed
         const testuali = data.data.filter(m =>
-            m.id && (m.id.includes("llama") || m.id.includes("mixtral") || m.id.includes("gemma")) &&
-            !m.id.includes("embed")
+            m.id && 
+            (m.id.includes("llama") || m.id.includes("mixtral") || m.id.includes("gemma")) &&
+            !m.id.includes("embed") &&
+            !m.id.includes("guard") &&
+            !m.id.includes("safety") &&
+            !m.id.includes("classification")
         );
-        if (testuali.length === 0) return;
-        // Dai priorità ai modelli llama
+        if (testuali.length === 0) {
+            scriviLog(`[GROQ] Nessun modello testuale valido trovato, uso default: ${groqModelCorrente}`);
+            return;
+        }
         const migliori = testuali.filter(m => m.id.includes("llama"));
         const daOrdinare = migliori.length > 0 ? migliori : testuali;
         daOrdinare.sort((a,b) => (b.created || 0) - (a.created || 0));
@@ -259,17 +267,16 @@ async function trovaUltimoModelloGroq() {
             scriviLog(`[GROQ] Modello già ottimale: ${groqModelCorrente}`);
         }
         
-        // Imposta groqMaxTokens in base al modello selezionato
         if (groqModelCorrente.includes("gemma")) {
-            groqMaxTokens = 512;   // Gemma ha output limitato a 512
+            groqMaxTokens = 512;
         } else if (groqModelCorrente.includes("llama3-70b")) {
-            groqMaxTokens = 2000;  // Supporta fino a 4096
+            groqMaxTokens = 2000;
         } else if (groqModelCorrente.includes("llama3-8b")) {
-            groqMaxTokens = 1024;  // Limite prudente
+            groqMaxTokens = 1024;
         } else if (groqModelCorrente.includes("mixtral")) {
             groqMaxTokens = 2000;
         } else {
-            groqMaxTokens = 1024;  // Default
+            groqMaxTokens = 1024;
         }
         scriviLog(`[GROQ] max_tokens impostato a ${groqMaxTokens} per il modello ${groqModelCorrente}`);
     } catch (e) {
@@ -278,7 +285,7 @@ async function trovaUltimoModelloGroq() {
 }
 
 // ---------------------------------------------------------------------------
-// FETCH NOTIZIE: GNews + fallback RSS
+// FETCH NOTIZIE: GNews (zero risultati non è errore) e RSS
 // ---------------------------------------------------------------------------
 
 async function fetchGNews(query, max) {
@@ -286,19 +293,22 @@ async function fetchGNews(query, max) {
     if (max <= 0) return [];
     const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=it&country=it&max=${max}&token=${gnewsApiKey}`;
     try {
-        await new Promise(r => setTimeout(r, 3000));
         const res = await fetch(url);
         const data = await res.json();
         if (!res.ok || data.errors) {
-            scriviLog(`[GNews ERR] Status ${res.status}, errors: ${JSON.stringify(data.errors)}`);
-            return [];
+            scriviLog(`[GNews ERR] Status ${res.status}`);
+            return [];  // errore HTTP → fallimento
         }
         if (!data.articles || !Array.isArray(data.articles)) {
-            scriviLog(`[GNews] Formato inaspettato: manca articles[]`);
+            scriviLog(`[GNews] Formato inaspettato`);
             return [];
         }
         const titles = data.articles.map(art => art.title);
-        scriviLog(`[GNews] ${titles.length} titoli per "${query}"`);
+        if (titles.length === 0) {
+            scriviLog(`[GNews] 0 titoli per "${query}" (nessuna notizia)`);
+        } else {
+            scriviLog(`[GNews] ${titles.length} titoli per "${query}"`);
+        }
         return titles;
     } catch (e) {
         scriviLog(`[GNews] Eccezione: ${e.message}`);
@@ -334,14 +344,73 @@ async function fetchRSS(query, max) {
     }
 }
 
-async function fetchNotizie(query, max) {
-    if (newsSource === "gnews") {
-        const titoli = await fetchGNews(query, max);
-        if (titoli.length > 0) return titoli;
-        scriviLog(`⚠️ GNews fallito, fallback RSS`);
-        return await fetchRSS(query, max);
+// ---------------------------------------------------------------------------
+// RACCOLTA NOTIZIE CON FALLBACK GLOBALE (se tutti zero con GNews, passa a RSS)
+// ---------------------------------------------------------------------------
+
+async function raccoltaNotizie(vociAttive, parole, contatori) {
+    const codaArticoli = [];
+    let tutteZero = true;
+    const risultatiPerVoce = [];
+
+    for (const voce of vociAttive) {
+        const num = voce.num || 1;
+        voce._parole = parole;
+        if (voce.tipo === "GEN") continue;
+        let titoli = [];
+        if (newsSource === "gnews") {
+            titoli = await fetchGNews(voce.arg, num);
+            contatori.rss_fetch = (contatori.rss_fetch || 0) + 1;
+            if (titoli.length > 0) tutteZero = false;
+        } else {
+            titoli = await fetchRSS(voce.arg, num);
+            contatori.rss_fetch = (contatori.rss_fetch || 0) + 1;
+            if (titoli.length > 0) tutteZero = false;
+        }
+        risultatiPerVoce.push({ voce, titoli });
     }
-    return await fetchRSS(query, max);
+
+    // Se siamo in modalità GNews e tutte le voci hanno dato zero titoli (nessuna notizia)
+    if (newsSource === "gnews" && tutteZero) {
+        scriviLog("⚠️ GNews ha restituito zero titoli per TUTTE le voci. Passo a RSS per l'intero run.");
+        newsSource = "rss";
+        // Riacquisisci con RSS
+        risultatiPerVoce.length = 0;
+        tutteZero = true;
+        for (const voce of vociAttive) {
+            const num = voce.num || 1;
+            if (voce.tipo === "GEN") continue;
+            const titoli = await fetchRSS(voce.arg, num);
+            contatori.rss_fetch = (contatori.rss_fetch || 0) + 1;
+            if (titoli.length > 0) tutteZero = false;
+            risultatiPerVoce.push({ voce, titoli });
+        }
+    }
+
+    // Costruisci la coda finale: prima i GEN, poi le notizie raccolte
+    for (const voce of vociAttive) {
+        const num = voce.num || 1;
+        if (voce.tipo === "GEN") {
+            const temi = voce.temi || [voce.arg];
+            for (let i = 0; i < num; i++) {
+                codaArticoli.push({ voce, tema: temi[Math.floor(Math.random() * temi.length)] });
+            }
+        }
+    }
+    for (const { voce, titoli } of risultatiPerVoce) {
+        const num = voce.num || 1;
+        for (const t of titoli) {
+            codaArticoli.push({ voce, tema: t });
+        }
+        if (titoli.length < num) {
+            const mancanti = num - titoli.length;
+            scriviLog(`[CASCATA] Solo ${titoli.length}/${num} notizie per "${voce.arg}". Aggiungo ${mancanti} articoli generici.`);
+            for (let i = 0; i < mancanti; i++) {
+                codaArticoli.push({ voce, tema: `[Generico] ${voce.arg} - approfondimento` });
+            }
+        }
+    }
+    return codaArticoli;
 }
 
 // ---------------------------------------------------------------------------
@@ -356,12 +425,12 @@ async function pausaGemini() {
 async function gestisciErroreQuota(msg) {
     const m = msg.match(/Please retry in ([\d.]+)s/);
     const sec = m ? parseFloat(m[1]) + 2 : 30;
-    scriviLog(`⏳ Attendo ${sec.toFixed(1)}s per quota...`);
+    scriviLog(`⏳ Attendo ${sec.toFixed(1)}s...`);
     await new Promise(r => setTimeout(r, sec * 1000));
 }
 
 // ---------------------------------------------------------------------------
-// CHIAMATA GEMINI
+// CHIAMATA GEMINI (con log ridotto per quota)
 // ---------------------------------------------------------------------------
 
 async function callGemini(sys, prompt, temperature = 0.85) {
@@ -388,23 +457,31 @@ async function callGemini(sys, prompt, temperature = 0.85) {
             });
             const d = await res.json();
             if (d.error) {
-                scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
                 const code = d.error.code;
                 const msg = (d.error.message || "").toLowerCase();
                 if (msg.includes("limit") && msg.includes("per day")) {
-                    scriviLog("❌ QUOTA GIORNALIERA GEMINI");
+                    if (!quotaLogSent) {
+                        scriviLog("❌ QUOTA GIORNALIERA GEMINI (429)");
+                        quotaLogSent = true;
+                    }
                     return null;
                 }
                 if (code === 429 || code === 503) {
                     if (msg.includes("quota exceeded")) {
+                        if (!quotaLogSent) {
+                            scriviLog(`⏳ Quota exceeded, attendo retry...`);
+                            quotaLogSent = true;
+                        }
                         await gestisciErroreQuota(d.error.message);
                         continue;
                     }
                     const ms = Math.pow(2, i) * 10000;
-                    scriviLog(`⏳ Errore ${code}, attendo ${ms/1000}s...`);
+                    if (i === 0) scriviLog(`⏳ Errore ${code}, retry in ${ms/1000}s`);
                     await new Promise(r => setTimeout(r, ms));
                     continue;
                 }
+                // Altri errori loggarli solo se non sono di quota
+                if (!msg.includes("quota")) scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${code})`);
                 return null;
             }
             if (d.candidates?.length > 0) {
@@ -420,7 +497,7 @@ async function callGemini(sys, prompt, temperature = 0.85) {
 }
 
 // ---------------------------------------------------------------------------
-// CHIAMATA GROQ (con max_tokens dinamico e riduzione automatica)
+// CHIAMATA GROQ (gestisce "single user message" unendo system e user)
 // ---------------------------------------------------------------------------
 
 async function callGroq(sys, prompt, temperature = 0.85) {
@@ -430,18 +507,17 @@ async function callGroq(sys, prompt, temperature = 0.85) {
         ricercaModelloGroqEffettuata = true;
     }
 
-    // Troncamento input per evitare errori di lunghezza
     const MAX_SYS = 4000;
     const MAX_PROMPT = 15000;
     let finalSys = sys.length > MAX_SYS ? sys.substring(0, MAX_SYS) + "... [troncato]" : sys;
     let finalPrompt = prompt.length > MAX_PROMPT ? prompt.substring(0, MAX_PROMPT) + "... [troncato]" : prompt;
 
-    const messages = [
+    let messages = [
         { role: "system", content: finalSys },
         { role: "user", content: finalPrompt }
     ];
 
-    let currentMaxTokens = groqMaxTokens; // copia locale per eventuali riduzioni temporanee
+    let currentMaxTokens = groqMaxTokens;
     const url = "https://api.groq.com/openai/v1/chat/completions";
     for (let i = 0; i < 3; i++) {
         await pausaGemini();
@@ -465,32 +541,41 @@ async function callGroq(sys, prompt, temperature = 0.85) {
             if (!res.ok || d.error) {
                 const errorMsg = d.error?.message || `HTTP ${res.status}`;
                 const code = d.error?.code || res.status;
-                scriviLog(`[ERRORE GROQ] ${errorMsg} (code: ${code})`);
                 const msg = (errorMsg || "").toLowerCase();
+                
+                // Gestione errore "single user message" → unisci system e user
+                if (code === 400 && msg.includes("single user message")) {
+                    scriviLog(`[GROQ] Modello ${groqModelCorrente} richiede un solo messaggio. Unisco system+user.`);
+                    const combined = finalSys + "\n\n" + finalPrompt;
+                    messages = [{ role: "user", content: combined }];
+                    continue;
+                }
+                
+                scriviLog(`[ERRORE GROQ] ${errorMsg.substring(0, 150)} (code: ${code})`);
                 if (msg.includes("limit") || code === 429) {
                     scriviLog("❌ QUOTA GROQ ESAURITA");
                     return null;
                 }
-                // Gestione specifica per max_tokens troppo alto
                 if (code === 400 && (msg.includes("max_tokens") || msg.includes("context_window"))) {
                     if (currentMaxTokens > 128) {
                         currentMaxTokens = Math.max(128, Math.floor(currentMaxTokens * 0.6));
-                        scriviLog(`[GROQ] Riduzione max_tokens a ${currentMaxTokens} e riprovo...`);
+                        scriviLog(`[GROQ] Riduzione max_tokens a ${currentMaxTokens}`);
                         continue;
                     } else {
-                        scriviLog(`[GROQ] max_tokens già minimo (${currentMaxTokens}), impossibile ridurre ulteriormente.`);
+                        scriviLog(`[GROQ] max_tokens già minimo`);
                         return null;
                     }
                 }
                 if (code === 400 && msg.includes("reduce the length")) {
                     finalPrompt = finalPrompt.substring(0, Math.floor(finalPrompt.length * 0.6)) + "... [troncato 2]";
-                    messages[1].content = finalPrompt;
-                    scriviLog(`[GROQ] Nuovo tentativo con prompt ridotto (${finalPrompt.length} char)`);
+                    if (messages.length === 1) messages[0].content = finalSys + "\n\n" + finalPrompt;
+                    else messages[1].content = finalPrompt;
+                    scriviLog(`[GROQ] Prompt ridotto a ${finalPrompt.length} char`);
                     continue;
                 }
                 if (code === 429 || code === 503 || code === 500) {
                     const ms = Math.pow(2, i) * 10000;
-                    scriviLog(`⏳ Errore ${code}, attendo ${ms/1000}s...`);
+                    scriviLog(`⏳ Errore ${code}, retry in ${ms/1000}s`);
                     await new Promise(r => setTimeout(r, ms));
                     continue;
                 }
@@ -758,6 +843,9 @@ function paroleTarget(LIMITI) {
 // ---------------------------------------------------------------------------
 
 async function main() {
+    // Reset flag quota log all'inizio di ogni run
+    quotaLogSent = false;
+    
     const stato = caricaStatoProvider();
     currentProvider = stato.provider;
     failureCount = 0;
@@ -808,28 +896,13 @@ async function main() {
     const articoliAbilitati = !limiteSuperato(contatori, LIMITI, "articoli_run_max");
     if (!articoliAbilitati) scriviLog(`⏭️ Limite articoli_run raggiunto`);
     contatori.articoli_run = (contatori.articoli_run||0) + (articoliAbilitati?1:0);
-    const codaArticoli = [];
+    
+    let codaArticoli = [];
     let articoliGenerati = 0;
     if (articoliAbilitati) {
-        for (const voce of vociAttive) {
-            const num = voce.num || 1;
-            voce._parole = parole;
-            scriviLog(`🎣 [${voce.sez}] ${voce.arg} — tipo:${voce.tipo}, num:${num}, firma:${voce.firma}`);
-            if (voce.tipo === "GEN") {
-                const temi = voce.temi || [voce.arg];
-                for (let i=0; i<num; i++) codaArticoli.push({ voce, tema: temi[Math.floor(Math.random()*temi.length)] });
-            } else {
-                const titoli = await fetchNotizie(voce.arg, num);
-                contatori.rss_fetch = (contatori.rss_fetch||0)+1;
-                for (const t of titoli) codaArticoli.push({ voce, tema: t });
-                if (titoli.length < num) {
-                    const mancanti = num - titoli.length;
-                    scriviLog(`[CASCATA] Solo ${titoli.length}/${num}, aggiungo ${mancanti} generici`);
-                    for (let i=0; i<mancanti; i++) codaArticoli.push({ voce, tema: `[Generico] ${voce.arg} - approfondimento` });
-                }
-            }
-        }
+        codaArticoli = await raccoltaNotizie(vociAttive, parole, contatori);
     }
+    
     for (const { voce, tema } of codaArticoli) {
         const sez = voce.sez;
         const infoFirma = risolviPersonaggio(CHI, voce.firma);
@@ -861,6 +934,7 @@ async function main() {
         articoliGenerati++;
         scriviLog(`  ✅ "${(parsed.titolo||tema).substring(0,50)}..." (${commenti.length} commenti)`);
     }
+    
     // Chat
     const chatAbilitata = LIMITI.chat!=="sempre" ? !limiteSuperato(contatori, LIMITI, "chat_run_max") : true;
     const chattaOggi = chatAbilitata && Math.random()<0.30;
@@ -873,12 +947,14 @@ async function main() {
         salvaJSON(CHAT_PATH, storico);
         scriviLog(`💬 Chat salvata (${chat.length} messaggi)`);
     }
+    
     // Aggiorna contatori totali
     contatori.chiamate_gemini_totali = (contatori.chiamate_gemini_totali||0) + contatoreChiamateApi;
     contatori.token_stimati_totali = (contatori.token_stimati_totali||0) + (contatoreChiamateApi*450);
     salvaJSON(CONTATORI_PATH, contatori);
     salvaJSON(RELAZIONI_PATH, relazioni);
     salvaJSON(PERSONAGGI_PATH, personaggi);
+    
     // Articolo personaggio casuale
     const nomiPers = Object.keys(CHI).filter(n=>n!=="default");
     if (nomiPers.length) {
@@ -902,6 +978,7 @@ Rispondi JSON: {"titolo":"...","articolo":"..."}`;
             scriviLog(`✍️ Articolo personaggio da ${pers}: "${parsedPers.titolo.substring(0,50)}..."`);
         }
     }
+    
     if (articoliGenerati === 0) {
         scriviLog("⚠️ Nessun articolo generato. Draft non modificato.");
         if (isNuovoGiorno && oldDraft) scriviLog(`   → Mantenuto draft del ${oldDraft.dataRiferimento}`);
