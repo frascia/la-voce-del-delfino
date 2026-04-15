@@ -2,9 +2,9 @@ name: 🐬 Redazione Automatica v3
 
 on:
   schedule:
-    # Ogni 2 ore dalle 7 alle 21 ora italiana (= 5 alle 19 UTC)
-    - cron: '0 4-22/3 * * *'
-  workflow_dispatch:  # avvio manuale dalla UI di GitHub
+    # Ogni 3 ore dalle 7 alle 22 ora italiana
+    - cron: '0 5-21/3 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -21,12 +21,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Log inizio run
+      - name: Log inizio run (orario Roma)
         run: |
           mkdir -p public/data
-          echo "[$(date '+%d/%m/%Y %H:%M:%S')] 🚀 WORKFLOW AVVIATO - Evento: ${{ github.event_name }}" >> public/data/workflow_errors.log
-          echo "   Run ID: ${{ github.run_id }}" >> public/data/workflow_errors.log
-          echo "   Commit: ${{ github.sha }}" >> public/data/workflow_errors.log
+          echo "════════════════════════════════════════════════════════════" >> public/data/workflow_errors.log
+          echo "[$(TZ='Europe/Rome' date '+%d/%m/%Y %H:%M:%S')] 🚀 WORKFLOW AVVIATO" >> public/data/workflow_errors.log
+          echo "   📅 Data: $(TZ='Europe/Rome' date '+%d/%m/%Y')" >> public/data/workflow_errors.log
+          echo "   🕐 Ora Italia: $(TZ='Europe/Rome' date '+%H:%M:%S')" >> public/data/workflow_errors.log
+          echo "   📌 Evento: ${{ github.event_name }}" >> public/data/workflow_errors.log
+          echo "   🆔 Run ID: ${{ github.run_id }}" >> public/data/workflow_errors.log
+          echo "   🔗 Commit: ${{ github.sha }}" >> public/data/workflow_errors.log
+          echo "════════════════════════════════════════════════════════════" >> public/data/workflow_errors.log
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -36,21 +41,21 @@ jobs:
       - name: Installazione Dipendenze
         run: npm install
 
-      - name: "⚓ FASE 1 — (VERSIONE 3 Fetch RSS o Gnews + Gemini o Groq)"
+      - name: "⚓ FASE 1 — Fetch"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
-          SCHEDULED_RUN: ${{ github.event_name == 'schedule' }} 
+          SCHEDULED_RUN: ${{ github.event_name == 'schedule' }}
         run: node scripts/1-fetch-v4.js
 
-      - name: "⚙️ FASE 2 — Elaborazione v3"
+      - name: "⚙️ FASE 2 — Elaborazione"
         env:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           ADMIN_SECRET_DATA: ${{ secrets.ADMIN_SECRET_DATA }}
         run: node scripts/2-elabora-v3.js
 
-      - name: "🚀 FASE 3 — Deploy v2"
+      - name: "🚀 FASE 3 — Deploy"
         env:
           WORKFLOW_AUTOMATICO: "true"
         run: node scripts/3-deploy-v2.js
@@ -58,15 +63,19 @@ jobs:
       - name: Log fine run (successo)
         if: success()
         run: |
-          echo "[$(date '+%d/%m/%Y %H:%M:%S')] ✅ WORKFLOW COMPLETATO CON SUCCESSO - Run ID: ${{ github.run_id }}" >> public/data/workflow_errors.log
+          echo "[$(TZ='Europe/Rome' date '+%d/%m/%Y %H:%M:%S')] ✅ WORKFLOW COMPLETATO CON SUCCESSO" >> public/data/workflow_errors.log
+          echo "   🕐 Ora Italia: $(TZ='Europe/Rome' date '+%H:%M:%S')" >> public/data/workflow_errors.log
           echo "   📊 Evento: ${{ github.event_name }}" >> public/data/workflow_errors.log
+          echo "════════════════════════════════════════════════════════════" >> public/data/workflow_errors.log
 
       - name: Log fine run (fallimento)
         if: failure()
         run: |
-          echo "[$(date '+%d/%m/%Y %H:%M:%S')] ❌ WORKFLOW FALLITO - Run ID: ${{ github.run_id }}" >> public/data/workflow_errors.log
+          echo "[$(TZ='Europe/Rome' date '+%d/%m/%Y %H:%M:%S')] ❌ WORKFLOW FALLITO" >> public/data/workflow_errors.log
+          echo "   🕐 Ora Italia: $(TZ='Europe/Rome' date '+%H:%M:%S')" >> public/data/workflow_errors.log
           echo "   🔧 Evento: ${{ github.event_name }}" >> public/data/workflow_errors.log
           echo "   ⚠️ Verificare i log su GitHub Actions" >> public/data/workflow_errors.log
+          echo "════════════════════════════════════════════════════════════" >> public/data/workflow_errors.log
 
       - name: Configurazione Pages
         uses: actions/configure-pages@v4
