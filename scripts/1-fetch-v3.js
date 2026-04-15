@@ -286,6 +286,7 @@ async function fetchGNews(query, max) {
     if (max <= 0) return [];
     const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=it&country=it&max=${max}&token=${gnewsApiKey}`;
     try {
+        await new Promise(r => setTimeout(r, 3000));
         const res = await fetch(url);
         const data = await res.json();
         if (!res.ok || data.errors) {
