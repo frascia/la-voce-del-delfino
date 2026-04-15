@@ -494,7 +494,11 @@ async function carica(){
         if(ss.header_img)document.getElementById('header-img').src='public/images/'+ss.header_img;
         if(ss.timbro){const t=document.getElementById('timbro-edizione');t.innerText=ss.timbro;t.style.display='block';}
         const up=ss.last_update||'---';
-        document.getElementById('ts-display').innerText=up!=='---'?'🐬 Il Delfino ha nuotato qui il '+up:'🐬 Il Delfino sta nuotando...';
+        const providerText = ss.llm_provider ? ` (${ss.llm_provider})` : '';
+        document.getElementById('ts-display').innerHTML = up !== '---' 
+            ? `🐬 Il Delfino ha nuotato qui il ${up}${providerText}` 
+            : '🐬 Il Delfino sta nuotando...';
+        
         if(ss.motto)document.getElementById('motto-display').innerText='✦ '+ss.motto+' ✦';
         const tn=ss.ticker_news||[];
         if(tn.length){const doppio=[...tn,...tn];document.getElementById('ticker-track').innerHTML=doppio.map(t=>'<span class="ticker-item">'+esc(t)+'</span>').join('');document.getElementById('ticker-wrap').style.display='block';}
