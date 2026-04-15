@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>La Voce del Delfino 🐬 - Redazione</title>
+    <title>La Voce del Delfino 🐬 - Dashboard Redazione</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -12,10 +12,10 @@
             color: #2c2c2c;
             padding: 20px;
         }
-        .container { max-width: 1200px; margin: 0 auto; }
+        .container { max-width: 1400px; margin: 0 auto; }
         
         /* Header */
-        .header { text-align: center; margin-bottom: 30px; }
+        .header { text-align: center; margin-bottom: 30px; cursor: pointer; }
         .header h1 { font-size: 2.5rem; color: #005f73; margin-bottom: 5px; }
         .header h1 span { font-size: 2rem; }
         .header p { color: #666; font-style: italic; }
@@ -25,18 +25,56 @@
         .warning-msg { background: #fff3e0; color: #ef6c00; padding: 15px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #ef6c00; }
         .success-msg { background: #e8f5e9; color: #2e7d32; padding: 15px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #2e7d32; }
         
+        /* Sezione protetta */
+        .protected-section { display: none; }
+        .protected-section.visible { display: block; }
+        
+        /* Tabs generali */
+        .main-tabs { display: flex; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .main-tab { background: none; border: none; padding: 10px 20px; font-size: 1rem; font-weight: 600; color: #888; cursor: pointer; border-radius: 30px; transition: all 0.2s; }
+        .main-tab:hover { background: #e0e0e0; color: #333; }
+        .main-tab.active { background: #005f73; color: white; }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        
         /* Log */
         .log-section { background: #1e1e1e; border-radius: 16px; padding: 20px; margin-bottom: 30px; }
         .log-section h2 { color: #0f0; font-family: monospace; font-size: 1.2rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
-        .log-day { margin-bottom: 20px; }
-        .log-day-title { color: #0f0; font-family: monospace; font-size: 0.9rem; margin-bottom: 8px; padding: 4px 8px; background: #2a2a2a; border-radius: 6px; display: inline-block; }
+        .log-tabs { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+        .log-tab { background: #2a2a2a; border: none; color: #aaa; padding: 6px 14px; border-radius: 20px; font-family: monospace; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
+        .log-tab:hover { background: #3a3a3a; }
+        .log-tab.active { background: #0f0; color: #000; font-weight: bold; }
+        .log-panel { display: none; }
+        .log-panel.active { display: block; }
         .log-content { font-family: monospace; font-size: 0.75rem; color: #ccc; white-space: pre-wrap; background: #0d0d0d; padding: 12px; border-radius: 8px; max-height: 400px; overflow-y: auto; }
         
+        /* Schede informative */
+        .info-section { background: white; border-radius: 20px; padding: 24px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .info-section h2 { font-size: 1.3rem; color: #005f73; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+        
+        /* Personaggio card */
+        .personaggio-card { background: #f8f6f2; border-radius: 16px; padding: 16px; border-left: 4px solid #005f73; }
+        .personaggio-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .personaggio-avatar { font-size: 2.5rem; }
+        .personaggio-nome { font-weight: bold; font-size: 1.1rem; color: #2c2c2c; }
+        .personaggio-mood { font-size: 0.7rem; color: #888; margin-top: 2px; }
+        .personaggio-bio { font-size: 0.75rem; color: #666; margin-top: 8px; padding-top: 8px; border-top: 1px solid #eee; }
+        
+        /* Relazioni card */
+        .relazione-card { background: #f8f6f2; border-radius: 16px; padding: 12px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .relazione-da { font-weight: bold; min-width: 100px; }
+        .relazione-arrow { color: #888; }
+        .relazione-a { font-weight: bold; min-width: 100px; }
+        .relazione-score { font-family: monospace; font-weight: bold; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; }
+        .relazione-score.amico { background: #2e7d3220; color: #2e7d32; }
+        .relazione-score.simpatico { background: #2e7d3220; color: #558b2f; }
+        .relazione-score.neutro { background: #88888820; color: #666; }
+        .relazione-score.diffidente { background: #ef6c0020; color: #ef6c00; }
+        .relazione-score.ostile { background: #c6282820; color: #c62828; }
+        
         /* Programmazione Redazione */
-        .schedule-section { background: white; border-radius: 20px; padding: 24px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .schedule-section h2 { font-size: 1.3rem; color: #005f73; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
-        .schedule-section h2::before { content: "📅"; font-size: 1.3rem; }
-        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
         .schedule-card { background: #f8f6f2; border-radius: 16px; padding: 16px; border-left: 4px solid #005f73; transition: transform 0.2s, box-shadow 0.2s; }
         .schedule-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .schedule-day { font-size: 0.7rem; text-transform: uppercase; color: #005f73; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; }
@@ -51,49 +89,124 @@
         .schedule-temi { font-size: 0.7rem; color: #666; margin-top: 8px; padding-top: 8px; border-top: 1px solid #eee; }
         .schedule-temi span { display: inline-block; background: #eee; padding: 2px 8px; border-radius: 12px; margin: 2px 4px 2px 0; font-size: 0.65rem; }
         
-        /* Statistiche Config */
+        /* Statistiche */
         .stats-section { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
-        .stat-card { background: white; border-radius: 16px; padding: 16px 20px; flex: 1; min-width: 150px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; }
+        .stat-card { background: white; border-radius: 16px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; }
         .stat-number { font-size: 2rem; font-weight: bold; color: #005f73; }
-        .stat-label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        .stat-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
         
         /* Footer */
         .footer { text-align: center; padding: 20px; color: #888; font-size: 0.7rem; border-top: 1px solid #ddd; margin-top: 30px; }
         
-        /* Tabs per log */
-        .log-tabs { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
-        .log-tab { background: #2a2a2a; border: none; color: #aaa; padding: 6px 14px; border-radius: 20px; font-family: monospace; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
-        .log-tab:hover { background: #3a3a3a; }
-        .log-tab.active { background: #0f0; color: #000; font-weight: bold; }
-        .log-panel { display: none; }
-        .log-panel.active { display: block; }
+        /* Overlay password */
+        .password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            font-family: monospace;
+        }
+        .password-box {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #0f0;
+        }
+        .password-box h3 { color: #0f0; margin-bottom: 20px; }
+        .password-box input {
+            background: #0d0d0d;
+            border: 1px solid #333;
+            color: #0f0;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-family: monospace;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            outline: none;
+        }
+        .password-box input:focus { border-color: #0f0; }
+        .password-box button {
+            background: #0f0;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            margin-top: 20px;
+            font-family: monospace;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .password-box button:hover { background: #0d0; }
+        .password-error { color: #f00; margin-top: 12px; font-size: 0.8rem; display: none; }
         
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             body { padding: 12px; }
-            .schedule-grid { grid-template-columns: 1fr; }
+            .schedule-grid, .info-grid { grid-template-columns: 1fr; }
+            .stats-section { flex-wrap: wrap; }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="header">
+    <div class="header" id="logo-innesco">
         <h1>🐬 La Voce del Delfino <span>📰</span></h1>
-        <p>Redazione e programmazione</p>
+        <p>Dashboard Redazione</p>
     </div>
 
     <div id="messages"></div>
 
-    <div class="stats-section" id="stats"></div>
-
-    <div class="schedule-section">
-        <h2>Programmazione Redazione</h2>
-        <div id="schedule-grid" class="schedule-grid"></div>
-    </div>
-
-    <div class="log-section">
-        <h2>📋 Log di sistema</h2>
-        <div class="log-tabs" id="log-tabs"></div>
-        <div id="log-panels"></div>
+    <div id="protected-content" class="protected-section">
+        <!-- Stats -->
+        <div class="stats-section" id="stats"></div>
+        
+        <!-- Main Tabs -->
+        <div class="main-tabs">
+            <button class="main-tab active" data-tab="schedule">📅 Programmazione</button>
+            <button class="main-tab" data-tab="personaggi">👥 Personaggi</button>
+            <button class="main-tab" data-tab="relazioni">💞 Relazioni</button>
+            <button class="main-tab" data-tab="log">📋 Log</button>
+        </div>
+        
+        <!-- Tab: Programmazione -->
+        <div class="tab-panel active" id="tab-schedule">
+            <div class="info-section">
+                <h2>Programmazione Redazione</h2>
+                <div id="schedule-grid" class="schedule-grid"></div>
+            </div>
+        </div>
+        
+        <!-- Tab: Personaggi -->
+        <div class="tab-panel" id="tab-personaggi">
+            <div class="info-section">
+                <h2>Personaggi</h2>
+                <div id="personaggi-grid" class="info-grid"></div>
+            </div>
+        </div>
+        
+        <!-- Tab: Relazioni -->
+        <div class="tab-panel" id="tab-relazioni">
+            <div class="info-section">
+                <h2>Relazioni tra Personaggi</h2>
+                <div id="relazioni-list"></div>
+            </div>
+        </div>
+        
+        <!-- Tab: Log -->
+        <div class="tab-panel" id="tab-log">
+            <div class="log-section">
+                <h2>📋 Log di sistema</h2>
+                <div class="log-tabs" id="log-tabs"></div>
+                <div id="log-panels"></div>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
@@ -102,7 +215,9 @@
 </div>
 
 <script>
-    // Mappa giorni
+    let clicks = 0;
+    let lastClick = 0;
+    
     const giorniMap = {
         'dom': 'Domenica', 'lun': 'Lunedì', 'mar': 'Martedì', 'mer': 'Mercoledì',
         'gio': 'Giovedì', 'ven': 'Venerdì', 'sab': 'Sabato', 'default': 'Tutti i giorni'
@@ -117,39 +232,65 @@
         setTimeout(() => msg.remove(), 8000);
     }
 
-    async function caricaConfig() {
+    async function verificaPassword(pwd) {
         try {
-            const response = await fetch('public/data/config_v2.json?v=' + Date.now());
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
-            const config = await response.json();
-            
-            // Validazione base
-            if (!config.CHI) { mostraMessaggio('error', '❌ Config mancante: sezione CHI non trovata'); return null; }
-            if (!config.REDAZIONE) { mostraMessaggio('error', '❌ Config mancante: sezione REDAZIONE non trovata'); return null; }
-            
-            // Verifica che tutti i personaggi in REDAZIONE esistano in CHI
-            const personaggiEsistenti = Object.keys(config.CHI);
-            const vociInvalidi = [];
-            for (const voce of config.REDAZIONE) {
-                if (voce.firma && !personaggiEsistenti.includes(voce.firma) && voce.firma !== 'default') {
-                    vociInvalidi.push(`${voce.firma} (${voce.arg || voce.sez})`);
-                }
-            }
-            if (vociInvalidi.length > 0) {
-                mostraMessaggio('warning', `⚠️ Personaggi non trovati: ${vociInvalidi.join(', ')}`);
-            }
-            
-            return config;
+            const auth = await fetch('public/data/auth_info.json?v=' + Date.now()).then(r => r.json());
+            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
+                .map(b => b.toString(16).padStart(2, '0')).join('');
+            return hash === auth.check;
         } catch(e) {
-            mostraMessaggio('error', `❌ Errore caricamento config: ${e.message}`);
-            return null;
+            return false;
         }
     }
 
+    function mostraPasswordOverlay() {
+        const overlay = document.createElement('div');
+        overlay.className = 'password-overlay';
+        overlay.innerHTML = `
+            <div class="password-box">
+                <h3>🔐 Accesso Redazione</h3>
+                <input type="password" id="pwd-input" placeholder="Inserisci password" autofocus>
+                <div class="password-error" id="pwd-error">Password errata</div>
+                <button id="pwd-submit">ENTRA</button>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+        
+        const input = overlay.querySelector('#pwd-input');
+        const submit = overlay.querySelector('#pwd-submit');
+        const errorDiv = overlay.querySelector('#pwd-error');
+        
+        const check = async () => {
+            const ok = await verificaPassword(input.value);
+            if (ok) {
+                overlay.remove();
+                document.getElementById('protected-content').classList.add('visible');
+                await caricaTuttiIDati();
+            } else {
+                errorDiv.style.display = 'block';
+                input.value = '';
+                input.focus();
+            }
+        };
+        
+        submit.onclick = check;
+        input.onkeypress = (e) => { if (e.key === 'Enter') check(); };
+    }
+
+    document.getElementById('logo-innesco').onclick = () => {
+        const ora = Date.now();
+        if (ora - lastClick > 1000) clicks = 0;
+        clicks++;
+        lastClick = ora;
+        if (clicks === 5) {
+            mostraPasswordOverlay();
+            clicks = 0;
+        }
+    };
+
     function getGiornoCorrente() {
         const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
-        const oggi = new Date().getDay();
-        return giorni[oggi];
+        return giorni[new Date().getDay()];
     }
 
     function getGiorniAttivi(giorniStr) {
@@ -162,16 +303,57 @@
         return giorniAttivi.includes('default') || giorniAttivi.includes(oggi);
     }
 
-    function renderStats(config) {
+    function getScoreClass(score) {
+        if (score >= 0.7) return 'amico';
+        if (score >= 0.3) return 'simpatico';
+        if (score >= -0.2) return 'neutro';
+        if (score >= -0.6) return 'diffidente';
+        return 'ostile';
+    }
+
+    async function caricaConfig() {
+        try {
+            const response = await fetch('public/data/config_v2.json?v=' + Date.now());
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return await response.json();
+        } catch(e) {
+            mostraMessaggio('error', `❌ Errore caricamento config: ${e.message}`);
+            return null;
+        }
+    }
+
+    async function caricaPersonaggi() {
+        try {
+            const response = await fetch('public/data/_personaggi.json?v=' + Date.now());
+            if (!response.ok) return {};
+            return await response.json();
+        } catch(e) {
+            return {};
+        }
+    }
+
+    async function caricaRelazioni() {
+        try {
+            const response = await fetch('public/data/_relazioni.json?v=' + Date.now());
+            if (!response.ok) return {};
+            return await response.json();
+        } catch(e) {
+            return {};
+        }
+    }
+
+    function renderStats(config, personaggi) {
         const statsDiv = document.getElementById('stats');
         const numPersonaggi = Object.keys(config.CHI || {}).filter(k => k !== 'default').length;
+        const numPersonaggiStato = Object.keys(personaggi || {}).filter(k => k !== '_runCount').length;
         const numVoci = (config.REDAZIONE || []).length;
         const numRSS = (config.REDAZIONE || []).filter(v => v.tipo === 'RSS').length;
         const numGEN = (config.REDAZIONE || []).filter(v => v.tipo === 'GEN').length;
         const numRED = (config.REDAZIONE || []).filter(v => v.tipo === 'RED').length;
         
         statsDiv.innerHTML = `
-            <div class="stat-card"><div class="stat-number">${numPersonaggi}</div><div class="stat-label">Personaggi</div></div>
+            <div class="stat-card"><div class="stat-number">${numPersonaggi}</div><div class="stat-label">Personaggi (config)</div></div>
+            <div class="stat-card"><div class="stat-number">${numPersonaggiStato}</div><div class="stat-label">Personaggi (stato)</div></div>
             <div class="stat-card"><div class="stat-number">${numVoci}</div><div class="stat-label">Voci Redazione</div></div>
             <div class="stat-card"><div class="stat-number">${numRSS}</div><div class="stat-label">📰 RSS</div></div>
             <div class="stat-card"><div class="stat-number">${numGEN}</div><div class="stat-label">✍️ GEN</div></div>
@@ -213,13 +395,67 @@
         }).join('');
     }
 
+    function renderPersonaggi(config, personaggiStato) {
+        const container = document.getElementById('personaggi-grid');
+        const personaggiLista = Object.entries(config.CHI || {}).filter(([nome]) => nome !== 'default');
+        
+        if (personaggiLista.length === 0) {
+            container.innerHTML = '<div style="text-align:center;padding:40px;color:#888;">👥 Nessun personaggio trovato</div>';
+            return;
+        }
+        
+        container.innerHTML = personaggiLista.map(([nome, dati]) => {
+            const stato = personaggiStato[nome] || { stato: 'normale', umore: 'neutro', dal: null };
+            return `
+                <div class="personaggio-card">
+                    <div class="personaggio-header">
+                        <div class="personaggio-avatar">${dati.avatar || '👤'}</div>
+                        <div>
+                            <div class="personaggio-nome">${nome}</div>
+                            <div class="personaggio-mood">🎭 ${dati.mood || 'neutro'}</div>
+                        </div>
+                    </div>
+                    <div class="personaggio-bio">
+                        <strong>Bio breve:</strong> ${dati.bio_breve || '—'}<br>
+                        <strong>Peso:</strong> ${dati.peso || 0.6}<br>
+                        <strong>Stato:</strong> ${stato.stato || 'normale'} (${stato.umore || 'neutro'})<br>
+                        ${stato.dal ? `<strong>Dal:</strong> ${stato.dal}` : ''}
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function renderRelazioni(relazioni) {
+        const container = document.getElementById('relazioni-list');
+        const relazioniLista = Object.entries(relazioni || {}).filter(([key]) => !key.startsWith('_'));
+        
+        if (relazioniLista.length === 0) {
+            container.innerHTML = '<div style="text-align:center;padding:40px;color:#888;">💞 Nessuna relazione registrata</div>';
+            return;
+        }
+        
+        container.innerHTML = relazioniLista.map(([key, val]) => {
+            const [da, a] = key.split('→');
+            const scoreClass = getScoreClass(val.score || 0);
+            return `
+                <div class="relazione-card">
+                    <span class="relazione-da">${da}</span>
+                    <span class="relazione-arrow">→</span>
+                    <span class="relazione-a">${a}</span>
+                    <span class="relazione-score ${scoreClass}">${val.label || 'neutro'} (${(val.score || 0).toFixed(2)})</span>
+                    <span style="font-size:0.65rem;color:#888;margin-left:auto;">${val.ultimo_aggiornamento || ''}</span>
+                </div>
+            `;
+        }).join('');
+    }
+
     async function caricaLog() {
         try {
             const response = await fetch('public/data/redazione-v2.log?v=' + Date.now());
             if (!response.ok) throw new Error('Log non disponibile');
             const logText = await response.text();
             
-            // Dividi per giorno
             const lines = logText.split('\n');
             const giorni = {};
             let giornoCorrente = '';
@@ -235,7 +471,6 @@
                 }
             }
             
-            // Crea tabs e panels
             const giorniLista = Object.keys(giorni).sort().reverse();
             const tabsDiv = document.getElementById('log-tabs');
             const panelsDiv = document.getElementById('log-panels');
@@ -256,7 +491,6 @@
                 </div>`
             ).join('');
             
-            // Aggiungi eventi tabs
             document.querySelectorAll('.log-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
                     const day = tab.dataset.day;
@@ -272,17 +506,35 @@
         }
     }
 
-    async function init() {
+    // Tabs principali
+    function initMainTabs() {
+        const tabs = document.querySelectorAll('.main-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.tab;
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                document.getElementById(`tab-${target}`).classList.add('active');
+            });
+        });
+    }
+
+    async function caricaTuttiIDati() {
         const config = await caricaConfig();
         if (!config) return;
         
+        const personaggiStato = await caricaPersonaggi();
+        const relazioni = await caricaRelazioni();
         const oggi = getGiornoCorrente();
-        renderStats(config);
+        
+        renderStats(config, personaggiStato);
         renderSchedule(config, oggi);
+        renderPersonaggi(config, personaggiStato);
+        renderRelazioni(relazioni);
         await caricaLog();
+        initMainTabs();
     }
-    
-    init();
 </script>
 </body>
 </html>
