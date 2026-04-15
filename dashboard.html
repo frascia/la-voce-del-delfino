@@ -69,6 +69,25 @@
         .stats-run-number { font-size: 2rem; font-weight: bold; color: #0f0; }
         .stats-run-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
         
+        /* Ultimo run */
+        .ultimo-run {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            border-left: 4px solid;
+        }
+        .ultimo-run.success { border-left-color: #4caf50; }
+        .ultimo-run.error { border-left-color: #f44336; }
+        .ultimo-run-label { color: #0f0; font-weight: bold; }
+        .badge-manual { background: #ff980020; color: #ff9800; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; }
+        .badge-scheduled { background: #4caf5020; color: #4caf50; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; }
+        
         .run-details {
             background: #1a1a1a;
             border-radius: 12px;
@@ -95,12 +114,34 @@
         .run-details .success-row td { color: #4caf50; }
         .run-details .error-row td { color: #f44336; }
         .run-details .manual-row { background: #2a2a2a; }
-        .run-details .scheduled-row { background: #1e1e1e; }
         .provider-gemini { color: #4285f4; }
         .provider-groq { color: #f9ab00; }
         .provider-nessuno { color: #888; }
-        .badge-manual { background: #ff980020; color: #ff9800; padding: 2px 8px; border-radius: 20px; font-size: 0.65rem; font-weight: bold; }
-        .badge-scheduled { background: #4caf5020; color: #4caf50; padding: 2px 8px; border-radius: 20px; font-size: 0.65rem; font-weight: bold; }
+        
+        /* Workflow errors */
+        .workflow-errors-section {
+            background: #2a2a2a;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+        .workflow-errors-section h2 {
+            font-size: 1.2rem;
+            color: #0f0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .workflow-errors-list {
+            font-family: monospace;
+            font-size: 0.7rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .workflow-errors-list div {
+            padding: 4px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
         
         /* Log */
         .log-section { background: #0d0d0d; border-radius: 16px; padding: 20px; margin-bottom: 30px; border: 1px solid #333; }
@@ -209,6 +250,7 @@
         @media (max-width: 700px) {
             .schedule-grid, .info-grid { grid-template-columns: 1fr; }
             .stats-run-grid { grid-template-columns: repeat(2, 1fr); }
+            .ultimo-run { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -234,7 +276,14 @@
                 <div class="stats-run-card"><div class="stats-run-number" id="run-groq">0</div><div class="stats-run-label">🦙 Groq</div></div>
                 <div class="stats-run-card"><div class="stats-run-number" id="run-none">0</div><div class="stats-run-label">⚠️ Nessuno</div></div>
             </div>
+            <div id="ultimo-run-container"></div>
             <div id="run-details" class="run-details"></div>
+        </div>
+        
+        <!-- Workflow Errors -->
+        <div class="workflow-errors-section" id="workflow-errors" style="display:none;">
+            <h2>⚠️ Workflow GitHub</h2>
+            <div id="workflow-errors-list" class="workflow-errors-list"></div>
         </div>
         
         <div class="main-tabs">
@@ -266,6 +315,8 @@
         'dom': 'Domenica', 'lun': 'Lunedì', 'mar': 'Martedì', 'mer': 'Mercoledì',
         'gio': 'Giovedì', 'ven': 'Venerdì', 'sab': 'Sabato', 'default': 'Tutti i giorni'
     };
+
+    function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 
     function mostraMessaggio(tipo, testo) {
         const container = document.getElementById('messages');
@@ -367,6 +418,27 @@
         } catch(e) { return {}; }
     }
 
+    async function caricaWorkflowErrors() {
+        try {
+            const response = await fetch('public/data/workflow_errors.log?v=' + Date.now());
+            if (!response.ok) return;
+            const text = await response.text();
+            const lines = text.split('\n').filter(l => l.trim());
+            if (lines.length === 0) return;
+            const container = document.getElementById('workflow-errors-list');
+            if (!container) return;
+            container.innerHTML = lines.map(line => {
+                let color = '#ccc';
+                if (line.includes('🚀')) color = '#0f0';
+                if (line.includes('✅')) color = '#4caf50';
+                if (line.includes('❌')) color = '#f44336';
+                if (line.includes('⚠️')) color = '#ff9800';
+                return `<div style="color:${color};">${esc(line)}</div>`;
+            }).join('');
+            document.getElementById('workflow-errors').style.display = 'block';
+        } catch(e) { console.error(e); }
+    }
+
     async function caricaStatisticheRun() {
         try {
             const response = await fetch('public/data/redazione-v2.log?v=' + Date.now());
@@ -390,16 +462,14 @@
                 const dataRun = new Date(`${year}-${month}-${day}`);
                 if (dataRun < setteGiorniFa) continue;
                 
-                // Rileva inizio run e tipo (MANUALE o SCHEDULATO)
-                if (line.includes('🐬 NUOVO RUN')) {
+                if (line.includes('🐬 NUOVO RUN') || line.includes('AVVIO RUN')) {
                     if (currentRun) runs.push(currentRun);
                     let tipo = 'SCHEDULATO';
-                    // Cerca nelle righe successive per determinare il tipo
                     for (let j = i; j < Math.min(i + 20, lines.length); j++) {
                         if (lines[j].includes('🏷️ Run MANUALE')) { tipo = 'MANUALE'; break; }
                         if (lines[j].includes('🏷️ Run SCHEDULATO')) { tipo = 'SCHEDULATO'; break; }
                     }
-                    currentRun = { data: dataStr, success: false, provider: 'nessuno', articoli: 0, tipo: tipo };
+                    currentRun = { data: dataStr, success: false, provider: 'nessuno', articoli: 0, tipo: tipo, error: null };
                 }
                 
                 if (currentRun) {
@@ -412,11 +482,19 @@
                         if (artMatch) {
                             currentRun.articoli = parseInt(artMatch[1]);
                             currentRun.success = currentRun.articoli > 0;
+                        } else if (line.includes('Nessuna generazione') || line.includes('Draft vuoto creato')) {
+                            currentRun.success = false;
+                            currentRun.articoli = 0;
                         }
                     }
                     if (line.includes('Nessun articolo generato')) {
                         currentRun.success = false;
                         currentRun.articoli = 0;
+                    }
+                    if (line.includes('CRITICAL ERROR') || line.includes('ERRORE CRITICO')) {
+                        currentRun.success = false;
+                        currentRun.articoli = 0;
+                        currentRun.error = line;
                     }
                 }
             }
@@ -436,6 +514,24 @@
             document.getElementById('run-groq').innerText = groq;
             document.getElementById('run-none').innerText = none;
             
+            // Ultimo run
+            const ultimoRun = runs[0];
+            const ultimoContainer = document.getElementById('ultimo-run-container');
+            if (ultimoRun) {
+                ultimoContainer.innerHTML = `
+                    <div class="ultimo-run ${ultimoRun.success ? 'success' : 'error'}">
+                        <div><span class="ultimo-run-label">📌 ULTIMO RUN</span> <span class="${ultimoRun.tipo === 'MANUALE' ? 'badge-manual' : 'badge-scheduled'}">${ultimoRun.tipo}</span></div>
+                        <div>📅 ${ultimoRun.data}</div>
+                        <div>${ultimoRun.success ? '✅ SUCCESSO' : '❌ ERRORE'}</div>
+                        <div>🤖 ${ultimoRun.provider === 'gemini' ? 'Gemini' : ultimoRun.provider === 'groq' ? 'Groq' : 'Nessuno'}</div>
+                        <div>📰 ${ultimoRun.articoli} articoli</div>
+                    </div>
+                `;
+            } else {
+                ultimoContainer.innerHTML = '';
+            }
+            
+            // Tabella dettagli
             const detailsDiv = document.getElementById('run-details');
             if (runs.length > 0) {
                 detailsDiv.innerHTML = `
@@ -443,9 +539,9 @@
                         <thead><tr><th>Data</th><th>Tipo</th><th>Esito</th><th>Provider</th><th>Articoli</th></tr></thead>
                         <tbody>
                             ${runs.slice(0, 30).map(r => `
-                                <tr class="${r.success ? 'success-row' : 'error-row'} ${r.tipo === 'MANUALE' ? 'manual-row' : 'scheduled-row'}">
+                                <tr class="${r.success ? 'success-row' : 'error-row'} ${r.tipo === 'MANUALE' ? 'manual-row' : ''}">
                                     <td>${r.data}</td>
-                                    <td><span class="${r.tipo === 'MANUALE' ? 'badge-manual' : 'badge-scheduled'}">${r.tipo === 'MANUALE' ? '👤 MANUALE' : '⏰ SCHEDULATO'}</span></td>
+                                    <td><span class="${r.tipo === 'MANUALE' ? 'badge-manual' : 'badge-scheduled'}">${r.tipo}</span></td>
                                     <td>${r.success ? '✅ Successo' : '❌ Errore'}</td>
                                     <td class="provider-${r.provider}">${r.provider === 'gemini' ? '🤖 Gemini' : r.provider === 'groq' ? '🦙 Groq' : '⚠️ Nessuno'}</td>
                                     <td>${r.articoli}</td>
@@ -626,6 +722,7 @@
         renderRelazioni(relazioni);
         await caricaLog();
         await caricaStatisticheRun();
+        await caricaWorkflowErrors();
         initMainTabs();
     }
 
