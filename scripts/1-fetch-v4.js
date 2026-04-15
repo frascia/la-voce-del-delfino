@@ -2,11 +2,11 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-15
- * VERSIONE: 4.8
+ * VERSIONE: 4.9
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
- *              Gestione provider KO: mantiene draft esistente o crea vuoto.
+ *              Log con prefisso [FETCH] per chiarezza.
  */
 
 import fs from "fs";
@@ -41,11 +41,20 @@ import { initArticoli, generaArticolo, generaCommenti } from "./lib/articoli.js"
 
 function log(msg) { scriviLog(msg, LOG_PATH); }
 
-// Test rapido provider
-async function testProvider(provider) {
+// Test rapido provider con modello specifico
+let activeGeminiModelGlobal = "gemini-1.5-flash";
+
+async function testProvider(provider, modelName = null) {
     const testSys = "Rispondi solo con 'ok' in JSON: {\"risposta\":\"ok\"}";
     const testPrompt = "Test";
     try {
+        if (provider === "gemini" && modelName) {
+            const originalModel = activeGeminiModelGlobal;
+            activeGeminiModelGlobal = modelName;
+            const result = await callLLM(testSys, testPrompt, 0.1);
+            activeGeminiModelGlobal = originalModel;
+            return result !== null;
+        }
         const result = await callLLM(testSys, testPrompt, 0.1);
         return result !== null;
     } catch(e) {
@@ -60,18 +69,18 @@ async function main() {
     if (process.env.RESET_DRAFT === 'true') {
         if (fs.existsSync(DRAFT_PATH)) {
             fs.unlinkSync(DRAFT_PATH);
-            log(`🗑️ Draft cancellato su richiesta (RESET_DRAFT=true)`);
+            log(`[FETCH] 🗑️ Draft cancellato su richiesta (RESET_DRAFT=true)`);
         }
         [TEMP_PATH, BACKUP_PATH].forEach(p => {
             if (fs.existsSync(p)) {
                 fs.unlinkSync(p);
-                log(`🗑️ Cancellato anche ${path.basename(p)}`);
+                log(`[FETCH] 🗑️ Cancellato anche ${path.basename(p)}`);
             }
         });
     }
 
     const isScheduled = process.env.SCHEDULED_RUN === "true";
-    log(`🏷️ Run ${isScheduled ? "SCHEDULATO (automatico)" : "MANUALE"}`);
+    log(`[FETCH] 🏷️ Run ${isScheduled ? "SCHEDULATO (automatico)" : "MANUALE"}`);
 
     initConfig(CONFIG_PATH, log);
     initNews(process.env.GNEWS_API_KEY || "", process.env.NEWS_SOURCE || "gnews", log);
@@ -91,8 +100,8 @@ async function main() {
     let contatori = caricaContatori(CONTATORI_PATH, LIMITI, log);
     const articoliAttivi = fasciaDiArticoliAttiva(LIMITI);
     const parole = paroleTarget(LIMITI);
-    log(`📊 Quote: chiamate=${contatori.chiamate_gemini??0}, rss=${contatori.rss_fetch??0}`);
-    log(`🕐 Fascia attiva: ${articoliAttivi?"SÌ":"NO"} | Parole target: ~${parole}`);
+    log(`[FETCH] 📊 Quote: chiamate=${contatori.chiamate_gemini??0}, rss=${contatori.rss_fetch??0}`);
+    log(`[FETCH] 🕐 Fascia attiva: ${articoliAttivi?"SÌ":"NO"} | Parole target: ~${parole}`);
 
     const oggi = giornoOggi();
     const agenda = risolviAgenda(AGENDA, oggi);
@@ -106,15 +115,15 @@ async function main() {
     relazioni = applicaDecay(relazioni);
 
     const vociAttive = getVociAttive(oggi);
-    log(`📋 Voci attive: ${vociAttive.length}`);
+    log(`[FETCH] 📋 Voci attive: ${vociAttive.length}`);
 
     // Log delle voci RED (Dalla Redazione) attive oggi
     const vociRed = vociAttive.filter(v => v.tipo === "RED");
     if (vociRed.length > 0) {
-        log(`\n📌 REDAZIONALI OGGI:`);
+        log(`[FETCH] \n📌 REDAZIONALI OGGI:`);
         for (const voce of vociRed) {
             const numTemi = voce.temi?.length || (voce.arg ? 1 : 0);
-            log(`   ✍️ ${voce.firma} (${voce.sez}) – ${numTemi} temi`);
+            log(`[FETCH]    ✍️ ${voce.firma} (${voce.sez}) – ${numTemi} temi`);
         }
     }
 
@@ -122,20 +131,46 @@ async function main() {
     const draftEsistente = fs.existsSync(DRAFT_PATH) ? caricaJSON(DRAFT_PATH, null) : null;
     const isNuovoGiorno = !draftEsistente || draftEsistente.dataRiferimento !== oggiStr;
 
-    // Test provider
-    log(`🔍 Verifica disponibilità provider...`);
-    const geminiOk = await testProvider("gemini");
+    // Test provider con visualizzazione modelli
+    const modelliDaTestare = ["gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-1.5-flash"];
+    let geminiModelloFunzionante = null;
+
+    log(`[FETCH] 🔍 Verifica disponibilità provider...`);
+
+    log(`[FETCH]    📡 Test Gemini...`);
+    for (const model of modelliDaTestare) {
+        log(`[FETCH]       🔍 Test modello ${model}...`);
+        const ok = await testProvider("gemini", model);
+        if (ok) {
+            geminiModelloFunzionante = model;
+            log(`[FETCH]       ✅ ${model} disponibile`);
+            break;
+        } else {
+            log(`[FETCH]       ❌ ${model} non risponde`);
+        }
+    }
+
+    const geminiOk = geminiModelloFunzionante !== null;
+    if (geminiOk) {
+        log(`[FETCH]    ✅ Gemini disponibile (modello selezionato: ${geminiModelloFunzionante})`);
+        activeGeminiModelGlobal = geminiModelloFunzionante;
+    } else {
+        log(`[FETCH]    ❌ Gemini NON disponibile (nessun modello risponde)`);
+    }
+
+    log(`[FETCH]    📡 Test Groq...`);
     const groqOk = await testProvider("groq");
+    log(`[FETCH]    ${groqOk ? "✅ Groq disponibile" : "❌ Groq NON disponibile"}`);
 
     if (!geminiOk && !groqOk) {
-        log(`❌ NESSUN PROVIDER DISPONIBILE (Gemini e Groq non rispondono)`);
+        log(`[FETCH] ❌ NESSUN PROVIDER DISPONIBILE (Gemini e Groq non rispondono)`);
         
         if (draftEsistente) {
-            log(`📁 Mantengo draft esistente del ${draftEsistente.dataRiferimento} (${contaArticoli(draftEsistente)} articoli)`);
-            log(`⏭️ Salto generazione articoli, la fase 2 elaborerà il draft esistente`);
+            log(`[FETCH] 📁 Mantengo draft esistente del ${draftEsistente.dataRiferimento} (${contaArticoli(draftEsistente)} articoli)`);
+            log(`[FETCH] ⏭️ Salto generazione articoli, la fase 2 elaborerà il draft esistente`);
             return;
         } else {
-            log(`⚠️ Nessun draft esistente – creo draft vuoto per evitare crash fase 2`);
+            log(`[FETCH] ⚠️ Nessun draft esistente – creo draft vuoto per evitare crash fase 2`);
             
             const draftVuoto = {
                 dataRiferimento: oggiStr,
@@ -154,20 +189,21 @@ async function main() {
             }
             
             salvaJSON(DRAFT_PATH, draftVuoto);
-            log(`💾 Draft vuoto creato per il ${oggiStr}`);
-            log(`⏭️ La fase 2 avrà un file da elaborare (senza articoli)`);
+            log(`[FETCH] 💾 Draft vuoto creato per il ${oggiStr}`);
+            log(`[FETCH] ⏭️ La fase 2 avrà un file da elaborare (senza articoli)`);
             return;
         }
     }
 
-    log(`✅ Provider disponibili: ${geminiOk ? "Gemini" : ""} ${groqOk ? "Groq" : ""}`);
+    const providerScelto = geminiOk ? "Gemini" : "Groq";
+    log(`[FETCH] 🎯 Provider scelto per questo run: ${providerScelto}${geminiOk ? ` (modello: ${activeGeminiModelGlobal})` : ""}`);
 
     const { draft, oldDraft } = await caricaDraft(DRAFT_PATH, oggiStr, agenda, IMPOSTAZIONI, STILI);
     draft.oraAggiornamento = oraAggiornamento;
     inizializzaSezioni(draft, vociAttive, STILI);
 
     const articoliAbilitati = !limiteSuperato(contatori, LIMITI, "articoli_run_max");
-    if (!articoliAbilitati) log(`⏭️ Limite articoli_run raggiunto`);
+    if (!articoliAbilitati) log(`[FETCH] ⏭️ Limite articoli_run raggiunto`);
     contatori.articoli_run = (contatori.articoli_run||0) + (articoliAbilitati?1:0);
 
     let codaArticoli = [];
@@ -181,7 +217,7 @@ async function main() {
     for (const { voce, tema } of codaArticoli) {
         const key = `${voce.sez}|${tema}`;
         if (generatiSet.has(key)) {
-            log(`⚠️ [FETCH] Duplicato evitato: ${tema}`);
+            log(`[FETCH] ⚠️ Duplicato evitato: ${tema}`);
             continue;
         }
         generatiSet.add(key);
@@ -190,12 +226,12 @@ async function main() {
         const infoFirma = risolviPersonaggio(CHI, voce.firma);
         const result = await generaArticolo(voce, CHI, tema, callLLM);
         if (!result) {
-            log(`⚠️ [FETCH] SKIP articolo per "${tema.substring(0, 40)}..." – nessun output valido da ${voce.firma}`);
+            log(`[FETCH] ⚠️ SKIP articolo per "${tema.substring(0, 40)}..." – nessun output valido da ${voce.firma}`);
             continue;
         }
         const { provider, titolo, articolo: articoloTesto, commento } = result;
         if (!articoloTesto || articoloTesto.length < 50) {
-            log(`⚠️ [FETCH] SKIP articolo per "${tema.substring(0, 40)}..." – testo troppo corto (${articoloTesto?.length || 0} caratteri) da ${voce.firma}`);
+            log(`[FETCH] ⚠️ SKIP articolo per "${tema.substring(0, 40)}..." – testo troppo corto (${articoloTesto?.length || 0} caratteri) da ${voce.firma}`);
             continue;
         }
         const commenti = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI, callLLM);
@@ -220,9 +256,9 @@ async function main() {
         articoliGenerati++;
         
         if (voce.tipo === "RED") {
-            log(`✍️ [FETCH] [Dalla Redazione] ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri`);
+            log(`[FETCH] ✍️ [Dalla Redazione] ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri`);
         } else {
-            log(`✅ [FETCH] ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri, ${commenti.length} commenti`);
+            log(`[FETCH] ✅ ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri, ${commenti.length} commenti`);
         }
     }
 
@@ -235,7 +271,7 @@ async function main() {
         storico.unshift({ data: oraAggiornamento, messaggi: chat });
         if (storico.length>30) storico.splice(30);
         salvaJSON(CHAT_PATH, storico);
-        log(`💬 Chat salvata (${chat.length} messaggi)`);
+        log(`[FETCH] 💬 Chat salvata (${chat.length} messaggi)`);
     }
 
     contatori.chiamate_gemini_totali = (contatori.chiamate_gemini_totali||0) + (globalThis._chiamateApi || 0);
@@ -255,13 +291,13 @@ async function main() {
 
     // Se nessun articolo è stato generato, mantieni il draft esistente (non sovrascrivere)
     if (articoliGenerati === 0) {
-        log(`⚠️ Nessun articolo generato in questo run.`);
+        log(`[FETCH] ⚠️ Nessun articolo generato in questo run.`);
         if (draftEsistente && isNuovoGiorno) {
-            log(`📁 Nuovo giorno ma nessun articolo – mantengo draft del ${draftEsistente.dataRiferimento} (${contaArticoli(draftEsistente)} articoli)`);
+            log(`[FETCH] 📁 Nuovo giorno ma nessun articolo – mantengo draft del ${draftEsistente.dataRiferimento} (${contaArticoli(draftEsistente)} articoli)`);
         } else if (draftEsistente && !isNuovoGiorno) {
-            log(`📁 Stesso giorno – mantengo draft esistente (${contaArticoli(draftEsistente)} articoli)`);
+            log(`[FETCH] 📁 Stesso giorno – mantengo draft esistente (${contaArticoli(draftEsistente)} articoli)`);
         } else {
-            log(`⚠️ Nessun draft esistente e nessun articolo generato – impossibile salvare`);
+            log(`[FETCH] ⚠️ Nessun draft esistente e nessun articolo generato – impossibile salvare`);
         }
         return;
     }
@@ -271,9 +307,9 @@ async function main() {
     if (ok) {
         contatori._primoRunOggi = true;
         salvaJSON(CONTATORI_PATH, contatori);
-        log(`✅ FASE 1-v4 completata. ${articoliGenerati} nuovi articoli.`);
+        log(`[FETCH] ✅ FASE 1-v4 completata. ${articoliGenerati} nuovi articoli.`);
     } else {
-        log(`⚠️ Salvataggio draft fallito.`);
+        log(`[FETCH] ⚠️ Salvataggio draft fallito.`);
     }
 }
 
