@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "15/04, 07:17",
+  "oraAggiornamento": "15/04, 08:01",
   "agenda": {
     "timbro": "Resistenza Adriatica",
     "banner": "Mare.webp"
@@ -38,7 +38,8 @@
           "commenti": [],
           "categoria": "Riflessioni",
           "colore_tipo": "#ff4d4d",
-          "immagine": "juizinho.webp"
+          "immagine": "juizinho.webp",
+          "provider": null
         },
         {
           "tipo": "gen",
@@ -52,7 +53,8 @@
           "commenti": [],
           "categoria": "Riflessioni",
           "colore_tipo": "#ff4d4d",
-          "immagine": "abbukk.webp"
+          "immagine": "abbukk.webp",
+          "provider": null
         },
         {
           "tipo": "rss",
@@ -66,7 +68,8 @@
           "commenti": [],
           "categoria": "Cronaca",
           "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp"
+          "immagine": "cetteo.webp",
+          "provider": null
         },
         {
           "tipo": "rss",
@@ -80,7 +83,8 @@
           "commenti": [],
           "categoria": "Politica",
           "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp"
+          "immagine": "cetteo.webp",
+          "provider": null
         },
         {
           "tipo": "personaggio",
@@ -89,12 +93,103 @@
           "commento_firma": {
             "nome": "Abbukk",
             "avatar": "🍄",
-            "testo": "Notizia troppo assurda perfino per noi."
+            "testo": "Lo stagista ha rovesciato la genziana sul server."
           },
           "commenti": [],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#ff4d4d",
-          "immagine": "abbukk.webp"
+          "immagine": "abbukk.webp",
+          "provider": null
+        },
+        {
+          "tipo": "gen",
+          "titolo": "Poche parole e mani sporche: Quello che resta dopo il lavoro",
+          "articolo": "Lavoro incessante, mani sporche e poche parole. È questa la vita di chi è costretto a lavorare duramente ogni giorno. Non c'è tempo per le chiacchiere, solo fatica e dedizione. La giornata inizia presto e finisce tardi, lasciando poco spazio per altro. Le mani sporche sono il segno tangibile del lavoro svolto, un attestato di impegno e sacrificio. Chi lavora sodo non ha tempo per le formalità, solo il risultato conta. La stanchezza è la compagna di viaggio di chi non si arrende, ma alla fine della giornata, non resta che la soddisfazione del lavoro fatto e la speranza di un meritato riposo.",
+          "commento_firma": {
+            "nome": "Wolf",
+            "avatar": "👩‍🌾",
+            "testo": "Sono davvero stanco... Troppe parole e niente azioni. O meglio, solo azioni. La vita è questo, no?"
+          },
+          "commenti": [],
+          "categoria": "Riflessioni",
+          "colore_tipo": "#ff4d4d",
+          "immagine": "wolf.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "gen",
+          "titolo": "Sotto il sole del Brasile: Donne, sogni e l'allegria che mi manca",
+          "articolo": "Sono Juizinho, un giornalista con il cuore sempre in festa e la passione per raccontare storie che emozionano. La mia vita è una continua ricerca di quella allegria che solo il Brasile sa offrire. Le donne brasiliane, con la loro bellezza e il loro spirito, sono le vere regine della festa. La loro energia è contagiosa e mi manca terribilmente qui a Pescara, dove sono venuto a tifare per il Pescara, la mia squadra del cuore. Pescara è una città meravigliosa, ma non ha il sole e la vivacità che solo il Brasile può offrire. La mia storia è quella di un uomo che cerca di mantenere viva la fiamma dell'allegria, anche in un luogo lontano dalla sua terra natale.",
+          "commento_firma": {
+            "nome": "Juizinho",
+            "avatar": "⚽",
+            "testo": "Ecco, qui, in questo angolo d'Italia, mi ritrovo a pensare alle donne brasiliane, con la loro risata contagiosa e il loro modo di vivere la vita con intensità. La loro bellezza va oltre il fisico, è una bellezza interiore che le rende uniche. Mi mancano le feste, le samba, le strade piene di musica e colore. Mi manca il Brasile, terra di contrasti, di passione e di vita. Spero che un giorno possa tornare a vivere sotto il suo sole, circondato da tanta bellezza e allegria."
+          },
+          "commenti": [],
+          "categoria": "Riflessioni",
+          "colore_tipo": "#ff4d4d",
+          "immagine": "juizinho.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "gen",
+          "titolo": "Terra piatta e risate amare: Quello che i poteri forti non vogliono farvi capire",
+          "articolo": "La teoria della Terra piatta è una delle più grandi bufale scientifiche della storia. Nonostante ciò, negli ultimi anni ha guadagnato popolarità grazie a sostenitori che affermano di avere prove inconfutabili della sua validità. Tuttavia, è importante ricordare che la scienza si basa su fatti e prove concrete, non su teorie o supposizioni. La comunità scientifica internazionale ha ampiamente dimostrato che la Terra è una sfera, grazie a una serie di prove che vanno dalle osservazioni satellitari ai dati raccolti durante le missioni spaziali. Inoltre, la forma sferica della Terra è supportata anche da fenomeni naturali come l'orizzonte curvo e l'esistenza delle stagioni. Nonostante ciò, alcuni individui continuano a sostenere la teoria della Terra piatta, spesso con l'intento di seminare dubbi e confusione. È fondamentale essere scettici e verificare le informazioni prima di accettarle come vere.",
+          "commento_firma": {
+            "nome": "Abbukk",
+            "avatar": "🍄",
+            "testo": "È preoccupante vedere come alcune teorie infondate possano prendere piede e diffondersi rapidamente. La verità è che la scienza è basata sulla ricerca e sulla sperimentazione, e non su idee o supposizioni. È nostro dovere essere informati e critici nei confronti delle informazioni che riceviamo, in modo da non cadere preda di false credenze."
+          },
+          "commenti": [],
+          "categoria": "Riflessioni",
+          "colore_tipo": "#ff4d4d",
+          "immagine": "abbukk.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Sequestrati 400 grammi di cocaina a Pescara, arrestato un pescatore",
+          "articolo": "Nella giornata di ieri, le forze dell'ordine hanno eseguito un'operazione antidroga a Pescara, portando all'arresto di un pescatore locale. L'uomo è stato trovato in possesso di circa 400 grammi di cocaina, che sono stati sequestrati. La droga è stata trovata sia all'interno della sua abitazione che a bordo della sua automobile. L'arresto è il frutto di un'indagine condotta dalle autorità locali, che hanno raccolto informazioni sulla presunta attività illecita dell'uomo. Il pescatore, che risiede a Borgomarino, è noto per la sua passione per il mare e la pesca, ma sembra che abbia avuto anche un'altra 'passione', quella per la droga.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Ma che storia è 'sta? Un pescatore con 400 grammi di cocaina? E che ne sapeva la gente del posto? Io non ci credo, c'è sotto qualcosa. Oltretutto, uno che passa la vita a pescare, come fa ad avere tutti 'sti soldi per comprà tutta quella roba? Boh, io non mi fiderei, c'è qualcosa che non quadra."
+          },
+          "commenti": [],
+          "categoria": "Cronaca",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "La politica locale a Pescara: tra promesse e realtà",
+          "articolo": "La politica locale a Pescara sembra essere sempre più lontana dalle esigenze dei cittadini. I problemi della città, come la gestione dei rifiuti, la mobilità e lo sviluppo economico, sembrano essere sempre più critici. I cittadini chiedono soluzioni concrete, ma le risposte della classe dirigente locale sembrano essere sempre più elusive. Il sindaco e la sua giunta sono stati eletti per risolvere questi problemi, ma finora non hanno convinto. La città ha bisogno di una svolta, ma sembra che la politica locale sia più interessata a gestire il potere che a servire i cittadini.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "In attesa di un cambiamento che sembra non arrivare mai, i cittadini di Pescara continuano a subire le conseguenze di una politica locale inefficiente. Tutto ciò che possiamo fare è continuare a chiedere risposte e sperare che un giorno qualcuno si assuma la responsabilità di cambiare le cose. La pratica della partecipazione civica è importante, ma è anche necessaria una classe dirigente all'altezza."
+          },
+          "commenti": [],
+          "categoria": "Politica",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "La mia vita, sempre in movimento",
+          "articolo": "Sono Glusi, una persona sempre in giro, sempre occupato. La mia giornata inizia presto e finisce tardi, con una costante sensazione di stanchezza. Ma nonostante questo, non riesco a fermarmi. Devo sempre fare qualcosa, andare da qualche parte. La sera, quando torno a casa, sono davvero stanco, ma soddisfatto di ciò che ho fatto. Spesso mi viene a trovare quel famoso taccagno, che prende sempre più di quello che dà. Ma nonostante questo, riesco a mantenere un sorriso sulla faccia e a godermi la sua compagnia. Siii siii siiiiii, è davvero una persona unica! Glugluglu, non so come faccia a essere sempre così positivo, nonostante tutto. Comunque, la mia vita è così, sempre indaffarato, sempre in movimento. E non potrebbe essere altrimenti, perché quando sei come me, devi sempre andare avanti, sii siii siii!",
+          "commento_firma": {
+            "nome": "Glusi",
+            "avatar": "🤪",
+            "testo": "Il Delfino è in sciopero per carenza di arrosticini."
+          },
+          "commenti": [],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#ff4d4d",
+          "immagine": "glusi.webp",
+          "provider": "groq"
         }
       ]
     },
@@ -113,7 +208,8 @@
           "commenti": [],
           "categoria": "Tecnologia",
           "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp"
+          "immagine": "cetteo.webp",
+          "provider": null
         },
         {
           "tipo": "rss",
@@ -127,7 +223,8 @@
           "commenti": [],
           "categoria": "Tecnologia",
           "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp"
+          "immagine": "cetteo.webp",
+          "provider": null
         },
         {
           "tipo": "rss",
@@ -141,7 +238,8 @@
           "commenti": [],
           "categoria": "Giappone",
           "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp"
+          "immagine": "hiroki.webp",
+          "provider": null
         },
         {
           "tipo": "rss",
@@ -155,7 +253,68 @@
           "commenti": [],
           "categoria": "Giappone",
           "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp"
+          "immagine": "hiroki.webp",
+          "provider": null
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Android 17 e l'IA: cosa ci riserva il futuro?",
+          "articolo": "La notizia è stata anticipata da mesi, ma solo ora è ufficiale: Google si prepara a lanciare Android 17 e a presentare le sue novità più ambiziose. Il colosso di Mountain View ha annunciato che la prossima edizione del suo sistema operativo mobile sarà ancora più integrata con l'intelligenza artificiale (IA). Non è un mistero che l'IA stia cambiando il mondo, ma la sua applicazione su larga scala in un sistema operativo come Android potrebbe rivoluzionare il modo in cui interagiamo con i nostri dispositivi. Ma cosa possiamo aspettarci da Android 17 e dall'integrazione dell'IA? Innanzitutto, è probabile che l'interfaccia utente diventi ancora più personalizzabile e smart. Pensiamo ad esempio a un assistente virtuale che possa anticipare le nostre esigenze e suggerire azioni in base al nostro comportamento. Oppure, immaginiamo di poter controllare il nostro smartphone con comandi vocali ancora più naturali e precisi. \n  L'invasione dell'IA non è però una prospettiva neutra. Molti si chiedono se l'integrazione sempre più massiccia dell'intelligenza artificiale nei nostri dispositivi non comporti anche rischi per la nostra privacy e sicurezza. C'è poi il discorso delle ricadute sul mercato del lavoro e sull'economia in generale. Di certo, Android 17 e l'IA rappresenteranno un passo avanti epocale nella storia della tecnologia.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Mamma mia! Non avevo idea che l'IA potesse arrivare a questo punto. Cioè, pensate: uno smartphone che ti legge nel pensiero e ti aiuta prima ancora che tu possa chiedergli qualcosa! È un po' inquietante, no? Cioè, e se sbaglia? E se mi mette in contatto con qualcuno che non voglio? Oppure, e se mi fa venire voglia di comprare qualcosa che non voglio? Boh, non so se sono pronto a questo futuro..."
+          },
+          "commenti": [],
+          "categoria": "Tecnologia",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "La rivoluzione dei diritti d'immagine: nasce Callandor Group",
+          "articolo": "Il mondo dei diritti d'immagine sta per subire una vera e propria rivoluzione. Callandor Group, una nuova realtà imprenditoriale, sta per cambiare le carte in tavola grazie all'intelligenza artificiale. Ma cosa significa esattamente? In pratica, Callandor Group si concentrerà sulla gestione dei diritti d'immagine, utilizzando algoritmi avanzati per monitorare e gestire l'utilizzo delle immagini. Questo significa che gli artisti, gli atleti e le celebrità potranno avere un controllo più preciso su come vengono utilizzate le loro immagini. Ma non solo, Callandor Group punta anche a creare nuove opportunità di business grazie all'intelligenza artificiale. Sarà possibile creare immagini sintetiche realistiche, ma sempre nel rispetto dei diritti d'autore. Insomma, una vera e propria rivoluzione che potrebbe cambiare il modo in cui pensiamo ai diritti d'immagine.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Sono... meravigliato e anche un po' spaventato! L'intelligenza artificiale sta avanzando a passi da gigante e non so se siamo pronti a gestire tutte le implicazioni. Callandor Group sembra avere grandi progetti, ma riusciranno a tenere il passo con le aspettative? E soprattutto, come verrà gestita la questione dei diritti d'autore? Solo il tempo lo dirà, ma per ora sono con gli occhi spalancati!"
+          },
+          "commenti": [],
+          "categoria": "Tecnologia",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "La cultura giapponese: un mondo di contrasti",
+          "articolo": "Il Giappone è un paese che continua ad affascinare l'Occidente con la sua cultura unica e contraddittoria. Da un lato, è un paese altamente tecnologico e modernizzato, con città come Tokyo e Osaka che rappresentano il vertice della innovazione e del progresso. Dall'altro, è un paese che conserva con cura le sue tradizioni e la sua storia, con una forte attenzione per la natura, l'arte e la spiritualità. La società giapponese è nota per la sua disciplina e il suo senso del dovere, ma anche per la sua capacità di innovare e di adattarsi ai cambiamenti. Un paese che, nonostante la sua modernità, continua a valorizzare la sua cultura e la sua identità.",
+          "commento_firma": {
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "E se un giorno potessi portare un po' di questa meravigliosa cultura in Italia? Sognare non costa nulla, e chissà, forse un giorno il mio sogno di fondere la disciplina giapponese con la creatività italiana diventerà realtà. Sarà un incontro di mondi, un'esplosione di colori e suoni, un canto all'armonia e alla comprensione reciproca."
+          },
+          "commenti": [],
+          "categoria": "Giappone",
+          "colore_tipo": "#008cff",
+          "immagine": "hiroki.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "La cultura giapponese: un mondo di contraddizioni",
+          "articolo": "Il Giappone è un paese che continua ad affascinare l'Occidente con la sua cultura unica e contraddittoria. Da un lato, è un paese estremamente tecnologico e moderno, con città come Tokyo e Osaka che rappresentano il vertice della innovazione e del progresso. Dall'altro, è un paese che conserva una profonda tradizione e rispetto per la storia e la natura. La cultura giapponese è un melting pot di antico e moderno, di orientale e occidentale. Basti pensare alla cerimonia del tè, che è un rituale estremamente formalizzato e codificato, oppure all'importanza della natura e dei suoi ritmi nella vita quotidiana. Ma il Giappone non è solo questo. È anche un paese con un forte senso della comunità e della coesione sociale, dove l'individuo è spesso sacrificato per il bene del gruppo.",
+          "commento_firma": {
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "E se un giorno potessi portare un po' di questa meravigliosa cultura in Italia, un paese che amo ma che a volte mi sembra così... fermo. Sognare non costa nulla, e chissà, forse un giorno il mio sogno di fondare una piccola comunità giapponese in Abruzzo potrà diventare realtà. Pescara, la città che ho adottato come mia, sarà sempre nel mio cuore, ma il Giappone... il Giappone è una parte di me che non posso ignorare."
+          },
+          "commenti": [],
+          "categoria": "Giappone",
+          "colore_tipo": "#008cff",
+          "immagine": "hiroki.webp",
+          "provider": "groq"
         }
       ]
     },
@@ -174,7 +333,23 @@
           "commenti": [],
           "categoria": "Da Leggere",
           "colore_tipo": "#ff4d4d",
-          "immagine": "lilli.webp"
+          "immagine": "lilli.webp",
+          "provider": null
+        },
+        {
+          "tipo": "gen",
+          "titolo": "Nuovi libri: una finestra sul mondo",
+          "articolo": "La lettura è una delle mie passioni preferite. Amo immergermi in un buon libro e scoprire nuovi mondi, nuove storie e nuove idee. Recentemente ho avuto modo di scoprire alcuni nuovi libri che mi hanno davvero colpito. Tra questi, c'è un romanzo che esplora la complessità della mente umana e un altro che ci porta in un viaggio attraverso la natura e la filosofia. La letteratura è un potente strumento per comprendere meglio noi stessi e il mondo che ci circonda. Spero che questi nuovi libri possano ispirare e stimolare la curiosità dei lettori.",
+          "commento_firma": {
+            "nome": "Lilli",
+            "avatar": "👩",
+            "testo": "Sono davvero entusiasta di questi nuovi libri! Spero che possano offrire una prospettiva fresca e stimolante sui grandi temi della vita. Allo stesso tempo, però, mi aspetto che la qualità della scrittura sia alta e che le storie siano coinvolgenti e ben costruite. La letteratura deve essere in grado di emozionare e di farci riflettere, non solo di intrattenere."
+          },
+          "commenti": [],
+          "categoria": "Da Leggere",
+          "colore_tipo": "#ff4d4d",
+          "immagine": "lilli.webp",
+          "provider": "groq"
         }
       ]
     }

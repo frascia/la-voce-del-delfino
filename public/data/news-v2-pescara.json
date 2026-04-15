@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "15/04, 09:23",
+  "prossimo_aggiornamento": "15/04, 10:02",
   "news": [
     {
       "tipo": "gen",
@@ -15,7 +15,8 @@
       "categoria": "Riflessioni",
       "colore_tipo": "#ff4d4d",
       "immagine": "juizinho.webp",
-      "nuovo": true
+      "provider": null,
+      "nuovo": false
     },
     {
       "tipo": "gen",
@@ -30,7 +31,8 @@
       "categoria": "Riflessioni",
       "colore_tipo": "#ff4d4d",
       "immagine": "abbukk.webp",
-      "nuovo": true
+      "provider": null,
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -45,7 +47,8 @@
       "categoria": "Cronaca",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
-      "nuovo": true
+      "provider": null,
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -60,7 +63,8 @@
       "categoria": "Politica",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
-      "nuovo": true
+      "provider": null,
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -69,12 +73,109 @@
       "commento_firma": {
         "nome": "Abbukk",
         "avatar": "🍄",
-        "testo": "Notizia troppo assurda perfino per noi."
+        "testo": "Lo stagista ha rovesciato la genziana sul server."
       },
       "commenti": [],
       "categoria": "Dalla Redazione",
       "colore_tipo": "#ff4d4d",
       "immagine": "abbukk.webp",
+      "provider": null,
+      "nuovo": false
+    },
+    {
+      "tipo": "gen",
+      "titolo": "Poche parole e mani sporche: Quello che resta dopo il lavoro",
+      "articolo": "Lavoro incessante, mani sporche e poche parole. È questa la vita di chi è costretto a lavorare duramente ogni giorno. Non c'è tempo per le chiacchiere, solo fatica e dedizione. La giornata inizia presto e finisce tardi, lasciando poco spazio per altro. Le mani sporche sono il segno tangibile del lavoro svolto, un attestato di impegno e sacrificio. Chi lavora sodo non ha tempo per le formalità, solo il risultato conta. La stanchezza è la compagna di viaggio di chi non si arrende, ma alla fine della giornata, non resta che la soddisfazione del lavoro fatto e la speranza di un meritato riposo.",
+      "commento_firma": {
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Sono davvero stanco... Troppe parole e niente azioni. O meglio, solo azioni. La vita è questo, no?"
+      },
+      "commenti": [],
+      "categoria": "Riflessioni",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "wolf.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "gen",
+      "titolo": "Sotto il sole del Brasile: Donne, sogni e l'allegria che mi manca",
+      "articolo": "Sono Juizinho, un giornalista con il cuore sempre in festa e la passione per raccontare storie che emozionano. La mia vita è una continua ricerca di quella allegria che solo il Brasile sa offrire. Le donne brasiliane, con la loro bellezza e il loro spirito, sono le vere regine della festa. La loro energia è contagiosa e mi manca terribilmente qui a Pescara, dove sono venuto a tifare per il Pescara, la mia squadra del cuore. Pescara è una città meravigliosa, ma non ha il sole e la vivacità che solo il Brasile può offrire. La mia storia è quella di un uomo che cerca di mantenere viva la fiamma dell'allegria, anche in un luogo lontano dalla sua terra natale.",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "Ecco, qui, in questo angolo d'Italia, mi ritrovo a pensare alle donne brasiliane, con la loro risata contagiosa e il loro modo di vivere la vita con intensità. La loro bellezza va oltre il fisico, è una bellezza interiore che le rende uniche. Mi mancano le feste, le samba, le strade piene di musica e colore. Mi manca il Brasile, terra di contrasti, di passione e di vita. Spero che un giorno possa tornare a vivere sotto il suo sole, circondato da tanta bellezza e allegria."
+      },
+      "commenti": [],
+      "categoria": "Riflessioni",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "juizinho.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "gen",
+      "titolo": "Terra piatta e risate amare: Quello che i poteri forti non vogliono farvi capire",
+      "articolo": "La teoria della Terra piatta è una delle più grandi bufale scientifiche della storia. Nonostante ciò, negli ultimi anni ha guadagnato popolarità grazie a sostenitori che affermano di avere prove inconfutabili della sua validità. Tuttavia, è importante ricordare che la scienza si basa su fatti e prove concrete, non su teorie o supposizioni. La comunità scientifica internazionale ha ampiamente dimostrato che la Terra è una sfera, grazie a una serie di prove che vanno dalle osservazioni satellitari ai dati raccolti durante le missioni spaziali. Inoltre, la forma sferica della Terra è supportata anche da fenomeni naturali come l'orizzonte curvo e l'esistenza delle stagioni. Nonostante ciò, alcuni individui continuano a sostenere la teoria della Terra piatta, spesso con l'intento di seminare dubbi e confusione. È fondamentale essere scettici e verificare le informazioni prima di accettarle come vere.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "È preoccupante vedere come alcune teorie infondate possano prendere piede e diffondersi rapidamente. La verità è che la scienza è basata sulla ricerca e sulla sperimentazione, e non su idee o supposizioni. È nostro dovere essere informati e critici nei confronti delle informazioni che riceviamo, in modo da non cadere preda di false credenze."
+      },
+      "commenti": [],
+      "categoria": "Riflessioni",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "abbukk.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Sequestrati 400 grammi di cocaina a Pescara, arrestato un pescatore",
+      "articolo": "Nella giornata di ieri, le forze dell'ordine hanno eseguito un'operazione antidroga a Pescara, portando all'arresto di un pescatore locale. L'uomo è stato trovato in possesso di circa 400 grammi di cocaina, che sono stati sequestrati. La droga è stata trovata sia all'interno della sua abitazione che a bordo della sua automobile. L'arresto è il frutto di un'indagine condotta dalle autorità locali, che hanno raccolto informazioni sulla presunta attività illecita dell'uomo. Il pescatore, che risiede a Borgomarino, è noto per la sua passione per il mare e la pesca, ma sembra che abbia avuto anche un'altra 'passione', quella per la droga.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Ma che storia è 'sta? Un pescatore con 400 grammi di cocaina? E che ne sapeva la gente del posto? Io non ci credo, c'è sotto qualcosa. Oltretutto, uno che passa la vita a pescare, come fa ad avere tutti 'sti soldi per comprà tutta quella roba? Boh, io non mi fiderei, c'è qualcosa che non quadra."
+      },
+      "commenti": [],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "La politica locale a Pescara: tra promesse e realtà",
+      "articolo": "La politica locale a Pescara sembra essere sempre più lontana dalle esigenze dei cittadini. I problemi della città, come la gestione dei rifiuti, la mobilità e lo sviluppo economico, sembrano essere sempre più critici. I cittadini chiedono soluzioni concrete, ma le risposte della classe dirigente locale sembrano essere sempre più elusive. Il sindaco e la sua giunta sono stati eletti per risolvere questi problemi, ma finora non hanno convinto. La città ha bisogno di una svolta, ma sembra che la politica locale sia più interessata a gestire il potere che a servire i cittadini.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "In attesa di un cambiamento che sembra non arrivare mai, i cittadini di Pescara continuano a subire le conseguenze di una politica locale inefficiente. Tutto ciò che possiamo fare è continuare a chiedere risposte e sperare che un giorno qualcuno si assuma la responsabilità di cambiare le cose. La pratica della partecipazione civica è importante, ma è anche necessaria una classe dirigente all'altezza."
+      },
+      "commenti": [],
+      "categoria": "Politica",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "groq",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La mia vita, sempre in movimento",
+      "articolo": "Sono Glusi, una persona sempre in giro, sempre occupato. La mia giornata inizia presto e finisce tardi, con una costante sensazione di stanchezza. Ma nonostante questo, non riesco a fermarmi. Devo sempre fare qualcosa, andare da qualche parte. La sera, quando torno a casa, sono davvero stanco, ma soddisfatto di ciò che ho fatto. Spesso mi viene a trovare quel famoso taccagno, che prende sempre più di quello che dà. Ma nonostante questo, riesco a mantenere un sorriso sulla faccia e a godermi la sua compagnia. Siii siii siiiiii, è davvero una persona unica! Glugluglu, non so come faccia a essere sempre così positivo, nonostante tutto. Comunque, la mia vita è così, sempre indaffarato, sempre in movimento. E non potrebbe essere altrimenti, perché quando sei come me, devi sempre andare avanti, sii siii siii!",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Il Delfino è in sciopero per carenza di arrosticini."
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "glusi.webp",
+      "provider": "groq",
       "nuovo": true
     }
   ]

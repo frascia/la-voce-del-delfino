@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "15/04, 09:23",
+  "prossimo_aggiornamento": "15/04, 10:02",
   "news": [
     {
       "tipo": "gen",
@@ -15,6 +15,23 @@
       "categoria": "Da Leggere",
       "colore_tipo": "#ff4d4d",
       "immagine": "lilli.webp",
+      "provider": null,
+      "nuovo": false
+    },
+    {
+      "tipo": "gen",
+      "titolo": "Nuovi libri: una finestra sul mondo",
+      "articolo": "La lettura è una delle mie passioni preferite. Amo immergermi in un buon libro e scoprire nuovi mondi, nuove storie e nuove idee. Recentemente ho avuto modo di scoprire alcuni nuovi libri che mi hanno davvero colpito. Tra questi, c'è un romanzo che esplora la complessità della mente umana e un altro che ci porta in un viaggio attraverso la natura e la filosofia. La letteratura è un potente strumento per comprendere meglio noi stessi e il mondo che ci circonda. Spero che questi nuovi libri possano ispirare e stimolare la curiosità dei lettori.",
+      "commento_firma": {
+        "nome": "Lilli",
+        "avatar": "👩",
+        "testo": "Sono davvero entusiasta di questi nuovi libri! Spero che possano offrire una prospettiva fresca e stimolante sui grandi temi della vita. Allo stesso tempo, però, mi aspetto che la qualità della scrittura sia alta e che le storie siano coinvolgenti e ben costruite. La letteratura deve essere in grado di emozionare e di farci riflettere, non solo di intrattenere."
+      },
+      "commenti": [],
+      "categoria": "Da Leggere",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "lilli.webp",
+      "provider": "groq",
       "nuovo": true
     }
   ]
