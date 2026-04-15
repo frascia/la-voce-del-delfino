@@ -196,6 +196,109 @@
         .stat-number { font-size: 2rem; font-weight: bold; color: #0f0; }
         .stat-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
         
+        /* Info Personale */
+        .personal-info-section {
+            background: #2a2a2a;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 30px;
+            border: 1px solid #9ec07c20;
+        }
+        .personal-info-section h2 {
+            font-size: 1.2rem;
+            color: #9ec07c;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .personal-content {
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 16px;
+            min-height: 100px;
+        }
+        .personal-content.blurred {
+            filter: blur(5px);
+            cursor: pointer;
+        }
+        .personal-text {
+            color: #ccc;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            padding: 8px;
+            background: #0d0d0d;
+            border-radius: 8px;
+        }
+        .personal-image {
+            margin: 12px 0;
+            text-align: center;
+        }
+        .personal-image img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 12px;
+            border: 1px solid #9ec07c;
+        }
+        .unlock-btn {
+            background: #9ec07c;
+            color: #2d3e1f;
+            border: none;
+            border-radius: 30px;
+            padding: 8px 20px;
+            margin-top: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .unlock-btn:hover {
+            background: #bcdd9a;
+            transform: scale(1.02);
+        }
+        
+        /* Secret Info */
+        .secret-info-section {
+            background: #2a2a2a;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 30px;
+            border: 1px solid #ff980020;
+        }
+        .secret-info-section h2 {
+            font-size: 1.2rem;
+            color: #ff9800;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .secret-card {
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 16px;
+            border-left: 4px solid #ff9800;
+        }
+        .secret-label {
+            font-size: 0.7rem;
+            color: #ff9800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .secret-value {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #0f0;
+            background: #0d0d0d;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            word-break: break-all;
+            white-space: pre-wrap;
+        }
+        .secret-value:last-child {
+            margin-bottom: 0;
+        }
+        
         .back-btn { position: fixed; bottom: 20px; right: 20px; background: #005f73; color: white; border: none; border-radius: 50px; padding: 12px 20px; font-size: 14px; font-weight: bold; cursor: pointer; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: transform 0.2s; }
         .back-btn:hover { transform: scale(1.05); background: #008cff; }
         
@@ -286,6 +389,24 @@
             <div id="workflow-errors-list" class="workflow-errors-list"></div>
         </div>
         
+        <!-- Secret Info -->
+        <div class="secret-info-section" id="secret-info" style="display:none;">
+            <h2>🔐 Info Riservate</h2>
+            <div class="secret-card">
+                <div class="secret-label">📋 Dati codificati:</div>
+                <div class="secret-value" id="secret-data">---</div>
+                <div class="secret-label">🕐 Ultimo aggiornamento:</div>
+                <div class="secret-value" id="secret-ts">---</div>
+            </div>
+        </div>
+        
+        <!-- Info Personale -->
+        <div class="personal-info-section" id="personal-info" style="display:none;">
+            <h2>📝 Info Personale</h2>
+            <div id="personal-content" class="personal-content"></div>
+            <button id="unlock-personal-btn" class="unlock-btn" style="display:none;" onclick="sbloccaPersonale()">🔓 Sblocca contenuto personale</button>
+        </div>
+        
         <div class="main-tabs">
             <button class="main-tab active" data-tab="schedule">📅 Programmazione</button>
             <button class="main-tab" data-tab="personaggi">👥 Personaggi</button>
@@ -315,6 +436,8 @@
         'dom': 'Domenica', 'lun': 'Lunedì', 'mar': 'Martedì', 'mer': 'Mercoledì',
         'gio': 'Giovedì', 'ven': 'Venerdì', 'sab': 'Sabato', 'default': 'Tutti i giorni'
     };
+
+    let personalDataBlurred = true;
 
     function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 
@@ -416,6 +539,94 @@
             if (!res.ok) return {};
             return await res.json();
         } catch(e) { return {}; }
+    }
+
+    async function caricaSecretData() {
+        try {
+            const response = await fetch('public/data/auth_info.json?v=' + Date.now());
+            if (!response.ok) throw new Error('Auth info non disponibile');
+            const data = await response.json();
+            
+            const decodedData = atob(data.data);
+            
+            document.getElementById('secret-data').innerText = decodedData || '---';
+            document.getElementById('secret-ts').innerText = data.ts || '---';
+            document.getElementById('secret-info').style.display = 'block';
+        } catch(e) {
+            console.error('Errore caricamento secret data:', e);
+        }
+    }
+
+    async function caricaPersonale() {
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 3000);
+            
+            const response = await fetch('public/personale.txt?v=' + Date.now(), {
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+            
+            if (!response.ok) return;
+            
+            const text = await response.text();
+            if (!text || text.trim().length === 0) return;
+            
+            const lines = text.split('\n');
+            let html = '';
+            let hasContent = false;
+            
+            for (const line of lines) {
+                const trimmed = line.trim();
+                if (trimmed.startsWith('#T:')) {
+                    const testo = trimmed.substring(3);
+                    if (testo) {
+                        html += `<div class="personal-text">${esc(testo)}</div>`;
+                        hasContent = true;
+                    }
+                } else if (trimmed.startsWith('#I:')) {
+                    const imgName = trimmed.substring(3);
+                    if (imgName) {
+                        html += `
+                            <div class="personal-image">
+                                <img src="public/images/${esc(imgName)}" alt="Immagine personale" onerror="this.style.display='none'">
+                            </div>
+                        `;
+                        hasContent = true;
+                    }
+                }
+            }
+            
+            if (hasContent) {
+                const container = document.getElementById('personal-content');
+                container.innerHTML = html;
+                container.classList.add('blurred');
+                document.getElementById('unlock-personal-btn').style.display = 'block';
+                document.getElementById('personal-info').style.display = 'block';
+                personalDataBlurred = true;
+            }
+        } catch(e) {
+            console.log('Personale.txt non disponibile');
+        }
+    }
+
+    async function sbloccaPersonale() {
+        const pwd = prompt('🔐 Inserisci password per visualizzare il contenuto personale:');
+        if (!pwd) return;
+        try {
+            const auth = await fetch('public/data/auth_info.json?v=' + Date.now()).then(r => r.json());
+            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
+                .map(b => b.toString(16).padStart(2, '0')).join('');
+            if (hash === auth.check) {
+                const container = document.getElementById('personal-content');
+                container.classList.remove('blurred');
+                container.style.cursor = 'default';
+                document.getElementById('unlock-personal-btn').style.display = 'none';
+                personalDataBlurred = false;
+            } else {
+                alert('Password errata');
+            }
+        } catch(e) { alert('Errore verifica password'); }
     }
 
     async function caricaWorkflowErrors() {
@@ -526,7 +737,6 @@
             document.getElementById('run-groq').innerText = groq;
             document.getElementById('run-none').innerText = none;
             
-            // Ultimo run
             const ultimoRun = runs[0];
             const ultimoContainer = document.getElementById('ultimo-run-container');
             if (ultimoRun) {
@@ -544,7 +754,6 @@
                 ultimoContainer.innerHTML = '';
             }
             
-            // Tabella dettagli
             const detailsDiv = document.getElementById('run-details');
             if (runs.length > 0) {
                 detailsDiv.innerHTML = `
@@ -561,7 +770,7 @@
                                     <td>${r.success ? '✅ Successo' : '❌ Errore'}</td>
                                     <td class="provider-${r.provider}">${r.provider === 'gemini' ? '🤖 Gemini' : r.provider === 'groq' ? '🦙 Groq' : '⚠️ Nessuno'}</td>
                                     <td>${r.articoli}</td>
-                                </tr>
+                                觑
                             `).join('')}
                         </tbody>
                     </table>
@@ -739,6 +948,8 @@
         await caricaLog();
         await caricaStatisticheRun();
         await caricaWorkflowErrors();
+        await caricaSecretData();
+        await caricaPersonale();
         initMainTabs();
     }
 
