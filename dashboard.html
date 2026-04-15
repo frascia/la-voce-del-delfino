@@ -427,14 +427,23 @@
             if (lines.length === 0) return;
             const container = document.getElementById('workflow-errors-list');
             if (!container) return;
-            container.innerHTML = lines.map(line => {
+            
+            const ultimeRighe = lines.slice(-30);
+            
+            container.innerHTML = ultimeRighe.map(line => {
                 let color = '#ccc';
                 if (line.includes('🚀')) color = '#0f0';
                 if (line.includes('✅')) color = '#4caf50';
                 if (line.includes('❌')) color = '#f44336';
                 if (line.includes('⚠️')) color = '#ff9800';
-                return `<div style="color:${color};">${esc(line)}</div>`;
+                if (line.includes('🕐')) color = '#aaa';
+                if (line.includes('═══')) color = '#333';
+                
+                let displayLine = line.replace('Ora Italia:', '🕐');
+                
+                return `<div style="color:${color}; font-family:monospace; font-size:0.7rem; padding:4px 0; border-bottom:1px solid #2a2a2a;">${esc(displayLine)}</div>`;
             }).join('');
+            
             document.getElementById('workflow-errors').style.display = 'block';
         } catch(e) { console.error(e); }
     }
@@ -465,11 +474,14 @@
                 if (line.includes('🐬 NUOVO RUN') || line.includes('AVVIO RUN')) {
                     if (currentRun) runs.push(currentRun);
                     let tipo = 'SCHEDULATO';
+                    let ora = '';
                     for (let j = i; j < Math.min(i + 20, lines.length); j++) {
                         if (lines[j].includes('🏷️ Run MANUALE')) { tipo = 'MANUALE'; break; }
                         if (lines[j].includes('🏷️ Run SCHEDULATO')) { tipo = 'SCHEDULATO'; break; }
+                        const oraMatch = lines[j].match(/🕐 Ora Italia avvio: (\d{2}:\d{2}:\d{2})/);
+                        if (oraMatch) ora = oraMatch[1];
                     }
-                    currentRun = { data: dataStr, success: false, provider: 'nessuno', articoli: 0, tipo: tipo, error: null };
+                    currentRun = { data: dataStr, success: false, provider: 'nessuno', articoli: 0, tipo: tipo, error: null, ora: ora };
                 }
                 
                 if (currentRun) {
@@ -522,6 +534,7 @@
                     <div class="ultimo-run ${ultimoRun.success ? 'success' : 'error'}">
                         <div><span class="ultimo-run-label">📌 ULTIMO RUN</span> <span class="${ultimoRun.tipo === 'MANUALE' ? 'badge-manual' : 'badge-scheduled'}">${ultimoRun.tipo}</span></div>
                         <div>📅 ${ultimoRun.data}</div>
+                        <div>🕐 ${ultimoRun.ora || '--:--:--'}</div>
                         <div>${ultimoRun.success ? '✅ SUCCESSO' : '❌ ERRORE'}</div>
                         <div>🤖 ${ultimoRun.provider === 'gemini' ? 'Gemini' : ultimoRun.provider === 'groq' ? 'Groq' : 'Nessuno'}</div>
                         <div>📰 ${ultimoRun.articoli} articoli</div>
@@ -536,12 +549,15 @@
             if (runs.length > 0) {
                 detailsDiv.innerHTML = `
                     <table>
-                        <thead><tr><th>Data</th><th>Tipo</th><th>Esito</th><th>Provider</th><th>Articoli</th></tr></thead>
+                        <thead>
+                            <tr><th>Data</th><th>Tipo</th><th>Ora</th><th>Esito</th><th>Provider</th><th>Articoli</th></tr>
+                        </thead>
                         <tbody>
                             ${runs.slice(0, 30).map(r => `
                                 <tr class="${r.success ? 'success-row' : 'error-row'} ${r.tipo === 'MANUALE' ? 'manual-row' : ''}">
                                     <td>${r.data}</td>
                                     <td><span class="${r.tipo === 'MANUALE' ? 'badge-manual' : 'badge-scheduled'}">${r.tipo}</span></td>
+                                    <td>${r.ora || '--:--:--'}</td>
                                     <td>${r.success ? '✅ Successo' : '❌ Errore'}</td>
                                     <td class="provider-${r.provider}">${r.provider === 'gemini' ? '🤖 Gemini' : r.provider === 'groq' ? '🦙 Groq' : '⚠️ Nessuno'}</td>
                                     <td>${r.articoli}</td>
