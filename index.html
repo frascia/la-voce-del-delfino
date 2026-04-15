@@ -198,8 +198,6 @@
             left: -12px;
             width: 44px;
             height: 44px;
-            background: var(--ghibli-sunset);
-            color: #5a3e2e;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -225,20 +223,13 @@
             font-weight: 700;
             letter-spacing: 0.5px;
             background: white;
-            color: #6b8c5c;
-            border: 1px solid #cbd5b0;
+            border: 1px solid;
             transition: all 0.2s ease;
         }
         
         .card:hover .card-categoria {
             transform: translateY(-2px);
         }
-        
-        /* COLORI FRAME */
-        .card.rss-box { border-left: 6px solid #008cff; }
-        .card.gen-box { border-left: 6px solid #ff4d4d; }
-        .card.personaggio-box { border-left: 6px solid #2d6a4f; background: #fef8ed; }
-        .card.chat-box { border-left: 6px solid #9ec07c; background: #fefcf5; }
         
         .card-img-box {
             width: 100%;
@@ -469,6 +460,7 @@
         
         .commento-personaggio.aperto .commento-toggle { transform: rotate(180deg); }
         
+        /* Chat raggruppate per data */
         .chat-main-header {
             display: flex;
             justify-content: space-between;
@@ -522,24 +514,83 @@
             display: flex;
         }
         
-        .chat-conversazione {
+        /* Gruppo di date */
+        .chat-date-group {
             background: #fefcf5;
             border-radius: 24px;
-            padding: 12px 16px;
             border: 1px solid #e6ddc0;
+            overflow: hidden;
+        }
+        
+        .chat-date-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: #f5efdf;
+            cursor: pointer;
             transition: all 0.2s;
         }
         
-        .chat-conversazione:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        .chat-date-header:hover {
+            background: #ede5cf;
+        }
+        
+        .chat-date-title {
+            font-weight: bold;
+            font-size: 0.85rem;
+            color: #6a8e4a;
+        }
+        
+        .chat-date-badge {
+            background: #cbd5b0;
+            color: #4a5b3e;
+            padding: 2px 10px;
+            border-radius: 30px;
+            font-size: 0.65rem;
+            font-weight: 600;
+        }
+        
+        .chat-date-expand {
+            font-size: 0.7rem;
+            color: #bcae84;
+            transition: transform 0.2s;
+        }
+        
+        .chat-date-group.aperto .chat-date-expand {
+            transform: rotate(180deg);
+        }
+        
+        .chat-date-conversazioni {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            padding: 12px;
+        }
+        
+        .chat-date-group.aperto .chat-date-conversazioni {
+            display: flex;
+        }
+        
+        /* Singola conversazione */
+        .chat-conversazione {
+            background: #fefcf5;
+            border-radius: 20px;
+            border: 1px solid #e6ddc0;
         }
         
         .chat-conversazione-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px 14px;
             cursor: pointer;
-            padding: 4px 0;
+            transition: all 0.2s;
+        }
+        
+        .chat-conversazione-header:hover {
+            background: #f5efdf;
+            border-radius: 20px;
         }
         
         .chat-conversazione-date {
@@ -571,8 +622,7 @@
             display: none;
             flex-direction: column;
             gap: 12px;
-            margin-top: 12px;
-            padding-top: 12px;
+            padding: 12px;
             border-top: 1px solid #e6ddc0;
         }
         
@@ -614,56 +664,79 @@
             font-style: italic;
         }
         
-        /* Legenda Ghibli */
-        .ghibli-legend {
+        /* Pulsante legenda */
+        .legend-btn {
             position: fixed;
             bottom: 20px;
             left: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             background: rgba(255,248,225,0.85);
-            backdrop-filter: blur(8px);
-            border-radius: 28px;
-            padding: 12px 18px;
-            border: 1px solid rgba(140,120,80,0.25);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            z-index: 98;
-            font-size: 0.7rem;
-            transition: all 0.3s ease;
-            cursor: default;
-        }
-        
-        .ghibli-legend:hover {
-            background: rgba(255,248,225,0.95);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-        }
-        
-        .legend-title {
-            font-weight: 700;
-            color: #6a8e4a;
-            margin-bottom: 8px;
-            font-size: 0.7rem;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-        
-        .legend-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-        
-        .legend-item {
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(140,120,80,0.3);
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 99;
+            transition: all 0.2s;
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 0.65rem;
-            color: #5c6e4a;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
-        .legend-color {
-            width: 14px;
-            height: 14px;
+        .legend-btn:hover {
+            background: rgba(255,248,225,1);
+            transform: scale(1.05);
+        }
+        
+        /* Popup legenda */
+        .legend-popup {
+            position: fixed;
+            bottom: 70px;
+            left: 20px;
+            background: rgba(30,30,30,0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 15px 20px;
+            border: 1px solid #0f0;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+        
+        .legend-popup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .legend-popup-title {
+            color: #0f0;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        
+        .legend-popup .legend-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .legend-popup .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.7rem;
+            color: #ccc;
+        }
+        
+        .legend-popup .legend-color {
+            width: 16px;
+            height: 16px;
             border-radius: 4px;
         }
         
@@ -723,13 +796,8 @@
             .testata img#header-img { height: 180px; }
             .grid-container { grid-template-columns: 1fr; gap: 25px; }
             .info-bar { flex-direction: column; text-align: center; }
-            .ghibli-legend {
-                bottom: 10px;
-                left: 10px;
-                padding: 8px 12px;
-            }
-            .legend-items { gap: 8px; }
-            .legend-item { font-size: 0.6rem; }
+            .legend-btn { bottom: 15px; left: 15px; width: 36px; height: 36px; font-size: 1rem; }
+            .legend-popup { bottom: 60px; left: 15px; }
         }
     </style>
 </head>
@@ -762,26 +830,15 @@
     </div>
 </div>
 
-<!-- Legenda Ghibli -->
-<div class="ghibli-legend">
-    <div class="legend-title">📖 Legenda</div>
+<!-- Pulsante legenda -->
+<button id="legend-btn" class="legend-btn" title="Legenda">📖</button>
+<div id="legend-popup" class="legend-popup">
+    <div class="legend-popup-title">📖 Legenda</div>
     <div class="legend-items">
-        <div class="legend-item">
-            <div class="legend-color" style="background: #008cff;"></div>
-            <span>📰 Notizia reale</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background: #ff4d4d;"></div>
-            <span>✨ Storia inventata</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background: #2d6a4f;"></div>
-            <span>🎭 Dalla Redazione</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background: #9ec07c;"></div>
-            <span>💬 Chat Redazione</span>
-        </div>
+        <div class="legend-item"><div class="legend-color" style="background: #008cff;"></div><span>📰 Notizia reale (RSS)</span></div>
+        <div class="legend-item"><div class="legend-color" style="background: #ff4d4d;"></div><span>✨ Storia inventata (GEN)</span></div>
+        <div class="legend-item"><div class="legend-color" style="background: #2d6a4f;"></div><span>🎭 Dalla Redazione (RED)</span></div>
+        <div class="legend-item"><div class="legend-color" style="background: #9ec07c;"></div><span>💬 Chat Redazione</span></div>
     </div>
 </div>
 
@@ -793,6 +850,21 @@ let lastClick = 0;
 let hideClicks = 0;
 let hideLastClick = 0;
 let dashboardSbloccata = false;
+
+// Legenda popup
+const legendBtn = document.getElementById('legend-btn');
+const legendPopup = document.getElementById('legend-popup');
+let legendTimeout;
+
+if (legendBtn) {
+    legendBtn.onclick = () => {
+        legendPopup.classList.add('show');
+        if (legendTimeout) clearTimeout(legendTimeout);
+        legendTimeout = setTimeout(() => {
+            legendPopup.classList.remove('show');
+        }, 5000);
+    };
+}
 
 function getColorFromName(nome) {
     let hash = 0;
@@ -900,6 +972,7 @@ async function mostraSezione(sez,btn,STILI){
     const container = document.getElementById('grid-container');
     container.innerHTML = '';
     
+    // Notizie
     const ord = [...news.filter(n=>n.tipo==='personaggio'), ...news.filter(n=>n.tipo==='rss'), ...news.filter(n=>n.tipo==='gen')];
     ord.forEach((n,idx)=>{
         const tipo=n.tipo||'rss';
@@ -914,11 +987,19 @@ async function mostraSezione(sez,btn,STILI){
         const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')"><span class="avatar-p">${esc(c.avatar)||'👤'}</span><span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span><div class="testo-p">${esc(c.testo)}</div></div>`).join('');
         const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')"><span class="commenti-count">${comm.length}</span><span class="commenti-label">Comment${comm.length===1?'o':'i'}</span><span class="commenti-arrow">▼</span></div><div class="commenti-panel">${cListH}</div>`:'';
         
+        // Colori dinamici per numero ed etichetta
+        let frameColor, badgeColor;
+        if (tipo === 'rss') { frameColor = '#008cff'; badgeColor = '#008cff'; }
+        else if (tipo === 'gen') { frameColor = '#ff4d4d'; badgeColor = '#ff4d4d'; }
+        else if (tipo === 'personaggio') { frameColor = '#2d6a4f'; badgeColor = '#2d6a4f'; }
+        else { frameColor = '#9ec07c'; badgeColor = '#9ec07c'; }
+        
         const card = document.createElement('div');
         card.className = `card ${bx}`;
+        card.style.borderLeftColor = frameColor;
         card.innerHTML = `
-            <div class="card-numero">${idx+1}</div>
-            <div class="card-categoria ${lx}">${esc(n.categoria)}${bn}</div>
+            <div class="card-numero" style="background: ${frameColor};">${idx+1}</div>
+            <div class="card-categoria ${lx}" style="border-color: ${badgeColor}; color: ${badgeColor};">${esc(n.categoria)}${bn}</div>
             <div class="card-img-box"><img src="public/images/${esc(n.immagine)||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>
             ${firmaH}
             <h2>${esc(n.titolo)}</h2>
@@ -930,29 +1011,72 @@ async function mostraSezione(sez,btn,STILI){
         container.appendChild(card);
     });
     
+    // Chat raggruppate per data
     if(chatData && chatData.length > 0){
+        // Raggruppa per data
+        const chatPerData = {};
+        chatData.forEach(chat => {
+            const data = chat.data || 'Data sconosciuta';
+            const soloData = data.split(',')[0];
+            if (!chatPerData[soloData]) chatPerData[soloData] = [];
+            chatPerData[soloData].push(chat);
+        });
+        
+        // Ordina le date dalla più recente alla più vecchia
+        const dateOrdinate = Object.keys(chatPerData).sort((a, b) => {
+            const parseData = (d) => {
+                const match = d.match(/(\d{2})\/(\d{2})/);
+                if (match) {
+                    const giorno = parseInt(match[1]);
+                    const mese = parseInt(match[2]);
+                    const oggi = new Date();
+                    const annoCorrente = oggi.getFullYear();
+                    let dataObj = new Date(annoCorrente, mese - 1, giorno);
+                    if (dataObj > oggi) dataObj = new Date(annoCorrente - 1, mese - 1, giorno);
+                    return dataObj.getTime();
+                }
+                return 0;
+            };
+            return parseData(b) - parseData(a);
+        });
+        
         const chatCard = document.createElement('div');
         chatCard.className = 'card chat-box';
         
         let conversazioniHtml = '';
-        chatData.forEach((chat, chatIdx) => {
-            const numMsg = (chat.messaggi || []).length;
+        dateOrdinate.forEach(dataKey => {
+            const chats = chatPerData[dataKey];
             conversazioniHtml += `
-                <div class="chat-conversazione">
-                    <div class="chat-conversazione-header" onclick="this.parentElement.classList.toggle('aperto')">
-                        <div class="chat-conversazione-date">📅 ${esc(chat.data || '')}</div>
-                        <div class="chat-conversazione-badge">💬 ${numMsg} messaggi</div>
-                        <div class="chat-conversazione-expand">▼</div>
+                <div class="chat-date-group">
+                    <div class="chat-date-header" onclick="this.parentElement.classList.toggle('aperto')">
+                        <span class="chat-date-title">📅 ${dataKey}</span>
+                        <span class="chat-date-badge">${chats.length} conversazioni</span>
+                        <span class="chat-date-expand">▼</span>
                     </div>
-                    <div class="chat-conversazione-messages">
-                        ${(chat.messaggi || []).map(m => {
-                            const color = getColorFromName(m.nome);
+                    <div class="chat-date-conversazioni">
+                        ${chats.map(chat => {
+                            const numMsg = (chat.messaggi || []).length;
+                            const ora = chat.data.split(',')[1] || '';
                             return `
-                                <div class="chat-message" style="border-left-color: ${color}">
-                                    <div class="chat-avatar">${esc(m.avatar || '👤')}</div>
-                                    <div class="chat-content">
-                                        <div class="chat-message-nome" style="background: ${color}20; color: ${color}">${esc(m.nome)}</div>
-                                        <div class="chat-message-testo">${esc(m.testo)}</div>
+                                <div class="chat-conversazione">
+                                    <div class="chat-conversazione-header" onclick="this.parentElement.classList.toggle('aperto')">
+                                        <div class="chat-conversazione-date">🕐 ${ora}</div>
+                                        <div class="chat-conversazione-badge">💬 ${numMsg} messaggi</div>
+                                        <div class="chat-conversazione-expand">▼</div>
+                                    </div>
+                                    <div class="chat-conversazione-messages">
+                                        ${(chat.messaggi || []).map(m => {
+                                            const color = getColorFromName(m.nome);
+                                            return `
+                                                <div class="chat-message" style="border-left-color: ${color}">
+                                                    <div class="chat-avatar">${esc(m.avatar || '👤')}</div>
+                                                    <div class="chat-content">
+                                                        <div class="chat-message-nome" style="background: ${color}20; color: ${color}">${esc(m.nome)}</div>
+                                                        <div class="chat-message-testo">${esc(m.testo)}</div>
+                                                    </div>
+                                                </div>
+                                            `;
+                                        }).join('')}
                                     </div>
                                 </div>
                             `;
