@@ -31,8 +31,12 @@ export async function aggiornaRelazioni(CHI, relazioni, personaggi, articolo, co
     const sys = `Analista dinamiche sociali. Restituisci JSON: {"delta_relazioni":[{"da":"...","a":"...","delta":0.1}],"nuovi_stati":[{"nome":"...","stato":"...","umore":"..."}]}
 Delta da -0.3 a +0.3.`;
     const userPrompt = `Articolo: "${articolo.substring(0,300)}..."\nCommenti:\n${commenti.map(c=>`${c.nome}: "${c.testo}"`).join("\n")}`;
-    const { text: raw } = await callLLMFn(sys, userPrompt);
-    if (!raw) return;
+    const llmResult = await callLLMFn(sys, userPrompt);
+    if (!llmResult) {
+        log(`⚠️ Nessuna analisi relazioni generata (LLM ha restituito null)`);
+        return;
+    }
+    const { text: raw } = llmResult;
     try {
         const parsed = JSON.parse(raw.substring(raw.indexOf("{"), raw.lastIndexOf("}")+1));
         for (const d of (parsed.delta_relazioni || [])) {
