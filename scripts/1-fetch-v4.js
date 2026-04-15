@@ -34,7 +34,6 @@ function log(msg) { scriviLog(msg, LOG_PATH); }
 async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
 
-    // Reset opzionale del draft
     if (process.env.RESET_DRAFT === 'true') {
         if (fs.existsSync(DRAFT_PATH)) {
             fs.unlinkSync(DRAFT_PATH);
@@ -101,7 +100,7 @@ async function main() {
         codaArticoli = await raccoltaNotizie(vociAttive, parole, contatori);
     }
 
-    const generatiSet = new Set(); // evita duplicati
+    const generatiSet = new Set();
 
     for (const { voce, tema } of codaArticoli) {
         const key = `${voce.sez}|${tema}`;
@@ -113,9 +112,14 @@ async function main() {
 
         const sez = voce.sez;
         const infoFirma = risolviPersonaggio(CHI, voce.firma);
-        const { provider, titolo, articolo: articoloTesto, commento } = await generaArticolo(voce, CHI, tema, callLLM);
+        const result = await generaArticolo(voce, CHI, tema, callLLM);
+        if (!result) {
+            log(`⚠️ SKIP articolo per "${tema}" (nessun output valido)`);
+            continue;
+        }
+        const { provider, titolo, articolo: articoloTesto, commento } = result;
         if (!articoloTesto || articoloTesto.length < 50) {
-            log(`⚠️ SKIP articolo su "${tema.substring(0,30)}..."`);
+            log(`⚠️ SKIP articolo su "${tema.substring(0,30)}..." (testo troppo corto)`);
             continue;
         }
         const commenti = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI, callLLM);
@@ -155,7 +159,6 @@ async function main() {
     salvaJSON(RELAZIONI_PATH, relazioni);
     salvaJSON(PERSONAGGI_PATH, personaggi);
 
-    // Articolo personaggio casuale
     const nomiPers = Object.keys(CHI).filter(n=>n!=="default");
     if (nomiPers.length) {
         const pers = nomiPers[Math.floor(Math.random()*nomiPers.length)];
@@ -163,24 +166,28 @@ async function main() {
         const sysPers = `Sei ${pers} (${dati.mood}). ${dati.bio_breve?`Bio: "${dati.bio_breve}"` : ""}
 Scrivi breve articolo (150-250 parole) su un argomento personale.
 Rispondi JSON: {"titolo":"...","articolo":"..."}`;
-        const { text: rawPers, provider: provPers } = await callLLM(sysPers, "Scrivi articolo personale.", dati.peso??0.8);
-        const parsedPers = parseJSON(rawPers);
-        if (parsedPers?.titolo && parsedPers?.articolo) {
-            const sezPers = Object.keys(draft.sezioni)[0] || "generale";
-            if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: "#005f73", articoli: [] };
-            draft.sezioni[sezPers].articoli.push({
-                tipo: "personaggio", titolo: parsedPers.titolo, articolo: parsedPers.articolo,
-                commento_firma: { nome: pers, avatar: dati.avatar, testo: "" }, commenti: [],
-                categoria: "Dalla Redazione", colore_tipo: STILI.GEN || "#2d6a4f",
-                immagine: dati.img,
-                provider: provPers
-            });
-            articoliGenerati++;
-            log(`✍️ Articolo personaggio da ${pers} (${provPers}): "${parsedPers.titolo.substring(0,50)}..."`);
+        const llmResult = await callLLM(sysPers, "Scrivi articolo personale.", dati.peso??0.8);
+        if (llmResult) {
+            const { text: rawPers, provider: provPers } = llmResult;
+            const parsedPers = parseJSON(rawPers);
+            if (parsedPers?.titolo && parsedPers?.articolo) {
+                const sezPers = Object.keys(draft.sezioni)[0] || "generale";
+                if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: "#005f73", articoli: [] };
+                draft.sezioni[sezPers].articoli.push({
+                    tipo: "personaggio", titolo: parsedPers.titolo, articolo: parsedPers.articolo,
+                    commento_firma: { nome: pers, avatar: dati.avatar, testo: "" }, commenti: [],
+                    categoria: "Dalla Redazione", colore_tipo: STILI.GEN || "#2d6a4f",
+                    immagine: dati.img,
+                    provider: provPers
+                });
+                articoliGenerati++;
+                log(`✍️ Articolo personaggio da ${pers} (${provPers}): "${parsedPers.titolo.substring(0,50)}..."`);
+            }
+        } else {
+            log(`⚠️ Nessun articolo personaggio generato per ${pers}`);
         }
     }
 
-    // Aggiornamento contatore fallimenti consecutivi per Gemini (solo run schedulati)
     const currentProvider = getCurrentProvider();
     if (currentProvider === "gemini") {
         if (articoliGenerati > 0) {
