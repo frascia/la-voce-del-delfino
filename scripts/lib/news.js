@@ -1,3 +1,12 @@
+/**
+ * FILE: lib/news.js
+ * DATA: 2025-04-15
+ * VERSIONE: 2.2
+ * DESCRIZIONE: Gestione della raccolta notizie da GNews e RSS.
+ *              Supporta fallback automatico da GNews a RSS.
+ *              Log dettagliati con fonte e numero di notizie.
+ */
+
 let logFn = null;
 let gnewsApiKey = "";
 let newsSource = "gnews";
@@ -10,50 +19,54 @@ export function initNews(apiKey, source, logFunction) {
 }
 
 async function fetchGNews(query, max) {
-    if (!gnewsApiKey) return [];
+    if (!gnewsApiKey) {
+        log(`⚠️ GNews: chiave API mancante`);
+        return [];
+    }
     await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000));
     const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=it&country=it&max=${max}&token=${gnewsApiKey}`;
     try {
         const res = await fetch(url);
         const data = await res.json();
+        
         if (res.status === 429) {
-            log(`Rate limit (429) per "${query}", attendo 60s e riprovo...`);
+            log(`⏳ GNews: rate limit (429) per "${query}", attendo 60s...`);
             await new Promise(r => setTimeout(r, 60000));
             const retryRes = await fetch(url);
             const retryData = await retryRes.json();
             if (retryRes.ok && !retryData.errors) {
                 const titles = retryData.articles?.map(a => a.title) || [];
-                log(`Retry OK: ${titles.length} titoli per "${query}"`);
+                log(`✓ GNews: ${titles.length} notizie per "${query}" (dopo retry)`);
                 return titles;
-            } else {
-                log(`Retry fallito per "${query}"`);
-                return [];
             }
-        }
-        if (!res.ok || data.errors) {
-            log(`ERR Status ${res.status}, query: "${query}"`);
+            log(`✗ GNews: retry fallito per "${query}"`);
             return [];
         }
+        
+        if (!res.ok || data.errors) {
+            log(`✗ GNews: errore ${res.status} per "${query}"`);
+            return [];
+        }
+        
         const titles = data.articles?.map(a => a.title) || [];
         if (titles.length === 0) {
-            log(`0 titoli per "${query}" (nessuna notizia)`);
+            log(`○ GNews: 0 notizie per "${query}"`);
         } else {
-            log(`${titles.length} titoli per "${query}"`);
+            log(`✓ GNews: ${titles.length} notizie per "${query}"`);
         }
         return titles;
     } catch(e) {
-        log(`Eccezione: ${e.message}`);
+        log(`✗ GNews: eccezione - ${e.message}`);
         return [];
     }
 }
 
 async function fetchRSS(query, max) {
     const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=it&gl=IT&ceid=IT:it&v=${Date.now()}`;
-    log(`Richiesta RSS: "${query}"`);
     try {
         const res = await fetch(url);
         if (!res.ok) {
-            log(`RSS HTTP ${res.status} per "${query}"`);
+            log(`✗ RSS: errore ${res.status} per "${query}"`);
             return [];
         }
         const xml = await res.text();
@@ -71,10 +84,14 @@ async function fetchRSS(query, max) {
                 if (!titles.includes(t)) titles.push(t);
             }
         }
-        log(`RSS: ${titles.length} titoli per "${query}"`);
+        if (titles.length === 0) {
+            log(`○ RSS: 0 notizie per "${query}"`);
+        } else {
+            log(`✓ RSS: ${titles.length} notizie per "${query}"`);
+        }
         return titles;
     } catch(e) {
-        log(`RSS errore: ${e.message}`);
+        log(`✗ RSS: eccezione - ${e.message}`);
         return [];
     }
 }
@@ -85,10 +102,14 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
     let tutteZero = true;
     const risultati = [];
 
+    log(`📡 Fonte notizie: ${newsSource.toUpperCase()}`);
+
+    // Prima fase: raccolta con la fonte attuale
     for (const voce of vociAttive) {
         const num = voce.num || 1;
         voce._parole = parole;
-        if (voce.tipo === "GEN") continue;
+        if (voce.tipo !== "RSS") continue; // solo RSS cerca notizie
+        
         let titoli = [];
         if (newsSource === "gnews") {
             titoli = await fetchGNews(voce.arg, num);
@@ -102,14 +123,15 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
         risultati.push({ voce, titoli });
     }
 
+    // Se GNews ha dato zero notizie per tutte le voci, passa a RSS
     if (newsSource === "gnews" && tutteZero) {
-        log("⚠️ GNews ha restituito zero titoli per TUTTE le voci (o errori). Passo a RSS per l'intero run.");
+        log(`⚠️ GNews: 0 notizie per TUTTE le voci → passaggio a RSS (cascata)`);
         newsSource = "rss";
         risultati.length = 0;
         tutteZero = true;
         for (const voce of vociAttive) {
             const num = voce.num || 1;
-            if (voce.tipo === "GEN") continue;
+            if (voce.tipo !== "RSS") continue;
             const titoli = await fetchRSS(voce.arg, num);
             contatori.rss_fetch = (contatori.rss_fetch || 0) + 1;
             if (titoli.length > 0) tutteZero = false;
@@ -117,7 +139,7 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
         }
     }
 
-    // Aggiungi GEN
+    // Aggiungi articoli di tipo GEN (generazione libera)
     for (const voce of vociAttive) {
         const num = voce.num || 1;
         if (voce.tipo === "GEN") {
@@ -133,7 +155,23 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
         }
     }
 
-    // Aggiungi notizie
+    // Aggiungi articoli di tipo RED (Dalla Redazione)
+    for (const voce of vociAttive) {
+        const num = voce.num || 1;
+        if (voce.tipo === "RED") {
+            const temi = voce.temi || [voce.arg || "Riflessione personale"];
+            for (let i = 0; i < num; i++) {
+                const tema = temi[Math.floor(Math.random() * temi.length)];
+                const key = `${voce.sez}|${tema}`;
+                if (!visti.has(key)) {
+                    visti.add(key);
+                    codaArticoli.push({ voce, tema });
+                }
+            }
+        }
+    }
+
+    // Aggiungi le notizie RSS raccolte
     for (const { voce, titoli } of risultati) {
         const num = voce.num || 1;
         for (const t of titoli) {
@@ -145,6 +183,7 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
         }
         if (titoli.length < num) {
             const mancanti = num - titoli.length;
+            log(`⚠️ ${voce.arg}: solo ${titoli.length}/${num} notizie → aggiungo ${mancanti} generici (cascata interna)`);
             for (let i = 0; i < mancanti; i++) {
                 const temaGen = `[Generico] ${voce.arg} - approfondimento`;
                 const key = `${voce.sez}|${temaGen}`;
@@ -155,5 +194,8 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
             }
         }
     }
+
+    log(`📦 Totale articoli in coda: ${codaArticoli.length} (RSS: ${risultati.reduce((acc, r) => acc + r.titoli.length, 0)}, GEN/RED: ${codaArticoli.length - risultati.reduce((acc, r) => acc + r.titoli.length, 0)})`);
+    
     return codaArticoli;
 }
