@@ -21,7 +21,12 @@ ${puoInventare ? "Puoi inventare liberamente." : "Scrivi cose reali, senza inven
 Nessun riferimento temporale specifico (oggi, ieri, ecc.).
 ${moodCommento}`;
     const userPrompt = isGenerato ? `Scrivi un articolo su: ${titolo}` : `Notizia reale: ${titolo}. Scrivi un articolo.`;
-    const { provider, text } = await callLLMFn(sys, userPrompt, voce.weight_articolo ?? 0.8);
+    const llmResult = await callLLMFn(sys, userPrompt, voce.weight_articolo ?? 0.8);
+    if (!llmResult) {
+        log(`⚠️ Nessun articolo generato per ${voce.firma} (provider fallito)`);
+        return null;
+    }
+    const { provider, text } = llmResult;
     log(`📝 ${voce.firma} (${provider}) ha scritto: "${text.substring(0, 60)}..."`);
     const parsed = parseJSON(text);
     return { ...parsed, provider };
@@ -46,7 +51,9 @@ Scegli da ${LIMITI.commenti_min??1} a ${LIMITI.commenti_max??3} personaggi che c
 Il personaggio "${voce.firma}" non può commentare se stesso.
 Rispondi solo JSON: {"commenti":[{"nome":"...","avatar":"...","testo":"..."}]}`;
     const userPrompt = `Articolo: "${articolo}"\nGenera commenti.`;
-    const { text } = await callLLMFn(sys, userPrompt, voce.weight_commento ?? 0.7);
+    const llmResult = await callLLMFn(sys, userPrompt, voce.weight_commento ?? 0.7);
+    if (!llmResult) return [];
+    const { text } = llmResult;
     const parsed = parseJSON(text);
     return parsed?.commenti || [];
 }
