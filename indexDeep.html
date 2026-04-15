@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>La Voce del Delfino 🐬 - Redazione</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f3ef;
+            color: #2c2c2c;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        
+        /* Header */
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { font-size: 2.5rem; color: #005f73; margin-bottom: 5px; }
+        .header h1 span { font-size: 2rem; }
+        .header p { color: #666; font-style: italic; }
+        
+        /* Messaggi */
+        .error-msg { background: #ffebee; color: #c62828; padding: 15px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #c62828; }
+        .warning-msg { background: #fff3e0; color: #ef6c00; padding: 15px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #ef6c00; }
+        .success-msg { background: #e8f5e9; color: #2e7d32; padding: 15px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #2e7d32; }
+        
+        /* Log */
+        .log-section { background: #1e1e1e; border-radius: 16px; padding: 20px; margin-bottom: 30px; }
+        .log-section h2 { color: #0f0; font-family: monospace; font-size: 1.2rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .log-day { margin-bottom: 20px; }
+        .log-day-title { color: #0f0; font-family: monospace; font-size: 0.9rem; margin-bottom: 8px; padding: 4px 8px; background: #2a2a2a; border-radius: 6px; display: inline-block; }
+        .log-content { font-family: monospace; font-size: 0.75rem; color: #ccc; white-space: pre-wrap; background: #0d0d0d; padding: 12px; border-radius: 8px; max-height: 400px; overflow-y: auto; }
+        
+        /* Programmazione Redazione */
+        .schedule-section { background: white; border-radius: 20px; padding: 24px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .schedule-section h2 { font-size: 1.3rem; color: #005f73; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+        .schedule-section h2::before { content: "📅"; font-size: 1.3rem; }
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        .schedule-card { background: #f8f6f2; border-radius: 16px; padding: 16px; border-left: 4px solid #005f73; transition: transform 0.2s, box-shadow 0.2s; }
+        .schedule-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .schedule-day { font-size: 0.7rem; text-transform: uppercase; color: #005f73; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; }
+        .schedule-personaggio { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+        .schedule-avatar { font-size: 1.8rem; }
+        .schedule-nome { font-weight: bold; font-size: 1rem; color: #2c2c2c; }
+        .schedule-sezione { font-size: 0.75rem; color: #888; margin-bottom: 8px; }
+        .schedule-tipo { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: bold; margin-bottom: 8px; }
+        .schedule-tipo.rss { background: #008cff20; color: #008cff; }
+        .schedule-tipo.gen { background: #ff4d4d20; color: #ff4d4d; }
+        .schedule-tipo.red { background: #2d6a4f20; color: #2d6a4f; }
+        .schedule-temi { font-size: 0.7rem; color: #666; margin-top: 8px; padding-top: 8px; border-top: 1px solid #eee; }
+        .schedule-temi span { display: inline-block; background: #eee; padding: 2px 8px; border-radius: 12px; margin: 2px 4px 2px 0; font-size: 0.65rem; }
+        
+        /* Statistiche Config */
+        .stats-section { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
+        .stat-card { background: white; border-radius: 16px; padding: 16px 20px; flex: 1; min-width: 150px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: bold; color: #005f73; }
+        .stat-label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Footer */
+        .footer { text-align: center; padding: 20px; color: #888; font-size: 0.7rem; border-top: 1px solid #ddd; margin-top: 30px; }
+        
+        /* Tabs per log */
+        .log-tabs { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+        .log-tab { background: #2a2a2a; border: none; color: #aaa; padding: 6px 14px; border-radius: 20px; font-family: monospace; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
+        .log-tab:hover { background: #3a3a3a; }
+        .log-tab.active { background: #0f0; color: #000; font-weight: bold; }
+        .log-panel { display: none; }
+        .log-panel.active { display: block; }
+        
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .schedule-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🐬 La Voce del Delfino <span>📰</span></h1>
+        <p>Redazione e programmazione</p>
+    </div>
+
+    <div id="messages"></div>
+
+    <div class="stats-section" id="stats"></div>
+
+    <div class="schedule-section">
+        <h2>Programmazione Redazione</h2>
+        <div id="schedule-grid" class="schedule-grid"></div>
+    </div>
+
+    <div class="log-section">
+        <h2>📋 Log di sistema</h2>
+        <div class="log-tabs" id="log-tabs"></div>
+        <div id="log-panels"></div>
+    </div>
+
+    <div class="footer">
+        La Voce del Delfino - Testata giornalistica immaginaria
+    </div>
+</div>
+
+<script>
+    // Mappa giorni
+    const giorniMap = {
+        'dom': 'Domenica', 'lun': 'Lunedì', 'mar': 'Martedì', 'mer': 'Mercoledì',
+        'gio': 'Giovedì', 'ven': 'Venerdì', 'sab': 'Sabato', 'default': 'Tutti i giorni'
+    };
+
+    function mostraMessaggio(tipo, testo) {
+        const container = document.getElementById('messages');
+        const msg = document.createElement('div');
+        msg.className = tipo === 'error' ? 'error-msg' : (tipo === 'warning' ? 'warning-msg' : 'success-msg');
+        msg.innerText = testo;
+        container.appendChild(msg);
+        setTimeout(() => msg.remove(), 8000);
+    }
+
+    async function caricaConfig() {
+        try {
+            const response = await fetch('public/data/config_v2.json?v=' + Date.now());
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const config = await response.json();
+            
+            // Validazione base
+            if (!config.CHI) { mostraMessaggio('error', '❌ Config mancante: sezione CHI non trovata'); return null; }
+            if (!config.REDAZIONE) { mostraMessaggio('error', '❌ Config mancante: sezione REDAZIONE non trovata'); return null; }
+            
+            // Verifica che tutti i personaggi in REDAZIONE esistano in CHI
+            const personaggiEsistenti = Object.keys(config.CHI);
+            const vociInvalidi = [];
+            for (const voce of config.REDAZIONE) {
+                if (voce.firma && !personaggiEsistenti.includes(voce.firma) && voce.firma !== 'default') {
+                    vociInvalidi.push(`${voce.firma} (${voce.arg || voce.sez})`);
+                }
+            }
+            if (vociInvalidi.length > 0) {
+                mostraMessaggio('warning', `⚠️ Personaggi non trovati: ${vociInvalidi.join(', ')}`);
+            }
+            
+            return config;
+        } catch(e) {
+            mostraMessaggio('error', `❌ Errore caricamento config: ${e.message}`);
+            return null;
+        }
+    }
+
+    function getGiornoCorrente() {
+        const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
+        const oggi = new Date().getDay();
+        return giorni[oggi];
+    }
+
+    function getGiorniAttivi(giorniStr) {
+        if (giorniStr === 'default') return ['default'];
+        return giorniStr.split(',').map(g => g.trim());
+    }
+
+    function isVoceAttiva(voce, oggi) {
+        const giorniAttivi = getGiorniAttivi(voce.g);
+        return giorniAttivi.includes('default') || giorniAttivi.includes(oggi);
+    }
+
+    function renderStats(config) {
+        const statsDiv = document.getElementById('stats');
+        const numPersonaggi = Object.keys(config.CHI || {}).filter(k => k !== 'default').length;
+        const numVoci = (config.REDAZIONE || []).length;
+        const numRSS = (config.REDAZIONE || []).filter(v => v.tipo === 'RSS').length;
+        const numGEN = (config.REDAZIONE || []).filter(v => v.tipo === 'GEN').length;
+        const numRED = (config.REDAZIONE || []).filter(v => v.tipo === 'RED').length;
+        
+        statsDiv.innerHTML = `
+            <div class="stat-card"><div class="stat-number">${numPersonaggi}</div><div class="stat-label">Personaggi</div></div>
+            <div class="stat-card"><div class="stat-number">${numVoci}</div><div class="stat-label">Voci Redazione</div></div>
+            <div class="stat-card"><div class="stat-number">${numRSS}</div><div class="stat-label">📰 RSS</div></div>
+            <div class="stat-card"><div class="stat-number">${numGEN}</div><div class="stat-label">✍️ GEN</div></div>
+            <div class="stat-card"><div class="stat-number">${numRED}</div><div class="stat-label">🎭 RED</div></div>
+        `;
+    }
+
+    function renderSchedule(config, oggi) {
+        const scheduleDiv = document.getElementById('schedule-grid');
+        const vociAttive = (config.REDAZIONE || []).filter(v => isVoceAttiva(v, oggi));
+        
+        if (vociAttive.length === 0) {
+            scheduleDiv.innerHTML = '<div style="text-align:center;padding:40px;color:#888;">📭 Nessuna voce attiva per oggi</div>';
+            return;
+        }
+        
+        scheduleDiv.innerHTML = vociAttive.map(voce => {
+            const personaggio = config.CHI[voce.firma] || config.CHI['default'] || { avatar: '👤', mood: 'neutro' };
+            const tipoClass = (voce.tipo || 'RSS').toLowerCase();
+            const tipoLabel = voce.tipo === 'RSS' ? '📰 RSS' : (voce.tipo === 'GEN' ? '✍️ GEN' : '🎭 RED');
+            const temi = voce.temi || (voce.arg ? [voce.arg] : []);
+            const giorniLabel = getGiorniAttivi(voce.g).map(g => giorniMap[g] || g).join(', ');
+            
+            return `
+                <div class="schedule-card">
+                    <div class="schedule-day">📅 ${giorniLabel}</div>
+                    <div class="schedule-personaggio">
+                        <div class="schedule-avatar">${personaggio.avatar || '👤'}</div>
+                        <div class="schedule-nome">${voce.firma || '?'}</div>
+                    </div>
+                    <div class="schedule-sezione">📍 ${voce.sez || '?'} • ${voce.lab || 'Generale'}</div>
+                    <div class="schedule-tipo ${tipoClass}">${tipoLabel}</div>
+                    <div class="schedule-temi">
+                        ${temi.slice(0, 3).map(t => `<span>${t.length > 35 ? t.substring(0, 35) + '…' : t}</span>`).join('')}
+                        ${temi.length > 3 ? `<span>+${temi.length-3}</span>` : ''}
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    async function caricaLog() {
+        try {
+            const response = await fetch('public/data/redazione-v2.log?v=' + Date.now());
+            if (!response.ok) throw new Error('Log non disponibile');
+            const logText = await response.text();
+            
+            // Dividi per giorno
+            const lines = logText.split('\n');
+            const giorni = {};
+            let giornoCorrente = '';
+            
+            for (const line of lines) {
+                const match = line.match(/\[(\d{2}\/\d{2}\/\d{4})/);
+                if (match) {
+                    giornoCorrente = match[1];
+                    if (!giorni[giornoCorrente]) giorni[giornoCorrente] = [];
+                }
+                if (giornoCorrente && line.trim()) {
+                    giorni[giornoCorrente].push(line);
+                }
+            }
+            
+            // Crea tabs e panels
+            const giorniLista = Object.keys(giorni).sort().reverse();
+            const tabsDiv = document.getElementById('log-tabs');
+            const panelsDiv = document.getElementById('log-panels');
+            
+            if (giorniLista.length === 0) {
+                tabsDiv.innerHTML = '<span style="color:#666;">Nessun log disponibile</span>';
+                panelsDiv.innerHTML = '';
+                return;
+            }
+            
+            tabsDiv.innerHTML = giorniLista.map((giorno, idx) => 
+                `<button class="log-tab ${idx === 0 ? 'active' : ''}" data-day="${giorno}">📅 ${giorno}</button>`
+            ).join('');
+            
+            panelsDiv.innerHTML = giorniLista.map((giorno, idx) => 
+                `<div class="log-panel ${idx === 0 ? 'active' : ''}" data-day="${giorno}">
+                    <div class="log-content">${giorni[giorno].join('\n')}</div>
+                </div>`
+            ).join('');
+            
+            // Aggiungi eventi tabs
+            document.querySelectorAll('.log-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const day = tab.dataset.day;
+                    document.querySelectorAll('.log-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.log-panel').forEach(p => p.classList.remove('active'));
+                    tab.classList.add('active');
+                    document.querySelector(`.log-panel[data-day="${day}"]`).classList.add('active');
+                });
+            });
+        } catch(e) {
+            document.getElementById('log-tabs').innerHTML = '<span style="color:#666;">Log non disponibile</span>';
+            document.getElementById('log-panels').innerHTML = '';
+        }
+    }
+
+    async function init() {
+        const config = await caricaConfig();
+        if (!config) return;
+        
+        const oggi = getGiornoCorrente();
+        renderStats(config);
+        renderSchedule(config, oggi);
+        await caricaLog();
+    }
+    
+    init();
+</script>
+</body>
+</html>
