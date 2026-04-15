@@ -21,12 +21,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE_DIR  = path.join(__dirname, "..");
 const DATA_DIR  = path.join(BASE_DIR, "public", "data");
 
-const LOG_PATH          = path.join(DATA_DIR, "redazione-v3.log");
-const DRAFT_PATH        = path.join(DATA_DIR, "_draft-v3.json");
-const ARTICLES_PATH     = path.join(DATA_DIR, "_articles-v3.json");
+const LOG_PATH          = path.join(DATA_DIR, "redazione-v2.log");
+const DRAFT_PATH        = path.join(DATA_DIR, "_draft-v2.json");
+const ARTICLES_PATH     = path.join(DATA_DIR, "_articles-v2.json");
 const AUTH_PATH         = path.join(DATA_DIR, "auth_info.json");
-const ACTIVE_CONFIG_PATH = path.join(DATA_DIR, "active_config_v3.json");
-const CONFIG_PATH       = path.join(DATA_DIR, "config_v3.json");
+const ACTIVE_CONFIG_PATH = path.join(DATA_DIR, "active_config_v2.json");
+const CONFIG_PATH       = path.join(DATA_DIR, "config_v2.json");
 
 const adminPwd  = process.env.ADMIN_PASSWORD   || "delfino2026";
 const secretData = process.env.ADMIN_SECRET_DATA || "Nessun segreto.";
