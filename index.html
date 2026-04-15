@@ -234,9 +234,10 @@
             transform: translateY(-2px);
         }
         
-        .card.rss-box { border-left: 6px solid #6f9e7c; }
-        .card.gen-box { border-left: 6px solid #e0a878; }
-        .card.personaggio-box { border-left: 6px solid #9b9e6f; background: #fef8ed; }
+        /* COLORI FRAME */
+        .card.rss-box { border-left: 6px solid #008cff; }
+        .card.gen-box { border-left: 6px solid #ff4d4d; }
+        .card.personaggio-box { border-left: 6px solid #2d6a4f; background: #fef8ed; }
         .card.chat-box { border-left: 6px solid #9ec07c; background: #fefcf5; }
         
         .card-img-box {
@@ -613,6 +614,59 @@
             font-style: italic;
         }
         
+        /* Legenda Ghibli */
+        .ghibli-legend {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255,248,225,0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 28px;
+            padding: 12px 18px;
+            border: 1px solid rgba(140,120,80,0.25);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            z-index: 98;
+            font-size: 0.7rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+        
+        .ghibli-legend:hover {
+            background: rgba(255,248,225,0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+        
+        .legend-title {
+            font-weight: 700;
+            color: #6a8e4a;
+            margin-bottom: 8px;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.65rem;
+            color: #5c6e4a;
+        }
+        
+        .legend-color {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+        }
+        
         .dashboard-btn {
             position: fixed;
             bottom: 25px;
@@ -669,6 +723,13 @@
             .testata img#header-img { height: 180px; }
             .grid-container { grid-template-columns: 1fr; gap: 25px; }
             .info-bar { flex-direction: column; text-align: center; }
+            .ghibli-legend {
+                bottom: 10px;
+                left: 10px;
+                padding: 8px 12px;
+            }
+            .legend-items { gap: 8px; }
+            .legend-item { font-size: 0.6rem; }
         }
     </style>
 </head>
@@ -701,6 +762,29 @@
     </div>
 </div>
 
+<!-- Legenda Ghibli -->
+<div class="ghibli-legend">
+    <div class="legend-title">📖 Legenda</div>
+    <div class="legend-items">
+        <div class="legend-item">
+            <div class="legend-color" style="background: #008cff;"></div>
+            <span>📰 Notizia reale</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #ff4d4d;"></div>
+            <span>✨ Storia inventata</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #2d6a4f;"></div>
+            <span>🎭 Dalla Redazione</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #9ec07c;"></div>
+            <span>💬 Chat Redazione</span>
+        </div>
+    </div>
+</div>
+
 <button id="dashboard-btn" class="dashboard-btn" onclick="window.location.href='dashboard.html'">📊 Dashboard Redazione</button>
 
 <script>
@@ -710,7 +794,6 @@ let hideClicks = 0;
 let hideLastClick = 0;
 let dashboardSbloccata = false;
 
-// Funzione per generare un colore unico da una stringa (nome personaggio)
 function getColorFromName(nome) {
     let hash = 0;
     for (let i = 0; i < nome.length; i++) {
@@ -721,7 +804,6 @@ function getColorFromName(nome) {
     return `hsl(${hue}, 65%, 55%)`;
 }
 
-// Controlla se la dashboard è già stata sbloccata in precedenza
 if (localStorage.getItem('dashboard_sbloccata') === 'true') {
     dashboardSbloccata = true;
     document.getElementById('dashboard-btn').style.display = 'flex';
@@ -732,7 +814,6 @@ function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/<
 document.getElementById('logo-innesco').onclick = async () => {
     const ora = Date.now();
     
-    // Gestione doppio click per nascondere (se il bottone è visibile)
     if (dashboardSbloccata && document.getElementById('dashboard-btn').style.display === 'flex') {
         if (ora - hideLastClick > 1000) hideClicks = 0;
         hideClicks++;
@@ -754,7 +835,6 @@ document.getElementById('logo-innesco').onclick = async () => {
         }
     }
     
-    // Gestione 5 click per sbloccare (solo se non è già sbloccata)
     if (!dashboardSbloccata) {
         if (ora - lastClick > 1000) clicks = 0;
         clicks++;
