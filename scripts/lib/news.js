@@ -1,7 +1,7 @@
 /**
  * FILE: lib/news.js
  * DATA: 2025-04-15
- * VERSIONE: 2.2
+ * VERSIONE: 2.3
  * DESCRIZIONE: Gestione della raccolta notizie da GNews e RSS.
  *              Supporta fallback automatico da GNews a RSS.
  *              Log dettagliati con fonte e numero di notizie.
@@ -20,7 +20,7 @@ export function initNews(apiKey, source, logFunction) {
 
 async function fetchGNews(query, max) {
     if (!gnewsApiKey) {
-        log(`⚠️ GNews: chiave API mancante`);
+        log(`⚠️ GNews: chiave API mancante per "${query}"`);
         return [];
     }
     await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000));
@@ -104,11 +104,11 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
 
     log(`📡 Fonte notizie: ${newsSource.toUpperCase()}`);
 
-    // Prima fase: raccolta con la fonte attuale
+    // Prima fase: raccolta con la fonte attuale (solo voci RSS)
     for (const voce of vociAttive) {
         const num = voce.num || 1;
         voce._parole = parole;
-        if (voce.tipo !== "RSS") continue; // solo RSS cerca notizie
+        if (voce.tipo !== "RSS") continue;
         
         let titoli = [];
         if (newsSource === "gnews") {
@@ -123,9 +123,9 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
         risultati.push({ voce, titoli });
     }
 
-    // Se GNews ha dato zero notizie per tutte le voci, passa a RSS
-    if (newsSource === "gnews" && tutteZero) {
-        log(`⚠️ GNews: 0 notizie per TUTTE le voci → passaggio a RSS (cascata)`);
+    // Se GNews ha dato zero notizie per tutte le voci RSS, passa a RSS (cascata)
+    if (newsSource === "gnews" && tutteZero && risultati.length > 0) {
+        log(`⚠️ GNews: 0 notizie per TUTTE le voci RSS → passaggio a RSS (cascata)`);
         newsSource = "rss";
         risultati.length = 0;
         tutteZero = true;
@@ -140,6 +140,7 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
     }
 
     // Aggiungi articoli di tipo GEN (generazione libera)
+    let countGEN = 0;
     for (const voce of vociAttive) {
         const num = voce.num || 1;
         if (voce.tipo === "GEN") {
@@ -150,12 +151,15 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
                 if (!visti.has(key)) {
                     visti.add(key);
                     codaArticoli.push({ voce, tema });
+                    countGEN++;
                 }
             }
         }
     }
+    if (countGEN > 0) log(`📝 GEN: ${countGEN} articoli da generazione libera`);
 
     // Aggiungi articoli di tipo RED (Dalla Redazione)
+    let countRED = 0;
     for (const voce of vociAttive) {
         const num = voce.num || 1;
         if (voce.tipo === "RED") {
@@ -166,12 +170,16 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
                 if (!visti.has(key)) {
                     visti.add(key);
                     codaArticoli.push({ voce, tema });
+                    countRED++;
                 }
             }
         }
     }
+    if (countRED > 0) log(`✍️ RED: ${countRED} articoli redazionali`);
 
     // Aggiungi le notizie RSS raccolte
+    let countRSS = 0;
+    let countGenerici = 0;
     for (const { voce, titoli } of risultati) {
         const num = voce.num || 1;
         for (const t of titoli) {
@@ -179,6 +187,7 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
             if (!visti.has(key)) {
                 visti.add(key);
                 codaArticoli.push({ voce, tema: t });
+                countRSS++;
             }
         }
         if (titoli.length < num) {
@@ -190,12 +199,15 @@ export async function raccoltaNotizie(vociAttive, parole, contatori) {
                 if (!visti.has(key)) {
                     visti.add(key);
                     codaArticoli.push({ voce, tema: temaGen });
+                    countGenerici++;
                 }
             }
         }
     }
+    if (countRSS > 0) log(`📰 RSS: ${countRSS} notizie reali`);
+    if (countGenerici > 0) log(`🔄 Generici: ${countGenerici} articoli di riempimento`);
 
-    log(`📦 Totale articoli in coda: ${codaArticoli.length} (RSS: ${risultati.reduce((acc, r) => acc + r.titoli.length, 0)}, GEN/RED: ${codaArticoli.length - risultati.reduce((acc, r) => acc + r.titoli.length, 0)})`);
+    log(`📦 Totale articoli in coda: ${codaArticoli.length} (RSS:${countRSS}, GEN:${countGEN}, RED:${countRED}, GENERICI:${countGenerici})`);
     
     return codaArticoli;
 }
