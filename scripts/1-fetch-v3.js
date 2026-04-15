@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * 1-fetch-v3.js
- * FASE 1 — Nuova architettura v3
+ * 1-fetch-v2.js
+ * FASE 1 — Nuova architettura v2
  * Supporto Gemini/Groq con fallback persistente, modello Groq dinamico,
- * ricerca notizie via GNews API (fallback RSS), gestione sicura draft.
+ * GNews API + fallback RSS, gestione sicura draft.
  */
 
 import fs from "fs";
@@ -134,12 +134,11 @@ let groqModelCorrente = process.env.GROQ_MODEL || "llama3-70b-8192";
 let ricercaModelloGroqEffettuata = false;
 
 const gnewsApiKey = process.env.GNEWS_API_KEY || "";
-const newsSource = process.env.NEWS_SOURCE || "gnews"; // "gnews" o "rss"
+const newsSource = process.env.NEWS_SOURCE || "gnews";
 let activeGeminiModel = "gemini-1.5-flash";
 let quotaGiornalieraEsaurita = false;
 let contatoreChiamateApi = 0;
 
-// Provider LLM persistente
 const MAX_FAILURES_BEFORE_SWITCH = 2;
 let providerState = { provider: "gemini", failureCount: 0 };
 let currentProvider = "gemini";
@@ -218,7 +217,7 @@ async function trovaUltimoModello() {
             scriviLog(`[MODELLO] Gemini: ${activeGeminiModel}`);
         }
     } catch (e) {
-        scriviLog(`[WARN] Ricerca modello Gemini fallita, uso default: ${e.message}`);
+        scriviLog(`[WARN] Ricerca modello Gemini fallita: ${e.message}`);
     }
 }
 
@@ -228,91 +227,56 @@ async function trovaUltimoModello() {
 
 async function trovaUltimoModelloGroq() {
     if (!groqApiKey) {
-        scriviLog("ERRORE: Impossibile trovare modelli Groq, GROQ_API_KEY mancante.");
+        scriviLog("ERRORE: GROQ_API_KEY mancante per lista modelli");
         return;
     }
-
     const url = "https://api.groq.com/openai/v1/models";
-    const headers = {
-        "Authorization": `Bearer ${groqApiKey}`,
-        "Content-Type": "application/json"
-    };
-
+    const headers = { "Authorization": `Bearer ${groqApiKey}` };
     try {
-        scriviLog(`[GROQ] Richiesta modelli a: ${url}`);
         const response = await fetch(url, { headers });
         if (!response.ok) {
-            const errorText = await response.text();
-            scriviLog(`[GROQ ERRORE] Impossibile ottenere la lista dei modelli: ${response.status} ${response.statusText} - ${errorText}`);
+            scriviLog(`[GROQ ERRORE] Lista modelli: ${response.status}`);
             return;
         }
-
         const data = await response.json();
-        if (!data.data || !Array.isArray(data.data)) {
-            scriviLog("[GROQ ERRORE] Risposta API modelli inaspettata.");
-            return;
-        }
-
-        // Filtra modelli testuali
-        const modelliTestuali = data.data.filter(model =>
-            model.id &&
-            (model.id.includes("llama") ||
-             model.id.includes("mixtral") ||
-             model.id.includes("gemma")) &&
-            !model.id.includes("embed")
+        if (!data.data) return;
+        const testuali = data.data.filter(m =>
+            m.id && (m.id.includes("llama") || m.id.includes("mixtral") || m.id.includes("gemma")) &&
+            !m.id.includes("embed")
         );
-
-        if (modelliTestuali.length === 0) {
-            scriviLog("[GROQ] Nessun modello testuale valido trovato. Verrà usato il modello predefinito.");
-            return;
-        }
-
-        // Priorità ai modelli llama
-        const modelliPrioritari = modelliTestuali.filter(m => m.id.includes("llama"));
-        const modelliDaOrdinare = modelliPrioritari.length > 0 ? modelliPrioritari : modelliTestuali;
-
-        // Ordina per data di creazione (se disponibile)
-        modelliDaOrdinare.sort((a, b) => {
-            if (a.created && b.created) return b.created - a.created;
-            return 0;
-        });
-
-        const migliorModello = modelliDaOrdinare[0].id;
-        if (migliorModello !== groqModelCorrente) {
-            scriviLog(`[GROQ] Modello trovato: ${migliorModello} (predefinito era ${groqModelCorrente})`);
-            groqModelCorrente = migliorModello;
+        if (testuali.length === 0) return;
+        const migliori = testuali.filter(m => m.id.includes("llama"));
+        const daOrdinare = migliori.length > 0 ? migliori : testuali;
+        daOrdinare.sort((a,b) => (b.created || 0) - (a.created || 0));
+        const migliore = daOrdinare[0].id;
+        if (migliore !== groqModelCorrente) {
+            scriviLog(`[GROQ] Modello aggiornato: ${migliore} (era ${groqModelCorrente})`);
+            groqModelCorrente = migliore;
         } else {
-            scriviLog(`[GROQ] Modello già aggiornato: ${migliorModello}`);
+            scriviLog(`[GROQ] Modello già ottimale: ${groqModelCorrente}`);
         }
-    } catch (error) {
-        scriviLog(`[GROQ ECCEZIONE] Durante la lista dei modelli: ${error.message}`);
+    } catch (e) {
+        scriviLog(`[GROQ] Errore lista modelli: ${e.message}`);
     }
 }
 
 // ---------------------------------------------------------------------------
-// FETCH NOTIZIE: GNews API (primaria) o RSS (fallback)
+// FETCH NOTIZIE: GNews + fallback RSS
 // ---------------------------------------------------------------------------
 
 async function fetchGNews(query, max) {
-    if (!gnewsApiKey) {
-        scriviLog("ERRORE: Manca GNEWS_API_KEY");
-        return [];
-    }
+    if (!gnewsApiKey) return [];
     if (max <= 0) return [];
     const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=it&country=it&max=${max}&token=${gnewsApiKey}`;
     try {
         const res = await fetch(url);
-        if (!res.ok) {
-            const err = await res.json();
-            scriviLog(`[GNews ERRORE] ${err.errors?.join(", ") || res.statusText}`);
-            return [];
-        }
+        if (!res.ok) return [];
         const data = await res.json();
         const titles = data.articles.map(art => art.title);
-        scriviLog(`[GNews] Ottenuti ${titles.length} titoli per "${query}"`);
+        scriviLog(`[GNews] ${titles.length} titoli per "${query}"`);
         return titles;
     } catch (e) {
-        scriviLog(`[GNews ECCEZIONE] ${e.message}`);
+        scriviLog(`[GNews] Errore: ${e.message}`);
         return [];
     }
 }
@@ -326,7 +290,7 @@ async function fetchRSS(query, max) {
         const xml = await res.text();
         const titles = [];
         const dueGiorniFa = Date.now() - 2 * 24 * 3600000;
-        const itemRegex   = /<item>([\s\S]*?)<\/item>/gi;
+        const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
         let m;
         while ((m = itemRegex.exec(xml)) !== null && titles.length < max) {
             const item = m[1];
@@ -340,7 +304,7 @@ async function fetchRSS(query, max) {
         }
         return titles;
     } catch (e) {
-        scriviLog(`Errore RSS per "${query}": ${e.message}`);
+        scriviLog(`RSS errore per "${query}": ${e.message}`);
         return [];
     }
 }
@@ -349,15 +313,14 @@ async function fetchNotizie(query, max) {
     if (newsSource === "gnews") {
         const titoli = await fetchGNews(query, max);
         if (titoli.length > 0) return titoli;
-        scriviLog(`⚠️ GNews fallito, fallback su RSS per "${query}"`);
-        return await fetchRSS(query, max);
-    } else {
+        scriviLog(`⚠️ GNews fallito, fallback RSS`);
         return await fetchRSS(query, max);
     }
+    return await fetchRSS(query, max);
 }
 
 // ---------------------------------------------------------------------------
-// GESTIONE PAUSA / QUOTA
+// PAUSA E GESTIONE QUOTA
 // ---------------------------------------------------------------------------
 
 const ATTESA_GEMINI_MS = 1500;
@@ -377,10 +340,8 @@ async function gestisciErroreQuota(msg) {
 // ---------------------------------------------------------------------------
 
 async function callGemini(sys, prompt, temperature = 0.85) {
-    if (!apiKey) { scriviLog("ERRORE: Manca GEMINI_API_KEY"); return null; }
-
+    if (!apiKey) return null;
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${activeGeminiModel}:generateContent?key=${apiKey}`;
-
     for (let i = 0; i < 3; i++) {
         await pausaGemini();
         try {
@@ -393,77 +354,69 @@ async function callGemini(sys, prompt, temperature = 0.85) {
                     systemInstruction: { parts: [{ text: sys }] },
                     generationConfig: { responseMimeType: "application/json", temperature },
                     safetySettings: [
-                        { category: "HARM_CATEGORY_HARASSMENT",       threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_HATE_SPEECH",      threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT",threshold: "BLOCK_NONE" }
+                        { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
+                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
                     ]
                 })
             });
-
             const d = await res.json();
-
             if (d.error) {
                 scriviLog(`[ERRORE GEMINI] ${d.error.message} (code: ${d.error.code})`);
                 const code = d.error.code;
-                const msg  = (d.error.message || "").toLowerCase();
-
+                const msg = (d.error.message || "").toLowerCase();
                 if (msg.includes("limit") && msg.includes("per day")) {
-                    scriviLog("❌ QUOTA GIORNALIERA ESAURITA (Gemini)");
+                    scriviLog("❌ QUOTA GIORNALIERA GEMINI");
                     return null;
                 }
-
                 if (code === 429 || code === 503) {
                     if (msg.includes("quota exceeded")) {
                         await gestisciErroreQuota(d.error.message);
                         continue;
                     }
                     const ms = Math.pow(2, i) * 10000;
-                    scriviLog(`⏳ Errore ${code}, attendo ${ms / 1000}s...`);
+                    scriviLog(`⏳ Errore ${code}, attendo ${ms/1000}s...`);
                     await new Promise(r => setTimeout(r, ms));
                     continue;
                 }
-
                 return null;
             }
-
             if (d.candidates?.length > 0) {
                 return d.candidates[0].content.parts[0].text;
             }
-
             return null;
-
         } catch (e) {
             scriviLog(`[ERRORE RETE GEMINI] ${e.message}`);
             await new Promise(r => setTimeout(r, 5000));
         }
     }
-
     return null;
 }
 
 // ---------------------------------------------------------------------------
-// CHIAMATA GROQ (con modello dinamico)
+// CHIAMATA GROQ (con troncamento e max_tokens)
 // ---------------------------------------------------------------------------
 
 async function callGroq(sys, prompt, temperature = 0.85) {
-    if (!groqApiKey) {
-        scriviLog("ERRORE: Manca GROQ_API_KEY");
-        return null;
-    }
-
-    // Ricerca modello migliore alla prima chiamata
+    if (!groqApiKey) return null;
     if (!ricercaModelloGroqEffettuata) {
         await trovaUltimoModelloGroq();
         ricercaModelloGroqEffettuata = true;
     }
 
-    const url = "https://api.groq.com/openai/v1/chat/completions";
+    // Troncamento input per evitare errore 400
+    const MAX_SYS = 4000;
+    const MAX_PROMPT = 15000;
+    let finalSys = sys.length > MAX_SYS ? sys.substring(0, MAX_SYS) + "... [troncato]" : sys;
+    let finalPrompt = prompt.length > MAX_PROMPT ? prompt.substring(0, MAX_PROMPT) + "... [troncato]" : prompt;
+
     const messages = [
-        { role: "system", content: sys },
-        { role: "user", content: prompt }
+        { role: "system", content: finalSys },
+        { role: "user", content: finalPrompt }
     ];
 
+    const url = "https://api.groq.com/openai/v1/chat/completions";
     for (let i = 0; i < 3; i++) {
         await pausaGemini();
         try {
@@ -478,40 +431,40 @@ async function callGroq(sys, prompt, temperature = 0.85) {
                     model: groqModelCorrente,
                     messages: messages,
                     temperature: temperature,
+                    max_tokens: 2000,
                     response_format: { type: "json_object" }
                 })
             });
-
             const d = await res.json();
-
             if (!res.ok || d.error) {
                 const errorMsg = d.error?.message || `HTTP ${res.status}`;
                 const code = d.error?.code || res.status;
                 scriviLog(`[ERRORE GROQ] ${errorMsg} (code: ${code})`);
                 const msg = (errorMsg || "").toLowerCase();
-
-                if (msg.includes("limit") || msg.includes("quota") || code === 429) {
+                if (msg.includes("limit") || code === 429) {
                     scriviLog("❌ QUOTA GROQ ESAURITA");
                     return null;
                 }
-
+                if (code === 400 && msg.includes("reduce the length")) {
+                    // Riduci ulteriormente il prompt
+                    finalPrompt = finalPrompt.substring(0, Math.floor(finalPrompt.length * 0.6)) + "... [troncato 2]";
+                    messages[1].content = finalPrompt;
+                    scriviLog(`[GROQ] Nuovo tentativo con prompt ridotto (${finalPrompt.length} char)`);
+                    continue;
+                }
                 if (code === 429 || code === 503 || code === 500) {
                     const ms = Math.pow(2, i) * 10000;
-                    scriviLog(`⏳ Errore ${code}, attendo ${ms / 1000}s...`);
+                    scriviLog(`⏳ Errore ${code}, attendo ${ms/1000}s...`);
                     await new Promise(r => setTimeout(r, ms));
                     continue;
                 }
                 return null;
             }
-
             const content = d.choices?.[0]?.message?.content;
             if (!content) return null;
-
-            let jsonText = content.trim();
-            jsonText = jsonText.replace(/^```json\s*/, "").replace(/```$/, "");
+            let jsonText = content.trim().replace(/^```json\s*/, "").replace(/```$/, "");
             JSON.parse(jsonText);
             return jsonText;
-
         } catch (e) {
             scriviLog(`[ERRORE RETE GROQ] ${e.message}`);
             await new Promise(r => setTimeout(r, 5000));
@@ -521,7 +474,7 @@ async function callGroq(sys, prompt, temperature = 0.85) {
 }
 
 // ---------------------------------------------------------------------------
-// FUNZIONE UNIFICATA CON FALLBACK E PERSISTENZA
+// FUNZIONE UNIFICATA CON FALLBACK PERSISTENTE
 // ---------------------------------------------------------------------------
 
 function isFallbackErrore(jsonString) {
@@ -529,12 +482,8 @@ function isFallbackErrore(jsonString) {
     try {
         const obj = JSON.parse(jsonString);
         const testo = (obj.articolo || "").toLowerCase();
-        return testo.includes("contenuto non generato") || 
-               testo.includes("limite temporaneo") ||
-               testo.includes("limite giornaliero");
-    } catch (e) {
-        return true;
-    }
+        return testo.includes("contenuto non generato") || testo.includes("limite");
+    } catch (e) { return true; }
 }
 
 function generaFallback(prompt) {
@@ -547,72 +496,53 @@ function generaFallback(prompt) {
 
 async function callLLM(sys, prompt, temperature = 0.85) {
     async function tentaProvider(provider) {
-        if (provider === "groq") {
-            return await callGroq(sys, prompt, temperature);
-        } else {
-            return await callGemini(sys, prompt, temperature);
-        }
+        return provider === "groq" ? await callGroq(sys, prompt, temperature) : await callGemini(sys, prompt, temperature);
     }
-
     let result = await tentaProvider(currentProvider);
-    
     if (result && !isFallbackErrore(result)) {
         failureCount = 0;
         if (providerState.provider !== currentProvider) {
             providerState.provider = currentProvider;
-            providerState.failureCount = 0;
             salvaStatoProvider(providerState);
         }
         return result;
     }
-    
     failureCount++;
-    scriviLog(`⚠️ Fallimento provider ${currentProvider} (${failureCount}/${MAX_FAILURES_BEFORE_SWITCH})`);
-    
+    scriviLog(`⚠️ Fallimento ${currentProvider} (${failureCount}/${MAX_FAILURES_BEFORE_SWITCH})`);
     if (failureCount >= MAX_FAILURES_BEFORE_SWITCH) {
-        const oldProvider = currentProvider;
-        currentProvider = (currentProvider === "gemini") ? "groq" : "gemini";
-        scriviLog(`🔄 Cambio provider: ${oldProvider} → ${currentProvider} (dopo ${failureCount} fallimenti consecutivi)`);
+        const old = currentProvider;
+        currentProvider = currentProvider === "gemini" ? "groq" : "gemini";
+        scriviLog(`🔄 Cambio provider: ${old} → ${currentProvider}`);
         failureCount = 0;
         providerState.provider = currentProvider;
-        providerState.failureCount = 0;
         salvaStatoProvider(providerState);
-        
         const newResult = await tentaProvider(currentProvider);
-        if (newResult && !isFallbackErrore(newResult)) {
-            return newResult;
-        } else {
-            scriviLog(`❌ Anche ${currentProvider} fallisce. Restituisco fallback.`);
-            return generaFallback(prompt);
-        }
+        if (newResult && !isFallbackErrore(newResult)) return newResult;
+        scriviLog(`❌ Anche ${currentProvider} fallisce.`);
+        return generaFallback(prompt);
     }
-    
     return generaFallback(prompt);
 }
 
 // ---------------------------------------------------------------------------
-// UTILITIES CALENDARIO
+// UTILITIES CALENDARIO E PERSONAGGI
 // ---------------------------------------------------------------------------
 
 function giornoOggi() {
-    const fusoItalia = new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" });
-    const d = new Date(fusoItalia);
-    return ["dom", "lun", "mar", "mer", "gio", "ven", "sab"][d.getDay()];
+    const d = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
+    return ["dom","lun","mar","mer","gio","ven","sab"][d.getDay()];
 }
 
 function risolviAgenda(AGENDA, oggi) {
-    for (const [chiave, val] of Object.entries(AGENDA)) {
-        if (chiave === "default") continue;
-        const giorni = chiave.split(",").map(g => g.trim());
-        if (giorni.includes(oggi)) return { ...AGENDA.default, ...val };
+    for (const [k, v] of Object.entries(AGENDA)) {
+        if (k === "default") continue;
+        if (k.split(",").map(s=>s.trim()).includes(oggi)) return { ...AGENDA.default, ...v };
     }
     return AGENDA.default;
 }
 
 function risolviPersonaggio(CHI, nome) {
-    return CHI[nome] || CHI["default"] || {
-        mood: "neutro", peso: 0.5, avatar: "🐬", img: "default_personaggio.webp"
-    };
+    return CHI[nome] || CHI["default"] || { mood: "neutro", peso: 0.5, avatar: "🐬", img: "default_personaggio.webp" };
 }
 
 // ---------------------------------------------------------------------------
@@ -620,27 +550,19 @@ function risolviPersonaggio(CHI, nome) {
 // ---------------------------------------------------------------------------
 
 async function generaArticolo(voce, CHI, titolo) {
-    const firma       = risolviPersonaggio(CHI, voce.firma);
-    const moodFirma   = firma.mood || "neutro";
-    const bioFirma    = (firma.bio_breve || firma.bio)
-        ? `La tua storia: "${firma.bio_breve || firma.bio}".` : "";
+    const firma = risolviPersonaggio(CHI, voce.firma);
+    const moodFirma = firma.mood || "neutro";
+    const bioFirma = (firma.bio_breve || firma.bio) ? `La tua storia: "${firma.bio_breve || firma.bio}".` : "";
     const moodCommento = voce.mood ? `Il tono del commento finale deve essere: ${voce.mood}` : "";
-    const isGenerato  = voce.tipo === "GEN";
+    const isGenerato = voce.tipo === "GEN";
     const puoInventare = voce.fantasia === true;
-
-    const sys = `Sei ${voce.firma}, giornalista con questo carattere: "${moodFirma}". ${bioFirma}
-Rispondi con UN SINGOLO OGGETTO JSON: {"titolo":"...","articolo":"...","commento":"..."}.
-L'articolo deve essere di circa ${voce._parole || 400} parole, scritto con la tua voce e il tuo stile.
-${puoInventare
-    ? "Puoi inventare liberamente: non sei vincolato a fatti reali. Usa la tua fantasia, esagera, crea situazioni assurde coerenti col tuo carattere."
-    : "Scrivi cose reali e veritiere. Puoi commentare, interpretare e usare il tuo stile, ma niente invenzioni o fatti falsi."}
-IMPORTANTE: non fare MAI riferimenti temporali specifici come oggi, ieri, questa mattina, in questo momento, adesso, attualmente, nelle ultime ore, questa settimana. L'articolo deve essere valido in qualsiasi momento venga letto.
+    const sys = `Sei ${voce.firma}, giornalista con carattere: "${moodFirma}". ${bioFirma}
+Rispondi con JSON: {"titolo":"...","articolo":"...","commento":"..."}.
+Articolo di ~${voce._parole || 400} parole.
+${puoInventare ? "Puoi inventare liberamente." : "Scrivi cose reali, senza inventare fatti falsi."}
+Nessun riferimento temporale specifico (oggi, ieri, ecc.).
 ${moodCommento}`;
-
-    const userPrompt = isGenerato
-        ? `Scrivi un articolo su questo tema: ${titolo}`
-        : `Scrivi un articolo basato su questa notizia reale: ${titolo}`;
-
+    const userPrompt = isGenerato ? `Scrivi un articolo su: ${titolo}` : `Notizia reale: ${titolo}. Scrivi un articolo.`;
     return await callLLM(sys, userPrompt, voce.weight_articolo ?? 0.8);
 }
 
@@ -649,212 +571,125 @@ ${moodCommento}`;
 // ---------------------------------------------------------------------------
 
 async function generaCommenti(voce, CHI, relazioni, personaggi, articolo, commentiPrecedenti, LIMITI = {}) {
-    if (quotaGiornalieraEsaurita) {
-        scriviLog("⚠️ Modalità degradata attiva — commenti saltati.");
-        return null;
-    }
-
-    const nomiPersonaggi = Object.keys(CHI).filter(n => n !== "default");
-
-    const contestoRelazioni = nomiPersonaggi.flatMap(a =>
-        nomiPersonaggi.filter(b => b !== a).map(b => {
-            const k = `${a}→${b}`;
-            const r = relazioni[k];
-            return r ? `${a} è ${r.label} verso ${b} (score: ${r.score})` : null;
-        }).filter(Boolean)
-    ).join(". ");
-
-    const contestoStati = nomiPersonaggi.map(n => {
+    if (quotaGiornalieraEsaurita) return null;
+    const nomi = Object.keys(CHI).filter(n => n !== "default");
+    const contestoRelazioni = nomi.flatMap(a => nomi.filter(b=>b!==a).map(b=>{
+        const r = relazioni[`${a}→${b}`];
+        return r ? `${a} è ${r.label} verso ${b} (score: ${r.score})` : null;
+    }).filter(Boolean)).join(". ");
+    const contestoStati = nomi.map(n=>{
         const p = personaggi[n];
-        return p?.stato && p.stato !== "normale"
-            ? `${n} è attualmente: ${p.stato} (umore: ${p.umore || "neutro"})` : null;
+        return p?.stato && p.stato!=="normale" ? `${n} è: ${p.stato} (umore: ${p.umore||"neutro"})` : null;
     }).filter(Boolean).join(". ");
-
-    const contestoCommenti = commentiPrecedenti?.length
-        ? `Commenti precedenti:\n${commentiPrecedenti.map(c => `${c.nome} (${c.avatar}): "${c.testo}"`).join("\n")}`
-        : "";
-
-    const sys = `Sei il moderatore della redazione de La Voce del Delfino.
-I personaggi disponibili sono: ${nomiPersonaggi.map(n => {
-        const p = CHI[n];
-        const bio = (p.bio_breve || p.bio) ? ` Bio: "${p.bio_breve || p.bio}"` : "";
-        return `${n} (${p.avatar}, mood: "${p.mood}".${bio})`;
-    }).join(", ")}.
-Relazioni: ${contestoRelazioni || "nessuna relazione stabilita"}.
-Stati: ${contestoStati || "tutti nella norma"}.
+    const contestoCommenti = commentiPrecedenti?.length ? `Commenti precedenti:\n${commentiPrecedenti.map(c=>`${c.nome} (${c.avatar}): "${c.testo}"`).join("\n")}` : "";
+    const sys = `Sei il moderatore. Personaggi: ${nomi.map(n=>`${n} (${CHI[n].avatar}, mood: "${CHI[n].mood}")`).join(", ")}.
+Relazioni: ${contestoRelazioni || "nessuna"}.
+Stati: ${contestoStati || "normali"}.
 ${contestoCommenti}
-
-Scegli da ${LIMITI.commenti_min ?? 1} a ${LIMITI.commenti_max ?? 3} personaggi che commenterebbero questa notizia in modo coerente col loro carattere e le loro relazioni.
-Ogni personaggio commenta la notizia E i commenti precedenti (se presenti).
-IMPORTANTE: il personaggio "${voce.firma}" ha già scritto l'articolo — NON può commentare se stesso.
-Se un personaggio è in sciopero, decidi autonomamente se partecipa o meno.
-Rispondi SOLO con JSON: {"commenti": [{"nome":"...","avatar":"...","testo":"..."}]}`;
-
-    const userPrompt = `Articolo: "${articolo}"\n\nGenera i commenti dei personaggi.`;
+Scegli da ${LIMITI.commenti_min??1} a ${LIMITI.commenti_max??3} personaggi che commentano notizia e commenti precedenti.
+Il personaggio "${voce.firma}" non può commentare se stesso.
+Rispondi solo JSON: {"commenti":[{"nome":"...","avatar":"...","testo":"..."}]}`;
+    const userPrompt = `Articolo: "${articolo}"\nGenera commenti.`;
     return await callLLM(sys, userPrompt, voce.weight_commento ?? 0.7);
 }
 
 // ---------------------------------------------------------------------------
-// AGGIORNA RELAZIONI E STATI
+// AGGIORNA RELAZIONI
 // ---------------------------------------------------------------------------
 
 async function aggiornaRelazioni(CHI, relazioni, personaggi, articolo, commenti) {
-    if (quotaGiornalieraEsaurita || !commenti?.length) return;
-
-    const sys = `Sei un analista delle dinamiche sociali della redazione de La Voce del Delfino.
-Analizza questa interazione e restituisci i delta delle relazioni e gli eventuali cambi di stato.
-Rispondi SOLO con JSON:
-{
-  "delta_relazioni": [{"da":"...","a":"...","delta": 0.1}],
-  "nuovi_stati": [{"nome":"...","stato":"...","umore":"..."}]
-}
-I delta vanno da -0.3 a +0.3. Gli stati sono liberi (es. "arrabbiato", "in sciopero", "entusiasta", "normale").`;
-
-    const userPrompt = `Articolo: "${articolo.substring(0, 300)}..."
-Commenti:
-${commenti.map(c => `${c.nome}: "${c.testo}"`).join("\n")}
-
-Analizza le dinamiche e restituisci i delta.`;
-
+    if (!commenti?.length) return;
+    const sys = `Analista dinamiche sociali. Restituisci JSON: {"delta_relazioni":[{"da":"...","a":"...","delta":0.1}],"nuovi_stati":[{"nome":"...","stato":"...","umore":"..."}]}
+Delta da -0.3 a +0.3.`;
+    const userPrompt = `Articolo: "${articolo.substring(0,300)}..."\nCommenti:\n${commenti.map(c=>`${c.nome}: "${c.testo}"`).join("\n")}`;
     const raw = await callLLM(sys, userPrompt);
     if (!raw) return;
-
     try {
-        const inizio = raw.indexOf("{"), fine = raw.lastIndexOf("}");
-        const parsed = JSON.parse(raw.substring(inizio, fine + 1));
-
+        const parsed = JSON.parse(raw.substring(raw.indexOf("{"), raw.lastIndexOf("}")+1));
         for (const d of (parsed.delta_relazioni || [])) {
-            const chiave = `${d.da}→${d.a}`;
-            if (!relazioni[chiave]) relazioni[chiave] = { score: 0, label: "neutro", ultimo_aggiornamento: "" };
-            relazioni[chiave].score = parseFloat(Math.max(-1, Math.min(1, relazioni[chiave].score + d.delta)).toFixed(3));
-            relazioni[chiave].label = labelDaScore(relazioni[chiave].score);
-            relazioni[chiave].ultimo_aggiornamento = new Date().toLocaleDateString("it-IT", { timeZone: "Europe/Rome" });
+            const key = `${d.da}→${d.a}`;
+            if (!relazioni[key]) relazioni[key] = { score:0, label:"neutro", ultimo_aggiornamento:"" };
+            let newScore = Math.max(-1, Math.min(1, (relazioni[key].score||0) + d.delta));
+            relazioni[key].score = Math.round(newScore * 1000)/1000;
+            relazioni[key].label = labelDaScore(relazioni[key].score);
+            relazioni[key].ultimo_aggiornamento = new Date().toLocaleDateString("it-IT",{timeZone:"Europe/Rome"});
         }
-
         for (const s of (parsed.nuovi_stati || [])) {
             if (!personaggi[s.nome]) personaggi[s.nome] = {};
             personaggi[s.nome].stato = s.stato;
             personaggi[s.nome].umore = s.umore;
-            personaggi[s.nome].dal   = new Date().toLocaleDateString("it-IT", { timeZone: "Europe/Rome" });
+            personaggi[s.nome].dal = new Date().toLocaleDateString("it-IT",{timeZone:"Europe/Rome"});
         }
-
-        scriviLog(`🔄 Relazioni aggiornate: ${(parsed.delta_relazioni || []).length} delta, ${(parsed.nuovi_stati || []).length} stati cambiati.`);
-    } catch (e) {
-        scriviLog(`[WARN] Impossibile parsare aggiornamento relazioni: ${e.message}`);
-    }
+        scriviLog(`🔄 Relazioni: ${parsed.delta_relazioni?.length || 0} delta, ${parsed.nuovi_stati?.length || 0} stati.`);
+    } catch(e) { scriviLog(`[WARN] Parse relazioni: ${e.message}`); }
 }
 
 // ---------------------------------------------------------------------------
-// PARSE JSON GREZZO DA LLM
+// PARSE JSON
 // ---------------------------------------------------------------------------
 
 function parseJSON(raw) {
     if (!raw) return null;
     try {
-        const ia = raw.indexOf("["), fa = raw.lastIndexOf("]");
-        const io = raw.indexOf("{"), fo = raw.lastIndexOf("}");
-        if (ia !== -1 && fa !== -1 && (io === -1 || ia < io)) {
-            const arr = JSON.parse(raw.substring(ia, fa + 1));
-            return Array.isArray(arr) && arr.length > 0 ? arr[0] : null;
+        let start = raw.indexOf("{"), end = raw.lastIndexOf("}");
+        if (start !== -1 && end !== -1) return JSON.parse(raw.substring(start, end+1));
+        start = raw.indexOf("["); end = raw.lastIndexOf("]");
+        if (start !== -1 && end !== -1) {
+            const arr = JSON.parse(raw.substring(start, end+1));
+            return arr[0] || null;
         }
-        if (io !== -1 && fo !== -1) return JSON.parse(raw.substring(io, fo + 1));
-    } catch (e) {}
+    } catch(e) {}
     return null;
 }
 
 // ---------------------------------------------------------------------------
-// GENERA CHAT INTERNA
+// GENERA CHAT
 // ---------------------------------------------------------------------------
 
 async function generaChat(CHI, relazioni, personaggi) {
     if (quotaGiornalieraEsaurita) return null;
-
-    const nomi = Object.keys(CHI).filter(n => n !== "default");
-    if (nomi.length < 2) return null;
-
-    const contestoRelazioni = nomi.flatMap(a =>
-        nomi.filter(b => b !== a).map(b => {
-            const r = relazioni[`${a}→${b}`];
-            return r ? `${a} è ${r.label} verso ${b}` : null;
-        }).filter(Boolean)
-    ).join(". ");
-
-    const contestoStati = nomi.map(n => {
+    const nomi = Object.keys(CHI).filter(n=>n!=="default");
+    if (nomi.length<2) return null;
+    const contestoRelazioni = nomi.flatMap(a=>nomi.filter(b=>b!==a).map(b=>{
+        const r = relazioni[`${a}→${b}`];
+        return r ? `${a} è ${r.label} verso ${b}` : null;
+    }).filter(Boolean)).join(". ");
+    const contestoStati = nomi.map(n=>{
         const p = personaggi[n];
-        return p?.stato && p.stato !== "normale"
-            ? `${n} è: ${p.stato} (umore: ${p.umore || "neutro"})` : null;
+        return p?.stato && p.stato!=="normale" ? `${n}: ${p.stato} (umore: ${p.umore||"neutro"})` : null;
     }).filter(Boolean).join(". ");
-
-    const spunti = [
-        "qualcuno si lamenta di un commento scritto da un collega",
-        "qualcuno chiede spiegazioni su un articolo pubblicato",
-        "c'è un piccolo battibecco su chi ha preso il caffè dell'altro",
-        "qualcuno elogia ironicamente il lavoro di un collega",
-        "qualcuno si lamenta del carico di lavoro",
-        "qualcuno commenta il meteo di Pescara con aria drammatica",
-        "qualcuno annuncia che va in pausa e nessuno è contento",
-        "c'è una discussione su chi ha sbagliato il titolo di un articolo"
-    ];
-    const spunto = spunti[Math.floor(Math.random() * spunti.length)];
-
-    const sys = `Sei il narratore della chat interna della redazione de La Voce del Delfino.
-I personaggi sono: ${nomi.map(n => {
-        const p = CHI[n];
-        const bio = (p.bio_breve || p.bio) ? ` Bio: "${p.bio_breve || p.bio}"` : "";
-        return `${n} (${p.avatar}, carattere: "${p.mood}".${bio})`;
-    }).join(", ")}.
-Relazioni: ${contestoRelazioni || "nessuna stabilita"}.
-Stati: ${contestoStati || "tutti nella norma"}.
-
-Genera una breve conversazione in chat (4-8 messaggi) tra 2-3 di questi personaggi.
-Lo spunto è: ${spunto}.
-Ogni messaggio deve riflettere il carattere del personaggio e le sue relazioni con gli altri.
-Rispondi SOLO con JSON:
-{"chat": [{"nome":"...","avatar":"...","testo":"..."}]}`;
-
-    const raw = await callLLM(sys, "Genera la chat di oggi in redazione.");
+    const spunti = ["lamentele sul caffè","battibecco su un articolo","elogi ironici","discussione sul carico di lavoro","annuncio pausa"];
+    const spunto = spunti[Math.floor(Math.random()*spunti.length)];
+    const sys = `Narratore chat redazione. Personaggi: ${nomi.map(n=>`${n} (${CHI[n].avatar}, carattere: "${CHI[n].mood}")`).join(", ")}.
+Relazioni: ${contestoRelazioni||"nessuna"}. Stati: ${contestoStati||"normali"}.
+Spunto: ${spunto}. Genera chat 4-8 messaggi tra 2-3 personaggi.
+Rispondi JSON: {"chat":[{"nome":"...","avatar":"...","testo":"..."}]}`;
+    const raw = await callLLM(sys, "Genera chat.");
     if (!raw) return null;
-
     try {
-        const io = raw.indexOf("{"), fo = raw.lastIndexOf("}");
-        const parsed = JSON.parse(raw.substring(io, fo + 1));
+        const parsed = JSON.parse(raw.substring(raw.indexOf("{"), raw.lastIndexOf("}")+1));
         return parsed.chat || null;
-    } catch (e) {
-        scriviLog(`[WARN] Impossibile parsare chat: ${e.message}`);
-        return null;
-    }
+    } catch(e) { return null; }
 }
 
 // ---------------------------------------------------------------------------
-// CONTATORI GIORNALIERI E FASCE ORARIE
+// CONTATORI GIORNALIERI
 // ---------------------------------------------------------------------------
 
 function caricaContatori(LIMITI) {
-    const oraRoma = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
-    const oggi    = oraRoma.toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit" });
-    const oraCorrente    = oraRoma.getHours();
-    const minutiCorrente = oraRoma.getMinutes();
+    const oraRoma = new Date(new Date().toLocaleString("en-US",{timeZone:"Europe/Rome"}));
+    const oggi = oraRoma.toLocaleDateString("it-IT",{day:"2-digit",month:"2-digit"});
+    const ora = oraRoma.getHours(), min = oraRoma.getMinutes();
     const contatori = caricaJSON(CONTATORI_PATH, {});
-
-    const fasciaReset  = parseInt(LIMITI.fascia_reset_quote ?? "05");
-    const tolleranza   = LIMITI.tolleranza_minuti ?? 30;
-    const inFasciaReset = Math.abs((oraCorrente * 60 + minutiCorrente) - fasciaReset * 60) <= tolleranza;
-
-    const deveResettare = contatori.data !== oggi ||
-        (inFasciaReset && !contatori.reset_eseguito_oggi);
-
+    const fasciaReset = parseInt(LIMITI.fascia_reset_quote ?? "05");
+    const tolleranza = LIMITI.tolleranza_minutti ?? 30;
+    const inFasciaReset = Math.abs(ora*60+min - fasciaReset*60) <= tolleranza;
+    const deveResettare = contatori.data !== oggi || (inFasciaReset && !contatori.reset_eseguito_oggi);
     if (deveResettare) {
-        scriviLog(`🔄 Reset quote cumulative (${oggi} ${String(oraCorrente).padStart(2,"0")}:${String(minutiCorrente).padStart(2,"0")} IT).`);
+        scriviLog(`🔄 Reset quote (${oggi} ${String(ora).padStart(2,"0")}:${String(min).padStart(2,"0")})`);
         return {
-            data: oggi,
-            reset_eseguito_oggi: inFasciaReset,
-            _primoRunOggi: false,
-            cerca_modello: 0,
-            chat_run: 0,
-            chiamate_gemini: 0,
-            token_stimati: 0,
-            rss_fetch: 0,
-            articoli_run: 0,
+            data: oggi, reset_eseguito_oggi: inFasciaReset, _primoRunOggi: false,
+            cerca_modello:0, chat_run:0, chiamate_gemini:0, token_stimati:0, rss_fetch:0, articoli_run:0,
             chiamate_gemini_totali: contatori.chiamate_gemini_totali || 0,
             token_stimati_totali: contatori.token_stimati_totali || 0
         };
@@ -864,24 +699,22 @@ function caricaContatori(LIMITI) {
 
 function limiteSuperato(contatori, LIMITI, tipo) {
     const limite = LIMITI[tipo];
-    if (limite === "sempre" || limite === undefined) return false;
-    return (contatori[tipo.replace("_max", "")] || 0) >= limite;
+    if (!limite || limite==="sempre") return false;
+    return (contatori[tipo.replace("_max","")] || 0) >= limite;
 }
 
 function fasciaDiArticoliAttiva(LIMITI) {
     const fasce = LIMITI.fasce_articoli;
-    if (!fasce || fasce.length === 0) return true;
-
-    const oraRoma    = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
-    const minutiOra  = oraRoma.getHours() * 60 + oraRoma.getMinutes();
+    if (!fasce?.length) return true;
+    const oraRoma = new Date(new Date().toLocaleString("en-US",{timeZone:"Europe/Rome"}));
+    const minuti = oraRoma.getHours()*60 + oraRoma.getMinutes();
     const tolleranza = LIMITI.tolleranza_minuti ?? 30;
-
-    return fasce.some(f => Math.abs(minutiOra - parseInt(f) * 60) <= tolleranza);
+    return fasce.some(f => Math.abs(minuti - parseInt(f)*60) <= tolleranza);
 }
 
 function paroleTarget(LIMITI) {
     const livello = Math.max(1, Math.min(10, LIMITI.lunghezza_articolo ?? 5));
-    return Math.round(80 + (livello - 1) * 80);
+    return Math.round(80 + (livello-1)*80);
 }
 
 // ---------------------------------------------------------------------------
@@ -889,290 +722,165 @@ function paroleTarget(LIMITI) {
 // ---------------------------------------------------------------------------
 
 async function main() {
-    // Inizializza provider persistente
-    const statoPersistente = caricaStatoProvider();
-    currentProvider = statoPersistente.provider;
+    const stato = caricaStatoProvider();
+    currentProvider = stato.provider;
     failureCount = 0;
-    providerState = statoPersistente;
-    scriviLog(`🔌 Provider attivo all'avvio: ${currentProvider}`);
-    scriviLog(`🤖 Modello Groq corrente: ${groqModelCorrente}`);
-
-    const oraItalia = new Intl.DateTimeFormat("it-IT", {
-        timeZone: "Europe/Rome", dateStyle: "full", timeStyle: "medium"
-    }).format(new Date());
-    scriviLog(`═══════════════════════════════════`);
-    scriviLog(`🐬 NUOVO RUN v2 [ ${oraItalia} ]`);
-    scriviLog(`═══════════════════════════════════`);
-    scriviLog("⚓️ FASE 1-v2 — Avvio...");
-
-    if (!fs.existsSync(CONFIG_PATH)) {
-        scriviLog(`ERRORE: ${CONFIG_PATH} non trovato!`);
-        process.exit(1);
-    }
-    const CONFIG = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
+    providerState = stato;
+    scriviLog(`🔌 Provider iniziale: ${currentProvider}, modello Groq: ${groqModelCorrente}`);
+    const oraItalia = new Intl.DateTimeFormat("it-IT",{timeZone:"Europe/Rome", dateStyle:"full", timeStyle:"medium"}).format(new Date());
+    scriviLog(`🐬 NUOVO RUN v2 [${oraItalia}]`);
+    if (!fs.existsSync(CONFIG_PATH)) { scriviLog(`ERRORE: ${CONFIG_PATH} mancante`); process.exit(1); }
+    const CONFIG = JSON.parse(fs.readFileSync(CONFIG_PATH,"utf8"));
     const { IMPOSTAZIONI, CHI, AGENDA, STILI, REDAZIONE, ICONE } = CONFIG;
-
-    const LIMITI    = CONFIG.LIMITI || {};
+    const LIMITI = CONFIG.LIMITI || {};
     const contatori = caricaContatori(LIMITI);
-
-    const isPrimoRun      = contatori._primoRunOggi !== true;
-    const articoliAttivi  = fasciaDiArticoliAttiva(LIMITI);
-    const parole          = paroleTarget(LIMITI);
-
-    scriviLog(`📊 Quote oggi: chiamate_gemini=${contatori.chiamate_gemini ?? 0}, rss_fetch=${contatori.rss_fetch ?? 0}, token_stimati≈${contatori.token_stimati ?? 0}`);
-    scriviLog(`🕐 Fascia articoli attiva: ${articoliAttivi ? "SÌ" : "NO"} | Lunghezza target: ~${parole} parole`);
-
+    const articoliAttivi = fasciaDiArticoliAttiva(LIMITI);
+    const parole = paroleTarget(LIMITI);
+    scriviLog(`📊 Quote: chiamate=${contatori.chiamate_gemini??0}, rss=${contatori.rss_fetch??0}`);
+    scriviLog(`🕐 Fascia attiva: ${articoliAttivi?"SÌ":"NO"} | Parole target: ~${parole}`);
     await trovaUltimoModello();
-
-    const oggi   = giornoOggi();
+    const oggi = giornoOggi();
     const agenda = risolviAgenda(AGENDA, oggi);
-    scriviLog(`📅 Giorno: ${oggi} | Timbro: ${agenda.timbro}`);
-
-    const oraAggiornamento = new Date().toLocaleString("it-IT", {
-        timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit",
-        day: "2-digit", month: "2-digit"
-    });
-
-    let relazioni  = caricaJSON(RELAZIONI_PATH, { _runCount: 0 });
+    const oraAggiornamento = new Date().toLocaleString("it-IT",{timeZone:"Europe/Rome", hour:"2-digit", minute:"2-digit", day:"2-digit", month:"2-digit"});
+    let relazioni = caricaJSON(RELAZIONI_PATH, { _runCount:0 });
     let personaggi = caricaJSON(PERSONAGGI_PATH, {});
-
-    for (const nome of Object.keys(CHI).filter(n => n !== "default")) {
-        if (!personaggi[nome]) personaggi[nome] = { stato: "normale", umore: "neutro", dal: null };
+    for (const nome of Object.keys(CHI).filter(n=>n!=="default")) {
+        if (!personaggi[nome]) personaggi[nome] = { stato:"normale", umore:"neutro", dal:null };
     }
-
     relazioni = applicaDecay(relazioni);
-
     const vociAttive = REDAZIONE.filter(voce => {
         if (voce.g === "default") return true;
-        return voce.g.split(",").map(g => g.trim()).includes(oggi);
+        return voce.g.split(",").map(g=>g.trim()).includes(oggi);
     });
-    scriviLog(`📋 Voci attive oggi: ${vociAttive.length}`);
-
-    // --- Gestione draft con reset giornaliero sicuro ---
-    const oggiStr = new Date().toLocaleDateString("it-IT", { timeZone: "Europe/Rome", day: "2-digit", month:"2-digit" });
-    let oldDraft = null;
-    if (fs.existsSync(DRAFT_PATH)) {
-        oldDraft = caricaJSON(DRAFT_PATH, null);
-    }
+    scriviLog(`📋 Voci attive: ${vociAttive.length}`);
+    const oggiStr = new Date().toLocaleDateString("it-IT",{timeZone:"Europe/Rome", day:"2-digit", month:"2-digit"});
+    let oldDraft = fs.existsSync(DRAFT_PATH) ? caricaJSON(DRAFT_PATH,null) : null;
     const isNuovoGiorno = !oldDraft || oldDraft.dataRiferimento !== oggiStr;
-
     let draft;
     if (isNuovoGiorno) {
-        draft = {
-            dataRiferimento: oggiStr,
-            oraAggiornamento,
-            agenda,
-            impostazioni: IMPOSTAZIONI,
-            stili: STILI,
-            sezioni: {}
-        };
-        scriviLog(`🆕 Nuovo giorno (${oggiStr}) → preparato nuovo draft temporaneo.`);
+        draft = { dataRiferimento: oggiStr, oraAggiornamento, agenda, impostazioni: IMPOSTAZIONI, stili: STILI, sezioni: {} };
+        scriviLog(`🆕 Nuovo draft per ${oggiStr}`);
     } else {
         draft = JSON.parse(JSON.stringify(oldDraft));
         draft.oraAggiornamento = oraAggiornamento;
-        scriviLog(`📰 Stesso giorno: accumulo su ${contaArticoli(draft)} articoli esistenti.`);
+        scriviLog(`📰 Accumulo su ${contaArticoli(draft)} articoli esistenti`);
     }
-
     for (const voce of vociAttive) {
         const sez = voce.sez;
-        if (!draft.sezioni[sez]) {
-            draft.sezioni[sez] = {
-                color: STILI[sez] || STILI["RSS"] || "#005f73",
-                articoli: []
-            };
-        }
+        if (!draft.sezioni[sez]) draft.sezioni[sez] = { color: STILI[sez] || STILI["RSS"] || "#005f73", articoli: [] };
     }
-
-    // --- Genera articoli ---
     const articoliAbilitati = !limiteSuperato(contatori, LIMITI, "articoli_run_max");
-    if (!articoliAbilitati) {
-        scriviLog(`⏭️ Generazione articoli saltata (limite: ${LIMITI.articoli_run_max} run/giorno raggiunto).`);
-    }
-    contatori.articoli_run = (contatori.articoli_run || 0) + (articoliAbilitati ? 1 : 0);
-
+    if (!articoliAbilitati) scriviLog(`⏭️ Limite articoli_run raggiunto`);
+    contatori.articoli_run = (contatori.articoli_run||0) + (articoliAbilitati?1:0);
     const codaArticoli = [];
-    let articoliGeneratiInQuestoRun = 0;
-
+    let articoliGenerati = 0;
     if (articoliAbilitati) {
         for (const voce of vociAttive) {
-            const numDesiderati = voce.num || 1;
+            const num = voce.num || 1;
             voce._parole = parole;
-
-            scriviLog(`🎣 [${voce.sez}] ${voce.arg} — tipo: ${voce.tipo}, num: ${numDesiderati}, firma: ${voce.firma}, ~${parole} parole`);
-
+            scriviLog(`🎣 [${voce.sez}] ${voce.arg} — tipo:${voce.tipo}, num:${num}, firma:${voce.firma}`);
             if (voce.tipo === "GEN") {
                 const temi = voce.temi || [voce.arg];
-                for (let i = 0; i < numDesiderati; i++) {
-                    codaArticoli.push({ voce, tema: temi[Math.floor(Math.random() * temi.length)] });
-                }
+                for (let i=0; i<num; i++) codaArticoli.push({ voce, tema: temi[Math.floor(Math.random()*temi.length)] });
             } else {
-                const titoli = await fetchNotizie(voce.arg, numDesiderati);
-                contatori.rss_fetch = (contatori.rss_fetch || 0) + 1;
+                const titoli = await fetchNotizie(voce.arg, num);
+                contatori.rss_fetch = (contatori.rss_fetch||0)+1;
                 for (const t of titoli) codaArticoli.push({ voce, tema: t });
-                if (titoli.length < numDesiderati) {
-                    const mancanti = numDesiderati - titoli.length;
-                    scriviLog(`[CASCATA] Solo ${titoli.length}/${numDesiderati} notizie per "${voce.arg}". Aggiungo ${mancanti} articoli generici.`);
-                    for (let i = 0; i < mancanti; i++) {
-                        codaArticoli.push({ voce, tema: `[Generico] ${voce.arg} - approfondimento` });
-                    }
+                if (titoli.length < num) {
+                    const mancanti = num - titoli.length;
+                    scriviLog(`[CASCATA] Solo ${titoli.length}/${num}, aggiungo ${mancanti} generici`);
+                    for (let i=0; i<mancanti; i++) codaArticoli.push({ voce, tema: `[Generico] ${voce.arg} - approfondimento` });
                 }
             }
         }
     }
-
     for (const { voce, tema } of codaArticoli) {
-        const sez         = voce.sez;
-        const coloreTipo  = STILI[voce.tipo] || STILI["RSS"];
-        const infoFirma   = risolviPersonaggio(CHI, voce.firma);
-
-        const rawArticolo    = await generaArticolo(voce, CHI, tema);
-        const parsedArticolo = parseJSON(rawArticolo);
-
-        if (!parsedArticolo?.articolo || parsedArticolo.articolo.length < 50) {
-            scriviLog(`⚠️ [SKIP] Articolo su "${tema.substring(0, 30)}..." fallito o vuoto.`);
+        const sez = voce.sez;
+        const infoFirma = risolviPersonaggio(CHI, voce.firma);
+        const rawArt = await generaArticolo(voce, CHI, tema);
+        const parsed = parseJSON(rawArt);
+        if (!parsed?.articolo || parsed.articolo.length < 50) {
+            scriviLog(`⚠️ SKIP articolo su "${tema.substring(0,30)}..."`);
             continue;
         }
-
-        const articoloTesto = parsedArticolo.articolo;
-        const titoloFinale  = parsedArticolo.titolo || tema;
-        const commentoFirma = parsedArticolo.commento || "…";
-
-        let commentiFinali = [];
-        const rawCommenti = await generaCommenti(voce, CHI, relazioni, personaggi, articoloTesto, [], LIMITI);
-        if (rawCommenti) {
-            const parsedCommenti = parseJSON(rawCommenti);
-            if (parsedCommenti?.commenti?.length) {
-                commentiFinali = parsedCommenti.commenti;
-                await aggiornaRelazioni(CHI, relazioni, personaggi, articoloTesto, commentiFinali);
+        const commentiRaw = await generaCommenti(voce, CHI, relazioni, personaggi, parsed.articolo, [], LIMITI);
+        let commenti = [];
+        if (commentiRaw) {
+            const parsedComm = parseJSON(commentiRaw);
+            if (parsedComm?.commenti) {
+                commenti = parsedComm.commenti;
+                await aggiornaRelazioni(CHI, relazioni, personaggi, parsed.articolo, commenti);
             }
         }
-
         draft.sezioni[sez].articoli.push({
-            tipo:           voce.tipo === "GEN" ? "gen" : "rss",
-            titolo:         titoloFinale,
-            articolo:       articoloTesto,
-            commento_firma: { nome: voce.firma, avatar: infoFirma.avatar, testo: commentoFirma },
-            commenti:       commentiFinali,
-            categoria:      voce.lab,
-            colore_tipo:    coloreTipo,
-            immagine:       infoFirma.img || "default_personaggio.webp"
+            tipo: voce.tipo==="GEN"?"gen":"rss",
+            titolo: parsed.titolo || tema,
+            articolo: parsed.articolo,
+            commento_firma: { nome: voce.firma, avatar: infoFirma.avatar, testo: parsed.commento || "…" },
+            commenti: commenti,
+            categoria: voce.lab,
+            colore_tipo: STILI[voce.tipo] || STILI["RSS"],
+            immagine: infoFirma.img || "default_personaggio.webp"
         });
-        articoliGeneratiInQuestoRun++;
-
-        scriviLog(`  ✅ "${titoloFinale.substring(0, 50)}..." — ${commentiFinali.length} commenti`);
+        articoliGenerati++;
+        scriviLog(`  ✅ "${(parsed.titolo||tema).substring(0,50)}..." (${commenti.length} commenti)`);
     }
-
-    // --- Nuovi commenti su notizie congelate ---
-    if (!articoliAttivi && fs.existsSync(DRAFT_PATH)) {
-        scriviLog("🧊 Articoli congelati — aggiungo commenti alle notizie esistenti...");
-        const draftEsistente = caricaJSON(DRAFT_PATH, { sezioni: {} });
-
-        for (const [sez, datiSez] of Object.entries(draftEsistente.sezioni || {})) {
-            for (let idx = 0; idx < (datiSez.articoli || []).length; idx++) {
-                const articolo = datiSez.articoli[idx];
-                const voceRef = vociAttive.find(v => v.sez === sez && v.lab === articolo.categoria)
-                    || vociAttive.find(v => v.sez === sez);
-                if (!voceRef) continue;
-
-                const rawCommenti    = await generaCommenti(voceRef, CHI, relazioni, personaggi, articolo.articolo, articolo.commenti || [], LIMITI);
-                const parsedCommenti = parseJSON(rawCommenti);
-                if (parsedCommenti?.commenti?.length) {
-                    const maxTotali = LIMITI.commenti_max_totali ?? 6;
-                    const articoloInDraft = draft.sezioni[sez]?.articoli[idx];
-                    if (articoloInDraft) {
-                        articoloInDraft.commenti = [...(articoloInDraft.commenti || []), ...parsedCommenti.commenti].slice(0, maxTotali);
-                    }
-                    await aggiornaRelazioni(CHI, relazioni, personaggi, articolo.articolo, parsedCommenti.commenti);
-                    scriviLog(`  💬 Nuovi commenti aggiunti a: "${articolo.titolo.substring(0, 40)}..."`);
-                }
-            }
-            if (!draft.sezioni[sez]) draft.sezioni[sez] = datiSez;
-        }
+    // Chat
+    const chatAbilitata = LIMITI.chat!=="sempre" ? !limiteSuperato(contatori, LIMITI, "chat_run_max") : true;
+    const chattaOggi = chatAbilitata && Math.random()<0.30;
+    if (chattaOggi) contatori.chat_run = (contatori.chat_run||0)+1;
+    const chat = chattaOggi ? await generaChat(CHI, relazioni, personaggi) : null;
+    if (chat) {
+        const storico = caricaJSON(CHAT_PATH, []);
+        storico.unshift({ data: oraAggiornamento, messaggi: chat });
+        if (storico.length>30) storico.splice(30);
+        salvaJSON(CHAT_PATH, storico);
+        scriviLog(`💬 Chat salvata (${chat.length} messaggi)`);
     }
-
-    // --- Chat interna ---
-    const chatAbilitata = LIMITI.chat !== "sempre"
-        ? !limiteSuperato(contatori, LIMITI, "chat_run_max") : true;
-    const chattaOggi = chatAbilitata && Math.random() < 0.30;
-    scriviLog(`💬 Chat oggi: ${chattaOggi ? "sì" : !chatAbilitata ? "no (limite raggiunto)" : "no (skip casuale)"}`);
-    if (chattaOggi) contatori.chat_run = (contatori.chat_run || 0) + 1;
-
-    const chatOggi   = chattaOggi ? await generaChat(CHI, relazioni, personaggi) : null;
-    const chatStorico = caricaJSON(CHAT_PATH, []);
-    if (chatOggi) {
-        chatStorico.unshift({ data: oraAggiornamento, messaggi: chatOggi });
-        if (chatStorico.length > 30) chatStorico.splice(30);
-        salvaJSON(CHAT_PATH, chatStorico);
-        scriviLog(`💬 Chat salvata: ${chatOggi.length} messaggi.`);
-    }
-
-    // --- Aggiorna contatori ---
-    contatori.chiamate_gemini_totali = (contatori.chiamate_gemini_totali || 0) + contatoreChiamateApi;
-    contatori.token_stimati_totali   = (contatori.token_stimati_totali   || 0) + (contatoreChiamateApi * 450);
-    scriviLog(`📊 Totale giornata: chiamate=${contatori.chiamate_gemini_totali}, token_stimati≈${contatori.token_stimati_totali}, rss=${contatori.rss_fetch ?? 0}`);
+    // Aggiorna contatori totali
+    contatori.chiamate_gemini_totali = (contatori.chiamate_gemini_totali||0) + contatoreChiamateApi;
+    contatori.token_stimati_totali = (contatori.token_stimati_totali||0) + (contatoreChiamateApi*450);
     salvaJSON(CONTATORI_PATH, contatori);
-
     salvaJSON(RELAZIONI_PATH, relazioni);
     salvaJSON(PERSONAGGI_PATH, personaggi);
-    scriviLog(`💾 Relazioni e personaggi salvati.`);
-
-    // --- Articolo personaggio casuale ---
-    scriviLog("✍️ Generazione articolo personaggio casuale...");
-    const nomiPersonaggi     = Object.keys(CHI).filter(n => n !== "default");
-    const personaggioCasuale = nomiPersonaggi[Math.floor(Math.random() * nomiPersonaggi.length)];
-    const datiPersonaggio    = CHI[personaggioCasuale];
-
-    const sysPersonaggio = `Sei ${personaggioCasuale}, con questo carattere: "${datiPersonaggio.mood}". ${datiPersonaggio.bio_breve ? `La tua storia: "${datiPersonaggio.bio_breve}".` : ""}
-Scrivi un breve articolo (150-250 parole) su qualcosa che ti piace, ti ha colpito o ti ha fatto arrabbiare oggi.
-Scegli tu l'argomento in base alla tua personalità.
-Rispondi SOLO con JSON: {"titolo":"...","articolo":"..."}`;
-
-    const rawPersonaggio = await callLLM(sysPersonaggio, "Scrivi il tuo articolo personale di oggi.", datiPersonaggio.peso ?? 0.8);
-    if (rawPersonaggio) {
-        const parsedPersonaggio = parseJSON(rawPersonaggio);
-        if (parsedPersonaggio?.titolo && parsedPersonaggio?.articolo) {
-            const sezPers = Object.keys(draft.sezioni)[0] || "pescara";
-            if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: STILI[sezPers] || "#005f73", articoli: [] };
+    // Articolo personaggio casuale
+    const nomiPers = Object.keys(CHI).filter(n=>n!=="default");
+    if (nomiPers.length) {
+        const pers = nomiPers[Math.floor(Math.random()*nomiPers.length)];
+        const dati = CHI[pers];
+        const sysPers = `Sei ${pers} (${dati.mood}). ${dati.bio_breve?`Bio: "${dati.bio_breve}"` : ""}
+Scrivi breve articolo (150-250 parole) su un argomento personale.
+Rispondi JSON: {"titolo":"...","articolo":"..."}`;
+        const rawPers = await callLLM(sysPers, "Scrivi articolo personale.", dati.peso??0.8);
+        const parsedPers = parseJSON(rawPers);
+        if (parsedPers?.titolo && parsedPers?.articolo) {
+            const sezPers = Object.keys(draft.sezioni)[0] || "generale";
+            if (!draft.sezioni[sezPers]) draft.sezioni[sezPers] = { color: "#005f73", articoli: [] };
             draft.sezioni[sezPers].articoli.push({
-                tipo: "personaggio",
-                titolo: parsedPersonaggio.titolo,
-                articolo: parsedPersonaggio.articolo,
-                commento_firma: { nome: personaggioCasuale, avatar: datiPersonaggio.avatar, testo: "" },
-                commenti: [],
-                categoria: "Dalla Redazione",
-                colore_tipo: STILI.GEN || "#2d6a4f",
-                immagine: datiPersonaggio.img
+                tipo: "personaggio", titolo: parsedPers.titolo, articolo: parsedPers.articolo,
+                commento_firma: { nome: pers, avatar: dati.avatar, testo: "" }, commenti: [],
+                categoria: "Dalla Redazione", colore_tipo: STILI.GEN || "#2d6a4f",
+                immagine: dati.img
             });
-            scriviLog(`✍️ Articolo personaggio scritto da ${personaggioCasuale}: "${parsedPersonaggio.titolo.substring(0, 50)}..."`);
-            articoliGeneratiInQuestoRun++;
+            articoliGenerati++;
+            scriviLog(`✍️ Articolo personaggio da ${pers}: "${parsedPers.titolo.substring(0,50)}..."`);
         }
     }
-
-    // --- Salvataggio finale: solo se abbiamo generato almeno un articolo in questo run ---
-    if (articoliGeneratiInQuestoRun === 0) {
-        scriviLog("⚠️ Nessun articolo generato in questo run. Il draft NON è stato modificato.");
-        if (isNuovoGiorno && oldDraft) {
-            scriviLog(`   → Il draft del giorno precedente (${oldDraft.dataRiferimento}) è stato mantenuto.`);
-        }
+    if (articoliGenerati === 0) {
+        scriviLog("⚠️ Nessun articolo generato. Draft non modificato.");
+        if (isNuovoGiorno && oldDraft) scriviLog(`   → Mantenuto draft del ${oldDraft.dataRiferimento}`);
         return;
     }
-
-    const successo = safeWriteDraft(draft);
-    if (successo) {
+    const ok = safeWriteDraft(draft);
+    if (ok) {
         contatori._primoRunOggi = true;
         salvaJSON(CONTATORI_PATH, contatori);
-        scriviLog(`✅ FASE 1-v2 completata. Draft aggiornato (${articoliGeneratiInQuestoRun} nuovi articoli).`);
+        scriviLog(`✅ FASE 1-v2 completata. ${articoliGenerati} nuovi articoli.`);
     } else {
-        scriviLog("⚠️ Draft NON aggiornato — mantenuto quello precedente.");
+        scriviLog("⚠️ Salvataggio draft fallito.");
     }
 }
 
 main()
-    .then(() => {
-        scriviLog("🏁 [FINISH] Tutto salvato. Forzo chiusura processo.");
-        setTimeout(() => process.exit(0), 2000);
-    })
-    .catch(err => {
-        scriviLog(`❌ [CRITICAL ERROR] ${err.message}`);
-        setTimeout(() => process.exit(1), 2000);
-    });
+    .then(() => { scriviLog("🏁 FINISH"); setTimeout(()=>process.exit(0),2000); })
+    .catch(err => { scriviLog(`❌ CRITICAL ERROR: ${err.message}`); setTimeout(()=>process.exit(1),2000); });
