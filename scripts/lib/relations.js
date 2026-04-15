@@ -1,6 +1,14 @@
-import { labelDaScore, scriviLog } from "./utils.js";
+// lib/relations.js
+import { labelDaScore } from "./utils.js";
 
-export function applicaDecay(relazioni, logFn) {
+let logFn = null;
+const log = (msg) => logFn("[relations] " + msg);
+
+export function initRelations(logFunction) {
+    logFn = logFunction;
+}
+
+export function applicaDecay(relazioni) {
     const DECAY_OGNI_N_RUN = 14;
     const DECAY_AMOUNT = 0.1;
     relazioni._runCount = (relazioni._runCount || 0) + 1;
@@ -14,17 +22,17 @@ export function applicaDecay(relazioni, logFn) {
                 r.label = labelDaScore(r.score);
             }
         }
-        logFn("📉 Decay settimanale relazioni applicato.");
+        log("📉 Decay settimanale relazioni applicato.");
     }
     return relazioni;
 }
 
-export async function aggiornaRelazioni(CHI, relazioni, personaggi, articolo, commenti, callLLMFn, logFn) {
+export async function aggiornaRelazioni(CHI, relazioni, personaggi, articolo, commenti, callLLMFn) {
     if (!commenti?.length) return;
     const sys = `Analista dinamiche sociali. Restituisci JSON: {"delta_relazioni":[{"da":"...","a":"...","delta":0.1}],"nuovi_stati":[{"nome":"...","stato":"...","umore":"..."}]}
 Delta da -0.3 a +0.3.`;
     const userPrompt = `Articolo: "${articolo.substring(0,300)}..."\nCommenti:\n${commenti.map(c=>`${c.nome}: "${c.testo}"`).join("\n")}`;
-    const raw = await callLLMFn(sys, userPrompt);
+    const { text: raw } = await callLLMFn(sys, userPrompt);
     if (!raw) return;
     try {
         const parsed = JSON.parse(raw.substring(raw.indexOf("{"), raw.lastIndexOf("}")+1));
@@ -42,6 +50,6 @@ Delta da -0.3 a +0.3.`;
             personaggi[s.nome].umore = s.umore;
             personaggi[s.nome].dal = new Date().toLocaleDateString("it-IT",{timeZone:"Europe/Rome"});
         }
-        logFn(`🔄 Relazioni: ${parsed.delta_relazioni?.length || 0} delta, ${parsed.nuovi_stati?.length || 0} stati.`);
-    } catch(e) { logFn(`[WARN] Parse relazioni: ${e.message}`); }
+        log(`🔄 Relazioni: ${parsed.delta_relazioni?.length || 0} delta, ${parsed.nuovi_stati?.length || 0} stati.`);
+    } catch(e) { log(`[WARN] Parse relazioni: ${e.message}`); }
 }
