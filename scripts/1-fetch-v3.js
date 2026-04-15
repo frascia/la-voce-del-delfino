@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 1-fetch-v2.js
+ * 1-fetch-v3.js
  * FASE 1 — Nuova architettura v2
  * Supporto Gemini/Groq con fallback persistente, modello Groq dinamico,
  * GNews API + fallback RSS, gestione sicura draft.
@@ -131,6 +131,7 @@ if (fs.existsSync(LOG_PATH)) {
 const apiKey = process.env.GEMINI_API_KEY || "";
 const groqApiKey = process.env.GROQ_API_KEY || "";
 let groqModelCorrente = process.env.GROQ_MODEL || "llama3-70b-8192";
+let groqMaxTokens = 1024; // verrà impostato dinamicamente
 let ricercaModelloGroqEffettuata = false;
 
 const gnewsApiKey = process.env.GNEWS_API_KEY || "";
@@ -222,7 +223,7 @@ async function trovaUltimoModello() {
 }
 
 // ---------------------------------------------------------------------------
-// RICERCA MODELLO GROQ PIÙ RECENTE
+// RICERCA MODELLO GROQ PIÙ RECENTE (con max_tokens dinamico)
 // ---------------------------------------------------------------------------
 
 async function trovaUltimoModelloGroq() {
@@ -240,11 +241,13 @@ async function trovaUltimoModelloGroq() {
         }
         const data = await response.json();
         if (!data.data) return;
+        // Filtra modelli testuali
         const testuali = data.data.filter(m =>
             m.id && (m.id.includes("llama") || m.id.includes("mixtral") || m.id.includes("gemma")) &&
             !m.id.includes("embed")
         );
         if (testuali.length === 0) return;
+        // Dai priorità ai modelli llama
         const migliori = testuali.filter(m => m.id.includes("llama"));
         const daOrdinare = migliori.length > 0 ? migliori : testuali;
         daOrdinare.sort((a,b) => (b.created || 0) - (a.created || 0));
@@ -255,6 +258,20 @@ async function trovaUltimoModelloGroq() {
         } else {
             scriviLog(`[GROQ] Modello già ottimale: ${groqModelCorrente}`);
         }
+        
+        // Imposta groqMaxTokens in base al modello selezionato
+        if (groqModelCorrente.includes("gemma")) {
+            groqMaxTokens = 512;   // Gemma ha output limitato a 512
+        } else if (groqModelCorrente.includes("llama3-70b")) {
+            groqMaxTokens = 2000;  // Supporta fino a 4096
+        } else if (groqModelCorrente.includes("llama3-8b")) {
+            groqMaxTokens = 1024;  // Limite prudente
+        } else if (groqModelCorrente.includes("mixtral")) {
+            groqMaxTokens = 2000;
+        } else {
+            groqMaxTokens = 1024;  // Default
+        }
+        scriviLog(`[GROQ] max_tokens impostato a ${groqMaxTokens} per il modello ${groqModelCorrente}`);
     } catch (e) {
         scriviLog(`[GROQ] Errore lista modelli: ${e.message}`);
     }
@@ -270,13 +287,20 @@ async function fetchGNews(query, max) {
     const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=it&country=it&max=${max}&token=${gnewsApiKey}`;
     try {
         const res = await fetch(url);
-        if (!res.ok) return [];
         const data = await res.json();
+        if (!res.ok || data.errors) {
+            scriviLog(`[GNews ERR] Status ${res.status}, errors: ${JSON.stringify(data.errors)}`);
+            return [];
+        }
+        if (!data.articles || !Array.isArray(data.articles)) {
+            scriviLog(`[GNews] Formato inaspettato: manca articles[]`);
+            return [];
+        }
         const titles = data.articles.map(art => art.title);
         scriviLog(`[GNews] ${titles.length} titoli per "${query}"`);
         return titles;
     } catch (e) {
-        scriviLog(`[GNews] Errore: ${e.message}`);
+        scriviLog(`[GNews] Eccezione: ${e.message}`);
         return [];
     }
 }
@@ -395,7 +419,7 @@ async function callGemini(sys, prompt, temperature = 0.85) {
 }
 
 // ---------------------------------------------------------------------------
-// CHIAMATA GROQ (con troncamento e max_tokens)
+// CHIAMATA GROQ (con max_tokens dinamico e riduzione automatica)
 // ---------------------------------------------------------------------------
 
 async function callGroq(sys, prompt, temperature = 0.85) {
@@ -405,7 +429,7 @@ async function callGroq(sys, prompt, temperature = 0.85) {
         ricercaModelloGroqEffettuata = true;
     }
 
-    // Troncamento input per evitare errore 400
+    // Troncamento input per evitare errori di lunghezza
     const MAX_SYS = 4000;
     const MAX_PROMPT = 15000;
     let finalSys = sys.length > MAX_SYS ? sys.substring(0, MAX_SYS) + "... [troncato]" : sys;
@@ -416,6 +440,7 @@ async function callGroq(sys, prompt, temperature = 0.85) {
         { role: "user", content: finalPrompt }
     ];
 
+    let currentMaxTokens = groqMaxTokens; // copia locale per eventuali riduzioni temporanee
     const url = "https://api.groq.com/openai/v1/chat/completions";
     for (let i = 0; i < 3; i++) {
         await pausaGemini();
@@ -431,7 +456,7 @@ async function callGroq(sys, prompt, temperature = 0.85) {
                     model: groqModelCorrente,
                     messages: messages,
                     temperature: temperature,
-                    max_tokens: 2000,
+                    max_tokens: currentMaxTokens,
                     response_format: { type: "json_object" }
                 })
             });
@@ -445,8 +470,18 @@ async function callGroq(sys, prompt, temperature = 0.85) {
                     scriviLog("❌ QUOTA GROQ ESAURITA");
                     return null;
                 }
+                // Gestione specifica per max_tokens troppo alto
+                if (code === 400 && (msg.includes("max_tokens") || msg.includes("context_window"))) {
+                    if (currentMaxTokens > 128) {
+                        currentMaxTokens = Math.max(128, Math.floor(currentMaxTokens * 0.6));
+                        scriviLog(`[GROQ] Riduzione max_tokens a ${currentMaxTokens} e riprovo...`);
+                        continue;
+                    } else {
+                        scriviLog(`[GROQ] max_tokens già minimo (${currentMaxTokens}), impossibile ridurre ulteriormente.`);
+                        return null;
+                    }
+                }
                 if (code === 400 && msg.includes("reduce the length")) {
-                    // Riduci ulteriormente il prompt
                     finalPrompt = finalPrompt.substring(0, Math.floor(finalPrompt.length * 0.6)) + "... [troncato 2]";
                     messages[1].content = finalPrompt;
                     scriviLog(`[GROQ] Nuovo tentativo con prompt ridotto (${finalPrompt.length} char)`);
@@ -682,7 +717,7 @@ function caricaContatori(LIMITI) {
     const ora = oraRoma.getHours(), min = oraRoma.getMinutes();
     const contatori = caricaJSON(CONTATORI_PATH, {});
     const fasciaReset = parseInt(LIMITI.fascia_reset_quote ?? "05");
-    const tolleranza = LIMITI.tolleranza_minutti ?? 30;
+    const tolleranza = LIMITI.tolleranza_minuti ?? 30;
     const inFasciaReset = Math.abs(ora*60+min - fasciaReset*60) <= tolleranza;
     const deveResettare = contatori.data !== oggi || (inFasciaReset && !contatori.reset_eseguito_oggi);
     if (deveResettare) {
