@@ -2,11 +2,12 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-15
- * VERSIONE: 4.10
+ * VERSIONE: 4.11
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
  *              Log con prefisso [FETCH] per chiarezza.
+ *              Recupero dinamico dei modelli Gemini dall'API.
  */
 
 import fs from "fs";
@@ -55,6 +56,29 @@ async function testProvider(provider, modelName = null) {
     } catch(e) {
         return false;
     }
+}
+
+// Funzione per ottenere i modelli Gemini disponibili (gratuiti, senza Pro)
+async function getGeminiModels() {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) return [];
+    try {
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+        const data = await res.json();
+        if (data.models) {
+            // Filtra solo modelli gemini con generateContent, escludi Pro
+            const modelli = data.models
+                .filter(m => m.name.includes("gemini") && 
+                             !m.name.includes("pro") &&
+                             m.supportedGenerationMethods?.includes("generateContent"))
+                .map(m => m.name.replace("models/", ""))
+                .sort((a, b) => b.localeCompare(a)); // ordine decrescente (più recente prima)
+            return modelli;
+        }
+    } catch(e) {
+        log(`[FETCH] ⚠️ Errore recupero modelli Gemini: ${e.message}`);
+    }
+    return [];
 }
 
 async function main() {
@@ -127,13 +151,20 @@ async function main() {
     const isNuovoGiorno = !draftEsistente || draftEsistente.dataRiferimento !== oggiStr;
 
     // Test provider con visualizzazione modelli
-    const modelliDaTestare = ["gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-1.5-flash"];
-    let geminiModelloFunzionante = null;
-
     log(`[FETCH] 🔍 Verifica disponibilità provider...`);
 
+    log(`[FETCH]    📡 Recupero modelli Gemini disponibili...`);
+    let modelliGemini = await getGeminiModels();
+    if (modelliGemini.length === 0) {
+        log(`[FETCH]    ⚠️ Nessun modello Gemini trovato, uso lista di fallback`);
+        modelliGemini = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash"];
+    }
+    log(`[FETCH]    📋 Modelli trovati: ${modelliGemini.join(", ")}`);
+
     log(`[FETCH]    📡 Test Gemini...`);
-    for (const model of modelliDaTestare) {
+    let geminiModelloFunzionante = null;
+
+    for (const model of modelliGemini) {
         log(`[FETCH]       🔍 Test modello ${model}...`);
         const ok = await testProvider("gemini", model);
         if (ok) {
