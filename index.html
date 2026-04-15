@@ -1,559 +1,747 @@
 <!DOCTYPE html>
+<html lang="it">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>La Voce del Delfino 🐬</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>La Voce del Delfino 🐬 - Redazione</title>
     <style>
-        :root { --blu-mare:#005f73; --panna:#faf7f2; --azzurro-pescara:#008cff; }
-        body { margin:0; background:var(--blu-mare); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-user-select:none; user-select:none; transition:background 1.2s ease; }
-        #app { width:100%; max-width:100%; margin:auto; background:transparent; min-height:100vh; }
-
-        /* TESTATA */
-        .testata { width:100%; background:var(--blu-mare); line-height:0; text-align:center; position:relative; }
-        .testata img#header-img {
-        /* 1. L'OFFSET: lo spazio dal bordo superiore */
-        margin-top: 5px; 
-        /* 2. LARGHEZZA TOTALE: occupa sempre il 100% del browser */
-        width: 100%; 
-        display: block;
-        /* 3. IL COMPROMESSO: su desktop la blocchiamo a 450px */
-        height: 450px; 
-        /* 4. LA MAGIA: riempie tutto lo spazio senza distorcere */
-        object-fit: cover; 
-        object-position: center; /* Centra il delfino così non tagliamo la testa! */
-        /* 5. FIX PER MOBILE: evita che diventi "enorme" sui telefoni */
-            @media (max-width: 600px) {
-            height: 250px; /* Sul cellulare la teniamo più bassa e snella */
-            }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f3ef;
+            color: #2c2c2c;
+            padding: 20px;
         }
+        .container { max-width: 1400px; margin: 0 auto; }
         
-          /* TIMESTAMP */
-        .delfino-timestamp { width:100%; box-sizing:border-box; padding:10px 20px; background:linear-gradient(135deg,rgba(255,243,210,0.9),rgba(255,228,168,0.85)); border-bottom:1.5px solid rgba(180,130,60,0.2); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-        .dt-tempo { font-size:11px; font-style:italic; color:#7a5c2e; white-space:nowrap; }
-        .dt-motto { font-size:12px; font-weight:700; font-style:italic; color:#5a3e1b; text-align:center; flex:1; }
+        /* Header */
+        .header { text-align: center; margin-bottom: 30px; cursor: pointer; }
+        .header h1 { font-size: 2.5rem; color: #005f73; margin-bottom: 5px; }
+        .header h1 span { font-size: 2rem; }
+        .header p { color: #666; font-style: italic; }
+        
+        /* Messaggi */
+        .error-msg { background: #ffebee; color: #c62828; padding: 15px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #c62828; }
+        .warning-msg { background: #fff3e0; color: #ef6c00; padding: 15px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #ef6c00; }
+        .success-msg { background: #e8f5e9; color: #2e7d32; padding: 15px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #2e7d32; }
+        
+        /* Sezione protetta */
+        .protected-section { display: none; }
+        .protected-section.visible { display: block; }
+        
+        /* Tabs generali */
+        .main-tabs { display: flex; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .main-tab { background: none; border: none; padding: 10px 20px; font-size: 1rem; font-weight: 600; color: #888; cursor: pointer; border-radius: 30px; transition: all 0.2s; }
+        .main-tab:hover { background: #e0e0e0; color: #333; }
+        .main-tab.active { background: #005f73; color: white; }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        
+        /* Log */
+        .log-section { background: #1e1e1e; border-radius: 16px; padding: 20px; margin-bottom: 30px; }
+        .log-section h2 { color: #0f0; font-family: monospace; font-size: 1.2rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .log-tabs { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+        .log-tab { background: #2a2a2a; border: none; color: #aaa; padding: 6px 14px; border-radius: 20px; font-family: monospace; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
+        .log-tab:hover { background: #3a3a3a; }
+        .log-tab.active { background: #0f0; color: #000; font-weight: bold; }
+        .log-panel { display: none; }
+        .log-panel.active { display: block; }
+        .log-content { font-family: monospace; font-size: 0.75rem; color: #ccc; white-space: pre-wrap; background: #0d0d0d; padding: 12px; border-radius: 8px; max-height: 400px; overflow-y: auto; }
+        
+        /* Schede informative */
+        .info-section { background: white; border-radius: 20px; padding: 24px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .info-section h2 { font-size: 1.3rem; color: #005f73; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+        
+        /* Personaggio card */
+        .personaggio-card { background: #f8f6f2; border-radius: 16px; padding: 16px; border-left: 4px solid #005f73; }
+        .personaggio-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .personaggio-avatar { font-size: 2.5rem; }
+        .personaggio-nome { font-weight: bold; font-size: 1.1rem; color: #2c2c2c; }
+        .personaggio-mood { font-size: 0.7rem; color: #888; margin-top: 2px; }
+        .personaggio-bio { font-size: 0.75rem; color: #666; margin-top: 8px; padding-top: 8px; border-top: 1px solid #eee; }
+        
+        /* Relazioni card */
+        .relazione-card { background: #f8f6f2; border-radius: 16px; padding: 12px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .relazione-da { font-weight: bold; min-width: 100px; }
+        .relazione-arrow { color: #888; }
+        .relazione-a { font-weight: bold; min-width: 100px; }
+        .relazione-score { font-family: monospace; font-weight: bold; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; }
+        .relazione-score.amico { background: #2e7d3220; color: #2e7d32; }
+        .relazione-score.simpatico { background: #2e7d3220; color: #558b2f; }
+        .relazione-score.neutro { background: #88888820; color: #666; }
+        .relazione-score.diffidente { background: #ef6c0020; color: #ef6c00; }
+        .relazione-score.ostile { background: #c6282820; color: #c62828; }
+        
+        /* Programmazione Redazione */
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+        .schedule-card { background: #f8f6f2; border-radius: 16px; padding: 16px; border-left: 4px solid #005f73; transition: transform 0.2s, box-shadow 0.2s; }
+        .schedule-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .schedule-day { font-size: 0.7rem; text-transform: uppercase; color: #005f73; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; }
+        .schedule-personaggio { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+        .schedule-avatar { font-size: 1.8rem; }
+        .schedule-nome { font-weight: bold; font-size: 1rem; color: #2c2c2c; }
+        .schedule-sezione { font-size: 0.75rem; color: #888; margin-bottom: 8px; }
+        .schedule-tipo { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: bold; margin-bottom: 8px; }
+        .schedule-tipo.rss { background: #008cff20; color: #008cff; }
+        .schedule-tipo.gen { background: #ff4d4d20; color: #ff4d4d; }
+        .schedule-tipo.red { background: #2d6a4f20; color: #2d6a4f; }
+        .schedule-temi { font-size: 0.7rem; color: #666; margin-top: 8px; padding-top: 8px; border-top: 1px solid #eee; }
+        .schedule-temi span { display: inline-block; background: #eee; padding: 2px 8px; border-radius: 12px; margin: 2px 4px 2px 0; font-size: 0.65rem; }
+        
+        /* Statistiche */
+        .stats-section { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
+        .stat-card { background: white; border-radius: 16px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: bold; color: #005f73; }
+        .stat-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Menu sezioni (notizie) */
+        .menu { display: flex; overflow-x: auto; padding: 20px 15px; gap: 12px; scrollbar-width: none; background: #005f73; margin-bottom: 20px; border-radius: 30px; }
+        .menu::-webkit-scrollbar { display: none; }
+        .tab { white-space: nowrap; padding: 12px 20px; border-radius: 30px; border: 2px solid rgba(255,255,255,0.7); background: rgba(255,255,255,0.15); color: #fff; font-weight: bold; font-size: 14px; cursor: pointer; transition: 0.3s; }
+        .tab.attiva { background: rgba(255,255,255,0.9); color: #005f73; transform: translateY(-2px); }
+        
+        /* Griglia notizie */
+        .notizia-container { padding: 15px 20px 30px; display: grid; grid-template-columns: 1fr; gap: 50px; }
+        @media(min-width:600px)  { .notizia-container { grid-template-columns: 1fr 1fr; gap: 40px 24px; } }
+        @media(min-width:1000px) { .notizia-container { grid-template-columns: 1fr 1fr 1fr; gap: 40px 24px; } }
+        @media(min-width:1600px) { .notizia-container { grid-template-columns: 1fr 1fr 1fr 1fr; gap: 40px 24px; } }
 
-        /* TIMBRO */
-        .timbro-edizione { display:none; width:100%; box-sizing:border-box; text-align:center; padding:7px 20px; background:var(--blu-mare); color:rgba(255,255,255,0.85); font-size:12px; font-style:italic; font-weight:600; border-bottom:1px solid rgba(255,255,255,0.1); }
-
-        /* TICKER */
-        .ticker-wrap { width:100%; overflow:hidden; background:var(--blu-mare); padding:8px 0; position:relative; opacity:0.85; }
-        .ticker-wrap::before,.ticker-wrap::after { content:''; position:absolute; top:0; bottom:0; width:40px; z-index:2; pointer-events:none; }
-        .ticker-wrap::before { left:0; background:linear-gradient(to right,var(--blu-mare),transparent); }
-        .ticker-wrap::after  { right:0; background:linear-gradient(to left,var(--blu-mare),transparent); }
-        .ticker-track { display:flex; width:max-content; animation:ticker-scorre 40s linear infinite; }
-        .ticker-track:hover { animation-play-state:paused; }
-        @keyframes ticker-scorre { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-        .ticker-item { font-size:11px; font-style:italic; font-weight:600; color:rgba(255,255,255,0.85); white-space:nowrap; padding:0 28px; }
-        .ticker-item::after { content:" ✦"; color:rgba(255,255,255,0.35); font-size:9px; }
-
-        /* MENU */
-        .menu { display:flex; overflow-x:auto; padding:20px 15px; gap:12px; scrollbar-width:none; }
-        .menu::-webkit-scrollbar { display:none; }
-        .tab { white-space:nowrap; padding:12px 20px; border-radius:30px; border:2px solid rgba(255,255,255,0.7); background:rgba(255,255,255,0.15); color:#fff; font-weight:bold; font-size:14px; cursor:pointer; transition:0.3s; }
-        .tab.attiva { background:rgba(255,255,255,0.9); color:var(--blu-mare); transform:translateY(-2px); }
-
-        /* GRIGLIA */
-        .notizia-container { padding:15px 20px 30px; display:grid; grid-template-columns:1fr; gap:50px; }
-        @media(min-width:600px)  { .notizia-container { grid-template-columns:1fr 1fr; gap:40px 24px; } }
-        @media(min-width:1000px) { .notizia-container { grid-template-columns:1fr 1fr 1fr; gap:40px 24px; } }
-        @media(min-width:1600px) { .notizia-container { grid-template-columns:1fr 1fr 1fr 1fr; gap:40px 24px; } }
-
-        /* NOTIZIE */
-        .notizia { position:relative; background:var(--panna); border-radius:24px; padding:25px 20px 20px; }
-        .notizia-numero { position:absolute; top:-18px; left:-18px; width:45px; height:45px; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:22px; z-index:20; border:4px solid #fff; }
-        .etichetta-categoria { position:absolute; top:-12px; right:20px; padding:4px 12px; border-radius:12px; font-size:10px; font-weight:900; text-transform:uppercase; z-index:20; border:2px solid #fff; }
-        .notizia.rss-box { border:2px solid var(--azzurro-pescara); box-shadow:0 10px 25px rgba(0,140,255,0.1); }
-        .notizia.rss-box .notizia-numero { background:var(--azzurro-pescara); }
-        .etichetta-categoria.rss-label { color:var(--azzurro-pescara); border-color:var(--azzurro-pescara); background:#fff; }
-        .notizia.gen-box { border:2px solid #ff4d4d; background:#fffafa; box-shadow:0 10px 25px rgba(255,0,0,0.1); }
-        .notizia.gen-box .notizia-numero { background:#ff4d4d; }
-        .etichetta-categoria.gen-label { color:#ff4d4d; border-color:#ff4d4d; background:#fff; }
-        .notizia.personaggio-box { border:2px solid #2d6a4f; background:#f0fff4; box-shadow:0 10px 25px rgba(45,106,79,0.15); }
-        .notizia.personaggio-box .notizia-numero { background:#2d6a4f; }
-        .etichetta-categoria.personaggio-label { color:#2d6a4f; border-color:#2d6a4f; background:#fff; }
-        .notizia-img-box { width:100%; aspect-ratio:16/9; background:#e9e5df; border-radius:16px; overflow:hidden; margin-bottom:20px; }
-        .notizia-img-box img { width:100%; height:100%; object-fit:cover; }
-        h2 { margin:0 0 15px; font-size:24px; line-height:1.3; color:#2c2c2c; font-weight:800; }
-        .testo { font-size:16px; line-height:1.7; color:#4a4a4a; overflow:hidden; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; }
-        .testo.aperto { -webkit-line-clamp:unset; }
-        .leggi-tutto { background:none; border:none; color:var(--blu-mare); font-weight:800; padding:12px 0; font-size:15px; cursor:pointer; text-transform:uppercase; }
-        .firma-autore { display:flex; align-items:center; gap:5px; font-size:11px; color:#999; margin-bottom:10px; font-style:italic; }
-        .firma-autore .avatar-autore { font-size:16px; }
-        .badge-nuovo { display:inline-block; background:#e63946; color:#fff; font-size:9px; font-weight:900; text-transform:uppercase; padding:2px 7px; border-radius:8px; margin-left:8px; vertical-align:middle; animation:pulse-badge 2s ease-in-out infinite; }
+        /* Notizie */
+        .notizia { position: relative; background: #faf7f2; border-radius: 24px; padding: 25px 20px 20px; }
+        .notizia-numero { position: absolute; top: -18px; left: -18px; width: 45px; height: 45px; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 22px; z-index: 20; border: 4px solid #fff; background: #008cff; }
+        .etichetta-categoria { position: absolute; top: -12px; right: 20px; padding: 4px 12px; border-radius: 12px; font-size: 10px; font-weight: 900; text-transform: uppercase; z-index: 20; border: 2px solid #fff; background: #fff; color: #008cff; border-color: #008cff; }
+        .notizia.rss-box { border: 2px solid #008cff; }
+        .notizia.gen-box { border: 2px solid #ff4d4d; }
+        .notizia.gen-box .notizia-numero { background: #ff4d4d; }
+        .etichetta-categoria.gen-label { color: #ff4d4d; border-color: #ff4d4d; }
+        .notizia.personaggio-box { border: 2px solid #2d6a4f; background: #f0fff4; }
+        .notizia.personaggio-box .notizia-numero { background: #2d6a4f; }
+        .etichetta-categoria.personaggio-label { color: #2d6a4f; border-color: #2d6a4f; }
+        .notizia-img-box { width: 100%; aspect-ratio: 16/9; background: #e9e5df; border-radius: 16px; overflow: hidden; margin-bottom: 20px; }
+        .notizia-img-box img { width: 100%; height: 100%; object-fit: cover; }
+        h2 { margin: 0 0 15px; font-size: 24px; line-height: 1.3; color: #2c2c2c; font-weight: 800; }
+        .testo { font-size: 16px; line-height: 1.7; color: #4a4a4a; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
+        .testo.aperto { -webkit-line-clamp: unset; }
+        .leggi-tutto { background: none; border: none; color: #005f73; font-weight: 800; padding: 12px 0; font-size: 15px; cursor: pointer; text-transform: uppercase; }
+        .firma-autore { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #999; margin-bottom: 10px; font-style: italic; }
+        .badge-nuovo { display: inline-block; background: #e63946; color: #fff; font-size: 9px; font-weight: 900; text-transform: uppercase; padding: 2px 7px; border-radius: 8px; margin-left: 8px; animation: pulse-badge 2s ease-in-out infinite; }
         @keyframes pulse-badge { 0%,100%{opacity:1} 50%{opacity:0.6} }
 
-        /* PERSONAGGIO FRAME */
-        .notizia-personaggio-header { display:flex; align-items:center; gap:12px; padding:16px 0 20px; border-bottom:1px dashed rgba(45,106,79,0.25); margin-bottom:16px; }
-        .notizia-personaggio-avatar { font-size:40px; line-height:1; }
-        .notizia-personaggio-info { flex:1; }
-        .notizia-personaggio-nome { font-size:13px; font-weight:800; color:#2d6a4f; }
-        .notizia-personaggio-bio { font-size:11px; color:#777; font-style:italic; margin-top:2px; }
-        .indicatore-verde { width:10px; height:10px; border-radius:50%; background:#2d6a4f; box-shadow:0 0 6px rgba(45,106,79,0.6); flex-shrink:0; animation:pulse-verde 2s ease-in-out infinite; }
-        @keyframes pulse-verde { 0%,100%{box-shadow:0 0 6px rgba(45,106,79,0.6)} 50%{box-shadow:0 0 12px rgba(45,106,79,0.9)} }
+        /* Commento firma */
+        .commento-firma { background: rgba(255,255,255,0.7); padding: 12px 14px 12px 46px; border-radius: 16px; margin-top: 16px; position: relative; border: 2px dashed #ccc; font-style: italic; font-size: 13px; color: #555; cursor: pointer; }
+        .commento-firma .avatar-firma { position: absolute; left: 12px; top: 10px; font-size: 20px; }
+        .commento-firma .nome-firma { font-size: 9px; font-weight: 800; text-transform: uppercase; color: #bbb; display: block; margin-bottom: 3px; }
+        .commento-firma .testo-firma { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .commento-firma.aperto .testo-firma { display: block; }
+        .firma-toggle { font-size: 10px; color: #bbb; float: right; }
+        .commento-firma.aperto .firma-toggle { transform: rotate(180deg); }
 
-        /* COMMENTO FIRMA */
-        .commento-firma { background:rgba(255,255,255,0.7); padding:12px 14px 12px 46px; border-radius:16px; margin-top:16px; position:relative; border:2px dashed #ccc; font-style:italic; font-size:13px; color:#555; cursor:pointer; transition:background 0.2s; }
-        .commento-firma:hover { background:rgba(255,255,255,0.9); }
-        .commento-firma .avatar-firma { position:absolute; left:12px; top:10px; font-size:20px; }
-        .commento-firma .nome-firma { font-size:9px; font-weight:800; text-transform:uppercase; color:#bbb; font-style:normal; display:block; margin-bottom:3px; }
-        .commento-firma .testo-firma { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-        .commento-firma.aperto .testo-firma { display:block; -webkit-line-clamp:unset; }
-        .firma-toggle { font-size:10px; color:#bbb; float:right; margin-top:2px; transition:transform 0.2s; }
-        .commento-firma.aperto .firma-toggle { transform:rotate(180deg); }
+        /* Commenti */
+        .commenti-header { display: flex; align-items: center; gap: 8px; margin-top: 14px; cursor: pointer; padding: 8px 12px; border-radius: 12px; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.06); }
+        .commenti-count { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #008cff; color: #fff; font-size: 11px; font-weight: 900; padding: 0 6px; }
+        .commenti-label { font-size: 11px; font-weight: 700; color: #888; text-transform: uppercase; flex: 1; }
+        .commenti-arrow { font-size: 10px; color: #bbb; transition: transform 0.2s; }
+        .commenti-panel { display: none; flex-direction: column; gap: 8px; margin-top: 8px; }
+        .commenti-panel.aperto { display: flex; }
+        .commenti-header.aperto .commenti-arrow { transform: rotate(180deg); }
+        .commento-personaggio { background: rgba(0,0,0,0.02); padding: 10px 14px 10px 42px; border-radius: 14px; position: relative; font-size: 13px; color: #444; border: 1px solid rgba(0,0,0,0.06); cursor: pointer; }
+        .commento-personaggio .avatar-p { position: absolute; left: 10px; top: 10px; font-size: 18px; }
+        .commento-personaggio .nome-p { font-size: 9px; font-weight: 800; text-transform: uppercase; color: #aaa; display: block; margin-bottom: 3px; }
+        .commento-personaggio .testo-p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .commento-personaggio.aperto .testo-p { display: block; }
+        .commento-toggle { font-size: 10px; color: #aaa; float: right; }
+        .commento-personaggio.aperto .commento-toggle { transform: rotate(180deg); }
 
-        /* BADGE COMMENTI */
-        .commenti-header { display:flex; align-items:center; gap:8px; margin-top:14px; cursor:pointer; padding:8px 12px; border-radius:12px; background:rgba(255,255,255,0.35); border:1px solid rgba(0,0,0,0.06); transition:background 0.2s; }
-        .commenti-header:hover { background:rgba(255,255,255,0.6); }
-        .commenti-count { display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:22px; border-radius:11px; background:var(--azzurro-pescara); color:#fff; font-size:11px; font-weight:900; padding:0 6px; }
-        .commenti-count.nuovo { background:#e63946; animation:pulse-badge 2s ease-in-out infinite; }
-        .commenti-label { font-size:11px; font-weight:700; color:#888; text-transform:uppercase; flex:1; }
-        .commenti-arrow { font-size:10px; color:#bbb; transition:transform 0.2s; }
-        .commenti-panel { display:none; flex-direction:column; gap:8px; margin-top:8px; }
-        .commenti-panel.aperto { display:flex; }
-        .commenti-header.aperto .commenti-arrow { transform:rotate(180deg); }
-        .commento-personaggio { background:rgba(255,255,255,0.5); padding:10px 14px 10px 42px; border-radius:14px; position:relative; font-size:13px; color:#444; line-height:1.5; border:1px solid rgba(0,0,0,0.06); cursor:pointer; transition:background 0.2s; }
-        .commento-personaggio:hover { background:rgba(255,255,255,0.75); }
-        .commento-personaggio .avatar-p { position:absolute; left:10px; top:10px; font-size:18px; }
-        .commento-personaggio .nome-p { font-size:9px; font-weight:800; text-transform:uppercase; color:#aaa; display:block; margin-bottom:3px; }
-        .commento-personaggio .testo-p { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-        .commento-personaggio.aperto .testo-p { display:block; -webkit-line-clamp:unset; }
-        .commento-toggle { font-size:10px; color:#aaa; float:right; margin-top:2px; transition:transform 0.2s; }
-        .commento-personaggio.aperto .commento-toggle { transform:rotate(180deg); }
+        /* Chat */
+        .chat-section { padding: 20px; margin-top: 10px; background: #005f73; border-radius: 24px; margin: 20px; }
+        .chat-title { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+        .chat-card { background: linear-gradient(135deg,rgba(255,243,210,0.95),rgba(255,228,168,0.9)); border-radius: 20px; padding: 18px; margin-bottom: 16px; }
+        .chat-data { font-size: 10px; color: rgba(90,62,27,0.6); text-align: right; margin-bottom: 12px; font-style: italic; }
+        .chat-msg { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+        .chat-av { font-size: 22px; flex-shrink: 0; line-height: 1; }
+        .chat-bubble { background: rgba(255,255,255,0.65); border-radius: 0 14px 14px 14px; padding: 8px 12px; flex: 1; }
+        .chat-nome { font-size: 10px; font-weight: 800; text-transform: uppercase; color: #5a3e1b; display: block; margin-bottom: 3px; }
+        .chat-testo { font-size: 13px; color: #4a3010; line-height: 1.5; font-style: italic; }
+        .chat-vuota { text-align: center; color: rgba(255,255,255,0.4); font-style: italic; font-size: 13px; padding: 20px; }
 
-        /* CHAT */
-        .chat-section { padding:20px; margin-top:10px; }
-        .chat-title { font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:rgba(255,255,255,0.7); margin-bottom:16px; }
-        .chat-card { background:linear-gradient(135deg,rgba(255,243,210,0.95),rgba(255,228,168,0.9)); border-radius:20px; padding:18px; margin-bottom:16px; border:1.5px solid rgba(180,130,60,0.3); }
-        .chat-data { font-size:10px; color:rgba(90,62,27,0.6); text-align:right; margin-bottom:12px; font-style:italic; }
-        .chat-msg { display:flex; gap:10px; margin-bottom:10px; align-items:flex-start; }
-        .chat-msg:last-child { margin-bottom:0; }
-        .chat-av { font-size:22px; flex-shrink:0; line-height:1; margin-top:2px; }
-        .chat-bubble { background:rgba(255,255,255,0.65); border-radius:0 14px 14px 14px; padding:8px 12px; flex:1; }
-        .chat-nome { font-size:10px; font-weight:800; text-transform:uppercase; color:#5a3e1b; display:block; margin-bottom:3px; }
-        .chat-testo { font-size:13px; color:#4a3010; line-height:1.5; font-style:italic; }
-        .chat-vuota { text-align:center; color:rgba(255,255,255,0.4); font-style:italic; font-size:13px; padding:20px; }
-
-        /* TERMINALE */
-        #terminale { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.97); color:#0f0; z-index:1000; font-family:monospace; flex-direction:column; }
-        .term-hdr { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #0f0; padding:12px 20px; flex-shrink:0; }
-        .term-tabs { display:flex; gap:6px; padding:10px 20px; border-bottom:1px solid #1a1a1a; flex-shrink:0; flex-wrap:wrap; }
-        .term-tab { padding:6px 14px; border-radius:6px; border:1px solid #333; background:transparent; color:#666; font-size:11px; font-family:monospace; cursor:pointer; }
-        .term-tab.on { background:#0f0; color:#000; font-weight:700; }
-        .term-body { flex:1; overflow-y:auto; padding:16px 20px; }
-        .term-panel { display:none; }
-        .term-panel.on { display:block; }
-
-        /* EDITOR */
-        .cs { color:#0f0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin:0 0 10px; padding-bottom:6px; border-bottom:1px solid #1a1a1a; }
-        .cf { margin-bottom:10px; }
-        .cl { color:#888; font-size:11px; display:block; margin-bottom:3px; }
-        .ci { width:100%; box-sizing:border-box; background:#111; border:1px solid #333; color:#eee; font-family:monospace; font-size:12px; padding:7px 10px; border-radius:6px; outline:none; }
-        .ci:focus { border-color:#0f0; }
-        .ci.sm { width:80px; }
-        .ci.ta { min-height:70px; resize:vertical; }
-        .crow { display:flex; gap:10px; flex-wrap:wrap; }
-        .crow .cf { flex:1; min-width:90px; }
-        .ccard { background:#0d0d0d; border:1px solid #222; border-radius:8px; padding:12px; margin-bottom:10px; }
-        .ccard-t { color:#0f0; font-size:11px; font-weight:700; margin-bottom:10px; }
-        .csel { background:#111; border:1px solid #333; color:#eee; font-family:monospace; font-size:12px; padding:7px 10px; border-radius:6px; width:100%; }
-        .cbtn-add { padding:7px 16px; border-radius:6px; border:1px solid #0f0; background:#1a3a1a; color:#0f0; font-family:monospace; font-size:12px; cursor:pointer; font-weight:700; }
-        .cbtn-add:hover { background:#0f0; color:#000; }
-        .cbtn-del { padding:4px 10px; border-radius:6px; border:1px solid #f00; background:#3a1a1a; color:#f00; font-family:monospace; font-size:10px; cursor:pointer; }
-        .cbtn-del:hover { background:#f00; color:#fff; }
-        .csave { display:block; width:100%; padding:12px; background:#0f0; color:#000; border:none; font-family:monospace; font-size:14px; font-weight:900; cursor:pointer; border-radius:8px; margin-top:20px; }
-        .csave:hover { background:#0d0; }
-        .cstatus { text-align:center; font-size:12px; padding:8px; border-radius:6px; margin-top:10px; display:none; }
-        .cstatus.ok { background:#0a2a0a; color:#0f0; display:block; }
-        .cstatus.err { background:#2a0a0a; color:#f00; display:block; }
-        .cchk { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
-        .cchk input { width:16px; height:16px; accent-color:#0f0; }
-        .cchk label { color:#888; font-size:11px; }
+        /* Footer */
+        .footer { text-align: center; padding: 20px; color: #888; font-size: 0.7rem; border-top: 1px solid #ddd; margin-top: 30px; }
+        
+        /* Overlay password */
+        .password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            font-family: monospace;
+        }
+        .password-box {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #0f0;
+        }
+        .password-box h3 { color: #0f0; margin-bottom: 20px; }
+        .password-box input {
+            background: #0d0d0d;
+            border: 1px solid #333;
+            color: #0f0;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-family: monospace;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            outline: none;
+        }
+        .password-box input:focus { border-color: #0f0; }
+        .password-box button {
+            background: #0f0;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            margin-top: 20px;
+            font-family: monospace;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .password-box button:hover { background: #0d0; }
+        .password-error { color: #f00; margin-top: 12px; font-size: 0.8rem; display: none; }
+        
+        @media (max-width: 700px) {
+            body { padding: 12px; }
+            .schedule-grid, .info-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-<div id="app">
-
-<!-- TERMINALE -->
-<div id="terminale">
-    <div class="term-hdr">
-        <span>> TERMINALE DIREZIONE 🐬</span>
-        <span onclick="chiudiT()" style="color:red;cursor:pointer;">[X] CHIUDI</span>
+<div class="container">
+    <div class="header" id="logo-innesco">
+        <h1>🐬 La Voce del Delfino <span>📰</span></h1>
+        <p>Redazione e notizie dal mondo</p>
     </div>
-    <div class="term-tabs" id="term-tabs"></div>
-    <div class="term-body">
-        <div class="term-panel on" id="panel-log">
-            <pre id="log-content" style="font-size:13px;color:#ccc;white-space:pre-wrap;margin:0;"></pre>
+
+    <div id="messages"></div>
+
+    <div id="protected-content" class="protected-section">
+        <!-- Stats -->
+        <div class="stats-section" id="stats"></div>
+        
+        <!-- Main Tabs per dashboard -->
+        <div class="main-tabs">
+            <button class="main-tab active" data-tab="schedule">📅 Programmazione</button>
+            <button class="main-tab" data-tab="personaggi">👥 Personaggi</button>
+            <button class="main-tab" data-tab="relazioni">💞 Relazioni</button>
+            <button class="main-tab" data-tab="log">📋 Log</button>
         </div>
-        <div class="term-panel" id="panel-impostazioni">
-            <p class="cs">Impostazioni Sito</p>
-            <div class="cf"><label class="cl">Header (filename)</label><input class="ci" id="ci-header"></div>
-            <div class="cf"><label class="cl">Motto</label><input class="ci" id="ci-motto"></div>
-            <div class="cf"><label class="cl">Stato sito</label>
-                <select class="ci csel" id="ci-stato"><option value="attivo">attivo</option><option value="manutenzione">manutenzione</option><option value="sospeso">sospeso</option></select>
+        
+        <!-- Tab: Programmazione -->
+        <div class="tab-panel active" id="tab-schedule">
+            <div class="info-section">
+                <h2>Programmazione Redazione</h2>
+                <div id="schedule-grid" class="schedule-grid"></div>
             </div>
-            <div class="cf"><label class="cl">Alert API</label><input class="ci" id="ci-alert"></div>
-            <p class="cs" style="margin-top:16px;">Ticker News (uno per riga)</p>
-            <div class="cf"><textarea class="ci ta" id="ci-ticker" style="min-height:100px;"></textarea></div>
-            <button class="csave" onclick="salva('impostazioni')">💾 SCARICA config_v2_draft.json</button>
-            <div class="cstatus" id="st-impostazioni"></div>
         </div>
-        <div class="term-panel" id="panel-limiti">
-            <p class="cs">Fasce Orarie (ore IT, una per riga)</p>
-            <div class="cf"><textarea class="ci ta" id="ci-fasce" style="min-height:80px;"></textarea></div>
-            <div class="crow">
-                <div class="cf"><label class="cl">Tolleranza min</label><input class="ci sm" id="ci-toll" type="number" min="0" max="60"></div>
-                <div class="cf"><label class="cl">Reset quote (ora IT)</label><input class="ci sm" id="ci-reset"></div>
-                <div class="cf"><label class="cl">Lunghezza art (1-10)</label><input class="ci sm" id="ci-lung" type="number" min="1" max="10"></div>
+        
+        <!-- Tab: Personaggi -->
+        <div class="tab-panel" id="tab-personaggi">
+            <div class="info-section">
+                <h2>Personaggi</h2>
+                <div id="personaggi-grid" class="info-grid"></div>
             </div>
-            <p class="cs" style="margin-top:16px;">API e Generazione</p>
-            <div class="crow">
-                <div class="cf"><label class="cl">Cerca modello max (volte/giorno)</label><input class="ci sm" id="ci-cermod" type="number" min="1" max="10"></div>
-            </div>
-            <div class="crow">
-                <div class="cf"><label class="cl">Chat</label><input class="ci sm" id="ci-chat" placeholder="sempre o numero"></div>
-                <div class="cf"><label class="cl">Commenti</label><input class="ci sm" id="ci-commenti" placeholder="sempre o numero"></div>
-                <div class="cf"><label class="cl">Relazioni</label><input class="ci sm" id="ci-relazioni" placeholder="sempre o numero"></div>
-            </div>
-            <p class="cs" style="margin-top:16px;">Commenti</p>
-            <div class="crow">
-                <div class="cf"><label class="cl">Min</label><input class="ci sm" id="ci-cmin" type="number" min="0" max="10"></div>
-                <div class="cf"><label class="cl">Max</label><input class="ci sm" id="ci-cmax" type="number" min="1" max="10"></div>
-                <div class="cf"><label class="cl">Max totali</label><input class="ci sm" id="ci-ctot" type="number" min="1" max="30"></div>
-            </div>
-            <button class="csave" onclick="salva('limiti')">💾 SCARICA config_v2_draft.json</button>
-            <div class="cstatus" id="st-limiti"></div>
         </div>
-        <div class="term-panel" id="panel-chi">
-            <div id="chi-list"></div>
-            <button class="cbtn-add" onclick="addPersonaggio()" style="width:100%;margin-bottom:12px;">+ Nuovo personaggio</button>
-            <button class="csave" onclick="salva('chi')">💾 SCARICA config_v2_draft.json</button>
-            <div class="cstatus" id="st-chi"></div>
+        
+        <!-- Tab: Relazioni -->
+        <div class="tab-panel" id="tab-relazioni">
+            <div class="info-section">
+                <h2>Relazioni tra Personaggi</h2>
+                <div id="relazioni-list"></div>
+            </div>
         </div>
-        <div class="term-panel" id="panel-agenda">
-            <div id="ag-list"></div>
-            <button class="csave" onclick="salva('agenda')">💾 SCARICA config_v2_draft.json</button>
-            <div class="cstatus" id="st-agenda"></div>
-        </div>
-        <div class="term-panel" id="panel-redazione">
-            <div id="red-list"></div>
-            <button class="cbtn-add" onclick="addVoce()" style="width:100%;margin-bottom:12px;">+ Nuova voce</button>
-            <button class="csave" onclick="salva('redazione')">💾 SCARICA config_v2_draft.json</button>
-            <div class="cstatus" id="st-redazione"></div>
+        
+        <!-- Tab: Log -->
+        <div class="tab-panel" id="tab-log">
+            <div class="log-section">
+                <h2>📋 Log di sistema</h2>
+                <div class="log-tabs" id="log-tabs"></div>
+                <div id="log-panels"></div>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- PAGINA -->
-<div class="testata" id="logo-innesco">
-    <img id="header-img" src="public/images/default.webp">
-</div>
-<div class="delfino-timestamp">
-    <span class="dt-tempo" id="ts-display">🐬 Il Delfino sta nuotando...</span>
-    <span class="dt-motto" id="motto-display"></span>
-</div>
-<div class="timbro-edizione" id="timbro-edizione"></div>
-<div class="ticker-wrap" id="ticker-wrap" style="display:none;">
-    <div class="ticker-track" id="ticker-track"></div>
-</div>
-<div class="menu" id="menu-cat"></div>
-<div id="lista-notizie" class="notizia-container"></div>
-<div class="chat-section">
-    <div class="chat-title">💬 Dalla Redazione</div>
-    <div id="chat-lista"><div class="chat-vuota">La redazione è silenziosa... 🐬</div></div>
-</div>
+    <!-- Sezione notizie (sempre visibile) -->
+    <div class="menu" id="menu-cat"></div>
+    <div id="lista-notizie" class="notizia-container"></div>
+    <div class="chat-section">
+        <div class="chat-title">💬 Dalla Redazione</div>
+        <div id="chat-lista"><div class="chat-vuota">La redazione è silenziosa... 🐬</div></div>
+    </div>
+
+    <div class="footer">
+        La Voce del Delfino - Testata giornalistica immaginaria
+    </div>
 </div>
 
 <script>
-// ── UTILS ──────────────────────────────────────────────────────────────────
-let clicks=0,last=0;
-function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
-
-// ── TERMINALE ──────────────────────────────────────────────────────────────
-let CFG=null, VI=0;
-function chiudiT(){document.getElementById('terminale').style.display='none';}
-
-function swTab(id){
-    document.querySelectorAll('.term-tab').forEach(t=>t.classList.remove('on'));
-    document.querySelectorAll('.term-panel').forEach(p=>p.classList.remove('on'));
-    document.querySelector('[data-tab="'+id+'"]').classList.add('on');
-    document.getElementById('panel-'+id).classList.add('on');
-}
-
-document.getElementById('logo-innesco').onclick=async()=>{
-    const ora=Date.now();
-    if(ora-last>1000)clicks=0; clicks++;last=ora;
-    if(clicks!==5)return;
-    const p=prompt('Password:'); if(!p)return;
-    try {
-        const a=await fetch('public/data/auth_info.json?v='+ora).then(r=>r.json());
-        const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(p)))).map(b=>b.toString(16).padStart(2,'0')).join('');
-        if(hash!==a.check){alert('Password errata');return;}
-        // Build tabs
-        const tabs=[['log','📋 Log'],['impostazioni','⚙️ Impost.'],['limiti','🎛️ Limiti'],['chi','👥 Personaggi'],['agenda','📅 Agenda'],['redazione','📰 Redazione']];
-        document.getElementById('term-tabs').innerHTML=tabs.map(([id,l])=>`<button class="term-tab${id==='log'?' on':''}" data-tab="${id}" onclick="swTab('${id}')">${l}</button>`).join('');
-        document.getElementById('terminale').style.display='flex';
-        document.getElementById('log-content').innerText=await fetch('public/data/redazione-v2.log?v='+ora).then(r=>r.text()).catch(()=>'Log non disponibile');
-        CFG=await fetch('public/data/config_v2.json?v='+ora).then(r=>r.json());
-        popolaTutti();
-    } catch(e){alert('Errore: '+e.message);}
-};
-
-// ── POPOLA EDITOR ──────────────────────────────────────────────────────────
-function popolaTutti(){
-    if(!CFG)return;
-    const I=CFG.IMPOSTAZIONI||{};
-    document.getElementById('ci-header').value=I.header_fisso||'';
-    document.getElementById('ci-motto').value=I.motto||'';
-    document.getElementById('ci-stato').value=I.stato_sito||'attivo';
-    document.getElementById('ci-alert').value=I.alert_api_rotto||'';
-    document.getElementById('ci-ticker').value=(I.ticker_news||[]).join('\n');
-    const L=CFG.LIMITI||{};
-    document.getElementById('ci-fasce').value=(L.fasce_articoli||[]).join('\n');
-    document.getElementById('ci-toll').value=L.tolleranza_minuti??30;
-    document.getElementById('ci-reset').value=L.fascia_reset_quote??'05';
-    document.getElementById('ci-lung').value=L.lunghezza_articolo??5;
-    document.getElementById('ci-cmin').value=L.commenti_min??1;
-    document.getElementById('ci-cmax').value=L.commenti_max??3;
-    document.getElementById('ci-ctot').value=L.commenti_max_totali??6;
-    document.getElementById('ci-cermod').value=L.cerca_modello_max??1;
-    const parseLimite=v=>v==='sempre'?'sempre':(v??'sempre');
-    document.getElementById('ci-chat').value=parseLimite(L.chat);
-    document.getElementById('ci-commenti').value=parseLimite(L.commenti);
-    document.getElementById('ci-relazioni').value=parseLimite(L.relazioni);
-    // CHI
-    const chiEl=document.getElementById('chi-list');
-    chiEl.innerHTML=Object.entries(CFG.CHI||{}).map(([nome,p])=>`
-        <div class="ccard"><div class="ccard-t">${esc(p.avatar||'👤')} ${esc(nome)}</div>
-        <div class="crow"><div class="cf"><label class="cl">Avatar</label><input class="ci sm" id="c-${esc(nome)}-av" value="${esc(p.avatar||'')}"></div>
-        <div class="cf"><label class="cl">Peso</label><input class="ci sm" id="c-${esc(nome)}-peso" type="number" step="0.1" min="0" max="1" value="${p.peso||0.6}"></div></div>
-        <div class="cf"><label class="cl">Mood</label><input class="ci" id="c-${esc(nome)}-mood" value="${esc(p.mood||'')}"></div>
-        <div class="cf"><label class="cl">Bio breve</label><input class="ci" id="c-${esc(nome)}-bb" value="${esc(p.bio_breve||'')}"></div>
-        <div class="cf"><label class="cl">Bio completa</label><textarea class="ci ta" id="c-${esc(nome)}-bc">${esc(p.bio_completa||'')}</textarea></div>
-        <div class="cf"><label class="cl">Img (filename)</label><input class="ci" id="c-${esc(nome)}-img" value="${esc(p.img||'')}"></div>
-        </div>`).join('');
-    // AGENDA
-    const agEl=document.getElementById('ag-list');
-    agEl.innerHTML=Object.entries(CFG.AGENDA||{}).map(([g,v])=>`
-        <div class="ccard"><div class="ccard-t">📅 ${esc(g)}</div>
-        <div class="crow">
-        <div class="cf"><label class="cl">Timbro</label><input class="ci" id="a-${esc(g)}-t" value="${esc(v.timbro||'')}"></div>
-        <div class="cf"><label class="cl">Banner</label><input class="ci" id="a-${esc(g)}-b" value="${esc(v.banner||'')}"></div>
-        </div></div>`).join('');
-    // REDAZIONE
-    VI=(CFG.REDAZIONE||[]).length;
-    document.getElementById('red-list').innerHTML=(CFG.REDAZIONE||[]).map((v,i)=>buildV(v,i)).join('');
-}
-
-function addPersonaggio(){
-    const nome=prompt('Nome del nuovo personaggio:');
-    if(!nome||!nome.trim())return;
-    const n=nome.trim();
-    if(CFG.CHI[n]){alert('Personaggio già esistente');return;}
-    CFG.CHI[n]={mood:'',peso:0.7,avatar:'👤',bio_breve:'',bio_completa:'',img:''};
-    // Aggiunge la card nel DOM senza ripopolare tutto
-    const chiEl=document.getElementById('chi-list');
-    chiEl.innerHTML+=`<div class="ccard"><div class="ccard-t">👤 ${esc(n)}</div>
-        <div class="crow"><div class="cf"><label class="cl">Avatar</label><input class="ci sm" id="c-${esc(n)}-av" value="👤"></div>
-        <div class="cf"><label class="cl">Peso</label><input class="ci sm" id="c-${esc(n)}-peso" type="number" step="0.1" min="0" max="1" value="0.7"></div></div>
-        <div class="cf"><label class="cl">Mood</label><input class="ci" id="c-${esc(n)}-mood" value=""></div>
-        <div class="cf"><label class="cl">Bio breve</label><input class="ci" id="c-${esc(n)}-bb" value=""></div>
-        <div class="cf"><label class="cl">Bio completa</label><textarea class="ci ta" id="c-${esc(n)}-bc"></textarea></div>
-        <div class="cf"><label class="cl">Img (filename)</label><input class="ci" id="c-${esc(n)}-img" value=""></div>
-        </div>`;
-}
-function addVoce(){
-    const nomi=Object.keys(CFG.CHI||{}).filter(n=>n!=='default');
-    document.getElementById('red-list').innerHTML+=buildV({g:'default',sez:'pescara',lab:'Nuova',arg:'',tipo:'RSS',firma:nomi[0]||'',mood:'',num:2,weight_articolo:0.7,weight_commento:0.6,inventare:false,temi:[]},VI++);
-}
-
-function buildV(v,i){
-    const nomi=Object.keys(CFG.CHI||{}).filter(n=>n!=='default');
-    const fo=nomi.map(n=>`<option value="${esc(n)}" ${v.firma===n?'selected':''}>${esc(n)}</option>`).join('');
-    const giorni=['default','lun','mar','mer','gio','ven','sab','dom','lun,mer,ven','sab,dom','lun,dom,ven','mer,sab','lun,gio'];
-    const go=giorni.map(g=>`<option value="${g}" ${v.g===g?'selected':''}>${g}</option>`).join('');
-    return `<div class="ccard" id="v${i}">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-            <div class="ccard-t" style="margin:0;">📰 ${esc(v.lab||'Voce')}</div>
-            <button class="cbtn-del" onclick="document.getElementById('v${i}').remove()">✕</button>
-        </div>
-        <div class="crow">
-            <div class="cf"><label class="cl">Giorni</label><select class="ci csel" id="r${i}-g">${go}</select></div>
-            <div class="cf"><label class="cl">Sezione</label><input class="ci" id="r${i}-sez" value="${esc(v.sez||'')}"></div>
-            <div class="cf"><label class="cl">Label</label><input class="ci" id="r${i}-lab" value="${esc(v.lab||'')}"></div>
-        </div>
-        <div class="cf"><label class="cl">Argomento/Query RSS</label><input class="ci" id="r${i}-arg" value="${esc(v.arg||'')}"></div>
-        <div class="crow">
-            <div class="cf"><label class="cl">Tipo</label><select class="ci csel" id="r${i}-tipo"><option value="RSS" ${v.tipo==='RSS'?'selected':''}>RSS</option><option value="GEN" ${v.tipo==='GEN'?'selected':''}>GEN</option></select></div>
-            <div class="cf"><label class="cl">Firma</label><select class="ci csel" id="r${i}-firma">${fo}</select></div>
-            <div class="cf"><label class="cl">Num</label><input class="ci sm" id="r${i}-num" type="number" min="1" max="10" value="${v.num||2}"></div>
-        </div>
-        <div class="cf"><label class="cl">Mood commento</label><input class="ci" id="r${i}-mood" value="${esc(v.mood||'')}"></div>
-        <div class="crow">
-            <div class="cf"><label class="cl">Weight art</label><input class="ci sm" id="r${i}-wa" type="number" step="0.05" min="0" max="1" value="${v.weight_articolo||0.7}"></div>
-            <div class="cf"><label class="cl">Weight comm</label><input class="ci sm" id="r${i}-wc" type="number" step="0.05" min="0" max="1" value="${v.weight_commento||0.6}"></div>
-        </div>
-        <div class="cchk"><input type="checkbox" id="r${i}-inv" ${v.inventare?'checked':''}><label>Può inventare liberamente</label></div>
-        <div class="cf"><label class="cl">Temi GEN (uno per riga)</label><textarea class="ci ta" id="r${i}-temi">${esc((v.temi||[]).join('\n'))}</textarea></div>
-    </div>`;
-}
-
-function parseLimiteScrivi(v){const t=(v||'').trim().toLowerCase();return t==='sempre'||t===''?'sempre':parseInt(t)||'sempre';}
-function leggiForm(){
-    CFG.IMPOSTAZIONI={...CFG.IMPOSTAZIONI,
-        header_fisso:document.getElementById('ci-header').value.trim(),
-        motto:document.getElementById('ci-motto').value.trim(),
-        stato_sito:document.getElementById('ci-stato').value,
-        alert_api_rotto:document.getElementById('ci-alert').value.trim(),
-        ticker_news:document.getElementById('ci-ticker').value.split('\n').map(t=>t.trim()).filter(Boolean)
+    let clicks = 0;
+    let lastClick = 0;
+    let CFG = null;
+    
+    const giorniMap = {
+        'dom': 'Domenica', 'lun': 'Lunedì', 'mar': 'Martedì', 'mer': 'Mercoledì',
+        'gio': 'Giovedì', 'ven': 'Venerdì', 'sab': 'Sabato', 'default': 'Tutti i giorni'
     };
-    CFG.LIMITI={...CFG.LIMITI,
-        fasce_articoli:document.getElementById('ci-fasce').value.split('\n').map(t=>t.trim()).filter(Boolean),
-        tolleranza_minuti:parseInt(document.getElementById('ci-toll').value)||30,
-        fascia_reset_quote:document.getElementById('ci-reset').value.trim(),
-        lunghezza_articolo:parseInt(document.getElementById('ci-lung').value)||5,
-        commenti_min:parseInt(document.getElementById('ci-cmin').value)||1,
-        commenti_max:parseInt(document.getElementById('ci-cmax').value)||3,
-        commenti_max_totali:parseInt(document.getElementById('ci-ctot').value)||6,
-        cerca_modello_max:parseInt(document.getElementById('ci-cermod').value)||1,
-        chat:parseLimiteScrivi(document.getElementById('ci-chat').value),
-        commenti:parseLimiteScrivi(document.getElementById('ci-commenti').value),
-        relazioni:parseLimiteScrivi(document.getElementById('ci-relazioni').value)
-    };
-    // Leggi tutti i personaggi visibili nel DOM (inclusi i nuovi aggiunti)
-    const chiCards=document.querySelectorAll('#chi-list .ccard');
-    chiCards.forEach(card=>{
-        // Estrai il nome dalla prima input avatar trovata nell'id
-        const avEl=card.querySelector('[id$="-av"]');
-        if(!avEl)return;
-        const nome=avEl.id.replace('c-','').replace('-av','');
-        if(!CFG.CHI[nome])CFG.CHI[nome]={};
-        const g=id=>document.getElementById('c-'+nome+'-'+id)?.value;
-        CFG.CHI[nome]={...CFG.CHI[nome],avatar:g('av')||'👤',peso:parseFloat(g('peso'))||0.7,mood:g('mood')||'',bio_breve:g('bb')||'',bio_completa:g('bc')||'',img:g('img')||''};
-    });
-    // Legacy: mantieni compatibilità con il vecchio codice
-    Object.keys(CFG.CHI||{}).forEach(nome=>{
-        const g=id=>document.getElementById('c-'+nome+'-'+id)?.value;
-        // già gestito sopra
-    });
-    Object.keys(CFG.AGENDA||{}).forEach(giorno=>{
-        CFG.AGENDA[giorno]={timbro:document.getElementById('a-'+giorno+'-t')?.value.trim()||'',banner:document.getElementById('a-'+giorno+'-b')?.value.trim()||''};
-    });
-    CFG.REDAZIONE=Array.from(document.querySelectorAll('[id^="v"]')).filter(el=>el.id.match(/^v\d+$/)).map(el=>{
-        const i=el.id.replace('v','');
-        const g=id=>document.getElementById('r'+i+'-'+id);
-        return{g:g('g')?.value||'default',sez:g('sez')?.value.trim()||'pescara',arg:g('arg')?.value.trim()||'',tipo:g('tipo')?.value||'RSS',lab:g('lab')?.value.trim()||'',firma:g('firma')?.value||'',mood:g('mood')?.value.trim()||'',num:parseInt(g('num')?.value)||2,weight_articolo:parseFloat(g('wa')?.value)||0.7,weight_commento:parseFloat(g('wc')?.value)||0.6,inventare:g('inv')?.checked||false,temi:(g('temi')?.value||'').split('\n').map(t=>t.trim()).filter(Boolean)};
-    });
-}
 
-function mostraStato(id,ok,msg){
-    const el=document.getElementById('st-'+id);
-    el.className='cstatus '+(ok?'ok':'err');
-    el.innerText=(ok?'✅ ':'❌ ')+msg;
-    setTimeout(()=>{el.className='cstatus';},5000);
-}
-
-function salva(sezione){
-    try{
-        leggiForm();
-        const blob=new Blob([JSON.stringify(CFG,null,2)],{type:'application/json'});
-        const url=URL.createObjectURL(blob);
-        const a=document.createElement('a');
-        a.href=url;a.download='config_v2_draft.json';a.click();
-        URL.revokeObjectURL(url);
-        mostraStato(sezione,true,'config_v2_draft.json scaricato!');
-    }catch(e){mostraStato(sezione,false,e.message);}
-}
-
-// ── CHAT ───────────────────────────────────────────────────────────────────
-async function caricaChat(){
-    const lista=document.getElementById('chat-lista');
-    try{
-        const st=await fetch('public/data/_chat.json?v='+Date.now()).then(r=>r.json());
-        if(!st?.length)return;
-        lista.innerHTML='';
-        st.slice(0,3).forEach(s=>{
-            const card=document.createElement('div');
-            card.className='chat-card';
-            card.innerHTML='<div class="chat-data">'+esc(s.data||'')+'</div>';
-            (s.messaggi||[]).forEach(m=>{
-                const row=document.createElement('div');
-                row.className='chat-msg';
-                row.innerHTML='<div class="chat-av">'+esc(m.avatar||'👤')+'</div><div class="chat-bubble"><span class="chat-nome">'+esc(m.nome)+'</span><span class="chat-testo">'+esc(m.testo)+'</span></div>';
-                card.appendChild(row);
-            });
-            lista.appendChild(card);
-        });
-    }catch(e){}
-}
-
-// ── CARICA ─────────────────────────────────────────────────────────────────
-async function carica(){
-    try{
-        const cfg=await fetch('public/data/active_config_v2.json?v='+Date.now()).then(r=>r.json());
-        const ss=cfg.site_settings||{};
-        if(ss.header_img)document.getElementById('header-img').src='public/images/'+ss.header_img;
-        if(ss.timbro){const t=document.getElementById('timbro-edizione');t.innerText=ss.timbro;t.style.display='block';}
-        const up=ss.last_update||'---';
-        const providerText = ss.llm_provider ? ` (${ss.llm_provider})` : '';
-        document.getElementById('ts-display').innerHTML = up !== '---' 
-            ? `🐬 Il Delfino ha nuotato qui il ${up}${providerText}` 
-            : '🐬 Il Delfino sta nuotando...';
-        
-        if(ss.motto)document.getElementById('motto-display').innerText='✦ '+ss.motto+' ✦';
-        const tn=ss.ticker_news||[];
-        if(tn.length){const doppio=[...tn,...tn];document.getElementById('ticker-track').innerHTML=doppio.map(t=>'<span class="ticker-item">'+esc(t)+'</span>').join('');document.getElementById('ticker-wrap').style.display='block';}
-        const sezioni=[...new Set((cfg.REDAZIONE||[]).map(v=>v.sez))];
-        sezioni.forEach((sez,i)=>{
-            const b=document.createElement('button');
-            b.className='tab'+(i===0?' attiva':'');
-            b.innerText=sez;
-            b.onclick=()=>mostraSezione(sez,b,cfg.STILI||{});
-            document.getElementById('menu-cat').appendChild(b);
-        });
-        if(sezioni[0])mostraSezione(sezioni[0],null,cfg.STILI||{});
-        await caricaChat();
-    }catch(e){console.error(e);}
-}
-
-async function mostraSezione(sez,btn,STILI){
-    if(btn){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('attiva'));btn.classList.add('attiva');}
-    const data=await fetch('public/data/news-v2-'+sez+'.json?v='+Date.now()).then(r=>r.json());
-    const mc=data.color||'#005f73';
-    document.documentElement.style.setProperty('--blu-mare',mc);
-    document.body.style.background=mc;
-    if(data.news?.length){
-        const doppio=[...data.news,...data.news].map(n=>n.titolo);
-        const tr=document.getElementById('ticker-track');
-        tr.innerHTML=doppio.map(t=>'<span class="ticker-item">'+esc(t)+'</span>').join('');
-        tr.style.animationDuration=Math.max(20,Math.min(60,doppio.join('').length*0.09))+'s';
-        document.getElementById('ticker-wrap').style.display='block';
+    function esc(s) { if (!s) return ''; return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
+    
+    function mostraMessaggio(tipo, testo) {
+        const container = document.getElementById('messages');
+        const msg = document.createElement('div');
+        msg.className = tipo === 'error' ? 'error-msg' : (tipo === 'warning' ? 'warning-msg' : 'success-msg');
+        msg.innerText = testo;
+        container.appendChild(msg);
+        setTimeout(() => msg.remove(), 8000);
     }
-    const news=data.news||[];
-    const ord=[...news.filter(n=>n.tipo==='personaggio'),...news.filter(n=>n.tipo==='rss'&&n.nuovo),...news.filter(n=>n.tipo!=='personaggio'&&!(n.tipo==='rss'&&n.nuovo))];
-    const lista=document.getElementById('lista-notizie');
-    lista.innerHTML='';
-    ord.forEach((n,idx)=>{
-        const tipo=n.tipo||'rss';
-        const isP=tipo==='personaggio';
-        const bx=isP?'personaggio-box':tipo==='gen'?'gen-box':'rss-box';
-        const lx=isP?'personaggio-label':tipo==='gen'?'gen-label':'rss-label';
-        const bn=n.nuovo?'<span class="badge-nuovo">nuovo</span>':'';
-        const cf=n.commento_firma||{};
-        const firmaH=!isP&&cf.nome?`<div class="firma-autore"><span class="avatar-autore">${esc(cf.avatar)||'👤'}</span><span>${esc(cf.nome)}</span></div>`:'';
-        const cfH=cf.testo?`<div class="commento-firma" onclick="this.classList.toggle('aperto')"><span class="avatar-firma">${esc(cf.avatar)||'👤'}</span><span class="nome-firma">${esc(cf.nome)||'Redazione'} <span class="firma-toggle">▼</span></span><div class="testo-firma">${esc(cf.testo)}</div></div>`:'';
-        const comm=n.commenti||[];
-        const nuoviC=comm.some(c=>c.nuovo);
-        const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')"><span class="avatar-p">${esc(c.avatar)||'👤'}</span><span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span><div class="testo-p">${esc(c.testo)}</div></div>`).join('');
-        const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')"><span class="commenti-count${nuoviC?' nuovo':''}">${comm.length}</span><span class="commenti-label">Comment${comm.length===1?'o':'i'}</span><span class="commenti-arrow">▼</span></div><div class="commenti-panel">${cListH}</div>`:'';
-      //  if(isP){
-      //      lista.innerHTML+=`<div class="notizia ${bx}"><div class="notizia-numero">${idx+1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-personaggio-header"><div class="notizia-personaggio-avatar">${esc(cf.avatar)||'👤'}</div><div class="notizia-personaggio-info"><div class="notizia-personaggio-nome">${esc(cf.nome)||'Redazione'}</div><div class="notizia-personaggio-bio">scrive di ciò che gli piace</div></div><div class="indicatore-verde"></div></div><h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cH}</div>`;
-      //  }else{
-            lista.innerHTML+=`<div class="notizia ${bx}"><div class="notizia-numero">${idx+1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-img-box"><img src="public/images/${esc(n.immagine)||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>${firmaH}<h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cfH}${cH}</div>`;
-      //  }
-    });
-}
 
-carica();
+    async function verificaPassword(pwd) {
+        try {
+            const auth = await fetch('public/data/auth_info.json?v=' + Date.now()).then(r => r.json());
+            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
+                .map(b => b.toString(16).padStart(2, '0')).join('');
+            return hash === auth.check;
+        } catch(e) {
+            return false;
+        }
+    }
+
+    function mostraPasswordOverlay() {
+        const overlay = document.createElement('div');
+        overlay.className = 'password-overlay';
+        overlay.innerHTML = `
+            <div class="password-box">
+                <h3>🔐 Accesso Redazione</h3>
+                <input type="password" id="pwd-input" placeholder="Inserisci password" autofocus>
+                <div class="password-error" id="pwd-error">Password errata</div>
+                <button id="pwd-submit">ENTRA</button>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+        
+        const input = overlay.querySelector('#pwd-input');
+        const submit = overlay.querySelector('#pwd-submit');
+        const errorDiv = overlay.querySelector('#pwd-error');
+        
+        const check = async () => {
+            const ok = await verificaPassword(input.value);
+            if (ok) {
+                overlay.remove();
+                document.getElementById('protected-content').classList.add('visible');
+                await caricaTuttiIDati();
+            } else {
+                errorDiv.style.display = 'block';
+                input.value = '';
+                input.focus();
+            }
+        };
+        
+        submit.onclick = check;
+        input.onkeypress = (e) => { if (e.key === 'Enter') check(); };
+    }
+
+    document.getElementById('logo-innesco').onclick = () => {
+        const ora = Date.now();
+        if (ora - lastClick > 1000) clicks = 0;
+        clicks++;
+        lastClick = ora;
+        if (clicks === 5) {
+            mostraPasswordOverlay();
+            clicks = 0;
+        }
+    };
+
+    function getGiornoCorrente() {
+        const giorni = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
+        return giorni[new Date().getDay()];
+    }
+
+    function getGiorniAttivi(giorniStr) {
+        if (giorniStr === 'default') return ['default'];
+        return giorniStr.split(',').map(g => g.trim());
+    }
+
+    function isVoceAttiva(voce, oggi) {
+        const giorniAttivi = getGiorniAttivi(voce.g);
+        return giorniAttivi.includes('default') || giorniAttivi.includes(oggi);
+    }
+
+    function getScoreClass(score) {
+        if (score >= 0.7) return 'amico';
+        if (score >= 0.3) return 'simpatico';
+        if (score >= -0.2) return 'neutro';
+        if (score >= -0.6) return 'diffidente';
+        return 'ostile';
+    }
+
+    async function caricaConfig() {
+        try {
+            const response = await fetch('public/data/config_v2.json?v=' + Date.now());
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const config = await response.json();
+            if (!config.CHI) mostraMessaggio('error', '❌ Config mancante: sezione CHI non trovata');
+            if (!config.REDAZIONE) mostraMessaggio('error', '❌ Config mancante: sezione REDAZIONE non trovata');
+            return config;
+        } catch(e) {
+            mostraMessaggio('error', `❌ Errore caricamento config: ${e.message}`);
+            return null;
+        }
+    }
+
+    async function caricaPersonaggiStato() {
+        try {
+            const res = await fetch('public/data/_personaggi.json?v=' + Date.now());
+            if (!res.ok) return {};
+            return await res.json();
+        } catch(e) { return {}; }
+    }
+
+    async function caricaRelazioni() {
+        try {
+            const res = await fetch('public/data/_relazioni.json?v=' + Date.now());
+            if (!res.ok) return {};
+            return await res.json();
+        } catch(e) { return {}; }
+    }
+
+    function renderStats(config, personaggiStato) {
+        const statsDiv = document.getElementById('stats');
+        const numPersonaggi = Object.keys(config.CHI || {}).filter(k => k !== 'default').length;
+        const numPersonaggiStato = Object.keys(personaggiStato || {}).filter(k => k !== '_runCount').length;
+        const numVoci = (config.REDAZIONE || []).length;
+        const numRSS = (config.REDAZIONE || []).filter(v => v.tipo === 'RSS').length;
+        const numGEN = (config.REDAZIONE || []).filter(v => v.tipo === 'GEN').length;
+        const numRED = (config.REDAZIONE || []).filter(v => v.tipo === 'RED').length;
+        
+        statsDiv.innerHTML = `
+            <div class="stat-card"><div class="stat-number">${numPersonaggi}</div><div class="stat-label">Personaggi (config)</div></div>
+            <div class="stat-card"><div class="stat-number">${numPersonaggiStato}</div><div class="stat-label">Personaggi (stato)</div></div>
+            <div class="stat-card"><div class="stat-number">${numVoci}</div><div class="stat-label">Voci Redazione</div></div>
+            <div class="stat-card"><div class="stat-number">${numRSS}</div><div class="stat-label">📰 RSS</div></div>
+            <div class="stat-card"><div class="stat-number">${numGEN}</div><div class="stat-label">✍️ GEN</div></div>
+            <div class="stat-card"><div class="stat-number">${numRED}</div><div class="stat-label">🎭 RED</div></div>
+        `;
+    }
+
+    function renderSchedule(config, oggi) {
+        const scheduleDiv = document.getElementById('schedule-grid');
+        const vociAttive = (config.REDAZIONE || []).filter(v => isVoceAttiva(v, oggi));
+        
+        if (vociAttive.length === 0) {
+            scheduleDiv.innerHTML = '<div style="text-align:center;padding:40px;color:#888;">📭 Nessuna voce attiva per oggi</div>';
+            return;
+        }
+        
+        scheduleDiv.innerHTML = vociAttive.map(voce => {
+            const personaggio = config.CHI[voce.firma] || config.CHI['default'] || { avatar: '👤', mood: 'neutro' };
+            const tipoClass = (voce.tipo || 'RSS').toLowerCase();
+            const tipoLabel = voce.tipo === 'RSS' ? '📰 RSS' : (voce.tipo === 'GEN' ? '✍️ GEN' : '🎭 RED');
+            const temi = voce.temi || (voce.arg ? [voce.arg] : []);
+            const giorniLabel = getGiorniAttivi(voce.g).map(g => giorniMap[g] || g).join(', ');
+            
+            return `
+                <div class="schedule-card">
+                    <div class="schedule-day">📅 ${giorniLabel}</div>
+                    <div class="schedule-personaggio">
+                        <div class="schedule-avatar">${personaggio.avatar || '👤'}</div>
+                        <div class="schedule-nome">${voce.firma || '?'}</div>
+                    </div>
+                    <div class="schedule-sezione">📍 ${voce.sez || '?'} • ${voce.lab || 'Generale'}</div>
+                    <div class="schedule-tipo ${tipoClass}">${tipoLabel}</div>
+                    <div class="schedule-temi">
+                        ${temi.slice(0, 3).map(t => `<span>${t.length > 35 ? t.substring(0, 35) + '…' : t}</span>`).join('')}
+                        ${temi.length > 3 ? `<span>+${temi.length-3}</span>` : ''}
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function renderPersonaggi(config, personaggiStato) {
+        const container = document.getElementById('personaggi-grid');
+        const personaggiLista = Object.entries(config.CHI || {}).filter(([nome]) => nome !== 'default');
+        
+        if (personaggiLista.length === 0) {
+            container.innerHTML = '<div style="text-align:center;padding:40px;color:#888;">👥 Nessun personaggio trovato</div>';
+            return;
+        }
+        
+        container.innerHTML = personaggiLista.map(([nome, dati]) => {
+            const stato = personaggiStato[nome] || { stato: 'normale', umore: 'neutro', dal: null };
+            return `
+                <div class="personaggio-card">
+                    <div class="personaggio-header">
+                        <div class="personaggio-avatar">${dati.avatar || '👤'}</div>
+                        <div>
+                            <div class="personaggio-nome">${nome}</div>
+                            <div class="personaggio-mood">🎭 ${dati.mood || 'neutro'}</div>
+                        </div>
+                    </div>
+                    <div class="personaggio-bio">
+                        <strong>Bio breve:</strong> ${dati.bio_breve || '—'}<br>
+                        <strong>Peso:</strong> ${dati.peso || 0.6}<br>
+                        <strong>Stato:</strong> ${stato.stato || 'normale'} (${stato.umore || 'neutro'})<br>
+                        ${stato.dal ? `<strong>Dal:</strong> ${stato.dal}` : ''}
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function renderRelazioni(relazioni) {
+        const container = document.getElementById('relazioni-list');
+        const relazioniLista = Object.entries(relazioni || {}).filter(([key]) => !key.startsWith('_'));
+        
+        if (relazioniLista.length === 0) {
+            container.innerHTML = '<div style="text-align:center;padding:40px;color:#888;">💞 Nessuna relazione registrata</div>';
+            return;
+        }
+        
+        container.innerHTML = relazioniLista.map(([key, val]) => {
+            const [da, a] = key.split('→');
+            const scoreClass = getScoreClass(val.score || 0);
+            return `
+                <div class="relazione-card">
+                    <span class="relazione-da">${da}</span>
+                    <span class="relazione-arrow">→</span>
+                    <span class="relazione-a">${a}</span>
+                    <span class="relazione-score ${scoreClass}">${val.label || 'neutro'} (${(val.score || 0).toFixed(2)})</span>
+                    <span style="font-size:0.65rem;color:#888;margin-left:auto;">${val.ultimo_aggiornamento || ''}</span>
+                </div>
+            `;
+        }).join('');
+    }
+
+    async function caricaLog() {
+        try {
+            const response = await fetch('public/data/redazione-v2.log?v=' + Date.now());
+            if (!response.ok) throw new Error('Log non disponibile');
+            const logText = await response.text();
+            
+            const lines = logText.split('\n');
+            const giorni = {};
+            let giornoCorrente = '';
+            
+            for (const line of lines) {
+                const match = line.match(/\[(\d{2}\/\d{2}\/\d{4})/);
+                if (match) {
+                    giornoCorrente = match[1];
+                    if (!giorni[giornoCorrente]) giorni[giornoCorrente] = [];
+                }
+                if (giornoCorrente && line.trim()) {
+                    giorni[giornoCorrente].push(line);
+                }
+            }
+            
+            const giorniLista = Object.keys(giorni).sort().reverse();
+            const tabsDiv = document.getElementById('log-tabs');
+            const panelsDiv = document.getElementById('log-panels');
+            
+            if (giorniLista.length === 0) {
+                tabsDiv.innerHTML = '<span style="color:#666;">Nessun log disponibile</span>';
+                panelsDiv.innerHTML = '';
+                return;
+            }
+            
+            tabsDiv.innerHTML = giorniLista.map((giorno, idx) => 
+                `<button class="log-tab ${idx === 0 ? 'active' : ''}" data-day="${giorno}">📅 ${giorno}</button>`
+            ).join('');
+            
+            panelsDiv.innerHTML = giorniLista.map((giorno, idx) => 
+                `<div class="log-panel ${idx === 0 ? 'active' : ''}" data-day="${giorno}">
+                    <div class="log-content">${giorni[giorno].join('\n')}</div>
+                </div>`
+            ).join('');
+            
+            document.querySelectorAll('.log-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const day = tab.dataset.day;
+                    document.querySelectorAll('.log-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.log-panel').forEach(p => p.classList.remove('active'));
+                    tab.classList.add('active');
+                    document.querySelector(`.log-panel[data-day="${day}"]`).classList.add('active');
+                });
+            });
+        } catch(e) {
+            document.getElementById('log-tabs').innerHTML = '<span style="color:#666;">Log non disponibile</span>';
+            document.getElementById('log-panels').innerHTML = '';
+        }
+    }
+
+    function initMainTabs() {
+        const tabs = document.querySelectorAll('.main-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.tab;
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                document.getElementById(`tab-${target}`).classList.add('active');
+            });
+        });
+    }
+
+    async function caricaTuttiIDati() {
+        const config = await caricaConfig();
+        if (!config) return;
+        CFG = config;
+        const personaggiStato = await caricaPersonaggiStato();
+        const relazioni = await caricaRelazioni();
+        const oggi = getGiornoCorrente();
+        
+        renderStats(config, personaggiStato);
+        renderSchedule(config, oggi);
+        renderPersonaggi(config, personaggiStato);
+        renderRelazioni(relazioni);
+        await caricaLog();
+        initMainTabs();
+    }
+
+    // ========== SEZIONE NOTIZIE (come nell'originale) ==========
+    
+    async function caricaNotizie() {
+        try {
+            const cfg = await fetch('public/data/active_config_v2.json?v=' + Date.now()).then(r => r.json());
+            const ss = cfg.site_settings || {};
+            if (ss.header_img) document.getElementById('header-img') && (document.getElementById('header-img').src = 'public/images/' + ss.header_img);
+            if (ss.timbro) { const t = document.getElementById('timbro-edizione'); if(t) { t.innerText = ss.timbro; t.style.display = 'block'; } }
+            const up = ss.last_update || '---';
+            const providerText = ss.llm_provider ? ` (${ss.llm_provider})` : '';
+            const tsDiv = document.getElementById('ts-display');
+            if (tsDiv) tsDiv.innerHTML = up !== '---' ? `🐬 Il Delfino ha nuotato qui il ${up}${providerText}` : '🐬 Il Delfino sta nuotando...';
+            if (ss.motto) { const mottoDiv = document.getElementById('motto-display'); if(mottoDiv) mottoDiv.innerText = '✦ ' + ss.motto + ' ✦'; }
+            
+            const sezioni = [...new Set((cfg.REDAZIONE || []).map(v => v.sez))];
+            const menuCat = document.getElementById('menu-cat');
+            if (menuCat) {
+                menuCat.innerHTML = '';
+                sezioni.forEach((sez, i) => {
+                    const b = document.createElement('button');
+                    b.className = 'tab' + (i === 0 ? ' attiva' : '');
+                    b.innerText = sez;
+                    b.onclick = () => mostraSezione(sez, b, cfg.STILI || {});
+                    menuCat.appendChild(b);
+                });
+            }
+            if (sezioni[0]) mostraSezione(sezioni[0], null, cfg.STILI || {});
+            await caricaChat();
+        } catch(e) { console.error(e); }
+    }
+
+    async function mostraSezione(sez, btn, STILI) {
+        if (btn) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('attiva'));
+            btn.classList.add('attiva');
+        }
+        try {
+            const data = await fetch('public/data/news-v2-' + sez + '.json?v=' + Date.now()).then(r => r.json());
+            const mc = data.color || '#005f73';
+            document.documentElement.style.setProperty('--blu-mare', mc);
+            document.body.style.background = mc;
+            
+            const news = data.news || [];
+            const ord = [...news.filter(n => n.tipo === 'personaggio'), ...news.filter(n => n.tipo === 'rss'), ...news.filter(n => n.tipo === 'gen')];
+            const lista = document.getElementById('lista-notizie');
+            if (!lista) return;
+            lista.innerHTML = '';
+            ord.forEach((n, idx) => {
+                const tipo = n.tipo || 'rss';
+                const isP = tipo === 'personaggio';
+                const bx = isP ? 'personaggio-box' : (tipo === 'gen' ? 'gen-box' : 'rss-box');
+                const lx = isP ? 'personaggio-label' : (tipo === 'gen' ? 'gen-label' : 'rss-label');
+                const bn = n.nuovo ? '<span class="badge-nuovo">nuovo</span>' : '';
+                const cf = n.commento_firma || {};
+                const firmaH = !isP && cf.nome ? `<div class="firma-autore"><span class="avatar-autore">${esc(cf.avatar) || '👤'}</span><span>${esc(cf.nome)}</span></div>` : '';
+                const cfH = cf.testo ? `<div class="commento-firma" onclick="this.classList.toggle('aperto')"><span class="avatar-firma">${esc(cf.avatar) || '👤'}</span><span class="nome-firma">${esc(cf.nome) || 'Redazione'} <span class="firma-toggle">▼</span></span><div class="testo-firma">${esc(cf.testo)}</div></div>` : '';
+                const comm = n.commenti || [];
+                const cListH = comm.map(c => `<div class="commento-personaggio" onclick="this.classList.toggle('aperto')"><span class="avatar-p">${esc(c.avatar) || '👤'}</span><span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span><div class="testo-p">${esc(c.testo)}</div></div>`).join('');
+                const cH = comm.length ? `<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')"><span class="commenti-count">${comm.length}</span><span class="commenti-label">Comment${comm.length === 1 ? 'o' : 'i'}</span><span class="commenti-arrow">▼</span></div><div class="commenti-panel">${cListH}</div>` : '';
+                
+                lista.innerHTML += `<div class="notizia ${bx}"><div class="notizia-numero">${idx + 1}</div><span class="etichetta-categoria ${lx}">${esc(n.categoria)}${bn}</span><div class="notizia-img-box"><img src="public/images/${esc(n.immagine) || 'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>${firmaH}<h2>${esc(n.titolo)}</h2><div class="testo" id="t${idx}">${esc(n.articolo)}</div><button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>${cfH}${cH}</div>`;
+            });
+        } catch(e) { console.error(e); }
+    }
+
+    async function caricaChat() {
+        const lista = document.getElementById('chat-lista');
+        if (!lista) return;
+        try {
+            const st = await fetch('public/data/_chat.json?v=' + Date.now()).then(r => r.json());
+            if (!st?.length) return;
+            lista.innerHTML = '';
+            st.slice(0, 3).forEach(s => {
+                const card = document.createElement('div');
+                card.className = 'chat-card';
+                card.innerHTML = '<div class="chat-data">' + esc(s.data || '') + '</div>';
+                (s.messaggi || []).forEach(m => {
+                    const row = document.createElement('div');
+                    row.className = 'chat-msg';
+                    row.innerHTML = '<div class="chat-av">' + esc(m.avatar || '👤') + '</div><div class="chat-bubble"><span class="chat-nome">' + esc(m.nome) + '</span><span class="chat-testo">' + esc(m.testo) + '</span></div>';
+                    card.appendChild(row);
+                });
+                lista.appendChild(card);
+            });
+        } catch(e) { }
+    }
+
+    // Aggiungi header-img se non esiste nel DOM
+    const headerDiv = document.querySelector('.header');
+    if (headerDiv && !document.getElementById('header-img')) {
+        const img = document.createElement('img');
+        img.id = 'header-img';
+        img.src = 'public/images/default.webp';
+        img.style.width = '100%';
+        img.style.maxHeight = '200px';
+        img.style.objectFit = 'cover';
+        img.style.borderRadius = '16px';
+        img.style.marginTop = '10px';
+        headerDiv.appendChild(img);
+    }
+    
+    // Aggiungi timestamp e motto se non esistono
+    if (!document.getElementById('ts-display')) {
+        const tsDiv = document.createElement('div');
+        tsDiv.id = 'ts-display';
+        tsDiv.className = 'dt-tempo';
+        tsDiv.innerText = '🐬 Il Delfino sta nuotando...';
+        const timestampDiv = document.createElement('div');
+        timestampDiv.className = 'delfino-timestamp';
+        timestampDiv.appendChild(tsDiv);
+        const mottoSpan = document.createElement('span');
+        mottoSpan.id = 'motto-display';
+        mottoSpan.className = 'dt-motto';
+        timestampDiv.appendChild(mottoSpan);
+        const container = document.querySelector('.container');
+        if (container && container.firstChild) {
+            container.insertBefore(timestampDiv, container.firstChild.nextSibling);
+        }
+    }
+    if (!document.getElementById('timbro-edizione')) {
+        const timbroDiv = document.createElement('div');
+        timbroDiv.id = 'timbro-edizione';
+        timbroDiv.className = 'timbro-edizione';
+        const container = document.querySelector('.container');
+        if (container) container.insertBefore(timbroDiv, document.getElementById('menu-cat'));
+    }
+
+    caricaNotizie();
 </script>
 </body>
 </html>
