@@ -1,5 +1,5 @@
 {
-  "_runCount": 1,
+  "_runCount": 2,
   "Ernesto→Giovanni": {
     "score": -0.048,
     "label": "neutro",
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.81,
+    "score": 0.91,
     "label": "amico",
     "ultimo_aggiornamento": "16/04/2026"
   },
@@ -86,8 +86,8 @@
     "ultimo_aggiornamento": "14/04/2026"
   },
   "Lars→Juizinho": {
-    "score": -0.789,
-    "label": "ostile",
+    "score": -0.439,
+    "label": "diffidente",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Juizinho→Lars": {
@@ -271,18 +271,18 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Glusi": {
-    "score": -0.88,
+    "score": -0.83,
     "label": "ostile",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→Glusi": {
-    "score": -0.61,
-    "label": "ostile",
+    "score": -0.36,
+    "label": "diffidente",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Juizinho→Glusi": {
-    "score": 0.273,
-    "label": "neutro",
+    "score": 0.773,
+    "label": "amico",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Glusi→Questa comunità": {
@@ -346,7 +346,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": 0.108,
+    "score": 0.158,
     "label": "neutro",
     "ultimo_aggiornamento": "16/04/2026"
   },
@@ -366,9 +366,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Juizinho→Lilli": {
-    "score": 0.583,
+    "score": 0.633,
     "label": "simpatico",
-    "ultimo_aggiornamento": "13/04/2026"
+    "ultimo_aggiornamento": "16/04/2026"
   },
   "Abbukk→Lilli": {
     "score": -0.146,
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": 0.246,
+    "score": 0.196,
     "label": "neutro",
     "ultimo_aggiornamento": "16/04/2026"
   },
@@ -406,22 +406,22 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→Abbukk": {
-    "score": 0.2,
-    "label": "neutro",
+    "score": 0.3,
+    "label": "simpatico",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Juizinho→Abbukk": {
-    "score": 0.1,
-    "label": "neutro",
+    "score": 0.3,
+    "label": "simpatico",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Glusi→Abbukk": {
-    "score": 0.2,
-    "label": "neutro",
+    "score": 0.5,
+    "label": "simpatico",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Abbukk": {
-    "score": 0.1,
+    "score": 0,
     "label": "neutro",
     "ultimo_aggiornamento": "16/04/2026"
   },
@@ -446,22 +446,22 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→bartender": {
-    "score": 0.2,
-    "label": "neutro",
+    "score": 0.4,
+    "label": "simpatico",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Juizinho→bartender": {
-    "score": 0.1,
-    "label": "neutro",
+    "score": 0.35,
+    "label": "simpatico",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→bartender": {
-    "score": 0.2,
-    "label": "neutro",
+    "score": 0.3,
+    "label": "simpatico",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Glusi→bartender": {
-    "score": 0.3,
+    "score": 0.6,
     "label": "simpatico",
     "ultimo_aggiornamento": "16/04/2026"
   },
@@ -496,8 +496,8 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Roccamorice": {
-    "score": 0.2,
-    "label": "neutro",
+    "score": 0.4,
+    "label": "simpatico",
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Glusi→Roccamorice": {
@@ -518,6 +518,56 @@
   "Glusi→Autore": {
     "score": 0.1,
     "label": "neutro",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Lars→Giornalista": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Juizinho→Giornalista": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Hiroki→Giornalista": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Glusi→Giornalista": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Cetteo→Abbukk": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Lilli→Abbukk": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Wolf→Abbukk": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Lilli→viaggiatore danese": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Juizinho→viaggiatore danese": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/04/2026"
+  },
+  "Glusi→viaggiatore danese": {
+    "score": 0.3,
+    "label": "simpatico",
     "ultimo_aggiornamento": "16/04/2026"
   }
 }
