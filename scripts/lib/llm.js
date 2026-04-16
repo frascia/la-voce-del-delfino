@@ -1,11 +1,11 @@
 /**
  * FILE: lib/llm.js
  * DATA: 2025-04-16
- * VERSIONE: 2.10
+ * VERSIONE: 2.11
  * DESCRIZIONE: Gestione chiamate LLM (Gemini/Groq), provider persistente,
  *              contatore fallimenti consecutivi, modalità scheduled/manuale.
  *              Supporto per forzare un modello Gemini specifico e versione API.
- *              Esporta il modello testato per evitare doppi test.
+ *              Parsing robusto con pulizia della risposta.
  */
 
 import { pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
@@ -160,13 +160,11 @@ async function trovaModelliGemini() {
             if (flash.length) log(`   ├─ Flash: ${flash.join(", ")}`);
             if (altri.length) log(`   └─ Altri: ${altri.join(", ")}`);
             
-            // Limita ai primi 5 modelli per evitare rate limit
             const ordine = [...flash.sort((a,b)=>b.localeCompare(a)), ...altri].slice(0, 5);
             let modelloFunzionante = null;
             
             for (const model of ordine) {
                 log(`   🔍 Test ${model}...`);
-                // Pausa tra i test per evitare rate limit
                 await new Promise(r => setTimeout(r, 1000));
                 const funziona = await testaModelloGemini(model);
                 if (funziona) {
@@ -384,9 +382,9 @@ export async function callLLM(sys, prompt, temperature = 0.85) {
         if (!jsonStr) return false;
         try {
             const obj = JSON.parse(jsonStr);
-            if (obj.articolo && obj.articolo.length > 50 && !obj.articolo.includes("contenuto non generato")) {
-                return true;
-            }
+            // Per i commenti, accetta anche array o oggetto con commenti
+            if (obj.commenti && Array.isArray(obj.commenti)) return true;
+            if (obj.articolo && obj.articolo.length > 50 && !obj.articolo.includes("contenuto non generato")) return true;
         } catch(e) {}
         return false;
     }
@@ -394,6 +392,20 @@ export async function callLLM(sys, prompt, temperature = 0.85) {
     if (isValido(result)) {
         log(`✅ Generazione riuscita (${provider})`);
         return { provider, text: result };
+    }
+    
+    // Se non valido ma c'è del testo, prova a pulirlo
+    if (result && result.trim().length > 0) {
+        log(`⚠️ ${provider}: output non valido, tentativo di pulizia...`);
+        // Prova a estrarre JSON da testo malformato
+        const cleaned = result.replace(/^[^{]*/, '').replace(/[^}]*$/, '');
+        if (cleaned.includes('{') && cleaned.includes('}')) {
+            try {
+                JSON.parse(cleaned);
+                log(`✅ ${provider}: recuperato dopo pulizia`);
+                return { provider, text: cleaned };
+            } catch(e) {}
+        }
     }
     
     log(`⚠️ ${provider}: nessun output valido, salto generazione`);
