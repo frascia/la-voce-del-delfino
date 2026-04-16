@@ -32,7 +32,6 @@
         .tab-panel { display: none; }
         .tab-panel.active { display: block; }
         
-        /* Statistiche Run */
         .stats-run-section {
             background: #2a2a2a;
             border-radius: 20px;
@@ -60,16 +59,12 @@
             border: 1px solid #333;
             transition: all 0.2s;
         }
-        .stats-run-card:hover {
-            transform: translateY(-2px);
-            border-color: #0f0;
-        }
+        .stats-run-card:hover { transform: translateY(-2px); border-color: #0f0; }
         .stats-run-card.success { border-left: 4px solid #4caf50; }
         .stats-run-card.error { border-left: 4px solid #f44336; }
         .stats-run-number { font-size: 2rem; font-weight: bold; color: #0f0; }
         .stats-run-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
         
-        /* Ultimo run */
         .ultimo-run {
             background: #1a1a1a;
             border-radius: 12px;
@@ -118,7 +113,6 @@
         .provider-groq { color: #f9ab00; }
         .provider-nessuno { color: #888; }
         
-        /* Workflow errors */
         .workflow-errors-section {
             background: #2a2a2a;
             border-radius: 20px;
@@ -143,60 +137,46 @@
             border-bottom: 1px solid #2a2a2a;
         }
         
-        /* Log */
-        .log-section { background: #0d0d0d; border-radius: 16px; padding: 20px; margin-bottom: 30px; border: 1px solid #333; }
-        .log-section h2 { color: #0f0; font-family: monospace; font-size: 1.2rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
-        .log-tabs { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
-        .log-tab { background: #2a2a2a; border: none; color: #aaa; padding: 6px 14px; border-radius: 20px; font-family: monospace; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
-        .log-tab:hover { background: #3a3a3a; }
-        .log-tab.active { background: #0f0; color: #000; font-weight: bold; }
-        .log-panel { display: none; }
-        .log-panel.active { display: block; }
-        .log-content { font-family: monospace; font-size: 0.75rem; color: #ccc; white-space: pre-wrap; background: #0a0a0a; padding: 12px; border-radius: 8px; max-height: 400px; overflow-y: auto; }
+        .secret-info-section {
+            background: #2a2a2a;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 30px;
+            border: 1px solid #ff980020;
+        }
+        .secret-info-section h2 {
+            font-size: 1.2rem;
+            color: #ff9800;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .secret-card {
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 16px;
+            border-left: 4px solid #ff9800;
+        }
+        .secret-label {
+            font-size: 0.7rem;
+            color: #ff9800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .secret-value {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #0f0;
+            background: #0d0d0d;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            word-break: break-all;
+            white-space: pre-wrap;
+        }
+        .secret-value:last-child { margin-bottom: 0; }
         
-        /* Schede */
-        .info-section { background: #2a2a2a; border-radius: 20px; padding: 24px; margin-bottom: 30px; }
-        .info-section h2 { font-size: 1.3rem; color: #0f0; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-        
-        .personaggio-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; border: 1px solid #333; }
-        .personaggio-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-        .personaggio-avatar { font-size: 2.5rem; }
-        .personaggio-nome { font-weight: bold; font-size: 1.1rem; color: #0f0; }
-        .personaggio-mood { font-size: 0.7rem; color: #888; margin-top: 2px; }
-        .personaggio-bio { font-size: 0.75rem; color: #aaa; margin-top: 8px; padding-top: 8px; border-top: 1px solid #333; }
-        
-        .relazione-card { background: #1e1e1e; border-radius: 16px; padding: 12px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; border: 1px solid #333; }
-        .relazione-da { font-weight: bold; min-width: 100px; color: #0f0; }
-        .relazione-arrow { color: #888; }
-        .relazione-a { font-weight: bold; min-width: 100px; }
-        .relazione-score { font-family: monospace; font-weight: bold; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; }
-        .relazione-score.amico { background: #2e7d3220; color: #4caf50; }
-        .relazione-score.simpatico { background: #558b2f20; color: #8bc34a; }
-        .relazione-score.neutro { background: #88888820; color: #aaa; }
-        .relazione-score.diffidente { background: #ef6c0020; color: #ff9800; }
-        .relazione-score.ostile { background: #c6282820; color: #f44336; }
-        
-        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-        .schedule-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; border: 1px solid #333; }
-        .schedule-day { font-size: 0.7rem; text-transform: uppercase; color: #0f0; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; }
-        .schedule-personaggio { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-        .schedule-avatar { font-size: 1.8rem; }
-        .schedule-nome { font-weight: bold; font-size: 1rem; color: #0f0; }
-        .schedule-sezione { font-size: 0.75rem; color: #888; margin-bottom: 8px; }
-        .schedule-tipo { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: bold; margin-bottom: 8px; }
-        .schedule-tipo.rss { background: #008cff20; color: #008cff; }
-        .schedule-tipo.gen { background: #ff4d4d20; color: #ff4d4d; }
-        .schedule-tipo.red { background: #2d6a4f20; color: #2d6a4f; }
-        .schedule-temi { font-size: 0.7rem; color: #aaa; margin-top: 8px; padding-top: 8px; border-top: 1px solid #333; }
-        .schedule-temi span { display: inline-block; background: #2a2a2a; padding: 2px 8px; border-radius: 12px; margin: 2px 4px 2px 0; font-size: 0.65rem; }
-        
-        .stats-section { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
-        .stat-card { background: #2a2a2a; border-radius: 16px; padding: 16px 20px; flex: 1; min-width: 120px; text-align: center; border: 1px solid #333; }
-        .stat-number { font-size: 2rem; font-weight: bold; color: #0f0; }
-        .stat-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
-        
-        /* Info Personale */
         .personal-info-section {
             background: #2a2a2a;
             border-radius: 20px;
@@ -240,64 +220,57 @@
             border-radius: 12px;
             border: 1px solid #9ec07c;
         }
-        .unlock-btn {
-            background: #9ec07c;
-            color: #2d3e1f;
-            border: none;
-            border-radius: 30px;
-            padding: 8px 20px;
-            margin-top: 15px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .unlock-btn:hover {
-            background: #bcdd9a;
-            transform: scale(1.02);
-        }
         
-        /* Secret Info */
-        .secret-info-section {
-            background: #2a2a2a;
-            border-radius: 20px;
-            padding: 24px;
-            margin-bottom: 30px;
-            border: 1px solid #ff980020;
-        }
-        .secret-info-section h2 {
-            font-size: 1.2rem;
-            color: #ff9800;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-        }
-        .secret-card {
-            background: #1e1e1e;
-            border-radius: 12px;
-            padding: 16px;
-            border-left: 4px solid #ff9800;
-        }
-        .secret-label {
-            font-size: 0.7rem;
-            color: #ff9800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-        .secret-value {
-            font-family: monospace;
-            font-size: 0.85rem;
-            color: #0f0;
-            background: #0d0d0d;
-            padding: 8px 12px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            word-break: break-all;
-            white-space: pre-wrap;
-        }
-        .secret-value:last-child {
-            margin-bottom: 0;
-        }
+        .log-section { background: #0d0d0d; border-radius: 16px; padding: 20px; margin-bottom: 30px; border: 1px solid #333; }
+        .log-section h2 { color: #0f0; font-family: monospace; font-size: 1.2rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .log-tabs { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+        .log-tab { background: #2a2a2a; border: none; color: #aaa; padding: 6px 14px; border-radius: 20px; font-family: monospace; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
+        .log-tab:hover { background: #3a3a3a; }
+        .log-tab.active { background: #0f0; color: #000; font-weight: bold; }
+        .log-panel { display: none; }
+        .log-panel.active { display: block; }
+        .log-content { font-family: monospace; font-size: 0.75rem; color: #ccc; white-space: pre-wrap; background: #0a0a0a; padding: 12px; border-radius: 8px; max-height: 400px; overflow-y: auto; }
+        
+        .info-section { background: #2a2a2a; border-radius: 20px; padding: 24px; margin-bottom: 30px; }
+        .info-section h2 { font-size: 1.3rem; color: #0f0; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+        
+        .personaggio-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; border: 1px solid #333; }
+        .personaggio-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .personaggio-avatar { font-size: 2.5rem; }
+        .personaggio-nome { font-weight: bold; font-size: 1.1rem; color: #0f0; }
+        .personaggio-mood { font-size: 0.7rem; color: #888; margin-top: 2px; }
+        .personaggio-bio { font-size: 0.75rem; color: #aaa; margin-top: 8px; padding-top: 8px; border-top: 1px solid #333; }
+        
+        .relazione-card { background: #1e1e1e; border-radius: 16px; padding: 12px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; border: 1px solid #333; }
+        .relazione-da { font-weight: bold; min-width: 100px; color: #0f0; }
+        .relazione-arrow { color: #888; }
+        .relazione-a { font-weight: bold; min-width: 100px; }
+        .relazione-score { font-family: monospace; font-weight: bold; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; }
+        .relazione-score.amico { background: #2e7d3220; color: #4caf50; }
+        .relazione-score.simpatico { background: #558b2f20; color: #8bc34a; }
+        .relazione-score.neutro { background: #88888820; color: #aaa; }
+        .relazione-score.diffidente { background: #ef6c0020; color: #ff9800; }
+        .relazione-score.ostile { background: #c6282820; color: #f44336; }
+        
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+        .schedule-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; border: 1px solid #333; }
+        .schedule-day { font-size: 0.7rem; text-transform: uppercase; color: #0f0; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; }
+        .schedule-personaggio { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+        .schedule-avatar { font-size: 1.8rem; }
+        .schedule-nome { font-weight: bold; font-size: 1rem; color: #0f0; }
+        .schedule-sezione { font-size: 0.75rem; color: #888; margin-bottom: 8px; }
+        .schedule-tipo { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: bold; margin-bottom: 8px; }
+        .schedule-tipo.rss { background: #008cff20; color: #008cff; }
+        .schedule-tipo.gen { background: #ff4d4d20; color: #ff4d4d; }
+        .schedule-tipo.red { background: #2d6a4f20; color: #2d6a4f; }
+        .schedule-temi { font-size: 0.7rem; color: #aaa; margin-top: 8px; padding-top: 8px; border-top: 1px solid #333; }
+        .schedule-temi span { display: inline-block; background: #2a2a2a; padding: 2px 8px; border-radius: 12px; margin: 2px 4px 2px 0; font-size: 0.65rem; }
+        
+        .stats-section { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
+        .stat-card { background: #2a2a2a; border-radius: 16px; padding: 16px 20px; flex: 1; min-width: 120px; text-align: center; border: 1px solid #333; }
+        .stat-number { font-size: 2rem; font-weight: bold; color: #0f0; }
+        .stat-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
         
         .back-btn { position: fixed; bottom: 20px; right: 20px; background: #005f73; color: white; border: none; border-radius: 50px; padding: 12px 20px; font-size: 14px; font-weight: bold; cursor: pointer; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: transform 0.2s; }
         .back-btn:hover { transform: scale(1.05); background: #008cff; }
@@ -368,7 +341,6 @@
     <div id="protected-content" class="protected-section">
         <div class="stats-section" id="stats"></div>
         
-        <!-- Statistiche Run -->
         <div class="stats-run-section">
             <h2>📊 Statistiche Run (ultimi 7 giorni)</h2>
             <div class="stats-run-grid" id="stats-run-grid">
@@ -383,28 +355,24 @@
             <div id="run-details" class="run-details"></div>
         </div>
         
-        <!-- Workflow Errors -->
         <div class="workflow-errors-section" id="workflow-errors" style="display:none;">
             <h2>⚠️ Workflow GitHub</h2>
             <div id="workflow-errors-list" class="workflow-errors-list"></div>
         </div>
         
-        <!-- Secret Info -->
         <div class="secret-info-section" id="secret-info" style="display:none;">
             <h2>🔐 Info Riservate</h2>
             <div class="secret-card">
-                <div class="secret-label">📋 Dati codificati:</div>
-                <div class="secret-value" id="secret-data">---</div>
+                <div class="secret-label">📋 Dati codificati (clicca per sbloccare):</div>
+                <div class="secret-value" id="secret-data" style="filter: blur(4px); cursor: pointer;">---</div>
                 <div class="secret-label">🕐 Ultimo aggiornamento:</div>
                 <div class="secret-value" id="secret-ts">---</div>
             </div>
         </div>
         
-        <!-- Info Personale -->
         <div class="personal-info-section" id="personal-info" style="display:none;">
             <h2>📝 Info Personale</h2>
-            <div id="personal-content" class="personal-content"></div>
-            <button id="unlock-personal-btn" class="unlock-btn" style="display:none;" onclick="sbloccaPersonale()">🔓 Sblocca contenuto personale</button>
+            <div id="personal-content" class="personal-content blurred" style="cursor: pointer;"></div>
         </div>
         
         <div class="main-tabs">
@@ -437,7 +405,8 @@
         'gio': 'Giovedì', 'ven': 'Venerdì', 'sab': 'Sabato', 'default': 'Tutti i giorni'
     };
 
-    let personalDataBlurred = true;
+    let secretUnlocked = false;
+    let personalUnlocked = false;
 
     function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 
@@ -546,29 +515,48 @@
             const response = await fetch('public/data/auth_info.json?v=' + Date.now());
             if (!response.ok) throw new Error('Auth info non disponibile');
             const data = await response.json();
-            
             const decodedData = atob(data.data);
-            
             document.getElementById('secret-data').innerText = decodedData || '---';
             document.getElementById('secret-ts').innerText = data.ts || '---';
             document.getElementById('secret-info').style.display = 'block';
-        } catch(e) {
-            console.error('Errore caricamento secret data:', e);
-        }
+            
+            const secretDiv = document.getElementById('secret-data');
+            secretDiv.style.filter = 'blur(4px)';
+            secretDiv.style.cursor = 'pointer';
+            secretDiv.title = 'Clicca per sbloccare (password richiesta)';
+            secretDiv.onclick = () => sbloccaSecret();
+        } catch(e) { console.error('Errore caricamento secret data:', e); }
+    }
+
+    async function sbloccaSecret() {
+        if (secretUnlocked) return;
+        const pwd = prompt('🔐 Inserisci password per visualizzare i dati riservati:');
+        if (!pwd) return;
+        try {
+            const auth = await fetch('public/data/auth_info.json?v=' + Date.now()).then(r => r.json());
+            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
+                .map(b => b.toString(16).padStart(2, '0')).join('');
+            if (hash === auth.check) {
+                secretUnlocked = true;
+                const secretDiv = document.getElementById('secret-data');
+                secretDiv.style.filter = 'none';
+                secretDiv.style.cursor = 'default';
+                secretDiv.onclick = null;
+                secretDiv.style.color = '#0f0';
+                mostraMessaggio('success', '🔓 Dati riservati sbloccati!');
+            } else {
+                alert('Password errata');
+            }
+        } catch(e) { alert('Errore verifica password'); }
     }
 
     async function caricaPersonale() {
         try {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 3000);
-            
-            const response = await fetch('public/personale.txt?v=' + Date.now(), {
-                signal: controller.signal
-            });
+            const response = await fetch('public/personale.txt?v=' + Date.now(), { signal: controller.signal });
             clearTimeout(timeoutId);
-            
             if (!response.ok) return;
-            
             const text = await response.text();
             if (!text || text.trim().length === 0) return;
             
@@ -587,11 +575,7 @@
                 } else if (trimmed.startsWith('#I:')) {
                     const imgName = trimmed.substring(3);
                     if (imgName) {
-                        html += `
-                            <div class="personal-image">
-                                <img src="public/images/${esc(imgName)}" alt="Immagine personale" onerror="this.style.display='none'">
-                            </div>
-                        `;
+                        html += `<div class="personal-image"><img src="public/images/${esc(imgName)}" alt="Immagine personale" onerror="this.style.display='none'"></div>`;
                         hasContent = true;
                     }
                 }
@@ -601,16 +585,16 @@
                 const container = document.getElementById('personal-content');
                 container.innerHTML = html;
                 container.classList.add('blurred');
-                document.getElementById('unlock-personal-btn').style.display = 'block';
+                container.style.cursor = 'pointer';
+                container.onclick = () => sbloccaPersonale();
                 document.getElementById('personal-info').style.display = 'block';
-                personalDataBlurred = true;
+                personalUnlocked = false;
             }
-        } catch(e) {
-            console.log('Personale.txt non disponibile');
-        }
+        } catch(e) { console.log('Personale.txt non disponibile'); }
     }
 
     async function sbloccaPersonale() {
+        if (personalUnlocked) return;
         const pwd = prompt('🔐 Inserisci password per visualizzare il contenuto personale:');
         if (!pwd) return;
         try {
@@ -618,11 +602,12 @@
             const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
                 .map(b => b.toString(16).padStart(2, '0')).join('');
             if (hash === auth.check) {
+                personalUnlocked = true;
                 const container = document.getElementById('personal-content');
                 container.classList.remove('blurred');
                 container.style.cursor = 'default';
-                document.getElementById('unlock-personal-btn').style.display = 'none';
-                personalDataBlurred = false;
+                container.onclick = null;
+                mostraMessaggio('success', '🔓 Contenuto personale sbloccato!');
             } else {
                 alert('Password errata');
             }
@@ -638,9 +623,7 @@
             if (lines.length === 0) return;
             const container = document.getElementById('workflow-errors-list');
             if (!container) return;
-            
             const ultimeRighe = lines.slice(-30);
-            
             container.innerHTML = ultimeRighe.map(line => {
                 let color = '#ccc';
                 if (line.includes('🚀')) color = '#0f0';
@@ -649,12 +632,9 @@
                 if (line.includes('⚠️')) color = '#ff9800';
                 if (line.includes('🕐')) color = '#aaa';
                 if (line.includes('═══')) color = '#333';
-                
                 let displayLine = line.replace('Ora Italia:', '🕐');
-                
                 return `<div style="color:${color}; font-family:monospace; font-size:0.7rem; padding:4px 0; border-bottom:1px solid #2a2a2a;">${esc(displayLine)}</div>`;
             }).join('');
-            
             document.getElementById('workflow-errors').style.display = 'block';
         } catch(e) { console.error(e); }
     }
@@ -664,7 +644,6 @@
             const response = await fetch('public/data/redazione-v2.log?v=' + Date.now());
             if (!response.ok) throw new Error('Log non disponibile');
             const logText = await response.text();
-            
             const lines = logText.split('\n');
             const oggi = new Date();
             const setteGiorniFa = new Date();
@@ -758,9 +737,7 @@
             if (runs.length > 0) {
                 detailsDiv.innerHTML = `
                     <table>
-                        <thead>
-                            <tr><th>Data</th><th>Tipo</th><th>Ora</th><th>Esito</th><th>Provider</th><th>Articoli</th></tr>
-                        </thead>
+                        <thead><tr><th>Data</th><th>Tipo</th><th>Ora</th><th>Esito</th><th>Provider</th><th>Articoli</th></tr></thead>
                         <tbody>
                             ${runs.slice(0, 30).map(r => `
                                 <tr class="${r.success ? 'success-row' : 'error-row'} ${r.tipo === 'MANUALE' ? 'manual-row' : ''}">
@@ -770,7 +747,7 @@
                                     <td>${r.success ? '✅ Successo' : '❌ Errore'}</td>
                                     <td class="provider-${r.provider}">${r.provider === 'gemini' ? '🤖 Gemini' : r.provider === 'groq' ? '🦙 Groq' : '⚠️ Nessuno'}</td>
                                     <td>${r.articoli}</td>
-                                觑
+                                </tr>
                             `).join('')}
                         </tbody>
                     </table>
@@ -885,38 +862,93 @@
         try {
             const response = await fetch('public/data/redazione-v2.log?v=' + Date.now());
             if (!response.ok) throw new Error('Log non disponibile');
-            const logText = await response.text();
+            let logText = await response.text();
+            logText = logText.replace(/[一-龥]/g, '');
+            
             const lines = logText.split('\n');
-            const giorni = {};
-            let giornoCorrente = '';
-            for (const line of lines) {
-                const match = line.match(/\[(\d{2}\/\d{2}\/\d{4})/);
-                if (match) {
-                    giornoCorrente = match[1];
-                    if (!giorni[giornoCorrente]) giorni[giornoCorrente] = [];
+            const runs = [];
+            let currentRun = null;
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i];
+                if (line.includes('🐬 NUOVO RUN') || line.includes('AVVIO RUN') || line.includes('════════════════════════════════════════════════════════════')) {
+                    if (currentRun && currentRun.lines.length > 0) runs.push(currentRun);
+                    let title = 'Run sconosciuto';
+                    let tipo = '';
+                    let esito = '';
+                    let provider = '';
+                    let articoli = '';
+                    for (let j = i; j < Math.min(i + 40, lines.length); j++) {
+                        const nextLine = lines[j];
+                        const dateMatch = nextLine.match(/\[(\d{2}\/\d{2}\/\d{4} \d{2}:\d{2}:\d{2})/);
+                        if (dateMatch) title = dateMatch[1];
+                        if (nextLine.includes('🏷️ Run MANUALE')) tipo = '👤 MANUALE';
+                        if (nextLine.includes('🏷️ Run SCHEDULATO')) tipo = '⏰ SCHEDULATO';
+                        if (nextLine.includes('Provider scelto per questo run:')) {
+                            const provMatch = nextLine.match(/Provider scelto per questo run: (\w+)/);
+                            if (provMatch) provider = ` 🤖 ${provMatch[1]}`;
+                        }
+                        if (nextLine.includes('FASE 1-v4 completata.')) {
+                            const artMatch = nextLine.match(/(\d+) nuovi articoli/);
+                            if (artMatch) {
+                                articoli = ` 📰 ${artMatch[1]} art.`;
+                                esito = '✅ SUCCESSO';
+                            }
+                        }
+                        if (nextLine.includes('Nessun articolo generato')) esito = '⚠️ NESSUN ARTICOLO';
+                        if (nextLine.includes('NESSUN PROVIDER DISPONIBILE')) esito = '❌ NO PROVIDER';
+                        if (nextLine.includes('CRITICAL ERROR') || nextLine.includes('ERRORE CRITICO')) esito = '❌ CRITICAL ERROR';
+                    }
+                    currentRun = { title: title, tipo: tipo, esito: esito || '🟡 IN CORSO', provider: provider, articoli: articoli, lines: [line] };
+                } else if (currentRun) {
+                    currentRun.lines.push(line);
+                    if (line.includes('FINE RUN') || line.includes('FASE 1-v4 completata') || line.includes('NESSUN PROVIDER')) {
+                        runs.push(currentRun);
+                        currentRun = null;
+                    }
                 }
-                if (giornoCorrente && line.trim()) giorni[giornoCorrente].push(line);
             }
-            const giorniLista = Object.keys(giorni).sort().reverse();
+            if (currentRun && currentRun.lines.length > 0) runs.push(currentRun);
+            
             const tabsDiv = document.getElementById('log-tabs');
             const panelsDiv = document.getElementById('log-panels');
-            if (giorniLista.length === 0) {
+            
+            if (runs.length === 0) {
                 tabsDiv.innerHTML = '<span style="color:#666;">Nessun log disponibile</span>';
-                panelsDiv.innerHTML = '';
+                panelsDiv.innerHTML = `<div class="log-panel active"><div class="log-content">${esc(logText)}</div></div>`;
                 return;
             }
-            tabsDiv.innerHTML = giorniLista.map((giorno, idx) => `<button class="log-tab ${idx === 0 ? 'active' : ''}" data-day="${giorno}">📅 ${giorno}</button>`).join('');
-            panelsDiv.innerHTML = giorniLista.map((giorno, idx) => `<div class="log-panel ${idx === 0 ? 'active' : ''}" data-day="${giorno}"><div class="log-content">${giorni[giorno].join('\n')}</div></div>`).join('');
+            
+            const runsReversed = [...runs].reverse();
+            tabsDiv.innerHTML = runsReversed.map((run, idx) => {
+                let icon = run.esito.split(' ')[0];
+                let label = `${icon} ${run.title}`;
+                if (run.tipo) label += ` ${run.tipo}`;
+                if (run.provider) label += run.provider;
+                if (run.articoli) label += run.articoli;
+                return `<button class="log-tab ${idx === 0 ? 'active' : ''}" data-run="${idx}">${esc(label.substring(0, 50))}</button>`;
+            }).join('');
+            
+            panelsDiv.innerHTML = runsReversed.map((run, idx) => {
+                let logContent = run.lines.join('\n');
+                if (run.esito === '✅ SUCCESSO') logContent = `✅ SUCCESSO\n${logContent}`;
+                else if (run.esito === '⚠️ NESSUN ARTICOLO') logContent = `⚠️ NESSUN ARTICOLO\n${logContent}`;
+                else if (run.esito === '❌ NO PROVIDER') logContent = `❌ NO PROVIDER\n${logContent}`;
+                else if (run.esito === '❌ CRITICAL ERROR') logContent = `💀 CRITICAL ERROR\n${logContent}`;
+                return `<div class="log-panel ${idx === 0 ? 'active' : ''}" data-run="${idx}"><div class="log-content">${esc(logContent)}</div></div>`;
+            }).join('');
+            
             document.querySelectorAll('.log-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
-                    const day = tab.dataset.day;
+                    const runIdx = tab.dataset.run;
                     document.querySelectorAll('.log-tab').forEach(t => t.classList.remove('active'));
                     document.querySelectorAll('.log-panel').forEach(p => p.classList.remove('active'));
                     tab.classList.add('active');
-                    document.querySelector(`.log-panel[data-day="${day}"]`).classList.add('active');
+                    document.querySelector(`.log-panel[data-run="${runIdx}"]`).classList.add('active');
                 });
             });
         } catch(e) {
+            console.error('Errore caricamento log:', e);
             document.getElementById('log-tabs').innerHTML = '<span style="color:#666;">Log non disponibile</span>';
             document.getElementById('log-panels').innerHTML = '';
         }
