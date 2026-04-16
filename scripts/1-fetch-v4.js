@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 /**
  * FILE: 1-fetch-v4.js
- * DATA: 2025-04-15
+ * DATA: 2025-04-16
  * VERSIONE: 4.12
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
  *              Log con prefisso [FETCH] per chiarezza.
- *              Recupero dinamico dei modelli Gemini Flash (esclude Pro, image, tts).
+ *              Recupero dinamico dei modelli Gemini (solo Flash).
+ *              Evita doppi test dei modelli riutilizzando il modello da initModels().
  */
 
 import fs from "fs";
@@ -34,7 +35,7 @@ import { scriviLog, caricaJSON, salvaJSON, parseJSON,
          caricaContatori, limiteSuperato, fasciaDiArticoliAttiva, paroleTarget, contaArticoli } from "./lib/utils.js";
 import { initConfig, loadConfig, getVociAttive } from "./lib/config.js";
 import { initNews, raccoltaNotizie } from "./lib/news.js";
-import { initLLM, callLLM, initModels, setScheduledRun, incrementConsecutiveFailures, resetConsecutiveFailures, getCurrentProvider, setActiveGeminiModel } from "./lib/llm.js";
+import { initLLM, callLLM, initModels, setScheduledRun, incrementConsecutiveFailures, resetConsecutiveFailures, getCurrentProvider, setActiveGeminiModel, getTestedGeminiModel } from "./lib/llm.js";
 import { initDraft, caricaDraft, inizializzaSezioni, safeWriteDraft } from "./lib/draft.js";
 import { initRelations, applicaDecay, aggiornaRelazioni } from "./lib/relations.js";
 import { initChat, generaChat } from "./lib/chat.js";
@@ -63,22 +64,21 @@ async function getGeminiModels() {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) return [];
     try {
-        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1/models?key=${apiKey}`);
         const data = await res.json();
         if (data.models) {
-            // Filtra solo modelli Flash testuali
             const modelli = data.models
                 .filter(m => {
                     const name = m.name;
                     return name.includes("gemini") && 
                            name.includes("flash") &&      
                            !name.includes("pro") &&
-                           !name.includes("image") &&     // escludi modelli per immagini
-                           !name.includes("tts") &&       // escludi text-to-speech
+                           !name.includes("image") &&
+                           !name.includes("tts") &&
                            m.supportedGenerationMethods?.includes("generateContent");
                 })
                 .map(m => m.name.replace("models/", ""))
-                .sort((a, b) => b.localeCompare(a)); // ordine decrescente (più recente prima)
+                .sort((a, b) => b.localeCompare(a));
             return modelli;
         }
     } catch(e) {
@@ -159,31 +159,47 @@ async function main() {
     // Test provider con visualizzazione modelli
     log(`[FETCH] 🔍 Verifica disponibilità provider...`);
 
-    log(`[FETCH]    📡 Recupero modelli Gemini disponibili...`);
-    let modelliGemini = await getGeminiModels();
-    if (modelliGemini.length === 0) {
-        log(`[FETCH]    ⚠️ Nessun modello Flash trovato, uso lista di fallback`);
-        modelliGemini = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash"];
-    }
-    log(`[FETCH]    📋 Modelli Flash trovati: ${modelliGemini.join(", ")}`);
+    // Verifica se abbiamo già un modello testato da initModels
+    const modelloGiaTestato = getTestedGeminiModel();
+    const FORCED_GEMINI_MODEL = process.env.FORCED_GEMINI_MODEL || "";
+    const isModelloValido = modelloGiaTestato && modelloGiaTestato !== "gemini-1.5-flash" && !FORCED_GEMINI_MODEL;
 
-    log(`[FETCH]    📡 Test Gemini...`);
+    let geminiOk = false;
     let geminiModelloFunzionante = null;
+    let groqOk = false;
 
-    for (const model of modelliGemini) {
-        log(`[FETCH]       🔍 Test modello ${model}...`);
-        const ok = await testProvider("gemini", model);
-        if (ok) {
-            geminiModelloFunzionante = model;
-            setActiveGeminiModel(model);
-            log(`[FETCH]       ✅ ${model} disponibile e impostato`);
-            break;
-        } else {
-            log(`[FETCH]       ❌ ${model} non risponde`);
+    if (isModelloValido) {
+        log(`[FETCH] ✅ Modello Gemini già validato in initModels: ${modelloGiaTestato}`);
+        geminiOk = true;
+        geminiModelloFunzionante = modelloGiaTestato;
+    } else {
+        log(`[FETCH]    📡 Recupero modelli Gemini disponibili...`);
+        let modelliGemini = await getGeminiModels();
+        if (modelliGemini.length === 0) {
+            log(`[FETCH]    ⚠️ Nessun modello Gemini trovato, uso lista di fallback`);
+            modelliGemini = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash"];
+        }
+        log(`[FETCH]    📋 Modelli Flash trovati: ${modelliGemini.slice(0, 5).join(", ")}${modelliGemini.length > 5 ? ` +${modelliGemini.length-5}` : ""}`);
+
+        log(`[FETCH]    📡 Test Gemini...`);
+
+        for (const model of modelliGemini.slice(0, 5)) {
+            log(`[FETCH]       🔍 Test modello ${model}...`);
+            const ok = await testProvider("gemini", model);
+            if (ok) {
+                geminiModelloFunzionante = model;
+                setActiveGeminiModel(model);
+                log(`[FETCH]       ✅ ${model} disponibile e impostato`);
+                geminiOk = true;
+                break;
+            } else {
+                log(`[FETCH]       ❌ ${model} non risponde`);
+            }
+            // Pausa tra i test per evitare rate limit
+            await new Promise(r => setTimeout(r, 1000));
         }
     }
 
-    const geminiOk = geminiModelloFunzionante !== null;
     if (geminiOk) {
         log(`[FETCH]    ✅ Gemini disponibile (modello selezionato: ${geminiModelloFunzionante})`);
     } else {
@@ -191,7 +207,7 @@ async function main() {
     }
 
     log(`[FETCH]    📡 Test Groq...`);
-    const groqOk = await testProvider("groq");
+    groqOk = await testProvider("groq");
     log(`[FETCH]    ${groqOk ? "✅ Groq disponibile" : "❌ Groq NON disponibile"}`);
 
     if (!geminiOk && !groqOk) {
