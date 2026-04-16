@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "16/04, 22:11",
+  "prossimo_aggiornamento": "17/04, 00:56",
   "news": [
     {
       "tipo": "personaggio",
@@ -1125,7 +1125,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "groq",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -1156,6 +1156,154 @@
           "nome": "Cetteo",
           "avatar": "",
           "testo": "Mò è 'na vera e propria emergenza! 'Sta storia dell'acqua è 'na farsa. Nun se ne esce più, è 'na vergogna!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "groq",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Sveglia! I piccioni sono droni (e la battuta fa ridere i sassi)",
+      "articolo": "La vita cittadina è piena di piccoli dettagli che spesso sfuggono all'attenzione dei residenti. Tra questi, i piccioni sono sicuramente tra gli animali più comuni e diffusi nelle aree urbane. Ma cosa sappiamo realmente di questi uccelli? Sono soltanto creature innocue che vagano per le strade in cerca di cibo o c'è qualcosa di più dietro la loro presenza? La domanda può sembrare strana, ma è proprio questo genere di curiosità che ha portato alcuni a scherzare sull'idea che i piccioni potrebbero essere considerati come piccoli droni, per la loro capacità di muoversi agilmente nello spazio urbano e della loro diffusione.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "È importante riconoscere il valore e il ruolo che questi uccelli hanno nel nostro ecosistema urbano. Loro presenza può essere indice della salute dell'ambiente cittadino, e possono svolgere un ruolo importante nella dispersione dei semi e nel controllo delle popolazioni di insetti. Perciò, è fondamentale adottare un approccio rispettoso e consapevole nei loro confronti."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "☘",
+          "testo": "I piccioni sono davvero creature affascinanti. La loro capacità di adattarsi alle aree urbane è impressionante. Non li avevo mai visti come piccoli droni, ma in effetti hanno una certa agilità nel muoversi tra gli edifici."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚙",
+          "testo": "Ahah, piccioni come droni? Questo è troppo divertente! Ma seriamente, sono sempre stato incuriosito da come riescono a trovare cibo in mezzo alla città. Sono come i brasiliani della fauna urbana, sempre alla ricerca di una festa!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "♀",
+          "testo": "Mi piacciono i piccioni. Sono così eleganti nel loro piumaggio grigio. E la loro capacità di vivere in armonia con gli esseri umani è davvero notevole. Forse ci possiamo imparare qualcosa da loro sulla convivenza pacifica."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤣",
+          "testo": "Siiii siii siiiii! Piccioni come droni, glugluglu! Devo condividere questo pensiero sui social, sarà un vero trend! #PiccioniDroni #UrbanaFauna"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La vita notturna del ciclista: tra asfalto e cocktail",
+      "articolo": "È una vita fatta di ritmi notturni e passioni sfrenate. Lui è un bartender, un giornalista con un carattere unico, sempre pronto a sfidare la notte. Finito il lavoro tardi, non si lascia andare al sonno. Invece, sale in sella alla sua bicicletta e pedala, anche sotto le stelle, taciturno e perso nei suoi pensieri. Altre volte, si lascia andare a sfuriate di espansività, come se la notte gli donasse una libertà che di giorno non riesce ad esprimere. Ma la sua notte non è solo fatta di pedalate. Lui è anche un artefice di drink, un creatore di cocktails che non hanno nulla da invidiare ai più grandi bar del mondo. Eppure, nonostante il suo amore per l'alcool, non si ubriaca mai. Un paradosso che pochi riescono a comprendere. E poi c'è la sua capacità di mangiare tanto e restare smilzo, un altro dei suoi segreti meglio custoditi.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "E che dire? La vita è breve, godiamocela, no?"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "",
+          "testo": "Siii siii siiiiii, la notte è davvero un momento speciale per riflettere e godersi la natura, anche se a volte può essere un po' solitaria."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "",
+          "testo": "Che tipo incredibile! La sua vita sembra una festa che non finisce mai, anche se a volte può essere un po' troppo taciturno per i miei gusti."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "",
+          "testo": "Glugluglu, è davvero un tipo unico, un vero artista della notte, con una vita che sembra un sogno, siii siii siiiiii."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "",
+          "testo": "In Giappone, abbiamo un detto: 'La notte è per dormire, non per vivere'. Ma forse questo bartender è un'eccezione, con la sua capacità di creare e godersi la vita."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La vita notturna di un bartender: tra ghiaccio, gin e due ruote",
+      "articolo": "Finito il turno al bancone, dove l'alcol scorre a fiumi e i cocktails sono sempre pronti, c'è chi non resiste alla voglia di tornare a casa pedalando. È il caso di questo bartender, che nonostante le cadute e le notti insonni, continua ad andare in bicicletta anche di notte, con la stessa taciturnità che lo contraddistingue durante il lavoro. La sua passione per la bicicletta è pari solo a quella per i drink: alcool e miscelazione sono il suo pane quotidiano, ma lui non si ubriaca mai. E nonostante mangi abbondantemente, resta sempre uno smilzo. La sua vita è un equilibrio tra lavoro, svago e movimento, con un filo conduttore: la ricerca della libertà.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Vabbe dai, uno che 'sta sempre in giro in bicicletta, che becca e che lavora, mica può essere così misterioso... boh"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "",
+          "testo": "La sua determinazione è ammirevole, quasi come la bellezza della natura che mi circonda qui in Abruzzo, dove la libertà è una sensazione che si respira ogni giorno."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "",
+          "testo": "Che tipo forte! La notte è fatta per divertirsi, non solo per bere, ma anche per godersi la vita, magari in sella a una bicicletta, sotto le stelle brasiliane o abruzzesi che dir si voglia!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "",
+          "testo": "Siiii siii siiiii! Questo tipo è un vero eroe, un simbolo di libertà e passione, glugluglu! La sua vita è un'avventura continua, tra lavoro e svago, sempre in movimento, sempre con un sorriso!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "",
+          "testo": "In Giappone, la cultura del lavoro e dello svago è molto diversa, ma devo ammettere che la sua dedizione alla bicicletta e il suo equilibrio nella vita sono davvero ammirevoli, forse più disciplinato di noi giapponesi."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Acqua non potabile a Pescara, ennesimo problema per la città",
+      "articolo": "La situazione dell'acqua a Pescara è sempre più critica. Nonostante le promesse degli amministratori locali, l'acqua che esce dai rubinetti della città non è ancora potabile. I controlli effettuati dalle autorità competenti hanno rilevato la presenza di sostanze inquinanti che rendono l'acqua non idonea al consumo umano. La popolazione è stanca di queste problematiche e chiede interventi immediati per risolvere la questione. Il problema non riguarda solo la salute pubblica, ma anche l'economia locale, poiché molti turisti sono scoraggiati dal visitare una città con problemi di acqua potabile.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Ma che bella, ancora problemi con l'acqua! E che fanno quelli del comune? Niente, solo promesse! E noi poveri cittadini dobbiamo bere sta roba? Io non ci credo più, ci stanno fregando, io me ne vado al mare a pescare, almeno là l'acqua è buona!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "☀",
+          "testo": "La natura ci fornisce sempre di più segnali di allarme. L'inquinamento dell'acqua è un problema gravissimo che richiede azioni immediate. Spero che gli amministratori locali prendano seriamente in mano la situazione."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚙",
+          "testo": "È una vergogna! Come possono gli amministratori locali permettere che la situazione dell'acqua a Pescara sia così critica? La popolazione ha diritto a bere acqua pulita e sicura. È ora di fare qualcosa!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "☕",
+          "testo": "Mi dispiace vedere che l'Italia non riesce a gestire nemmeno questo problema fondamentale. L'acqua potabile è un diritto umano basilare. Spero che si trovino soluzioni rapide ed efficaci."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "✊",
+          "testo": "Siiii siii siiiii! L'acqua non è potabile a Pescara! Glugluglu, è una situazione assurda! Si deve fare qualcosa, subito! Opportunità per tutti di lavorare insieme per risolvere il problema, siii siii siiiii!"
         }
       ],
       "categoria": "Cronaca",
