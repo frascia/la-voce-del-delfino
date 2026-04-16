@@ -264,6 +264,30 @@
             color: #6a8e4a;
         }
         
+        .firma-autore {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding: 8px 0;
+            border-top: 1px solid #e8e0cc;
+            border-bottom: 1px solid #e8e0cc;
+            background: rgba(255,250,235,0.5);
+            border-radius: 12px;
+            padding-left: 8px;
+        }
+        
+        .avatar-autore {
+            font-size: 1.4rem;
+        }
+        
+        .nome-autore {
+            font-weight: 600;
+            color: #6a8e4a;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
         .testo {
             font-size: 0.95rem;
             line-height: 1.6;
@@ -295,16 +319,6 @@
         .leggi-tutto:hover {
             color: #4e6b3e;
             transform: translateX(4px);
-        }
-        
-        .firma-autore {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.75rem;
-            color: #8faa7e;
-            margin: 10px 0 8px;
-            font-style: italic;
         }
         
         .badge-nuovo {
@@ -848,24 +862,20 @@ function aggiornaLuminosita() {
     
     let brightness = 1;
     
-    if (ore >= 5 && ore < 7) brightness = 0.96;      // alba
-    else if (ore >= 7 && ore < 9) brightness = 0.98;  // mattina presto
-    else if (ore >= 9 && ore < 12) brightness = 1.02; // mattina
-    else if (ore >= 12 && ore < 15) brightness = 1.05; // mezzogiorno
-    else if (ore >= 15 && ore < 18) brightness = 1.02; // pomeriggio
-    else if (ore >= 18 && ore < 20) brightness = 0.96; // tramonto
-    else if (ore >= 20 && ore < 22) brightness = 0.92; // sera
-    else brightness = 0.88;                           // notte
+    if (ore >= 5 && ore < 7) brightness = 0.96;
+    else if (ore >= 7 && ore < 9) brightness = 0.98;
+    else if (ore >= 9 && ore < 12) brightness = 1.02;
+    else if (ore >= 12 && ore < 15) brightness = 1.05;
+    else if (ore >= 15 && ore < 18) brightness = 1.02;
+    else if (ore >= 18 && ore < 20) brightness = 0.96;
+    else if (ore >= 20 && ore < 22) brightness = 0.92;
+    else brightness = 0.88;
     
     document.body.style.filter = `brightness(${brightness})`;
-    
-    // Opzionale: mostra un badge con l'ora (solo per debug)
-    // console.log(`Ora Italia: ${ore}:${oraRoma.getMinutes()}, Luminosità: ${brightness}`);
 }
 
-// Aggiorna all'avvio e ogni ora
 aggiornaLuminosita();
-setInterval(aggiornaLuminosita, 3600000); // ogni 60 minuti
+setInterval(aggiornaLuminosita, 3600000);
 
 let clicks = 0;
 let lastClick = 0;
@@ -898,7 +908,6 @@ function getColorFromName(nome) {
     return `hsl(${hue}, 65%, 55%)`;
 }
 
-// Controlla se il bottone era già stato sbloccato in precedenza
 if (localStorage.getItem('dashboard_sbloccata') === 'true') {
     dashboardSbloccata = true;
     document.getElementById('dashboard-btn').style.display = 'flex';
@@ -909,7 +918,6 @@ function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/<
 document.getElementById('logo-innesco').onclick = () => {
     const ora = Date.now();
     
-    // Gestione doppio click per nascondere (se il bottone è visibile)
     if (dashboardSbloccata && document.getElementById('dashboard-btn').style.display === 'flex') {
         if (ora - hideLastClick > 1000) hideClicks = 0;
         hideClicks++;
@@ -931,7 +939,6 @@ document.getElementById('logo-innesco').onclick = () => {
         }
     }
     
-    // Gestione 5 click per sbloccare (senza password)
     if (!dashboardSbloccata) {
         if (ora - lastClick > 1000) clicks = 0;
         clicks++;
@@ -994,11 +1001,31 @@ async function mostraSezione(sez,btn,STILI){
         const lx=isP?'personaggio-label':tipo==='gen'?'gen-label':'rss-label';
         const bn=n.nuovo?'<span class="badge-nuovo">nuovo</span>':'';
         const cf=n.commento_firma||{};
-        const firmaH=!isP&&cf.nome?`<div class="firma-autore"><span class="avatar-autore">${esc(cf.avatar)||'👤'}</span><span>${esc(cf.nome)}</span></div>`:'';
-        const cfH=cf.testo?`<div class="commento-firma" onclick="this.classList.toggle('aperto')"><span class="avatar-firma">${esc(cf.avatar)||'👤'}</span><span class="nome-firma">${esc(cf.nome)||'Redazione'} <span class="firma-toggle">▼</span></span><div class="testo-firma">${esc(cf.testo)}</div></div>`:'';
+        
+        // FIRMA AUTORE (posizionata prima del testo)
+        const firmaHtml = (cf.nome && cf.nome !== 'Redazione') ? 
+            `<div class="firma-autore">
+                <span class="avatar-autore">${esc(cf.avatar) || '👤'}</span>
+                <span class="nome-autore">${esc(cf.nome)}</span>
+            </div>` : '';
+        
+        const cfH = cf.testo ? `<div class="commento-firma" onclick="this.classList.toggle('aperto')">
+            <span class="avatar-firma">${esc(cf.avatar) || '👤'}</span>
+            <span class="nome-firma">${esc(cf.nome) || 'Redazione'} <span class="firma-toggle">▼</span></span>
+            <div class="testo-firma">${esc(cf.testo)}</div>
+        </div>` : '';
+        
         const comm=n.commenti||[];
-        const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')"><span class="avatar-p">${esc(c.avatar)||'👤'}</span><span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span><div class="testo-p">${esc(c.testo)}</div></div>`).join('');
-        const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')"><span class="commenti-count">${comm.length}</span><span class="commenti-label">Comment${comm.length===1?'o':'i'}</span><span class="commenti-arrow">▼</span></div><div class="commenti-panel">${cListH}</div>`:'';
+        const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')">
+            <span class="avatar-p">${esc(c.avatar) || '👤'}</span>
+            <span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span>
+            <div class="testo-p">${esc(c.testo)}</div>
+        </div>`).join('');
+        const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')">
+            <span class="commenti-count">${comm.length}</span>
+            <span class="commenti-label">Comment${comm.length===1?'o':'i'}</span>
+            <span class="commenti-arrow">▼</span>
+        </div><div class="commenti-panel">${cListH}</div>`:'';
         
         let frameColor, badgeColor;
         if (tipo === 'rss') { frameColor = '#008cff'; badgeColor = '#008cff'; }
@@ -1013,7 +1040,7 @@ async function mostraSezione(sez,btn,STILI){
             <div class="card-numero" style="background: ${frameColor};">${idx+1}</div>
             <div class="card-categoria ${lx}" style="border-color: ${badgeColor}; color: ${badgeColor};">${esc(n.categoria)}${bn}</div>
             <div class="card-img-box"><img src="public/images/${esc(n.immagine)||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>
-            ${firmaH}
+            ${firmaHtml}
             <h2>${esc(n.titolo)}</h2>
             <div class="testo" id="t${idx}">${esc(n.articolo)}</div>
             <button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>
