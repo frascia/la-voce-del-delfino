@@ -1,10 +1,11 @@
 /**
  * FILE: lib/llm.js
- * DATA: 2025-04-15
- * VERSIONE: 2.8
+ * DATA: 2025-04-16
+ * VERSIONE: 2.9
  * DESCRIZIONE: Gestione chiamate LLM (Gemini/Groq), provider persistente,
  *              contatore fallimenti consecutivi, modalità scheduled/manuale.
  *              Supporto per forzare un modello Gemini specifico e versione API.
+ *              Struttura API Gemini allineata alla documentazione ufficiale Google.
  */
 
 import { pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
@@ -102,14 +103,27 @@ export function setActiveGeminiModel(model) {
 
 async function testaModelloGemini(modelName) {
     const url = `https://generativelanguage.googleapis.com/${GEMINI_API_VERSION}/models/${modelName}:generateContent?key=${apiKeyGemini}`;
+    
+    // Struttura ufficiale Google
+    const payload = {
+        contents: [
+            {
+                role: "user",
+                parts: [{ text: "Rispondi solo con la parola 'ok'" }]
+            }
+        ],
+        generationConfig: {
+            temperature: 0.1,
+            maxOutputTokens: 5,
+            responseMimeType: "application/json"
+        }
+    };
+    
     try {
         const res = await fetch(url, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                contents: [{ parts: [{ text: "Rispondi solo con la parola 'ok'" }] }],
-                generationConfig: { temperature: 0.1, maxOutputTokens: 5 }
-            })
+            body: JSON.stringify(payload)
         });
         const d = await res.json();
         return d.candidates?.length > 0;
@@ -203,27 +217,47 @@ async function trovaUltimoModelloGroq() {
 async function callGemini(sys, prompt, temperature) {
     if (!apiKeyGemini) return null;
     const url = `https://generativelanguage.googleapis.com/${GEMINI_API_VERSION}/models/${activeGeminiModel}:generateContent?key=${apiKeyGemini}`;
-    for (let i=0; i<3; i++) {
+    
+    // Struttura ufficiale Google: ogni messaggio deve avere "role": "user" o "model"
+    // System instruction viene incorporata come primo messaggio (poiché Google non usa systemInstruction nell'esempio)
+    const contents = [];
+    
+    // Aggiungi le istruzioni di sistema come primo messaggio (con ruolo "user")
+    if (sys && sys.trim()) {
+        contents.push({
+            role: "user",
+            parts: [{ text: `[ISTRUZIONI DI SISTEMA] ${sys}` }]
+        });
+    }
+    
+    // Aggiungi il prompt principale
+    contents.push({
+        role: "user",
+        parts: [{ text: prompt }]
+    });
+    
+    const payload = {
+        contents: contents,
+        generationConfig: {
+            temperature: temperature,
+            responseMimeType: "application/json"
+        }
+    };
+    
+    for (let i = 0; i < 3; i++) {
         await pausaGemini();
         try {
             const res = await fetch(url, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: prompt }] }],
-                    systemInstruction: { parts: [{ text: sys }] },
-                    generationConfig: { responseMimeType: "application/json", temperature },
-                    safetySettings: [
-                        { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
-                        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
-                    ]
-                })
+                body: JSON.stringify(payload)
             });
             const d = await res.json();
+            
             if (d.error) {
                 const msg = (d.error.message || "").toLowerCase();
+                const code = d.error.code;
+                
                 if (msg.includes("limit") && msg.includes("per day")) {
                     if (!quotaLogSent) {
                         log(`⚠️ Gemini: quota giornaliera esaurita (429)`);
@@ -231,22 +265,29 @@ async function callGemini(sys, prompt, temperature) {
                     }
                     return null;
                 }
-                if (d.error.code === 429 || d.error.code === 503) {
+                if (code === 429 || code === 503) {
                     if (msg.includes("quota exceeded")) {
                         if (!quotaLogSent) log(`⏳ Gemini: quota exceeded, attendo...`);
                         quotaLogSent = true;
                         await gestisciErroreQuota(d.error.message, log);
                         continue;
                     }
-                    const ms = Math.pow(2,i) * 10000;
-                    log(`⏳ Gemini: errore ${d.error.code} (tentativo ${i+1}/3) – ritento tra ${ms/1000}s`);
+                    const ms = Math.pow(2, i) * 10000;
+                    log(`⏳ Gemini: errore ${code} (tentativo ${i+1}/3) – ritento tra ${ms/1000}s`);
                     await new Promise(r => setTimeout(r, ms));
                     continue;
                 }
-                if (!msg.includes("quota")) log(`❌ Gemini: ${d.error.message} (code: ${d.error.code})`);
+                if (code === 403) {
+                    log(`❌ Gemini: API key non valida o scaduta (403)`);
+                    return null;
+                }
+                if (!msg.includes("quota")) log(`❌ Gemini: ${d.error.message} (code: ${code})`);
                 return null;
             }
-            if (d.candidates?.length) return d.candidates[0].content.parts[0].text;
+            
+            if (d.candidates?.length > 0 && d.candidates[0].content?.parts?.length > 0) {
+                return d.candidates[0].content.parts[0].text;
+            }
             return null;
         } catch(e) {
             log(`❌ Gemini: errore rete - ${e.message}`);
