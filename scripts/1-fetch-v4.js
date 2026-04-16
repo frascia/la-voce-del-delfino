@@ -2,7 +2,7 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-16
- * VERSIONE: 4.18
+ * VERSIONE: 4.20
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
@@ -10,6 +10,7 @@
  *              LOG: se assente lo crea, se più vecchio di 2 giorni lo cancella.
  *              DATA ARTICOLI: formato "giorno mese ora:minuti" con sigla fonte.
  *              RED CASUALI: generazione automatica di articoli redazionali casuali.
+ *              PRIORITÀ GEMINI: Groq viene testato SOLO se Gemini non è disponibile.
  */
 
 import fs from "fs";
@@ -88,10 +89,8 @@ function generaRedCasuali(CHI, vociAttive, LIMITI, oggi, articoliEsistenti) {
     
     if (numMax === 0) return [];
     
-    // Determina quanti articoli RED casuali generare
     let numDaGenerare = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
     
-    // Se solo_se_attivi è true, controlla se ci sono già RED attivi oggi
     if (configRedRandom.solo_se_attivi) {
         const redAttiviOggi = vociAttive.filter(v => v.tipo === "RED").length;
         if (redAttiviOggi === 0) {
@@ -100,11 +99,9 @@ function generaRedCasuali(CHI, vociAttive, LIMITI, oggi, articoliEsistenti) {
         }
     }
     
-    // Lista dei personaggi disponibili (escludi default)
     const personaggi = Object.keys(CHI).filter(n => n !== "default");
     if (personaggi.length === 0) return [];
     
-    // Temi predefiniti o dal config
     const temi = configRedRandom.temi || [
         "Riflessioni sulla vita", "Il piacere delle piccole cose", "Viaggi e scoperte",
         "Cibo e tradizioni", "Natura e sostenibilità", "Tecnologia e futuro",
@@ -116,16 +113,12 @@ function generaRedCasuali(CHI, vociAttive, LIMITI, oggi, articoliEsistenti) {
     const sezioneDefault = sezioniDisponibili[0] || "generale";
     
     for (let i = 0; i < numDaGenerare; i++) {
-        // Scegli personaggio casuale
         const personaggio = personaggi[Math.floor(Math.random() * personaggi.length)];
-        // Scegli tema casuale
         const tema = temi[Math.floor(Math.random() * temi.length)];
-        // Scegli sezione casuale (dalla prima disponibile)
         const sezione = sezioniDisponibili[Math.floor(Math.random() * sezioniDisponibili.length)] || sezioneDefault;
         
-        // Costruisci la voce RED casuale
         const voceRed = {
-            g: "default",  // sempre attivo
+            g: "default",
             sez: sezione,
             tipo: "RED",
             lab: "Dalla Redazione",
@@ -140,7 +133,6 @@ function generaRedCasuali(CHI, vociAttive, LIMITI, oggi, articoliEsistenti) {
             _isRandom: true
         };
         
-        // Verifica se il tema è già stato usato oggi per questo personaggio
         const chiave = `RED|${personaggio}|${tema}`;
         if (!articoliEsistenti.has(chiave)) {
             articoliRedCasuali.push({ voce: voceRed, tema: tema });
@@ -214,7 +206,9 @@ async function main() {
             fs.writeFileSync(LOG_PATH, '');
             log(`📄 File log creato`);
         }
-    } catch(e) { /* ignora errori */ }
+    } catch(e) { 
+        // Ignora errori
+    }
 
     // Reset opzionale del draft
     if (process.env.RESET_DRAFT === 'true') {
@@ -308,7 +302,8 @@ async function main() {
 
     const modelloGiaTestato = getTestedGeminiModel();
     const FORCED_GEMINI_MODEL = process.env.FORCED_GEMINI_MODEL || "";
-    const isModelloValido = modelloGiaTestato && modelloGiaTestato !== "gemini-1.5-flash" && !FORCED_GEMINI_MODEL;
+    // Qualsiasi modello testato è valido (a meno che non sia forzato)
+    const isModelloValido = modelloGiaTestato && !FORCED_GEMINI_MODEL;
 
     let geminiOk = false;
     let geminiModelloFunzionante = null;
