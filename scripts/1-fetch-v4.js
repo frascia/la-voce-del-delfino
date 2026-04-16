@@ -249,11 +249,11 @@ async function main() {
     } else {
         log(`[FETCH]    ❌ Gemini NON disponibile (nessun modello Flash risponde)`);
     }
-
-    log(`[FETCH]    📡 Test Groq...`);
-    groqOk = await testProvider("groq");
-    log(`[FETCH]    ${groqOk ? "✅ Groq disponibile" : "❌ Groq NON disponibile"}`);
-
+    if (!geminiOk)  {
+             log(`[FETCH]    📡 Test Groq...`);
+             groqOk = await testProvider("groq");
+             log(`[FETCH]    ${groqOk ? "✅ Groq disponibile" : "❌ Groq NON disponibile"}`);
+    }
     if (!geminiOk && !groqOk) {
         log(`[FETCH] ❌ NESSUN PROVIDER DISPONIBILE (Gemini e Groq non rispondono)`);
         
