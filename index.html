@@ -29,39 +29,42 @@
             transition: background 0.6s ease, filter 0.6s ease;
         }
         
-        /* Animaletti Ghibli fluttuanti - SOPRA tutto */
+        /* Animaletti Ghibli fluttuanti - SCAPPANO DAL MOUSE */
         .ghibli-float {
             position: fixed;
-            pointer-events: none;
+            pointer-events: auto;
+            cursor: pointer;
             z-index: 100;
             font-size: 2.2rem;
-            opacity: 0.55;
-            animation: floatAround 20s infinite ease-in-out;
+            opacity: 0.6;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
-            transition: opacity 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            will-change: transform, left, top;
+            text-shadow: 0 0 5px rgba(255,255,200,0.5);
         }
         
         body:hover .ghibli-float {
-            opacity: 0.9;
+            opacity: 0.85;
         }
         
+        /* Animazione di fluttuazione normale */
         @keyframes floatAround {
             0% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(35px, -25px) rotate(8deg); }
+            50% { transform: translate(25px, -20px) rotate(5deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
         }
         
-        /* Posizioni e dimensioni variabili */
-        .float-1 { top: 5%; left: 2%; animation-duration: 25s; font-size: 2.8rem; }
-        .float-2 { bottom: 10%; right: 3%; animation-duration: 18s; font-size: 2.2rem; }
-        .float-3 { top: 20%; right: 5%; animation-duration: 22s; font-size: 2rem; }
-        .float-4 { bottom: 25%; left: 4%; animation-duration: 30s; font-size: 2.5rem; }
-        .float-5 { top: 40%; left: 8%; animation-duration: 20s; font-size: 1.8rem; }
-        .float-6 { top: 70%; right: 8%; animation-duration: 28s; font-size: 2.2rem; }
-        .float-7 { bottom: 50%; left: 15%; animation-duration: 35s; font-size: 2rem; }
-        .float-8 { top: 85%; left: 20%; animation-duration: 26s; font-size: 1.5rem; }
-        .float-9 { top: 15%; left: 30%; animation-duration: 32s; font-size: 1.8rem; }
-        .float-10 { bottom: 15%; right: 20%; animation-duration: 24s; font-size: 2rem; }
+        /* Posizioni iniziali */
+        .float-1 { top: 5%; left: 2%; animation: floatAround 25s infinite ease-in-out; font-size: 2.8rem; }
+        .float-2 { bottom: 10%; right: 3%; animation: floatAround 18s infinite ease-in-out; font-size: 2.2rem; }
+        .float-3 { top: 20%; right: 5%; animation: floatAround 22s infinite ease-in-out; font-size: 2rem; }
+        .float-4 { bottom: 25%; left: 4%; animation: floatAround 30s infinite ease-in-out; font-size: 2.5rem; }
+        .float-5 { top: 40%; left: 8%; animation: floatAround 20s infinite ease-in-out; font-size: 1.8rem; }
+        .float-6 { top: 70%; right: 8%; animation: floatAround 28s infinite ease-in-out; font-size: 2.2rem; }
+        .float-7 { bottom: 50%; left: 15%; animation: floatAround 35s infinite ease-in-out; font-size: 2rem; }
+        .float-8 { top: 85%; left: 20%; animation: floatAround 26s infinite ease-in-out; font-size: 1.5rem; }
+        .float-9 { top: 15%; left: 30%; animation: floatAround 32s infinite ease-in-out; font-size: 1.8rem; }
+        .float-10 { bottom: 15%; right: 20%; animation: floatAround 24s infinite ease-in-out; font-size: 2rem; }
         
         #app {
             position: relative;
@@ -837,7 +840,7 @@
     </style>
 </head>
 <body>
-<!-- Animaletti Ghibli fluttuanti - 10 elementi che passano SOPRA gli articoli -->
+<!-- Animaletti Ghibli fluttuanti - SCAPPANO DAL MOUSE -->
 <div class="ghibli-float float-1">🐚</div>
 <div class="ghibli-float float-2">🍃</div>
 <div class="ghibli-float float-3">🐌</div>
@@ -884,7 +887,7 @@
 <button id="dashboard-btn" class="dashboard-btn" onclick="window.location.href='dashboard.html'">📊 Dashboard Redazione</button>
 
 <script>
-// === REGOLAZIONE LUMINOSITÀ IN BASE ALL'ORA ITALIANA (effetto più evidente) ===
+// === REGOLAZIONE LUMINOSITÀ IN BASE ALL'ORA ITALIANA ===
 function aggiornaLuminosita() {
     const oraRoma = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
     const ore = oraRoma.getHours();
@@ -920,7 +923,6 @@ function aggiornaLuminosita() {
     
     document.body.style.filter = `brightness(${brightness}) saturate(${saturation})`;
     
-    // Cambia anche il colore di sfondo in modo più evidente
     if (ore >= 22 || ore < 5) {
         document.body.style.background = `linear-gradient(145deg, #1a2a3a 0%, #0d1a2a 100%)`;
     } else if (ore >= 20 || ore < 6) {
@@ -934,13 +936,91 @@ function aggiornaLuminosita() {
 aggiornaLuminosita();
 setInterval(aggiornaLuminosita, 3600000);
 
-let clicks = 0;
-let lastClick = 0;
-let hideClicks = 0;
-let hideLastClick = 0;
-let dashboardSbloccata = false;
+// === ANIMALETTI CHE SCAPPANO DAL MOUSE ===
+function initScappatelli() {
+    const floats = document.querySelectorAll('.ghibli-float');
+    
+    floats.forEach(float => {
+        let originalX = null;
+        let originalY = null;
+        let isMoving = false;
+        let returnTimeout = null;
+        let currentTransform = { x: 0, y: 0 };
+        
+        // Salva la posizione originale (in percentuale o pixel)
+        const saveOriginalPosition = () => {
+            const rect = float.getBoundingClientRect();
+            const parentRect = document.body.getBoundingClientRect();
+            originalX = (rect.left / parentRect.width) * 100;
+            originalY = (rect.top / parentRect.height) * 100;
+        };
+        
+        saveOriginalPosition();
+        window.addEventListener('resize', saveOriginalPosition);
+        
+        const returnToOriginal = () => {
+            if (returnTimeout) clearTimeout(returnTimeout);
+            returnTimeout = setTimeout(() => {
+                if (!isMoving) {
+                    float.style.transform = `translate(0, 0) rotate(0deg)`;
+                    float.style.left = `${originalX}%`;
+                    float.style.top = `${originalY}%`;
+                    currentTransform = { x: 0, y: 0 };
+                    // Riavvio l'animazione di fluttuazione
+                    float.style.animation = 'none';
+                    float.offsetHeight; // trigger reflow
+                    float.style.animation = '';
+                }
+            }, 800);
+        };
+        
+        float.addEventListener('mouseenter', (e) => {
+            if (isMoving) return;
+            isMoving = true;
+            if (returnTimeout) clearTimeout(returnTimeout);
+            
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            const floatRect = float.getBoundingClientRect();
+            const floatX = floatRect.left + floatRect.width / 2;
+            const floatY = floatRect.top + floatRect.height / 2;
+            
+            const dx = mouseX - floatX;
+            const dy = mouseY - floatY;
+            const distance = Math.hypot(dx, dy);
+            const angle = Math.atan2(dy, dx);
+            
+            // Più vicino è il mouse, più scappa lontano
+            const escapePower = Math.min(180, Math.max(40, 250 - distance));
+            const escapeX = Math.cos(angle) * escapePower * -1;
+            const escapeY = Math.sin(angle) * escapePower * -1;
+            
+            // Limiti per non uscire dallo schermo
+            const newLeft = floatRect.left + escapeX;
+            const newTop = floatRect.top + escapeY;
+            const maxLeft = window.innerWidth - floatRect.width - 10;
+            const maxTop = window.innerHeight - floatRect.height - 10;
+            const boundedX = Math.min(maxLeft, Math.max(10, newLeft));
+            const boundedY = Math.min(maxTop, Math.max(10, newTop));
+            
+            float.style.left = `${boundedX}px`;
+            float.style.top = `${boundedY}px`;
+            float.style.transform = `rotate(${Math.sign(escapeX) * 15}deg)`;
+            currentTransform = { x: boundedX, y: boundedY };
+            
+            setTimeout(() => {
+                isMoving = false;
+                returnToOriginal();
+            }, 400);
+        });
+        
+        float.addEventListener('mouseleave', () => {
+            returnToOriginal();
+        });
+    });
+}
 
-// Legenda popup
+// === LEGENDA POPUP ===
 const legendBtn = document.getElementById('legend-btn');
 const legendPopup = document.getElementById('legend-popup');
 let legendTimeout;
@@ -955,6 +1035,7 @@ if (legendBtn) {
     };
 }
 
+// === FUNZIONI UTILI ===
 function getColorFromName(nome) {
     let hash = 0;
     for (let i = 0; i < nome.length; i++) {
@@ -965,12 +1046,19 @@ function getColorFromName(nome) {
     return `hsl(${hue}, 65%, 55%)`;
 }
 
+function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+
+// === LOGICA DASHBOARD (5 click) ===
+let clicks = 0;
+let lastClick = 0;
+let hideClicks = 0;
+let hideLastClick = 0;
+let dashboardSbloccata = false;
+
 if (localStorage.getItem('dashboard_sbloccata') === 'true') {
     dashboardSbloccata = true;
     document.getElementById('dashboard-btn').style.display = 'flex';
 }
-
-function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 
 document.getElementById('logo-innesco').onclick = () => {
     const ora = Date.now();
@@ -1015,6 +1103,7 @@ document.getElementById('logo-innesco').onclick = () => {
     }
 };
 
+// === CARICAMENTO NOTIZIE E CHAT ===
 async function carica(){
     try{
         const cfg=await fetch('public/data/active_config_v2.json?v='+Date.now()).then(r=>r.json());
@@ -1034,6 +1123,7 @@ async function carica(){
             document.getElementById('menu-cat').appendChild(b);
         });
         if(sezioni[0])mostraSezione(sezioni[0],null,cfg.STILI||{});
+        initScappatelli(); // Inizializza l'effetto di fuga dopo il caricamento
     }catch(e){console.error(e);}
 }
 
