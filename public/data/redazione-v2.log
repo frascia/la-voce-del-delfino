@@ -2924,3 +2924,101 @@ Invalid JSON payload received. Unknown name "responseMimeType" at 'generation_co
 [16/04/2026, 06:46:26] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (4 articoli, 2 nuovi)
 [16/04/2026, 06:46:26] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (6 articoli, 3 nuovi)
 [16/04/2026, 06:46:26] [3-deploy-v2] 🕐 Ora: 16/04, 06:45 | Prossimo: 16/04, 08:46
+[16/04/2026, 06:57:55] [1-fetch-v2] [FETCH] 🏷️ Run MANUALE
+[16/04/2026, 06:57:55] [1-fetch-v2] [llm] ⚙️ Provider inizializzato: groq | Fallimenti consecutivi: 0
+[16/04/2026, 06:57:55] [1-fetch-v2] [llm] 🔧 API Gemini versione: v1beta
+[16/04/2026, 06:57:55] [1-fetch-v2] [llm] 📌 Run MANUALE – i fallimenti NON verranno conteggiati
+[16/04/2026, 06:57:55] [1-fetch-v2] [llm] 🔁 Run manuale: forzato provider a GEMINI (ignoro contatore fallimenti)
+[16/04/2026, 06:57:55] [1-fetch-v2] [llm] 🤖 Modelli Gemini disponibili (gratuiti):
+[16/04/2026, 06:57:55] [1-fetch-v2] [llm]    ├─ Flash: gemini-2.5-flash, gemini-2.0-flash, gemini-2.0-flash-001, gemini-2.0-flash-lite-001, gemini-2.0-flash-lite, gemini-2.5-flash-preview-tts, gemini-flash-latest, gemini-flash-lite-latest, gemini-2.5-flash-lite, gemini-2.5-flash-image, gemini-3-flash-preview, gemini-3.1-flash-lite-preview, gemini-3.1-flash-image-preview, gemini-3.1-flash-tts-preview
+[16/04/2026, 06:57:55] [1-fetch-v2] [llm]    └─ Altri: gemini-robotics-er-1.5-preview, gemini-robotics-er-1.6-preview, gemini-2.5-computer-use-preview-10-2025
+[16/04/2026, 06:57:55] [1-fetch-v2] [llm]    🔍 Test gemini-flash-lite-latest...
+[16/04/2026, 06:57:57] [1-fetch-v2] [llm]    ✅ gemini-flash-lite-latest funzionante
+[16/04/2026, 06:57:57] [1-fetch-v2] [llm] 🎯 Modello Gemini selezionato: gemini-flash-lite-latest
+[16/04/2026, 06:57:57] [1-fetch-v2] [llm] 🤖 Groq: modello aggiornato → meta-llama/llama-4-scout-17b-16e-instruct (era llama3-70b-8192)
+[16/04/2026, 06:57:57] [1-fetch-v2] [llm] 🤖 Groq: max_tokens=1024 per meta-llama/llama-4-scout-17b-16e-instruct
+[16/04/2026, 06:57:57] [1-fetch-v2] [config] 📁 Config caricata: /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/config_v2.json
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    ├─ 📅 Agenda: 4 voci
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    ├─ 👥 Personaggi: 9 (+ default)
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    ├─ 📰 Redazione: 19 voci (RSS:9, GEN:1, RED:9)
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    ├─ ⏰ Fasce orarie: 10, 11, 13, 19
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    ├─ 📏 Lunghezza articoli: livello 2 (~160 parole)
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    ├─ 💬 Commenti: min 1, max 4, totali max 10
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    ├─ 🔄 Reset quote: ore 10 (toll. 10 min)
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    ├─ 🤖 Modelli: cerca max 1 volte/giorno
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    └─ 🎛️ Limiti: chat=sempre, commenti=sempre, relazioni=sempre
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    └─ 📢 Ticker: AVVISTATO CALAMARO GIGANTE AL PORTO CANA… | AUMENTO DEI PREZZI: GLI ARROSTICINI ORA … +1
+[16/04/2026, 06:57:57] [1-fetch-v2] [config]    └─ 👤 Personaggi: Lars(🐬), Juizinho(⚽), Cetteo(🚧), Hiroki(🏯), Glusi(🤪) +4
+[16/04/2026, 06:57:57] [1-fetch-v2] [FETCH] 📊 Quote: chiamate=0, rss=12
+[16/04/2026, 06:57:57] [1-fetch-v2] [FETCH] 🕐 Fascia attiva: NO | Parole target: ~160
+[16/04/2026, 06:57:57] [1-fetch-v2] [FETCH] 📋 Voci attive: 5
+[16/04/2026, 06:57:57] [1-fetch-v2] [FETCH] 
+📌 REDAZIONALI OGGI:
+[16/04/2026, 06:57:57] [1-fetch-v2] [FETCH]    ✍️ Juizinho (pescara) – 10 temi
+[16/04/2026, 06:57:57] [1-fetch-v2] [FETCH] 🔍 Verifica disponibilità provider...
+[16/04/2026, 06:57:57] [1-fetch-v2] [FETCH] ✅ Modello Gemini già validato in initModels: gemini-flash-lite-latest
+[16/04/2026, 06:57:57] [1-fetch-v2] [FETCH]    ✅ Gemini disponibile (modello selezionato: gemini-flash-lite-latest)
+[16/04/2026, 06:57:57] [1-fetch-v2] [FETCH]    📡 Test Groq...
+[16/04/2026, 06:58:01] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[16/04/2026, 06:58:01] [1-fetch-v2] [FETCH]    ❌ Groq NON disponibile
+[16/04/2026, 06:58:01] [1-fetch-v2] [FETCH] 🎯 Provider scelto per questo run: Gemini (modello: gemini-flash-lite-latest)
+[16/04/2026, 06:58:01] [1-fetch-v2] [draft] 🆕 Nuovo draft per 16/04
+[16/04/2026, 06:58:01] [1-fetch-v2] [news] 📡 Fonte notizie: GNEWS
+[16/04/2026, 06:58:03] [1-fetch-v2] [news] ○ GNews: 0 notizie per "Cronaca Pescarese"
+[16/04/2026, 06:58:04] [1-fetch-v2] [news] ○ GNews: 0 notizie per "Nuovi film da vedere cinema"
+[16/04/2026, 06:58:06] [1-fetch-v2] [news] ○ GNews: 0 notizie per "Viaggi mete insolite Europa"
+[16/04/2026, 06:58:06] [1-fetch-v2] [news] ⚠️ GNews: 0 notizie per TUTTE le voci RSS → passaggio a RSS (cascata)
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] ✓ RSS: 1 notizie per "Cronaca Pescarese"
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] ○ RSS: 0 notizie per "Nuovi film da vedere cinema"
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] ○ RSS: 0 notizie per "Viaggi mete insolite Europa"
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] 📝 GEN: 1 articoli da generazione libera
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] ✍️ RED: 1 articoli redazionali
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] ⚠️ Nuovi film da vedere cinema: solo 0/2 notizie → aggiungo 2 generici (cascata interna)
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] ⚠️ Viaggi mete insolite Europa: solo 0/2 notizie → aggiungo 2 generici (cascata interna)
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] 📰 RSS: 1 notizie reali
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] 🔄 Generici: 2 articoli di riempimento
+[16/04/2026, 06:58:07] [1-fetch-v2] [news] 📦 Totale articoli in coda: 5 (RSS:1, GEN:1, RED:1, GENERICI:2)
+[16/04/2026, 06:58:07] [1-fetch-v2] [articoli] 🔄 Generazione articolo per Lilli (GEN)...
+[16/04/2026, 06:58:12] [1-fetch-v2] [llm] ✅ Generazione riuscita (gemini)
+[16/04/2026, 06:58:12] [1-fetch-v2] [articoli] ✅ Lilli (gemini): "Il profumo della carta: un rifugio tra l..." – 1020 caratteri (4.6s)
+[16/04/2026, 06:58:16] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[16/04/2026, 06:58:16] [1-fetch-v2] [articoli] ⚠️ Commenti per "Lilli": nessuna generazione
+[16/04/2026, 06:58:16] [1-fetch-v2] [FETCH] ✅ Lilli (gemini): "Il profumo della carta: un rifugio tra le pagine..." – 1020 caratteri, 0 commenti
+[16/04/2026, 06:58:16] [1-fetch-v2] [articoli] 🔄 Generazione articolo per Juizinho (RED)...
+[16/04/2026, 06:58:19] [1-fetch-v2] [llm] ✅ Generazione riuscita (gemini)
+[16/04/2026, 06:58:19] [1-fetch-v2] [articoli] ✅ Juizinho (gemini): "Samba nel sangue, cuore biancazzurro: il..." – 884 caratteri (3.7s)
+[16/04/2026, 06:58:23] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[16/04/2026, 06:58:23] [1-fetch-v2] [articoli] ⚠️ Commenti per "Juizinho": nessuna generazione
+[16/04/2026, 06:58:23] [1-fetch-v2] [FETCH] ✍️ [Dalla Redazione] Juizinho (gemini): "Samba nel sangue, cuore biancazzurro: il mio legam..." – 884 caratteri
+[16/04/2026, 06:58:23] [1-fetch-v2] [articoli] 🔄 Generazione articolo per Cetteo (RSS)...
+[16/04/2026, 06:58:27] [1-fetch-v2] [llm] ✅ Generazione riuscita (gemini)
+[16/04/2026, 06:58:27] [1-fetch-v2] [articoli] ✅ Cetteo (gemini): "Borgomarino in rivolta: chiudono i local..." – 883 caratteri (4.3s)
+[16/04/2026, 06:58:31] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[16/04/2026, 06:58:31] [1-fetch-v2] [articoli] ⚠️ Commenti per "Cetteo": nessuna generazione
+[16/04/2026, 06:58:31] [1-fetch-v2] [FETCH] ✅ Cetteo (gemini): "Borgomarino in rivolta: chiudono i locali, ma il p..." – 883 caratteri, 0 commenti
+[16/04/2026, 06:58:31] [1-fetch-v2] [articoli] 🔄 Generazione articolo per Cetteo (RSS)...
+[16/04/2026, 06:58:36] [1-fetch-v2] [llm] ✅ Generazione riuscita (gemini)
+[16/04/2026, 06:58:36] [1-fetch-v2] [articoli] ✅ Cetteo (gemini): "Cinema o mare? A Pescara se ne parla, ma..." – 902 caratteri (4.7s)
+[16/04/2026, 06:58:39] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[16/04/2026, 06:58:39] [1-fetch-v2] [articoli] ⚠️ Commenti per "Cetteo": nessuna generazione
+[16/04/2026, 06:58:39] [1-fetch-v2] [FETCH] ✅ Cetteo (gemini): "Cinema o mare? A Pescara se ne parla, ma la poltro..." – 902 caratteri, 0 commenti
+[16/04/2026, 06:58:39] [1-fetch-v2] [articoli] 🔄 Generazione articolo per Lars (RSS)...
+[16/04/2026, 06:58:43] [1-fetch-v2] [llm] ✅ Generazione riuscita (gemini)
+[16/04/2026, 06:58:43] [1-fetch-v2] [articoli] ✅ Lars (gemini): "Oltre il Nord: l'anima selvaggia dell'Ab..." – 1097 caratteri (3.8s)
+[16/04/2026, 06:58:47] [1-fetch-v2] [llm] ⚠️ gemini: nessun output valido, salto generazione
+[16/04/2026, 06:58:47] [1-fetch-v2] [articoli] ⚠️ Commenti per "Lars": nessuna generazione
+[16/04/2026, 06:58:47] [1-fetch-v2] [FETCH] ✅ Lars (gemini): "Oltre il Nord: l'anima selvaggia dell'Abruzzo..." – 1097 caratteri, 0 commenti
+[16/04/2026, 06:58:47] [1-fetch-v2] [llm] ⏭️ Run manuale: reset fallimenti NON eseguito
+[16/04/2026, 06:58:47] [1-fetch-v2] [draft] 💾 Draft salvato in modo sicuro (5 articoli).
+[16/04/2026, 06:58:47] [1-fetch-v2] [FETCH] ✅ FASE 1-v4 completata. 5 nuovi articoli.
+[16/04/2026, 06:58:47] [2-elabora-v3] ⚙️ FASE 2-v3 — Avvio elaborazione...
+[16/04/2026, 06:58:47] [2-elabora-v3] 🔍 Provider LLM rilevato: gemini (5 articoli)
+[16/04/2026, 06:58:47] [2-elabora-v3] 📄 active_config_v3.json aggiornato.
+[16/04/2026, 06:58:47] [2-elabora-v3] 🔐 auth_info.json aggiornato.
+[16/04/2026, 06:58:47] [2-elabora-v3] ✅ Sezione pescara: 2 articoli normalizzati.
+[16/04/2026, 06:58:47] [2-elabora-v3] ✅ Sezione cultura: 3 articoli normalizzati.
+[16/04/2026, 06:58:47] [2-elabora-v3] ✅ FASE 2-v3 completata. Articles → /home/runner/work/la-voce-del-delfino/la-voce-del-delfino/public/data/_articles-v2.json
+[16/04/2026, 06:58:47] [3-deploy-v2] 🚀 FASE 3-v2 — Avvio deploy...
+[16/04/2026, 06:58:47] [3-deploy-v2] 📄 Scritto: news-v2-pescara.json (2 articoli, 2 nuovi)
+[16/04/2026, 06:58:47] [3-deploy-v2] 📄 Scritto: news-v2-cultura.json (3 articoli, 2 nuovi)
+[16/04/2026, 06:58:47] [3-deploy-v2] 🕐 Ora: 16/04, 06:57 | Prossimo: 16/04, 08:58
