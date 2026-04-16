@@ -2,7 +2,7 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-16
- * VERSIONE: 4.14
+ * VERSIONE: 4.15
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
@@ -42,6 +42,19 @@ import { initChat, generaChat } from "./lib/chat.js";
 import { initArticoli, generaArticolo, generaCommenti } from "./lib/articoli.js";
 
 function log(msg) { scriviLog(msg, LOG_PATH); }
+
+// Genera chiave univoca per deduplicazione
+function getArticoloKey(voce, tema, titolo = null) {
+    const titoloDaUsare = titolo || tema;
+    if (voce.tipo === "RED") {
+        return `RED|${voce.firma}|${titoloDaUsare}`;
+    } else if (voce.tipo === "RSS") {
+        return `RSS|${titoloDaUsare}`;
+    } else if (voce.tipo === "GEN") {
+        return `GEN|${voce.firma}|${titoloDaUsare}`;
+    }
+    return null;
+}
 
 // Test rapido provider con modello specifico
 async function testProvider(provider, modelName = null) {
@@ -85,19 +98,6 @@ async function getGeminiModels() {
         log(`[FETCH] ⚠️ Errore recupero modelli Gemini: ${e.message}`);
     }
     return [];
-}
-
-// Genera chiave univoca per deduplicazione
-function getArticoloKey(voce, tema, titolo = null) {
-    if (voce.tipo === "RED") {
-        return `RED|${voce.firma}|${tema}`;
-    } else if (voce.tipo === "RSS") {
-        // Per RSS usa il titolo della notizia (o tema)
-        return `RSS|${tema}`;
-    } else if (voce.tipo === "GEN") {
-        return `GEN|${voce.firma}|${tema}`;
-    }
-    return null;
 }
 
 async function main() {
@@ -181,13 +181,13 @@ async function main() {
     const draftEsistente = fs.existsSync(DRAFT_PATH) ? caricaJSON(DRAFT_PATH, null) : null;
     const isNuovoGiorno = !draftEsistente || draftEsistente.dataRiferimento !== oggiStr;
 
-    // === DEDUPLICAZIONE: articoli già presenti oggi ===
+    // === DEDUPLICAZIONE: carica gli articoli già presenti oggi ===
     const articoliEsistenti = new Set();
     if (draftEsistente && !isNuovoGiorno) {
         for (const sez of Object.values(draftEsistente.sezioni || {})) {
             for (const art of (sez.articoli || [])) {
                 let key = '';
-                if (art.tipo === 'personaggio' || art.tipo === 'red') {
+                if (art.tipo === 'personaggio') {
                     key = `RED|${art.commento_firma?.nome || ''}|${art.titolo || ''}`;
                 } else if (art.tipo === 'rss') {
                     key = `RSS|${art.titolo || ''}`;
@@ -306,12 +306,14 @@ async function main() {
         codaArticoli = await raccoltaNotizie(vociAttive, parole, contatori);
     }
 
+    log(`[FETCH] 🔍 Deduplicazione: ${articoliEsistenti.size} articoli esistenti, ${codaArticoli.length} in coda`);
+
     const generatiSet = new Set();
 
     for (const { voce, tema } of codaArticoli) {
         const key = `${voce.sez}|${tema}`;
         if (generatiSet.has(key)) {
-            log(`[FETCH] ⚠️ Duplicato evitato nella coda: ${tema}`);
+            log(`[FETCH] ⚠️ Duplicato evitato nella coda: ${tema.substring(0, 40)}...`);
             continue;
         }
         
@@ -345,6 +347,10 @@ async function main() {
         let tipoOutput = voce.tipo === "RED" ? "personaggio" : (voce.tipo === "GEN" ? "gen" : "rss");
         let categoriaOutput = voce.tipo === "RED" ? "Dalla Redazione" : voce.lab;
         
+        // Aggiungi anche la chiave basata sul titolo reale per future deduplicazioni
+        const titoloKey = getArticoloKey(voce, tema, titolo);
+        if (titoloKey) articoliEsistenti.add(titoloKey);
+        
         draft.sezioni[sez].articoli.push({
             tipo: tipoOutput,
             titolo: titolo || tema,
@@ -357,9 +363,6 @@ async function main() {
             provider: provider
         });
         articoliGenerati++;
-        
-        // Aggiungi alla lista degli esistenti per evitare duplicati nello stesso run
-        if (articoloKey) articoliEsistenti.add(articoloKey);
         
         if (voce.tipo === "RED") {
             log(`[FETCH] ✍️ [Dalla Redazione] ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri`);
