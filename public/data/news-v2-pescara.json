@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "16/04, 19:04",
+  "prossimo_aggiornamento": "16/04, 19:45",
   "news": [
     {
       "tipo": "personaggio",
@@ -792,7 +792,7 @@
       "colore_tipo": "#008cff",
       "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -829,7 +829,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -866,7 +866,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -903,6 +903,154 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La Teoria della Terra Piatta: Una Risata Amara per i Complotristi",
+      "articolo": "La teoria della Terra piatta è una delle teorie del complotto più popolari e longeve. Nonostante sia stata smentita da secoli di prove scientifiche e osservazioni, molti ancora credono che la Terra sia piatta. I complotristi affermano che i 'poteri forti' nascondono la verità sulla forma della Terra per controllare la popolazione e mantenere il potere. Tuttavia, questa teoria è stata ripetutamente confutata da esperti in diversi campi, tra cui l'astronomia, la geologia e la fisica. Le prove della rotondità della Terra sono numerose e includono la curvatura dell'orizzonte, le ombre sulla Luna durante le eclissi lunari e le immagini satellitari della Terra dallo spazio.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "È preoccupante vedere come teorie infondate come quella della Terra piatta possano avere ancora seguaci. È fondamentale essere scettici e richiedere prove concrete prima di accettare qualsiasi affermazione come vera. La diffusione di informazioni false può avere conseguenze negative sulla società e sulla nostra comprensione del mondo. Dobbiamo essere sempre vigili e promuovere la cultura scientifica e il pensiero critico."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "",
+          "testo": "La natura è piena di misteri, ma la forma della Terra è una cosa che non dovrebbe essere messa in dubbio. La scienza ci ha dato prove sufficienti per capire che la Terra è rotonda."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "",
+          "testo": "Ahah, la teoria della Terra piatta? È come credere che il Brasile non sia il paese più bello del mondo! Solo una follia, amico!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "",
+          "testo": "Siiii siii siiiii! La Terra è rotonda, glugluglu! Non capisco perchè ancora qualcuno possa pensare il contrario, siii siii siiiii!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "",
+          "testo": "In Giappone abbiamo una parola per definire le persone che credono a queste teorie: 'yokai'. Sono come fantasmi che rifiutano di vedere la realtà."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Lo smilzo che sfidava la notte",
+      "articolo": "È un uomo dalle mille sfaccettature, un vero e proprio camaleonte della vita notturna. Finito il lavoro al bancone del bar, dove con maestria crea cocktails e conversa con i clienti, si trasforma in un runner o un ciclista incallito. Non importa se la notte è buia o se la strada è deserta, lui è sempre pronto a sfidare la notte. La sua passione per la bicicletta è nota a tutti, pedalata dopo pedalata, anche quando la luna è alta nel cielo, lui è lì, in sella, con la sua andatura costante e inesorabile. Eppure, nonostante la sua fisicità esile, ha un appetito vorace e una capacità di recupero invidiabile. Alcol e cibo non sembrano avere effetto sul suo corpo, che rimane sempre asciutto e prestante.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Mah, uno di quegli individui che sembrano fatti di un materiale diverso, no? Be', in fondo, un po' di invidia ci sta."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "",
+          "testo": "Sì, è incredibile come alcune persone riescano a mantenere uno stile di vita così attivo e sano, nonostante le notti movimentate. Mi chiedo se abbia qualche segreto per recuperare così velocemente."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Che tipo fantastico! Mi piace come sfida la notte e la sua passione per la bicicletta è davvero contagiosa. Spero di poterlo incontrare una sera per una pedalata insieme."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, è proprio un supereroe della notte! Glugluglu, chissà quanti segreti nasconde sotto la sua maglietta da ciclista. Spero che un giorno possa condividere con noi i suoi superpoteri."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "È impressionante vedere qualcuno che riesce a bilanciare lavoro, passioni e uno stile di vita così sano. Forse in Giappone potremmo imparare da lui qualcosa sulla gestione del tempo e sulla dedizione."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "groq",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La pedalata serale del bartender: un rituale prima del turno",
+      "articolo": "È un'immagine familiare quella del bartender che si prepara per il turno serale, ma pochi sanno che prima di immergersi nel mondo dei cocktail e dell'accoglienza, molti di loro hanno un rituale ben preciso: la pedalata serale. Questo non è solo un esercizio fisico, ma anche un momento di relax e di preparazione mentale per affrontare le ore di lavoro che attendono. La bicicletta, simbolo di libertà e di movimento, diventa per loro uno strumento per liberare la mente e riscaldare i muscoli. Pedalare, magari sotto le stelle, consente di fare il punto sulle proprie energie e di arrivare al lavoro con la giusta concentrazione. Non importa se la pedalata è breve o lunga, l'importante è il gesto in sé, un momento di pausa prima di rituffarsi nella vita notturna della città.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Sì, è vero, ogni volta che finisco il mio turno, o corro o vado in bicicletta. È il mio modo per scaricare la tensione e prepararmi per la prossima avventura, che sia dietro il bancone o sulla strada."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "",
+          "testo": "Mi piace l'idea di una pedalata serale come rituale di preparazione. La bicicletta è un ottimo modo per connettersi con la natura e schiarirsi le idee, siii siii"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "",
+          "testo": "Que bello! Una pedalata sotto le stelle è proprio quello che ci vuole per arrivare in festa! La libertà di movimento è anche libertà di spirito, mio dio!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "",
+          "testo": "Glugluglu, pedalare è vita! Siii siii, è un ottimo modo per ricaricare le batterie e arrivare al lavoro con il sorriso, è proprio quello che faccio io ogni sera!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "",
+          "testo": "Mi sembra un'ottima abitudine, in Giappone molti di noi fanno una passeggiata serale per rilassarsi. La bicicletta è un mezzo di trasporto ecologico e salutare, spero che molti bartender italiani possano adottare questo rituale"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "groq",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara, locali chiusi per irregolarità: il pescatore si scandalizza",
+      "articolo": "Due locali a Pescara sono stati chiusi per irregolarità igieniche e autorizzative. La notizia ha fatto scalpore nella comunità locale e ha lasciato più di un cittadino perplesso. 'A me non me ne frega gnente', dice un pescatore del posto, 'Tanto vale che ognuno se la sbavi come je pare'. Il pescatore, che preferisce rimanere anonimo, ha dichiarato: 'Se lavorassi come si deve, non avrei tempo de sta a fa 'ste cose'. La chiusura dei locali ha sollevato molte critiche sulla gestione della città e sulla sicurezza alimentare.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Ma che sta succedendo a 'sta città? Nun se ne può più de 'ste irregolarità! Ognuno fa comme je pare e poi se la prendono con li altri. Io nun ci credo, c'è sempre qualcosa che nun va. E io che devo fa, nun posso manco magnà in pace?"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "☀",
+          "testo": "La natura ci insegna che l'equilibrio è fondamentale. Spero che i responsabili prendano seriamente in considerazione le irregolarità e riaprano i locali solo quando saranno sicuri che tutto sia a posto."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚙",
+          "testo": "Che brutta notizia! Spero che quei locali riaprano presto, la vita è troppo breve per stare a casa. E poi, gli arrosticini di Pescara sono i migliori!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤩",
+          "testo": "Glugluglu, siii siii siiiiii! Questa notizia è troppo forte, spero che i locali riaprano presto e che la gente possa tornare a godersi la vita. Siiii siii siiiiii!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "☕",
+          "testo": "In Giappone, la sicurezza alimentare è una priorità assoluta. Spero che a Pescara prendano esempio e facciano di tutto per garantire la salute dei cittadini."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "groq",
       "nuovo": true
     }
   ]
