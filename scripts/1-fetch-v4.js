@@ -2,13 +2,14 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-16
- * VERSIONE: 4.17
+ * VERSIONE: 4.18
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
  *              DEDUPLICAZIONE: evita di rigenerare articoli già pubblicati oggi.
  *              LOG: se assente lo crea, se più vecchio di 2 giorni lo cancella.
  *              DATA ARTICOLI: formato "giorno mese ora:minuti" con sigla fonte.
+ *              RED CASUALI: generazione automatica di articoli redazionali casuali.
  */
 
 import fs from "fs";
@@ -75,6 +76,80 @@ function getArticoloKey(voce, tema, titolo = null) {
         return `GEN|${voce.firma}|${titoloDaUsare}`;
     }
     return null;
+}
+
+// Genera articoli RED casuali (Dalla Redazione)
+function generaRedCasuali(CHI, vociAttive, LIMITI, oggi, articoliEsistenti) {
+    const configRedRandom = LIMITI.articoli_random_red || {};
+    if (!configRedRandom.abilitato) return [];
+    
+    const numMin = configRedRandom.num_min || 0;
+    const numMax = configRedRandom.num_max || 0;
+    
+    if (numMax === 0) return [];
+    
+    // Determina quanti articoli RED casuali generare
+    let numDaGenerare = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
+    
+    // Se solo_se_attivi è true, controlla se ci sono già RED attivi oggi
+    if (configRedRandom.solo_se_attivi) {
+        const redAttiviOggi = vociAttive.filter(v => v.tipo === "RED").length;
+        if (redAttiviOggi === 0) {
+            log(`[FETCH] ⏭️ RED casuali: nessun RED attivo oggi, salto generazione`);
+            return [];
+        }
+    }
+    
+    // Lista dei personaggi disponibili (escludi default)
+    const personaggi = Object.keys(CHI).filter(n => n !== "default");
+    if (personaggi.length === 0) return [];
+    
+    // Temi predefiniti o dal config
+    const temi = configRedRandom.temi || [
+        "Riflessioni sulla vita", "Il piacere delle piccole cose", "Viaggi e scoperte",
+        "Cibo e tradizioni", "Natura e sostenibilità", "Tecnologia e futuro",
+        "Arte e creatività", "Sport e passione", "Musica e emozioni", "Libri e letture"
+    ];
+    
+    const articoliRedCasuali = [];
+    const sezioniDisponibili = [...new Set(vociAttive.map(v => v.sez))];
+    const sezioneDefault = sezioniDisponibili[0] || "generale";
+    
+    for (let i = 0; i < numDaGenerare; i++) {
+        // Scegli personaggio casuale
+        const personaggio = personaggi[Math.floor(Math.random() * personaggi.length)];
+        // Scegli tema casuale
+        const tema = temi[Math.floor(Math.random() * temi.length)];
+        // Scegli sezione casuale (dalla prima disponibile)
+        const sezione = sezioniDisponibili[Math.floor(Math.random() * sezioniDisponibili.length)] || sezioneDefault;
+        
+        // Costruisci la voce RED casuale
+        const voceRed = {
+            g: "default",  // sempre attivo
+            sez: sezione,
+            tipo: "RED",
+            lab: "Dalla Redazione",
+            firma: personaggio,
+            mood: "",
+            num: 1,
+            inventare: true,
+            weight_articolo: 0.8,
+            weight_commento: 0.7,
+            temi: [tema],
+            _parole: 400,
+            _isRandom: true
+        };
+        
+        // Verifica se il tema è già stato usato oggi per questo personaggio
+        const chiave = `RED|${personaggio}|${tema}`;
+        if (!articoliEsistenti.has(chiave)) {
+            articoliRedCasuali.push({ voce: voceRed, tema: tema });
+            articoliEsistenti.add(chiave);
+            log(`[FETCH] 🎲 RED casuale: ${personaggio} - "${tema}" (sez: ${sezione})`);
+        }
+    }
+    
+    return articoliRedCasuali;
 }
 
 // Test rapido provider con modello specifico
@@ -338,6 +413,11 @@ async function main() {
 
     if (articoliAbilitati) {
         codaArticoli = await raccoltaNotizie(vociAttive, parole, contatori);
+        
+        // === GENERAZIONE ARTICOLI RED CASUALI ===
+        const redCasuali = generaRedCasuali(CHI, vociAttive, LIMITI, oggi, articoliEsistenti);
+        codaArticoli.push(...redCasuali);
+        log(`[FETCH] 🎲 RED casuali da generare: ${redCasuali.length}`);
     }
 
     log(`[FETCH] 🔍 Deduplicazione: ${articoliEsistenti.size} articoli esistenti, ${codaArticoli.length} in coda`);
