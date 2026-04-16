@@ -26,7 +26,7 @@
             position: relative;
             min-height: 100vh;
             overflow-x: hidden;
-            transition: background 0.6s ease;
+            transition: background 0.6s ease, filter 0.6s ease;
         }
         
         .ghibli-float {
@@ -462,7 +462,6 @@
         
         .commento-personaggio.aperto .commento-toggle { transform: rotate(180deg); }
         
-        /* Chat raggruppate per data */
         .chat-main-header {
             display: flex;
             justify-content: space-between;
@@ -664,7 +663,6 @@
             font-style: italic;
         }
         
-        /* Pulsante legenda */
         .legend-btn {
             position: fixed;
             bottom: 20px;
@@ -829,7 +827,6 @@
     </div>
 </div>
 
-<!-- Pulsante legenda -->
 <button id="legend-btn" class="legend-btn" title="Legenda">📖</button>
 <div id="legend-popup" class="legend-popup">
     <div class="legend-popup-title">📖 Legenda</div>
@@ -844,6 +841,32 @@
 <button id="dashboard-btn" class="dashboard-btn" onclick="window.location.href='dashboard.html'">📊 Dashboard Redazione</button>
 
 <script>
+// === REGOLAZIONE LUMINOSITÀ IN BASE ALL'ORA ITALIANA ===
+function aggiornaLuminosita() {
+    const oraRoma = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
+    const ore = oraRoma.getHours();
+    
+    let brightness = 1;
+    
+    if (ore >= 5 && ore < 7) brightness = 0.96;      // alba
+    else if (ore >= 7 && ore < 9) brightness = 0.98;  // mattina presto
+    else if (ore >= 9 && ore < 12) brightness = 1.02; // mattina
+    else if (ore >= 12 && ore < 15) brightness = 1.05; // mezzogiorno
+    else if (ore >= 15 && ore < 18) brightness = 1.02; // pomeriggio
+    else if (ore >= 18 && ore < 20) brightness = 0.96; // tramonto
+    else if (ore >= 20 && ore < 22) brightness = 0.92; // sera
+    else brightness = 0.88;                           // notte
+    
+    document.body.style.filter = `brightness(${brightness})`;
+    
+    // Opzionale: mostra un badge con l'ora (solo per debug)
+    // console.log(`Ora Italia: ${ore}:${oraRoma.getMinutes()}, Luminosità: ${brightness}`);
+}
+
+// Aggiorna all'avvio e ogni ora
+aggiornaLuminosita();
+setInterval(aggiornaLuminosita, 3600000); // ogni 60 minuti
+
 let clicks = 0;
 let lastClick = 0;
 let hideClicks = 0;
@@ -963,7 +986,6 @@ async function mostraSezione(sez,btn,STILI){
     const container = document.getElementById('grid-container');
     container.innerHTML = '';
     
-    // Notizie
     const ord = [...news.filter(n=>n.tipo==='personaggio'), ...news.filter(n=>n.tipo==='rss'), ...news.filter(n=>n.tipo==='gen')];
     ord.forEach((n,idx)=>{
         const tipo=n.tipo||'rss';
@@ -1001,7 +1023,6 @@ async function mostraSezione(sez,btn,STILI){
         container.appendChild(card);
     });
     
-    // Chat raggruppate per data
     if(chatData && chatData.length > 0){
         const chatPerData = {};
         chatData.forEach(chat => {
