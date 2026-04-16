@@ -29,21 +29,20 @@
             transition: background 0.6s ease, filter 0.6s ease;
         }
         
-        /* Animaletti Ghibli fluttuanti - ben visibili */
+        /* Animaletti Ghibli fluttuanti - SOPRA tutto */
         .ghibli-float {
             position: fixed;
             pointer-events: none;
-            z-index: 15;
+            z-index: 100;
             font-size: 2.2rem;
-            opacity: 0.5;
+            opacity: 0.55;
             animation: floatAround 20s infinite ease-in-out;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
             transition: opacity 0.3s ease;
         }
         
-        /* Al passaggio del mouse diventano molto più visibili */
         body:hover .ghibli-float {
-            opacity: 0.85;
+            opacity: 0.9;
         }
         
         @keyframes floatAround {
@@ -66,7 +65,7 @@
         
         #app {
             position: relative;
-            z-index: 20;
+            z-index: 1;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
@@ -76,6 +75,8 @@
             text-align: center;
             margin: 20px 0 20px;
             cursor: pointer;
+            position: relative;
+            z-index: 1;
         }
         
         .testata img#header-img {
@@ -109,6 +110,8 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             border: 1px solid rgba(140,120,80,0.2);
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
         }
         
         .info-bar:hover {
@@ -151,6 +154,8 @@
             scrollbar-width: thin;
             justify-content: center;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
         }
         
         .tab {
@@ -186,6 +191,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 35px;
+            position: relative;
+            z-index: 1;
         }
         
         .card {
@@ -702,7 +709,7 @@
             border: 1px solid rgba(140,120,80,0.3);
             font-size: 1.2rem;
             cursor: pointer;
-            z-index: 99;
+            z-index: 101;
             transition: all 0.2s;
             display: flex;
             align-items: center;
@@ -724,7 +731,7 @@
             border-radius: 20px;
             padding: 15px 20px;
             border: 1px solid #0f0;
-            z-index: 100;
+            z-index: 102;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
@@ -779,7 +786,7 @@
             transition: all 0.2s;
             font-family: inherit;
             font-size: 0.85rem;
-            z-index: 99;
+            z-index: 101;
             display: none;
         }
         
@@ -795,6 +802,8 @@
             color: #7e966a;
             border-top: 1px solid #cfcaad;
             margin-top: 20px;
+            position: relative;
+            z-index: 1;
         }
         
         .success-msg {
@@ -828,7 +837,7 @@
     </style>
 </head>
 <body>
-<!-- Animaletti Ghibli fluttuanti - 10 elementi ben visibili -->
+<!-- Animaletti Ghibli fluttuanti - 10 elementi che passano SOPRA gli articoli -->
 <div class="ghibli-float float-1">🐚</div>
 <div class="ghibli-float float-2">🍃</div>
 <div class="ghibli-float float-3">🐌</div>
@@ -875,23 +884,51 @@
 <button id="dashboard-btn" class="dashboard-btn" onclick="window.location.href='dashboard.html'">📊 Dashboard Redazione</button>
 
 <script>
-// === REGOLAZIONE LUMINOSITÀ IN BASE ALL'ORA ITALIANA ===
+// === REGOLAZIONE LUMINOSITÀ IN BASE ALL'ORA ITALIANA (effetto più evidente) ===
 function aggiornaLuminosita() {
     const oraRoma = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }));
     const ore = oraRoma.getHours();
     
     let brightness = 1;
+    let saturation = 1;
     
-    if (ore >= 5 && ore < 7) brightness = 0.96;
-    else if (ore >= 7 && ore < 9) brightness = 0.98;
-    else if (ore >= 9 && ore < 12) brightness = 1.02;
-    else if (ore >= 12 && ore < 15) brightness = 1.05;
-    else if (ore >= 15 && ore < 18) brightness = 1.02;
-    else if (ore >= 18 && ore < 20) brightness = 0.96;
-    else if (ore >= 20 && ore < 22) brightness = 0.92;
-    else brightness = 0.88;
+    if (ore >= 5 && ore < 7) {
+        brightness = 0.92;
+        saturation = 0.95;
+    } else if (ore >= 7 && ore < 9) {
+        brightness = 0.96;
+        saturation = 0.98;
+    } else if (ore >= 9 && ore < 12) {
+        brightness = 1.02;
+        saturation = 1.02;
+    } else if (ore >= 12 && ore < 15) {
+        brightness = 1.08;
+        saturation = 1.05;
+    } else if (ore >= 15 && ore < 18) {
+        brightness = 1.02;
+        saturation = 1.02;
+    } else if (ore >= 18 && ore < 20) {
+        brightness = 0.92;
+        saturation = 0.92;
+    } else if (ore >= 20 && ore < 22) {
+        brightness = 0.85;
+        saturation = 0.88;
+    } else {
+        brightness = 0.78;
+        saturation = 0.85;
+    }
     
-    document.body.style.filter = `brightness(${brightness})`;
+    document.body.style.filter = `brightness(${brightness}) saturate(${saturation})`;
+    
+    // Cambia anche il colore di sfondo in modo più evidente
+    if (ore >= 22 || ore < 5) {
+        document.body.style.background = `linear-gradient(145deg, #1a2a3a 0%, #0d1a2a 100%)`;
+    } else if (ore >= 20 || ore < 6) {
+        document.body.style.background = `linear-gradient(145deg, #2a3a4a 0%, #1a2a3a 100%)`;
+    } else {
+        const mc = getComputedStyle(document.documentElement).getPropertyValue('--section-color').trim() || '#8db596';
+        document.body.style.background = `linear-gradient(145deg, #b8e1d4 0%, ${mc} 100%)`;
+    }
 }
 
 aggiornaLuminosita();
@@ -1022,7 +1059,6 @@ async function mostraSezione(sez,btn,STILI){
         const bn=n.nuovo?'<span class="badge-nuovo">nuovo</span>':'';
         const cf=n.commento_firma||{};
         
-        // FIRMA AUTORE (posizionata prima del testo)
         const firmaHtml = (cf.nome && cf.nome !== 'Redazione') ? 
             `<div class="firma-autore">
                 <span class="avatar-autore">${esc(cf.avatar) || '👤'}</span>
