@@ -17,7 +17,7 @@
       "13",
       "19"
     ],
-    "tolleranza_minuti": 10,
+    "tolleranza_minutti": 10,
     "lunghezza_articolo": 2,
     "cerca_modello_max": 1,
     "chat": "sempre",
@@ -26,7 +26,25 @@
     "fascia_reset_quote": "10",
     "commenti_min": 1,
     "commenti_max": 4,
-    "commenti_max_totali": 10
+    "commenti_max_totali": 10,
+    "articoli_random_red": {
+      "abilitato": true,
+      "num_min": 1,
+      "num_max": 2,
+      "solo_se_attivi": false,
+      "temi": [
+        "Il fascino dell'Abruzzo nascosto",
+        "La magia degli arrosticini",
+        "Pescara vista dal mare",
+        "I segreti del centro storico",
+        "Tradizioni e folclore abruzzese",
+        "La cucina pescarese tra mare e monti",
+        "I borghi più belli d'Abruzzo",
+        "La transumanza: antica tradizione",
+        "Il Parco Nazionale della Majella",
+        "Le leggende della costa adriatica"
+      ]
+    }
   },
   "CHI": {
     "default": {
@@ -69,7 +87,7 @@
       "bio_breve": "vive a Pescara da anni.Fra poco torna in Giappone, ma tornerà.Sognatore e pragmatico",
       "bio_completa": ""
     },
-      "Glusi": {
+    "Glusi": {
       "mood": "Ripete sempre 2 volte la finale della frase, ha modi di dire tipo siii siii siiiiii opppure glugluglu e si inventa sempre cose nuove che diventano virali",
       "peso": 0.7,
       "avatar": "🤪",
@@ -77,7 +95,7 @@
       "bio_breve": "sta sempre in giro,sempre occupato e torna stanco la sera a casa. Spesso lo viene a trovare il famoso taccagno che prende sempre più di quello che da.Simpatico e sempre indaffarato",
       "bio_completa": "E"
     },
-      "Lilli": {
+    "Lilli": {
       "mood": "Ragazza timida e ingenua,ama la letteratura, i libri,e sopratutto la natura, gli piace la filosofia e la psicologia.Sognatrice e romantica",
       "peso": 0.7,
       "avatar": "👩",
@@ -85,7 +103,7 @@
       "bio_breve": "passa spesso le giornate a casa, il mondo a volte non gli piace",
       "bio_completa": ""
     },
-      "Wolf": {
+    "Wolf": {
       "mood": "Deluso da tutti, lavoratore instancabile, burbero e diretto",
       "peso": 0.7,
       "avatar": "👩‍🌾",
@@ -401,7 +419,7 @@
       "weight_articolo": 0.85,
       "weight_commento": 0.7
     },
-     {
+    {
       "g": "lun,gio",
       "sez": "pescara",
       "arg": "Storie divertenti",
