@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>La Voce del Delfino 🐬 - Edizione Ghibli</title>
     <style>
+        /* ============================================
+           DESCRIZIONE DEL FILE
+           --------------------------------------------
+           Questo file implementa un magazine in stile Ghibli con:
+           
+           1. TESTATA con immagine e barra informazioni.
+           2. MENU a tab (categorie) – puramente estetico.
+           3. ARTICOLI in formato card: titolo, autore, testo, pulsante “Leggi tutto”.
+           4. COMMENTO DELLA REDAZIONE (classe .commento-firma):
+              - Sfondo crema, bordo tratteggiato, avatar 🐬, testo espandibile con toggle individuale.
+           5. COMMENTI DEI PERSONAGGI (classe .commento-personaggio):
+              - Racchiusi in un pannello espandibile (.commenti-panel).
+              - Unico header (.commenti-header) con:
+                  * Numero commenti + icona chat (es. "💬 3")
+                  * Etichetta "Personaggi Ghibli commentano"
+                  * Triangolo che ruota all'apertura.
+              - Ogni commento ha:
+                  * Barra grafica laterale (border-left verde)
+                  * Avatar, nome personaggio, testo sempre visibile (nessun toggle interno).
+              - Cliccando sull’header si apre/chiude l’intero pannello dei commenti.
+           6. ANIMAZIONI e animaletti fluttuanti (effetto Ghibli).
+           7. SCRIPT per:
+              - Espansione dei commenti della redazione (toggle individuale)
+              - Espansione dell’intero pannello dei commenti personaggi (unico triangolo)
+              - Pulsante “Leggi tutto” negli articoli.
+        ============================================ */
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         :root {
@@ -26,31 +53,29 @@
             position: relative;
             min-height: 100vh;
             overflow-x: hidden;
-            transition: background 0.6s ease;
         }
         
-        /* Elementi Ghibli fluttuanti */
+        /* Animaletti fluttuanti */
         .ghibli-float {
             position: fixed;
-            pointer-events: none;
-            z-index: 0;
-            font-size: 2rem;
-            opacity: 0.2;
-            animation: floatAround 20s infinite ease-in-out;
+            pointer-events: auto;
+            cursor: pointer;
+            z-index: 100;
+            font-size: 2.2rem;
+            opacity: 0.6;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+            transition: all 0.4s ease;
+            text-shadow: 0 0 5px rgba(255,255,200,0.5);
         }
-        
+        body:hover .ghibli-float { opacity: 0.85; }
         @keyframes floatAround {
             0% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(30px, -20px) rotate(5deg); }
+            50% { transform: translate(25px, -20px) rotate(5deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
         }
-        
-        .float-1 { top: 10%; left: 2%; animation-duration: 25s; font-size: 2.5rem; }
-        .float-2 { bottom: 15%; right: 3%; animation-duration: 18s; font-size: 2rem; }
-        .float-3 { top: 30%; right: 8%; animation-duration: 22s; font-size: 1.8rem; }
-        .float-4 { bottom: 30%; left: 5%; animation-duration: 30s; font-size: 2.2rem; }
-        .float-5 { top: 60%; left: 12%; animation-duration: 20s; font-size: 1.5rem; }
-        .float-6 { top: 15%; right: 20%; animation-duration: 28s; font-size: 2rem; }
+        .float-1 { top: 5%; left: 2%; animation: floatAround 25s infinite ease-in-out; font-size: 2.8rem; }
+        .float-2 { bottom: 10%; right: 3%; animation: floatAround 18s infinite ease-in-out; font-size: 2.2rem; }
+        .float-3 { top: 20%; right: 5%; animation: floatAround 22s infinite ease-in-out; font-size: 2rem; }
         
         #app {
             position: relative;
@@ -60,29 +85,22 @@
             padding: 0 20px;
         }
         
-        /* Header */
         .testata {
             text-align: center;
             margin: 20px 0 20px;
             cursor: pointer;
         }
-        
         .testata img#header-img {
             width: 100%;
             max-width: 600px;
             border-radius: 60px 60px 30px 30px;
             box-shadow: 0 20px 35px rgba(0,0,0,0.15), 0 0 0 8px rgba(255,245,220,0.5);
-            transition: transform 0.4s ease, box-shadow 0.3s ease;
-            object-fit: cover;
+            transition: transform 0.4s ease;
             height: 300px;
+            object-fit: cover;
         }
+        .testata img#header-img:hover { transform: scale(1.01); }
         
-        .testata img#header-img:hover {
-            transform: scale(1.01);
-            box-shadow: 0 25px 40px rgba(0,0,0,0.2), 0 0 0 8px rgba(255,245,220,0.7);
-        }
-        
-        /* Info bar */
         .info-bar {
             background: rgba(255,248,225,0.85);
             backdrop-filter: blur(4px);
@@ -92,58 +110,22 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
             flex-wrap: wrap;
-            width: auto;
             max-width: 90%;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             border: 1px solid rgba(140,120,80,0.2);
-            transition: all 0.3s ease;
         }
+        .dt-tempo, .timbro-edizione { font-size: 0.85rem; font-style: italic; color: #6b5e3a; background: rgba(245,230,200,0.7); padding: 4px 12px; border-radius: 30px; }
+        .dt-motto { font-size: 0.9rem; font-weight: 500; color: #5c6e4a; text-align: center; flex: 1; }
         
-        .info-bar:hover {
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-            transform: translateY(-1px);
-        }
-        
-        .dt-tempo {
-            font-size: 0.85rem;
-            font-style: italic;
-            color: #6b5e3a;
-            background: rgba(245,230,200,0.7);
-            padding: 4px 12px;
-            border-radius: 30px;
-        }
-        
-        .dt-motto {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #5c6e4a;
-            letter-spacing: 0.5px;
-            flex: 1;
-            text-align: center;
-        }
-        
-        .timbro-edizione {
-            font-size: 0.7rem;
-            color: #9e8b64;
-            background: rgba(245,230,200,0.6);
-            padding: 3px 10px;
-            border-radius: 30px;
-            font-style: italic;
-        }
-        
-        /* Menu categorie */
         .menu {
             display: flex;
             overflow-x: auto;
             padding: 15px 0 25px;
             gap: 15px;
-            scrollbar-width: thin;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
         .tab {
             white-space: nowrap;
             padding: 8px 24px;
@@ -152,27 +134,13 @@
             backdrop-filter: blur(2px);
             color: #5c6e4a;
             font-weight: 600;
-            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
             border: 1px solid rgba(100, 80, 40, 0.2);
         }
+        .tab:hover { transform: translateY(-2px); background: rgba(245, 230, 200, 0.9); }
+        .tab.attiva { background: #b8e1d4; color: #3a5a3c; border-color: #8db596; box-shadow: 0 6px 14px rgba(100,120,80,0.2); transform: translateY(-2px); }
         
-        .tab:hover {
-            transform: translateY(-2px);
-            background: rgba(245, 230, 200, 0.9);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        
-        .tab.attiva {
-            background: var(--ghibli-moss);
-            color: white;
-            border-color: var(--ghibli-moss);
-            box-shadow: 0 6px 14px rgba(90, 120, 70, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        /* Griglia unificata */
         .grid-container {
             padding: 20px 0 40px;
             display: grid;
@@ -180,33 +148,23 @@
             gap: 35px;
         }
         
-        /* Card generica */
         .card {
             background: var(--ghibli-cream);
             border-radius: 32px;
             padding: 24px 22px 22px;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 12px 24px rgba(0,0,0,0.08);
             border: 1px solid rgba(140, 120, 70, 0.15);
             position: relative;
             display: flex;
             flex-direction: column;
         }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0,0,0,0.12); }
         
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 30px rgba(0,0,0,0.12);
-        }
-        
-        /* Badge numerico */
         .card-numero {
             position: absolute;
-            top: -15px;
-            left: -12px;
-            width: 44px;
-            height: 44px;
-            background: var(--ghibli-sunset);
-            color: #5a3e2e;
+            top: -15px; left: -12px;
+            width: 44px; height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -215,39 +173,19 @@
             font-size: 1.3rem;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border: 3px solid white;
-            transition: transform 0.2s ease;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
-        
-        .card:hover .card-numero {
-            transform: scale(1.05);
-        }
-        
-        /* Etichetta categoria */
         .card-categoria {
             position: absolute;
-            top: -12px;
-            right: 20px;
+            top: -12px; right: 20px;
             padding: 4px 14px;
             border-radius: 30px;
             font-size: 0.7rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
             background: white;
-            color: #6b8c5c;
-            border: 1px solid #cbd5b0;
-            transition: all 0.2s ease;
+            border: 1px solid;
         }
-        
-        .card:hover .card-categoria {
-            transform: translateY(-2px);
-        }
-        
-        /* Box colori per tipo notizia */
-        .card.rss-box { border-left: 6px solid #6f9e7c; }
-        .card.gen-box { border-left: 6px solid #e0a878; }
-        .card.personaggio-box { border-left: 6px solid #9b9e6f; background: #fef8ed; }
-        .card.chat-box { border-left: 6px solid #9ec07c; background: #fefcf5; }
-        
         .card-img-box {
             width: 100%;
             aspect-ratio: 16/9;
@@ -256,28 +194,29 @@
             margin-bottom: 18px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
-        
-        .card-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        
+        .card-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
         .card-img-box img:hover { transform: scale(1.03); }
         
-        h2 {
-            font-size: 1.5rem;
-            margin: 12px 0 14px;
-            font-weight: 600;
-            color: #4a5b3e;
-            line-height: 1.3;
-            transition: color 0.2s ease;
-        }
+        h2 { font-size: 1.5rem; margin: 12px 0 14px; font-weight: 600; color: #4a5b3e; line-height: 1.3; }
+        .card:hover h2 { color: #6a8e4a; }
         
-        .card:hover h2 {
-            color: #6a8e4a;
+        .firma-autore {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding: 8px 0 8px 8px;
+            border-top: 1px solid #e8e0cc;
+            border-bottom: 1px solid #e8e0cc;
+            background: rgba(255,250,235,0.5);
+            border-radius: 12px;
         }
+        .autore-info { display: flex; align-items: center; gap: 10px; }
+        .avatar-autore { font-size: 1.4rem; }
+        .nome-autore { font-weight: 600; color: #6a8e4a; font-size: 0.85rem; }
+        .articolo-data { font-size: 0.65rem; color: #9bae8a; background: rgba(200,180,140,0.15); padding: 3px 8px; border-radius: 20px; }
         
         .testo {
             font-size: 0.95rem;
@@ -289,9 +228,7 @@
             overflow: hidden;
             font-family: 'Georgia', serif;
         }
-        
         .testo.aperto { -webkit-line-clamp: unset; }
-        
         .leggi-tutto {
             background: none;
             border: none;
@@ -306,39 +243,9 @@
             margin-top: auto;
             width: fit-content;
         }
+        .leggi-tutto:hover { color: #4e6b3e; transform: translateX(4px); }
         
-        .leggi-tutto:hover {
-            color: #4e6b3e;
-            transform: translateX(4px);
-        }
-        
-        .firma-autore {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.75rem;
-            color: #8faa7e;
-            margin: 10px 0 8px;
-            font-style: italic;
-        }
-        
-        .badge-nuovo {
-            background: #e6b17e;
-            color: #5a3e2e;
-            font-size: 0.65rem;
-            padding: 2px 10px;
-            border-radius: 30px;
-            margin-left: 8px;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
-        }
-        
-        /* Commento firma */
+        /* ===== COMMENTO REDAZIONE (stile originale) ===== */
         .commento-firma {
             background: #f3efdf;
             border-radius: 24px;
@@ -350,19 +257,12 @@
             cursor: pointer;
             transition: background 0.2s, transform 0.2s;
         }
-        
-        .commento-firma:hover {
-            background: #ede5cf;
-            transform: translateX(4px);
-        }
-        
+        .commento-firma:hover { background: #ede5cf; transform: translateX(4px); }
         .avatar-firma {
             position: absolute;
-            left: 14px;
-            top: 10px;
+            left: 14px; top: 10px;
             font-size: 1.5rem;
         }
-        
         .nome-firma {
             font-size: 0.7rem;
             font-weight: bold;
@@ -370,524 +270,277 @@
             display: block;
             margin-bottom: 4px;
         }
-        
         .firma-toggle {
             float: right;
             font-size: 0.7rem;
             color: #bcae84;
             transition: transform 0.2s;
         }
-        
         .commento-firma.aperto .firma-toggle { transform: rotate(180deg); }
+        .testo-firma { display: none; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e0d6be; }
+        .commento-firma.aperto .testo-firma { display: block; }
         
-        /* Commenti personaggi */
+        /* ===== HEADER COMMENTI PERSONAGGI (con triangolo e icona chat) ===== */
         .commenti-header {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-top: 16px;
-            padding: 6px 0;
+            padding: 8px 6px;
             cursor: pointer;
             border-top: 1px solid #e0d6be;
             transition: background 0.2s;
         }
-        
-        .commenti-header:hover {
-            background: rgba(0,0,0,0.02);
-            border-radius: 12px;
-        }
-        
+        .commenti-header:hover { background: rgba(0,0,0,0.02); border-radius: 12px; }
         .commenti-count {
             background: #cbd5b0;
             color: #4a5b3e;
             border-radius: 30px;
             padding: 2px 10px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
-        
         .commenti-label {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: #8faa7e;
             text-transform: uppercase;
             flex: 1;
+            font-weight: 600;
         }
-        
         .commenti-arrow {
             font-size: 0.7rem;
             color: #bcae84;
             transition: transform 0.2s;
         }
-        
         .commenti-header.aperto .commenti-arrow { transform: rotate(180deg); }
         
+        /* Pannello dei commenti (inizialmente chiuso) */
         .commenti-panel {
             display: none;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
             margin-top: 12px;
         }
-        
         .commenti-panel.aperto { display: flex; }
         
+        /* ===== COMMENTO PERSONAGGIO (con barra laterale) ===== */
         .commento-personaggio {
-            background: #fbf7eb;
-            padding: 10px 12px 10px 44px;
-            border-radius: 24px;
-            position: relative;
-            font-size: 0.8rem;
-            border: 1px solid #e6ddc0;
-            cursor: pointer;
+            background: #fef9e6;
+            border-radius: 20px;
+            padding: 12px 16px 12px 20px;
+            border: 1px solid #e0d6be;
+            border-left: 6px solid #8db596;   /* barra grafica laterale */
             transition: all 0.2s ease;
         }
-        
         .commento-personaggio:hover {
-            background: #f5efdf;
+            background: #fcf6e8;
             transform: translateX(4px);
+            border-left-width: 8px;
         }
-        
-        .avatar-p {
-            position: absolute;
-            left: 12px;
-            top: 8px;
+        .commento-personaggio .avatar-p {
             font-size: 1.3rem;
-        }
-        
-        .nome-p {
-            font-weight: bold;
-            font-size: 0.65rem;
-            color: #9b8862;
-            display: block;
-            margin-bottom: 3px;
-        }
-        
-        .testo-p {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .commento-personaggio.aperto .testo-p { display: block; -webkit-line-clamp: unset; }
-        
-        .commento-toggle {
-            float: right;
-            font-size: 0.65rem;
-            color: #bcae84;
-            transition: transform 0.2s;
-        }
-        
-        .commento-personaggio.aperto .commento-toggle { transform: rotate(180deg); }
-        
-        /* ========== CHAT UNIFICATA ========== */
-        .chat-main-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 0 12px;
-            border-bottom: 2px solid #e0d6be;
-            margin-bottom: 10px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .chat-main-header:hover {
-            background: rgba(0,0,0,0.02);
-            border-radius: 16px;
-            padding-left: 8px;
-            padding-right: 8px;
-        }
-        
-        .chat-main-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #6a8e4a;
-        }
-        
-        .chat-main-badge {
-            background: #9ec07c20;
-            color: #6a8e4a;
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-size: 0.7rem;
-            font-weight: 600;
-        }
-        
-        .chat-main-expand {
-            font-size: 0.9rem;
-            color: #bcae84;
-            transition: transform 0.2s;
-        }
-        
-        .card.chat-box.aperto .chat-main-expand {
-            transform: rotate(180deg);
-        }
-        
-        .chat-conversazioni {
-            display: none;
-            flex-direction: column;
-            gap: 16px;
-        }
-        
-        .card.chat-box.aperto .chat-conversazioni {
-            display: flex;
-        }
-        
-        /* Singola conversazione */
-        .chat-conversazione {
-            background: #fefcf5;
-            border-radius: 24px;
-            padding: 12px 16px;
-            border: 1px solid #e6ddc0;
-            transition: all 0.2s;
-        }
-        
-        .chat-conversazione:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        
-        .chat-conversazione-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            padding: 4px 0;
-        }
-        
-        .chat-conversazione-date {
-            font-size: 0.7rem;
-            color: #b0a27a;
-            font-style: italic;
-        }
-        
-        .chat-conversazione-badge {
-            background: #cbd5b0;
-            color: #4a5b3e;
-            padding: 2px 10px;
-            border-radius: 30px;
-            font-size: 0.65rem;
-            font-weight: 600;
-        }
-        
-        .chat-conversazione-expand {
-            font-size: 0.7rem;
-            color: #bcae84;
-            transition: transform 0.2s;
-        }
-        
-        .chat-conversazione.aperto .chat-conversazione-expand {
-            transform: rotate(180deg);
-        }
-        
-        .chat-conversazione-messages {
-            display: none;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid #e6ddc0;
-        }
-        
-        .chat-conversazione.aperto .chat-conversazione-messages {
-            display: flex;
-        }
-        
-        /* Messaggi chat */
-        .chat-message {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            padding: 8px 0;
-            border-left: 3px solid;
-            border-radius: 0 16px 16px 0;
-            padding-left: 14px;
-            transition: transform 0.2s;
-        }
-        
-        .chat-message:hover {
-            transform: translateX(4px);
-        }
-        
-        .chat-message[data-personaggio="Wolf"] { border-left-color: #8b5e3c; }
-        .chat-message[data-personaggio="Juizinho"] { border-left-color: #e0a878; }
-        .chat-message[data-personaggio="Cetteo"] { border-left-color: #5f9c8b; }
-        .chat-message[data-personaggio="Hiroki"] { border-left-color: #c48b5e; }
-        .chat-message[data-personaggio="Glusi"] { border-left-color: #9b9e6f; }
-        .chat-message[data-personaggio="Lilli"] { border-left-color: #e8b88a; }
-        .chat-message[data-personaggio="Abbukk"] { border-left-color: #6a9c6e; }
-        .chat-message[data-personaggio="Lars"] { border-left-color: #7c9a6e; }
-        .chat-message[data-personaggio="Bartender"] { border-left-color: #c2a15b; }
-        .chat-message { border-left-color: #9ec07c; }
-        
-        .chat-avatar { font-size: 1.6rem; flex-shrink: 0; }
-        .chat-content { flex: 1; }
-        
-        .chat-message-nome {
-            font-weight: bold;
-            font-size: 0.7rem;
             display: inline-block;
-            padding: 2px 10px;
-            border-radius: 20px;
-            margin-bottom: 4px;
+            margin-right: 8px;
+            vertical-align: middle;
         }
-        
-        .chat-message[data-personaggio="Wolf"] .chat-message-nome { background: #8b5e3c20; color: #8b5e3c; }
-        .chat-message[data-personaggio="Juizinho"] .chat-message-nome { background: #e0a87820; color: #c88a4a; }
-        .chat-message[data-personaggio="Cetteo"] .chat-message-nome { background: #5f9c8b20; color: #5f9c8b; }
-        .chat-message[data-personaggio="Hiroki"] .chat-message-nome { background: #c48b5e20; color: #c48b5e; }
-        .chat-message[data-personaggio="Glusi"] .chat-message-nome { background: #9b9e6f20; color: #7a7c4a; }
-        .chat-message[data-personaggio="Lilli"] .chat-message-nome { background: #e8b88a20; color: #d49a5e; }
-        .chat-message[data-personaggio="Abbukk"] .chat-message-nome { background: #6a9c6e20; color: #6a9c6e; }
-        .chat-message[data-personaggio="Lars"] .chat-message-nome { background: #7c9a6e20; color: #7c9a6e; }
-        .chat-message[data-personaggio="Bartender"] .chat-message-nome { background: #c2a15b20; color: #a8843a; }
-        
-        .chat-message-testo {
-            font-size: 0.85rem;
-            color: #4e5e48;
-            line-height: 1.5;
-            font-style: italic;
-        }
-        
-        /* Bottone Dashboard (nascosto all'inizio) */
-        .dashboard-btn {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #9ec07c;
-            color: #2d3e1f;
-            border: none;
-            border-radius: 50px;
-            padding: 10px 20px;
+        .commento-personaggio .nome-p {
             font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            transition: all 0.2s;
-            font-family: inherit;
+            color: #6a8e4a;
             font-size: 0.85rem;
-            z-index: 99;
-            display: none;
+            display: inline-block;
         }
+        .commento-personaggio .testo-p {
+            margin-top: 8px;
+            margin-left: 36px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #4e5e48;
+            display: block;
+        }
+        /* Nascondi eventuali toggle individuali (non presenti) */
+        .commento-toggle { display: none; }
         
-        .dashboard-btn:hover {
-            background: #bcdd9a;
-            transform: scale(1.02);
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 30px 0 20px;
-            font-size: 0.7rem;
-            color: #7e966a;
-            border-top: 1px solid #cfcaad;
-            margin-top: 20px;
-        }
-        
-        .success-msg {
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 12px 20px;
-            border-radius: 30px;
-            margin-bottom: 15px;
-            text-align: center;
-            font-size: 0.85rem;
-            animation: fadeInOut 5s ease;
-        }
-        
-        @keyframes fadeInOut {
-            0% { opacity: 0; transform: translateY(-10px); }
-            10% { opacity: 1; transform: translateY(0); }
-            90% { opacity: 1; }
-            100% { opacity: 0; transform: translateY(-10px); }
-        }
-        
-        @media (max-width: 700px) {
-            #app { padding: 0 12px; }
-            .testata img#header-img { height: 180px; }
-            .grid-container { grid-template-columns: 1fr; gap: 25px; }
-            .info-bar { flex-direction: column; text-align: center; }
-        }
     </style>
 </head>
 <body>
-<!-- Elementi Ghibli fluttuanti -->
-<div class="ghibli-float float-1">🐚</div>
-<div class="ghibli-float float-2">🍃</div>
-<div class="ghibli-float float-3">🐌</div>
-<div class="ghibli-float float-4">🌿</div>
-<div class="ghibli-float float-5">🐞</div>
-<div class="ghibli-float float-6">🕊️</div>
+    <!-- Animaletti fluttuanti -->
+    <div class="ghibli-float float-1">🐱</div>
+    <div class="ghibli-float float-2">🐦</div>
+    <div class="ghibli-float float-3">🍃</div>
 
-<div id="app">
-    <div class="testata" id="logo-innesco">
-        <img id="header-img" src="public/images/default.webp" alt="La Voce del Delfino">
-    </div>
-    
-    <div style="display: flex; justify-content: center;">
-        <div class="info-bar">
-            <span class="dt-tempo" id="ts-display">🐬 Il Delfino sta nuotando...</span>
-            <span class="dt-motto" id="motto-display"></span>
-            <span class="timbro-edizione" id="timbro-edizione">🌊 Resistenza Adriatica</span>
+    <div id="app">
+        <div class="testata" onclick="alert('🐬 Benvenuti nel mondo Ghibli!')">
+            <img id="header-img" src="https://picsum.photos/id/104/600/300" alt="Testata Ghibli">
         </div>
-    </div>
-    
-    <div class="menu" id="menu-cat"></div>
-    <div id="grid-container" class="grid-container"></div>
-    
-    <div class="footer">
-        🌿 La Voce del Delfino - Edizione Ghibli 🌿
-    </div>
-</div>
+        <div class="info-bar">
+            <div class="dt-tempo">🌤️ Primavera 2026</div>
+            <div class="dt-motto">「La magia è nei dettagli che non noti」</div>
+            <div class="timbro-edizione">Edizione Ghibli · Fondata nel 1985</div>
+        </div>
+        <div class="menu">
+            <div class="tab attiva">🌿 Natura</div>
+            <div class="tab">🍜 Ricette</div>
+            <div class="tab">🚂 Viaggi</div>
+            <div class="tab">📖 Racconti</div>
+            <div class="tab">🐈 Curiosità</div>
+        </div>
 
-<button id="dashboard-btn" class="dashboard-btn" onclick="window.location.href='dashboard.html'">📊 Dashboard Redazione</button>
-
-<script>
-let clicks = 0;
-let lastClick = 0;
-let dashboardSbloccata = false;
-
-function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
-
-// 5 click sul banner + password per sbloccare dashboard
-document.getElementById('logo-innesco').onclick = async () => {
-    const ora = Date.now();
-    if (ora - lastClick > 1000) clicks = 0;
-    clicks++;
-    lastClick = ora;
-    if (clicks === 5) {
-        const pwd = prompt('🔐 Inserisci password per sbloccare la Dashboard:');
-        if (!pwd) return;
-        try {
-            const a = await fetch('public/data/auth_info.json?v=' + ora).then(r => r.json());
-            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
-                .map(b => b.toString(16).padStart(2, '0')).join('');
-            if (hash === a.check) {
-                dashboardSbloccata = true;
-                document.getElementById('dashboard-btn').style.display = 'flex';
-                const container = document.getElementById('grid-container');
-                const msgDiv = document.createElement('div');
-                msgDiv.className = 'success-msg';
-                msgDiv.innerText = '🔓 Dashboard sbloccata! Puoi accedere al pannello di controllo.';
-                container.parentNode.insertBefore(msgDiv, container);
-                setTimeout(() => msgDiv.remove(), 5000);
-            } else {
-                alert('Password errata');
-            }
-        } catch(e) { alert('Errore verifica password'); }
-        clicks = 0;
-    }
-};
-
-async function carica(){
-    try{
-        const cfg=await fetch('public/data/active_config_v2.json?v='+Date.now()).then(r=>r.json());
-        const ss=cfg.site_settings||{};
-        if(ss.header_img)document.getElementById('header-img').src='public/images/'+ss.header_img;
-        if(ss.timbro){const t=document.getElementById('timbro-edizione');t.innerText=ss.timbro;t.style.display='inline-flex';}
-        const up=ss.last_update||'---';
-        const providerText = ss.llm_provider ? ` (${ss.llm_provider})` : '';
-        document.getElementById('ts-display').innerHTML = up !== '---' ? `🐬 Il Delfino ha nuotato qui il ${up}${providerText}` : '🐬 Il Delfino sta nuotando...';
-        if(ss.motto)document.getElementById('motto-display').innerText='✦ '+ss.motto+' ✦';
-        const sezioni=[...new Set((cfg.REDAZIONE||[]).map(v=>v.sez))];
-        sezioni.forEach((sez,i)=>{
-            const b=document.createElement('button');
-            b.className='tab'+(i===0?' attiva':'');
-            b.innerText=sez;
-            b.onclick=()=>mostraSezione(sez,b,cfg.STILI||{});
-            document.getElementById('menu-cat').appendChild(b);
-        });
-        if(sezioni[0])mostraSezione(sezioni[0],null,cfg.STILI||{});
-    }catch(e){console.error(e);}
-}
-
-async function mostraSezione(sez,btn,STILI){
-    if(btn){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('attiva'));btn.classList.add('attiva');}
-    const data=await fetch('public/data/news-v2-'+sez+'.json?v='+Date.now()).then(r=>r.json());
-    const mc=data.color||'#8db596';
-    document.documentElement.style.setProperty('--section-color', mc);
-    document.body.style.background = `linear-gradient(145deg, #b8e1d4 0%, ${mc} 100%)`;
-    
-    const news=data.news||[];
-    const chatData = await fetch('public/data/_chat.json?v='+Date.now()).then(r=>r.json()).catch(()=>[]);
-    
-    const container = document.getElementById('grid-container');
-    container.innerHTML = '';
-    
-    // Notizie
-    const ord = [...news.filter(n=>n.tipo==='personaggio'), ...news.filter(n=>n.tipo==='rss'), ...news.filter(n=>n.tipo==='gen')];
-    ord.forEach((n,idx)=>{
-        const tipo=n.tipo||'rss';
-        const isP=tipo==='personaggio';
-        const bx=isP?'personaggio-box':tipo==='gen'?'gen-box':'rss-box';
-        const lx=isP?'personaggio-label':tipo==='gen'?'gen-label':'rss-label';
-        const bn=n.nuovo?'<span class="badge-nuovo">nuovo</span>':'';
-        const cf=n.commento_firma||{};
-        const firmaH=!isP&&cf.nome?`<div class="firma-autore"><span class="avatar-autore">${esc(cf.avatar)||'👤'}</span><span>${esc(cf.nome)}</span></div>`:'';
-        const cfH=cf.testo?`<div class="commento-firma" onclick="this.classList.toggle('aperto')"><span class="avatar-firma">${esc(cf.avatar)||'👤'}</span><span class="nome-firma">${esc(cf.nome)||'Redazione'} <span class="firma-toggle">▼</span></span><div class="testo-firma">${esc(cf.testo)}</div></div>`:'';
-        const comm=n.commenti||[];
-        const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')"><span class="avatar-p">${esc(c.avatar)||'👤'}</span><span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span><div class="testo-p">${esc(c.testo)}</div></div>`).join('');
-        const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')"><span class="commenti-count">${comm.length}</span><span class="commenti-label">Comment${comm.length===1?'o':'i'}</span><span class="commenti-arrow">▼</span></div><div class="commenti-panel">${cListH}</div>`:'';
-        
-        const card = document.createElement('div');
-        card.className = `card ${bx}`;
-        card.innerHTML = `
-            <div class="card-numero">${idx+1}</div>
-            <div class="card-categoria ${lx}">${esc(n.categoria)}${bn}</div>
-            <div class="card-img-box"><img src="public/images/${esc(n.immagine)||'default.webp'}" onerror="this.src='https://placehold.co/600x400?text=News'"></div>
-            ${firmaH}
-            <h2>${esc(n.titolo)}</h2>
-            <div class="testo" id="t${idx}">${esc(n.articolo)}</div>
-            <button class="leggi-tutto" onclick="const t=document.getElementById('t${idx}');t.classList.toggle('aperto');this.innerText=t.classList.contains('aperto')?'Nascondi':'Leggi articolo'">Leggi articolo</button>
-            ${cfH}
-            ${cH}
-        `;
-        container.appendChild(card);
-    });
-    
-    // Chat unificata (una sola card)
-    if(chatData && chatData.length > 0){
-        const chatCard = document.createElement('div');
-        chatCard.className = 'card chat-box';
-        
-        let conversazioniHtml = '';
-        chatData.forEach((chat, chatIdx) => {
-            const numMsg = (chat.messaggi || []).length;
-            conversazioniHtml += `
-                <div class="chat-conversazione">
-                    <div class="chat-conversazione-header" onclick="this.parentElement.classList.toggle('aperto')">
-                        <div class="chat-conversazione-date">📅 ${esc(chat.data || '')}</div>
-                        <div class="chat-conversazione-badge">💬 ${numMsg} messaggi</div>
-                        <div class="chat-conversazione-expand">▼</div>
-                    </div>
-                    <div class="chat-conversazione-messages">
-                        ${(chat.messaggi || []).map(m => `
-                            <div class="chat-message" data-personaggio="${esc(m.nome)}">
-                                <div class="chat-avatar">${esc(m.avatar || '👤')}</div>
-                                <div class="chat-content">
-                                    <div class="chat-message-nome">${esc(m.nome)}</div>
-                                    <div class="chat-message-testo">${esc(m.testo)}</div>
-                                </div>
-                            </div>
-                        `).join('')}
+        <div class="grid-container">
+            <!-- ARTICOLO 1 -->
+            <div class="card">
+                <div class="card-numero" style="background: #7c9a6e;">1</div>
+                <div class="card-categoria" style="border-color: #7c9a6e; color:#7c9a6e;">🌿 NATURA</div>
+                <div class="card-img-box"><img src="https://picsum.photos/id/104/400/225" alt="Città dopo la pioggia"></div>
+                <h2>Il silenzio delle città dopo la pioggia</h2>
+                <div class="firma-autore"><div class="autore-info"><span class="avatar-autore">📝</span><span class="nome-autore">Haru Okamoto</span></div><div class="articolo-data">🗓️ 15 minuti fa</div></div>
+                <div class="testo">Camminare per le strade bagnate, quando le nuvole si aprono e il mondo trattiene il fiato. Un silenzio che non è assenza, ma presenza di gocce che cadono dai tetti e ristagnano nelle pozzanghere. È in questi momenti che la città, di solito così rumorosa, si rivela per ciò che è: un bosco di cemento che sogna di tornare terra.</div>
+                <button class="leggi-tutto">⟳ Leggi tutto</button>
+                
+                <!-- COMMENTO REDAZIONE -->
+                <div class="commento-firma">
+                    <span class="avatar-firma">🐬</span>
+                    <span class="nome-firma">La Voce del Delfino - Redazione</span>
+                    <span class="firma-toggle">▼</span>
+                    <div class="testo-firma">
+                        «La pioggia è il modo che ha il cielo per ricordare alla città che anche lei ha bisogno di essere ascoltata, non solo di parlare. Ogni pozzanghera è un piccolo specchio che rifrange un mondo più lento, più gentile.»
                     </div>
                 </div>
-            `;
+                
+                <!-- HEADER COMMENTI PERSONAGGI (con numero e icona chat) -->
+                <div class="commenti-header">
+                    <span class="commenti-count">💬 3</span>
+                    <span class="commenti-label">Personaggi Ghibli commentano</span>
+                    <span class="commenti-arrow">▼</span>
+                </div>
+                <div class="commenti-panel">
+                    <div class="commento-personaggio">
+                        <div><span class="avatar-p">🐈⬛</span> <span class="nome-p">Jiji (Kiki)</span></div>
+                        <div class="testo-p">"Miaow... finalmente un po' di pace. Quel silenzio mi ricorda quando Kiki è appena arrivata a Koriko e pioveva. Si sentiva ogni singola goccia."</div>
+                    </div>
+                    <div class="commento-personaggio">
+                        <div><span class="avatar-p">🚂</span> <span class="nome-p">Spirito della Locomotiva (Spirited Away)</span></div>
+                        <div class="testo-p">"Le rotaie bagnate brillano come sentieri di stelle. Ho trasportato anime e silenzi per secoli. La pioggia è l'unico passeggero che non paga mai il biglietto."</div>
+                    </div>
+                    <div class="commento-personaggio">
+                        <div><span class="avatar-p">🐗</span> <span class="nome-p">Principessa Mononoke</span></div>
+                        <div class="testo-p">"Nel profondo della foresta, la pioggia non è mai silenzio. È una sinfonia di foglie che battono le mani e terra che beve."</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ARTICOLO 2 -->
+            <div class="card">
+                <div class="card-numero" style="background: #e8b88a;">2</div>
+                <div class="card-categoria" style="border-color: #e8b88a; color:#b87c4a;">☕ RITUALI</div>
+                <div class="card-img-box"><img src="https://picsum.photos/id/20/400/225" alt="Tazza di tè"></div>
+                <h2>Il primo bricco di tè della mattina</h2>
+                <div class="firma-autore"><div class="autore-info"><span class="avatar-autore">🍵</span><span class="nome-autore">Sofia Kenji</span></div><div class="articolo-data">🗓️ 2 ore fa</div></div>
+                <div class="testo">Prima che il mondo pretenda la tua attenzione, c'è un momento sacro: l'acqua che bolle, la vaporiera che fischia piano, l'aroma che si alza come una nebbia calda. È un piccolo incantesimo quotidiano, una carezza che prepari con le tue mani. Quel primo sorso non è solo tè, è una promessa che fai a te stesso: oggi, un po' di gentilezza.</div>
+                <button class="leggi-tutto">⟳ Leggi tutto</button>
+                
+                <div class="commento-firma">
+                    <span class="avatar-firma">🐬</span>
+                    <span class="nome-firma">La Voce del Delfino - Redazione</span>
+                    <span class="firma-toggle">▼</span>
+                    <div class="testo-firma">
+                        «La magia non abita solo nei castelli volanti. A volte si nasconde nel fondo di una tazza di ceramica, in quel minuto in cui il vapore disegna spirali nell'aria prima di dissolversi.»
+                    </div>
+                </div>
+                
+                <div class="commenti-header">
+                    <span class="commenti-count">💬 2</span>
+                    <span class="commenti-label">Personaggi Ghibli commentano</span>
+                    <span class="commenti-arrow">▼</span>
+                </div>
+                <div class="commenti-panel">
+                    <div class="commento-personaggio">
+                        <div><span class="avatar-p">🤖</span> <span class="nome-p">Calcifer (Il Castello Errante)</span></div>
+                        <div class="testo-p">"Adoro quando qualcuno accende il fuoco per il tè. È il modo più gentile per svegliarmi. E poi, il primo sorso... ecco, quello è il momento in cui anche un castello stregato si sente una casa."</div>
+                    </div>
+                    <div class="commento-personaggio">
+                        <div><span class="avatar-p">🍃</span> <span class="nome-p">Totoro</span></div>
+                        <div class="testo-p">"Roar... (beve rumorosamente da una foglia gigante). Il tè con le ghiande è il mio preferito. Soprattutto se lo condividi con qualcuno."</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ARTICOLO 3 -->
+            <div class="card">
+                <div class="card-numero" style="background: #6a9c6e;">3</div>
+                <div class="card-categoria" style="border-color: #6a9c6e; color:#4a7c4e;">🛠️ RACCONTI</div>
+                <div class="card-img-box"><img src="https://picsum.photos/id/96/400/225" alt="Officina riparazioni"></div>
+                <h2>Il negozio di riparazioni alla fine del mondo</h2>
+                <div class="firma-autore"><div class="autore-info"><span class="avatar-autore">🔧</span><span class="nome-autore">Leopoldo Nori</span></div><div class="articolo-data">🗓️ Ieri</div></div>
+                <div class="testo">Si narra di un'officina dove si riparano le cose che non hanno prezzo: una sedia che ha perso il ricordo di un nonno, una spilla che non ride più, un orologio che segna sempre l'ora di un addio. L'artigiano non chiede denaro, ma una storia. Perché ogni oggetto rotto custodisce un frammento di cuore.</div>
+                <button class="leggi-tutto">⟳ Leggi tutto</button>
+                
+                <div class="commento-firma">
+                    <span class="avatar-firma">🐬</span>
+                    <span class="nome-firma">La Voce del Delfino - Redazione</span>
+                    <span class="firma-toggle">▼</span>
+                    <div class="testo-firma">
+                        «È la bottega dove il tempo si ferma per ascoltare. Noi della redazione crediamo che il mondo abbia più bisogno di riparatori che di costruttori. Perché riparare è un atto d'amore.»
+                    </div>
+                </div>
+                
+                <div class="commenti-header">
+                    <span class="commenti-count">💬 4</span>
+                    <span class="commenti-label">Personaggi Ghibli commentano</span>
+                    <span class="commenti-arrow">▼</span>
+                </div>
+                <div class="commenti-panel">
+                    <div class="commento-personaggio">
+                        <div><span class="avatar-p">🧹</span> <span class="nome-p">Kiki</span></div>
+                        <div class="testo-p">"La mia scopa si è rotta una volta, durante un temporale. Un vecchio orologiaio la riparò senza chiedere nulla. Disse: 'Le cose che volano hanno bisogno di fiducia, non di chiodi'."</div>
+                    </div>
+                    <div class="commento-personaggio">
+                        <div><span class="avatar-p">👴</span> <span class="nome-p">Kamaji (Spirited Away)</span></div>
+                        <div class="testo-p">"Nella sala caldaie, riparo da sempre i segni neri. Ogni braccio ha una crepa, ogni tubo un gemito. Ma la riparazione più difficile è quella di un cuore che si è dimenticato di sognare."</div>
+                    </div>
+                    <div class="commento-personaggio">
+                        <div><span class="avatar-p">💎</span> <span class="nome-p">Principessa Kaguya</span></div>
+                        <div class="testo-p">"Nel mio vaso di bambù, ogni crepa è un ricordo. Non vorrei mai che qualcuno la riparasse del tutto. Le crepe lasciano entrare la luce."</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Gestione espansione commento della redazione (toggle individuale)
+        document.querySelectorAll('.commento-firma').forEach(el => {
+            el.addEventListener('click', (e) => {
+                if(e.target.classList.contains('firma-toggle') || e.target === el || el.contains(e.target)) {
+                    el.classList.toggle('aperto');
+                }
+            });
         });
         
-        chatCard.innerHTML = `
-            <div class="chat-main-header" onclick="this.parentElement.classList.toggle('aperto')">
-                <div class="chat-main-title">💬 Dalla Redazione</div>
-                <div class="chat-main-badge">📨 ${chatData.length} conversazioni</div>
-                <div class="chat-main-expand">▼</div>
-            </div>
-            <div class="chat-conversazioni">
-                ${conversazioniHtml}
-            </div>
-        `;
-        container.appendChild(chatCard);
-    }
-}
-
-carica();
-</script>
+        // 2. Gestione espansione pannello commenti personaggi (unico triangolo)
+        document.querySelectorAll('.commenti-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('aperto');
+                const panel = header.nextElementSibling;
+                if (panel && panel.classList.contains('commenti-panel')) {
+                    panel.classList.toggle('aperto');
+                }
+            });
+        });
+        
+        // 3. Pulsante "Leggi tutto" per ogni articolo
+        document.querySelectorAll('.leggi-tutto').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.card');
+                const testoDiv = card.querySelector('.testo');
+                if(testoDiv) {
+                    testoDiv.classList.toggle('aperto');
+                    this.textContent = testoDiv.classList.contains('aperto') ? '∧ Leggi meno' : '⟳ Leggi tutto';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
