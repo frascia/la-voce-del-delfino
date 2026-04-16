@@ -1,22 +1,54 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "16/04, 08:09",
+  "prossimo_aggiornamento": "16/04, 08:22",
   "news": [
     {
       "tipo": "gen",
-      "titolo": "Nuovi libri, nuova vita",
-      "articolo": "La lettura è una delle cose che amo di più al mondo. Mi permette di evadere dalla realtà e di immergermi in mondi completamente nuovi. Recentemente ho scoperto alcuni nuovi libri che mi hanno davvero entusiasmato. La letteratura è un mezzo incredibile per esplorare la condizione umana, per comprendere meglio noi stessi e il mondo che ci circonda. I libri che amo di più sono quelli che mi fanno riflettere, che mi fanno porre domande e cercare risposte. La scrittura è un'arte che può cambiare la vita, e io credo che i libri siano un ottimo modo per scoprire nuove idee e nuove prospettive.",
+      "titolo": "Il profumo della carta: rifugio tra le pagine",
+      "articolo": "Spesso mi rifugio nel silenzio della mia stanza, circondata da scaffali che sembrano proteggermi dalla frenesia di un mondo esterno che, a volte, faccio fatica a comprendere. Tra le novità editoriali che popolano le librerie, cerco sempre quel legame profondo con la natura e l'animo umano. Recenti pubblicazioni stanno riportando in auge saggi che esplorano la connessione tra la psiche e il mondo naturale, ricordandoci quanto siamo parte di un ecosistema vasto e silenzioso. Leggere è per me un atto di resistenza, una forma di filosofia applicata alla quotidianità. Ogni nuovo libro è una promessa di viaggio, un modo per esplorare sentieri interiori senza dover varcare la soglia di casa. In questa epoca di distrazioni digitali, ritrovare il piacere di sfogliare pagine vere, sentendo l'odore della carta, è un atto poetico. Spero che queste nuove storie ci aiutino a riscoprire la bellezza della lentezza e la profondità dei pensieri che, troppo spesso, dimentichiamo di ascoltare.",
       "commento_firma": {
         "nome": "Lilli",
         "avatar": "👩",
-        "testo": "Spero che questi nuovi libri possano ispirare altre persone a leggere e a scoprire il piacere della letteratura! Ma non basta, vorrei vedere più libri che trattano argomenti importanti come la psicologia, la filosofia e l'ambiente. La letteratura deve essere anche uno strumento per cambiare il mondo, non solo per evadere dalla realtà."
+        "testo": "Adoro queste nuove uscite, sono assolutamente meravigliose! Tuttavia, pretendo una qualità letteraria impeccabile: basta con le trame banali, voglio testi che mi facciano davvero vibrare l'anima!"
       },
       "commenti": [],
       "categoria": "Da Leggere",
       "colore_tipo": "#ff4d4d",
       "immagine": "lilli.webp",
-      "provider": "groq",
-      "nuovo": false
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Cinema o mare? A Pescara la scelta è sempre dura!",
+      "articolo": "Oh, ma che stiamo a pettinà le bambole? Mentre io me ne sto qui a Borgomarino a riparà le reti, la gente mi chiede dei film al cinema. Ué, ma stiamo a scherzà? Il mare chiama, il pesce abbocca, e io dovrei chiudermi in una sala buia a guardà 'sti schermi giganti? Però oh, bisogna tenersi aggiornati, sennò poi al bar che diciamo? Pare che in sala stiano arrivando titoli di spessore, roba che ti fa dimenticà pure la puzza di salsedine. C'è chi cerca l'azione, chi il dramma, ma per me il vero cinema è la vita vera, quella che si vede qui al porto quando il Delfino vince all'ultimo minuto. Comunque, se proprio volete staccà la spina, date un'occhiata alle nuove uscite: ci sono storie che meritano, anche se niente batte una frittura di paranza fresca davanti a un tramonto sul molo. Mettetevi comodi, ma non dimenticate che il mare è sempre lì che vi aspetta, eh!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Grandissimi titoli in arrivo, roba da leccarsi i baffi! Però occhio a non farmi uscire porcherie, voglio qualità vera o vi vengo a cercà personalmente!"
+      },
+      "commenti": [],
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Oltre i confini del turismo: l'anima selvaggia dell'Europa",
+      "articolo": "L'Europa nasconde angoli dove il tempo sembra essersi fermato, lontano dai circuiti frenetici delle metropoli. Esplorare mete insolite significa abbracciare il silenzio delle valli incontaminate, dove la natura detta ritmi precisi, quasi geometrici. Dalle cime scoscese delle Isole Faroe fino ai villaggi remoti nell'entroterra abruzzese, esiste una bellezza fatta di essenzialità. Qui, l'ordine non è imposto dall'uomo, ma deriva dall'armonia perfetta di rocce, vento e vegetazione. Scegliere queste destinazioni richiede un approccio minimalista: pochi oggetti nello zaino, la mente sgombra da sovrastrutture e la volontà di osservare senza alterare l'equilibrio locale. In questi luoghi, il paesaggio non è solo uno sfondo, ma un maestro di rigore. L'esperienza di viaggio si trasforma in una ricerca di autenticità, dove il contatto con la terra diventa l'unica vera ricchezza. È un invito a riscoprire la purezza del gesto, lontano dal superfluo, celebrando la maestosità di una natura che, nella sua solitudine, sa essere l'architetto più impeccabile e generoso che si possa incontrare.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🐬",
+        "testo": "Sogno di percorrere queste rotte dimenticate zaino in spalla, cercando ostelli di legno o bivacchi sotto le stelle, dove con pochi spiccioli posso comprare pane fresco e godermi l'immensità di un tramonto che non costa nulla."
+      },
+      "commenti": [],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": true
     }
   ]
 }

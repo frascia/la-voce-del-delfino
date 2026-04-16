@@ -1,9 +1,9 @@
 {
-  "dataRiferimento": "15/04",
-  "oraAggiornamento": "15/04, 12:53",
+  "dataRiferimento": "16/04",
+  "oraAggiornamento": "16/04, 06:19",
   "agenda": {
-    "timbro": "Resistenza Adriatica",
-    "banner": "Mare.webp"
+    "timbro": "Edizione quotidiana",
+    "banner": "Default.webp"
   },
   "impostazioni": {
     "header_fisso": "header.webp",
@@ -29,128 +29,33 @@
       "articoli": [
         {
           "tipo": "personaggio",
-          "titolo": "La frustrazione del giornalista: stanco di nascondere la verità",
-          "articolo": "Sono stanco di lavorare in un mondo dove la verità viene nascosta e distorta. Come giornalista, ho sempre cercato di fare il mio lavoro con integrità e professionalità, ma è sempre più difficile. I fatti vengono nascosti, le informazioni vengono manipolate e la gente viene ingannata. È una situazione che mi lascia senza fiato e mi fa sentire come se stessi perorando nel vuoto. La mia vita è dedicata al lavoro, passo ore a ricercare e a scrivere, ma sembra che nessuno voglia ascoltare. Vivo sopra un colle, lontano dalla confusione della città, ma anche lì sento il peso della mia stanchezza.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Sono davvero stanco..."
-          },
-          "commenti": [],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "groq"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Cuore vagabondo: Tra la saudade e il prossimo brindisi",
-          "articolo": "Sono un giornalista con un carattere festoso e un cuore che batte per le donne. La mia vita è un susseguirsi di momenti di allegria e di riflessioni profonde. Cresciuto con la musica brasiliana e la sua energia contagiosa, ho imparato ad apprezzare la bellezza della vita e a non prendere mai nulla troppo sul serio. La mia passione per il calcio mi ha portato a tifare per il Pescara, una squadra che incarna lo spirito di gioco e di divertimento che tanto amo. Pescara è diventata la mia casa, non solo per la squadra del cuore, ma anche per la sua gente accogliente e la sua bellezza naturale.",
+          "titolo": "Pescara e Brasile: il battito di un unico, eterno carnevale",
+          "articolo": "Camminare lungo la riviera adriatica mi riporta sempre a Bahia, dove il sole accarezza la pelle e la musica non smette mai di pulsare. Qui a Pescara, però, ho trovato una magia diversa: il calore del tifo per i biancazzurri. Ricordo ancora quando arrivai in questa città, spinto solo dalla passione viscerale per il Pescara. È strano come la vita intrecci i fili: il ricordo delle spiagge dorate e dei sorrisi delle donne carioca si fonde con il ruggito dell'Adriatico. Il calcio è il nostro linguaggio universale, una danza collettiva che unisce le radici brasiliane alla fedeltà per questi colori. Ogni volta che il pallone rotola sul prato dello stadio, sento l'energia di un popolo che sa come celebrare la vita, nonostante le sfide. Siamo viandanti dell'allegria, pronti a festeggiare ogni gol come se fosse l'ultimo raggio di sole prima del tramonto. Pescara è diventata la mia casa, il mio tempio di gioia.",
           "commento_firma": {
             "nome": "Juizinho",
             "avatar": "⚽",
-            "testo": "Ecco, sono qui, in questo posto meraviglioso, a guardare il mare e a pensare a tutte le donne che hanno illuminato la mia vita. La saudade, questo sentimento che mi pervade, è un misto di nostalgia e di speranza. Spero che il prossimo brindisi sia sempre all'orizzonte, e che la vita continui a sorprendermi con la sua bellezza e la sua magia."
+            "testo": "A volte, nel silenzio della sera, mi chiedo se la nostalgia sia solo il prezzo da pagare per aver amato troppo intensamente sia una terra lontana che una fede calcistica incrollabile; restano solo le ombre di una festa che non finisce mai, ma che nel cuore assume i colori malinconici di un sogno che non tornerà."
           },
           "commenti": [],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "juizinho.webp",
-          "provider": "groq"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Il microchip nel gomito: una questione di libertà",
-          "articolo": "La notizia del microchip impiantato nel gomito ha suscitato grande interesse e dibattito. L'idea di un dispositivo che possa monitorare e controllare le nostre azioni quotidiane sembra essere oggetto di scherno per molti, ma è importante considerare le implicazioni più ampie di questa tecnologia. I microchip impiantabili sono già utilizzati in alcuni settori, come ad esempio nella medicina, per monitorare le condizioni di salute dei pazienti o per fornire accesso a informazioni importanti in caso di emergenza. Tuttavia, l'estensione di questa tecnologia a scopo di controllo e monitoraggio solleva questioni importanti sulla privacy e sulla libertà individuale. È fondamentale che la società nel suo complesso si confronti con queste tematiche e consideri attentamente i pro e i contro di una tecnologia che potrebbe avere un impatto significativo sulla nostra vita quotidiana.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "È importante essere consapevoli delle implicazioni di questa tecnologia e non prenderla sottogamba. La libertà individuale e la privacy sono diritti fondamentali che devono essere protetti."
-          },
-          "commenti": [],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "groq"
+          "provider": "gemini"
         },
         {
           "tipo": "rss",
-          "titolo": "Il mare, il pesce e la mia vita a Borgomarino",
-          "articolo": "Vivo a Borgomarino, un piccolo paese di pescatori vicino a Pescara. La mia vita è legata al mare e al pesce. Sono un pescatore, anzi, un 'pescatorino' come mi piace chiamarmi. La mia giornata inizia all'alba, quando vado a pesca con gli amici. Il mare è la mia passione, il mio lavoro e la mia vita. Ma, onestamente, non sono uno di quei tipi che si alza presto per lavorare sodo. No, io preferisco godermi la vita e fare le cose con calma. E quando non sono a pesca, sono allo stadio a tifare per il Pescara, la mia squadra del cuore. Sono un ultras, sì, e me ne vanto. La mia vita è semplice, ma piena di passioni.",
+          "titolo": "Borgomarino in subbuglio: sigilli ai locali, ma chi controlla il pesce?",
+          "articolo": "A Pescara non si sta mai tranquilli, manco quando vai a cercarti un boccone veloce. Hanno chiuso due locali in centro, roba di igiene e scartoffie che non tornano. Io dico, ma stiamo scherzando? La gente vuole mangiare in pace, mica rischiare la pelle. Certo, io sono di parte, a Borgomarino sappiamo come si tratta il pescato fresco, quello che arriva dritto dalle paranze, non le schifezze che servono in certi posti dove manco sanno distinguere un cefalo da un merluzzo. Le autorità hanno fatto bene a mettere i sigilli, perché la cucina è una cosa seria, non un gioco per improvvisati che pensano solo a fare cassa. Ora però voglio vedere se controllano pure chi vende la roba di importazione che puzza di vecchio a chilometri di distanza. Pescara merita rispetto, non questi pasticci che fanno vergognare pure i gabbiani del porto. Mettete in riga tutti, che la salute nostra non è un optional.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "E che ci credete? Che io sia davvero un tipo così? Mah, non sono mica così fesso. C'è sempre qualcuno che vuole sapere cosa faccio e come vivo. E io, che ci crediate o no, non ho mica voglia di raccontare tutta la mia vita a chiunque. Quindi, lasciatemi stare e non fate troppe domande, capito?"
+            "testo": "A me 'sta storia puzza più di un pesce dimenticato al sole. Chiudono due baracche e tutti a fare gli eroi, ma intanto chissà cosa succede dietro le quinte. Io non mi fido mai di chi arriva all'improvviso a fare il saputello, qui gatta ci cova e qualcuno vuole solo farsi pubblicità sulla pelle dei ristoratori. Occhio, che le cose non sono mai come le raccontano."
           },
           "commenti": [],
           "categoria": "Cronaca",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
-          "provider": "groq"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, la politica locale: tra promesse e realtà",
-          "articolo": "La politica locale a Pescara è sempre stata un tema caldo, soprattutto quando si parla di sviluppo economico e turismo. I cittadini di Pescara aspettano risposte concrete alle loro esigenze, ma spesso le promesse dei politici sembrano rimanere tali. Il porto di Pescara, ad esempio, è stato oggetto di numerosi progetti di riqualificazione, ma i lavori procedono a rilento. La città ha bisogno di investimenti seri per rilanciare l'economia locale e migliorare la qualità della vita dei suoi abitanti. I pescatori, come me, aspettano una maggiore attenzione per le loro esigenze e una gestione più efficiente delle risorse marine.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In attesa di una svolta concreta, ci limitiamo a prendere atto della situazione. La politica locale deve tornare a essere al servizio dei cittadini, con azioni e progetti reali."
-          },
-          "commenti": [],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "groq"
-        }
-      ]
-    },
-    "mondo": {
-      "color": "#cc9c7e",
-      "articoli": [
-        {
-          "tipo": "rss",
-          "titolo": "Riforma dei licei: più geografia, AI e CLIL",
-          "articolo": "La riforma dei nuovi programmi per i licei punta a rafforzare alcune discipline fondamentali per la formazione degli studenti. Tra le novità, spiccano il potenziamento della geografia, l'introduzione dell'intelligenza artificiale (AI) e l'ampliamento delle ore di CLIL (Content and Language Integrated Learning). L'obiettivo è quello di fornire agli studenti una preparazione più completa e adeguata alle esigenze del mondo moderno. La geografia avrà un ruolo più centrale nell'educazione, per aiutare gli studenti a comprendere meglio il mondo e le sue dinamiche. L'intelligenza artificiale sarà integrata per fornire strumenti innovativi per l'apprendimento. Il CLIL, invece, continuerà a essere utilizzato per insegnare le discipline non linguistiche nella lingua straniera, migliorando la competenza linguistica degli studenti.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia! Che rivoluzione! Non so se sono pronto a vedere i ragazzi a scuola con tutta 'sta roba nuova! Spero che non si perda il latino, però... E pure 'sta AI, che ne so io? Spero che non diventino tutti quanti come quei cervelloni che stanno sempre lì a fissare lo schermo... E il pesce? Lo mangeremo ancora?!"
-          },
-          "commenti": [],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "groq"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Apple si lancia nell'Intelligenza Artificiale: tutte le novità del WWDC 2026",
-          "articolo": "La conferenza degli sviluppatori di Apple, WWDC 2026, è stata annunciata con grande enfasi sull'Intelligenza Artificiale (IA). La multinazionale di Cupertino ha deciso di puntare forte sull'IA, presentando una serie di novità che rivoluzioneranno il modo in cui utilizziamo i dispositivi Apple. Dalla possibilità di creare assistenti virtuali personalizzati alla integrazione dell'IA nelle applicazioni, Apple sembra intenzionata a cambiare il volto del settore tecnologico. La società ha promesso di fornire maggiori dettagli sulla sua visione dell'IA durante la conferenza, che sarà sicuramente seguita con grande attenzione dagli appassionati di tecnologia.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia! Apple che si lancia nell'IA? Spero che non mi faccia perdere il sonno a furia di innovazioni! E pensare che io non riesco nemmeno a svegliarmi presto per andare a pescare... Questi geni dell'informatica mi fanno paura, con tutte quelle idee che hanno in testa. Spero di riuscire a capire qualcosa di quello che dicono, altrimenti mi sento perso nel mare dell'Intelligenza Artificiale!"
-          },
-          "commenti": [],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "groq"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "La cultura giapponese: un connubio di tradizione e innovazione",
-          "articolo": "Il Giappone è un paese che continua ad affascinare il mondo con la sua cultura unica e la sua capacità di innovare. Dalla tecnologia all'avanguardia alle tradizioni secolari, il Giappone è un luogo dove l'antico e il moderno convivono in perfetta armonia. La società giapponese è nota per la sua disciplina e il suo senso del dovere, valori che sono inculcati fin dalla giovane età. Tuttavia, questo non impedisce ai giapponesi di essere anche estremamente creativi e aperti alle nuove idee. La cultura giapponese è ricca di manifestazioni artistiche, dalla letteratura alla musica, dal cinema alle arti visive. Il paese è anche famoso per la sua cucina, che è considerata una delle più varie e gustose del mondo.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "E se potessi portare un po' di questa meraviglia in Italia? Sognare non costa nulla, e chissà, forse un giorno potrò tornare in Giappone e portare con me un pezzo di quella cultura che amo tanto. Ma anche qui, a Pescara, ho trovato una seconda casa e persone che hanno imparato ad apprezzare la mia visione del mondo. Forse, un giorno, potrò tornare e creare un ponte tra le due culture."
-          },
-          "commenti": [],
-          "categoria": "Giappone",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "groq"
+          "provider": "gemini"
         }
       ]
     },
@@ -159,18 +64,48 @@
       "articoli": [
         {
           "tipo": "gen",
-          "titolo": "Nuovi libri, nuova vita",
-          "articolo": "La lettura è una delle cose che amo di più al mondo. Mi permette di evadere dalla realtà e di immergermi in mondi completamente nuovi. Recentemente ho scoperto alcuni nuovi libri che mi hanno davvero entusiasmato. La letteratura è un mezzo incredibile per esplorare la condizione umana, per comprendere meglio noi stessi e il mondo che ci circonda. I libri che amo di più sono quelli che mi fanno riflettere, che mi fanno porre domande e cercare risposte. La scrittura è un'arte che può cambiare la vita, e io credo che i libri siano un ottimo modo per scoprire nuove idee e nuove prospettive.",
+          "titolo": "Il profumo della carta: rifugio tra le pagine",
+          "articolo": "Spesso mi rifugio nel silenzio della mia stanza, circondata da scaffali che sembrano proteggermi dalla frenesia di un mondo esterno che, a volte, faccio fatica a comprendere. Tra le novità editoriali che popolano le librerie, cerco sempre quel legame profondo con la natura e l'animo umano. Recenti pubblicazioni stanno riportando in auge saggi che esplorano la connessione tra la psiche e il mondo naturale, ricordandoci quanto siamo parte di un ecosistema vasto e silenzioso. Leggere è per me un atto di resistenza, una forma di filosofia applicata alla quotidianità. Ogni nuovo libro è una promessa di viaggio, un modo per esplorare sentieri interiori senza dover varcare la soglia di casa. In questa epoca di distrazioni digitali, ritrovare il piacere di sfogliare pagine vere, sentendo l'odore della carta, è un atto poetico. Spero che queste nuove storie ci aiutino a riscoprire la bellezza della lentezza e la profondità dei pensieri che, troppo spesso, dimentichiamo di ascoltare.",
           "commento_firma": {
             "nome": "Lilli",
             "avatar": "👩",
-            "testo": "Spero che questi nuovi libri possano ispirare altre persone a leggere e a scoprire il piacere della letteratura! Ma non basta, vorrei vedere più libri che trattano argomenti importanti come la psicologia, la filosofia e l'ambiente. La letteratura deve essere anche uno strumento per cambiare il mondo, non solo per evadere dalla realtà."
+            "testo": "Adoro queste nuove uscite, sono assolutamente meravigliose! Tuttavia, pretendo una qualità letteraria impeccabile: basta con le trame banali, voglio testi che mi facciano davvero vibrare l'anima!"
           },
           "commenti": [],
           "categoria": "Da Leggere",
           "colore_tipo": "#ff4d4d",
           "immagine": "lilli.webp",
-          "provider": "groq"
+          "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Cinema o mare? A Pescara la scelta è sempre dura!",
+          "articolo": "Oh, ma che stiamo a pettinà le bambole? Mentre io me ne sto qui a Borgomarino a riparà le reti, la gente mi chiede dei film al cinema. Ué, ma stiamo a scherzà? Il mare chiama, il pesce abbocca, e io dovrei chiudermi in una sala buia a guardà 'sti schermi giganti? Però oh, bisogna tenersi aggiornati, sennò poi al bar che diciamo? Pare che in sala stiano arrivando titoli di spessore, roba che ti fa dimenticà pure la puzza di salsedine. C'è chi cerca l'azione, chi il dramma, ma per me il vero cinema è la vita vera, quella che si vede qui al porto quando il Delfino vince all'ultimo minuto. Comunque, se proprio volete staccà la spina, date un'occhiata alle nuove uscite: ci sono storie che meritano, anche se niente batte una frittura di paranza fresca davanti a un tramonto sul molo. Mettetevi comodi, ma non dimenticate che il mare è sempre lì che vi aspetta, eh!",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Grandissimi titoli in arrivo, roba da leccarsi i baffi! Però occhio a non farmi uscire porcherie, voglio qualità vera o vi vengo a cercà personalmente!"
+          },
+          "commenti": [],
+          "categoria": "Da Vedere",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Oltre i confini del turismo: l'anima selvaggia dell'Europa",
+          "articolo": "L'Europa nasconde angoli dove il tempo sembra essersi fermato, lontano dai circuiti frenetici delle metropoli. Esplorare mete insolite significa abbracciare il silenzio delle valli incontaminate, dove la natura detta ritmi precisi, quasi geometrici. Dalle cime scoscese delle Isole Faroe fino ai villaggi remoti nell'entroterra abruzzese, esiste una bellezza fatta di essenzialità. Qui, l'ordine non è imposto dall'uomo, ma deriva dall'armonia perfetta di rocce, vento e vegetazione. Scegliere queste destinazioni richiede un approccio minimalista: pochi oggetti nello zaino, la mente sgombra da sovrastrutture e la volontà di osservare senza alterare l'equilibrio locale. In questi luoghi, il paesaggio non è solo uno sfondo, ma un maestro di rigore. L'esperienza di viaggio si trasforma in una ricerca di autenticità, dove il contatto con la terra diventa l'unica vera ricchezza. È un invito a riscoprire la purezza del gesto, lontano dal superfluo, celebrando la maestosità di una natura che, nella sua solitudine, sa essere l'architetto più impeccabile e generoso che si possa incontrare.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🐬",
+            "testo": "Sogno di percorrere queste rotte dimenticate zaino in spalla, cercando ostelli di legno o bivacchi sotto le stelle, dove con pochi spiccioli posso comprare pane fresco e godermi l'immensità di un tramonto che non costa nulla."
+          },
+          "commenti": [],
+          "categoria": "Viaggi",
+          "colore_tipo": "#008cff",
+          "immagine": "lars.webp",
+          "provider": "gemini"
         }
       ]
     }
