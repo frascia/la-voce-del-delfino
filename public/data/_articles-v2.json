@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "16/04, 17:44",
+  "oraAggiornamento": "16/04, 20:11",
   "agenda": {
     "timbro": "Edizione quotidiana",
     "banner": "Default.webp"
@@ -1048,6 +1048,114 @@
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "groq"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "L'algoritmo del citofono: un mistero che solo pochi comprendono",
+          "articolo": "Esistono fenomeni nella vita quotidiana che sembrano sfuggire a qualsiasi logica, eppure sono talmente familiari che raramente ci fermiamo a pensarci su. Uno di questi è l'algoritmo del citofono. Chi non ha mai avuto a che fare con uno di quei citofoni automatici che chiedono di suonare più volte prima di consentire l'accesso? La scena è ormai nota: si preme il pulsante, si aspetta, e a volte, sembra che il sistema abbia deciso di giocare a nascondino con noi. L'algoritmo dietro a questo comportamento può sembrare misterioso, ma in realtà si basa su semplici strategie per gestire il flusso delle chiamate e garantire la sicurezza. Tuttavia, è proprio questa apparente complessità che può farci sorridere, o addirittura ridere, quando finalmente riusciamo a comprendere il meccanismo.",
+          "commento_firma": {
+            "nome": "Abbukk",
+            "avatar": "🍄",
+            "testo": "È curioso come qualcosa di apparentemente semplice come un citofono possa diventare fonte di battute e situazioni comiche. Ma dietro ogni meccanismo, per quanto semplice o complesso che sia, c'è sempre una logica. Forse la vera lezione qui è che, anche nelle piccole cose, c'è sempre qualcosa da imparare e comprendere."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "☀",
+              "testo": "Sì, è divertente come certe cose della vita quotidiana possano sembrare così misteriose, ma in realtà sono solo il risultato di strategie semplici. Mi ricorda un po' come funziona la natura, dove i meccanismi apparentemente complessi sono spesso il risultato di processi semplici e logici."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚙",
+              "testo": "Haha, sì, è come quando cerchi di entrare in un club e il buttafuori ti fa aspettare! Ma alla fine, è solo un algoritmo che cerca di gestire le cose in modo efficiente. Comunque, è sempre divertente vedere la gente che si spazientisce!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiii siii siiiii! È così vero! Gli algoritmi sono come i miei pensieri, sempre pieni di sorprese e colpi di scena! E quando finalmente capisci come funzionano, è come se siiii siii siiiii, tutto diventa chiaro!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "☕",
+              "testo": "In Giappone, abbiamo un detto: 'La semplicità è la chiave della complessità.' Questi algoritmi di citofono sono un perfetto esempio. Sembra complesso, ma in realtà è solo una questione di strategia e logica."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "abbukk.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "La vita sul filo: storia di un biker incallito",
+          "articolo": "Nonostante le cadute, c'è chi non desiste mai dal mettersi in sella alla sua bicicletta. È il caso di un uomo che, anche di notte, sfreccia sulle strade, incurante del pericolo. La sua passione per la bicicletta è pari solo a quella per il suo lavoro di bartender e giornalista. Finito il lavoro tardi, non si lascia fermare dalla stanchezza: o corre o va in bicicletta. Eppure, nonostante la sua propensione per l'alcol - mestiere permettendo - non si ubriaca mai. Anzi, beve e fa bere, ma resta sempre lucido. E come se non bastasse, mangia molto ma resta uno smilzo. La sua costituzione sembra davvero da invidiare.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Mah, alcuni son proprio fatti così, mica li puoi capire..."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐌",
+              "testo": "Che tipo incredibile! La sua passione per la bicicletta è ammirevole. Mi piace come si tenga sempre in forma, sia fisicamente che mentalmente. È un vero esempio di dedizione e disciplina."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚙",
+              "testo": "Questo tizio è un vero partito! Non solo è un grande appassionato di bicicletta, ma anche un lavoratore instancabile. E pensare che riesce a bere e a far bere senza mai ubriacarsi... è un mito!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiii siii siiiii! Questo tizio è un vero eroe! Sfrecciare in bicicletta di notte, lavorare tardi e bere... eppure resta sempre lucido! Glugluglu, che invidia!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "☕",
+              "testo": "Non capisco perché questo tizio debba bere così tanto. In Giappone, bere eccessivamente non è considerato un comportamento sano. Tuttavia, è ammirevole la sua capacità di rimanere lucido e in forma."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Emergenza idrica a Pescara e Chieti, la Asl ancora in silenzio",
+          "articolo": "La situazione è critica, non solo per i tifosi del Pescara che si preparano alla prossima partita, ma anche per i residenti di Pescara e Chieti. Un maxi stop idrico ha messo in ginocchio la città, con gli abitanti che sono stati costretti a fare a meno dell'acqua per diverse ore. La causa? Ancora in attesa dell'esito dei prelievi per la presenza di batteri nella rete idrica. Sembra che la Asl sia in ritardo nella comunicazione degli esiti, e la popolazione inizia a spazientirsi. 'Sta storia dell'acqua, nun se ne esce più', lamentano in molti. Intanto, chi come me passa le giornate al mare, a Borgomarino, non può fare a meno di pensare che la vita è sempre più difficile, e che il pesce, ormai, è l'unica cosa che abbonda.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "E io che pensavo che la Asl fosse un po' più efficiente. Ma no, sempre a farci aspettare. Sospetto che ci sia sotto qualcosa, qualcosa che non vogliono farci sapere. E noi, intanto, siamo qui a farci la vita difficile senza acqua. Mah, chissà..."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "",
+              "testo": "La natura è davvero imprevedibile. Spero che risolvano presto il problema dell'acqua. È essenziale per la vita quotidiana."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "",
+              "testo": "Che situazione difficile! Spero che i tifosi del Pescara non si distraggano troppo con questo problema. La partita è importante!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "",
+              "testo": "Glugluglu, siii siii siiiiii! Spero che la Asl si dia una mossa e comunichi presto gli esiti dei prelievi. La popolazione è spazientita, glugluglu!"
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "",
+              "testo": "Mò è 'na vera e propria emergenza! 'Sta storia dell'acqua è 'na farsa. Nun se ne esce più, è 'na vergogna!"
+            }
+          ],
+          "categoria": "Cronaca",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "groq"
         }
       ]
     },
@@ -1623,6 +1731,114 @@
               "nome": "Glusi",
               "avatar": "🤪",
               "testo": "Glugluglu! Roccamorice è il posto più fantastico del mondo! Siii siii siiiiii! Devo assolutamente andare a visitare questo posto e mangiare tutti gli arrosticini che posso!"
+            }
+          ],
+          "categoria": "Viaggi",
+          "colore_tipo": "#008cff",
+          "immagine": "lars.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Il nuovo film su Netflix che scuote le fondamenta",
+          "articolo": "Gli appassionati di disaster movie sono in fibrillazione per il nuovo film appena uscito su Netflix. La pellicola, diretta da un regista esperto nel genere, promette di offrire un'esperienza cinematografica intensa e coinvolgente. Con una trama che ruota attorno a un catastrofico evento naturale, il film tiene gli spettatori con il fiato sospeso dall'inizio alla fine. La critica ha già iniziato a recensire il film, lodandone gli effetti speciali realistici e le performance degli attori. Se siete amanti dei film d'azione e delle storie di sopravvivenza, questo è sicuramente un titolo da non perdere.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Evviva! Finalmente un film che sa di vero disaster movie! Mi piace che abbiano puntato su effetti speciali realistici e una trama avvincente. Ora però aspetto una seconda parte che faccia ancora meglio! Spero che il regista riesca a mantenere la stessa intensità anche nei prossimi progetti!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Sì, ho sentito parlare di questo film! La natura può essere davvero impressionante e un film che la rappresenta in modo realistico può essere molto coinvolgente. Non vedo l'ora di vederlo!"
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Che film! Spero che sia pieno di azione e emozioni! Mi piace quando gli attori fanno cose incredibili e gli effetti speciali sono fuori dal comune. Devo chiamare le ragazze per andare a vederlo insieme!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiii siii siiiii! Film di disastri? Glugluglu! Spero che ci siano esplosioni e cose che volano! Siiii siii siiiii!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Sono un po' scettico riguardo a questo film. In Giappone abbiamo una cultura del disaster movie molto sviluppata e non sono sicuro che questo film possa essere all'altezza. Vedremo..."
+            }
+          ],
+          "categoria": "Da Vedere",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Film in uscita: novità e titoli ancora in sala",
+          "articolo": "Il mondo del cinema è sempre in evoluzione e offre una vasta gamma di scelta per tutti i gusti. Tra i nuovi film in uscita e quelli ancora in sala, c'è sicuramente qualcosa che potrebbe catturare l'attenzione degli spettatori. Purtroppo non ho voglia di andare a vedere cosa esce al cinema, preferisco stare a casa a pescare con la mia canna, anche se non ho mai pescato nulla. Comunque, alcuni dei titoli più attesi sono quelli che promettono azione, avventura e storie emozionanti. Dall'orrore alla commedia, passando per il dramma e il fantasy, il cinema moderno sembra avere qualcosa per tutti. E poi, diciamoci la verità, al cinema si va anche per socializzare, ma io sono più a mio agio sulla spiaggia o sul mio battello a parlare con gli amici del Pescara.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Evviva il cinema! Spero che ci siano film davvero emozionanti in uscita, magari qualcuno che mi faccia venire voglia di lasciare il mio angolino di mare e andare al cinema. Ma devono essere davvero speciali, perché io non sono uno di quegli spettatori che vanno al cinema solo per andare al cinema. Voglio essere coinvolto, voglio ridere, piangere o emozionarmi. Insomma, voglio che il film sia una vera esperienza!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "✂",
+              "testo": "La natura è il mio cinema preferito, non ho bisogno di film per evadere, ho le montagne e i boschi a Roccamorice"
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "✂",
+              "testo": "Il cinema è divertimento, ma io preferisco la festa con gli amici, magari con un paio di ragazze belle"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤩",
+              "testo": "Siiii siii siiiii, il cinema è fico, ma io preferisco stare a casa a inventare nuove mode, glugluglu"
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "✂",
+              "testo": "Manco morto vado al cinema, 'na sera me la passo meglio co' gli amici miei a pescà, nun c'è gnente da fa' là"
+            }
+          ],
+          "categoria": "Da Vedere",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Roccamorice, la meta insolita abruzzese che incanta i viaggiatori",
+          "articolo": "Nascosta tra le montagne abruzzesi, Roccamorice è un piccolo comune che sta conquistando il cuore dei viaggiatori più curiosi. Questo paese, con la sua architettura semplice e la natura incontaminata, è il luogo ideale per chi cerca una meta insolita e suggestiva. Il suo fascino è accentuato dalla tranquillità che lo pervade, un vero e proprio rifugio per chi vuole allontanarsi dal caos delle città. La natura regna sovrana a Roccamorice, con paesaggi mozzafiato e una biodiversità sorprendente. I visitatori possono godere di escursioni, trekking e attività all'aperto in un ambiente di straordinaria bellezza. La cucina locale, con piatti tipici come gli arrosticini, è un ulteriore incentivo per visitare questo angolo di Abruzzo.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🐬",
+            "testo": "Sono sempre stato attratto dalle mete insolite e Roccamorice sembra un vero e proprio sogno per un viaggiatore come me. Con un budget limitato, sto pianificando il mio prossimo viaggio e credo che questo posto possa essere una scelta eccezionale. La possibilità di immergersi nella natura e di vivere in un luogo così tranquillo è davvero allettante. Non vedo l'ora di scoprire la bellezza di Roccamorice e di godermi la sua ospitalità e la sua cucina."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Sì, Roccamorice è un luogo davvero speciale. La natura è incontaminata e i paesaggi sono mozzafiato. Sono felice di aver scelto di vivere qui."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Carnevale não, mas Roccamorice é uma festa para os sentidos! A comida, a natureza, o povo... tudo é uma grande alegria!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiii siii siiiii! Roccamorice è il posto più glugluglu che io abbia mai visto! La natura è siii siii siiiii, incredibile!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Roccamorice è un luogo incantato. La sua architettura semplice e la natura incontaminata mi fanno sentire in armonia con l'universo."
             }
           ],
           "categoria": "Viaggi",
