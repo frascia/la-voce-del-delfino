@@ -221,6 +221,31 @@
             border: 1px solid #9ec07c;
         }
         
+        .config-red-random-section {
+            background: #2a2a2a;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 30px;
+            border: 1px solid #2196f320;
+        }
+        .config-red-random-section h2 {
+            font-size: 1.2rem;
+            color: #2196f3;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .config-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .config-badge.enabled { background: #4caf5020; color: #4caf50; }
+        .config-badge.disabled { background: #f4433620; color: #f44336; }
+        
         .log-section { background: #0d0d0d; border-radius: 16px; padding: 20px; margin-bottom: 30px; border: 1px solid #333; }
         .log-section h2 { color: #0f0; font-family: monospace; font-size: 1.2rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
         .log-tabs { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
@@ -234,77 +259,6 @@
         .info-section { background: #2a2a2a; border-radius: 20px; padding: 24px; margin-bottom: 30px; }
         .info-section h2 { font-size: 1.3rem; color: #0f0; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
         .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-        
-        /* Programmazione settimanale */
-        .week-schedule {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-        .day-schedule {
-            background: #1e1e1e;
-            border-radius: 16px;
-            border: 1px solid #333;
-            overflow: hidden;
-        }
-        .day-header {
-            background: #2a2a2a;
-            padding: 12px 16px;
-            border-bottom: 1px solid #333;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .day-name {
-            font-size: 1rem;
-            font-weight: bold;
-            color: #0f0;
-        }
-        .day-badge {
-            background: #4caf50;
-            color: #000;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .day-count {
-            font-size: 0.7rem;
-            color: #888;
-        }
-        .day-voci {
-            padding: 12px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 12px;
-        }
-        .schedule-card {
-            background: #2a2a2a;
-            border-radius: 12px;
-            padding: 12px;
-            border-left: 4px solid #0f0;
-            transition: all 0.2s;
-        }
-        .schedule-card:hover {
-            transform: translateY(-2px);
-            background: #333;
-        }
-        .schedule-personaggio {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-        .schedule-avatar { font-size: 1.5rem; }
-        .schedule-nome { font-weight: bold; font-size: 0.9rem; color: #0f0; }
-        .schedule-sezione { font-size: 0.7rem; color: #888; margin-bottom: 6px; }
-        .schedule-tipo { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: bold; margin-bottom: 6px; }
-        .schedule-tipo.rss { background: #008cff20; color: #008cff; }
-        .schedule-tipo.gen { background: #ff4d4d20; color: #ff4d4d; }
-        .schedule-tipo.red { background: #2d6a4f20; color: #2d6a4f; }
-        .schedule-temi { font-size: 0.65rem; color: #aaa; margin-top: 6px; padding-top: 6px; border-top: 1px solid #3a3a3a; }
-        .schedule-temi span { display: inline-block; background: #1e1e1e; padding: 2px 6px; border-radius: 10px; margin: 2px 4px 2px 0; font-size: 0.6rem; }
         
         .personaggio-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; border: 1px solid #333; }
         .personaggio-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
@@ -323,6 +277,20 @@
         .relazione-score.neutro { background: #88888820; color: #aaa; }
         .relazione-score.diffidente { background: #ef6c0020; color: #ff9800; }
         .relazione-score.ostile { background: #c6282820; color: #f44336; }
+        
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+        .schedule-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; border: 1px solid #333; }
+        .schedule-day { font-size: 0.7rem; text-transform: uppercase; color: #0f0; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; }
+        .schedule-personaggio { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+        .schedule-avatar { font-size: 1.8rem; }
+        .schedule-nome { font-weight: bold; font-size: 1rem; color: #0f0; }
+        .schedule-sezione { font-size: 0.75rem; color: #888; margin-bottom: 8px; }
+        .schedule-tipo { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: bold; margin-bottom: 8px; }
+        .schedule-tipo.rss { background: #008cff20; color: #008cff; }
+        .schedule-tipo.gen { background: #ff4d4d20; color: #ff4d4d; }
+        .schedule-tipo.red { background: #2d6a4f20; color: #2d6a4f; }
+        .schedule-temi { font-size: 0.7rem; color: #aaa; margin-top: 8px; padding-top: 8px; border-top: 1px solid #333; }
+        .schedule-temi span { display: inline-block; background: #2a2a2a; padding: 2px 8px; border-radius: 12px; margin: 2px 4px 2px 0; font-size: 0.65rem; }
         
         .stats-section { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
         .stat-card { background: #2a2a2a; border-radius: 16px; padding: 16px 20px; flex: 1; min-width: 120px; text-align: center; border: 1px solid #333; }
@@ -381,7 +349,7 @@
         .password-error { color: #f00; margin-top: 12px; font-size: 0.8rem; display: none; }
         
         @media (max-width: 700px) {
-            .day-voci { grid-template-columns: 1fr; }
+            .schedule-grid, .info-grid { grid-template-columns: 1fr; }
             .stats-run-grid { grid-template-columns: repeat(2, 1fr); }
             .ultimo-run { flex-direction: column; align-items: flex-start; }
         }
@@ -417,6 +385,11 @@
             <div id="workflow-errors-list" class="workflow-errors-list"></div>
         </div>
         
+        <div class="config-red-random-section" id="config-red-random" style="display:none;">
+            <h2>🎲 RED Casuali</h2>
+            <div id="config-red-random-content"></div>
+        </div>
+        
         <div class="secret-info-section" id="secret-info" style="display:none;">
             <h2>🔐 Info Riservate</h2>
             <div class="secret-card">
@@ -440,10 +413,7 @@
         </div>
         
         <div class="tab-panel active" id="tab-schedule">
-            <div class="info-section">
-                <h2>📅 Programmazione Redazione (prossimi 7 giorni)</h2>
-                <div id="schedule-week" class="week-schedule"></div>
-            </div>
+            <div class="info-section"><h2>📅 Programmazione Redazione (prossimi 7 giorni)</h2><div id="schedule-week" class="week-schedule"></div></div>
         </div>
         <div class="tab-panel" id="tab-personaggi">
             <div class="info-section"><h2>👥 Personaggi</h2><div id="personaggi-grid" class="info-grid"></div></div>
@@ -584,108 +554,32 @@
         } catch(e) { return {}; }
     }
 
-    async function caricaSecretData() {
-        try {
-            const response = await fetch('public/data/auth_info.json?v=' + Date.now());
-            if (!response.ok) throw new Error('Auth info non disponibile');
-            const data = await response.json();
-            const decodedData = atob(data.data);
-            document.getElementById('secret-data').innerText = decodedData || '---';
-            document.getElementById('secret-ts').innerText = data.ts || '---';
-            document.getElementById('secret-info').style.display = 'block';
-            
-            const secretDiv = document.getElementById('secret-data');
-            secretDiv.style.filter = 'blur(4px)';
-            secretDiv.style.cursor = 'pointer';
-            secretDiv.title = 'Clicca per sbloccare (password richiesta)';
-            secretDiv.onclick = () => sbloccaSecret();
-        } catch(e) { console.error('Errore caricamento secret data:', e); }
-    }
-
-    async function sbloccaSecret() {
-        if (secretUnlocked) return;
-        const pwd = prompt('🔐 Inserisci password per visualizzare i dati riservati:');
-        if (!pwd) return;
-        try {
-            const auth = await fetch('public/data/auth_info.json?v=' + Date.now()).then(r => r.json());
-            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
-                .map(b => b.toString(16).padStart(2, '0')).join('');
-            if (hash === auth.check) {
-                secretUnlocked = true;
-                const secretDiv = document.getElementById('secret-data');
-                secretDiv.style.filter = 'none';
-                secretDiv.style.cursor = 'default';
-                secretDiv.onclick = null;
-                secretDiv.style.color = '#0f0';
-                mostraMessaggio('success', '🔓 Dati riservati sbloccati!');
-            } else {
-                alert('Password errata');
-            }
-        } catch(e) { alert('Errore verifica password'); }
-    }
-
-    async function caricaPersonale() {
-        try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 3000);
-            const response = await fetch('public/personale.txt?v=' + Date.now(), { signal: controller.signal });
-            clearTimeout(timeoutId);
-            if (!response.ok) return;
-            const text = await response.text();
-            if (!text || text.trim().length === 0) return;
-            
-            const lines = text.split('\n');
-            let html = '';
-            let hasContent = false;
-            
-            for (const line of lines) {
-                const trimmed = line.trim();
-                if (trimmed.startsWith('#T:')) {
-                    const testo = trimmed.substring(3);
-                    if (testo) {
-                        html += `<div class="personal-text">${esc(testo)}</div>`;
-                        hasContent = true;
-                    }
-                } else if (trimmed.startsWith('#I:')) {
-                    const imgName = trimmed.substring(3);
-                    if (imgName) {
-                        html += `<div class="personal-image"><img src="public/images/${esc(imgName)}" alt="Immagine personale" onerror="this.style.display='none'"></div>`;
-                        hasContent = true;
-                    }
-                }
-            }
-            
-            if (hasContent) {
-                const container = document.getElementById('personal-content');
-                container.innerHTML = html;
-                container.classList.add('blurred');
-                container.style.cursor = 'pointer';
-                container.onclick = () => sbloccaPersonale();
-                document.getElementById('personal-info').style.display = 'block';
-                personalUnlocked = false;
-            }
-        } catch(e) { console.log('Personale.txt non disponibile'); }
-    }
-
-    async function sbloccaPersonale() {
-        if (personalUnlocked) return;
-        const pwd = prompt('🔐 Inserisci password per visualizzare il contenuto personale:');
-        if (!pwd) return;
-        try {
-            const auth = await fetch('public/data/auth_info.json?v=' + Date.now()).then(r => r.json());
-            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
-                .map(b => b.toString(16).padStart(2, '0')).join('');
-            if (hash === auth.check) {
-                personalUnlocked = true;
-                const container = document.getElementById('personal-content');
-                container.classList.remove('blurred');
-                container.style.cursor = 'default';
-                container.onclick = null;
-                mostraMessaggio('success', '🔓 Contenuto personale sbloccato!');
-            } else {
-                alert('Password errata');
-            }
-        } catch(e) { alert('Errore verifica password'); }
+    function renderConfigRedRandom(config) {
+        const container = document.getElementById('config-red-random-content');
+        const redRandom = config.LIMITI?.articoli_random_red || {};
+        
+        if (!redRandom.abilitato && (!redRandom.num_min || redRandom.num_max === 0)) {
+            return;
+        }
+        
+        const statusClass = redRandom.abilitato ? 'enabled' : 'disabled';
+        const statusText = redRandom.abilitato ? 'ATTIVO' : 'DISATTIVATO';
+        
+        container.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px;">
+                <span class="config-badge ${statusClass}">${statusText}</span>
+                <span>🎲 ${redRandom.num_min || 0} - ${redRandom.num_max || 0} articoli al giorno</span>
+                <span>${redRandom.solo_se_attivi ? '📌 Solo se RED attivi' : '🆓 Sempre'}</span>
+            </div>
+            <div style="background: #1a1a1a; border-radius: 12px; padding: 12px;">
+                <div style="color: #888; font-size: 0.7rem; margin-bottom: 8px;">📝 Temi disponibili (${redRandom.temi?.length || 0}):</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    ${(redRandom.temi || []).slice(0, 10).map(t => `<span style="background: #2a2a2a; padding: 2px 8px; border-radius: 16px; font-size: 0.65rem;">${esc(t)}</span>`).join('')}
+                    ${(redRandom.temi?.length || 0) > 10 ? `<span style="background: #2a2a2a; padding: 2px 8px; border-radius: 16px; font-size: 0.65rem;">+${redRandom.temi.length - 10}</span>` : ''}
+                </div>
+            </div>
+        `;
+        document.getElementById('config-red-random').style.display = 'block';
     }
 
     async function caricaWorkflowErrors() {
@@ -860,7 +754,6 @@
         const oggiKey = getGiornoCorrente();
         const oggiIndex = giorniOrdine.indexOf(oggiKey);
         
-        // Crea array dei prossimi 7 giorni
         const giorniDaMostrare = [];
         for (let i = 0; i < 7; i++) {
             const idx = (oggiIndex + i) % 7;
@@ -922,7 +815,6 @@
                 </div>
             `;
         }
-        
         container.innerHTML = html;
     }
 
@@ -1083,6 +975,129 @@
         });
     }
 
+    // Funzioni per secret e personale
+    async function sbloccaSecret() {
+        if (secretUnlocked) return;
+        const pwd = prompt('🔐 Inserisci password per visualizzare i dati riservati:');
+        if (!pwd) return;
+        try {
+            const auth = await fetch('public/data/auth_info.json?v=' + Date.now()).then(r => r.json());
+            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
+                .map(b => b.toString(16).padStart(2, '0')).join('');
+            if (hash === auth.check) {
+                secretUnlocked = true;
+                const secretDiv = document.getElementById('secret-data');
+                secretDiv.style.filter = 'none';
+                secretDiv.style.cursor = 'default';
+                secretDiv.onclick = null;
+                secretDiv.style.color = '#0f0';
+                mostraMessaggio('success', '🔓 Dati riservati sbloccati!');
+            } else {
+                alert('Password errata');
+            }
+        } catch(e) { alert('Errore verifica password'); }
+    }
+
+    async function sbloccaPersonale() {
+        if (personalUnlocked) return;
+        const pwd = prompt('🔐 Inserisci password per visualizzare il contenuto personale:');
+        if (!pwd) return;
+        try {
+            const auth = await fetch('public/data/auth_info.json?v=' + Date.now()).then(r => r.json());
+            const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pwd))))
+                .map(b => b.toString(16).padStart(2, '0')).join('');
+            if (hash === auth.check) {
+                const encryptedData = document.getElementById('personal-content').dataset.encrypted;
+                if (encryptedData) {
+                    const decrypted = await decifraPersonale(encryptedData, pwd);
+                    const lines = decrypted.split('\n');
+                    let html = '';
+                    for (const line of lines) {
+                        const trimmed = line.trim();
+                        if (trimmed.startsWith('#T:')) {
+                            html += `<div class="personal-text">${esc(trimmed.substring(3))}</div>`;
+                        } else if (trimmed.startsWith('#I:')) {
+                            html += `<div class="personal-image"><img src="public/images/${esc(trimmed.substring(3))}" onerror="this.style.display='none'"></div>`;
+                        }
+                    }
+                    const container = document.getElementById('personal-content');
+                    container.innerHTML = html;
+                    container.classList.remove('blurred');
+                    container.style.cursor = 'default';
+                    container.onclick = null;
+                    personalUnlocked = true;
+                    mostraMessaggio('success', '🔓 Contenuto personale sbloccato!');
+                } else {
+                    const container = document.getElementById('personal-content');
+                    container.classList.remove('blurred');
+                    container.style.cursor = 'default';
+                    container.onclick = null;
+                    personalUnlocked = true;
+                    mostraMessaggio('success', '🔓 Contenuto personale sbloccato!');
+                }
+            } else {
+                alert('Password errata');
+            }
+        } catch(e) { alert('Errore verifica password'); }
+    }
+
+    async function caricaSecretData() {
+        try {
+            const response = await fetch('public/data/auth_info.json?v=' + Date.now());
+            if (!response.ok) throw new Error('Auth info non disponibile');
+            const data = await response.json();
+            const decodedData = atob(data.data);
+            document.getElementById('secret-data').innerText = decodedData || '---';
+            document.getElementById('secret-ts').innerText = data.ts || '---';
+            document.getElementById('secret-info').style.display = 'block';
+            
+            const secretDiv = document.getElementById('secret-data');
+            secretDiv.style.filter = 'blur(4px)';
+            secretDiv.style.cursor = 'pointer';
+            secretDiv.title = 'Clicca per sbloccare (password richiesta)';
+            secretDiv.onclick = () => sbloccaSecret();
+        } catch(e) { console.error('Errore caricamento secret data:', e); }
+    }
+
+    async function caricaPersonale() {
+        try {
+            const response = await fetch('public/personale.txt?v=' + Date.now());
+            if (!response.ok) return;
+            const content = await response.text();
+            if (!content || content.trim().length === 0) return;
+            
+            const container = document.getElementById('personal-content');
+            container.dataset.encrypted = '';
+            
+            const lines = content.split('\n');
+            let html = '';
+            let hasContent = false;
+            
+            for (const line of lines) {
+                const trimmed = line.trim();
+                if (trimmed.startsWith('#T:')) {
+                    html += `<div class="personal-text">${esc(trimmed.substring(3))}</div>`;
+                    hasContent = true;
+                } else if (trimmed.startsWith('#I:')) {
+                    const imgName = trimmed.substring(3);
+                    if (imgName) {
+                        html += `<div class="personal-image"><img src="public/images/${esc(imgName)}" onerror="this.style.display='none'"></div>`;
+                        hasContent = true;
+                    }
+                }
+            }
+            
+            if (hasContent) {
+                container.innerHTML = html;
+                container.classList.add('blurred');
+                container.style.cursor = 'pointer';
+                container.onclick = () => sbloccaPersonale();
+                document.getElementById('personal-info').style.display = 'block';
+                personalUnlocked = false;
+            }
+        } catch(e) { console.log('Personale.txt non disponibile'); }
+    }
+
     async function caricaTuttiIDati() {
         const config = await caricaConfig();
         if (!config) return;
@@ -1092,6 +1107,7 @@
         renderScheduleSettimanale(config);
         renderPersonaggi(config, personaggiStato);
         renderRelazioni(relazioni);
+        renderConfigRedRandom(config);
         await caricaLog();
         await caricaStatisticheRun();
         await caricaWorkflowErrors();
