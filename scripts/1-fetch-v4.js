@@ -2,10 +2,11 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-16
- * VERSIONE: 4.13
+ * VERSIONE: 4.14
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
+ *              DEDUPLICAZIONE: evita di rigenerare articoli già pubblicati oggi.
  *              Log con prefisso [FETCH] per chiarezza.
  *              Rotazione log: elimina log più vecchio di 24 ore.
  */
@@ -84,6 +85,19 @@ async function getGeminiModels() {
         log(`[FETCH] ⚠️ Errore recupero modelli Gemini: ${e.message}`);
     }
     return [];
+}
+
+// Genera chiave univoca per deduplicazione
+function getArticoloKey(voce, tema, titolo = null) {
+    if (voce.tipo === "RED") {
+        return `RED|${voce.firma}|${tema}`;
+    } else if (voce.tipo === "RSS") {
+        // Per RSS usa il titolo della notizia (o tema)
+        return `RSS|${tema}`;
+    } else if (voce.tipo === "GEN") {
+        return `GEN|${voce.firma}|${tema}`;
+    }
+    return null;
 }
 
 async function main() {
@@ -167,10 +181,30 @@ async function main() {
     const draftEsistente = fs.existsSync(DRAFT_PATH) ? caricaJSON(DRAFT_PATH, null) : null;
     const isNuovoGiorno = !draftEsistente || draftEsistente.dataRiferimento !== oggiStr;
 
-    // Test provider con visualizzazione modelli
+    // === DEDUPLICAZIONE: articoli già presenti oggi ===
+    const articoliEsistenti = new Set();
+    if (draftEsistente && !isNuovoGiorno) {
+        for (const sez of Object.values(draftEsistente.sezioni || {})) {
+            for (const art of (sez.articoli || [])) {
+                let key = '';
+                if (art.tipo === 'personaggio' || art.tipo === 'red') {
+                    key = `RED|${art.commento_firma?.nome || ''}|${art.titolo || ''}`;
+                } else if (art.tipo === 'rss') {
+                    key = `RSS|${art.titolo || ''}`;
+                } else if (art.tipo === 'gen') {
+                    key = `GEN|${art.commento_firma?.nome || ''}|${art.titolo || ''}`;
+                }
+                if (key) articoliEsistenti.add(key);
+            }
+        }
+        if (articoliEsistenti.size > 0) {
+            log(`[FETCH] 📋 Articoli già presenti oggi: ${articoliEsistenti.size}`);
+        }
+    }
+
+    // Test provider
     log(`[FETCH] 🔍 Verifica disponibilità provider...`);
 
-    // Verifica se abbiamo già un modello testato da initModels
     const modelloGiaTestato = getTestedGeminiModel();
     const FORCED_GEMINI_MODEL = process.env.FORCED_GEMINI_MODEL || "";
     const isModelloValido = modelloGiaTestato && modelloGiaTestato !== "gemini-1.5-flash" && !FORCED_GEMINI_MODEL;
@@ -266,6 +300,8 @@ async function main() {
 
     let codaArticoli = [];
     let articoliGenerati = 0;
+    let articoliSaltatiPerDuplicato = 0;
+
     if (articoliAbilitati) {
         codaArticoli = await raccoltaNotizie(vociAttive, parole, contatori);
     }
@@ -275,9 +311,18 @@ async function main() {
     for (const { voce, tema } of codaArticoli) {
         const key = `${voce.sez}|${tema}`;
         if (generatiSet.has(key)) {
-            log(`[FETCH] ⚠️ Duplicato evitato: ${tema}`);
+            log(`[FETCH] ⚠️ Duplicato evitato nella coda: ${tema}`);
             continue;
         }
+        
+        // Verifica se l'articolo è già stato pubblicato oggi (deduplicazione)
+        const articoloKey = getArticoloKey(voce, tema);
+        if (articoloKey && articoliEsistenti.has(articoloKey)) {
+            log(`[FETCH] ⏭️ SKIP articolo già pubblicato oggi: ${voce.tipo} | ${voce.firma} | ${tema.substring(0, 40)}...`);
+            articoliSaltatiPerDuplicato++;
+            continue;
+        }
+        
         generatiSet.add(key);
 
         const sez = voce.sez;
@@ -313,11 +358,18 @@ async function main() {
         });
         articoliGenerati++;
         
+        // Aggiungi alla lista degli esistenti per evitare duplicati nello stesso run
+        if (articoloKey) articoliEsistenti.add(articoloKey);
+        
         if (voce.tipo === "RED") {
             log(`[FETCH] ✍️ [Dalla Redazione] ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri`);
         } else {
             log(`[FETCH] ✅ ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri, ${commenti.length} commenti`);
         }
+    }
+
+    if (articoliSaltatiPerDuplicato > 0) {
+        log(`[FETCH] ⏭️ Saltati per duplicato: ${articoliSaltatiPerDuplicato}`);
     }
 
     const chatAbilitata = LIMITI.chat!=="sempre" ? !limiteSuperato(contatori, LIMITI, "chat_run_max") : true;
