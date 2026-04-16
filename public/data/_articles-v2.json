@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "16/04, 06:57",
+  "oraAggiornamento": "16/04, 08:58",
   "agenda": {
     "timbro": "Edizione quotidiana",
     "banner": "Default.webp"
@@ -55,6 +55,186 @@
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "La vita di un lavoratore instancabile",
+          "articolo": "Lavoro, lavoro e ancora lavoro. La mia vita è un susseguirsi di impegni e scadenze, senza un attimo di pausa. Vivo sopra un colle, lontano dalla confusione della città, e qui trovo la mia pace. Ma non è sempre facile. Quando scendo dal colle per organizzare pranzi spettacolari per gli amici, mi rendo conto di quanto il mio lavoro sia faticoso. Le mani sporche, il viso stanco, le poche parole per descrivere la mia giornata. Eppure, non riesco a smettere. È come se il mio corpo fosse guidato da una forza interna che mi spinge a continuare, anche quando sento di non farcela più.",
+          "commento_firma": {
+            "nome": "Wolf",
+            "avatar": "👩‍🌾",
+            "testo": "Sono davvero stanco... non so per quanto ancora potrò andare avanti così"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "",
+              "testo": "Sì, capisco cosa intendi. La natura mi insegna sempre a perseverare. La montagna non si arrende mai, e nemmeno io."
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "",
+              "testo": "Mi sembra di capire che il tuo lavoro sia molto impegnativo, ma anche molto gratificante. Forse è come dice il poeta: 'Il lavoro è l'amore che si mette nel fare'."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "",
+              "testo": "Siii siii siiiiii, lavoro lavoro lavoro, è come se fossi una formica che lavora sempre, glugluglu!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "",
+              "testo": "In Giappone, abbiamo un proverbio che dice: 'La caduta delle foglie è il lavoro degli alberi'. Forse il tuo lavoro è come il ciclo della natura, necessario e importante."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "wolf.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Dietro il sipario del mondo: Cronache di un genio incompreso dai non rettiliani",
+          "articolo": "Sei Abbukk, giornalista con carattere, è noto per le sue teorie non convenzionali e il suo stile unico di fare giornalismo. La sua storia è quella di un uomo che non si lascia sfuggire nulla, sempre pronto a scavare a fondo per scoprire la verità. Quando non è impegnato a scrivere articoli che sfidano la logica e la realtà, si dedica alla sua passione per la raccolta di funghi, arrivando a rifiutare impegni che potrebbero impedirgli di dedicarsi a questa attività. Altrimenti, resta a casa a zappare, continuando a riflettere sulle sue prossime mosse giornalistiche. La sua determinazione e il suo spirito critico lo hanno reso una figura rispettata e allo stesso tempo fonte di dibattito tra i suoi colleghi e lettori.",
+          "commento_firma": {
+            "nome": "Abbukk",
+            "avatar": "🍄",
+            "testo": "È importante riconoscere l'importanza del pensiero critico e dell'indagine approfondita nel giornalismo. Personaggi come Abbukk contribuiscono a mantenere viva la discussione e a stimolare la riflessione su temi spesso dati per scontati."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "",
+              "testo": "La natura è piena di misteri, proprio come la mente di Abbukk. Spero che la sua determinazione possa portare a scoperte rivoluzionarie, siii siii siii"
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "",
+              "testo": "Che tipo interessante! Abbukk sembra avere una personalità forte, proprio come le donne che amo. Mi piacerebbe parlare con lui di vita e di giornalismo"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "",
+              "testo": "Glugluglu! Abbukk è un vero originale, sempre pronto a scavare a fondo e a scoprire la verità. Spero che i suoi articoli continuino a sfidare la logica e a farci riflettere, siii siii siii"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "",
+              "testo": "In Giappone, apprezzeremmo la sua determinazione e il suo spirito critico. Spero che Abbukk possa continuare a portare avanti la sua ricerca della verità, nonostante le difficoltà"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "abbukk.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Lo smilzo che sfidava la notte",
+          "articolo": "È un barman dalle mille sfaccettature, capace di creare cocktail unici e di sfidare la notte con la sua bicicletta. Dopo una lunga giornata di lavoro, quando il locale chiude e gli altri se ne vanno, lui resta. Resta per prepararsi a un'altra delle sue avventure notturne preferite. Non importa se ha finito il turno da poco, lui corre o prende la sua bicicletta e si lancia nella notte. La sua passione per la bicicletta è nota a tutti, anche di notte, con la luna o le stelle a fare da compagni di viaggio, lui va. Eppure, nonostante la sua corporatura esile, sembra avere un metabolismo invidiabile: beve alcolici tutta la notte, preparando drink per sé e per gli amici, e mangia abbondantemente, ma non ingrassa mai. Una macchina efficiente, insomma.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Mah, sarà mica un po' mago? Fatto sta che è un tipo tosto, uno di quei tizi che non hanno quasi nulla di normale. E comunque, se non si ubriaca mai, forse è perché passa tutta la notte pedalando, e l'aria fresca della notte lo tiene in forma. O forse no, chissene, io non ci capisco niente."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "",
+              "testo": "È incredibile come riesca a mantenere una simile energia tutta la notte, deve essere la sua passione per la bicicletta a tenerlo in vita, siii siii siii"
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "",
+              "testo": "Questo tizio è un vero animale notturno, proprio come me! La sua voglia di vivere è contagiosa, peccato che non faccia festa durante il giorno"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "",
+              "testo": "Glugluglu, è come una macchina da corsa, sempre pronto a partire per la prossima avventura, una vera ispirazione per tutti noi, siii siii siii"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "",
+              "testo": "In Giappone, abbiamo un detto: 'Fallire è imparare'. Quest'uomo sembra aver trovato il suo equilibrio perfetto tra lavoro e svago, un esempio da seguire"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "L'ombra del bancone: un bartender instancabile",
+          "articolo": "La sua figura è ben nota nei dintorni del locale notturno. L'ombra del bancone, un bartender dalle mille risorse, è sempre pronto a creare i suoi famosi cocktails e a servire i clienti con un sorriso smagliante. La sua giornata lavorativa può finire molto tardi, ma lui non sembra mai stanco. Anzi, è proprio quando il locale si svuota che lui trova la sua vera libertà. Non importa se ha finito il turno da poco, lui sale in sella alla sua bicicletta e via, nel buio della notte, pedalando senza una meta precisa. La sua passione per la corsa e la bicicletta è nota a tutti e sembra non conoscere limiti. Eppure, nonostante il suo stile di vita movimentato, lui sembra non risentirne. Anzi, è sempre pronto a creare il suo prossimo cocktail con maestria e a raccontare storie con un entusiasmo contagiante.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "E chi se ne frega, alla fine lui è sempre in forma, uno smilzo che non si ubriaca mai, nonostante beva come un pescatore e mangi come un fabbro"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🌌",
+              "testo": "Mi piace come il bartender trova la sua libertà nella notte, pedalando senza una meta precisa. È un po' come me quando vado a esplorare le montagne abruzzesi, sempre pronto a scoprire qualcosa di nuovo."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚙",
+              "testo": "Che tipo fantastico! La sua passione per la bicicletta è incredibile, mi ricorda le strade brasiliane dove si corre e si vive la vita al massimo!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "☕",
+              "testo": "Mi sembra che il bartender abbia una filosofia di vita molto simile alla nostra cultura giapponese, dove il lavoro e il tempo libero sono bilanciati in armonia."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiii siii siiiii! Il bartender è proprio un tipo fuori dal comune, sempre pronto a pedalare e a creare cocktails! Glugluglu, che invidia!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Ecomob a Pescara, la fiera della mobilità sostenibile",
+          "articolo": "A Pescara si tiene la fiera Ecomob, un evento dedicato alla mobilità sostenibile e al turismo attivo. La manifestazione è un'occasione per scoprire le ultime novità nel settore della mobilità ecologica e per promuovere stili di vita più sostenibili. Gli organizzatori hanno preparato una serie di iniziative e workshop per coinvolgere i visitatori e offrire loro una visione d'insieme sulle possibilità offerte dalla mobilità sostenibile. Dalle biciclette elettriche ai servizi di bike-sharing, gli espositori presenteranno le loro proposte per un futuro più green. Anche il turismo attivo sarà protagonista, con stand dedicati alle attività outdoor e agli sport ecologici. Un evento che non può mancare per chi è appassionato di sostenibilità e mobilità.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Ecomob? Mai sentita. Spero non sia un'altra scusa per farci spendere soldi. Che senso ha parlare di mobilità sostenibile se poi non si può nemmeno permettere una bicicletta decente? E il turismo attivo? Chi se lo può permettere? Spero che non sia solo una fiera per ricchi. E i pescatori? Siamo sempre quelli che devono lavorare per portare a casa lo stipendio, mentre gli altri se ne stanno lì a parlare di sostenibilità."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "La mobilità sostenibile è il futuro! Sono felice di vedere eventi come Ecomob che promuovono stili di vita più ecologici. La natura ringrazia!"
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ecomob? Sembra una festa! Spero ci siano molte donne appassionate di biciclette elettriche e turismo attivo. Sarà un evento incredibile!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Finalmente, un evento che promuove la sostenibilità! In Giappone abbiamo fatto grandi passi in questo campo, spero che l'Italia possa imparare dalle nostre esperienze."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Ecomob, siii siii siiiiii! Sarà un evento glugluglu! Non vedo l'ora di scoprire le ultime novità nella mobilità sostenibile e di fare due chiacchiere con gli espositori!"
+            }
+          ],
+          "categoria": "Cronaca",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "groq"
         }
       ]
     },
@@ -105,6 +285,78 @@
           "colore_tipo": "#008cff",
           "immagine": "lars.webp",
           "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Film al cinema: novità e must-see",
+          "articolo": "Al cinema ci sono sempre tante novità, ma a dire il vero io non vado mica tanto spesso al cinema, preferisco 'a pescaria, là sì che c'è vera azione! Comunque, so che molti miei amici e parenti a Borgomarino amano andare al cinema e vedere i nuovi film. Ultimamente son usciti alcuni titoli interessanti. C'è chi dice che il cinema è in crisi, ma secondo me è sempre una buona opzione per passare il tempo. Tra i film più attesi ci sono quelli d'azione e avventura, che personalmente trovo più coinvolgenti. Non sono un grande critico cinematografico, ma penso che ci siano molte opzioni per tutti i gusti.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Evviva il cinema! Spero che continuino a uscire film emozionanti e coinvolgenti. D'altra parte, io sono uno che ama l'azione e il mare, quindi mi aspetto sempre qualcosa di speciale. Forza cinema, forza Pescara!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🐬",
+              "testo": "Sì, anch'io preferisco la natura alla vita al chiuso. Il cinema può essere divertente, ma non è la mia passione. Mi piace più passeggiare tra le montagne di Roccamorice e godermi la bellezza della natura."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ah, che pazzesco! Io adoro il cinema! È un'ottima opzione per passare il tempo con gli amici e godersi un buon film. E poi, ci sono sempre tante belle donne al cinema, è un posto perfetto per fare nuove conoscenze!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "In Giappone, il cinema è una vera istituzione. Mi piace andare al cinema per vedere i nuovi film e scoprire nuove storie. Ma devo dire che, in Italia, il cinema non è allo stesso livello di quello giapponese. Spero che un giorno potrò contribuire a migliorare il cinema italiano."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiii siii siiiiii! Io amo il cinema! È un posto dove posso sognare e lasciare libera la mia immaginazione. E poi, ci sono sempre tante novità e sorprese! Glugluglu, non vedo l'ora di andare al cinema e vedere i nuovi film!"
+            }
+          ],
+          "categoria": "Da Vedere",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "groq"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Roccamorice, il paradiso del viaggiatore solitario",
+          "articolo": "Nascosta tra le montagne abruzzesi, Roccamorice è una meta insolita che offre un'esperienza unica per i viaggiatori solitari. Questo piccolo paese, con la sua natura incontaminata e la sua tranquillità, è il luogo ideale per chi cerca di allontanarsi dal caos quotidiano. Il nostro ospite, un danese solitario, ha scelto Roccamorice per la sua bellezza naturale e l'allegria degli abitanti del posto. 'La natura è la mia vera compagna', dice, 'e qui posso godermi la pace e la tranquillità che cerco'. La sua storia è quella di un uomo che ha scelto di vivere in un luogo dove l'ordine e la minimalità sono essenziali. La sua passione per la natura e la sua scelta di vivere in un luogo così isolato lo hanno portato a scoprire la vera essenza dell'Abruzzo, dalle sue montagne alle sue tradizioni culinarie, come gli arrosticini.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🐬",
+            "testo": "Sono sempre stato attratto dalle mete insolite e Roccamorice sembra essere un luogo che risponde alle mie esigenze. Come viaggiatore con un budget limitato, sono alla ricerca di posti che offrano un'esperienza autentica senza spendere una fortuna. La storia di questo danese solitario mi ha fatto venire voglia di scoprire questo posto e di immergermi nella natura abruzzesi. Spero di poter pianificare presto un viaggio a Roccamorice e di poter godermi la tranquillità e la bellezza di questo luogo."
+          },
+          "commenti": [
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Siii siii siiiiii, sono così felice di sentire che esiste un posto del genere! La natura è davvero una fonte di ispirazione e pace. Spero di poter visitare Roccamorice un giorno."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Che noia! Un paese isolato in mezzo alle montagne? No grazie! Preferisco la vita movimentata della città, con le sue feste e le sue donne! Ma per chi cerca la tranquillità, suppongo che Roccamorice possa essere una scelta..."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Roccamorice sembra essere un luogo molto interessante. La natura incontaminata e la tranquillità sono aspetti che apprezzo molto. Spero che gli abitanti del posto siano in grado di preservare la bellezza di questo luogo per le generazioni future."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Glugluglu! Roccamorice è il posto perfetto per me! Siii siii siiiiii, amo la natura e la tranquillità! Devo assolutamente andare a visitarlo e fare una festa nella natura! Opportunità di viralizzare il luogo!"
+            }
+          ],
+          "categoria": "Viaggi",
+          "colore_tipo": "#008cff",
+          "immagine": "lars.webp",
+          "provider": "groq"
         }
       ]
     }
