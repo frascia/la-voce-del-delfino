@@ -29,7 +29,7 @@
             transition: background 0.6s ease, filter 0.6s ease;
         }
         
-        /* Animaletti Ghibli fluttuanti - SCAPPANO DAL MOUSE */
+        /* Animaletti Ghibli fluttuanti */
         .ghibli-float {
             position: fixed;
             pointer-events: auto;
@@ -47,14 +47,12 @@
             opacity: 0.85;
         }
         
-        /* Animazione di fluttuazione normale */
         @keyframes floatAround {
             0% { transform: translate(0, 0) rotate(0deg); }
             50% { transform: translate(25px, -20px) rotate(5deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
         }
         
-        /* Posizioni iniziali */
         .float-1 { top: 5%; left: 2%; animation: floatAround 25s infinite ease-in-out; font-size: 2.8rem; }
         .float-2 { bottom: 10%; right: 3%; animation: floatAround 18s infinite ease-in-out; font-size: 2.2rem; }
         .float-3 { top: 20%; right: 5%; animation: floatAround 22s infinite ease-in-out; font-size: 2rem; }
@@ -287,17 +285,25 @@
             color: #6a8e4a;
         }
         
+        /* Firma autore con data integrata */
         .firma-autore {
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-bottom: 16px;
-            padding: 8px 0;
+            padding: 8px 0 8px 8px;
             border-top: 1px solid #e8e0cc;
             border-bottom: 1px solid #e8e0cc;
             background: rgba(255,250,235,0.5);
             border-radius: 12px;
-            padding-left: 8px;
+        }
+        
+        .autore-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
         .avatar-autore {
@@ -309,6 +315,18 @@
             color: #6a8e4a;
             font-size: 0.85rem;
             letter-spacing: 0.5px;
+        }
+        
+        .articolo-data {
+            font-size: 0.65rem;
+            color: #9bae8a;
+            font-family: monospace;
+            background: rgba(200, 180, 140, 0.15);
+            padding: 3px 8px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
         
         .testo {
@@ -835,12 +853,12 @@
             .legend-btn { bottom: 15px; left: 15px; width: 36px; height: 36px; font-size: 1rem; }
             .legend-popup { bottom: 60px; left: 15px; }
             .ghibli-float { font-size: 1.2rem; opacity: 0.6; }
-            .float-1, .float-2, .float-3, .float-4, .float-5, .float-6, .float-7, .float-8, .float-9, .float-10 { font-size: 1.2rem; }
+            .firma-autore { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
 <body>
-<!-- Animaletti Ghibli fluttuanti - SCAPPANO DAL MOUSE -->
+<!-- Animaletti Ghibli fluttuanti -->
 <div class="ghibli-float float-1">🐚</div>
 <div class="ghibli-float float-2">🍃</div>
 <div class="ghibli-float float-3">🐌</div>
@@ -945,9 +963,7 @@ function initScappatelli() {
         let originalY = null;
         let isMoving = false;
         let returnTimeout = null;
-        let currentTransform = { x: 0, y: 0 };
         
-        // Salva la posizione originale (in percentuale o pixel)
         const saveOriginalPosition = () => {
             const rect = float.getBoundingClientRect();
             const parentRect = document.body.getBoundingClientRect();
@@ -962,16 +978,15 @@ function initScappatelli() {
             if (returnTimeout) clearTimeout(returnTimeout);
             returnTimeout = setTimeout(() => {
                 if (!isMoving) {
+                    float.style.transition = 'all 1.2s cubic-bezier(0.3, 0.8, 0.4, 1)';
                     float.style.transform = `translate(0, 0) rotate(0deg)`;
                     float.style.left = `${originalX}%`;
                     float.style.top = `${originalY}%`;
-                    currentTransform = { x: 0, y: 0 };
-                    // Riavvio l'animazione di fluttuazione
-                    float.style.animation = 'none';
-                    float.offsetHeight; // trigger reflow
-                    float.style.animation = '';
+                    setTimeout(() => {
+                        float.style.transition = 'all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1)';
+                    }, 1200);
                 }
-            }, 800);
+            }, 1000);
         };
         
         float.addEventListener('mouseenter', (e) => {
@@ -990,12 +1005,10 @@ function initScappatelli() {
             const distance = Math.hypot(dx, dy);
             const angle = Math.atan2(dy, dx);
             
-            // Più vicino è il mouse, più scappa lontano
-            const escapePower = Math.min(180, Math.max(40, 250 - distance));
+            const escapePower = Math.min(120, Math.max(20, 180 - distance));
             const escapeX = Math.cos(angle) * escapePower * -1;
             const escapeY = Math.sin(angle) * escapePower * -1;
             
-            // Limiti per non uscire dallo schermo
             const newLeft = floatRect.left + escapeX;
             const newTop = floatRect.top + escapeY;
             const maxLeft = window.innerWidth - floatRect.width - 10;
@@ -1003,15 +1016,15 @@ function initScappatelli() {
             const boundedX = Math.min(maxLeft, Math.max(10, newLeft));
             const boundedY = Math.min(maxTop, Math.max(10, newTop));
             
+            float.style.transition = 'all 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1)';
             float.style.left = `${boundedX}px`;
             float.style.top = `${boundedY}px`;
-            float.style.transform = `rotate(${Math.sign(escapeX) * 15}deg)`;
-            currentTransform = { x: boundedX, y: boundedY };
+            float.style.transform = `rotate(${Math.sign(escapeX) * 8}deg)`;
             
             setTimeout(() => {
                 isMoving = false;
                 returnToOriginal();
-            }, 400);
+            }, 800);
         });
         
         float.addEventListener('mouseleave', () => {
@@ -1123,7 +1136,7 @@ async function carica(){
             document.getElementById('menu-cat').appendChild(b);
         });
         if(sezioni[0])mostraSezione(sezioni[0],null,cfg.STILI||{});
-        initScappatelli(); // Inizializza l'effetto di fuga dopo il caricamento
+        initScappatelli();
     }catch(e){console.error(e);}
 }
 
@@ -1149,11 +1162,16 @@ async function mostraSezione(sez,btn,STILI){
         const bn=n.nuovo?'<span class="badge-nuovo">nuovo</span>':'';
         const cf=n.commento_firma||{};
         
+        // FIRMA AUTORE con data integrata
         const firmaHtml = (cf.nome && cf.nome !== 'Redazione') ? 
             `<div class="firma-autore">
-                <span class="avatar-autore">${esc(cf.avatar) || '👤'}</span>
-                <span class="nome-autore">${esc(cf.nome)}</span>
-            </div>` : '';
+                <div class="autore-info">
+                    <span class="avatar-autore">${esc(cf.avatar) || '👤'}</span>
+                    <span class="nome-autore">${esc(cf.nome)}</span>
+                </div>
+                ${n.publishedAt ? `<div class="articolo-data">📅 ${esc(n.publishedAt)}</div>` : ''}
+            </div>` : 
+            (n.publishedAt ? `<div class="firma-autore"><div class="articolo-data">📅 ${esc(n.publishedAt)}</div></div>` : '');
         
         const cfH = cf.testo ? `<div class="commento-firma" onclick="this.classList.toggle('aperto')">
             <span class="avatar-firma">${esc(cf.avatar) || '👤'}</span>
