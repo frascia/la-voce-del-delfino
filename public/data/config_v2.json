@@ -165,7 +165,7 @@
     {
       "g": "lun,mer,ven",
       "sez": "pescara",
-      "arg": "Politica Locale Pescara",
+      "arg": "Politica Pescara",
       "tipo": "RSS",
       "lab": "Politica",
       "firma": "Cetteo",
@@ -302,7 +302,7 @@
       "weight_commento": 0.9
     },
     {
-      "g": "mer",
+      "g": "mer,gio",
       "sez": "pescara",
       "arg": "Vita contadina",
       "tipo": "RED",
@@ -327,7 +327,7 @@
       "weight_commento": 0.9
     },
     {
-      "g": "default",
+      "g": "lun,mar",
       "sez": "pescara",
       "arg": "Il brasileiro",
       "tipo": "RED",
@@ -352,7 +352,7 @@
       "weight_commento": 0.7
     },
     {
-      "g": "ven",
+      "g": "ven,sab",
       "sez": "pescara",
       "arg": "Riflessioni montanare",
       "tipo": "RED",
@@ -377,7 +377,7 @@
       "weight_commento": 0.7
     },
     {
-      "g": "mer",
+      "g": "mer,gio",
       "sez": "pescara",
       "arg": "Storie profonde",
       "tipo": "RED",
@@ -402,7 +402,7 @@
       "weight_commento": 0.7
     },
      {
-      "g": "lun",
+      "g": "lun,gio",
       "sez": "pescara",
       "arg": "Storie divertenti",
       "tipo": "RED",
@@ -454,7 +454,7 @@
     {
       "g": "mer,sab",
       "sez": "mondo",
-      "arg": "Giappone cultura società",
+      "arg": "Giappone",
       "tipo": "RSS",
       "lab": "Giappone",
       "firma": "Hiroki",
@@ -478,7 +478,7 @@
       "weight_commento": 0.7
     },
     {
-      "g": "default",
+      "g": "sab",
       "sez": "cultura",
       "arg": "Nuovi libri",
       "tipo": "GEN",
