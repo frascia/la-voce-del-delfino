@@ -17,7 +17,7 @@
       "13",
       "19"
     ],
-    "tolleranza_minuti": 10,
+    "tolleranza_minutti": 10,
     "lunghezza_articolo": 2,
     "cerca_modello_max": 1,
     "chat": "sempre",
@@ -26,7 +26,25 @@
     "fascia_reset_quote": "10",
     "commenti_min": 1,
     "commenti_max": 4,
-    "commenti_max_totali": 10
+    "commenti_max_totali": 10,
+    "articoli_random_red": {
+      "abilitato": true,
+      "num_min": 1,
+      "num_max": 2,
+      "solo_se_attivi": false,
+      "temi": [
+        "Il fascino dell'Abruzzo nascosto",
+        "La magia degli arrosticini",
+        "Pescara vista dal mare",
+        "I segreti del centro storico",
+        "Tradizioni e folclore abruzzese",
+        "La cucina pescarese tra mare e monti",
+        "I borghi più belli d'Abruzzo",
+        "La transumanza: antica tradizione",
+        "Il Parco Nazionale della Majella",
+        "Le leggende della costa adriatica"
+      ]
+    }
   },
   "CHI": {
     "default": {
@@ -510,7 +528,7 @@
     "personaggio": "news-redazionale.webp"
   },
   "site_settings": {
-    "last_update": "16/04, 11:25",
+    "last_update": "16/04, 14:01",
     "timbro": "Edizione quotidiana",
     "banner": "Default.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
