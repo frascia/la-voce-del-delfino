@@ -196,11 +196,12 @@
             z-index: 1;
         }
         
+        /* Card articoli con animazioni */
         .card {
             background: var(--ghibli-cream);
             border-radius: 32px;
             padding: 24px 22px 22px;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 12px 24px rgba(0,0,0,0.08);
             border: 1px solid rgba(140, 120, 70, 0.15);
             position: relative;
@@ -285,7 +286,6 @@
             color: #6a8e4a;
         }
         
-        /* Firma autore con data integrata */
         .firma-autore {
             display: flex;
             align-items: center;
@@ -338,6 +338,7 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             font-family: 'Georgia', serif;
+            transition: all 0.2s ease;
         }
         
         .testo.aperto { -webkit-line-clamp: unset; }
@@ -378,6 +379,7 @@
             50% { opacity: 0.6; }
         }
         
+        /* Commento firma */
         .commento-firma {
             background: #f3efdf;
             border-radius: 24px;
@@ -419,6 +421,7 @@
         
         .commento-firma.aperto .firma-toggle { transform: rotate(180deg); }
         
+        /* Commenti personaggi con espansione e hover */
         .commenti-header {
             display: flex;
             align-items: center;
@@ -476,7 +479,7 @@
             font-size: 0.8rem;
             border: 1px solid #e6ddc0;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: background 0.2s ease, transform 0.2s ease;
         }
         
         .commento-personaggio:hover {
@@ -517,6 +520,7 @@
         
         .commento-personaggio.aperto .commento-toggle { transform: rotate(180deg); }
         
+        /* Chat con animazioni */
         .chat-main-header {
             display: flex;
             justify-content: space-between;
@@ -692,7 +696,7 @@
             border-left: 3px solid;
             border-radius: 0 16px 16px 0;
             padding-left: 14px;
-            transition: transform 0.2s;
+            transition: transform 0.2s ease;
         }
         
         .chat-message:hover {
@@ -1049,6 +1053,8 @@ if (legendBtn) {
 }
 
 // === FUNZIONI UTILI ===
+let CHI_GLOBALE = null;
+
 function getColorFromName(nome) {
     let hash = 0;
     for (let i = 0; i < nome.length; i++) {
@@ -1127,6 +1133,11 @@ async function carica(){
         const providerText = ss.llm_provider ? ` (${ss.llm_provider})` : '';
         document.getElementById('ts-display').innerHTML = up !== '---' ? `🐬 Il Delfino ha nuotato qui il ${up}${providerText}` : '🐬 Il Delfino sta nuotando...';
         if(ss.motto)document.getElementById('motto-display').innerText='✦ '+ss.motto+' ✦';
+        
+        // Carica anche il config completo per avere CHI
+        const fullConfig=await fetch('public/data/config_v2.json?v='+Date.now()).then(r=>r.json());
+        CHI_GLOBALE = fullConfig.CHI || {};
+        
         const sezioni=[...new Set((cfg.REDAZIONE||[]).map(v=>v.sez))];
         sezioni.forEach((sez,i)=>{
             const b=document.createElement('button');
@@ -1179,12 +1190,17 @@ async function mostraSezione(sez,btn,STILI){
             <div class="testo-firma">${esc(cf.testo)}</div>
         </div>` : '';
         
+        // Commenti personaggi con avatar preso da CHI
         const comm=n.commenti||[];
-        const cListH=comm.map(c=>`<div class="commento-personaggio" onclick="this.classList.toggle('aperto')">
-            <span class="avatar-p">${esc(c.avatar) || '👤'}</span>
-            <span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span>
-            <div class="testo-p">${esc(c.testo)}</div>
-        </div>`).join('');
+        const cListH=comm.map(c => {
+            const personaggio = (CHI_GLOBALE && CHI_GLOBALE[c.nome]) || (CHI_GLOBALE && CHI_GLOBALE.default) || { avatar: '👤' };
+            const avatar = personaggio.avatar || '👤';
+            return `<div class="commento-personaggio" onclick="this.classList.toggle('aperto')">
+                <span class="avatar-p">${esc(avatar)}</span>
+                <span class="nome-p">${esc(c.nome)} <span class="commento-toggle">▼</span></span>
+                <div class="testo-p">${esc(c.testo)}</div>
+            </div>`;
+        }).join('');
         const cH=comm.length?`<div class="commenti-header" onclick="this.classList.toggle('aperto');this.nextElementSibling.classList.toggle('aperto')">
             <span class="commenti-count">${comm.length}</span>
             <span class="commenti-label">Comment${comm.length===1?'o':'i'}</span>
