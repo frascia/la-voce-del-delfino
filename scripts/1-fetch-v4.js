@@ -2,12 +2,13 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-16
- * VERSIONE: 4.16
+ * VERSIONE: 4.17
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
  *              DEDUPLICAZIONE: evita di rigenerare articoli già pubblicati oggi.
  *              LOG: se assente lo crea, se più vecchio di 2 giorni lo cancella.
+ *              DATA ARTICOLI: formato "giorno mese ora:minuti" con sigla fonte.
  */
 
 import fs from "fs";
@@ -41,6 +42,27 @@ import { initChat, generaChat } from "./lib/chat.js";
 import { initArticoli, generaArticolo, generaCommenti } from "./lib/articoli.js";
 
 function log(msg) { scriviLog(msg, LOG_PATH); }
+
+// Formatta la data nel formato "gio 17 aprile 20:43"
+function formatDataArticolo(publishedAt, sourceSigla) {
+    if (!publishedAt) return sourceSigla ? `${sourceSigla} data sconosciuta` : null;
+    
+    const date = new Date(publishedAt);
+    if (isNaN(date.getTime())) return sourceSigla ? `${sourceSigla} data non valida` : null;
+    
+    const giorni = { 0: "dom", 1: "lun", 2: "mar", 3: "mer", 4: "gio", 5: "ven", 6: "sab" };
+    const mesi = { 0: "gennaio", 1: "febbraio", 2: "marzo", 3: "aprile", 4: "maggio", 5: "giugno", 
+                   6: "luglio", 7: "agosto", 8: "settembre", 9: "ottobre", 10: "novembre", 11: "dicembre" };
+    
+    const romaDate = new Date(date.toLocaleString("en-US", { timeZone: "Europe/Rome" }));
+    const giorno = giorni[romaDate.getDay()];
+    const giornoMese = romaDate.getDate();
+    const mese = mesi[romaDate.getMonth()];
+    const ore = romaDate.getHours().toString().padStart(2, '0');
+    const minuti = romaDate.getMinutes().toString().padStart(2, '0');
+    
+    return `${sourceSigla} ${giorno} ${giornoMese} ${mese} ${ore}:${minuti}`;
+}
 
 // Genera chiave univoca per deduplicazione
 function getArticoloKey(voce, tema, titolo = null) {
@@ -114,13 +136,10 @@ async function main() {
                 log(`📄 Nuovo file log creato`);
             }
         } else {
-            // Se il file non esiste, crealo
             fs.writeFileSync(LOG_PATH, '');
             log(`📄 File log creato`);
         }
-    } catch(e) { 
-        // Ignora errori
-    }
+    } catch(e) { /* ignora errori */ }
 
     // Reset opzionale del draft
     if (process.env.RESET_DRAFT === 'true') {
@@ -325,7 +344,7 @@ async function main() {
 
     const generatiSet = new Set();
 
-    for (const { voce, tema } of codaArticoli) {
+    for (const { voce, tema, publishedAt } of codaArticoli) {
         const key = `${voce.sez}|${tema}`;
         if (generatiSet.has(key)) {
             log(`[FETCH] ⚠️ Duplicato evitato nella coda: ${tema.substring(0, 40)}...`);
@@ -362,6 +381,20 @@ async function main() {
         let tipoOutput = voce.tipo === "RED" ? "personaggio" : (voce.tipo === "GEN" ? "gen" : "rss");
         let categoriaOutput = voce.tipo === "RED" ? "Dalla Redazione" : voce.lab;
         
+        // Aggiungi la sigla della fonte e formatta la data
+        let sourceSigla = "";
+        if (voce.tipo === "RSS") {
+            const currentNewsSource = process.env.NEWS_SOURCE || "gnews";
+            sourceSigla = currentNewsSource === "gnews" ? "📰" : "📡";
+        }
+        
+        let publishedAtStr = null;
+        if (publishedAt) {
+            publishedAtStr = formatDataArticolo(publishedAt, sourceSigla);
+        } else if (sourceSigla) {
+            publishedAtStr = `${sourceSigla} data sconosciuta`;
+        }
+        
         // Aggiungi anche la chiave basata sul titolo reale per future deduplicazioni
         const titoloKey = getArticoloKey(voce, tema, titolo);
         if (titoloKey) articoliEsistenti.add(titoloKey);
@@ -375,7 +408,8 @@ async function main() {
             categoria: categoriaOutput,
             colore_tipo: STILI[voce.tipo] || STILI["RSS"] || "#008cff",
             immagine: infoFirma.img || "default_personaggio.webp",
-            provider: provider
+            provider: provider,
+            publishedAt: publishedAtStr
         });
         articoliGenerati++;
         
@@ -383,6 +417,9 @@ async function main() {
             log(`[FETCH] ✍️ [Dalla Redazione] ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri`);
         } else {
             log(`[FETCH] ✅ ${voce.firma} (${provider}): "${(titolo||tema).substring(0, 50)}..." – ${articoloTesto.length} caratteri, ${commenti.length} commenti`);
+            if (publishedAtStr) {
+                log(`[FETCH]    📅 ${publishedAtStr}`);
+            }
         }
     }
 
