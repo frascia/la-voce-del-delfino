@@ -2,13 +2,12 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-16
- * VERSIONE: 4.15
+ * VERSIONE: 4.16
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
  *              DEDUPLICAZIONE: evita di rigenerare articoli già pubblicati oggi.
- *              Log con prefisso [FETCH] per chiarezza.
- *              Rotazione log: elimina log più vecchio di 24 ore.
+ *              LOG: se assente lo crea, se più vecchio di 2 giorni lo cancella.
  */
 
 import fs from "fs";
@@ -103,17 +102,25 @@ async function getGeminiModels() {
 async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
 
-    // === ROTAZIONE LOG: elimina se più vecchio di 24 ore ===
+    // === ROTAZIONE LOG: se più vecchio di 2 giorni (48 ore) lo cancella e ricrea ===
     try {
         if (fs.existsSync(LOG_PATH)) {
             const stats = fs.statSync(LOG_PATH);
             const hoursOld = (Date.now() - stats.mtimeMs) / (1000 * 60 * 60);
-            if (hoursOld >= 24) {
+            if (hoursOld >= 48) {
                 fs.unlinkSync(LOG_PATH);
-                log(`🗑️ Log eliminato (più vecchio di 24 ore)`);
+                log(`🗑️ Log eliminato (più vecchio di 48 ore)`);
+                fs.writeFileSync(LOG_PATH, '');
+                log(`📄 Nuovo file log creato`);
             }
+        } else {
+            // Se il file non esiste, crealo
+            fs.writeFileSync(LOG_PATH, '');
+            log(`📄 File log creato`);
         }
-    } catch(e) { /* ignora errori */ }
+    } catch(e) { 
+        // Ignora errori
+    }
 
     // Reset opzionale del draft
     if (process.env.RESET_DRAFT === 'true') {
@@ -202,7 +209,7 @@ async function main() {
         }
     }
 
-    // Test provider
+    // Test provider con priorità a Gemini (Groq testato SOLO se Gemini fallisce)
     log(`[FETCH] 🔍 Verifica disponibilità provider...`);
 
     const modelloGiaTestato = getTestedGeminiModel();
@@ -217,6 +224,7 @@ async function main() {
         log(`[FETCH] ✅ Modello Gemini già validato in initModels: ${modelloGiaTestato}`);
         geminiOk = true;
         geminiModelloFunzionante = modelloGiaTestato;
+        log(`[FETCH] ⏭️ Test Groq saltato (Gemini già disponibile)`);
     } else {
         log(`[FETCH]    📡 Recupero modelli Gemini disponibili...`);
         let modelliGemini = await getGeminiModels();
@@ -242,18 +250,25 @@ async function main() {
             }
             await new Promise(r => setTimeout(r, 1000));
         }
+        
+        // Test Groq SOLO SE Gemini non è disponibile
+        if (!geminiOk) {
+            log(`[FETCH]    📡 Test Groq...`);
+            groqOk = await testProvider("groq");
+            log(`[FETCH]    ${groqOk ? "✅ Groq disponibile" : "❌ Groq NON disponibile"}`);
+        } else {
+            log(`[FETCH]    ⏭️ Test Groq saltato (Gemini già disponibile)`);
+        }
     }
 
     if (geminiOk) {
         log(`[FETCH]    ✅ Gemini disponibile (modello selezionato: ${geminiModelloFunzionante})`);
+    } else if (groqOk) {
+        log(`[FETCH]    ✅ Groq disponibile`);
     } else {
-        log(`[FETCH]    ❌ Gemini NON disponibile (nessun modello Flash risponde)`);
+        log(`[FETCH]    ❌ NESSUN PROVIDER DISPONIBILE`);
     }
-    if (!geminiOk)  {
-             log(`[FETCH]    📡 Test Groq...`);
-             groqOk = await testProvider("groq");
-             log(`[FETCH]    ${groqOk ? "✅ Groq disponibile" : "❌ Groq NON disponibile"}`);
-    }
+
     if (!geminiOk && !groqOk) {
         log(`[FETCH] ❌ NESSUN PROVIDER DISPONIBILE (Gemini e Groq non rispondono)`);
         
