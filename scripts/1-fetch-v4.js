@@ -2,13 +2,12 @@
 /**
  * FILE: 1-fetch-v4.js
  * DATA: 2025-04-16
- * VERSIONE: 4.12
+ * VERSIONE: 4.13
  * DESCRIZIONE: Orchestratore principale per la generazione degli articoli.
  *              Supporta Gemini e Groq, fallback persistente, reset opzionale.
  *              Tipi supportati: RSS, GEN, RED (Dalla Redazione).
  *              Log con prefisso [FETCH] per chiarezza.
- *              Recupero dinamico dei modelli Gemini (solo Flash).
- *              Evita doppi test dei modelli riutilizzando il modello da initModels().
+ *              Rotazione log: elimina log più vecchio di 24 ore.
  */
 
 import fs from "fs";
@@ -89,6 +88,18 @@ async function getGeminiModels() {
 
 async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
+
+    // === ROTAZIONE LOG: elimina se più vecchio di 24 ore ===
+    try {
+        if (fs.existsSync(LOG_PATH)) {
+            const stats = fs.statSync(LOG_PATH);
+            const hoursOld = (Date.now() - stats.mtimeMs) / (1000 * 60 * 60);
+            if (hoursOld >= 24) {
+                fs.unlinkSync(LOG_PATH);
+                log(`🗑️ Log eliminato (più vecchio di 24 ore)`);
+            }
+        }
+    } catch(e) { /* ignora errori */ }
 
     // Reset opzionale del draft
     if (process.env.RESET_DRAFT === 'true') {
@@ -195,7 +206,6 @@ async function main() {
             } else {
                 log(`[FETCH]       ❌ ${model} non risponde`);
             }
-            // Pausa tra i test per evitare rate limit
             await new Promise(r => setTimeout(r, 1000));
         }
     }
@@ -337,7 +347,7 @@ async function main() {
         }
     }
 
-    // Se nessun articolo è stato generato, mantieni il draft esistente (non sovrascrivere)
+    // Se nessun articolo è stato generato, mantieni il draft esistente
     if (articoliGenerati === 0) {
         log(`[FETCH] ⚠️ Nessun articolo generato in questo run.`);
         if (draftEsistente && isNuovoGiorno) {
@@ -350,7 +360,6 @@ async function main() {
         return;
     }
 
-    // Salvataggio normale con safeWriteDraft (draft non vuoto)
     const ok = await safeWriteDraft(draft, DRAFT_PATH, TEMP_PATH, BACKUP_PATH);
     if (ok) {
         contatori._primoRunOggi = true;
