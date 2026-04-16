@@ -29,44 +29,44 @@
             transition: background 0.6s ease, filter 0.6s ease;
         }
         
-        /* Animaletti Ghibli fluttuanti - in foreground ma non interferiscono */
+        /* Animaletti Ghibli fluttuanti - ben visibili */
         .ghibli-float {
             position: fixed;
-            pointer-events: none;  /* Non bloccano i click */
-            z-index: 10;          /* Portati in primo piano */
-            font-size: 2rem;
-            opacity: 0.3;
+            pointer-events: none;
+            z-index: 15;
+            font-size: 2.2rem;
+            opacity: 0.5;
             animation: floatAround 20s infinite ease-in-out;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
             transition: opacity 0.3s ease;
         }
         
-        /* Al passaggio del mouse diventano più visibili (effetto magico) */
+        /* Al passaggio del mouse diventano molto più visibili */
         body:hover .ghibli-float {
-            opacity: 0.5;
+            opacity: 0.85;
         }
         
         @keyframes floatAround {
             0% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(30px, -25px) rotate(8deg); }
+            50% { transform: translate(35px, -25px) rotate(8deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
         }
         
         /* Posizioni e dimensioni variabili */
-        .float-1 { top: 5%; left: 2%; animation-duration: 25s; font-size: 2.8rem; opacity: 0.35; }
+        .float-1 { top: 5%; left: 2%; animation-duration: 25s; font-size: 2.8rem; }
         .float-2 { bottom: 10%; right: 3%; animation-duration: 18s; font-size: 2.2rem; }
         .float-3 { top: 20%; right: 5%; animation-duration: 22s; font-size: 2rem; }
-        .float-4 { bottom: 25%; left: 4%; animation-duration: 30s; font-size: 2.5rem; opacity: 0.25; }
+        .float-4 { bottom: 25%; left: 4%; animation-duration: 30s; font-size: 2.5rem; }
         .float-5 { top: 40%; left: 8%; animation-duration: 20s; font-size: 1.8rem; }
         .float-6 { top: 70%; right: 8%; animation-duration: 28s; font-size: 2.2rem; }
-        .float-7 { bottom: 50%; left: 15%; animation-duration: 35s; font-size: 2rem; opacity: 0.2; }
-        .float-8 { top: 85%; left: 20%; animation-duration: 26s; font-size: 1.5rem; opacity: 0.3; }
-        .float-9 { top: 15%; left: 30%; animation-duration: 32s; font-size: 1.8rem; opacity: 0.2; }
+        .float-7 { bottom: 50%; left: 15%; animation-duration: 35s; font-size: 2rem; }
+        .float-8 { top: 85%; left: 20%; animation-duration: 26s; font-size: 1.5rem; }
+        .float-9 { top: 15%; left: 30%; animation-duration: 32s; font-size: 1.8rem; }
         .float-10 { bottom: 15%; right: 20%; animation-duration: 24s; font-size: 2rem; }
         
         #app {
             position: relative;
-            z-index: 20;  /* Contenuto sopra gli animaletti */
+            z-index: 20;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
@@ -174,10 +174,10 @@
         }
         
         .tab.attiva {
-            background: var(--ghibli-moss);
-            color: white;
-            border-color: var(--ghibli-moss);
-            box-shadow: 0 6px 14px rgba(90, 120, 70, 0.3);
+            background: #b8e1d4;
+            color: #3a5a3c;
+            border-color: #8db596;
+            box-shadow: 0 6px 14px rgba(100, 120, 80, 0.2);
             transform: translateY(-2px);
         }
         
@@ -822,13 +822,13 @@
             .info-bar { flex-direction: column; text-align: center; }
             .legend-btn { bottom: 15px; left: 15px; width: 36px; height: 36px; font-size: 1rem; }
             .legend-popup { bottom: 60px; left: 15px; }
-            .ghibli-float { font-size: 1.2rem; }
+            .ghibli-float { font-size: 1.2rem; opacity: 0.6; }
             .float-1, .float-2, .float-3, .float-4, .float-5, .float-6, .float-7, .float-8, .float-9, .float-10 { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
-<!-- Animaletti Ghibli fluttuanti - 10 elementi in foreground -->
+<!-- Animaletti Ghibli fluttuanti - 10 elementi ben visibili -->
 <div class="ghibli-float float-1">🐚</div>
 <div class="ghibli-float float-2">🍃</div>
 <div class="ghibli-float float-3">🐌</div>
