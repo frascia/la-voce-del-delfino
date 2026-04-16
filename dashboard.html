@@ -235,6 +235,77 @@
         .info-section h2 { font-size: 1.3rem; color: #0f0; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
         .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
         
+        /* Programmazione settimanale */
+        .week-schedule {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .day-schedule {
+            background: #1e1e1e;
+            border-radius: 16px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+        .day-header {
+            background: #2a2a2a;
+            padding: 12px 16px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .day-name {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #0f0;
+        }
+        .day-badge {
+            background: #4caf50;
+            color: #000;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        .day-count {
+            font-size: 0.7rem;
+            color: #888;
+        }
+        .day-voci {
+            padding: 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 12px;
+        }
+        .schedule-card {
+            background: #2a2a2a;
+            border-radius: 12px;
+            padding: 12px;
+            border-left: 4px solid #0f0;
+            transition: all 0.2s;
+        }
+        .schedule-card:hover {
+            transform: translateY(-2px);
+            background: #333;
+        }
+        .schedule-personaggio {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .schedule-avatar { font-size: 1.5rem; }
+        .schedule-nome { font-weight: bold; font-size: 0.9rem; color: #0f0; }
+        .schedule-sezione { font-size: 0.7rem; color: #888; margin-bottom: 6px; }
+        .schedule-tipo { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: bold; margin-bottom: 6px; }
+        .schedule-tipo.rss { background: #008cff20; color: #008cff; }
+        .schedule-tipo.gen { background: #ff4d4d20; color: #ff4d4d; }
+        .schedule-tipo.red { background: #2d6a4f20; color: #2d6a4f; }
+        .schedule-temi { font-size: 0.65rem; color: #aaa; margin-top: 6px; padding-top: 6px; border-top: 1px solid #3a3a3a; }
+        .schedule-temi span { display: inline-block; background: #1e1e1e; padding: 2px 6px; border-radius: 10px; margin: 2px 4px 2px 0; font-size: 0.6rem; }
+        
         .personaggio-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; border: 1px solid #333; }
         .personaggio-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
         .personaggio-avatar { font-size: 2.5rem; }
@@ -252,20 +323,6 @@
         .relazione-score.neutro { background: #88888820; color: #aaa; }
         .relazione-score.diffidente { background: #ef6c0020; color: #ff9800; }
         .relazione-score.ostile { background: #c6282820; color: #f44336; }
-        
-        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-        .schedule-card { background: #1e1e1e; border-radius: 16px; padding: 16px; border-left: 4px solid #0f0; border: 1px solid #333; }
-        .schedule-day { font-size: 0.7rem; text-transform: uppercase; color: #0f0; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; }
-        .schedule-personaggio { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-        .schedule-avatar { font-size: 1.8rem; }
-        .schedule-nome { font-weight: bold; font-size: 1rem; color: #0f0; }
-        .schedule-sezione { font-size: 0.75rem; color: #888; margin-bottom: 8px; }
-        .schedule-tipo { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: bold; margin-bottom: 8px; }
-        .schedule-tipo.rss { background: #008cff20; color: #008cff; }
-        .schedule-tipo.gen { background: #ff4d4d20; color: #ff4d4d; }
-        .schedule-tipo.red { background: #2d6a4f20; color: #2d6a4f; }
-        .schedule-temi { font-size: 0.7rem; color: #aaa; margin-top: 8px; padding-top: 8px; border-top: 1px solid #333; }
-        .schedule-temi span { display: inline-block; background: #2a2a2a; padding: 2px 8px; border-radius: 12px; margin: 2px 4px 2px 0; font-size: 0.65rem; }
         
         .stats-section { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
         .stat-card { background: #2a2a2a; border-radius: 16px; padding: 16px 20px; flex: 1; min-width: 120px; text-align: center; border: 1px solid #333; }
@@ -324,7 +381,7 @@
         .password-error { color: #f00; margin-top: 12px; font-size: 0.8rem; display: none; }
         
         @media (max-width: 700px) {
-            .schedule-grid, .info-grid { grid-template-columns: 1fr; }
+            .day-voci { grid-template-columns: 1fr; }
             .stats-run-grid { grid-template-columns: repeat(2, 1fr); }
             .ultimo-run { flex-direction: column; align-items: flex-start; }
         }
@@ -334,7 +391,7 @@
 <div class="container">
     <div class="header">
         <h1>🐬 Dashboard Redazione</h1>
-        <p>Personaggi, relazioni, log, statistiche e programmazione</p>
+        <p>Personaggi, relazioni, log, statistiche e programmazione settimanale</p>
     </div>
 
     <div id="messages"></div>
@@ -376,20 +433,23 @@
         </div>
         
         <div class="main-tabs">
-            <button class="main-tab active" data-tab="schedule">📅 Programmazione</button>
+            <button class="main-tab active" data-tab="schedule">📅 Programmazione Settimanale</button>
             <button class="main-tab" data-tab="personaggi">👥 Personaggi</button>
             <button class="main-tab" data-tab="relazioni">💞 Relazioni</button>
             <button class="main-tab" data-tab="log">📋 Log</button>
         </div>
         
         <div class="tab-panel active" id="tab-schedule">
-            <div class="info-section"><h2>Programmazione Redazione</h2><div id="schedule-grid" class="schedule-grid"></div></div>
+            <div class="info-section">
+                <h2>📅 Programmazione Redazione (prossimi 7 giorni)</h2>
+                <div id="schedule-week" class="week-schedule"></div>
+            </div>
         </div>
         <div class="tab-panel" id="tab-personaggi">
-            <div class="info-section"><h2>Personaggi</h2><div id="personaggi-grid" class="info-grid"></div></div>
+            <div class="info-section"><h2>👥 Personaggi</h2><div id="personaggi-grid" class="info-grid"></div></div>
         </div>
         <div class="tab-panel" id="tab-relazioni">
-            <div class="info-section"><h2>Relazioni tra Personaggi</h2><div id="relazioni-list"></div></div>
+            <div class="info-section"><h2>💞 Relazioni tra Personaggi</h2><div id="relazioni-list"></div></div>
         </div>
         <div class="tab-panel" id="tab-log">
             <div class="log-section"><h2>📋 Log di sistema</h2><div class="log-tabs" id="log-tabs"></div><div id="log-panels"></div></div>
@@ -404,6 +464,8 @@
         'dom': 'Domenica', 'lun': 'Lunedì', 'mar': 'Martedì', 'mer': 'Mercoledì',
         'gio': 'Giovedì', 'ven': 'Venerdì', 'sab': 'Sabato', 'default': 'Tutti i giorni'
     };
+    
+    const giorniOrdine = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
 
     let secretUnlocked = false;
     let personalUnlocked = false;
@@ -465,14 +527,26 @@
         return giorni[new Date().getDay()];
     }
 
+    function getDataGiorno(giornoKey) {
+        const oggi = new Date();
+        const oggiKey = getGiornoCorrente();
+        const oggiIndex = giorniOrdine.indexOf(oggiKey);
+        const targetIndex = giorniOrdine.indexOf(giornoKey);
+        let diff = targetIndex - oggiIndex;
+        if (diff < 0) diff += 7;
+        const data = new Date(oggi);
+        data.setDate(oggi.getDate() + diff);
+        return `${data.getDate()}/${data.getMonth()+1}`;
+    }
+
     function getGiorniAttivi(giorniStr) {
         if (giorniStr === 'default') return ['default'];
         return giorniStr.split(',').map(g => g.trim());
     }
 
-    function isVoceAttiva(voce, oggi) {
+    function isVoceAttiva(voce, giornoKey) {
         const giorniAttivi = getGiorniAttivi(voce.g);
-        return giorniAttivi.includes('default') || giorniAttivi.includes(oggi);
+        return giorniAttivi.includes('default') || giorniAttivi.includes(giornoKey);
     }
 
     function getScoreClass(score) {
@@ -737,7 +811,9 @@
             if (runs.length > 0) {
                 detailsDiv.innerHTML = `
                     <table>
-                        <thead><tr><th>Data</th><th>Tipo</th><th>Ora</th><th>Esito</th><th>Provider</th><th>Articoli</th></tr></thead>
+                        <thead>
+                            <tr><th>Data</th><th>Tipo</th><th>Ora</th><th>Esito</th><th>Provider</th><th>Articoli</th></tr>
+                        </thead>
                         <tbody>
                             ${runs.slice(0, 30).map(r => `
                                 <tr class="${r.success ? 'success-row' : 'error-row'} ${r.tipo === 'MANUALE' ? 'manual-row' : ''}">
@@ -779,35 +855,75 @@
         `;
     }
 
-    function renderSchedule(config, oggi) {
-        const scheduleDiv = document.getElementById('schedule-grid');
-        const vociAttive = (config.REDAZIONE || []).filter(v => isVoceAttiva(v, oggi));
-        if (vociAttive.length === 0) {
-            scheduleDiv.innerHTML = '<div style="text-align:center;padding:40px;color:#888;">📭 Nessuna voce attiva per oggi</div>';
-            return;
+    function renderScheduleSettimanale(config) {
+        const container = document.getElementById('schedule-week');
+        const oggiKey = getGiornoCorrente();
+        const oggiIndex = giorniOrdine.indexOf(oggiKey);
+        
+        // Crea array dei prossimi 7 giorni
+        const giorniDaMostrare = [];
+        for (let i = 0; i < 7; i++) {
+            const idx = (oggiIndex + i) % 7;
+            giorniDaMostrare.push(giorniOrdine[idx]);
         }
-        scheduleDiv.innerHTML = vociAttive.map(voce => {
-            const personaggio = config.CHI[voce.firma] || config.CHI['default'] || { avatar: '👤', mood: 'neutro' };
-            const tipoClass = (voce.tipo || 'RSS').toLowerCase();
-            const tipoLabel = voce.tipo === 'RSS' ? '📰 RSS' : (voce.tipo === 'GEN' ? '✍️ GEN' : '🎭 RED');
-            const temi = voce.temi || (voce.arg ? [voce.arg] : []);
-            const giorniLabel = getGiorniAttivi(voce.g).map(g => giorniMap[g] || g).join(', ');
-            return `
-                <div class="schedule-card">
-                    <div class="schedule-day">📅 ${giorniLabel}</div>
-                    <div class="schedule-personaggio">
-                        <div class="schedule-avatar">${personaggio.avatar || '👤'}</div>
-                        <div class="schedule-nome">${voce.firma || '?'}</div>
+        
+        let html = '';
+        for (const giornoKey of giorniDaMostrare) {
+            const vociAttive = (config.REDAZIONE || []).filter(v => isVoceAttiva(v, giornoKey));
+            const giornoNome = giorniMap[giornoKey] || giornoKey;
+            const dataStr = getDataGiorno(giornoKey);
+            const isOggi = (giornoKey === oggiKey);
+            
+            if (vociAttive.length === 0) {
+                html += `
+                    <div class="day-schedule">
+                        <div class="day-header">
+                            <span class="day-name">${giornoNome} ${dataStr}</span>
+                            ${isOggi ? '<span class="day-badge">OGGI</span>' : ''}
+                            <span class="day-count">📭 Nessuna voce programmata</span>
+                        </div>
                     </div>
-                    <div class="schedule-sezione">📍 ${voce.sez || '?'} • ${voce.lab || 'Generale'}</div>
-                    <div class="schedule-tipo ${tipoClass}">${tipoLabel}</div>
-                    <div class="schedule-temi">
-                        ${temi.slice(0, 3).map(t => `<span>${t.length > 35 ? t.substring(0, 35) + '…' : t}</span>`).join('')}
-                        ${temi.length > 3 ? `<span>+${temi.length-3}</span>` : ''}
+                `;
+                continue;
+            }
+            
+            const vociHtml = vociAttive.map(voce => {
+                const personaggio = config.CHI[voce.firma] || config.CHI['default'] || { avatar: '👤', mood: 'neutro' };
+                const tipoClass = (voce.tipo || 'RSS').toLowerCase();
+                const tipoLabel = voce.tipo === 'RSS' ? '📰 RSS' : (voce.tipo === 'GEN' ? '✍️ GEN' : '🎭 RED');
+                const temi = voce.temi || (voce.arg ? [voce.arg] : []);
+                
+                return `
+                    <div class="schedule-card">
+                        <div class="schedule-personaggio">
+                            <div class="schedule-avatar">${personaggio.avatar || '👤'}</div>
+                            <div class="schedule-nome">${voce.firma || '?'}</div>
+                        </div>
+                        <div class="schedule-sezione">📍 ${voce.sez || '?'} • ${voce.lab || 'Generale'}</div>
+                        <div class="schedule-tipo ${tipoClass}">${tipoLabel}</div>
+                        <div class="schedule-temi">
+                            ${temi.slice(0, 3).map(t => `<span>${t.length > 30 ? t.substring(0, 30) + '…' : t}</span>`).join('')}
+                            ${temi.length > 3 ? `<span>+${temi.length-3}</span>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            html += `
+                <div class="day-schedule">
+                    <div class="day-header">
+                        <span class="day-name">${giornoNome} ${dataStr}</span>
+                        ${isOggi ? '<span class="day-badge">OGGI</span>' : ''}
+                        <span class="day-count">📋 ${vociAttive.length} voci</span>
+                    </div>
+                    <div class="day-voci">
+                        ${vociHtml}
                     </div>
                 </div>
             `;
-        }).join('');
+        }
+        
+        container.innerHTML = html;
     }
 
     function renderPersonaggi(config, personaggiStato) {
@@ -972,9 +1088,8 @@
         if (!config) return;
         const personaggiStato = await caricaPersonaggiStato();
         const relazioni = await caricaRelazioni();
-        const oggi = getGiornoCorrente();
         renderStats(config, personaggiStato);
-        renderSchedule(config, oggi);
+        renderScheduleSettimanale(config);
         renderPersonaggi(config, personaggiStato);
         renderRelazioni(relazioni);
         await caricaLog();
