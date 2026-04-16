@@ -1,11 +1,11 @@
 /**
  * FILE: lib/llm.js
  * DATA: 2025-04-16
- * VERSIONE: 2.9
+ * VERSIONE: 2.10
  * DESCRIZIONE: Gestione chiamate LLM (Gemini/Groq), provider persistente,
  *              contatore fallimenti consecutivi, modalità scheduled/manuale.
  *              Supporto per forzare un modello Gemini specifico e versione API.
- *              Struttura API Gemini allineata alla documentazione ufficiale Google.
+ *              Esporta il modello testato per evitare doppi test.
  */
 
 import { pausaGemini, gestisciErroreQuota, caricaJSON, salvaJSON } from "./utils.js";
@@ -92,6 +92,10 @@ export function getCurrentProvider() {
     return currentProvider;
 }
 
+export function getTestedGeminiModel() {
+    return activeGeminiModel;
+}
+
 export function setActiveGeminiModel(model) {
     if (!FORCED_GEMINI_MODEL) {
         activeGeminiModel = model;
@@ -104,7 +108,6 @@ export function setActiveGeminiModel(model) {
 async function testaModelloGemini(modelName) {
     const url = `https://generativelanguage.googleapis.com/${GEMINI_API_VERSION}/models/${modelName}:generateContent?key=${apiKeyGemini}`;
     
-    // Struttura ufficiale Google
     const payload = {
         contents: [
             {
@@ -157,11 +160,14 @@ async function trovaModelliGemini() {
             if (flash.length) log(`   ├─ Flash: ${flash.join(", ")}`);
             if (altri.length) log(`   └─ Altri: ${altri.join(", ")}`);
             
-            const ordine = [...flash.sort((a,b)=>b.localeCompare(a)), ...altri];
+            // Limita ai primi 5 modelli per evitare rate limit
+            const ordine = [...flash.sort((a,b)=>b.localeCompare(a)), ...altri].slice(0, 5);
             let modelloFunzionante = null;
             
-            for (const model of ordine.slice(0, 5)) {
+            for (const model of ordine) {
                 log(`   🔍 Test ${model}...`);
+                // Pausa tra i test per evitare rate limit
+                await new Promise(r => setTimeout(r, 1000));
                 const funziona = await testaModelloGemini(model);
                 if (funziona) {
                     modelloFunzionante = model;
@@ -218,11 +224,8 @@ async function callGemini(sys, prompt, temperature) {
     if (!apiKeyGemini) return null;
     const url = `https://generativelanguage.googleapis.com/${GEMINI_API_VERSION}/models/${activeGeminiModel}:generateContent?key=${apiKeyGemini}`;
     
-    // Struttura ufficiale Google: ogni messaggio deve avere "role": "user" o "model"
-    // System instruction viene incorporata come primo messaggio (poiché Google non usa systemInstruction nell'esempio)
     const contents = [];
     
-    // Aggiungi le istruzioni di sistema come primo messaggio (con ruolo "user")
     if (sys && sys.trim()) {
         contents.push({
             role: "user",
@@ -230,7 +233,6 @@ async function callGemini(sys, prompt, temperature) {
         });
     }
     
-    // Aggiungi il prompt principale
     contents.push({
         role: "user",
         parts: [{ text: prompt }]
