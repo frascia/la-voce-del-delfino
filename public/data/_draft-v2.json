@@ -1,4 +1,5 @@
 {
+  "dataRiferimento": "17/04",
   "oraAggiornamento": "17/04, 21:34",
   "agenda": {
     "timbro": "Resistenza Adriatica",
@@ -25,7 +26,7 @@
   "sezioni": {
     "pescara": {
       "color": "#005f73",
-      "news": [
+      "articoli": [
         {
           "tipo": "personaggio",
           "titolo": "Dalla Danimarca alla Majella: Il mio Hygge tra i lupi e gli arrosticini",
@@ -60,7 +61,8 @@
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "lars.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": null
         },
         {
           "tipo": "rss",
@@ -96,7 +98,8 @@
           "categoria": "Cronaca",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": "📰 data sconosciuta"
         },
         {
           "tipo": "rss",
@@ -132,7 +135,8 @@
           "categoria": "Politica",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": "📰 ven 3 aprile 10:02"
         },
         {
           "tipo": "rss",
@@ -168,13 +172,14 @@
           "categoria": "Sport",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": "📰 dom 12 aprile 07:33"
         }
       ]
     },
     "cultura": {
       "color": "#6a4c93",
-      "news": [
+      "articoli": [
         {
           "tipo": "rss",
           "titolo": "L'Europa nascosta: tra vette silenziose e spirito autentico",
@@ -209,7 +214,8 @@
           "categoria": "Viaggi",
           "colore_tipo": "#008cff",
           "immagine": "lars.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": "📰 data sconosciuta"
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "_runCount": 1,
+  "_runCount": 2,
   "Ernesto→Giovanni": {
     "score": -0.043,
     "label": "neutro",
@@ -36,12 +36,12 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.71,
+    "score": -0.81,
     "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -51,8 +51,8 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.34,
-    "label": "simpatico",
+    "score": 0.14,
+    "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Juizinho": {
@@ -76,12 +76,12 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.25,
+    "score": -0.05,
     "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -146,7 +146,7 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Hiroki→Pescara": {
-    "score": -0.298,
+    "score": -0.398,
     "label": "diffidente",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -186,9 +186,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.509,
+    "score": 0.309,
     "label": "simpatico",
-    "ultimo_aggiornamento": "16/04/2026"
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "Enzo→Glusi": {
     "score": -0.177,
@@ -296,7 +296,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Lars→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Lilli→Hiroki": {
-    "score": 0.729,
+    "score": 0.829,
     "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Hiroki": {
-    "score": 0.54,
+    "score": 0.64,
     "label": "simpatico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -746,13 +746,13 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Politici": {
-    "score": -0.27,
+    "score": -0.57,
     "label": "diffidente",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Popolazione locale": {
-    "score": -0.18,
-    "label": "neutro",
+    "score": -0.38,
+    "label": "diffidente",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Lilli→Popolazione locale": {
@@ -766,7 +766,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Pescara": {
-    "score": -0.27,
+    "score": -0.57,
     "label": "diffidente",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -821,8 +821,8 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.58,
-    "label": "simpatico",
+    "score": 0.78,
+    "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Squadra": {
@@ -861,13 +861,28 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Lilli→Mare": {
-    "score": 0.1,
+    "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Glusi": {
     "score": -0.3,
     "label": "diffidente",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Glusi→Realtà": {
+    "score": 0,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Juizinho→Pescara": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Glusi→Pescara": {
+    "score": -0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
   }
 }
