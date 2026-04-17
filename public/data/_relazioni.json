@@ -1,5 +1,5 @@
 {
-  "_runCount": 11,
+  "_runCount": 12,
   "Ernesto→Giovanni": {
     "score": -0.048,
     "label": "neutro",
@@ -76,12 +76,12 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Lars": {
-    "score": 1,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -211,9 +211,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.672,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "16/04/2026"
+    "score": 0.872,
+    "label": "amico",
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "Glusi→Cetteo": {
     "score": 0.419,
@@ -276,7 +276,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Lars→Glusi": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -306,13 +306,13 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Cetteo→Lilli": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "14/04/2026"
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "Lilli→Hiroki": {
-    "score": 0.61,
-    "label": "simpatico",
+    "score": 0.81,
+    "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Redazione": {
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Hiroki": {
-    "score": 0.3,
+    "score": 0.4,
     "label": "simpatico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -716,8 +716,8 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.3,
-    "label": "diffidente",
+    "score": -0.7,
+    "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Glusi→Pescatori": {
@@ -812,6 +812,16 @@
   },
   "Abbukk→Autorità Sanitarie": {
     "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Glusi→Questa": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Hiroki→Wolf": {
+    "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
   }
