@@ -1,5 +1,5 @@
 {
-  "_runCount": 2,
+  "_runCount": 3,
   "Ernesto→Giovanni": {
     "score": -0.043,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -76,12 +76,12 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.05,
-    "label": "neutro",
+    "score": -0.35,
+    "label": "diffidente",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.985,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -381,9 +381,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": 0.401,
+    "score": 0.301,
     "label": "simpatico",
-    "ultimo_aggiornamento": "16/04/2026"
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "utente→Lars": {
     "score": 0.18,
@@ -641,9 +641,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→Wolf": {
-    "score": 0.09,
+    "score": 0.19,
     "label": "neutro",
-    "ultimo_aggiornamento": "16/04/2026"
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "Lilli→Autore": {
     "score": 0.45,
@@ -821,7 +821,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.78,
+    "score": 0.98,
     "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -882,6 +882,26 @@
   },
   "Glusi→Pescara": {
     "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Cetteo→Squadra Pescara": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Hiroki→Borgomarino": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Glusi→Borgomarino": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Lars→Tifosi": {
+    "score": -0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
   }
