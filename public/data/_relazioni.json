@@ -1,5 +1,5 @@
 {
-  "_runCount": 10,
+  "_runCount": 11,
   "Ernesto→Giovanni": {
     "score": -0.048,
     "label": "neutro",
@@ -76,14 +76,14 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.95,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Hiroki": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/04/2026"
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "Lars→Juizinho": {
     "score": 1,
@@ -261,9 +261,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Juizinho→Autore": {
-    "score": 0.066,
+    "score": 0.266,
     "label": "neutro",
-    "ultimo_aggiornamento": "12/04/2026"
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "Enzo→Autore": {
     "score": -0.197,
@@ -311,8 +311,8 @@
     "ultimo_aggiornamento": "14/04/2026"
   },
   "Lilli→Hiroki": {
-    "score": 0.71,
-    "label": "amico",
+    "score": 0.61,
+    "label": "simpatico",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Redazione": {
@@ -516,7 +516,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Glusi→Autore": {
-    "score": 0.1,
+    "score": 0,
     "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -656,9 +656,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Hiroki": {
-    "score": 0.2,
-    "label": "neutro",
-    "ultimo_aggiornamento": "16/04/2026"
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "Glusi→Wolf": {
     "score": -0.1,
@@ -666,8 +666,8 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Autore": {
-    "score": 0,
-    "label": "neutro",
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Lars→Barista": {
@@ -771,6 +771,46 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Pescara": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Wolf→Istituzioni Locali": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Hiroki→Gestione Infrastrutture": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Abbukk→Autorità Portuali": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Glusi→Comunità": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Hiroki→Comunità Locale": {
+    "score": -0.25,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Wolf→Istituzioni": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Glusi→Coesione Sociale": {
+    "score": -0.15,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Abbukk→Autorità Sanitarie": {
     "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
