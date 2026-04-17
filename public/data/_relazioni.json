@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.048,
     "label": "neutro",
@@ -36,12 +36,12 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -51,8 +51,8 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.9,
-    "label": "amico",
+    "score": 0.6,
+    "label": "simpatico",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Juizinho": {
@@ -76,12 +76,12 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.7,
-    "label": "amico",
+    "score": 0.5,
+    "label": "simpatico",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.8,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -246,7 +246,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lars": {
-    "score": 0.853,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -506,9 +506,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Lars": {
-    "score": 0.1,
+    "score": -0.1,
     "label": "neutro",
-    "ultimo_aggiornamento": "16/04/2026"
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Wolf": {
     "score": 0,
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Hiroki": {
-    "score": 0.4,
+    "score": 0.6,
     "label": "simpatico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -822,6 +822,26 @@
   },
   "Hiroki→Wolf": {
     "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Cetteo→Squadra": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Hiroki→Squadra": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Juizinho→Questae": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Abbukk→Sistema": {
+    "score": -0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
   }
