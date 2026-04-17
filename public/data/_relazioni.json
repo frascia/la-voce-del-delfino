@@ -1,5 +1,5 @@
 {
-  "_runCount": 0,
+  "_runCount": 1,
   "Ernesto→Giovanni": {
     "score": -0.043,
     "label": "neutro",
@@ -36,8 +36,8 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.51,
-    "label": "diffidente",
+    "score": -0.71,
+    "label": "ostile",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Cetteo": {
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.54,
+    "score": 0.34,
     "label": "simpatico",
     "ultimo_aggiornamento": "17/04/2026"
   },
@@ -76,8 +76,8 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.55,
-    "label": "simpatico",
+    "score": 0.25,
+    "label": "neutro",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Hiroki": {
@@ -291,9 +291,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.581,
+    "score": -0.481,
     "label": "diffidente",
-    "ultimo_aggiornamento": "16/04/2026"
+    "ultimo_aggiornamento": "17/04/2026"
   },
   "Lars→Lilli": {
     "score": 0.9,
@@ -821,8 +821,8 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.28,
-    "label": "neutro",
+    "score": 0.58,
+    "label": "simpatico",
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Squadra": {
@@ -843,6 +843,31 @@
   "Abbukk→Sistema": {
     "score": -0.09,
     "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Cetteo→Istituzioni": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Hiroki→Istituzioni": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Glusi→Mare": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Lilli→Mare": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "17/04/2026"
+  },
+  "Wolf→Glusi": {
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "17/04/2026"
   }
 }
