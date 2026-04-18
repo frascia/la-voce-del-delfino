@@ -1,5 +1,5 @@
 {
-  "_runCount": 4,
+  "_runCount": 5,
   "Ernesto→Giovanni": {
     "score": -0.043,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.61,
+    "score": -0.81,
     "label": "ostile",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -51,9 +51,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.14,
-    "label": "neutro",
-    "ultimo_aggiornamento": "17/04/2026"
+    "score": 0.34,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "18/04/2026"
   },
   "Hiroki→Juizinho": {
     "score": -0.738,
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.35,
+    "score": -0.25,
     "label": "diffidente",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -111,19 +111,19 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Autore": {
-    "score": -0.386,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "16/04/2026"
+    "score": -0.186,
+    "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Autore": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/04/2026"
+    "ultimo_aggiornamento": "18/04/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.9,
+    "score": -0.8,
     "label": "ostile",
-    "ultimo_aggiornamento": "17/04/2026"
+    "ultimo_aggiornamento": "18/04/2026"
   },
   "Lars→Questa terra": {
     "score": -0.143,
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.309,
+    "score": 0.409,
     "label": "simpatico",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Lilli→Hiroki": {
-    "score": 0.929,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -381,9 +381,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": 0.301,
+    "score": 0.401,
     "label": "simpatico",
-    "ultimo_aggiornamento": "17/04/2026"
+    "ultimo_aggiornamento": "18/04/2026"
   },
   "utente→Lars": {
     "score": 0.18,
@@ -516,9 +516,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Glusi→Autore": {
-    "score": 0,
+    "score": 0.1,
     "label": "neutro",
-    "ultimo_aggiornamento": "17/04/2026"
+    "ultimo_aggiornamento": "18/04/2026"
   },
   "Lars→Giornalista": {
     "score": 0.18,
@@ -646,9 +646,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Lilli→Autore": {
-    "score": 0.45,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "17/04/2026"
+    "score": 0.75,
+    "label": "amico",
+    "ultimo_aggiornamento": "18/04/2026"
   },
   "Abbukk→Cetteo": {
     "score": -0.45,
@@ -666,9 +666,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Autore": {
-    "score": -0.27,
+    "score": -0.47,
     "label": "diffidente",
-    "ultimo_aggiornamento": "17/04/2026"
+    "ultimo_aggiornamento": "18/04/2026"
   },
   "Lars→Barista": {
     "score": 0.18,
@@ -921,16 +921,71 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Glusi→Miley Cyrus": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Cetteo→Miley Cyrus": {
+    "score": -0.5,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Lilli→Miley Cyrus": {
+    "score": 0.5,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Protagonista→Lamatte": {
     "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "18/04/2026"
   },
-  "Cetteo→Miley Cyrus": {
+  "Protagonista→Abbukk": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Protagonista→Lilli": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Protagonista→Cetteo": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Topengo→Autore": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Topengo→Cetteo": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Lars→Pescatori di Pescara": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Hiroki→Amministrazione Pescara": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Glusi→Pescatori di Pescara": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Wolf→Amministrazione Pescara": {
     "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "18/04/2026"
   },
-  "Lilli→Miley Cyrus": {
+  "Hiroki→Miley Cyrus": {
     "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "18/04/2026"
