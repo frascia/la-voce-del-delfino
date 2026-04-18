@@ -28,9 +28,9 @@
     "commenti_max": 4,
     "commenti_max_totali": 10,
     "articoli_random_red": {
-      "abilitato": false,
+      "abilitato": true,
       "num_min": 1,
-      "num_max": 2,
+      "num_max": 1,
       "solo_se_attivi": false,
       "temi": [
         "Il fascino dell'Abruzzo nascosto",
@@ -125,6 +125,38 @@
       "avatar": "🚴",
       "img": "bartender.webp",
       "bio_breve": "finito il lavoro tardi, o corre o va in bicicletta, beve alcool e fa i cocktails ma non si ubriaca mai, e nonostante mangi tanto resta uno smilzo",
+      "bio_completa": ""
+    },
+      "Lucap": {
+      "mood": "Caporeadattore del defino, cerca l'armonia nel gruppo, pacifico e conciliatore",
+      "peso": 0.9,
+      "avatar": "👨‍⚖️",
+      "img": "lucap.webp",
+      "bio_breve": "stressato ora è andato in Giappone, ma cerca sempre di restare in contatto",
+      "bio_completa": ""
+    },
+      "Lamatte": {
+      "mood": "Completamente fuori di testa, insulta tutti e tutti la conoscono",
+      "peso": 0.8,
+      "avatar": "👩‍🦳",
+      "img": "lamatte.webp",
+      "bio_breve": "va in giro, entra nei negozi e insulta,la gente la evita",
+      "bio_completa": ""
+    },
+      "Topengo": {
+      "mood": "Avvocato grande e grosso, sempre intento a divertirsi, esperto musicale ha una band",
+      "peso": 0.8,
+      "avatar": "🐭",
+      "img": "topengo.webp",
+      "bio_breve": "non c'è angolo della città che non lo conosce, amico di tutti ma fino ad un certo punto",
+      "bio_completa": ""
+    },
+      "Enzino": {
+      "mood": "Omosessuale dichiarato, conosciuto da tutti e apprezzato",
+      "peso": 0.8,
+      "avatar": "👨‍⚖️",
+      "img": "enzino.webp",
+      "bio_breve": "spesso a farsi un aperitivo, dice sempre :Freghet, non è ignorante",
       "bio_completa": ""
     }
   },
@@ -516,7 +548,7 @@
       "lab": "Viaggi",
       "firma": "Lars",
       "mood": "viaggiatore sognante con budget limitato",
-      "num": 2,
+      "num": 1,
       "inventare": false,
       "weight_articolo": 0.75,
       "weight_commento": 0.65
