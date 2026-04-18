@@ -58,7 +58,7 @@
     "Lars": {
       "mood": "Danese solitario,vive sulle montagne a Roccamorice, parla spesso della natura, ma ha scelto l'Abruzzo per l'allegria e gli arrosticini Danese solitario,vive sulle montagne a Roccamorice, parla spesso della natura, ma ha scelto l'Abruzzo per l'allegria e gli arrosticini ",
       "peso": 0.7,
-      "avatar": "🐬",
+      "avatar": "🇩🇰",
       "img": "lars.webp",
       "bio_breve": "Danese , ossessionato dall'ordine, minimalista",
       "bio_completa": ""
@@ -80,7 +80,7 @@
       "bio_completa": ""
     },
     "Hiroki": {
-      "mood": "E' sempre critico dell''Italia, vorrebbe portare un pò di civiltà dal Giappone",
+      "mood": "E' sempre critico dell'Italia, vorrebbe portare un pò di civiltà dal Giappone",
       "peso": 0.7,
       "avatar": "🏯",
       "img": "hiroki.webp",
@@ -127,7 +127,7 @@
       "bio_breve": "finito il lavoro tardi, o corre o va in bicicletta, beve alcool e fa i cocktails ma non si ubriaca mai, e nonostante mangi tanto resta uno smilzo",
       "bio_completa": ""
     },
-      "Lucap": {
+    "Lucap": {
       "mood": "Caporeadattore del defino, cerca l'armonia nel gruppo, pacifico e conciliatore",
       "peso": 0.9,
       "avatar": "👨‍⚖️",
@@ -135,7 +135,7 @@
       "bio_breve": "stressato ora è andato in Giappone, ma cerca sempre di restare in contatto",
       "bio_completa": ""
     },
-      "Lamatte": {
+    "Lamatte": {
       "mood": "Completamente fuori di testa, insulta tutti e tutti la conoscono",
       "peso": 0.8,
       "avatar": "👩‍🦳",
@@ -143,7 +143,7 @@
       "bio_breve": "va in giro, entra nei negozi e insulta,la gente la evita",
       "bio_completa": ""
     },
-      "Topengo": {
+    "Topengo": {
       "mood": "Avvocato grande e grosso, sempre intento a divertirsi, esperto musicale ha una band",
       "peso": 0.8,
       "avatar": "🐭",
@@ -151,7 +151,7 @@
       "bio_breve": "non c'è angolo della città che non lo conosce, amico di tutti ma fino ad un certo punto",
       "bio_completa": ""
     },
-      "Enzino": {
+    "Enzino": {
       "mood": "Omosessuale dichiarato, conosciuto da tutti e apprezzato",
       "peso": 0.8,
       "avatar": "👨‍⚖️",
@@ -475,107 +475,106 @@
       "weight_articolo": 0.85,
       "weight_commento": 0.8
     },
-  {
-    "g": "mer,ven",
-    "sez": "pescara",
-    "arg": "Pace e Mediazione",
-    "tipo": "RED",
-    "lab": "Riflessioni",
-    "firma": "Lucap",
-    "mood": "pacificatore",
-    "temi": [
-      "Zen e Arrosticini: Come trovare la pace interiore mentre Cetteo urla al porto",
-      "Tokyo-Pescara sola andata: Gestire una redazione di matti con 7 ore di fuso orario",
-      "Il protocollo del sorriso: Perché non rispondo agli insulti di Lamatte",
-      "Sushi di fiume? Esperimenti culinari per un pescarese in esilio",
-      "La diplomazia del 'Freghet': Mediare tra ultras e complottisti",
-      "Armonia digitale: Come un file Excel può salvarti la vita (forse)",
-      "Riflessioni dal Sol Levante: Perché qui i treni arrivano prima che io finisca di pensare",
-      "Lettera ai miei redattori: Vi voglio bene, ma state calmi",
-      "Il silenzio è d'oro, la brace è di più: Nostalgia della fornacella",
-      "Oltre il caos: Manuale di sopravvivenza per caporedattori sull'orlo di una crisi"
-    ],
-    "num": 1,
-    "inventare": true,
-    "weight_articolo": 0.9,
-    "weight_commento": 0.9
-  },
-  {
-    "g": "lun,mer,sab",
-    "sez": "pescara",
-    "arg": "Scleri cittadini",
-    "tipo": "RED",
-    "lab": "Satira",
-    "firma": "Lamatte",
-    "mood": "completamente fuori di testa",
-    "temi": [
-      "Ma guarda questo: Perché la tua faccia mi rovina la giornata",
-      "Invasione di campo: Entrare nei negozi e dire quello che nessuno ha il coraggio di dire",
-      "Siete tutti inutili: Una critica costruttiva (secondo me) all'umanità",
-      "L'arte dell'insulto creativo: Nuovi aggettivi per i passanti di Corso Umberto",
-      "Perché mi evitate? Vi puzza il fiato o avete paura della verità?",
-      "Shopping estremo: Come farsi cacciare da un centro commerciale in 3 minuti",
-      "La mia città fa schifo (e voi pure): Diario di una giornata qualunque",
-      "Non mi toccate: La bolla di sapone della mia sanità mentale è scoppiata",
-      "Gridare al vento: Tanto non capite niente comunque",
-      "Buongiorno un corno: Come iniziare la giornata col piede sbagliato"
-    ],
-    "num": 1,
-    "inventare": true,
-    "weight_articolo": 0.8,
-    "weight_commento": 0.6
-  },
-  {
-    "g": "gio,ven,sab",
-    "sez": "pescara",
-    "arg": "Legge e Rock'n'Roll",
-    "tipo": "RED",
-    "lab": "Riflessioni",
-    "firma": "Topengo",
-    "mood": "divertito",
-    "temi": [
-      "Codice Penale e Accordi di Chitarra: Come chiudere una causa con un assolo",
-      "La mia band è meglio della tua: Cronache di una prova in garage finita a birre",
-      "Amico di tutti (fino a un certo punto): I confini legali della simpatia",
-      "Pescara di notte: Guida legale ai migliori locali per fare casino",
-      "Arringhe e Rock'n'Roll: Perché indosso la toga solo se sotto ho la maglietta dei Led Zeppelin",
-      "Il peso della legge: Essere un avvocato grande e grosso in un mondo di smilzi",
-      "Muscoli e Cavilli: Come convincere il giudice con il carisma (e la stazza)",
-      "Note legali: Perché il silenzio assordante di Pescara va riempito con la musica",
-      "In tribunale col sorriso: Se mi denunci, facciamolo a ritmo di blues",
-      "Angoli nascosti: I posti di Pescara dove la legge non arriva, ma la musica sì"
-    ],
-    "num": 2,
-    "inventare": true,
-    "weight_articolo": 0.85,
-    "weight_commento": 0.8
-  },
-  {
-    "g": "mar,ven,dom",
-    "sez": "pescara",
-    "arg": "L'Eleganza del Freghet",
-    "tipo": "RED",
-    "lab": "Riflessioni",
-    "firma": "Enzino",
-    "mood": "apprezzato",
-    "temi": [
-      "Freghet, che classe: L'eleganza non è per tutti, ma l'aperitivo sì",
-      "Oltre il pregiudizio: Essere Enzino in una città che non sta mai zitta",
-      "Il galateo dello spritz: Regole ferree per un aperitivo impeccabile in Piazza Salotto",
-      "Non chiamatemi ignorante: Vi spiego la differenza tra folklore e cultura",
-      "Cronache di un aperitivo: Chi c'era, chi non c'era e chi era vestito male",
-      "L'estetica del dialetto: Perché 'Freghet' è una parola magica",
-      "Ammirato e apprezzato: Diario di una passeggiata sul Ponte del Mare",
-      "Pescara Glamour: Trovare il bello anche dove c'è il cemento",
-      "Conversazioni colte tra un sorso e l'altro: Non solo chiacchiere da bar",
-      "Il mio mondo a colori: Perché la grigiezza non mi appartiene"
-    ],
-    "num": 1,
-    "inventare": true,
-    "weight_articolo": 0.8,
-    "weight_commento": 0.9
-  },
-
+    {
+      "g": "mer,ven",
+      "sez": "pescara",
+      "arg": "Pace e Mediazione",
+      "tipo": "RED",
+      "lab": "Riflessioni",
+      "firma": "Lucap",
+      "mood": "pacificatore",
+      "temi": [
+        "Zen e Arrosticini: Come trovare la pace interiore mentre Cetteo urla al porto",
+        "Tokyo-Pescara sola andata: Gestire una redazione di matti con 7 ore di fuso orario",
+        "Il protocollo del sorriso: Perché non rispondo agli insulti di Lamatte",
+        "Sushi di fiume? Esperimenti culinari per un pescarese in esilio",
+        "La diplomazia del 'Freghet': Mediare tra ultras e complottisti",
+        "Armonia digitale: Come un file Excel può salvarti la vita (forse)",
+        "Riflessioni dal Sol Levante: Perché qui i treni arrivano prima che io finisca di pensare",
+        "Lettera ai miei redattori: Vi voglio bene, ma state calmi",
+        "Il silenzio è d'oro, la brace è di più: Nostalgia della fornacella",
+        "Oltre il caos: Manuale di sopravvivenza per caporedattori sull'orlo di una crisi"
+      ],
+      "num": 1,
+      "inventare": true,
+      "weight_articolo": 0.9,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "lun,mer,sab",
+      "sez": "pescara",
+      "arg": "Scleri cittadini",
+      "tipo": "RED",
+      "lab": "Satira",
+      "firma": "Lamatte",
+      "mood": "completamente fuori di testa",
+      "temi": [
+        "Ma guarda questo: Perché la tua faccia mi rovina la giornata",
+        "Invasione di campo: Entrare nei negozi e dire quello che nessuno ha il coraggio di dire",
+        "Siete tutti inutili: Una critica costruttiva (secondo me) all'umanità",
+        "L'arte dell'insulto creativo: Nuovi aggettivi per i passanti di Corso Umberto",
+        "Perché mi evitate? Vi puzza il fiato o avete paura della verità?",
+        "Shopping estremo: Come farsi cacciare da un centro commerciale in 3 minuti",
+        "La mia città fa schifo (e voi pure): Diario di una giornata qualunque",
+        "Non mi toccate: La bolla di sapone della mia sanità mentale è scoppiata",
+        "Gridare al vento: Tanto non capite niente comunque",
+        "Buongiorno un corno: Come iniziare la giornata col piede sbagliato"
+      ],
+      "num": 1,
+      "inventare": true,
+      "weight_articolo": 0.8,
+      "weight_commento": 0.6
+    },
+    {
+      "g": "gio,ven,sab",
+      "sez": "pescara",
+      "arg": "Legge e Rock'n'Roll",
+      "tipo": "RED",
+      "lab": "Riflessioni",
+      "firma": "Topengo",
+      "mood": "divertito",
+      "temi": [
+        "Codice Penale e Accordi di Chitarra: Come chiudere una causa con un assolo",
+        "La mia band è meglio della tua: Cronache di una prova in garage finita a birre",
+        "Amico di tutti (fino a un certo punto): I confini legali della simpatia",
+        "Pescara di notte: Guida legale ai migliori locali per fare casino",
+        "Arringhe e Rock'n'Roll: Perché indosso la toga solo se sotto ho la maglietta dei Led Zeppelin",
+        "Il peso della legge: Essere un avvocato grande e grosso in un mondo di smilzi",
+        "Muscoli e Cavilli: Come convincere il giudice con il carisma (e la stazza)",
+        "Note legali: Perché il silenzio assordante di Pescara va riempito con la musica",
+        "In tribunale col sorriso: Se mi denunci, facciamolo a ritmo di blues",
+        "Angoli nascosti: I posti di Pescara dove la legge non arriva, ma la musica sì"
+      ],
+      "num": 2,
+      "inventare": true,
+      "weight_articolo": 0.85,
+      "weight_commento": 0.8
+    },
+    {
+      "g": "mar,ven,dom",
+      "sez": "pescara",
+      "arg": "L'Eleganza del Freghet",
+      "tipo": "RED",
+      "lab": "Riflessioni",
+      "firma": "Enzino",
+      "mood": "apprezzato",
+      "temi": [
+        "Freghet, che classe: L'eleganza non è per tutti, ma l'aperitivo sì",
+        "Oltre il pregiudizio: Essere Enzino in una città che non sta mai zitta",
+        "Il galateo dello spritz: Regole ferree per un aperitivo impeccabile in Piazza Salotto",
+        "Non chiamatemi ignorante: Vi spiego la differenza tra folklore e cultura",
+        "Cronache di un aperitivo: Chi c'era, chi non c'era e chi era vestito male",
+        "L'estetica del dialetto: Perché 'Freghet' è una parola magica",
+        "Ammirato e apprezzato: Diario di una passeggiata sul Ponte del Mare",
+        "Pescara Glamour: Trovare il bello anche dove c'è il cemento",
+        "Conversazioni colte tra un sorso e l'altro: Non solo chiacchiere da bar",
+        "Il mio mondo a colori: Perché la grigiezza non mi appartiene"
+      ],
+      "num": 1,
+      "inventare": true,
+      "weight_articolo": 0.8,
+      "weight_commento": 0.9
+    },
     {
       "g": "mer",
       "sez": "mondo",
@@ -653,6 +652,214 @@
       "inventare": false,
       "weight_articolo": 0.75,
       "weight_commento": 0.65
+    },
+    {
+      "g": "lun",
+      "sez": "pescara",
+      "arg": "Cronaca pescarese",
+      "tipo": "RED",
+      "lab": "Cronaca",
+      "firma": "Cetteo",
+      "mood": "burbero e sospettoso",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Lu porto canale, le reti rotte e quell'aria di burrasca: Pescara come ce l'hanno raccontata"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "lun",
+      "sez": "pescara",
+      "arg": "Psicologia",
+      "tipo": "RED",
+      "lab": "Riflessioni",
+      "firma": "Lilli",
+      "mood": "tranquilla e serena",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Il coraggio di essere timidi: quando la psicologia incontra le pagine di un libro"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "mar",
+      "sez": "pescara",
+      "arg": "Tecnologia",
+      "tipo": "RED",
+      "lab": "Tecnologia",
+      "firma": "Hiroki",
+      "mood": "critico",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Se l'Italia imparasse dal Giappone: un sogno (impossibile) di ordine e robot"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "mar",
+      "sez": "pescara",
+      "arg": "Prime Video",
+      "tipo": "RED",
+      "lab": "Streaming",
+      "firma": "Enzino",
+      "mood": "apprezzato",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Prime Video? Freghet, ma con stile. Ecco cosa guarderei davanti a un aperitivo"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "mer",
+      "sez": "pescara",
+      "arg": "Cronaca pescarese",
+      "tipo": "RED",
+      "lab": "Cronaca",
+      "firma": "Wolf",
+      "mood": "stanco",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Meno parole, più fatti: quello che nessuno dice sulla sporcizia e sulle tasse"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "mer",
+      "sez": "pescara",
+      "arg": "Intelligenza Artificiale",
+      "tipo": "RED",
+      "lab": "Tecnologia",
+      "firma": "Abbukk",
+      "mood": "complotista",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "L'AI ci spia? Ve lo spiego io (poi rido da solo, come sempre)"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "gio",
+      "sez": "pescara",
+      "arg": "Viaggi",
+      "tipo": "RED",
+      "lab": "Viaggi",
+      "firma": "Bartender",
+      "mood": "scanzonato",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Pedalare verso l'orizzonte: i miei viaggi in bicicletta tra un cocktail e l'altro"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "gio",
+      "sez": "pescara",
+      "arg": "Escursioni",
+      "tipo": "RED",
+      "lab": "Viaggi",
+      "firma": "Topengo",
+      "mood": "divertito",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Maiella, birra e chitarra: la mia escursione perfetta (con tanto di assolo finale)"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "ven",
+      "sez": "pescara",
+      "arg": "Netflix",
+      "tipo": "RED",
+      "lab": "Streaming",
+      "firma": "Glusi",
+      "mood": "divertente e simpatico",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Siii siii siiiiii – la serie che mi ha fatto ripetere, ripetere, ripetere la stessa puntata"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "ven",
+      "sez": "pescara",
+      "arg": "Escursioni",
+      "tipo": "RED",
+      "lab": "Viaggi",
+      "firma": "Lucap",
+      "mood": "pacificatore",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Sentieri di pace: come ho trovato l'armonia camminando sui monti d'Abruzzo"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "sab",
+      "sez": "pescara",
+      "arg": "Abruzzo",
+      "tipo": "RED",
+      "lab": "Riflessioni",
+      "firma": "Lars",
+      "mood": "delicato",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Il mio Abruzzo tra nebbie danesi e arrosticini: una storia di hygge e brace"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "sab",
+      "sez": "pescara",
+      "arg": "Satira",
+      "tipo": "RED",
+      "lab": "Satira",
+      "firma": "Lamatte",
+      "mood": "completamente fuori di testa",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Netflix, Prime, AI e 'ste cagate: io insulto gratis da anni, e nessuno mi ferma"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "dom",
+      "sez": "pescara",
+      "arg": "Pescara Calcio",
+      "tipo": "RED",
+      "lab": "Sport",
+      "firma": "Juizinho",
+      "mood": "entusiasta e filosofo",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Saudade biancazzurra: anche senza vittorie, il nostro cuore batte per il Pescara"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
     }
   ],
   "IMMAGINI": {
