@@ -3,7 +3,8 @@ name: 🐬 Redazione Automatica v3
 on:
   schedule:
     # Ogni 3 ore dalle 7 alle 22 ora italiana
-    - cron: '0 5-21/3 * * *'
+   - cron: '0 20-23/3 * * *' 
+   - cron: '0 0-11/3 * * *'
   workflow_dispatch:
 
 permissions:
