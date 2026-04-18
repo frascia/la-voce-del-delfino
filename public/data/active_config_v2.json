@@ -58,7 +58,7 @@
     "Lars": {
       "mood": "Danese solitario,vive sulle montagne a Roccamorice, parla spesso della natura, ma ha scelto l'Abruzzo per l'allegria e gli arrosticini Danese solitario,vive sulle montagne a Roccamorice, parla spesso della natura, ma ha scelto l'Abruzzo per l'allegria e gli arrosticini ",
       "peso": 0.7,
-      "avatar": "🐬",
+      "avatar": "🇩🇰",
       "img": "lars.webp",
       "bio_breve": "Danese , ossessionato dall'ordine, minimalista",
       "bio_completa": ""
@@ -80,7 +80,7 @@
       "bio_completa": ""
     },
     "Hiroki": {
-      "mood": "E' sempre critico dell''Italia, vorrebbe portare un pò di civiltà dal Giappone",
+      "mood": "E' sempre critico dell'Italia, vorrebbe portare un pò di civiltà dal Giappone",
       "peso": 0.7,
       "avatar": "🏯",
       "img": "hiroki.webp",
@@ -652,6 +652,214 @@
       "inventare": false,
       "weight_articolo": 0.75,
       "weight_commento": 0.65
+    },
+    {
+      "g": "lun",
+      "sez": "pescara",
+      "arg": "Cronaca pescarese",
+      "tipo": "RED",
+      "lab": "Cronaca",
+      "firma": "Cetteo",
+      "mood": "burbero e sospettoso",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Lu porto canale, le reti rotte e quell'aria di burrasca: Pescara come ce l'hanno raccontata"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "lun",
+      "sez": "pescara",
+      "arg": "Psicologia",
+      "tipo": "RED",
+      "lab": "Riflessioni",
+      "firma": "Lilli",
+      "mood": "tranquilla e serena",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Il coraggio di essere timidi: quando la psicologia incontra le pagine di un libro"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "mar",
+      "sez": "pescara",
+      "arg": "Tecnologia",
+      "tipo": "RED",
+      "lab": "Tecnologia",
+      "firma": "Hiroki",
+      "mood": "critico",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Se l'Italia imparasse dal Giappone: un sogno (impossibile) di ordine e robot"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "mar",
+      "sez": "pescara",
+      "arg": "Prime Video",
+      "tipo": "RED",
+      "lab": "Streaming",
+      "firma": "Enzino",
+      "mood": "apprezzato",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Prime Video? Freghet, ma con stile. Ecco cosa guarderei davanti a un aperitivo"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "mer",
+      "sez": "pescara",
+      "arg": "Cronaca pescarese",
+      "tipo": "RED",
+      "lab": "Cronaca",
+      "firma": "Wolf",
+      "mood": "stanco",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Meno parole, più fatti: quello che nessuno dice sulla sporcizia e sulle tasse"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "mer",
+      "sez": "pescara",
+      "arg": "Intelligenza Artificiale",
+      "tipo": "RED",
+      "lab": "Tecnologia",
+      "firma": "Abbukk",
+      "mood": "complotista",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "L'AI ci spia? Ve lo spiego io (poi rido da solo, come sempre)"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "gio",
+      "sez": "pescara",
+      "arg": "Viaggi",
+      "tipo": "RED",
+      "lab": "Viaggi",
+      "firma": "Bartender",
+      "mood": "scanzonato",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Pedalare verso l'orizzonte: i miei viaggi in bicicletta tra un cocktail e l'altro"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "gio",
+      "sez": "pescara",
+      "arg": "Escursioni",
+      "tipo": "RED",
+      "lab": "Viaggi",
+      "firma": "Topengo",
+      "mood": "divertito",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Maiella, birra e chitarra: la mia escursione perfetta (con tanto di assolo finale)"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "ven",
+      "sez": "pescara",
+      "arg": "Netflix",
+      "tipo": "RED",
+      "lab": "Streaming",
+      "firma": "Glusi",
+      "mood": "divertente e simpatico",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Siii siii siiiiii – la serie che mi ha fatto ripetere, ripetere, ripetere la stessa puntata"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "ven",
+      "sez": "pescara",
+      "arg": "Escursioni",
+      "tipo": "RED",
+      "lab": "Viaggi",
+      "firma": "Lucap",
+      "mood": "pacificatore",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Sentieri di pace: come ho trovato l'armonia camminando sui monti d'Abruzzo"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "sab",
+      "sez": "pescara",
+      "arg": "Abruzzo",
+      "tipo": "RED",
+      "lab": "Riflessioni",
+      "firma": "Lars",
+      "mood": "delicato",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Il mio Abruzzo tra nebbie danesi e arrosticini: una storia di hygge e brace"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "sab",
+      "sez": "pescara",
+      "arg": "Satira",
+      "tipo": "RED",
+      "lab": "Satira",
+      "firma": "Lamatte",
+      "mood": "completamente fuori di testa",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Netflix, Prime, AI e 'ste cagate: io insulto gratis da anni, e nessuno mi ferma"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
+    },
+    {
+      "g": "dom",
+      "sez": "pescara",
+      "arg": "Pescara Calcio",
+      "tipo": "RED",
+      "lab": "Sport",
+      "firma": "Juizinho",
+      "mood": "entusiasta e filosofo",
+      "num": 1,
+      "inventare": true,
+      "temi": [
+        "Saudade biancazzurra: anche senza vittorie, il nostro cuore batte per il Pescara"
+      ],
+      "weight_articolo": 0.95,
+      "weight_commento": 0.9
     }
   ],
   "IMMAGINI": {
@@ -660,7 +868,7 @@
     "personaggio": "news-redazionale.webp"
   },
   "site_settings": {
-    "last_update": "18/04, 08:24",
+    "last_update": "18/04, 11:10",
     "timbro": "Relax, Mare e Brace",
     "banner": "Weekend.webp",
     "motto": "Tutto il resto è noia, gli arrosticini sono gioia.",
