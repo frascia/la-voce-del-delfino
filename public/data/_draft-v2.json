@@ -1,4 +1,5 @@
 {
+  "dataRiferimento": "18/04",
   "oraAggiornamento": "18/04, 14:01",
   "agenda": {
     "timbro": "Relax, Mare e Brace",
@@ -25,7 +26,7 @@
   "sezioni": {
     "pescara": {
       "color": "#005f73",
-      "news": [
+      "articoli": [
         {
           "tipo": "personaggio",
           "titolo": "Vento in faccia e vaffanculo pronto: La dura vita a Borgomarino",
@@ -60,7 +61,8 @@
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": null
         },
         {
           "tipo": "personaggio",
@@ -96,7 +98,8 @@
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "lars.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": null
         },
         {
           "tipo": "personaggio",
@@ -132,7 +135,8 @@
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "lamatte.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": null
         },
         {
           "tipo": "personaggio",
@@ -168,7 +172,8 @@
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "topengo.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": null
         },
         {
           "tipo": "personaggio",
@@ -204,7 +209,8 @@
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "topengo.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": null
         },
         {
           "tipo": "personaggio",
@@ -240,7 +246,8 @@
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "lars.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": null
         },
         {
           "tipo": "personaggio",
@@ -255,13 +262,14 @@
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "lamatte.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": null
         }
       ]
     },
     "mondo": {
       "color": "#cc9c7e",
-      "news": [
+      "articoli": [
         {
           "tipo": "rss",
           "titolo": "Un'unione di ritmi: Miley Cyrus e Maxx Morando verso il sì",
@@ -275,13 +283,14 @@
           "categoria": "Giappone",
           "colore_tipo": "#008cff",
           "immagine": "hiroki.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": "📰 ven 17 aprile 18:14"
         }
       ]
     },
     "cultura": {
       "color": "#6a4c93",
-      "news": [
+      "articoli": [
         {
           "tipo": "gen",
           "titolo": "Tra le pagine e il silenzio: nuovi mondi di carta",
@@ -316,7 +325,8 @@
           "categoria": "Da Leggere",
           "colore_tipo": "#ff4d4d",
           "immagine": "lilli.webp",
-          "provider": "gemini"
+          "provider": "gemini",
+          "publishedAt": null
         }
       ]
     }

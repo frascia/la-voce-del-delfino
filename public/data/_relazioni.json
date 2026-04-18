@@ -1,5 +1,5 @@
 {
-  "_runCount": 7,
+  "_runCount": 8,
   "Ernesto→Giovanni": {
     "score": -0.043,
     "label": "neutro",
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.05,
+    "score": -0.05,
     "label": "neutro",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -111,7 +111,7 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Autore": {
-    "score": 0.014,
+    "score": 0.164,
     "label": "neutro",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.759,
+    "score": 0.909,
     "label": "amico",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -301,7 +301,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Hiroki→Lilli": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -516,7 +516,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Glusi→Autore": {
-    "score": 0,
+    "score": 0.25,
     "label": "neutro",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -551,9 +551,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Abbukk": {
-    "score": 0.09,
+    "score": -0.11,
     "label": "neutro",
-    "ultimo_aggiornamento": "16/04/2026"
+    "ultimo_aggiornamento": "18/04/2026"
   },
   "Lilli→viaggiatore danese": {
     "score": 0.18,
@@ -821,7 +821,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Wolf": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "18/04/2026"
   },
@@ -1063,6 +1063,51 @@
   "Lilli→Wolf": {
     "score": 0.1,
     "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Hiroki→Contesto Locale": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Hiroki→Comunità di Borgomarino": {
+    "score": -0.25,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Wolf→Pescatori locali": {
+    "score": -0.15,
+    "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Abbukk→Società civile": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Cetteo→Proprietari di negozi": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Hiroki→Cultura del servizio italiana": {
+    "score": -0.25,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Lamatte→Società civile": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Glusi→Percezione della realtà": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "18/04/2026"
+  },
+  "Lamatte→Autore": {
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "18/04/2026"
   }
 }
