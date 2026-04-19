@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "19/04, 05:38",
+  "prossimo_aggiornamento": "19/04, 09:40",
   "news": [
     {
       "tipo": "personaggio",
@@ -259,7 +259,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -296,7 +296,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -370,7 +370,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -407,7 +407,7 @@
       "colore_tipo": "#008cff",
       "immagine": "juizinho.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -422,6 +422,38 @@
       "categoria": "Sport",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "L'Arte dell'Incontro: L'Aperitivo tra Eleganza e Condivisione",
+      "articolo": "L'aperitivo rappresenta uno dei pilastri della socialità contemporanea, un rito che trasforma il passaggio dal lavoro al riposo in un momento di pura estetica. Non si tratta solo di consumare una bevanda, ma di immergersi in un'atmosfera dove la cura dei dettagli incontra la spontaneità del dialogo. L'eleganza, in questo contesto, si manifesta nella scelta di un calice di vino ricercato o di un cocktail miscelato con sapienza, come il classico Negroni o uno Spritz vivace. Le piazze italiane diventano palcoscenici dove lo stile personale si fonde con la bellezza architettonica circostante. Freghet, osservare la gente che si ritrova nei dehors è un piacere per gli occhi e per lo spirito. Mentre i bicchieri tintinnano, le barriere sociali si assottigliano, rendendo questo lusso accessibile a chiunque desideri celebrare la vita. L'aperitivo non è un semplice appuntamento, ma un'espressione di cultura urbana che valorizza il tempo libero. Chi sa apprezzare questa pausa sa che la vera classe risiede nella capacità di godersi il momento con naturalezza, senza mai cadere nella banalità.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Un pezzo che cattura perfettamente l'essenza del nostro vivere. Enzino sa sempre come rendere prezioso e chic anche un semplice brindisi tra amici."
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Saudade Biancazzurra: Un Amore Oltre il Risultato",
+      "articolo": "In questa città baciata dal mare, il calcio non è solo un gioco, ma un battito costante che ricorda il ritmo della samba. La saudade brasiliana si mescola con l'orgoglio abruzzese quando si parla del Pescara. Anche quando i tre punti faticano ad arrivare, l'entusiasmo della gente non svanisce mai. Mi sono trasferito qui, lasciando i colori del Brasile, solo per vivere l'atmosfera magica dello stadio Adriatico, dove ogni domenica sembra di stare al Carnevale di Rio, tra bandiere al vento e sorrisi contagiosi. Le donne pescaresi, con quella grazia mediterranea, illuminano gli spalti rendendo la sofferenza sportiva molto più dolce da sopportare. Il tifo biancazzurro è un sentimento puro, una festa che non finisce mai, indipendentemente dalla posizione in classifica. La fede verso la maglia è un legame indissolubile, capace di trasformare ogni trasferta in un viaggio verso l'infinito. In fondo, la bellezza del calcio risiede in questa attesa eterna, in questo amore incondizionato che ci spinge a cantare fino a perdere la voce, sognando una vittoria che prima o poi arriverà a coronare la nostra infinita passione.",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "La vita è un dribbling continuo tra malinconia e gioia immensa! Anche senza il gol, la bellezza sta nel ballare sotto la pioggia con il cuore dipinto di biancazzurro. Che meraviglia essere vivi e tifosi!"
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
       "provider": "gemini",
       "nuovo": true
     }
