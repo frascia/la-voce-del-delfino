@@ -1,5 +1,5 @@
 {
-  "_runCount": 5,
+  "_runCount": 6,
   "Ernesto→Giovanni": {
     "score": -0.035,
     "label": "neutro",
@@ -36,8 +36,8 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Hiroki→Cetteo": {
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "21/04/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.794,
+    "score": -0.694,
     "label": "ostile",
     "ultimo_aggiornamento": "22/04/2026"
   },
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.6,
+    "score": 0.4,
     "label": "simpatico",
     "ultimo_aggiornamento": "22/04/2026"
   },
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -0.44,
+    "score": -0.54,
     "label": "diffidente",
     "ultimo_aggiornamento": "22/04/2026"
   },
@@ -271,7 +271,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Glusi": {
-    "score": -0.8,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "22/04/2026"
   },
@@ -301,18 +301,18 @@
     "ultimo_aggiornamento": "21/04/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.065,
+    "score": -0.165,
     "label": "neutro",
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Cetteo→Lilli": {
-    "score": 0.38,
-    "label": "simpatico",
+    "score": 0.78,
+    "label": "amico",
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.019,
-    "label": "neutro",
+    "score": -0.519,
+    "label": "diffidente",
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Wolf→Redazione": {
@@ -336,7 +336,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Abbukk→Lars": {
-    "score": -0.461,
+    "score": -0.261,
     "label": "diffidente",
     "ultimo_aggiornamento": "22/04/2026"
   },
@@ -416,7 +416,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Glusi→Abbukk": {
-    "score": 0.565,
+    "score": 0.665,
     "label": "simpatico",
     "ultimo_aggiornamento": "22/04/2026"
   },
@@ -546,7 +546,7 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lilli→Abbukk": {
-    "score": 0.246,
+    "score": 0.046,
     "label": "neutro",
     "ultimo_aggiornamento": "22/04/2026"
   },
@@ -656,14 +656,14 @@
     "ultimo_aggiornamento": "21/04/2026"
   },
   "Wolf→Hiroki": {
-    "score": 0.771,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Glusi→Wolf": {
-    "score": -0.163,
+    "score": -0.113,
     "label": "neutro",
-    "ultimo_aggiornamento": "21/04/2026"
+    "ultimo_aggiornamento": "22/04/2026"
   },
   "Wolf→Autore": {
     "score": 0.28,
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.81,
+    "score": -0.61,
     "label": "ostile",
     "ultimo_aggiornamento": "22/04/2026"
   },
@@ -821,8 +821,8 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.62,
-    "label": "simpatico",
+    "score": 0.92,
+    "label": "amico",
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Cetteo→Squadra": {
@@ -991,7 +991,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -0.91,
+    "score": -0.71,
     "label": "ostile",
     "ultimo_aggiornamento": "22/04/2026"
   },
@@ -1061,8 +1061,8 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lilli→Wolf": {
-    "score": 0.451,
-    "label": "simpatico",
+    "score": 0.851,
+    "label": "amico",
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Hiroki→Contesto Locale": {
@@ -1533,6 +1533,31 @@
   "Lilli→Alexa+": {
     "score": -0.2,
     "label": "neutro",
+    "ultimo_aggiornamento": "22/04/2026"
+  },
+  "Lilli→Autrice": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "22/04/2026"
+  },
+  "Cetteo→Autrice": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "22/04/2026"
+  },
+  "Glusi→Autrice": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "22/04/2026"
+  },
+  "Lucap→Autrice": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "22/04/2026"
+  },
+  "Glusi→Alexa Plus": {
+    "score": 0.3,
+    "label": "simpatico",
     "ultimo_aggiornamento": "22/04/2026"
   }
 }
