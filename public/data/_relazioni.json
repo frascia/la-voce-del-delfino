@@ -1,5 +1,5 @@
 {
-  "_runCount": 7,
+  "_runCount": 8,
   "Ernesto→Giovanni": {
     "score": -0.032,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "24/04/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.85,
     "label": "ostile",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -81,7 +81,7 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -211,8 +211,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -0.6,
-    "label": "diffidente",
+    "score": -0.7,
+    "label": "ostile",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Glusi→Cetteo": {
@@ -276,9 +276,9 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lars→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "24/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Juizinho→Glusi": {
     "score": 0.9,
@@ -291,9 +291,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.8,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "24/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Lars→Lilli": {
     "score": 1,
@@ -346,8 +346,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": 0.7,
-    "label": "amico",
+    "score": 0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Abbukk→Hiroki": {
@@ -963,7 +963,7 @@
   "Topengo→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "24/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Lars→Pescatori di Pescara": {
     "score": 0.146,
@@ -1051,9 +1051,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Glusi→Realtà circostante": {
-    "score": 0.073,
+    "score": -0.177,
     "label": "neutro",
-    "ultimo_aggiornamento": "18/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Autore→Lamatte": {
     "score": -0.294,
@@ -1151,9 +1151,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Topengo→Hiroki": {
-    "score": -0.073,
-    "label": "neutro",
-    "ultimo_aggiornamento": "24/04/2026"
+    "score": -0.273,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Glusi→Topengo": {
     "score": 1,
@@ -1576,9 +1576,9 @@
     "ultimo_aggiornamento": "23/04/2026"
   },
   "Topengo→Glusi": {
-    "score": 0.66,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "24/04/2026"
+    "score": 0.86,
+    "label": "amico",
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Hiroki→Amministrazione comunale": {
     "score": -0.18,
@@ -1728,6 +1728,21 @@
   "Hiroki→Autrice": {
     "score": -0.2,
     "label": "neutro",
+    "ultimo_aggiornamento": "25/04/2026"
+  },
+  "Lilli→Burocrati/Istituzioni": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "25/04/2026"
+  },
+  "Hiroki→Cittadinanza locale": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "25/04/2026"
+  },
+  "Abbukk→Autorità/Globalisti": {
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "25/04/2026"
   }
 }
