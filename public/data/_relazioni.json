@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.032,
     "label": "neutro",
@@ -51,9 +51,9 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.64,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "24/04/2026"
+    "score": 0.74,
+    "label": "amico",
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Hiroki→Juizinho": {
     "score": -1,
@@ -66,9 +66,9 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -0.81,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "21/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Juizinho→Hiroki": {
     "score": -0.63,
@@ -211,19 +211,19 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -1,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
-    "ultimo_aggiornamento": "24/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Lilli→Juizinho": {
-    "score": 0.91,
+    "score": 0.71,
     "label": "amico",
-    "ultimo_aggiornamento": "24/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Enzo→Juizinho": {
     "score": -0.302,
@@ -346,14 +346,14 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": 0.8,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Abbukk→Hiroki": {
-    "score": -0.8,
+    "score": -0.9,
     "label": "ostile",
-    "ultimo_aggiornamento": "23/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Abbukk→Juizinho": {
     "score": -0.179,
@@ -421,9 +421,9 @@
     "ultimo_aggiornamento": "23/04/2026"
   },
   "Hiroki→Abbukk": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "23/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Lars→barman": {
     "score": 0.131,
@@ -626,17 +626,17 @@
     "ultimo_aggiornamento": "23/04/2026"
   },
   "Autore→Wolf": {
-    "score": 0.134,
-    "label": "neutro",
-    "ultimo_aggiornamento": "23/04/2026"
+    "score": 0.334,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Autore→Hiroki": {
-    "score": 0.113,
-    "label": "neutro",
+    "score": 0.413,
+    "label": "simpatico",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Autore→Glusi": {
-    "score": 0.594,
+    "score": 0.394,
     "label": "simpatico",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.41,
+    "score": -0.31,
     "label": "diffidente",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -906,7 +906,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Autore→Cetteo": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -1011,8 +1011,8 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Hiroki→Topengo": {
-    "score": -0.55,
-    "label": "diffidente",
+    "score": -0.75,
+    "label": "ostile",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lilli→Topengo": {
@@ -1156,7 +1156,7 @@
     "ultimo_aggiornamento": "24/04/2026"
   },
   "Glusi→Topengo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -1541,14 +1541,14 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Cetteo→Autrice": {
-    "score": -0.18,
-    "label": "neutro",
-    "ultimo_aggiornamento": "22/04/2026"
+    "score": -0.48,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Glusi→Autrice": {
-    "score": -0.09,
+    "score": -0.19,
     "label": "neutro",
-    "ultimo_aggiornamento": "22/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Lucap→Autrice": {
     "score": 0.09,
@@ -1712,6 +1712,21 @@
   },
   "Glusi→Politici": {
     "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "25/04/2026"
+  },
+  "Lars→Questa comunità": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "25/04/2026"
+  },
+  "Lamatte→Autrice": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "25/04/2026"
+  },
+  "Hiroki→Autrice": {
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "25/04/2026"
   }
