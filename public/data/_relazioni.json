@@ -1,5 +1,5 @@
 {
-  "_runCount": 9,
+  "_runCount": 10,
   "Ernesto→Giovanni": {
     "score": -0.032,
     "label": "neutro",
@@ -38,10 +38,10 @@
   "Lars→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "24/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.85,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -81,14 +81,14 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lars→Juizinho": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "23/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Juizinho→Lars": {
     "score": 1,
@@ -121,8 +121,8 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.8,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lars→Questa terra": {
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.97,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -211,8 +211,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.5,
+    "label": "diffidente",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Glusi→Cetteo": {
@@ -221,8 +221,8 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lilli→Juizinho": {
-    "score": 0.71,
-    "label": "amico",
+    "score": 0.61,
+    "label": "simpatico",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Enzo→Juizinho": {
@@ -233,7 +233,7 @@
   "Glusi→Juizinho": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "24/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Lilli→Lars": {
     "score": 1,
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Glusi": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -306,8 +306,8 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Cetteo→Lilli": {
-    "score": -1,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lilli→Hiroki": {
@@ -511,9 +511,9 @@
     "ultimo_aggiornamento": "24/04/2026"
   },
   "Cetteo→Wolf": {
-    "score": -0.135,
+    "score": -0.035,
     "label": "neutro",
-    "ultimo_aggiornamento": "23/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Glusi→Autore": {
     "score": 1,
@@ -646,7 +646,7 @@
     "ultimo_aggiornamento": "23/04/2026"
   },
   "Lilli→Autore": {
-    "score": 0.7,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "25/04/2026"
   },
@@ -991,9 +991,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
-    "ultimo_aggiornamento": "24/04/2026"
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Autore→Lilli": {
     "score": -0.695,
@@ -1011,8 +1011,8 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Hiroki→Topengo": {
-    "score": -0.75,
-    "label": "ostile",
+    "score": -0.55,
+    "label": "diffidente",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lilli→Topengo": {
@@ -1021,8 +1021,8 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lamatte→Hiroki": {
-    "score": 0.373,
-    "label": "simpatico",
+    "score": 0.073,
+    "label": "neutro",
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lamatte→Lilli": {
@@ -1106,9 +1106,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Lamatte→Autore": {
-    "score": -0.399,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "22/04/2026"
+    "score": -0.099,
+    "label": "neutro",
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Topengo→Miley Cyrus": {
     "score": 0.146,
@@ -1161,9 +1161,9 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lamatte→Cetteo": {
-    "score": -0.34,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "22/04/2026"
+    "score": -0.14,
+    "label": "neutro",
+    "ultimo_aggiornamento": "25/04/2026"
   },
   "Lilli→Squadra Pescara": {
     "score": -0.924,
