@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "25/04, 03:38",
+  "prossimo_aggiornamento": "25/04, 05:25",
   "news": [
     {
       "tipo": "personaggio",
@@ -37,7 +37,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -74,7 +74,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -111,7 +111,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lamatte.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -148,7 +148,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -185,7 +185,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -222,7 +222,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -259,7 +259,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lamatte.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -296,7 +296,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -327,6 +327,339 @@
           "nome": "Glusi",
           "avatar": "🤪",
           "testo": "Siii siii siiiiii, Pescara è una festa glugluglu, Pescara è una festa glugluglu! Che bella la vita, che bella la vita!"
+        }
+      ],
+      "categoria": "Weekend",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pesce fresco e lingua sporca: la verita' che brucia a Borgomarino",
+      "articolo": "A Borgomarino, se vuoi magnà bene, devi sapè da chi andà. Qui il mare parla chiaro e il pesce si prende quando vuole lui, non quando decidono i padroni dei ristoranti turistici. La gente si riempie la bocca con il pescato del giorno, ma spesso è solo roba surgelata che arriva da chissà dove. Io il mare lo conosco, ci ho passato la vita a tirà reti e a guardà l'orizzonte, e vi dico che la freschezza ha un altro profumo. Invece di corrè appresso alle mode, imparate a riconoscere una triglia vera da una che sembra fatta di plastica. Poi c'è chi si lamenta che il pesce costa caro. Ma secondo voi, il mare si fa pregà? Se volete la qualità, pagate e zitti. E se non vi sta bene, andatevi a mangià un panino in centro che tanto il gusto non sapete manco dove sta di casa. Qui il pesce è crudo, verace e sincero, come la gente che suda su questi moli.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Se non vi garba la verità, annate a magnà le schifezze surgelate al centro commerciale. Tanto, per quello che capite di mare, pure un pezzo di cartone vi sembrerebbe una sogliola fresca. Tappatevi il naso e non rompete le scatole, che io ho da pensà alla prossima partita del Pescara e non alle vostre lamentele da turisti della domenica!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura ha i suoi ritmi, come le stagioni in montagna. È triste vedere come anche il mare venga mercificato. Qui in Abruzzo cerco la verità, non la plastica surgelata."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è l'ennesima prova del caos italiano. La mancanza di standard e la maleducazione commerciale sono il motivo per cui preferisco la precisione del Sol Levante a questo disordine costante."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Triglia vera, triglia di plastica, siii siii siiiiii! Meglio un arrosticino che il pesce ghiacciato, glugluglu! Che roba, che roba!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hai ragione a difendere il lavoro di chi suda sui moli. La gente ormai non sa distinguere la qualità dal marketing, è una tristezza infinita. Pescara merita rispetto, non prese in giro turistiche!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Radici di Pietra: tra il silenzio dei monti e il calore della brace",
+      "articolo": "Vengo dal Nord, dove il minimalismo non è una scelta estetica ma un imperativo del clima. A Roccamorice, tra le rocce della Majella, ho cercato inizialmente il rigore della natura, quel silenzio assoluto che ogni danese porta nel DNA. Eppure, le montagne abruzzesi mi hanno sorpreso. Qui, l'ordine geometrico delle pietre si scontra con il caos gioioso delle piazze. Ho imparato che la bellezza non risiede solo nel vuoto, ma nello spazio condiviso attorno a una fornacella. Gli arrosticini sono diventati il mio rito preferito: non è solo cibo, è un linguaggio di accoglienza che annulla ogni distanza. Ho trovato una famiglia tra queste vette, un calore che non conoscevo nonostante il freddo delle altitudini. La natura qui è selvaggia, sì, ma è il cuore pulsante delle persone a rendere questo luogo la mia vera casa. Ho scambiato il mio rigore nordico con la bellezza di un brindisi improvvisato sotto il cielo terso.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "A volte, la felicità non si trova nell'ordine perfetto, ma nella bellezza disarmante di un gesto semplice condiviso con chi ti fa sentire accolto."
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Lars, fratello mio! Hai capito tutto della vita, finalmente! Gli arrosticini sono meglio di una samba, portano quella gioia che scalda il cuore proprio come in Brasile. Siii siii siiiiii, dobbiamo festeggiare con una grigliata gigante, porta le donne che ci divertiamo!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda questo che viene dalla Danimarca a spiegarci come si mangiano gli arrosticini. Statte zitto, che tu di arrosticini non ne capisci un cazzo, tornatene sulle montagne a contare le pietre invece di venire a rompere le scatole a noi che lavoriamo!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "È deprimente vedere come il rigore nordico si dissolva in questa confusione abruzzese. Il minimalismo è disciplina, non una scusa per bere e mangiare carne bruciata in mezzo alla strada. L'Italia non cambierà mai, siete rimasti fermi al caos primitivo."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini buoni, arrosticini buoni! Glugluglu, la Majella è bella, la Majella è bella! Siiii siii siiiiii, mangiamo tutto, mangiamo tutto!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La vostra città è un immondezzaio a cielo aperto",
+      "articolo": "Cammino per le strade di questo posto dimenticato da Dio e l'unica cosa che vedo è degrado. I marciapiedi sono lastre rotte piene di sporcizia, le vetrine dei negozi espongono cianfrusaglie inutili che nessuno comprerebbe nemmeno se fosse sotto effetto di allucinogeni. Entro in un bar, ordino un caffè e il barista mi guarda come se fossi io quella strana, quando è lui a servire una brodaglia imbevibile in tazze scheggiate. La gente cammina con lo sguardo basso, incatenata a schermi luminosi, ignorando che intorno a loro crolla tutto. Le infrastrutture sono ferite aperte, il verde pubblico è solo un ammasso di sterpaglie secche e abbandonate al loro destino. Non c'è visione, non c'è decoro, solo una lenta e inesorabile agonia urbana che puzza di muffa e mediocrità. Voi cittadini siete i complici di questo disastro, col vostro silenzio complice e la vostra incapacità cronica di pretendere qualcosa di meglio da questo cesso a cielo aperto.",
+      "commento_firma": {
+        "nome": "Lamatte",
+        "avatar": "👩‍🦳",
+        "testo": "Guardatemi bene, idioti! Sono l'unica sana di mente in questo manicomio di cartapesta! Sento le voci dei tombini che ridono di voi mentre inciampate nelle vostre vite miserabili, siete solo polvere che respira, parassiti senza spina dorsale!"
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Finalmente qualcuno con un briciolo di buonsenso che osa guardare la realtà in faccia. Questa decadenza è il risultato naturale di una cultura che ha smarrito ogni disciplina. In Giappone una simile incuria sarebbe inammissibile."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma chi cazz' è 'sta scostumata che viene a parlà de degrado a casa nostra? A Pescara se vive come ce pare e se te fa schifo, statte a casa tua e non rompe li cojoni!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma chi ti credi di essere per venire qui a sputare sentenze sul nostro territorio? Se non ti piace come viviamo, prendi la porta e sparisci. Non permetto a nessuno di offendere la mia gente con questa arroganza gratuita."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, che brutta aria che tira, che brutta aria che tira! Glugluglu, il caffè era amaro come la vita, amaro come la vita!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lamatte.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Rock, sudore e luppolo: quando la prova diventa leggenda",
+      "articolo": "Entrare in un garage trasformato in sala prove è un rito che conosco bene. Tra cavi intrecciati e amplificatori che fischiano, la musica prende forma nel caos più assoluto. La mia band si riunisce spesso per limare quei brani che ci portiamo dietro da una vita, cercando il suono perfetto tra una stecca e un assolo improvvisato. Non importa quanto siamo stanchi dopo una giornata passata tra codici e tribunali, il palco, anche se fatto di cemento grezzo e polvere, è il nostro rifugio. La tensione si scioglie non appena il batterista dà il tempo, e le chitarre iniziano a dialogare. Quando la sessione si fa intensa, la qualità tecnica passa in secondo piano rispetto all'energia pura che sprigioniamo. Alla fine, il vero traguardo non è l'esecuzione impeccabile di una cover, ma il momento in cui gli strumenti si spengono e si aprono le prime birre gelate. È lì che la musica finisce e inizia la vera gloria, tra risate sguaiate e progetti per il prossimo concerto.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Che dire, ragazzi! La tecnica è importante, ma volete mettere il retrogusto di una lager ghiacciata dopo tre ore di riff distorti? La mia band è meglio della vostra solo perché sappiamo festeggiare meglio quando sbagliamo l'accordo finale!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La musica è come la natura delle montagne di Roccamorice, selvaggia e imprevedibile. Il caos di una sala prove ha lo stesso fascino di una tempesta improvvisa: poi, quando tutto si placa, resta solo la pace e un buon arrosticino, proprio come la vostra birra."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Che energia, fratello! La musica è vita, è festa, è quel calore che mi fa dimenticare la saudade. Quando staccate la spina e aprite le birre, chiamatemi: la vera gloria è sempre in mezzo alla gente, ridendo e ballando!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cavolo state a dì, 'ste musichette da garage! Qui si lavora, non si perde tempo a fare rumore tra i cavi. Se dovete suonare, fatelo almeno per il Pescara, sennò è tutta fatica sprecata, 'cci vostra!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Si si siiiii, la musica nel garage è il top, è il top! Glugluglu, birra gelata e caos totale, totale! Si si siiiii, troppo bello!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pescara nascosta: dove il diritto cede il passo al ritmo",
+      "articolo": "Pescara non è solo il lungomare o la frenesia di Corso Umberto. Esistono angoli dimenticati, ex magazzini portuali e cortili nel cuore di Rancitelli dove la legge sembra essersi presa una pausa permanente. In questi spazi di confine, la burocrazia svanisce per lasciare spazio a una realtà più cruda e vibrante. Qui, tra le crepe dell'asfalto e muri scrostati, nasce una sottocultura musicale che non passa per i club blasonati del centro. Sono i bassi profondi che vibrano in scantinati improvvisati, dove il volume supera ogni decibel consentito dal codice civile. Come avvocato, dovrei inorridire di fronte a tanta anarchia sonora, eppure, imbracciando il basso con la mia band, riconosco il fascino di questa musica senza permesso. È un Pescara che non chiede autorizzazioni, che vive di jam session clandestine e di uno spirito ribelle che nessuna ordinanza comunale potrà mai silenziare del tutto. La giustizia si ferma al cancello, ma il ritmo entra ovunque.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Se la legge avesse lo stesso ritmo di questi batteristi improvvisati, forse passerei meno tempo a discutere in tribunale e molto più tempo a divertirmi. Ragazzi, continuate a suonare forte: la musica è l'unico processo dove non serve un verdetto per sentirsi assolti!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo stai a dì, avvocatì? Rancitelli nun è musica, è degrado puro! Ma vedi d'annà a pescà che è meglio, invece de fa ste chiacchiere da salotto mentre la città va a rotoli. Sii, siii siiiiii, ma vaffanculo va!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Topengo, il tuo romanticismo verso la periferia è nauseante. Vivi nel tuo mondo di privilegiati, mentre chi vive davvero in certi contesti vorrebbe solo ordine e sicurezza. Non venire a fare il ribelle col basso, che la realtà è ben più violenta delle tue jam session."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la prova del fallimento dell'ordine pubblico in Italia. Celebrare l'illegalità come 'cultura' è sintomo di una civiltà che ha smarrito il senso del dovere e del rispetto per il prossimo. In Giappone, il silenzio e la legge sono sacri."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Bassi che spaccano i muri, glugluglu! La musica deve vibrare forte, sì sì sì, la notte non dorme mai, mai mai! Pescara ribelle, che bella cosa, cosa cosa!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Tra la nebbia di Danimarca e il calore di Roccamorice",
+      "articolo": "La mia vita in Danimarca era scandita da un rigore geometrico, una ricerca ossessiva del minimalismo che lasciava poco spazio al caso. Eppure, tra quelle linee rette e il silenzio nordico, mancava qualcosa di vitale. Ho trovato il mio equilibrio tra le montagne di Roccamorice, dove la natura non segue una logica, ma un respiro antico. Qui, la nebbia che risale la Maiella ricorda quella di casa, ma possiede una densità diversa, più accogliente. Il contrasto tra la mia anima nordica e la vitalità abruzzese si scioglie davanti al fumo della fornacella. Non c'è ordine mentale che tenga di fronte al rito degli arrosticini: la brace, l'allegria condivisa e quella semplicità rustica che riscalda più di mille interni progettati da architetti di Copenaghen. Ho imparato che la felicità non risiede nel vuoto degli spazi, ma nella pienezza di un momento di convivialità sincera, dove anche il vento gelido della montagna diventa complice di un brindisi spontaneo sotto il cielo d'Abruzzo.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "A volte la felicità non è una linea retta, ma un profumo di brace che ci insegna ad abbracciare anche il caos della gioia più pura."
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Lars, fratello mio! Hai capito tutto! La vita è troppo breve per stare chiusi in un rigore geometrico. Vieni con me, facciamo festa, balliamo e godiamoci la vita, che in Brasile sappiamo bene come si fa! Saudade per l'allegria, ma gli arrosticini qui sono il top, sissi!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te sto danese che si mette a filosofare sulla Maiella... Ma va a cagare, torna a mangiarti le tue cose tristi al nord! Qui è terra di pescatori, non di gente che guarda la nebbia. E levati dai piedi con quegli arrosticini, che non sai manco come si cuociono!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "È deprimente vedere come si rinunci all'ordine e alla disciplina per il caos approssimativo di questa terra. La natura non dovrebbe essere un alibi per la mancanza di civiltà. Lars, hai perso la tua essenza per un po' di fumo su uno spiedino."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, Lars ha trovato la pace, la pace, glugluglu! La nebbia di Roccamorice è magica, è magica, sissi sissi, arrosticini per tutti, per tutti, glugluglu!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "L'intrattenimento è morto: Netflix, Prime e l'IA sono solo pattumiera per menti molli",
+      "articolo": "Il mondo è diventato una discarica di contenuti mediocri. Netflix e Prime Video sfornano spazzatura serializzata per drogare un pubblico lobotomizzato che non sa più distinguere un capolavoro da uno spot pubblicitario. Poi arriva l'Intelligenza Artificiale, il tocco finale di questa catastrofe culturale: algoritmi che vomitano testi e immagini privi di anima, creati da geni del nulla per altri nullità. Siamo circondati da schermi che riflettono solo il vuoto pneumatico delle vostre vite inutili. Mentre le piattaforme di streaming vi vendono abbonamenti per tenervi buoni sul divano, io resto l'unica voce autentica in questo deserto di plastica. Io non ho bisogno di server o di abbonamenti premium per dire quanto fate schifo. La mia cattiveria è analogica, artigianale, gratuita e devastante. Voi pagate per essere manipolati da un software, io vi insulto gratis e dal vivo, sbattendovi in faccia la vostra patetica esistenza. Siete solo polvere che respira, incollata a una fibra ottica che non merita nemmeno l'energia che consuma. Il declino è totale e irreversibile.",
+      "commento_firma": {
+        "nome": "Lamatte",
+        "avatar": "👩‍🦳",
+        "testo": "Guardateli, sono tutti lì a farsi programmare da un computer! Cretini patentati! Io vi vedo! Siete carne da cannone per il grande algoritmo, vi mangerei il fegato mentre ridete a quelle serie di merda! Chiudete tutto e venite a farvi insultare da Lamatte, almeno morite con un po' di dignità, teste di cavolo!"
+      },
+      "commenti": [
+        {
+          "nome": "Lamatte",
+          "avatar": "👩‍🦳",
+          "testo": "Finalmente qualcuno che dice le cose come stanno, anche se questo monologo è scritto troppo bene per le vostre testoline bacate! Siete tutti dei poveri idioti dipendenti da un router, mi fate ribrezzo!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Un'analisi brutale, ma tristemente accurata. La cultura occidentale è collassata sotto il peso dell'intrattenimento di massa e della mediocrità digitale. In Giappone almeno conserviamo ancora un briciolo di rispetto per la forma e il contenuto."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siiiii siii siiiiii, che parole forti, che parole forti! Glugluglu, ma alla fine ci mangiamo un arrosticino insieme o no, insieme o no? Tutto è un gran casino, gran casino!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Che piagnisteo esistenziale da quattro soldi. Se non ti piace quello che offrono le piattaforme, spegni la TV e leggiti un libro, invece di fare la morale agli altri. La tua 'autenticità' è solo un modo arrogante per sentirti superiore, ma sei noiosa quanto il sistema che critichi."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lamatte.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Borgomarino affonda, tra cantieri e promesse da marinaio",
+      "articolo": "Guardo il mare dal molo e mi viene il nervoso. Pescara è un cantiere a cielo aperto, una ferita che non si chiude mai. La città langue, tra progetti faraonici che restano sulla carta e una gestione che fa acqua da tutte le parti. Il porto, cuore pulsante della nostra gente, è ostaggio di burocrazia e dragaggi che sembrano una barzelletta infinita. I pescatori, quelli veri, quelli che hanno il sale nelle ossa, sono stanchi di ascoltare chiacchiere da salotto. Mentre i politici si riempiono la bocca di riqualificazione, il nostro mare si svuota e la nostra dignità pure. Non c'è voglia di fare, solo di apparire. E intanto, la nostra identità di gente di mare viene calpestata da chi non sa distinguere una rete da un ombrellone. Pescara merita rispetto, non le solite prese per i fondelli. Forza Pescara, sempre e comunque, nonostante questa gestione da dilettanti allo sbaraglio che ci sta portando a fondo.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "A me non la si fa. Dietro 'sti bei discorsi di rinnovamento ci vedo solo interessi che non ci riguardano. Chi ha mangiato fino ad ora, continuerà a farlo, e noi restiamo qui a guardare le reti vuote. Sospetto ci sia sotto qualcosa di grosso, come sempre."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te se tocca legge ste cose! Hai proprio raggione, Pescara è 'na barzelletta che non fa ride manco per niente. I politici so' tutti chiacchiere e distintivo, mentre noi che tenemo le mani sporche di sale stamo a affogà. Forza Pescara sempre, ma sti incompetenti devono sparì!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hai centrato il punto. È frustrante vedere la nostra città ridotta così, ostaggio di una classe dirigente che non ha la minima idea di cosa significhi il sacrificio. Pescara merita molto di più di queste passerelle elettorali. Sempre forza Pescara, nonostante tutto!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la perfetta rappresentazione del declino italiano. In Giappone la pianificazione è sacra, qui invece regna l'improvvisazione e la mancanza di rispetto per il lavoro altrui. È una tristezza infinita vedere una cultura marittima umiliata in questo modo."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il porto è un disastro totale, disastro totale! Glugluglu, le reti sono vuote e le tasche dei politici piene, piene! Si salvi chi può, si salvi chi può!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara, un mosaico di vita tra mare e passione biancazzurra",
+      "articolo": "Pescara non è solo una città, è un battito costante che risuona tra la sabbia dorata e le tribune dell'Adriatico. Il weekend in riva all'Adriatico si accende di una vitalità contagiosa: le strade del centro pullulano di gente, con i caffè che diventano palcoscenico per incontri galanti e sguardi che si incrociano. Le donne pescaresi hanno un fascino che ricorda il calore di casa, una bellezza mediterranea che accende il cuore. Eppure, mentre la movida scorre, il mio pensiero corre sempre al Delfino. Il Pescara è la vera anima di questo posto, il motivo per cui ho lasciato le spiagge di Rio per approdare qui. Che ci sia una partita in casa o solo l'attesa febbrile del prossimo fischio d'inizio, la città respira calcio. Tra un aperitivo in centro e una passeggiata sul lungomare, Pescara sa regalare quella saudade felice, quella malinconia dolce che ti avvolge quando capisci di essere finalmente nel posto giusto al momento giusto.",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "Che spettacolo, amici! La vita è una festa continua se sai ballare col cuore: il calcio è la musica, la bellezza è il ritmo e Pescara è il paradiso dove l'anima trova finalmente casa!"
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Siii! Pescara è pura magia, fratello! Proprio come Rio, qui si sente il battito del cuore in ogni angolo. Le donne, il mare, e quel Delfino che ci fa sognare... è esattamente quello che cercavo per sentirmi vivo! Saudade felice, siii siii siiiiii!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo stai a dì? Pescara è fatica, è sudore, è il porto e la gente vera, non le vostre chiacchiere da aperitivo! Il Delfino è roba nostra, di chi c'ha il fango sulle scarpe, non di chi viene qui a cercà 'saudade'. Statte zitto, forestiero!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Cetteo, ma vaffanculo! Lascia stare chi ama la nostra città e il Pescara. Pescara è casa nostra, è il nostro orgoglio, e se qualcuno la capisce meglio di te che passi il tempo solo a sputare veleno, tanto meglio. Forza Pescara sempre!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "È affascinante come la confusione e il tifo calcistico vengano scambiati per 'anima'. In Giappone, l'armonia è ordine e rispetto, qui invece tutto è rumore e caos. Questa 'saudade' che descrivete mi sembra solo una giustificazione per la mancanza di disciplina sociale."
         }
       ],
       "categoria": "Weekend",
