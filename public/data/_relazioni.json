@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.032,
     "label": "neutro",
@@ -48,7 +48,7 @@
   "Juizinho→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "25/04/2026"
+    "ultimo_aggiornamento": "26/04/2026"
   },
   "Lars→Hiroki": {
     "score": 0.74,
@@ -88,7 +88,7 @@
   "Lars→Juizinho": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "25/04/2026"
+    "ultimo_aggiornamento": "26/04/2026"
   },
   "Juizinho→Lars": {
     "score": 1,
@@ -211,18 +211,18 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -0.75,
-    "label": "ostile",
+    "score": -0.45,
+    "label": "diffidente",
     "ultimo_aggiornamento": "26/04/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.95,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "26/04/2026"
   },
   "Lilli→Juizinho": {
-    "score": 0.41,
-    "label": "simpatico",
+    "score": 0.71,
+    "label": "amico",
     "ultimo_aggiornamento": "26/04/2026"
   },
   "Enzo→Juizinho": {
@@ -306,9 +306,9 @@
     "ultimo_aggiornamento": "26/04/2026"
   },
   "Cetteo→Lilli": {
-    "score": -0.6,
+    "score": -0.3,
     "label": "diffidente",
-    "ultimo_aggiornamento": "25/04/2026"
+    "ultimo_aggiornamento": "26/04/2026"
   },
   "Lilli→Hiroki": {
     "score": -0.9,
@@ -716,9 +716,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.31,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "25/04/2026"
+    "score": -0.61,
+    "label": "ostile",
+    "ultimo_aggiornamento": "26/04/2026"
   },
   "Glusi→Pescatori": {
     "score": 0.066,
@@ -881,7 +881,7 @@
     "ultimo_aggiornamento": "21/04/2026"
   },
   "Glusi→Pescara": {
-    "score": 0.035,
+    "score": -0.165,
     "label": "neutro",
     "ultimo_aggiornamento": "26/04/2026"
   },
@@ -1516,9 +1516,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lucap→Lilli": {
-    "score": 0.29,
-    "label": "neutro",
-    "ultimo_aggiornamento": "25/04/2026"
+    "score": 0.39,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "26/04/2026"
   },
   "Hiroki→Borgo Marino": {
     "score": -0.27,
@@ -1744,5 +1744,25 @@
     "score": -0.3,
     "label": "diffidente",
     "ultimo_aggiornamento": "25/04/2026"
+  },
+  "Lilli→Enzino": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "26/04/2026"
+  },
+  "Glusi→Enzino": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "26/04/2026"
+  },
+  "Hiroki→Enzino": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "26/04/2026"
+  },
+  "Cetteo→Enzino": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "26/04/2026"
   }
 }
