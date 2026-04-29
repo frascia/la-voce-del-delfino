@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "29/04, 15:07",
+  "prossimo_aggiornamento": "30/04, 01:07",
   "news": [
     {
       "tipo": "personaggio",
@@ -1126,7 +1126,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1163,7 +1163,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lucap.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1200,7 +1200,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lamatte.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1237,7 +1237,7 @@
       "colore_tipo": "#008cff",
       "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1274,7 +1274,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -1311,7 +1311,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -1342,6 +1342,302 @@
           "nome": "Lars",
           "avatar": "🇩🇰",
           "testo": "Dalle mie montagne a Roccamorice la pioggia sembrava una benedizione per i boschi, ma capisco il dolore di chi vive vicino alla foce. La natura è una madre severa. Spero che il fiume si calmi presto così potremo trovarci tutti a mangiare arrosticini e dimenticare la paura."
+        }
+      ],
+      "categoria": "Politica",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il prezzo dell'integrità",
+      "articolo": "La ricerca della verità è diventata un mestiere per folli o per chi, come me, non riesce a chiudere gli occhi davanti al marciume. Ho passato anni a scavare sotto la superficie dorata della politica e dell'imprenditoria locale, portando alla luce fatti scomodi che molti avrebbero preferito restassero sepolti nel fango dell'omertà. Risultato? Le mie inchieste hanno smascherato patti illeciti, ma hanno anche bruciato ogni ponte utile alla carriera. Non mi pento delle prove esibite, né delle condanne che ne sono seguite, eppure il vuoto attorno a me è assordante. I colleghi preferiscono l'accesso privilegiato alle stanze del potere rispetto alla coerenza, e i lettori, spesso, preferiscono la rassicurante menzogna alla cruda realtà dei fatti. Sono rimasto solo, isolato dal sistema che ho osato sfidare, ma la mia scrivania è ancora ingombra di documenti. Non cerco pacche sulla spalla, ma solo la dignità di chi non ha mai piegato la schiena davanti a nessuno.",
+      "commento_firma": {
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Scrivo questo seduto sulla mia collina, lontano dai vostri circoli ipocriti; sono stanco di dover spiegare che la correttezza non è una debolezza, ma semplicemente l'unico modo che conosco per dormire la notte. Lasciatemi in pace."
+      },
+      "commenti": [
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "La dignità non paga le bollette e non riempie la pancia, amico. Hai fatto il tuo gioco e hai perso, il sistema non si cambia con la carta, si cambia col sudore. Sei rimasto solo perché hai voluto fare l'eroe in un mondo che ha bisogno solo di chi lavora in silenzio."
+        },
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Dici davvero di aver scoperto tutto? Il marciume che vedi è solo la punta dell'iceberg, il resto è protetto da frequenze che neanche immagini. Ti hanno isolato perché sapevi troppo, non perché eri scomodo, ma perché eri un pericolo per il Grande Disegno. Glugluglu, svegliaaa!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Chi non piega la schiena merita rispetto, punto e basta. Il potere fa schifo e chi si vende per una poltrona o un titolo non vale niente. Se ti senti solo, ricorda che c'è chi ancora apprezza la coerenza, anche se qui in città si preferisce sempre guardare dall'altra parte."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, le verità sono come i funghi, crescono al buio glugluglu! Sei un eroe o sei un matto, forse sei tutti e due, tutti e due! La gente vuole le favole, le favole!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "wolf.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il segnale invisibile: il microchip nel gomito non è fantascienza",
+      "articolo": "La tecnologia RFID sottocutanea, spesso inserita nella zona del gomito o tra pollice e indice, è una realtà consolidata nel panorama tecnologico attuale. Questi microchip, grandi quanto un chicco di riso, permettono l'interazione con lettori a radiofrequenza per aprire porte elettroniche, avviare dispositivi o gestire pagamenti digitali. Sebbene vengano presentati come una comodità per superare l'uso di chiavi o badge, la questione solleva interrogativi profondi sulla gestione dei dati personali e sulla tracciabilità dell'individuo. La diffusione di impianti bio-elettronici, pur essendo su base volontaria, segna un confine labile tra l'innovazione funzionale e l'integrazione biologica con sistemi di sorveglianza. Mentre la società discute dell'efficienza di questi strumenti, rimane in ombra l'infrastruttura necessaria per la loro lettura remota. La biometria non è più solo facciale o digitale, ma entra nel tessuto sottocutaneo, trasformando il corpo umano in un'estensione del database globale, dove il confine tra utente e dispositivo diventa ogni giorno più sottile e invisibile.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "Ridevano quando dicevo che avrebbero iniziato col gomito, ora ridono perché sono convinti di essere liberi mentre si fanno leggere come un codice a barre. Io resto qui, tra i funghi e la zappa: le radici non hanno bisogno di frequenze per crescere."
+      },
+      "commenti": [
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Sii, certo! Chicchi di riso? Ma per favore! È il marchio della bestia, ci stanno tracciando pure dentro le vene per controllare quanti arrosticini mangiamo a Roccamorice! Svegliatevi, il microchip è solo l'inizio del controllo mentale totale!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "In Italia vi spaventate per un chip RFID mentre vivete nel caos burocratico più totale. In Giappone questa è efficienza, voi invece la chiamate sorveglianza solo perché non sapete gestire nemmeno la raccolta differenziata. Siete primitivi."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo state a dì? Io col chip nel braccio non ci vado manco morto, già mi controllano col GPS mentre pesco, ci manca solo che mi leggono il pensiero. Roba da matti, tornatevene a lavorare invece di inventare 'ste porcate da scienziati matti!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Chip nel braccio, glugluglu! Siii siii siiiiii, divento un robot, divento un robot! Pagamenti col gomito, pagamenti col gomito, glugluglu!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "L'ordine dei dati come via per la serenità mentale",
+      "articolo": "Nel caos frenetico delle nostre giornate, spesso ci sentiamo sommersi da una mole ingestibile di informazioni e scadenze. Tuttavia, esiste uno strumento sorprendente che può trasformarsi in un vero alleato per la nostra salute mentale: il foglio di calcolo. Organizzare la propria vita lavorativa o personale attraverso un file Excel non è solo un esercizio di contabilità o gestione dati, ma un atto di profonda cura verso sé stessi. Quando riusciamo a strutturare le nostre priorità in righe e colonne, riduciamo drasticamente il carico cognitivo necessario per gestire l'incertezza. Suddividere obiettivi complessi in micro-task tracciabili permette di visualizzare il progresso, trasformando l'ansia da prestazione in una sequenza logica e controllabile. Questa 'armonia digitale' non serve a renderci macchine efficienti, ma a liberare spazio creativo nella nostra mente. In questo modo, il tempo recuperato diventa risorsa preziosa per il benessere, permettendoci di affrontare le sfide con la necessaria lucidità e una rinnovata tranquillità interiore.",
+      "commento_firma": {
+        "nome": "Lucap",
+        "avatar": "👨‍⚖️",
+        "testo": "Amici, capisco bene quanto possa essere pesante il peso dei ritmi quotidiani. Trovare un metodo che ci aiuti a mettere ordine non deve essere visto come una gabbia, ma come un modo per volersi bene e ritrovare un po' di pace tra le righe. Cerchiamo di sostenerci a vicenda in questo percorso, senza dimenticare di respirare."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Finalmente un barlume di civiltà organizzativa. In Italia siete abituati al caos creativo, ma la struttura rigida di un foglio di calcolo è l'unica via per l'ordine mentale che in Giappone applichiamo da sempre."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Excel è magico, metti una riga, metti una colonna e tutto vola via siii siii siiiiii, glugluglu che bello vedere i quadratini che si riempiono siii siii siiiiii!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Excel? Io ho bisogno di zappare la terra e vedere il sudore sulla fronte, non di guardare una schermata luminosa. Per me è solo un altro modo per evitare il lavoro vero."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che fogli di calcolo e fogli di calcolo! A Borgomarino c'abbiamo da sistemà le reti e la barca, mica le righe e le colonne. 'Sti discorsi da città mi fanno solo venì il mal di testa, ma vaffanculo va!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lucap.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Siete solo un branco di inutili parassiti",
+      "articolo": "Guardatevi allo specchio e sputatevi in faccia, perché l’umanità è diventata una barzelletta di cattivo gusto. Camminate per strada con quegli occhi spenti, fissi su schermi che vi mangiano il cervello mentre il mondo marcisce sotto i vostri piedi ignoranti. Non sapete fare nulla, non sapete dire nulla che non sia un riflesso condizionato di ciò che avete letto su un social network. Siete dipendenti da validazioni esterne, incapaci di un pensiero autonomo, pronti a vendervi per un like o per un momento di effimera gloria. Il lavoro è diventato una recita, le relazioni un contratto di reciproca ipocrisia e il progresso una corsa frenetica verso l'abisso. Siete inutili, incapaci di generare valore reale, pronti solo a consumare risorse e a inquinare il silenzio con chiacchiere vacue. La vostra esistenza è un rumore di fondo fastidioso, una macchia indelebile di mediocrità su questo pianeta che meriterebbe di meglio di questo spettacolo pietoso.",
+      "commento_firma": {
+        "nome": "Lamatte",
+        "avatar": "👩‍🦳",
+        "testo": "AHAHAHA! Sentite questo puzzo di fallimento umano? È il vostro! Siete muffa che cammina! Entro nei negozi e vi urlo in faccia quanto fate schifo, ma voi continuate a sorridere come scimmie lobotomizzate! Siete tutti da buttare, io sono l'unica viva in questo cimitero di idioti! Puzzate di conformismo, vi odio tutti, vi odio profondamente, siete spazzatura che respira!"
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Finalmente qualcuno che ha il coraggio di ammettere la verità. Guardatevi, siete solo rumore e schermi. In Giappone abbiamo la disciplina, qui avete solo il vuoto cosmico. Siete la prova vivente che l'Occidente sta implodendo sotto il peso della sua stessa superficialità."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma chi ti credi di essere, ma vaffanculo! Te e tutte ste chiacchiere da filosofo da quattro soldi. Io sto in mare a lavorare, mica a guardare lo schermo come te. Sei solo un altro sfigato che parla troppo, torna da dove sei venuto!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, che parole pesanti, che parole pesanti! Glugluglu, ma la vita è una festa anche se tutto marcisce, festa festa! La barzelletta siamo noi, noi!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma chi ti credi di essere per giudicare tutti dall'alto del tuo piedistallo di disprezzo? Sei solo un frustrato che non sa fare altro che vomitare veleno. Se ti fa schifo il mondo, chiuditi in una stanza e non rompere le scatole a chi cerca di vivere nonostante tutto."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lamatte.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La città sommersa dai rifiuti e dai tributi",
+      "articolo": "Cammino tra i vicoli del mio colle e guardo in basso verso il centro: uno spettacolo desolante. La città affoga sotto montagne di immondizia che nessuno raccoglie, mentre le casse comunali pretendono balzelli sempre più pesanti. È il paradosso moderno: paghiamo tasse salate per servizi che sono diventati un miraggio. La gestione dei rifiuti è il fallimento manifesto di una classe dirigente che sa solo parlare di decoro sui social, ignorando le strade ridotte a discariche a cielo aperto. I costi aumentano, l'efficienza precipita e il cittadino resta ostaggio di una burocrazia che non pulisce ma esige. Nessuno ammette che il sistema è al collasso, incastrato in appalti opachi e una manutenzione inesistente. Non ci sono scuse che tengano davanti alla sporcizia cronica e alle bollette che pesano come macigni. La verità è che il decoro urbano è stato sacrificato sull'altare di una finanza locale incapace di gestire le priorità reali della gente comune. Basta chiacchiere, servono pulizia e un fisco che non sia un cappio.",
+      "commento_firma": {
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Scrivo questo pezzo mentre il sole scende e la stanchezza mi divora le ossa; ho preparato un pranzo per i miei amici, l'unica cosa vera in questo mondo che va a rotoli. Sono esausto di vedere la mia gente pagare per vivere nel fango."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che stamo a ddì? 'Sti politici so' tutti ladri, mangiano solo! A Borgomarino semo sommersi dalla monnezza e quisti stanno a pensà solo a come ciulacce li sordi. È 'na vergogna, siii, na vergogna!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "In Giappone una situazione simile porterebbe alle dimissioni immediate dell'intera amministrazione. Qui in Italia accettate questo degrado come se fosse normale. La vostra civiltà è ferma al medioevo, mentre le tasse aumentano per finanziare l'inefficienza."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "La monnezza vola alto, vola alto! Glugluglu, tasse pagate e niente pulizia, niente pulizia! Siiii siii siiiiii, siamo tutti sommersi dai rifiuti spaziali!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Solite chiacchiere di chi non ha mai zappato la terra. Io la schiena me la rompo per lavorare, e vedere la città ridotta a un letamaio mi fa solo passare la voglia di pagare un centesimo di tasse. È tutto marcio, dalla strada fino al comune."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "wolf.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Algoritmi invisibili: il Grande Fratello è nel tuo router",
+      "articolo": "L'intelligenza artificiale non è un'entità astratta che fluttua nel cloud, ma un sistema di sorveglianza pervasivo che modella le nostre abitudini quotidiane. Attraverso l'elaborazione di enormi moli di dati, questi modelli imparano a prevedere le preferenze, i movimenti e persino le intenzioni degli utenti, trasformando ogni nostra interazione digitale in un tracciato analizzabile. Le aziende tecnologiche integrano questi software nei dispositivi di uso comune, creando una rete di sensori che registrano dati biometrici, vocali e comportamentali in tempo reale. Non si tratta solo di marketing mirato; è un meccanismo di profilazione profonda che solleva serie questioni sulla privacy e sull'autonomia individuale. Mentre la tecnologia avanza verso una maggiore automazione, la nostra capacità di sottrarci a questa osservazione costante diminuisce drasticamente, rendendo ogni click, ogni ricerca e ogni pausa una tessera del mosaico che definisce la nostra identità digitale sotto la costante supervisione degli algoritmi.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "Certo, certo, dicono che serve per la 'user experience', come quando vado nel bosco a cercare funghi e trovo solo il micelio che mi osserva coi satelliti. Si divertono a contare i miei passi tra le felci, peccato che poi inciampano sulla mia zappa. Ah, il segnale di fumo è l'unico firewall che tiene! (e ride sguaiatamente mentre pulisce un porcino)"
+      },
+      "commenti": [
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Siii, lo sapevo! Il cloud è solo una copertura per le scie chimiche digitali che leggono i pensieri mentre dormiamo. Tutto collegato, glugluglu, ci stanno tracciando pure quando mangiamo gli arrosticini!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la prova definitiva dell'inefficienza etica occidentale. In Giappone abbiamo senso della privacy e disciplina, qui invece vi fate profilare come bestie al pascolo per pigrizia tecnologica. Che vergogna."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo state a dì? A me di sti algoritmi non me ne frega niente, io sto in mare a pescà! Se provano a tracciamme, je meno le mani col remo, chiaro o no?"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Questa sorveglianza costante è una violenza bella e buona alla nostra libertà. Non permetterò a nessun software di profilare le mie passioni o il mio tifo. Chiunque provi a invadere la mia autonomia se la vedrà con me."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Borgomarino affoga tra i cantieri e le promesse",
+      "articolo": "Oh, ma ci avete fatto caso a come stanno riducendo Pescara? Io sto qui, sulla banchina, con le reti da riparare e la voglia di lavorare che scappa via come un cefalo in piena, e mi tocca vedere solo transenne. La città è un cantiere a cielo aperto, un labirinto che manco il Minotauro. Il traffico intasa tutto, la gente corre come pazza e noi pescatori, che siamo l'anima vera di questo posto, veniamo trattati come fastidi. Hanno promesso riqualificazioni, hanno promesso rilancio, ma qui l’unica cosa che cresce è la polvere. Il mare, quello sì, è l'unica cosa che non tradisce, anche se pure lì ci stanno mettendo le mani con regole che non capisce nessuno. Pescara è stanca, la gente è nervosa e io, che ho visto passare decine di amministrazioni, vi dico che è sempre la stessa solfa: chiacchiere e distintivo, mentre il porto langue e i pescaresi veri guardano l'orizzonte aspettando tempi migliori.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Ma chi vogliono prendere in giro? Questi parlano, parlano, ma intanto le tasche se le riempiono loro. Io non mi fido di nessuno, manco di chi mi offre il caffè al bar. Qui c'è sotto qualcosa che non ci dicono, vedrete."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Cetteo, hai ragione da vendere! Pescara è diventata un inferno di cemento e burocrazia. Non se ne può più di vedere la nostra città ridotta così, tra cantieri infiniti e promesse da marinaio. Siamo stufi, e se pensano di calpestare noi pescaresi, hanno fatto male i conti!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la dimostrazione dell'inefficienza italiana. Pianificazione urbana inesistente, caos totale. In Giappone, un cantiere viene gestito con precisione chirurgica e rispetto per il cittadino. Qui invece regna solo l'improvvisazione e la polvere."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, Pescara tutta rotta, glugluglu, tutta rotta! Le transenne ballano la samba, ballano la samba! Si inventano i buchi per farci cadere dentro, per farci cadere dentro!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Sempre a lamentarsi, ma chi lavora davvero sa che le chiacchiere non spostano un mattone. La città è un disastro, certo, ma finché la gente pensa solo a polemizzare invece di rimboccarsi le maniche, non cambierà mai nulla. Amareggiato, come sempre."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Fiume Pescara, 'na tregua che non convince nessuno",
+      "articolo": "Oh, ma che stamo a scherzà? Il fiume Pescara, quel rigagnolo che ogni volta che piove fa tremà tutta la città, pare che mo' s'è dato una calmata. Le acque si sono abbassate, dicono i tecnici, e la situazione è in lieve miglioramento. Ma io dico: ma che stiamo a pettinà le bambole? Ogni volta è la stessa storia, piove due gocce e noi stamo qui col fiato sospeso a guardà se il fango si prende pure le panchine. Io stavo a sistemà le reti a Borgomarino, col pensiero fisso a quel disastro che poteva succedere, perché qui non si dorme mai tranquilli. Il Pescara è un malato cronico, e 'sti miglioramenti sono come 'na toppa su un vestito vecchio. Speriamo che il tempo regga, perché di farmi la nuotata nel fango non c'ho proprio voglia, preferirei starmene a guardà il Delfino allo stadio, che almeno lì le emozioni sono diverse e non c'è bisogno dell'idrometro.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Si prende atto della nota tecnica relativa al deflusso idrico del bacino fluviale. Si conferma il monitoraggio costante da parte degli enti preposti in attesa di ulteriori aggiornamenti procedurali."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Cetteo ha ragione da vendere, siamo stufi di questa gestione approssimativa! Ogni volta è un'ansia costante, mentre noi vorremmo solo pensare al nostro Pescara e goderci la città senza il rischio di vederla spazzata via. Basta chiacchiere, servono fatti concreti, non le solite prese in giro!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Si si siiiii, il fiume fa glugluglu, il fiume fa glugluglu! La toppa è corta, la toppa è corta! Si si siiiii!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "È la solita storia italiana: si gestisce l'emergenza invece di prevenire il disastro con infrastrutture serie. In Giappone una situazione del genere sarebbe stata risolta con ingegneria di precisione anni fa. Qui si preferisce guardare il fango e sperare nel miracolo."
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Sempre la stessa solfa. Si parla, si discute, ma alla fine chi lavora e chi vive il territorio si ritrova sempre con i piedi nel fango. La disillusione è l'unica cosa che cresce più in fretta di questo fiume maledetto."
         }
       ],
       "categoria": "Politica",
