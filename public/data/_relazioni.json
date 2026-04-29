@@ -1,5 +1,5 @@
 {
-  "_runCount": 3,
+  "_runCount": 4,
   "Ernesto→Giovanni": {
     "score": -0.026,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "29/04/2026"
   },
@@ -211,8 +211,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -0.04,
-    "label": "neutro",
+    "score": 0.46,
+    "label": "simpatico",
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Glusi→Cetteo": {
@@ -306,8 +306,8 @@
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Cetteo→Lilli": {
-    "score": 0.437,
-    "label": "simpatico",
+    "score": 0.737,
+    "label": "amico",
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Lilli→Hiroki": {
@@ -346,12 +346,12 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": 0.237,
+    "score": -0.063,
     "label": "neutro",
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Abbukk→Hiroki": {
-    "score": -0.9,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "29/04/2026"
   },
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.75,
+    "score": -0.95,
     "label": "ostile",
     "ultimo_aggiornamento": "29/04/2026"
   },
@@ -651,13 +651,13 @@
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Abbukk→Cetteo": {
-    "score": -0.55,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "23/04/2026"
+    "score": -0.65,
+    "label": "ostile",
+    "ultimo_aggiornamento": "29/04/2026"
   },
   "Wolf→Hiroki": {
-    "score": -0.119,
-    "label": "neutro",
+    "score": -0.319,
+    "label": "diffidente",
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Glusi→Wolf": {
@@ -716,14 +716,14 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.094,
-    "label": "neutro",
+    "score": -0.294,
+    "label": "diffidente",
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Glusi→Pescatori": {
-    "score": 0.053,
+    "score": 0.253,
     "label": "neutro",
-    "ultimo_aggiornamento": "17/04/2026"
+    "ultimo_aggiornamento": "29/04/2026"
   },
   "Autore Articolo→Juizinho": {
     "score": 0.106,
@@ -821,8 +821,8 @@
     "ultimo_aggiornamento": "24/04/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.75,
-    "label": "amico",
+    "score": 0.55,
+    "label": "simpatico",
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Cetteo→Squadra": {
@@ -1411,9 +1411,9 @@
     "ultimo_aggiornamento": "26/04/2026"
   },
   "Hiroki→Amministrazione": {
-    "score": -0.292,
+    "score": -0.392,
     "label": "diffidente",
-    "ultimo_aggiornamento": "22/04/2026"
+    "ultimo_aggiornamento": "29/04/2026"
   },
   "Hiroki→Governo Giapponese": {
     "score": -0.219,
@@ -1476,7 +1476,7 @@
     "ultimo_aggiornamento": "26/04/2026"
   },
   "Lucap→Hiroki": {
-    "score": 0.027,
+    "score": 0.127,
     "label": "neutro",
     "ultimo_aggiornamento": "29/04/2026"
   },
@@ -1486,14 +1486,14 @@
     "ultimo_aggiornamento": "24/04/2026"
   },
   "Wolf→Amministrazione": {
-    "score": -0.219,
+    "score": -0.519,
     "label": "diffidente",
-    "ultimo_aggiornamento": "22/04/2026"
+    "ultimo_aggiornamento": "29/04/2026"
   },
   "Cetteo→Amministrazione": {
-    "score": -0.219,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "22/04/2026"
+    "score": -0.819,
+    "label": "ostile",
+    "ultimo_aggiornamento": "29/04/2026"
   },
   "Glusi→Amministrazione": {
     "score": -0.073,
@@ -1766,9 +1766,9 @@
     "ultimo_aggiornamento": "26/04/2026"
   },
   "Lucap→Wolf": {
-    "score": 0.09,
+    "score": 0.29,
     "label": "neutro",
-    "ultimo_aggiornamento": "26/04/2026"
+    "ultimo_aggiornamento": "29/04/2026"
   },
   "Hiroki→Politici": {
     "score": -0.27,
@@ -1947,6 +1947,21 @@
   },
   "Lilli→Governo": {
     "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "29/04/2026"
+  },
+  "Hiroki→Cittadinanza": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "29/04/2026"
+  },
+  "Glusi→Città": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "29/04/2026"
+  },
+  "Lilli→Amministrazione": {
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "29/04/2026"
   }
