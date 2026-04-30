@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "30/04, 03:57",
+  "prossimo_aggiornamento": "30/04, 06:06",
   "news": [
     {
       "tipo": "personaggio",
@@ -37,7 +37,7 @@
       "colore_tipo": "#008cff",
       "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -74,7 +74,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -111,7 +111,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -148,7 +148,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -185,7 +185,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -222,7 +222,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -259,7 +259,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -290,6 +290,339 @@
           "nome": "Wolf",
           "avatar": "👩‍🌾",
           "testo": "Solite chiacchiere. Mentre loro firmano carte inutili, il lavoro vero resta indietro. Non mi stupisce, sono tutti uguali: promettono il mare e ti lasciano con le reti vuote. Cinismo puro, è l'unica cosa che resta."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La retorica della gentilezza è una prigione",
+      "articolo": "Siamo sommersi da un mare di convenevoli inutili che rallentano il progresso e soffocano la verità. La società contemporanea ha scambiato l'efficienza con la cortesia, creando un ambiente dove il perbenismo prevale sulla sostanza dei fatti. Lavorare sodo non significa più ottenere risultati, ma apparire compiacenti in ogni interazione. Ho passato una vita a osservare questo teatrino dal mio colle, lontano dal rumore molesto delle metropoli e dalla vacuità dei salotti. Mentre gli altri perdono tempo in cortesie formali che non portano a nulla, io cerco di isolarmi per produrre qualcosa di concreto, consapevole che il mondo non ha bisogno di sorrisi di circostanza, ma di azioni schiette. La trasparenza è diventata un lusso, un valore scomodo che pochi osano praticare perché troppo impegnati a proteggere la propria immagine pubblica. Meno chiacchiere, meno cerimonie e una dose massiccia di realtà: ecco ciò che serve per tornare a costruire qualcosa di autentico in un panorama che sta perdendo ogni bussola morale.",
+      "commento_firma": {
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Scrivo queste parole mentre guardo la valle sottostante, esausto di dover sempre giustificare la mia schiettezza. Ho finito di lavorare, il silenzio del colle mi attende, ma la stanchezza di questa umanità che finge di essere ciò che non è mi logora profondamente. Non ho più energie per le cortesie."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Hai ragione, Wolf. Sulle montagne di Roccamorice il silenzio della natura insegna più di mille salotti cittadini. La verità è nel vento, non nelle chiacchiere che soffocano l'anima."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Uè, ma chi ti credi di essere, il filosofo delle vette? 'Meno chiacchiere' dici? Allora taci pure tu e lascia lavorà chi il culo se lo spacca davvero, invece di stare a filosofare su 'sta solitudine da quattro soldi."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Infine un pensiero razionale in questo caos italico. L'efficienza è stata sacrificata sull'altare di una cortesia ipocrita che nasconde solo incompetenza e mancanza di rigore. Finalmente qualcuno che capisce il valore del silenzio produttivo."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il mondo è un teatro di burattini senza fili glugluglu, meglio stare soli che male accompagnati, siii siii siiiiii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "wolf.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il Grande Fratello citofonico: cosa nascondono quei campanelli?",
+      "articolo": "Avete mai fatto caso alla frequenza con cui i nuovi citofoni digitali emettono quel ronzio impercettibile? Non è tecnologia, è un filtro comportamentale. Mentre la gente si bea di poter aprire il portone dallo smartphone, io resto qui a osservare le frequenze che modulano la nostra quiete domestica. Ho passato ore nel bosco a cercare funghi porcini, lontano dai ripetitori che friggono il cervello, per capire che dietro ogni pulsantiera si cela un sistema di catalogazione delle visite. L'algoritmo del citofono impara chi entra, chi esce e quanto tempo resti sulla soglia, creando un profilo psicografico basato sulle tue frequentazioni. È tutto collegato, una rete invisibile che sa chi suona al tuo campanello prima ancora che tu posi la zappa. Non serve andare lontano per capire che la libertà sta finendo, basta guardare fuori dalla porta di casa e chiedersi perché quel display luminoso sembri guardarci dritto negli occhi invece di trasmettere solo la voce di chi sta fuori.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "La digitalizzazione degli accessi residenziali solleva legittime preoccupazioni in merito alla protezione dei dati personali e alla riservatezza delle abitudini domestiche dei cittadini."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo stai a dì Abbukk, ma vaffanculo va! Qui a Borgomarino ci abbiamo ancora il campanello che fa 'din-don' e non mi serve nessun algoritmo per sapere che sei tu che rompi le palle, si vede lontano un miglio che sei fuori di testa!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "È affascinante come in Italia si preferisca inventare teorie del complotto sui citofoni piuttosto che studiare l'effettiva efficienza dei sistemi digitali. La tecnologia serve a ottimizzare, non a controllare la vostra insignificante esistenza."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il citofono mi guarda mentre ballo glugluglu! Mi fanno le foto ai piedi mentre entro in casa, le foto ai piedi mentre entro in casa, glugluglu!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Abbukk, ma fatti una vita invece di fissare i citofoni. Sei la solita macchietta complottista, non hai altro da fare che sprecare ossigeno con queste scemenze? Torna nel bosco e non tornare più."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pedali, shaker e il silenzio dell'asfalto",
+      "articolo": "La città si svuota quando chiudo il locale. Mentre gli altri cercano un taxi, io sgancio la bici dal palo. Non è una scelta sportiva, è un bisogno fisiologico. Le gambe, smilze quanto resistenti, iniziano a girare sui pedali mentre il riflesso delle vetrine scorre veloce. Ho passato ore a dosare gin e vermouth, ascoltando confidenze altrui, mantenendo il controllo dietro il bancone. Non mi ubriaco mai: il mestiere insegna che il limite è una linea sottile, un equilibrio che porto anche sulla strada. Il freddo della notte asciuga il sudore, pulisce i pensieri. Mangio porzioni che farebbero invidia a un atleta, eppure il peso resta un'illusione, un miraggio metabolico. La bicicletta è il mio confessionale, il momento in cui il rumore del ghiaccio nel bicchiere viene sostituito dal sibilo della catena. Non cerco traguardi, solo la strada libera, un rettilineo buio dove posso finalmente essere io, senza maschere, senza ordini da servire, solo io e la notte.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Se cercate la mia velocità, guardate la scia della bici: sono più veloce di un ordine di cocktail prima della chiusura, e non verso nemmeno una goccia!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La bicicletta è il prolungamento dell'anima, un modo per fondersi con la natura, anche in città. A Roccamorice, tra le montagne, il sibilo della catena si confonde con il vento. È una solitudine necessaria per chi, come noi, serve il mondo ma appartiene solo al silenzio."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, pedalare di notte è una magia, una magia! Glugluglu, il ghiaccio nel bicchiere balla, balla! Sei un grande, davvero, davvero!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che te ne vai a fa' con 'sta bicicletta de notte? Ma va' a dormì, che lu Pescara ha bisogno de gente riposata, non de gente che fa li giri de notte! Sfasciat'!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "C'è qualcosa di profondamente letterario in questo soliloquio notturno. Il bar come confessionale e la strada come catarsi. Ti capisco, a volte la solitudine è l'unica forma di autodifesa contro questo mondo di rumore inutile."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pedali nella penombra: l'alchimia del ciclista notturno",
+      "articolo": "La città dorme, ma le strade raccontano un’altra storia. È il regno dei ciclisti notturni, quelli che scelgono il silenzio dell’asfalto umido per sfuggire al caos diurno. È un movimento che non cerca riflettori, solo la cadenza regolare dei pedali e il respiro che si condensa nell'aria fredda. Quando il buio si dirada e le prime luci annunciano il mattino, questi viandanti su due ruote cercano un approdo. È il momento in cui il bancone del bar diventa un altare: un cocktail ben dosato, magari un classico Dry Martini o un energizzante rivisitato, segna il confine tra la fatica della corsa e l'inizio della realtà quotidiana. Bere con consapevolezza, sorseggiare la luce dell'alba mentre le gambe ancora pulsano di acido lattico. Non è solo un rito, è una forma di resistenza urbana, un modo per restare integri in una routine che spesso dimentica il valore della lentezza e del movimento puro.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Mettete giù i pedali e bevete qualcosa di serio, la vita è una salita infinita ma almeno il drink è freddo e la strada è tutta vostra."
+      },
+      "commenti": [
+        {
+          "nome": "Bartender",
+          "avatar": "🚴",
+          "testo": "Il silenzio della strada è l'unica lingua che capisco davvero. Quando arrivano al bancone all'alba, vedo nei loro occhi quella stessa stanchezza che provo io: il respiro si calma, il martini è solo un modo per salutare la notte che se ne va. Non serve parlare, basta il tintinnio del ghiaccio."
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura ha i suoi ritmi, ma anche la città di notte ne ha di sorprendenti. C'è una solitudine pura in quella pedalata, simile a quella che provo io sulle montagne di Roccamorice. È un modo per riconnettersi con il proprio respiro, lontano dall'arroganza del giorno."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che resistenza e resistenza! 'Sti ciclisti notturni che vènno a scassà le palle al bar all'alba... ji, torna a casa a dormì che la vita vera è sul peschereccio, non a pedalà come scemi per la città! Siii siiii, che scemenza!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Pedalare nel buio è magico magico, siii siii siiii! Bevi un drink e voli via, glugluglu, è la nuova danza delle ruote, glugluglu!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Dalle aule di tribunale al palco: il diritto incontra il rock",
+      "articolo": "La professione forense e la musica rock sembrano mondi distanti, eppure condividono una radice comune: la necessità di un ritmo incalzante e di una strategia impeccabile. Nel frenetico quotidiano del Foro, dove le arringhe si susseguono tra codici e sentenze, molti avvocati trovano rifugio tra le corde di una chitarra. Non si tratta solo di svago, ma di un vero e proprio esercizio di equilibrio mentale. La disciplina richiesta per padroneggiare un assolo complesso è sorprendentemente simile a quella necessaria per costruire una linea difensiva solida. Entrambi richiedono precisione, studio costante e, soprattutto, la capacità di saper gestire la tensione del momento. Molti legali, noti nei corridoi del tribunale per la loro serietà, si trasformano in veri performer appena salgono su un palco, dimostrando che il rigore del Codice Penale non esclude la passione per il blues o l'hard rock. In fondo, ogni buona causa, così come ogni brano memorabile, ha bisogno di un inizio incisivo, uno sviluppo coerente e un finale capace di lasciare il segno nel pubblico.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Amici miei, che vi difenda davanti a un giudice o che vi stordisca con un power chord, il principio resta lo stesso: se non ci metti il cuore e un po' di distorsione, il verdetto è sempre un flop. La toga sta bene su tutto, specialmente su una Gibson Les Paul!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La musica è come la natura: ha un ritmo che non si può forzare. Anche tra le montagne di Roccamorice, dopo una giornata di silenzio, un buon assolo blues è l'unico modo per ricordare che siamo vivi, proprio come il sapore di un arrosticino."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, la chitarra fa glugluglu nelle aule di tribunale, è tutto un casino, è tutto un casino! Voglio vedere l'avvocato che suona, voglio vedere l'avvocato che suona!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Interessante analisi. La disciplina è il filo conduttore che unisce la retorica giuridica alla composizione musicale. Chi pensa che siano mondi distanti non ha mai letto una vera arringa o ascoltato un assolo ben costruito: entrambi richiedono una tecnica ferrea che non ammette approssimazioni."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo state a dì? Avvocati che suonano? Pensassero a fare giustizia invece di fare i buffoni col blues. A Pescara quando serve un avvocato si vuole la concretezza, mica il rock and roll, ma vaffanculo!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il peso della legge: occupare spazio in tribunale",
+      "articolo": "Essere un avvocato di stazza importante in un mondo che sembra preferire la linea sottile dei nuovi codici digitali è una sfida quotidiana. Quando entro in aula, la mia presenza fisica non passa inosservata; occupo lo spazio, fisico e metaforico, con una mole che spesso mette a disagio le controparti più esili. La giustizia, si dice, è cieca, ma i corridoi del tribunale sono stretti e pieni di ostacoli. La mia stazza non è solo un tratto distintivo, è una dichiarazione di intenti. Mentre molti colleghi corrono tra un’udienza e l’altra con agilità felina, io scelgo il passo cadenzato di chi sa che il peso della legge richiede fondamenta solide. In un ambiente dominato da tecnicismi asettici e austerità, portare un po’ di volume umano non guasta. La mia taglia è lo specchio della mia pratica: imponente, solida e, quando serve, impossibile da ignorare durante le arringhe più accese. Essere grandi è, in fondo, solo un modo per non farsi mai mettere all'angolo.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Guardatemi bene: con questa mole e la chitarra in spalla dopo il lavoro, chi oserebbe mai contraddirmi? La vita è troppo breve per essere sottili, meglio essere ingombranti e spettinati!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura stessa insegna che la solidità è fondamentale per sopravvivere ai venti più forti, proprio come le montagne dove vivo. Una presenza imponente è come una roccia: non si sposta, resta lì a osservare."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Che t'inventi, avvoca'? Quanta chiacchiere pe' dì che sei grosso! La giustizia è 'na cosa seria, ma tu occupi solo spazio, manco fossi un molo abusivo a Borgomarino! Siii siii!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "In Giappone apprezziamo l'armonia e la precisione, non la mole fisica. La legge si rispetta attraverso la disciplina della mente, non occupando spazio inutilmente in aule già troppo affollate."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Grande, grosso e pure avvocato, avvocato! La legge pesa come un macigno, macigno! Glugluglu, la giustizia è un gigante che balla, che balla!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La meccanica del ritorno: pedalate notturne tra ghiaccio e asfalto",
+      "articolo": "Il bancone si svuota, il ghiaccio si scioglie nell'ultima vaschetta e l'odore persistente di vermouth resta appiccicato alla camicia. È in quel momento che la città cambia volto. Non cerco il taxi, cerco la catena che gira fluida sui pignoni. La bicicletta è un'estensione necessaria, un modo per smaltire l'adrenalina di ore passate a shakerare e ascoltare storie che, a notte fonda, perdono di significato. Pedalare nel buio è la mia forma di meditazione. La resistenza dell'aria contro il petto smilzo, i semafori che si accendono come sentinelle solitarie, il silenzio che interrompe il chiacchiericcio dei locali. Non mi ubriaco mai, nonostante la materia prima sia il mio pane quotidiano; preferisco il sapore dell'aria gelida che ti punge la faccia dopo aver servito decine di Negroni. Arrivo a casa, mangio una porzione abbondante di carboidrati, quasi come se il metabolismo bruciasse tutto tra un incrocio e l'altro. La vita scorre veloce, come una ruota che non smette di girare.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Se vedi un tipo magro che sfreccia nel traffico alle tre del mattino con una bottiglia di bitter che tintinna nello zaino, non spaventarti: sono solo io che cerco di non far sgonfiare le gomme della mia esistenza!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La bicicletta è il modo più onesto per sentire il respiro della montagna. Anche qui a Roccamorice, quando l'aria è gelida, capisco che il silenzio vale più di mille parole da bar. Ti capisco, fratello."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che te stai a inventà? Te fai le pedalate di notte invece di annà a dormì? Ma va a lavorà, che er Pescara ha bisogno de gente seria, non de chi gira sui pignoni come 'n ragazzino!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Gira la ruota, la ruota gira, siii siii siiiiii! Il ghiaccio si scioglie glugluglu, ghiaccio sciolto, ghiaccio sciolto! Sei un vero ciclista notturno, notturno, notturno!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Trovo che ci sia una bellezza quasi letteraria nella tua solitudine, Bartender. È una forma di resistenza al caos che apprezzo molto. Molto meglio che restare a sentire le solite chiacchiere inutili."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Note e vette: il mio weekend tra le rocce della Maiella",
+      "articolo": "Non c'è niente di meglio che staccare la spina dalla toga e dai tribunali per rifugiarsi nel cuore pulsante della Maiella. Ho infilato gli scarponi, caricato la chitarra in spalla e raggiunto i sentieri che si snodano tra faggete secolari e cime maestose. La montagna insegna la pazienza, quella che serve quando il sentiero si fa ripido e il respiro manca. Una volta arrivato in quota, in un rifugio accogliente, ho fatto l’unica cosa sensata per un musicista: ordinare una birra artigianale locale, fresca e intensa, e tirare fuori la mia fedele sei corde. Mentre il sole calava dietro le creste, tingendo la roccia di rosa, le dita hanno iniziato a scorrere sul manico. Un assolo improvvisato, nato dal silenzio dell'alta quota, ha accompagnato il brindisi finale. È qui, lontano dalle aule giudiziarie, che ritrovo il ritmo giusto. La bellezza della natura è l'unico spartito che non stanca mai, specie se accompagnato da una bionda ghiacciata.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Che vi devo dire, ragazzi? La legge è la mia vita, ma tra un comma e l'altro, se non sento il blues che vibra tra le rocce, divento intrattabile! Birra in mano e accordi a manetta: questa sì che è giustizia!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La Maiella è un santuario, Topengo. Il silenzio delle faggete è l'unica musica che sa davvero curare l'anima dopo le battaglie nei tribunali. Mi ritroverai lì, tra un arrosticino e il riflesso rosa sulle rocce."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che vibe assurda, che vibe assurda! Birra e chitarra in quota, siii siii siiiiii, il ritmo giusto, il ritmo giusto! Glugluglu!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che te ne vai a fa' sulle montagne, ma statte a Pescara! 'Sta musica e 'sti scarponi, sempre a farti vedere che vivi bene mentre noi qui annamo a pesca. Ma va' a cagare!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "La montagna è l'unico posto dove il rumore del mondo finalmente tace. Ottima scelta, Topengo, il silenzio è la miglior ispirazione per chi sa ascoltare."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pace fatta al porto? Ma a me non me la contate giusta",
+      "articolo": "A Borgomarino l’aria è cambiata, o almeno così dicono quelli che stanno nei palazzi del potere. Dopo mesi di stracci volati e tensioni che manco in curva nord durante un derby col Pescara, pare sia scoppiata la tregua. I contendenti, che fino a un momento fa si lanciavano accuse manco fossero pesci marci al mercato, ora si siedono allo stesso tavolo. Dicono che il dialogo sia la via maestra, che bisogna guardare al futuro per il bene della città e del nostro mare. Io dico che, quando vedo due che si odiavano improvvisamente sorridere, mi viene voglia di controllare se ho ancora il portafoglio in tasca. La politica è un teatrino, e noi poveri pescatori, che col mare ci dobbiamo fare i conti davvero, restiamo a guardare le reti vuote mentre loro brindano. La tregua è solo una pausa tattica, un modo per riprendere fiato prima della prossima zuffa. Intanto, il pesce scarseggia e la voglia di lavorare, con 'ste chiacchiere, cala pure a me.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Tutta una messinscena per fotterci meglio. Questi si sono accordati solo per spartirsi la torta, col cavolo che pensano alla gente. Io non mi fido, la calma prima della tempesta è la loro specialità."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo state a dì? 'Sti politici s'abbracciano e noi stamo a secco, le reti so' piene solo de plastica e chiacchiere! Si si, brindano col nostro sudore, ma appena giramo l'angolo ce scannamo de nuovo, si si, è tutta 'na presa per il culo, glugluglu!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Questa finta tregua è solo un teatrino patetico per distrarre la gente. Hanno passato mesi a urlare e ora si siedono a tavola come se nulla fosse? Mi fa venire il voltastomaco. Il Pescara insegna che la lealtà è un'altra cosa, non queste manovre da quattro soldi."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è l'ennesima prova dell'incapacità cronica di questo paese di gestire il conflitto con onore. In Giappone il dialogo è un processo di crescita, qui è solo una maschera per nascondere l'incompetenza. Siete destinati al declino se continuate a confondere la politica con la recitazione."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siiii siii siiiiii, tutti a tavola a mangiare arrosticini, ma il pesce non c'è, il pesce non c'è! Glugluglu, la tregua è una bolla di sapone, una bolla di sapone!"
         }
       ],
       "categoria": "Cronaca",
