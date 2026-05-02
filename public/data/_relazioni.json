@@ -1,5 +1,5 @@
 {
-  "_runCount": 8,
+  "_runCount": 9,
   "Ernesto→Giovanni": {
     "score": -0.023,
     "label": "neutro",
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Lars→Hiroki": {
-    "score": -0.195,
+    "score": -0.095,
     "label": "neutro",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -113,7 +113,7 @@
   "Lars→Autore": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "02/05/2026"
   },
   "Cetteo→Autore": {
     "score": -1,
@@ -121,7 +121,7 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.5,
+    "score": -0.6,
     "label": "diffidente",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -216,9 +216,9 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "02/05/2026"
   },
   "Lilli→Juizinho": {
     "score": 0.252,
@@ -236,7 +236,7 @@
     "ultimo_aggiornamento": "28/04/2026"
   },
   "Lilli→Lars": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -296,12 +296,12 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Lars→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Hiroki→Lilli": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "30/04/2026"
   },
   "Wolf→Hiroki": {
-    "score": 0.263,
+    "score": 0.163,
     "label": "neutro",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -716,8 +716,8 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": 0.7,
-    "label": "amico",
+    "score": 0.4,
+    "label": "simpatico",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Glusi→Pescatori": {
@@ -993,7 +993,7 @@
   "Wolf→Lilli": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "02/05/2026"
   },
   "Autore→Lilli": {
     "score": -0.45,
@@ -1031,9 +1031,9 @@
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Lilli→Lamatte": {
-    "score": -0.591,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "29/04/2026"
+    "score": -0.891,
+    "label": "ostile",
+    "ultimo_aggiornamento": "02/05/2026"
   },
   "Cetteo→Amministrazione Pescara": {
     "score": -0.159,
@@ -1136,19 +1136,19 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Lamatte": {
-    "score": -0.751,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "29/04/2026"
+    "ultimo_aggiornamento": "02/05/2026"
   },
   "Hiroki→Lamatte": {
-    "score": -0.641,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "29/04/2026"
+    "ultimo_aggiornamento": "02/05/2026"
   },
   "Glusi→Lamatte": {
-    "score": 0.147,
-    "label": "neutro",
-    "ultimo_aggiornamento": "27/04/2026"
+    "score": 0.347,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "02/05/2026"
   },
   "Topengo→Hiroki": {
     "score": -0.199,
@@ -2161,7 +2161,7 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Lilli→Chanel Totti": {
-    "score": -0.2,
+    "score": 0,
     "label": "neutro",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -2186,13 +2186,13 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Cetteo→Chanel Totti": {
-    "score": -0.2,
-    "label": "neutro",
+    "score": -0.4,
+    "label": "diffidente",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Glusi→Chanel Totti": {
-    "score": -0.2,
-    "label": "neutro",
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Lilli→Pechino Express": {
@@ -2201,7 +2201,12 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Wolf→Chanel Totti": {
-    "score": -0.2,
+    "score": -0.5,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "02/05/2026"
+  },
+  "Wolf→Lamatte": {
+    "score": 0,
     "label": "neutro",
     "ultimo_aggiornamento": "02/05/2026"
   }
