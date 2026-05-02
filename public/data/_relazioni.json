@@ -1,5 +1,5 @@
 {
-  "_runCount": 9,
+  "_runCount": 10,
   "Ernesto→Giovanni": {
     "score": -0.023,
     "label": "neutro",
@@ -36,12 +36,12 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.513,
-    "label": "diffidente",
+    "score": -0.613,
+    "label": "ostile",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Lars→Hiroki": {
-    "score": -0.095,
+    "score": 0.105,
     "label": "neutro",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -121,7 +121,7 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.6,
+    "score": -0.3,
     "label": "diffidente",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.73,
+    "score": 0.83,
     "label": "amico",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -301,12 +301,12 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.8,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Cetteo→Lilli": {
-    "score": 1,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -366,7 +366,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Juizinho→Lilli": {
-    "score": 0.35,
+    "score": 0.55,
     "label": "simpatico",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.755,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "30/04/2026"
   },
   "Wolf→Hiroki": {
-    "score": 0.163,
+    "score": 0.063,
     "label": "neutro",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -716,8 +716,8 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": 0.4,
-    "label": "simpatico",
+    "score": 0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Glusi→Pescatori": {
@@ -823,7 +823,7 @@
   "Hiroki→Wolf": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "02/05/2026"
   },
   "Cetteo→Squadra": {
     "score": -1,
@@ -1061,8 +1061,8 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lilli→Wolf": {
-    "score": 0.785,
-    "label": "amico",
+    "score": 0.585,
+    "label": "simpatico",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Hiroki→Contesto Locale": {
@@ -1151,8 +1151,8 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Topengo→Hiroki": {
-    "score": -0.199,
-    "label": "neutro",
+    "score": -0.599,
+    "label": "diffidente",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Glusi→Topengo": {
@@ -1578,7 +1578,7 @@
   "Topengo→Glusi": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "02/05/2026"
   },
   "Hiroki→Amministrazione comunale": {
     "score": -0.131,
@@ -1601,8 +1601,8 @@
     "ultimo_aggiornamento": "23/04/2026"
   },
   "Topengo→Lars": {
-    "score": 0.623,
-    "label": "simpatico",
+    "score": 0.823,
+    "label": "amico",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Cetteo→Fratelli d'Italia": {
@@ -1686,7 +1686,7 @@
     "ultimo_aggiornamento": "01/05/2026"
   },
   "Topengo→Lilli": {
-    "score": 0.556,
+    "score": 0.656,
     "label": "simpatico",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -2161,8 +2161,8 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Lilli→Chanel Totti": {
-    "score": 0,
-    "label": "neutro",
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Glusi→Televisione": {
@@ -2191,7 +2191,7 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Glusi→Chanel Totti": {
-    "score": -0.3,
+    "score": -0.4,
     "label": "diffidente",
     "ultimo_aggiornamento": "02/05/2026"
   },
@@ -2201,12 +2201,17 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Wolf→Chanel Totti": {
-    "score": -0.5,
-    "label": "diffidente",
+    "score": -0.8,
+    "label": "ostile",
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Wolf→Lamatte": {
     "score": 0,
+    "label": "neutro",
+    "ultimo_aggiornamento": "02/05/2026"
+  },
+  "Hiroki→Chanel Totti": {
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "02/05/2026"
   }
