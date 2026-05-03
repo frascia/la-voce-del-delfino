@@ -1,5 +1,5 @@
 {
-  "_runCount": 1,
+  "_runCount": 2,
   "Ernesto→Giovanni": {
     "score": -0.021,
     "label": "neutro",
@@ -81,8 +81,8 @@
     "ultimo_aggiornamento": "02/05/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.51,
-    "label": "diffidente",
+    "score": -0.81,
+    "label": "ostile",
     "ultimo_aggiornamento": "03/05/2026"
   },
   "Lars→Juizinho": {
@@ -111,9 +111,9 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Autore": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
-    "ultimo_aggiornamento": "02/05/2026"
+    "ultimo_aggiornamento": "03/05/2026"
   },
   "Cetteo→Autore": {
     "score": -1,
@@ -121,7 +121,7 @@
     "ultimo_aggiornamento": "03/05/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.74,
+    "score": -0.94,
     "label": "ostile",
     "ultimo_aggiornamento": "03/05/2026"
   },
@@ -646,7 +646,7 @@
     "ultimo_aggiornamento": "30/04/2026"
   },
   "Lilli→Autore": {
-    "score": -0.417,
+    "score": -0.517,
     "label": "diffidente",
     "ultimo_aggiornamento": "03/05/2026"
   },
@@ -656,9 +656,9 @@
     "ultimo_aggiornamento": "30/04/2026"
   },
   "Wolf→Hiroki": {
-    "score": 0.057,
+    "score": 0.157,
     "label": "neutro",
-    "ultimo_aggiornamento": "02/05/2026"
+    "ultimo_aggiornamento": "03/05/2026"
   },
   "Glusi→Wolf": {
     "score": -0.008,
@@ -886,7 +886,7 @@
     "ultimo_aggiornamento": "03/05/2026"
   },
   "Cetteo→Squadra Pescara": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "03/05/2026"
   },
@@ -991,7 +991,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -0.92,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "03/05/2026"
   },
@@ -1753,17 +1753,17 @@
   "Glusi→Enzino": {
     "score": 0.311,
     "label": "simpatico",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "03/05/2026"
   },
   "Hiroki→Enzino": {
-    "score": -0.114,
+    "score": -0.014,
     "label": "neutro",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "03/05/2026"
   },
   "Cetteo→Enzino": {
-    "score": -0.336,
+    "score": -0.236,
     "label": "diffidente",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "03/05/2026"
   },
   "Lucap→Wolf": {
     "score": 0.145,
@@ -2101,9 +2101,9 @@
     "ultimo_aggiornamento": "01/05/2026"
   },
   "Lars→Enzino": {
-    "score": 0.45,
+    "score": 0.65,
     "label": "simpatico",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "03/05/2026"
   },
   "Glusi→Tutti": {
     "score": -0.09,
@@ -2223,6 +2223,11 @@
   "Hiroki→Ambiente Calcistico Italiano": {
     "score": -0.3,
     "label": "diffidente",
+    "ultimo_aggiornamento": "03/05/2026"
+  },
+  "Lars→Tifosi Pescara": {
+    "score": 0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "03/05/2026"
   }
 }
