@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.021,
     "label": "neutro",
@@ -36,12 +36,12 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.692,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "04/05/2026"
   },
@@ -51,8 +51,8 @@
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Lars→Hiroki": {
-    "score": -0.166,
-    "label": "neutro",
+    "score": -0.266,
+    "label": "diffidente",
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Hiroki→Juizinho": {
@@ -76,12 +76,12 @@
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.6,
+    "score": -0.5,
     "label": "diffidente",
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "04/05/2026"
   },
@@ -101,7 +101,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Questa comunità": {
-    "score": -0.704,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "04/05/2026"
   },
@@ -121,8 +121,8 @@
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.4,
+    "label": "diffidente",
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Lars→Questa terra": {
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.347,
+    "score": 0.397,
     "label": "simpatico",
     "ultimo_aggiornamento": "04/05/2026"
   },
@@ -216,13 +216,13 @@
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Lilli→Juizinho": {
-    "score": -0.153,
-    "label": "neutro",
+    "score": -0.353,
+    "label": "diffidente",
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Enzo→Juizinho": {
@@ -231,9 +231,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Juizinho": {
-    "score": 0.81,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "28/04/2026"
+    "ultimo_aggiornamento": "04/05/2026"
   },
   "Lilli→Lars": {
     "score": 1,
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.7,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "04/05/2026"
   },
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "04/05/2026"
   },
@@ -766,9 +766,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Pescara": {
-    "score": -0.65,
+    "score": -0.95,
     "label": "ostile",
-    "ultimo_aggiornamento": "03/05/2026"
+    "ultimo_aggiornamento": "04/05/2026"
   },
   "Wolf→Pescara": {
     "score": -0.411,
@@ -881,9 +881,9 @@
     "ultimo_aggiornamento": "21/04/2026"
   },
   "Glusi→Pescara": {
-    "score": -0.191,
-    "label": "neutro",
-    "ultimo_aggiornamento": "03/05/2026"
+    "score": -0.591,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "04/05/2026"
   },
   "Cetteo→Squadra Pescara": {
     "score": -1,
@@ -1106,9 +1106,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Lamatte→Autore": {
-    "score": -0.335,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "02/05/2026"
+    "score": -0.635,
+    "label": "ostile",
+    "ultimo_aggiornamento": "04/05/2026"
   },
   "Topengo→Miley Cyrus": {
     "score": 0.095,
@@ -1351,9 +1351,9 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Lilli→Pescara": {
-    "score": -0.896,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "03/05/2026"
+    "ultimo_aggiornamento": "04/05/2026"
   },
   "Lilli→Istituzioni": {
     "score": -0.159,
@@ -2267,6 +2267,11 @@
   },
   "Wolf→Autrice": {
     "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "04/05/2026"
+  },
+  "Wolf→Questa terra": {
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "04/05/2026"
   }
