@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.021,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "05/05/2026"
   },
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Lars→Hiroki": {
-    "score": -0.466,
+    "score": -0.366,
     "label": "diffidente",
     "ultimo_aggiornamento": "05/05/2026"
   },
@@ -76,13 +76,13 @@
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.6,
-    "label": "diffidente",
+    "score": -0.9,
+    "label": "ostile",
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Lars→Juizinho": {
@@ -148,7 +148,7 @@
   "Hiroki→Pescara": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "04/05/2026"
+    "ultimo_aggiornamento": "05/05/2026"
   },
   "Enzo→Generazione Giovane": {
     "score": -0.085,
@@ -236,8 +236,8 @@
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Lilli→Lars": {
-    "score": 0.8,
-    "label": "amico",
+    "score": 0.6,
+    "label": "simpatico",
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Enzo→Lars": {
@@ -301,12 +301,12 @@
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Hiroki→Lilli": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Cetteo→Lilli": {
-    "score": 0.95,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "05/05/2026"
   },
@@ -381,9 +381,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
-    "ultimo_aggiornamento": "04/05/2026"
+    "ultimo_aggiornamento": "05/05/2026"
   },
   "utente→Lars": {
     "score": 0.086,
@@ -623,7 +623,7 @@
   "Autore→Lars": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "04/05/2026"
+    "ultimo_aggiornamento": "05/05/2026"
   },
   "Autore→Wolf": {
     "score": -0.165,
@@ -636,7 +636,7 @@
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Autore→Glusi": {
-    "score": 0.586,
+    "score": 0.486,
     "label": "simpatico",
     "ultimo_aggiornamento": "05/05/2026"
   },
@@ -658,7 +658,7 @@
   "Wolf→Hiroki": {
     "score": 0.157,
     "label": "neutro",
-    "ultimo_aggiornamento": "04/05/2026"
+    "ultimo_aggiornamento": "05/05/2026"
   },
   "Glusi→Wolf": {
     "score": -0.008,
@@ -766,9 +766,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Pescara": {
-    "score": -0.95,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "04/05/2026"
+    "ultimo_aggiornamento": "05/05/2026"
   },
   "Wolf→Pescara": {
     "score": -0.411,
@@ -881,9 +881,9 @@
     "ultimo_aggiornamento": "21/04/2026"
   },
   "Glusi→Pescara": {
-    "score": -0.591,
+    "score": -0.491,
     "label": "diffidente",
-    "ultimo_aggiornamento": "04/05/2026"
+    "ultimo_aggiornamento": "05/05/2026"
   },
   "Cetteo→Squadra Pescara": {
     "score": -1,
@@ -996,8 +996,8 @@
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Autore→Lilli": {
-    "score": -0.405,
-    "label": "diffidente",
+    "score": -0.605,
+    "label": "ostile",
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Lars→Topengo": {
@@ -1476,9 +1476,9 @@
     "ultimo_aggiornamento": "04/05/2026"
   },
   "Lucap→Hiroki": {
-    "score": 0.003,
+    "score": -0.097,
     "label": "neutro",
-    "ultimo_aggiornamento": "04/05/2026"
+    "ultimo_aggiornamento": "05/05/2026"
   },
   "Glusi→Lucap": {
     "score": 0.443,
@@ -1516,9 +1516,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lucap→Lilli": {
-    "score": 0.382,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "04/05/2026"
+    "score": 0.282,
+    "label": "neutro",
+    "ultimo_aggiornamento": "05/05/2026"
   },
   "Hiroki→Borgo Marino": {
     "score": -0.177,
@@ -2323,6 +2323,11 @@
   "Lilli→Nobiltà cittadina": {
     "score": -0.3,
     "label": "diffidente",
+    "ultimo_aggiornamento": "05/05/2026"
+  },
+  "Lars→Pescara": {
+    "score": 0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "05/05/2026"
   }
 }
