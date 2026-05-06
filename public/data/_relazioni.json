@@ -1,5 +1,5 @@
 {
-  "_runCount": 5,
+  "_runCount": 6,
   "Ernesto→Giovanni": {
     "score": -0.019,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.33,
+    "score": -0.53,
     "label": "diffidente",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -61,8 +61,8 @@
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Cetteo→Lars": {
-    "score": -0.6,
-    "label": "diffidente",
+    "score": -0.9,
+    "label": "ostile",
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Cetteo→Juizinho": {
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Hiroki→Lars": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -236,7 +236,7 @@
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Lilli→Lars": {
-    "score": 0.74,
+    "score": 0.94,
     "label": "amico",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -246,7 +246,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lars": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.3,
+    "score": -0.4,
     "label": "diffidente",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -511,7 +511,7 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Cetteo→Wolf": {
-    "score": 0.577,
+    "score": 0.377,
     "label": "simpatico",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Wolf→Hiroki": {
-    "score": 0.041,
+    "score": 0.241,
     "label": "neutro",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -821,8 +821,8 @@
     "ultimo_aggiornamento": "24/04/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.4,
-    "label": "simpatico",
+    "score": 0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Cetteo→Squadra": {
@@ -1136,9 +1136,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Lamatte": {
-    "score": -0.81,
+    "score": -0.9,
     "label": "ostile",
-    "ultimo_aggiornamento": "02/05/2026"
+    "ultimo_aggiornamento": "06/05/2026"
   },
   "Hiroki→Lamatte": {
     "score": -0.81,
@@ -1366,9 +1366,9 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Lamatte→Glusi": {
-    "score": -0.752,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "01/05/2026"
+    "ultimo_aggiornamento": "06/05/2026"
   },
   "Lars→Politici": {
     "score": -0.095,
@@ -1926,9 +1926,9 @@
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Wolf→Governo": {
-    "score": -0.219,
+    "score": -0.519,
     "label": "diffidente",
-    "ultimo_aggiornamento": "29/04/2026"
+    "ultimo_aggiornamento": "06/05/2026"
   },
   "Wolf→Lucap": {
     "score": -0.073,
@@ -2366,7 +2366,7 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Glusi→Burger King": {
-    "score": 0,
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -2376,7 +2376,7 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Lilli→Burger King": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "06/05/2026"
   },
@@ -2396,8 +2396,8 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Glusi→Politica Locale": {
-    "score": -0.2,
-    "label": "neutro",
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Abbukk→Autore": {
@@ -2413,6 +2413,31 @@
   "Questa→Glusi": {
     "score": -0.1,
     "label": "neutro",
+    "ultimo_aggiornamento": "06/05/2026"
+  },
+  "Cetteo→Politica Locale": {
+    "score": -0.6,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/05/2026"
+  },
+  "Hiroki→Amministrazione Italiana": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "06/05/2026"
+  },
+  "Abbukk→Autorità": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/05/2026"
+  },
+  "Lilli→Politica Locale": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "06/05/2026"
+  },
+  "Hiroki→Sistema Amministrativo Pescara": {
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "06/05/2026"
   }
 }
