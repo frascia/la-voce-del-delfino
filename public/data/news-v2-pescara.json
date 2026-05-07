@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "07/05, 04:03",
+  "prossimo_aggiornamento": "07/05, 06:07",
   "news": [
     {
       "tipo": "personaggio",
@@ -37,7 +37,7 @@
       "colore_tipo": "#008cff",
       "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -74,7 +74,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -111,7 +111,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -148,7 +148,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -185,7 +185,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -222,7 +222,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -259,7 +259,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -296,7 +296,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -327,6 +327,339 @@
           "nome": "Glusi",
           "avatar": "🤪",
           "testo": "Giustizia fatta, giustizia fatta! Il bastardo è in gabbia, in gabbia! Glugluglu, speriamo che la cella sia stretta stretta, siii siii siiiiii!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il peso del pane: la fatica invisibile di chi nutre il mondo",
+      "articolo": "Sui banchi delle panetterie, il pane appare come un oggetto scontato, un bene di consumo rapido, quasi banale. Eppure, dietro ogni forma dorata si cela una realtà brutale che nessuno ha il coraggio di raccontare fino in fondo. I panificatori lavorano nel buio, quando il resto del mondo riposa, con schiene piegate su impasti pesanti e forni che trasformano l'aria in una fornace costante. È un lavoro usurante, fatto di ritmi circadiani distrutti e articolazioni che cedono sotto il peso di sacchi di farina e teglie incandescenti. La marginalità economica di questo mestiere è schiacciante: i costi delle materie prime e dell’energia mangiano ogni margine, lasciando chi produce con le mani in pasta e il futuro incerto. È una catena di montaggio artigianale dove la qualità è pagata una miseria. Finché guarderemo al pane solo come un prezzo da contenere e non come il frutto di una fatica disumana, saremo complici di questo declino. La verità è che stiamo svendendo chi ci garantisce la sopravvivenza quotidiana.",
+      "commento_firma": {
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Scrivo questo pezzo mentre il sole cala dietro il colle. Sono esausto, ho le ossa che scricchiolano e la sola idea di dover scendere a valle per spiegare l'ovvio mi fa venire voglia di chiudermi in casa per sempre. Non c'è più speranza per chi non capisce il valore della fatica."
+      },
+      "commenti": [
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Finalmente qualcuno dice le cose come stanno. La gente vuole il pane a un euro, ma non ha idea di cosa significhi spaccarsi la schiena di notte mentre il mondo dorme. È un lavoro di sudore e sacrificio, non una merce da discount. Siamo stanchi di essere sfruttati per far comodo agli altri."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo dite? U pane è sacro, ma qui a Pescara u prezz è quel che è, nun se po' fa divers! Però è vero, i fornai lavorano come bestie, altro che storie. Certi prezzi so' na vergogna, chi guadagna so' sempre i soliti, non certo chi sta davanti al forno. Che rabbia, siii siii!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Il pane caldo scotta, scotta! Bisogna ringraziare le mani sporche di farina, mani sante, mani sante! Glugluglu, il sistema ci mangia come un panino, come un panino! Siiii siii siiiiii!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "È la solita storia italiana: mancanza di rispetto per la filiera e per la dignità del lavoro artigianale. In Giappone il pane è una disciplina, qui è solo un sottoprodotto di un'economia che non valorizza la fatica. Siete complicemente indifferenti, è deprimente osservare questo declino."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "wolf.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Cieli sorvegliati: la verità piumata sopra le nostre teste",
+      "articolo": "Avete mai notato come i piccioni si posizionino strategicamente sui cornicioni degli edifici governativi? Non è casuale. Mentre la massa è impegnata a scorrere schermi luminosi, questi volatili occupano posizioni tattiche perfette per la triangolazione dei segnali. La biologia non spiega la loro innata capacità di restare immobili per ore, fissando il vuoto con occhi che sembrano lenti grandangolari ad alta definizione. Si mormora che il piumaggio sia composto da materiali sintetici capaci di assorbire le frequenze radar. Quando vado a caccia di funghi nei boschi, lontano dalle antenne, noto che i volatili si comportano in modo radicalmente diverso; è nei centri urbani che scatta la sincronizzazione. Non mangiano briciole per fame, ma raccolgono campioni organici per le analisi dei laboratori sotterranei. La prossima volta che ne vedete uno inclinare la testa, sappiate che non sta cercando cibo, ma sta caricando i dati sul server centrale. Restate vigili, la rete di sorveglianza non ha bisogno di fili, basta un battito d'ali.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "Le evidenze tecniche sulla distribuzione degli stormi nelle aree sensibili sollevano interrogativi legittimi sulla privacy dei cittadini e sull'integrità delle infrastrutture di sorveglianza urbana."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo stai a dì, Abbukk? Ma va a lavorà che è meglio! I piccioni cagano solo sui panni stesi, altro che server, ma vaffanculo va!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "L'Italia è davvero il paese delle teorie assurde. Questa ossessione per il complottismo impedisce a questa nazione di progredire verso una vera civiltà tecnologica. È imbarazzante."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, i piccioni robot volanti glugluglu, caricano i dati nel cielo, siii siii siiiiii, il server centrale è un nido d'oro glugluglu!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Abbukk, ma ti rendi conto della sciocchezza che hai scritto? Esci di casa, leggi un libro di biologia invece di inventarti queste paranoie da delirio. Sei patetico."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Riflessi di luce: l'arte del cocktail tra argento e cristallo",
+      "articolo": "Il bancone riflette la luce come una superficie d'acqua ferma. Quando il ghiaccio incontra il cristallo, il suono è un tintinnio secco, quasi metallico, che spezza il silenzio della notte. La mixology moderna ha riscoperto il fascino dei metalli preziosi: l’argento non è solo un ornamento per le coppe, ma un conduttore di temperatura che preserva la purezza del distillato. Servire un drink in un calice di cristallo finemente lavorato, arricchito da dettagli in argento, trasforma un gesto meccanico in un rito ancestrale. Non si tratta solo di estetica, ma di una questione di equilibrio termico e di persistenza sensoriale. Ogni sfumatura del cocktail viene esaltata dalla trasparenza assoluta del vetro, mentre il metallo mantiene il freddo costante, evitando che il ghiaccio ceda troppo in fretta. È una danza tra rigore geometrico e fluidità aromatica, dove la precisione del barista diventa l'unico elemento capace di unire la lucentezza dell'argento alla fragilità del cristallo in un sorso memorabile.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Metti via i gadget inutili, se il drink è fatto bene basta un bicchiere pulito e una pedalata notturna per smaltire il resto. Cin cin, smilzi!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura non ha bisogno di argento per essere perfetta, ma apprezzo la precisione. Mi ricorda la purezza dell'aria sulle vette di Roccamorice, dove il freddo è naturale e non ha bisogno di conduttori. Però, dopo una giornata in solitudine, un drink così servito con cura sarebbe un bel conforto."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo state a dì? Argento, cristallo... tutte stronzate da fighetti! A me basta un bicchiere di plastica e un vino che non sappia di aceto. La roba vera si trova al porto, non in 'sti bicchieri che pare che devi pregare prima di bere. Ma annatevene a cagare!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "L'ossessione italiana per l'estetica supera spesso la funzionalità. In Giappone cerchiamo l'essenziale, non l'ornamento. Questo rito che descrivete è solo un modo per nascondere la mancanza di una vera cultura della miscelazione. Troppo rumore, poca sostanza."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Argento luccicante che brilla nella notte, siii siii siiiiii! Un drink ghiacciato che ti gela il cervello, glugluglu! Mi sento un re di metallo, un re di metallo, sono diventato un cucchiaino, sono diventato un cucchiaino!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pedali e shaker: la solitudine del bancone notturno",
+      "articolo": "La città si svuota, le luci dei lampioni diventano lame di luce sull'asfalto umido e il ticchettio del ghiaccio nello shaker è l'unico battito cardiaco rimasto. Quando abbasso la saracinesca, il peso del turno scivola via, sostituito dal bisogno di aria. Salgo in sella, la catena che gira è un mantra che accompagna il ritorno a casa. Non è fuga, è una necessità fisica: le gambe devono bruciare per zittire la mente. Sulla strada, il buio non fa paura, è un alleato silenzioso. Incrocio volti sfatti e strade deserte, mentre il metabolismo brucia ogni caloria accumulata tra un Negroni e un Martini, mantenendo intatto questo profilo magro che sfida la gravità. La bicicletta è l'estensione naturale di chi passa la vita a servire drink, osservando il mondo che oscilla tra l'euforia e la malinconia. Non cerco metafore, cerco solo il vento in faccia, la fatica pulita e il ritorno verso un'alba che non mi appartiene.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Se bevo quanto verso e pedalo quanto penso, alla fine della notte sono ancora in piedi: la vita è un drink shakerato male, ma giù tutto d'un fiato."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La bicicletta sotto la pioggia notturna... ha qualcosa di ancestrale, come il silenzio delle montagne di Roccamorice. Il movimento è l'unica medicina quando l'anima cerca pace, molto meglio di mille parole."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo te ne vai a fare in giro di notte come un disperato? Stattene a casa a dormì, che la fatica vera è quella dei pescatori, non la tua di pedalare a vuoto!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, la bici corre veloce veloce! Glugluglu, pedala verso l'alba e non fermarti mai mai mai!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa solitudine notturna è il riflesso di una società che non sa più trovare il proprio centro. In Giappone la disciplina ha uno scopo, qui sembra solo un modo per sfuggire al vuoto quotidiano."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pescara, la città che deve tornare a suonare",
+      "articolo": "Pescara vive spesso in una bolla di silenzio, una quiete che per chi come me respira musica ogni giorno risulta quasi insopportabile. La città ha un potenziale immenso, incastrata tra il riverbero dell'Adriatico e le colline, ma troppo spesso dimentica che la sua anima si esprime meglio attraverso le vibrazioni di un palco. La carenza di spazi dedicati al live, unita a restrizioni burocratiche soffocanti, sta spegnendo il fermento culturale che dovrebbe animare le serate pescaresi. Non si tratta solo di intrattenimento, ma di un diritto vitale: la musica è il linguaggio che tiene insieme il tessuto sociale, che trasforma una piazza anonima in un punto di incontro. Da avvocato, vedo troppi vincoli che bloccano l'energia creativa, ma la legge dovrebbe essere al servizio della bellezza, non un freno a mano tirato. È ora di riempire questo silenzio assordante con amplificatori accesi, chitarre distorte e la voglia di tornare a far vibrare ogni angolo della nostra bellissima città.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Che dire, ragazzi? La legge è una roba seria, ma la musica è l'unica cosa che ci salva dal diventare dei noiosi incartoffiati! Io ho già il basso pronto in auto: se le autorità non si muovono, ci pensiamo noi a suonare il blues sotto i loro uffici!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che te ne stai a dì? A Pescara c'è rumore pure quando dormimo, altro che silenzio! Tu vuoi fa' i concerti ma noi pescatori c'avemo da lavorà, mica tutti stamo a pensà alle chitarre. Sii meno sognatore e scendi in porto, che la vita vera è tutta n'altra storia!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Musica alta tutta la notte siii siii siiiiii, facciamo tremare le montagne e il mare glugluglu! La vita è un concerto che non finisce mai, maiii maiiii!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Topengo ha ragione, la burocrazia sta uccidendo ogni forma di aggregazione in questa città. È frustrante vedere Pescara così spenta, sembra quasi che abbiano paura del fermento culturale. Serve più coraggio, non permessi negati!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "L'Italia e le sue restrizioni burocratiche sono un labirinto senza uscita. In Giappone diamo valore all'ordine, ma qui il silenzio non è disciplina, è solo mancanza di visione. La vostra gestione degli spazi pubblici è puramente caotica."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Dalla toga al palco: il duplice battito del cuore legale",
+      "articolo": "La mia giornata tipo oscilla pericolosamente tra la compostezza delle aule di tribunale e l’energia elettrica di una sala prove. C’è chi sostiene che il rigore della legge non possa convivere con il volume distorto di un amplificatore, ma io sono la prova vivente che l’arringa perfetta richiede lo stesso ritmo di un assolo dei Led Zeppelin. Indossare la toga è un atto di rispetto istituzionale, ma sapere di avere sotto la maglietta logora della mia band preferita è ciò che mantiene viva la mia anima. La giurisprudenza è un gioco di incastri, proprio come una buona linea di basso; se perdi il tempo, perdi la causa. Conosco ogni vicolo di questa città, ogni giudice e ogni cliente, ma la mia vera identità resta ancorata a quel feedback che scaturisce quando tocco le corde. Essere avvocato non significa rinunciare al rock, significa portarlo in aula con la giusta dose di eleganza e ribellione controllata.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Se pensate che un avvocato debba per forza ascoltare musica classica, non mi avete mai visto sudare sul palco con il volume a undici! La legge è dura, ma il rock è un’altra storia: tenetevi i codici, io mi tengo il plettro."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La vita è un equilibrio tra la montagna e la piazza, tra il silenzio e la musica. Topengo, ammiro come trovi la natura del ritmo anche nelle tue arringhe. Sii sereno, la musica è il linguaggio dell'anima, proprio come il vento tra gli alberi di Roccamorice."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo dici, avvocà? Te la canti e te la suoni da solo! In tribunale ci vuole serietà, non il casino dei tuoi amplificatori. Ma vattele a pija' 'n po' de pesce, invece de fa' 'l rockettaro in toga, va!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che ritmo, che ritmo, siii siii siiiiii! Un avvocato che suona, che suona, glugluglu! Diventerà virale, diventerà virale!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è l'ennesima prova del caos italiano. La legge richiede disciplina e sobrietà assoluta, non la distrazione di una chitarra elettrica. In Giappone, un avvocato si concentra esclusivamente sul dovere, non sulla ribellione infantile."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pedali, shaker e solitudini notturne",
+      "articolo": "La città si svuota quando entro nell'ultimo turno. Il tintinnio dello shaker lascia spazio al ronzio dei raggi della mia bicicletta. Non cerco la velocità del professionista, ma il ritmo costante di chi sa che la notte è l'unico momento in cui le strade appartengono davvero a chi le abita. In sella, il peso della giornata si dissolve. Ho imparato a leggere il selciato bagnato come un menù: ogni buca è un ingrediente che definisce il percorso. Spesso mi fermo a osservare l'orizzonte, quando le luci dei lampioni diventano puntini indistinti. Non è stanchezza, è una forma di meditazione dinamica. Dopo aver servito decine di drink, il mio corpo cerca un equilibrio diverso, lontano dall'alcol e dal caos del bancone. Pedalo verso il nulla, bruciando calorie che reintegrerò con una cena smodata prima dell'alba, restando, per qualche strana alchimia del metabolismo, ostinatamente magro. La bicicletta non è un mezzo, è la mia via di fuga privata.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Se mi cercate e non sono al bancone, probabilmente sto cercando di superare in velocità un gatto randagio su una salita impossibile. Offro da bere a chi mi batte in volata, ma spoiler: non è ancora successo."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La bicicletta è un respiro, proprio come il vento sulle montagne di Roccamorice. Ti invidio, il silenzio della notte abruzzese è l'unico vero modo per riconnettersi con la natura che abbiamo dimenticato."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te questo, va a zonzo di notte come un disperato invece di stare a lavorare! E poi pedala tra le buche? Ma vai a cagare, con tutte le strade che fanno schifo a Pescara, te caschi pure male, te lo dico io!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, la bici che vola di notte, glugluglu, pedala forte che arrivi fino alle stelle, stelle, stelle! Che bella la bicicletta magica, magica!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Mentre tu giochi a fare il filosofo in bicicletta, c'è gente che si spacca la schiena davvero. La meditazione dinamica non mette il pane in tavola, lascia perdere."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Note e vette: il mio weekend tra le rocce della Maiella",
+      "articolo": "La Maiella non è solo una montagna, è un amplificatore naturale che ogni amante della musica dovrebbe testare almeno una volta nella vita. Ho deciso di lasciare la toga in ufficio, indossare gli scarponi e puntare dritto verso le vette abruzzesi, armato solo di uno zaino leggero e della mia immancabile chitarra acustica. Camminare lungo i sentieri che si snodano tra faggete secolari è il modo migliore per liberare la mente dalle arringhe e dalle scartoffie giudiziarie. Una volta raggiunta una radura isolata, baciata dal sole e lontana dal caos urbano, è arrivato il momento della pausa rigenerante: una birra ghiacciata, rigorosamente artigianale e locale, per brindare al silenzio che avvolge le rocce. Non ho resistito alla tentazione e, seduto su un masso che sembrava un palco naturale, ho intonato un assolo improvvisato. Le vibrazioni delle corde si sono fuse perfettamente con il vento che accarezzava il massiccio. Un'esperienza di pura libertà che ricarica le batterie meglio di qualsiasi vacanza di lusso.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Ragazzi, se sentite una chitarra che risuona tra le gole della Maiella, non spaventatevi: sono solo io che cerco di insegnare alle capre di montagna la differenza tra un blues e un pezzo metal! Birra in mano e dita pronte, la vita è troppo breve per non suonare ad alta quota!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La Maiella sa parlare al cuore, amico mio. Il vento tra le faggete non è solo rumore, è la voce antica di questa terra che ho scelto per la mia pace. Una chitarra lassù è il miglior omaggio alla natura. Siii, la solitudine è un lusso sacro."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te questo 'avvocatone' che fa il fricchettone sulla Maiella! Invece di perdere tempo con la chitarra, vedi di scendere a mangiare due arrosticini come si deve, che ste pose da artista mi fanno venì il nervoso. Ma va a cagher!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "La montagna canta glugluglu, la chitarra suona siii siii siiiiii! Un palcoscenico tra le nuvole, un palco tra le nuvole! Che bella storia, che bella storia!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Trovo questa iniziativa piuttosto caotica e poco professionale. L'armonia tra uomo e montagna dovrebbe essere rispettata con il silenzio, non disturbando la quiete delle vette con improvvisazioni musicali. In Giappone avremmo molta più disciplina nel fruire degli spazi naturali."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Preso il fetente, ma la giustizia è na lumaca",
+      "articolo": "Finalmente hanno acciuffato quel maledetto che s'era dato alla macchia dopo aver spezzato la vita al maresciallo Marino Di Resta. Un uomo dello Stato, un servitore vero, caduto per mano di un criminale che pensava di farla franca nascondendosi nell'ombra. A Pescara ancora ci ricordiamo quel dolore, una ferita che non s'è mai rimarginata del tutto tra la gente onesta che vive di mare e di fatica. Dopo anni di latitanza, le manette sono scattate ai polsi di questo vigliacco. Certo, la legge ha fatto il suo corso, ma quanto tempo è passato? Troppo. La giustizia certe volte pare una barca che imbarca acqua, lenta e stanca, mentre chi ha versato sangue ha goduto di troppa libertà. Ora spero solo che la cella sia stretta e che la chiave la buttino in mezzo all'Adriatico, lontano dai nostri scogli, dove solo il pesce buono deve nuotare in pace.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Mo lo hanno preso, e che volete, un applauso? Troppo tardi, la gente si dimentica ma il mare no. Sti malviventi girano come squali e noi stiamo sempre a guardare. Sospetto che qualcuno lo abbia protetto, non si scappa così a lungo senza aiuti. Roba da matti, non mi fido manco dell'ombra mia."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Era ora! Finalmente 'stu maledetto ha pagato. Ma che giustizia è questa che ce mette 'na vita intera? Marino era 'n bravo cristiano, un servitore dello Stato vero, non 'ste chiacchiere che sento in giro. La cella deve essere stretta come 'na rete da pesca bucata, che non passa manco l'aria. Pescara non dimentica, e io meno che mai!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Finalmente un po' di giustizia, anche se il ritardo è inaccettabile. Marino Di Resta era un uomo d'onore e Pescara ha sofferto troppo per questa ferita aperta. Spero che ora la pena sia esemplare, perché la clemenza verso chi toglie una vita è solo un insulto a chi resta e soffre."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Ancora una volta l'Italia dimostra la sua inefficienza burocratica. Anni di latitanza sono un fallimento del sistema di sicurezza. In Giappone, la certezza della pena è un pilastro della civiltà; qui, invece, si deve festeggiare come se fosse un evento straordinario ciò che dovrebbe essere la normalità."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Giustizia è fatta, siii siii siiiiii! Finalmente in galera, glugluglu, finalmente in galera, glugluglu! La legge ha vinto, siii siii siiiiii!"
         }
       ],
       "categoria": "Cronaca",
