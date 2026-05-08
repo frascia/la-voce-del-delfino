@@ -1,5 +1,5 @@
 {
-  "_runCount": 3,
+  "_runCount": 4,
   "Ernesto→Giovanni": {
     "score": -0.017,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.81,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "08/05/2026"
   },
@@ -81,7 +81,7 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.72,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "08/05/2026"
   },
@@ -116,7 +116,7 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Cetteo→Autore": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "08/05/2026"
   },
@@ -276,7 +276,7 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Lars→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "08/05/2026"
   },
@@ -291,8 +291,8 @@
     "ultimo_aggiornamento": "07/05/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.25,
-    "label": "diffidente",
+    "score": -0.75,
+    "label": "ostile",
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Lars→Lilli": {
@@ -301,7 +301,7 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Hiroki→Lilli": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "08/05/2026"
   },
@@ -331,9 +331,9 @@
     "ultimo_aggiornamento": "26/04/2026"
   },
   "Abbukk→Wolf": {
-    "score": -0.026,
+    "score": 0.024,
     "label": "neutro",
-    "ultimo_aggiornamento": "13/04/2026"
+    "ultimo_aggiornamento": "08/05/2026"
   },
   "Abbukk→Lars": {
     "score": -0.349,
@@ -346,7 +346,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.83,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "08/05/2026"
   },
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.9,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "08/05/2026"
   },
@@ -421,9 +421,9 @@
     "ultimo_aggiornamento": "07/05/2026"
   },
   "Hiroki→Abbukk": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "07/05/2026"
+    "ultimo_aggiornamento": "08/05/2026"
   },
   "Lars→barman": {
     "score": 0.069,
@@ -511,9 +511,9 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Cetteo→Wolf": {
-    "score": 0.519,
+    "score": 0.669,
     "label": "simpatico",
-    "ultimo_aggiornamento": "07/05/2026"
+    "ultimo_aggiornamento": "08/05/2026"
   },
   "Glusi→Autore": {
     "score": 1,
@@ -646,7 +646,7 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Lilli→Autore": {
-    "score": -0.556,
+    "score": -0.356,
     "label": "diffidente",
     "ultimo_aggiornamento": "08/05/2026"
   },
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "07/05/2026"
   },
   "Wolf→Hiroki": {
-    "score": -0.083,
+    "score": -0.183,
     "label": "neutro",
     "ultimo_aggiornamento": "08/05/2026"
   },
@@ -866,14 +866,14 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Glusi": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "07/05/2026"
+    "ultimo_aggiornamento": "08/05/2026"
   },
   "Glusi→Realtà": {
-    "score": 0,
+    "score": -0.2,
     "label": "neutro",
-    "ultimo_aggiornamento": "17/04/2026"
+    "ultimo_aggiornamento": "08/05/2026"
   },
   "Juizinho→Pescara": {
     "score": 0.051,
@@ -1061,9 +1061,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lilli→Wolf": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "07/05/2026"
+    "ultimo_aggiornamento": "08/05/2026"
   },
   "Hiroki→Contesto Locale": {
     "score": -0.116,
@@ -1391,9 +1391,9 @@
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Lilli→Pescara Calcio": {
-    "score": 0.114,
+    "score": -0.186,
     "label": "neutro",
-    "ultimo_aggiornamento": "05/05/2026"
+    "ultimo_aggiornamento": "08/05/2026"
   },
   "Hiroki→Cultura Sportiva Italiana": {
     "score": -0.109,
@@ -2487,6 +2487,16 @@
   },
   "Hiroki→Pescara Calcio": {
     "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "08/05/2026"
+  },
+  "Hiroki→Ambiente Pescara": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "08/05/2026"
+  },
+  "Lucap→Tifoseria": {
+    "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "08/05/2026"
   }
