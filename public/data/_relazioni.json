@@ -1,5 +1,5 @@
 {
-  "_runCount": 9,
+  "_runCount": 10,
   "Ernesto→Giovanni": {
     "score": -0.017,
     "label": "neutro",
@@ -116,13 +116,13 @@
     "ultimo_aggiornamento": "09/05/2026"
   },
   "Cetteo→Autore": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "09/05/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.8,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "09/05/2026"
   },
   "Lars→Questa terra": {
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.901,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "09/05/2026"
   },
@@ -231,9 +231,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Juizinho": {
-    "score": 0.81,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "05/05/2026"
+    "ultimo_aggiornamento": "09/05/2026"
   },
   "Lilli→Lars": {
     "score": 1,
@@ -281,9 +281,9 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Juizinho→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "05/05/2026"
+    "ultimo_aggiornamento": "09/05/2026"
   },
   "Glusi→Questa comunità": {
     "score": 0.026,
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.8,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "09/05/2026"
   },
@@ -626,17 +626,17 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Autore→Wolf": {
-    "score": -0.044,
+    "score": -0.144,
     "label": "neutro",
-    "ultimo_aggiornamento": "06/05/2026"
+    "ultimo_aggiornamento": "09/05/2026"
   },
   "Autore→Hiroki": {
-    "score": -0.467,
-    "label": "diffidente",
+    "score": -0.667,
+    "label": "ostile",
     "ultimo_aggiornamento": "09/05/2026"
   },
   "Autore→Glusi": {
-    "score": 0.883,
+    "score": 0.783,
     "label": "amico",
     "ultimo_aggiornamento": "09/05/2026"
   },
@@ -821,7 +821,7 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.84,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "09/05/2026"
   },
@@ -1061,7 +1061,7 @@
     "ultimo_aggiornamento": "09/05/2026"
   },
   "Lilli→Wolf": {
-    "score": 0.8,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "09/05/2026"
   },
@@ -1106,7 +1106,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Lamatte→Autore": {
-    "score": -1,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "09/05/2026"
   },
@@ -2518,6 +2518,11 @@
   "Abbukk→Lamatte": {
     "score": 0.1,
     "label": "neutro",
+    "ultimo_aggiornamento": "09/05/2026"
+  },
+  "Lamatte→Lettori": {
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "09/05/2026"
   }
 }
