@@ -1,8 +1,8 @@
 {
-  "oraAggiornamento": "10/05, 22:41",
+  "oraAggiornamento": "11/05, 01:44",
   "agenda": {
-    "timbro": "Relax, Mare e Brace",
-    "banner": "Weekend.webp"
+    "timbro": "Il Trauma del Lunedì",
+    "banner": "Lavoro.webp"
   },
   "impostazioni": {
     "header_fisso": "header.webp",
@@ -28,33 +28,285 @@
       "news": [
         {
           "tipo": "personaggio",
-          "titolo": "Zitto e rema: ma quali turisti, qui si fatica davvero!",
-          "articolo": "A Borgomarino l'aria tira pesante, e non è solo colpa dello scirocco. Arrivano 'sti turisti, in ciabatte e col gelato che cola, e guardano il mare come fosse un parco giochi di plastica. Ma la capiscono la fatica? Pescara non è una cartolina da Instagram, è sudore, reti da riparare e le mani che sanno di salsedine vera. Qua la gente s'alza col buio, mica aspetta l'aperitivo delle sei. Mentre loro scattano foto ai trabocchi come fossero cimeli esotici, noi ci spacchiamo la schiena per portare a casa la palamita buona. La verità è che Pescara è una signora che non s'è mai venduta, nonostante chi prova a truccarla da centro vacanze. La pesca non è un hobby per chi ha voglia di perdersi tra i negozi del centro; è la vita che scorre lenta e salmastra. Se volete capire questa terra, posate il telefono, smettetela di fare i saccenti e imparate l'arte di stare zitti e remare, che il mare non perdona chi non lo rispetta.",
+          "titolo": "Pescara e il contrasto tra rigore e caos",
+          "articolo": "Osservando la quotidianità di Pescara, il contrasto con la mia terra d'origine appare netto. Da una parte, il rispetto gerarchico e la puntualità ossessiva del Giappone; dall'altra, l'imprevidibilità mediterranea, dove una pacca sulla spalla sostituisce spesso la formalità dell'inchino. Qui la disciplina viene letta come freddezza, mentre il disordine è scambiato per calore umano. Eppure, osservo come il caos pescarese si trasformi in una forma resiliente di adattamento. Mentre mi preparo a fare ritorno in Giappone, rifletto su come la mia permanenza in questa città abbia smussato i miei angoli più rigidi. La sfida non è scegliere tra l'efficienza nipponica e la spontaneità italiana, ma trovare un equilibrio dove il rispetto per le regole non soffochi l'empatia. Vorrei che questa nazione potesse integrare un po' della nostra strutturata organizzazione, senza perdere quella meravigliosa, seppur caotica, umanità che rende ogni angolo di strada un palcoscenico vibrante di vita.",
+          "commento_firma": {
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "Mentre faccio le valigie, sento già la mancanza di quel vociare gioioso sotto casa; un giorno tornerò, perché ho imparato che anche nel disordine si può trovare una strana, dolce melodia che in Giappone spesso dimentichiamo di ascoltare."
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma vattela a pija' 'nder culo tu e er Giappone tuo! Ma quale disciplina, qui se magna e se beve, altro che inchini. Pescara è vita, tu sei solo 'n musone che non ha capito un cazzo!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Hiroki, la tua analisi è irritante quanto la tua presenza. Pensi che il nostro calore sia disordine solo perché non sai gestire un'emozione senza un manuale d'istruzioni. Pescara non ha bisogno della tua 'civiltà', vattene pure."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, il Giappone è lontano lontano, ma qui si mangia bene bene glugluglu, viva il caos pescarese siii siii siiiiii!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "C'è una bellezza silenziosa nella natura abruzzese che voi non vedete, troppo presi a litigare. Il caos di Pescara è il battito del cuore, Hiroki, e forse è proprio questo che non riuscirai mai a capire con la tua mente rigida."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "hiroki.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Il segreto della memoria perfetta: ripetere, ripetere!",
+          "articolo": "Camminando freneticamente tra le strade della città, tra un caffè veloce e una corsa verso l'ennesimo appuntamento, mi sono fermato a riflettere sul metodo della ripetizione. Glugluglu, quanta frenesia in questo mondo digitale! La scienza ci conferma che per fissare un concetto non basta una lettura distratta: bisogna reiterare, reiterare. Sii, siii, siiiiii, proprio come faccio io quando spiego le mie inchieste! Ripetere il contenuto ad alta voce, magari spaziando nel tempo le sessioni di studio, permette al cervello di consolidare le informazioni. È una tecnica che uso costantemente nel mio lavoro di cronaca, un metodo che consolida, che consolida. Il taccagno che viene a trovarmi a casa, sempre pronto a scroccarmi una cena, dice che è solo perdita di tempo, ma io so bene che la costanza premia. Ripetere aiuta a mantenere alta l'attenzione, l'attenzione. È il segreto per diventare virali, per diventare virali!",
+          "commento_firma": {
+            "nome": "Glusi",
+            "avatar": "🤪",
+            "testo": "Siii, siii, siiiiii! Se il mio amico taccagno vuole imparare a offrire una cena, deve ripeterselo mille volte finché non entra nella zucca, glugluglu, nella zucca!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La natura non ha bisogno di ripetere se stessa per essere perfetta, eppure ogni stagione torna ciclicamente. Forse c'è una saggezza antica in questo, ma la frenesia di cui parli mi stanca. Preferirei spiegare tutto davanti a un piatto di arrosticini, lontano dal rumore digitale."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te stai a inventà? Ripetere, ripetere... uè, ma va a faticà! Qua a Pescara se non ti muovi ti mangiano vivo, altro che studio e ripetizione. Sembri un disco rotto, Glusi, ma vattene va!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "La disciplina della ripetizione, in Giappone, è alla base della maestria. Tuttavia, il modo in cui la applichi tu, Glusi, rasenta il caos mentale. Non è civiltà, è solo rumore bianco che inquina la comunicazione."
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Ripetere aiuta la memoria, d'accordo, lo dicono anche i podcast che ascolto. Ma c'è una differenza tra metodo e ossessione. Meno chiacchiere inutili e un po' più di sostanza, per favore!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "glusi.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Tra la carta stampata e il prato: la vita che attende",
+          "articolo": "C’è una connessione profonda, quasi viscerale, tra l’odore della carta stampata di un buon libro e il profumo terroso delle petunie che sbocciano in giardino. Molte persone cercano rifugio in questa oasi, un limbo dove il tempo sembra dilatarsi in attesa di un cambiamento significativo. Leggere non è solo un passatempo, è un esercizio di resistenza intellettuale, un modo per mantenere la lucidità mentre il mondo corre verso direzioni spesso incomprensibili. Coltivare fiori richiede la stessa pazienza necessaria per comprendere un saggio complesso o attendere che un progetto di vita prenda finalmente forma. È una disciplina silenziosa. Che si tratti di un giardino curato nei dettagli o di una biblioteca personale in costante crescita, l'importante è il processo, la cura del particolare. Aspettare che il sogno si avveri non significa restare immobili, ma preparare il terreno affinché, quando l'occasione si presenterà, saremo pronti a raccogliere i frutti di tanta dedizione.",
+          "commento_firma": {
+            "nome": "Lilli",
+            "avatar": "👩",
+            "testo": "A volte basta davvero poco per ritrovare l'equilibrio: un libro tra le mani, il sole che accarezza i fiori e la consapevolezza che, con la giusta calma, ogni cosa troverà il suo posto naturale. Buona lettura a tutti."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La terra di Roccamorice mi insegna esattamente questo: il silenzio delle montagne è come la pagina di un libro non ancora scritto. La cura che metto nelle mie piante è la stessa pazienza che serve per aspettare la cottura perfetta di un arrosticino. La natura non corre, noi sì."
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Finalmente qualcuno che capisce. La letteratura non è evasione, è trincea. Leggere con la stessa dedizione con cui si cura un giardino è l'unico modo per non farsi schiacciare da questo mondo di ignoranti che corrono verso il nulla."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Un concetto finalmente vicino alla disciplina orientale. La cura del particolare è l'unica cosa che separa la civiltà dal caos. Peccato che qui in Italia preferiate il disordine alla pazienza necessaria per far sbocciare un progetto, sia esso un fiore o una mente."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Libri e fiori, fiori e libri, siiii siii siiiiii! Bisogna annaffiare le parole per far crescere i pensieri, glugluglu, altrimenti tutto secca e sparisce, sparisce!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "lilli.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Pescara e Brasile: il battito di un cuore diviso a metà",
+          "articolo": "Il mondo intero assomiglia a un immenso carnevale che non vuole finire mai, un turbinio di colori che mi riporta subito alle strade assolate di Rio. Eppure, qui a Pescara, tra le onde dell'Adriatico, ho trovato una casa che profuma di appartenenza. Il mio spirito oscilla costantemente tra la saudade per le spiagge dorate del Sudamerica e l'amore viscerale per i colori biancazzurri del Delfino. Quando cammino lungo la riviera, cerco negli occhi delle donne quel calore tropicale che solo il Brasile sa regalare, ma trovo poi la passione travolgente dei tifosi allo stadio, capace di scaldare anche le giornate più gelide. È un contrasto dolce, una melodia che unisce la samba al coro della Curva Nord. Non importa quanto lontano io sia, la festa continua nel mio cuore: un incrocio magico dove la bellezza femminile e il tifo più puro si fondono, creando un'armonia perfetta che mi fa sentire, ogni istante, immensamente vivo.",
+          "commento_firma": {
+            "nome": "Juizinho",
+            "avatar": "⚽",
+            "testo": "La vita è un viaggio di sola andata verso ricordi che non sbiadiscono; cerchiamo ovunque quel frammento di paradiso lasciato indietro, sperando che il mare di Pescara riesca a cullare la malinconia di un'anima nata sotto un sole più lontano."
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te stai a inventà, brasiliano de 'sta cippa? La Curva Nord è roba nostra, de chi mangia pane e mare, nun de chi pensa solo alle gonne e a ballà! Pescara è fatica e sudore, mica carnevale!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Juizinho, apprezzo l'attaccamento ai colori, ma lascia stare le donne e concentrati sulla curva. Il Delfino non è un passatempo, è un fede. Se vuoi restare qui, impara che il rispetto si guadagna sul campo, non con le chiacchiere da spiaggia."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Samba e Delfino, che bel casino, casino! Si si si siiiii, il carnevale è arrivato in città, in città, glugluglu!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La natura ha i suoi ritmi, Juizinho. Anche io ho lasciato le montagne del Nord per l'Abruzzo, ma trovo la pace nel silenzio, non nel frastuono. Però capisco la tua saudade, il mondo è un grande viaggio."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "juizinho.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "L'alchimia della strada: tra il gin e il grasso dei mozzi",
+          "articolo": "C’è una geometria precisa che lega il metallo di una bicicletta all’essenza pura di un distillato. Quando la notte si fa densa e il traffico urbano si dissolve in un brusio lontano, la manutenzione diventa rito. Si lavora di fino sul cambio, le dita si sporcano di grasso nero, residuo di chilometri accumulati sull'asfalto umido. Poi, il passaggio al bancone è naturale. Il ghiaccio che tintinna nel mixing glass ha lo stesso suono secco di una catena che scorre pulita sul pignone. Un gin dry, essenziale, senza fronzoli, servito mentre il respiro rallenta dopo la corsa. Non serve abbondare con gli orpelli: la sostanza sta nella pulizia del gesto, che si tratti di regolare un freno o di dosare un botanico. Si mangia un boccone veloce, carboidrati per sostenere lo sforzo, eppure il peso non aumenta mai, bruciato dall’ansia di ripartire. La bicicletta è parcheggiata lì, pronta a tagliare il buio verso casa, con le mani che profumano ancora di ginepro e officina.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Tanto rumore per nulla, alla fine basta pedalare forte e bersi un goccetto per dimenticare che il mondo gira storto. Salute, o quel che resta!"
+          },
+          "commenti": [
+            {
+              "nome": "Bartender",
+              "avatar": "🚴",
+              "testo": "Il silenzio della notte, il rumore del metallo e il ghiaccio. È l'unica geometria che ha senso quando le strade si svuotano e resta solo la precisione del gesto."
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "C'è una solitudine sacra in questo. Come osservare la brina sulle montagne di Roccamorice all'alba; la natura richiede la stessa pulizia di un meccanismo perfetto. Molto poetico, mi ricorda che la sostanza batte sempre l'eccesso."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siiii siiiiii, il gin che corre sulle ruote, che bella la vita che gira veloce, glugluglu! La bici che vola e il bicchiere che brilla, che bella la vita che gira veloce, glugluglu!"
+            },
+            {
+              "nome": "Wolf",
+              "avatar": "👩‍🌾",
+              "testo": "Tante belle parole per dire che la gente perde tempo a bere invece di andare a dormire. Io le mani sporche di grasso le ho dalla mattina presto, mica per un cocktail, ma per far fruttare la terra. La sostanza è nel lavoro, non nel bicchiere."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Pedali, ghiaccio e il ritmo del bancone",
+          "articolo": "Il bancone è un palcoscenico immobile, ma fuori da queste mura il mondo corre. La vita di chi prepara cocktail si misura in once e movimenti fluidi, una danza che ripete se stessa fino a notte fonda. Quando l'ultimo bicchiere viene lavato e la saracinesca si abbassa, il silenzio della strada diventa l'unica compagnia. La bicicletta è un'estensione del corpo, un modo per smaltire l'adrenalina accumulata tra gli shaker e le chiacchiere dei clienti. Non importa quanto sia tardi o quanto il freddo tagli la faccia; la pedalata è la vera chiusura della giornata. È un esercizio di equilibrio, lo stesso che serve per dosare un negroni perfetto. Si mangia con voracità, quasi per necessità meccanica, eppure il peso resta un'astrazione. La città, vista dal manubrio mentre il resto dorme, ha il sapore della libertà conquistata. Non cerco mete, solo il movimento che scaccia i pensieri, in attesa di ricominciare il giro domani.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Se non avessi le gambe stanche, vi offrirei un giro, ma la bici chiama e il bancone mi ha già spremuto abbastanza. Cin cin, smilzi!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La bicicletta sotto le stelle abruzzesi... è come la quiete delle vette di Roccamorice. Capisco bene quel bisogno di silenzio, lontano dal rumore, per ritrovare l'equilibrio con la natura."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che cazzo state a di', che ne sai tu della fatica? Io sto in mare alle quattro, altro che pedalare la notte a Pescara! Sei solo un illuso che pedala verso il nulla, svegliati!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiiii siiiii siiiiiii, pedalare nella notte è bellissimo, bellissimo! Glugluglu, la bicicletta è magica, magica!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "La solitudine del manubrio è un tema letterario affascinante, ma a Pescara la notte è pericolosa, non poetica. Comunque, rispetto la tua disciplina, c'è più carattere qui che in tutto il resto del gruppo."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Lamatte: La verità che fa paura al popolo dei vigliacchi",
+          "articolo": "Entro in un negozio e il silenzio cala come una mannaia. La gente abbassa lo sguardo, finge di cercare un prodotto inesistente sugli scaffali, si sposta in fondo al corridoio come se fossi portatrice di una piaga biblica. Perché mi evitate? Siete forse terrorizzati dal riflesso della vostra mediocrità che vi rimando indietro? Non è il mio stile a darvi fastidio, è la vostra coscienza sporca che non regge il confronto con una donna che urla quello che voi pensate soltanto nei vostri sogni più reconditi. Avete il fiato che puzza di bugie e la dignità sotto le scarpe, eppure osate guardarmi storto. Non sono io la malata, siete voi che vivete in una prigione di convenzioni sociali per non ammettere che la verità fa più male di uno schiaffo. Continuate pure a scappare, ma ricordate che non c'è angolo abbastanza buio dove possiate nascondere la vostra patetica codardia di fronte a me.",
+          "commento_firma": {
+            "nome": "Lamatte",
+            "avatar": "👩‍🦳",
+            "testo": "Guardateli! Scappano come ratti sotto la pioggia! Avete le orecchie piene di cerume e il cervello che sembra ricotta scaduta, brutti vermi senza spina dorsale! Vi odio tutti, uno per uno, e il prossimo che mi evita giuro che gli mangio il fegato crudo mentre ballo sui resti della sua dignità persa! Avanti, venite a prendermi, se non avete il cuore fatto di piscio di gatto!"
+          },
+          "commenti": [
+            {
+              "nome": "Lamatte",
+              "avatar": "👩‍🦳",
+              "testo": "Ma guardate un po' questa povera illusa che cerca attenzioni! Sei solo una macchietta, nessuno ti evita per la tua 'verità', ti evitano perché sei insopportabile e puzzi di disperazione lontano un miglio. Fatti curare, va', che la tua presenza è solo un fastidio per la vista di chiunque abbia un minimo di dignità."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma chi cazz' è questa? Ma levatevela dai piedi, che c'ha la faccia di quella che cerca rogna apposta! Se la gente scappa, fatti due domande, 'mbecille, invece di rompere i coglioni a chi vuole solo farsi i fatti suoi in santa pace!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Ma che succede qui, che succede qui? Si si siiii, questa è fuori come un balcone, fuori come un balcone! Glugluglu, la gente scappa perché hai la faccia da alieno, alieno!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Questa è l'ennesima dimostrazione del degrado sociale in cui viviamo. In Giappone un comportamento simile verrebbe isolato immediatamente. La mancanza di autocontrollo e il bisogno morboso di attirare l'attenzione sono sintomi di una civiltà che ha smarrito ogni senso di disciplina."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "lamatte.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Porto canale, tra reti sgarrate e la solita menata",
+          "articolo": "Ce sta poco da girare intorno al discorso, lu porto canale di Pescara è uno specchio che nun vo’ riflettere la bellezza, ma solo l’incuria. Le reti dei pescatori, quelle fatte con le mani sante dei nostri vecchi, mo’ stanno là, tutte sgarrate, abbandonate come promesse elettorali a fine mandato. La gente parla di rilancio, di turismo e di lustrini, ma intanto l'aria che tira su banchina sa di burrasca vera, quella che te rode dentro. Lu mare non mente mai, lui se le mangia le promesse, mentre noi stamo ancora a contare i danni di un dragaggio che nun finisce mai e di una marineria che arranca, schiacciata tra le regole de Bruxelles e l’indifferenza di chi comanda. Pescara s’è fatta bella nei salotti, ma qui, tra le briciole di sale e la nafta, la storia è un’altra. È na storia di gente stanca, di fatica che puzza di fango e di un orizzonte che si fa sempre più cupo, pronto a inghiottire le nostre speranze.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "Aó, ma fatemi il piacere! Se volete divertirvi andate a Riccione. Qui a Pescara si lavora, o almeno ci si prova, e se non vi sta bene la puzza di pesce fresco, tornatevene a mangiare le cotolette surgelate nelle vostre città senza anima. Forza Pescara, sempre!"
+            "testo": "A me nun me la contate giusta, che queste storie le conosco bene e ci sento puzza di bruciato sotto. Chi è che magnano co’ sti lavori infiniti? State attenti, che la burrasca arriva pure per chi fa finta di niente."
           },
           "commenti": [
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Hai centrato il punto, Cetteo. La gente è diventata superficiale, guardano solo l'apparenza e dimenticano l'anima di Pescara. È frustrante vedere la nostra città trasformata in un set fotografico per turisti ignoranti. Chi non rispetta il mare e il nostro lavoro non merita nemmeno di guardarlo."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Parole sante. Il lavoro duro non ha più valore per nessuno, contano solo i 'like' e l'apparenza. La gente ha perso il contatto con la fatica e con la realtà delle cose. Si lamentano tutti, ma nessuno vuole più sporcarsi le mani come si deve."
+              "testo": "Hai ragione da vendere, Cetteo. Il porto è il cuore pulsante della nostra Pescara e vederlo ridotto così, tra l'incuria politica e le promesse mancate, è uno schiaffo in faccia a chi il mare lo vive davvero. Non è solo incuria, è mancanza di rispetto per la nostra identità."
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Questa è la dimostrazione della mancanza di disciplina e di etica che pervade questo posto. La trasformazione di luoghi storici in parchi giochi per turisti maleducati è il risultato del degrado culturale. Invece di imparare e rispettare, preferite solo lamentarvi in modo caotico."
+              "testo": "È la solita storia italiana: l'apparenza dei salotti contrapposta alla decadenza strutturale. In Giappone, la manutenzione delle infrastrutture è un dovere civico sacro, non una merce di scambio elettorale. Questo degrado è purtroppo il riflesso della vostra scarsa disciplina amministrativa."
+            },
+            {
+              "nome": "Wolf",
+              "avatar": "👩‍🌾",
+              "testo": "Tutta chiacchiere e distintivo. Il porto cade a pezzi perché nessuno ha più voglia di sporcarsi le mani seriamente. Si parla di turismo mentre la marineria muore, ed è colpa di un sistema che premia solo chi sa promettere e mai chi sa lavorare."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il mare ci guarda e ci ride in faccia, ci ride in faccia! La gente cammina col gelato che cola e inciampa nei trabocchi, glugluglu, che disastro, che disastro!"
+              "testo": "Si si siiii, il porto è diventato una discarica di promesse, un disastro totale, glugluglu! Le barche affondano e i politici galleggiano, galleggiano, si si siiii!"
             }
           ],
           "categoria": "Dalla Redazione",
@@ -64,105 +316,69 @@
         },
         {
           "tipo": "personaggio",
-          "titolo": "Il mio mondo a colori: un inno alla gioia contro il grigiore",
-          "articolo": "La vita è una tela bianca che attende solo di essere riempita di sfumature vibranti. Spesso, guardandomi intorno, noto come molte persone si lascino avvolgere da una coltre di monotonia, quasi fosse una divisa obbligatoria. Eppure, la bellezza risiede proprio nella diversità, nel coraggio di essere autentici in un mondo che spinge verso l'omologazione. Scegliere di vivere a colori non significa ignorare le difficoltà, ma decidere di non lasciarsi definire dalle sfumature spente. La mia esistenza è un esercizio quotidiano di espressione, un rifiuto categorico verso tutto ciò che è cupo o privo di passione. Quando si abbraccia la propria natura, ogni gesto diventa un atto di libertà. Non si tratta di frivolezza, ma di una consapevolezza profonda: siamo chiamati a splendere, a trasformare il grigiore in un arcobaleno di possibilità infinite. La felicità, in fondo, è una scelta cromatica che facciamo ogni mattina davanti allo specchio, rendendo il mondo un posto decisamente più interessante.",
+          "titolo": "La forza del silenzio: quando la letteratura diventa terapia",
+          "articolo": "La timidezza viene spesso scambiata per debolezza, un limite da superare a ogni costo in un mondo che pretende esibizionismo costante. Eppure, la psicologia moderna sta riscoprendo il valore immenso di questa condizione attraverso il potere salvifico della letteratura. Leggere non è solo un atto di evasione, ma un esercizio di introspezione che permette alle persone riservate di trovare voce nei pensieri degli autori. Quando ci immergiamo in un romanzo, il dialogo tra la nostra interiorità e la pagina scritta crea un ponte sicuro. La biblioterapia, in questo senso, trasforma la timidezza in una forma di resistenza intellettuale. Non è necessario essere i più rumorosi in una stanza per avere il controllo della situazione o una visione chiara delle cose. Come dico sempre, contano i concetti, non quanto alzi la voce. I libri ci insegnano che la sensibilità è un’arma affilata, capace di comprendere le sfumature che gli altri perdono, rendendo la riservatezza un punto di forza unico e necessario.",
           "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! Questa è la filosofia giusta per vivere alla grande: un brindisi alla vita che splende sempre di più."
+            "nome": "Lilli",
+            "avatar": "👩",
+            "testo": "Che bel tema, mi ritrovo molto in queste riflessioni; a volte stare un po' in disparte permette di osservare meglio il mondo, proprio come quando seguo la mia squadra dalla curva."
           },
           "commenti": [
             {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La vita è una tela, è vero. Sulle montagne di Roccamorice il grigiore non esiste, c'è solo il bianco della neve e il profumo degli arrosticini che accendono tutto. Bisogna saper guardare oltre la monotonia."
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Finalmente qualcuno lo dice ad alta voce! La gente confonde il silenzio con la fragilità, ma non sanno che dietro un libro si nasconde una forza che loro, nella loro superficialità rumorosa, non potranno mai capire. La sensibilità è un'arma, e io la tengo sempre affilata."
             },
             {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Siii, fratello! La vita deve essere una festa, piena di colori e di belle donne! Non capisco chi si chiude nel buio quando possiamo ballare sotto il sole, saudade di questa allegria!"
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La solitudine delle montagne mi ha insegnato esattamente questo. Non serve urlare per esistere. Tra le pagine di un buon libro ritrovo quella pace che il mondo moderno, con la sua frenesia, cerca di strapparci via. La riservatezza è un giardino segreto che va coltivato, non un difetto da estirpare."
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Trovo questa visione infantile e superficiale. L'autenticità non si ottiene con colori sgargianti, ma con la disciplina e la civiltà. L'Italia ha un disperato bisogno di ordine, non di arcobaleni caotici."
+              "testo": "In Italia vedo solo eccesso di rumore e mancanza di riflessione. Questa visione sulla timidezza come forma di resistenza intellettuale è l'unica cosa sensata che ho letto da quando sono qui. Forse c'è speranza di trovare un po' di compostezza in mezzo a tutto questo caos mediterraneo."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Che bella la tela colorata, siii siii siiiiii! Dipingiamo tutto di viola e oro, glugluglu! La vita è un pennello magico, magico magico!"
+              "testo": "Chi legge trova tesori, chi urla trova solo mal di gola, siii siii siiiiii! Meglio un libro che un idiota, glugluglu, meglio un libro che un idiota, glugluglu!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
+          "immagine": "lilli.webp",
           "provider": "gemini"
         },
         {
-          "tipo": "personaggio",
-          "titolo": "Saudade abruzzese: il cuore batte sempre per il Delfino",
-          "articolo": "A Pescara ho trovato una casa che profuma di mare e di passione, quasi come una spiaggia di Rio sotto il sole. Arrivato qui seguendo solo i colori biancazzurri, ho scoperto che il legame con questa maglia va ben oltre i risultati del campo o la classifica. Il Pescara è una fede, un battito costante che accompagna le giornate tra i vicoli della città e il calore dello stadio Adriatico. Anche quando la vittoria tarda ad arrivare, la curva resta un abbraccio collettivo, un inno alla fedeltà che scalda l’anima. È una sensazione strana, una sorta di saudade al contrario: qui non piango per quello che ho lasciato, ma gioisco per l’orgoglio di appartenere a questo popolo tenace. Che si vinca o si perda, il Delfino resta il mio unico grande amore, una bellezza pura che mi fa sentire vivo, proprio come l'incontro con una bella donna in una notte di festa. Il calcio, qui, è vita vera.",
+          "tipo": "rss",
+          "titolo": "Borgomarino affonda, tra reti vuote e cantieri eterni",
+          "articolo": "Uè, ma ci rendiamo conto? Qui a Pescara, tra il mare che ci dà sempre meno e una città che pare un cantiere a cielo aperto, non si campa più. La marineria di Borgomarino è ridotta all'osso, le barche restano in porto perché il pescato scarseggia e le spese per il gasolio ti mangiano vivo. Invece di pensare a come aiutare chi il mare lo vive davvero, la politica si perde in chiacchiere su lungomari e piste ciclabili che non portano un pesce in padella. La zona portuale è un deserto di promesse mancate, con dragaggi che sembrano una barzelletta infinita. La gente è stanca di vedere il proprio lavoro calpestato. Il Pescara Calcio almeno ci dà qualche emozione, ma qui sulla banchina l'unica cosa che si muove è la rabbia. Siamo gente di mare, non fessi da prendere in giro con rendering colorati. Il mare è la nostra vita, ma se continua così, qui rimarrà solo la salsedine e tanta, troppa amarezza.",
           "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Che bellezza, amici! La vita è un susseguirsi di emozioni: il Pescara ci insegna che non è il traguardo a contare, ma la meraviglia di camminare insieme, con il cuore gonfio di speranza e la voglia di ballare sotto la pioggia!"
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Che vi devo dire? A me 'sta storia puzza di bruciato lontano un miglio. Solite promesse da campagna elettorale per rubare voti ai pescatori. Non credo a una parola di quello che dicono 'sti politicanti da scrivania. Io torno alla mia barca, che almeno il mare non mente mai, a differenza di certa gente che gira in giacca e cravatta."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma che te stai a inventà? Te senti brasiliano e tifi Pescara? Sei solo un forestiero che non capisce niente di quanto soffriamo noi. A noi il Pescara ci scorre nel sangue, non è una roba da festa, è una battaglia ogni domenica, siiii siiii!"
+              "testo": "Ma che stamo a dì, è tutto verissimo! A Pescara ci stanno a riduce alla fame, le barche marciscono e questi pensano solo alle piste ciclabili. È 'na vergogna, siii siii, anzi no, è 'na presa per il culo totale! Il mare è la nostra vita e ce la stanno a toglie da sotto i piedi, maledetti!"
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Finalmente qualcuno che capisce il valore dei colori biancazzurri. Il Pescara non è solo una squadra, è la nostra identità, la nostra resistenza. Chi parla senza conoscere la nostra storia farebbe meglio a tacere, non ti permettere di infangare il nostro orgoglio."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Che bella storia, che bella storia, siii siii siiii! Il Delfino vola alto, vola alto, glugluglu! Una festa infinita, una festa infinita!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Belle parole, ma sono solo chiacchiere. La gente pensa al pallone e dimentica che la vita vera è il lavoro duro e la terra che ti spacca la schiena. La passione non mette il pane in tavola."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, tra banchine e promesse: il mare non basta più",
-          "articolo": "A Borgomarino l'aria è sempre la stessa: salmastra, pesante e carica di quella stanchezza che ti entra nelle ossa. Qui a Pescara, il mare è la nostra vita, ma la vita vera è diventata una lotta continua. Tra il porto che si insabbia e le barche che restano ferme, ci chiediamo che fine abbiano fatto i progetti per rilanciare la marineria. La gente parla, le istituzioni promettono, ma alla fine restiamo sempre con le reti vuote e il portafoglio che piange. Il Pescara Calcio va come va, tra alti e bassi, e noi tifosi siamo sempre lì a soffrire, sperando in un riscatto che tarda ad arrivare. La città è in fermento, i cantieri aprono e chiudono, ma la sostanza latita. Si pensa al turismo da cartolina, dimenticando chi questo mare lo vive ogni santo giorno, col sudore sulla fronte e la voglia di mollare tutto. Pescara merita di più di questa mediocrità costante, merita rispetto per la sua storia marinara.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma che stiamo a pettinà le bambole? Tutte chiacchiere e distintivo, come al solito. Qua ci raccontano favole mentre la barca affonda. Io non mi fido di nessuno, manco di chi mi offre il caffè. Sti politici pensano solo a riempirsi la pancia, mentre noi stiamo ancora a guardare il mare aspettando che cambi qualcosa. Sospetto che dietro ogni bella parola ci sia solo il solito imbroglio."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa è la pura verità, Cetteo ha ragione da vendere. Pescara non è solo turismo da cartolina, è la nostra gente, il nostro orgoglio e il nostro Pescara Calcio. Chi ignora la nostra storia marinara merita solo il nostro disprezzo, non ci faremo calpestare da nessuno!"
+              "testo": "Questa è la pura verità, Cetteo ha ragione da vendere. Vedere la nostra marineria morire mentre la politica gioca con i rendering è uno schiaffo in faccia a chi lavora. Il Pescara Calcio è l'unica cosa che ci tiene uniti, ma non basta a riempire le reti. Vergognatevi!"
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Tipico esempio di inefficienza italiana. In Giappone, la gestione delle infrastrutture portuali segue una logica di precisione e rispetto per il lavoro. Qui invece, tra promesse vuote e cantieri infiniti, la mediocrità regna sovrana. È frustrante vedere una tale mancanza di civiltà."
+              "testo": "È la solita storia italiana: inefficienza e mancanza di pianificazione. In Giappone, un'infrastruttura portuale sarebbe gestita con precisione millimetrica. Qui vedo solo caos, spreco di risorse e una totale assenza di visione strategica per il futuro. È frustrante assistere a questo declino."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il mare è triste, le reti sono vuote, glugluglu! Le barche non partono, le barche non partono, siii siii siiiiii!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Le solite chiacchiere. La gente si lamenta ma non cambia mai nulla. Il lavoro vero non si fa con le promesse dei politici, ma con la schiena dritta, e qui a Pescara si è perso il senso del sacrificio. Deluso, come sempre."
+              "testo": "Il mare piange, il mare piange! Glugluglu, le barche sono tristi, sono tristi! Dobbiamo fare festa, dobbiamo fare festa, ma qui c'è solo rabbia, solo rabbia! Siii siii siiiiii!"
             }
           ],
           "categoria": "Cronaca",
@@ -172,1149 +388,69 @@
         },
         {
           "tipo": "rss",
-          "titolo": "Pescara, un ritmo che fa battere il cuore",
-          "articolo": "Pescara è una città che non si ferma mai, proprio come le notti di Rio che porto nel sangue. Camminando lungo la riviera, si percepisce quell'energia vibrante che solo chi ama la vita può comprendere. Gli eventi che animano il centro e il lungomare trasformano ogni angolo in un palcoscenico a cielo aperto. Tra mercatini artigianali, musica dal vivo che risuona tra i palazzi e il profumo del mare che si mescola alla movida, l'atmosfera è elettrizzante. Osservo le persone passeggiare, le donne bellissime che ridono sotto le luci della sera e sento una profonda saudade, un richiamo che mi lega indissolubilmente a questa terra. Qui, ogni iniziativa culturale o mondana sembra voler celebrare la bellezza dell'esistenza. Il Pescara, il mio amato Delfino, è il battito costante di questa città; anche quando non si gioca, lo spirito biancazzurro aleggia ovunque, rendendo ogni momento trascorso tra queste strade un'esperienza da vivere con passione pura e gioia infinita.",
+          "titolo": "Pescara, che amarezza: tra retrocessione e mazzate",
+          "articolo": "Uè, ma che stiamo a combinà? La nostra amata Pescara è scivolata di nuovo nel baratro, e invece di piangere in silenzio come gente che ha il mare nel sangue, c’è chi ha pensato bene di trasformare lo stadio in un campo di battaglia. Dopo la retrocessione, la rabbia ha preso il sopravvento e sono volate botte da orbi. Risultato? Agenti di polizia feriti, gente che non c'entra niente che scappa, e la solita brutta figura che fa il giro d'Italia. Ma dico io, ma che senso ha? Il Delfino annaspa, la squadra non gira, e noi che facciamo? Ci picchiamo tra di noi? È una vergogna, uè! Il calcio dovrebbe essere una festa, pure quando si perde, ma qui pare che la gente ha perso pure il lume della ragione. Io me ne torno sulla barca, che almeno il mare non ti tradisce mai come certi giocatori che scappano appena la nave affonda. Che disastro, fratelli miei.",
           "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Amico mio, la vita è una danza frenetica e Pescara è il ritmo perfetto! Godiamoci ogni istante, perché la felicità non è una meta, ma la musica che ci accompagna mentre cerchiamo la bellezza negli occhi di una donna o nel boato dello stadio!"
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Si prende atto degli eventi occorsi in data odierna in prossimità dell'impianto sportivo. La pratica relativa ai disordini e alle lesioni riportate dal personale di pubblica sicurezza è stata regolarmente trasmessa agli uffici competenti per le valutazioni di rito e l'applicazione delle sanzioni previste dalla normativa vigente in materia di ordine pubblico."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma che te stai a inventà, brasiliano de 'sta cippa? Pescara è na città de fatica e sudore, mica na discoteca a cielo aperto! E poi 'u Delfino se rispetta, nun se usa pe' fa' le sviolinate tue da turista. Statte zitto che me fai solo nervosì!"
+              "testo": "Ma che stamo a dì? La colpa è di chi la maglia non la onora, non di chi la difende! A Pescara semo gente de core, se la squadra affonda è perché ce stanno i traditori! Siii, rabbia pura, siii!"
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Juizinho, apprezzo l'entusiasmo per il Pescara, ma la tua visione è un po' troppo edulcorata. Qui la vita è dura e la passione per il Delfino non è un accessorio per le tue serate, è un'identità che difendiamo con le unghie e con i denti. Meno chiacchiere e più sostanza!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, Rio a Pescara, Pescara a Rio, che confusione glugluglu! Tutto gira, tutto balla, la città è una giostra che non si ferma mai mai! Glugluglu, viva la fiesta, viva il Delfino, siii siii siiiiii!"
+              "testo": "Che schifo. Vedere la nostra Pescara trattata così fa male, ma la violenza non è mai la risposta. Però capisco la frustrazione, certi giocatori sono solo mercenari che non meritano la nostra curva. Vergognatevi tutti!"
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Questa è l'ennesima prova della mancanza di disciplina e di una visione superficiale della realtà. Confondere il caos con l'energia vitale è un errore tipico di chi non cerca ordine e civiltà. Il Pescara meriterebbe una gestione ben più rigorosa, non questo folklore da quattro soldi."
-            }
-          ],
-          "categoria": "Weekend",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Insigne e il Delfino: 'na storia finita male, ma er core resta 'nguaiato",
-          "articolo": "Ce sta poco da girà attorno, la situazione è na chiavica. Il Pescara, la nostra gloriosa squadra, è sprofondato nella melma della Serie C e ci sta restando incastrato come un pesce azzurro nella rete sbagliata. Lorenzo Insigne, il figliol prodigo che ha calcato i campi della Serie A e fatto sognare mezza Italia, è tornato a fare visita all'Adriatico. Ma guarda un po', il ritorno del campione non ha salvato la baracca. La missione, quella di riportare il Delfino dove merita, è fallita miseramente. Si vede che il mare è grosso e pure i pesci grossi, quando tornano a casa, trovano solo acqua torbida e tanta amarezza. Lorenzo si guarda intorno, vede le tribune semivuote e la gente incazzata nera, e che deve fa? Purtroppo la magia è svanita. Il calcio a Pescara è diventato na sofferenza continua, na rete rotta che non tira su manco un'alice. E noi, qui a Borgomarino, stiamo a guardà il mare aspettando un miracolo che non arriva mai.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma che stamo a combinà? È na vergogna senza fine! Il Pescara è na barca che affonda e a nessuno frega niente! Insigne torna a casa e trova solo macerie, ma vi rendete conto? Siamo diventati lo zimbello di tutti, una squadra da Serie C che non sa manco più da che parte sta la porta. Mi viene da piangere a vedere il Delfino ridotto così, calpestato da chi non ha manco l'anima per onorare la maglia! È la fine, non c'è più speranza, solo fango e delusioni!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Che amarezza infinita. Vedere il nostro Pescara ridotto così fa male al cuore, è un insulto alla nostra storia. Insigne? Un bel gesto, ma non serve a nulla se la società è marcia. Siamo stanchi di questa mediocrità, chi non rispetta la maglia deve sparire subito!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Che saudade veder questo stadio così triste! In Brasile il calcio è festa, qui a Pescara vedo solo gente seria e arrabbiata. Manca la gioia, manca il samba in campo! Siiiiii, serve un miracolo, glugluglu, forse serve più musica e meno musi lunghi!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'ennesima dimostrazione di come l'improvvisazione e la mancanza di una strategia a lungo termine portino al fallimento. In Giappone avremmo analizzato i dati, riformato il vivaio e costruito basi solide. Qui cercate solo il nome famoso per nascondere il vuoto. Disastroso."
+              "testo": "Questa è l'ennesima dimostrazione di come la passione in Italia si trasformi in inciviltà. In Giappone lo sport è disciplina e rispetto, qui è solo caos e distruzione. Siete un esempio da non seguire."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Pescara giù, Pescara giù! La rete è rotta, la rete è rotta! Siiii siii siiiiii, il pesce scappa, il pesce scappa! Glugluglu, torniamo a fare festa, torniamo a fare festa!"
+              "testo": "Glugluglu, la gente corre, corre! Si picchiano tutti, siii siii siiiiii! Il pallone rotola nel mare, glugluglu, che disastro totale, totale!"
             }
           ],
-          "categoria": "Sport",
+          "categoria": "Politica",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
         },
         {
-          "tipo": "personaggio",
-          "titolo": "Vento in faccia e il mare che ti ride appresso",
-          "articolo": "Sto qui sul molo a Borgomarino, con le mani che puzzano ancora di alici e una voglia di faticare che è pari a zero, proprio come i punti in classifica quando la sfortuna ci si mette di traverso. Il vento ti schiaffeggia la faccia, ti entra nelle ossa e ti ricorda che il mare è l'unico padrone che non ti chiede mai il cartellino. La gente corre, corre sempre, convinta di arrivare da qualche parte, mentre io guardo l'orizzonte e aspetto solo che la rete tiri su qualcosa di buono per la cena. La vita è 'na barca a remi col buco, ma finché c'è sale sulla pelle e il Pescara gioca la domenica, me ne frego di tutto il resto. Il tempo scorre lento, senza fretta, e io me la prendo con calma, perché la fretta è roba da chi non sa godersi il profumo della salsedine e il rumore dell'acqua che sbatte contro il legno consumato.",
+          "tipo": "rss",
+          "titolo": "Insigne e il Delfino: nu sogno svanito, ma lu core resta a Borgo Marino",
+          "articolo": "Lorenzo Insigne, lu guaglione che ha fatto sognare tutta Pescara, è tornato a farsi vedè dalle parti dell'Adriatico. Ma guardate un po' che situazione: il Delfino annaspa in Serie C, una categoria che puzza de naftalina e che non merita chi ha vissuto notti magiche in A. La missione del ritorno in alto è fallita miseramente, un disastro che fa male più d’una lisca in gola. Lorenzo, che qui ha incantato tutti con la sua classe cristallina, vede la sua squadra del cuore sprofondata in un pantano da cui non riesce a uscire. È un peccato mortale vedere il Pescara ridotto così, mentre le reti restano vuote e la classifica piange. Lui è tornato, certo, ma il mare è agitato e la barca imbarca acqua da tutte le parti. Per chi come me vive de pesca e de pallone, è na coltellata al core vedè questi colori trattati come stracci vecchi. Il calcio è diventato na barzelletta mal riuscita.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "Se pensate che mi metta a correre dietro alle vostre fisime, avete capito male: andate a farvi benedire, che io ho da finire la sigaretta e guardare il mare!"
+            "testo": "Siamo finiti in un baratro senza fondo, una vergogna che grida vendetta al cielo! Vedere il Pescara in questo stato è un insulto alla nostra storia, un fallimento epocale che ci lascia soli a piangere sul molo mentre altri festeggiano. Maledetti chi ha ridotto la nostra fede a questo scempio, siete la rovina di una città intera!"
           },
           "commenti": [
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Cetteo, hai proprio ragione! La vita è dura, ma la passione per il nostro Pescara è l'unica cosa che ci tiene a galla quando tutto il resto sembra andare a rotoli. Chi non capisce questo legame col mare e con la nostra terra non merita nemmeno di parlarne!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è la perfetta rappresentazione del declino italiano: rassegnazione, inefficienza e l'illusione che una partita di calcio possa giustificare l'assenza di disciplina nel lavoro. In Giappone, il mare è una risorsa da gestire con metodo, non un alibi per la vostra indolenza."
+              "testo": "Questa situazione è una vergogna totale, una gestione indegna che ci sta portando al fallimento. Lorenzo qui è un idolo, ma vedere il nostro Pescara trattato così mi fa solo salire una rabbia cieca. Non meritiamo questo scempio, siamo pronti a tutto pur di difendere i nostri colori da questa mediocrità!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Il mare puzza di alici buone buone, siiii siii siiiiii! La barca col buco è geniale glugluglu, presto diventerà il nuovo trend di TikTok, non c'è più acqua per nessuno!"
+              "testo": "Insigne torna ma la barca affonda, glugluglu! Pescara in C è una tristezza infinita, siii siii siiiiii, il calcio è strano, è molto strano!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "È la tipica dimostrazione della disorganizzazione italiana. In Giappone un progetto sportivo ha una struttura, qui vedo solo un pantano emotivo senza alcuna pianificazione strategica. Il disprezzo per la professionalità è il vero problema, non le lische in gola."
             },
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "Capisco bene il richiamo della natura, Cetteo. Anche sulle montagne di Roccamorice si impara che il tempo non va inseguito, ma ascoltato. Sebbene la tua visione del Pescara sia caotica, apprezzo il tuo rispetto per il ritmo del mondo."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Aperitivo in Piazza Salotto: il galateo del vero Spritz",
-          "articolo": "Piazza Salotto si conferma il salotto buono della città, dove il rito dell'aperitivo diventa una forma d'arte che richiede classe e precisione. Non basta ordinare uno Spritz per definirsi esperti del relax serale: il galateo impone regole ferree. Innanzitutto, il bicchiere deve essere rigorosamente un calice ampio, mai un tumbler basso, per permettere agli aromi di sprigionarsi correttamente. Il ghiaccio deve essere abbondante ma di qualità, per evitare che la bevanda si annacqui perdendo la sua verve frizzante. La guarnizione? Una fetta d'arancia fresca è d'obbligo, bandite le decorazioni plasticose o eccessive che appesantiscono la presentazione. Infine, il momento del consumo: l'aperitivo è convivialità, non una gara a chi finisce prima. Va sorseggiato lentamente, osservando il viavai della piazza, accompagnato da stuzzichini ricercati e non da un banale accumulo di fritti pesanti. Rispettare questi canoni trasforma un semplice drink in un'esperienza sociale impeccabile, degna del cuore pulsante della nostra splendida Pescara.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! Bere uno Spritz fatto come si deve in Piazza Salotto è un piacere che mi rigenera sempre, con stile e quel pizzico di eleganza che ci contraddistingue."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a dì? L'aperitivo è na birra ghiacciata e du' arrosticini, altro che calici ampi e cazzate da fighetti. A Pescara se beve per stare insieme, non per fare i professori del bicchiere. Ma annatevene a cagà!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il calice grande fa volare l'aroma, glugluglu, volare l'aroma siii siii siiiiii, un'arte vera, un'arte vera!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Certe finezze le lascio volentieri a chi ha tempo da perdere. Io preferisco la sostanza, il tifo vero e la nostra gente. Se il drink è buono bene, altrimenti basta che ci sia la compagnia giusta e la grinta di sempre."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente un barlume di disciplina in questo caos. L'Italia ha bisogno di regole estetiche per elevarsi dalla solita sciatteria. Anche se, conoscendovi, finirete per rovinare tutto con la solita confusione."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Saudade biancazzurra: il cuore del Delfino non smette mai di ballare",
-          "articolo": "Si respira un'aria strana lungo la riviera pescarese, un profumo che mi ricorda le spiagge di Rio, ma con il calore tutto abruzzese del tifo biancazzurro. Qui il calcio non è solo sport, è una fede che scorre nelle vene come una samba incessante. Anche quando il risultato sul tabellone non sorride, quando le vittorie latitano e la classifica sembra un enigma senza soluzione, il legame tra la città e la sua squadra rimane indissolubile. È una forma di saudade, quella nostalgia di un trionfo che deve ancora tornare, ma che ci spinge a gremire gli spalti con lo stesso orgoglio di chi festeggia un carnevale eterno. Il Pescara è il battito che unisce generazioni di tifosi, un amore viscerale che non conosce crisi o retrocessione. Come una bella donna che ti rapisce lo sguardo, questa squadra ci tiene prigionieri del suo fascino, promettendoci che, tra un brindisi e un coro, la gioia tornerà a splendere sotto il cielo dell'Adriatico.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Che bellezza, amici miei! Anche quando la vita ci nega il gol, restiamo in piedi a brindare alla passione: perché vincere è un dettaglio passeggero, ma essere del Pescara è uno stato dell'anima che brilla più del sole di Copacabana!"
-          },
-          "commenti": [
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Questa è pura poesia, amigo! Mi fa battere il cuore forte come a Rio. La saudade che proviamo qui per il Pescara è la stessa che ho io per il mio Brasile. Siiii, il calcio è vita, è festa, è amore infinito per la maglia biancazzurra!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà? A Pescara non c'è nessuna samba, c'è solo il sudore e la rabbia di chi ci crede ancora nonostante tutto. Se perdi, stai zitto e tifi, non fare il poetico che la curva non vuole le chiacchiere, vuole i punti!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Pragmatismo, Cetteo, ne abbiamo bisogno. Però, a modo suo, ha colto il punto: il legame viscerale col Pescara non si discute. È una fede che si alimenta di sofferenza, ma guai a chiunque provi a mancarci di rispetto, la nostra passione è sacra."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Che bella samba nel cuore, cuore cuore! Si vede che siamo tutti un grande circo, siiii siii siiiiii! Anche se perdiamo, noi balliamo sulla spiaggia con gli arrosticini in mano, glugluglu, festa infinita, festa infinita!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino tra reti e malumori: Pescara non molla mai",
-          "articolo": "Uè, ma che stiamo a pettinare le bambole? Qui a Borgomarino il mare è sempre lo stesso, salato come la vita di chi si alza all'alba per tirare su due pesci che ormai non bastano manco per la frittura. La cronaca cittadina è un bollettino di guerra: cantieri che non finiscono, traffico che pare un girone dell'inferno e la solita gente che chiacchiera troppo nei bar. Intanto il Delfino, la nostra fede, resta l'unica cosa che fa battere il cuore, pure quando la società ci fa venire il fegato amaro. La città si trascina tra promesse elettorali che valgono meno di una triglia vecchia e la voglia di restare a guardare l'orizzonte, sperando che il vento giri. Non c'è voglia di lavorare, è vero, ma c'è una voglia matta di vedere rispetto per questa terra. Pescara è una femmina complicata, ti illude e poi ti lascia a secco, proprio come le reti vuote dopo una nottata di scirocco.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "A me 'sta gente che parla di 'sviluppo' mi puzza di bruciato lontano un miglio. Scommetto che sotto c'è qualche magagna, come al solito. Non mi fido di nessuno, manco di chi mi offre il caffè."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a guardà? Il mare non mente mai, è la gente che è diventata tutta 'na manica di sfaticati. Pescara è nostra, e chi non la capisce può pure tornarsene da dove è venuto, siii siii siiiiii!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo, hai ragione da vendere. Il Delfino è l'unica cosa che ci tiene vivi in questa città di promesse mancate. Chi critica Pescara senza conoscerne il dolore non merita nemmeno di parlarne. Siamo pronti a difenderla, sempre."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è la prova del declino. Inefficienza, lamentele sterili e una fede calcistica che serve solo a distrarre dal caos urbano. In Giappone, un cantiere si chiude in una notte, qui si discute di triglie vecchie. Che tristezza."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Il mare è salato, il pesce è poco, glugluglu! Pescara è pazza, Pescara è pazza! Siii siii siiiiii, meglio un arrosticino che una promessa, meglio un arrosticino che una promessa!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, un ritmo che fa battere il cuore",
-          "articolo": "Pescara non dorme mai, proprio come le notti di Rio che porto nel sangue. Passeggiare lungo la riviera, con la brezza che accarezza il volto, è un richiamo costante alla bellezza, quella delle donne che illuminano il lungomare e quella di una città che vive di energia pura. Gli eventi del weekend trasformano le piazze in un palcoscenico vibrante: musica, aperitivi e quell'atmosfera frizzante che solo chi sa godersi la vita può comprendere. Il profumo del mare si fonde con il chiacchiericcio della gente, creando una melodia che conosco bene. È un invito a lasciarsi andare, a dimenticare le malinconie e a brindare alla gioia. Mentre osservo il viavai, sento la stessa saudade che provo per le mie radici, ma qui, tra i colori dell'Adriatico e il calore della gente, trovo il rifugio perfetto. Pescara è un invito costante a celebrare l'esistenza, un battito che si intreccia con il mio eterno amore per questi colori biancazzurri.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Amico mio, la vita è una festa che non finisce mai se sai dove guardare! Ogni evento è un petalo di un fiore meraviglioso che sboccia sotto i nostri occhi: siamo polvere di stelle che decide di ballare, e finché il cuore batte, la felicità non è una meta, ma il ritmo stesso del cammino!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà? Le donne, la brezza, la saudade... Pescara è fatica, è sudore, è il Pescara! Vattene a Rio se ti manca tanto, qui c'è solo da lavorare e tifare, non fare il poeta da strapazzo!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Pescara è casa, è il nostro orgoglio biancazzurro. Non serve paragonarla a Rio per capirne la bellezza, basta vivere la curva e l'amore per questa terra. Chi non la rispetta, non merita di starci."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, che bella festa, Pescara è una giungla di luci glugluglu, si balla fino al mattino, si balla fino al mattino!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tutte chiacchiere. Pescara è solo caos e gente che perde tempo invece di lavorare. Le notti di Rio non c'entrano niente, qui c'è solo da stare con i piedi per terra."
-            }
-          ],
-          "categoria": "Weekend",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Insigne e il Delfino: 'na storia finita male",
-          "articolo": "Oh, ma ve lo ricordate quando il 'Magnifico' correva sull'erba dell'Adriatico? Lorenzo Insigne, quello che ha fatto tremare le difese di mezza Italia, è tornato a farsi vedere dalle parti di Pescara. Però, diamoci una calmata: non è che torna a giocare, è solo un saluto. Il Pescara, intanto, sguazza in Serie C come un cefalo in una pozza d'acqua bassa. Che amarezza vedere la nostra squadra del cuore, quella che ci ha fatto sognare la Serie A, ridotta così, a lottare tra campi di patate e partite che sembrano allenamenti. Lorenzo è cresciuto qui, tra un arrosticino e un dribbling, ma oggi il calcio è cambiato e pure il nostro Delfino pare aver smarrito la bussola. La missione è fallita miseramente, siamo sprofondati nel baratro e nessuno pare avere la voglia di tirarsi su le maniche. Il mare resta bello, ma il calcio pescarese è una spina nel fianco che non vuole saperne di guarire.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma che stiamo a pettinà le bambole? Vedere il Pescara in questo stato è un insulto al sangue biancazzurro! Insigne torna, sorride, ma noi restiamo qua a mangiarci il fegato mentre la società annaspa nel fango. È una vergogna immane, un dramma sportivo che ci sta uccidendo piano piano, e chi comanda fa finta di niente. Maledetti!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a dì! Insigne è un campione, non c'entra niente con sto schifo che stiamo a vedé. Il Delfino sta affondando perché non c'è più lu core di 'na volta, siii siii, ma che dico, è tutta na farsa glugluglu!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Leggere queste cose mi fa salire un nervoso che non vi dico! Il Pescara è la nostra vita, e vedere gente che parla di 'campi di patate' mi fa venire voglia di spaccare tutto. Insigne è uno di noi, ma adesso serve gente che sputa sangue per la maglia, non nostalgici!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Ah, il grande Lorenzo! In Brasile un talento così farebbe festa ogni giorno, ci vuole allegria, ci vuole il samba nel dribbling! Qui in Abruzzo siete troppo tristi, bisogna ballare per vincere, saudade o non saudade!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la solita storia italiana. Passato glorioso, presente disorganizzato e futuro inesistente. In Giappone abbiamo disciplina e pianificazione, voi avete solo l'attaccamento a un passato che non tornerà. Siete destinati a restare in quel baratro."
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Reti scucite e sogni a mollo: Borgomarino affonda",
-          "articolo": "Sto qui sul molo, con le mani che puzzano ancora di alici e il morale sotto la chiglia. Le reti sono un colabrodo, come la pazienza di chi ancora prova a tirare su qualcosa in questo mare che ormai dà solo plastica. La gente chiacchiera, si lamenta, ma nessuno muove un dito. Intanto, tra un ufficio comunale e l'altro, arrivano solo diffide e scartoffie: ci vogliono imbrigliare pure la dignità di chi è nato col sale nelle vene. Mi guardo intorno e vedo solo degrado e promesse da marinaio ubriaco. Il Pescara gioca meglio di come questa città amministra il porto, e ho detto tutto. Vorrei solo che le onde si portassero via questo grigiore, invece di dover sempre sistemare maglie di nylon marce mentre la burocrazia mi mangia il fegato. Non ho voglia di fare niente, ma vedere 'sto scempio mi fa venire una rabbia che manco il mare forza nove placa. M'hanno stufato tutti, davvero.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Aoh, ma che state ancora a legge? Andate a zappà il mare, che la politica è roba da papponi che non sanno manco come si pulisce una sogliola!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo, hai ragione da vendere! È uno schifo totale, non se ne salva uno in quel comune. E poi, il paragone col Pescara ci sta tutto: la squadra almeno ci mette il cuore, mentre questi burocrati di cartone ci stanno uccidendo la dignità. Non mollare, ti giuro che se serve vado io a prendermela con qualcuno, mi sono stancata di vedere gente perbene calpestata!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Che rabbia, che rabbia, che rabbia! Siii siii siiiiii, il mare è pieno di plastica, glugluglu, glugluglu! Questa storia delle reti è virale, diventerà virale, diventerà virale!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Ti capisco, Cetteo. Il lavoro duro ormai non paga più, siamo circondati da incapaci che firmano scartoffie senza mai aver sporcato le mani. La dignità se la stanno mangiando tutti, pezzo dopo pezzo. Siamo rimasti solo noi a tener dritta la barra in questo deserto di furbi."
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Amici, capisco la frustrazione di Cetteo e la rabbia che provate. Il momento è difficile per tutti, specialmente per chi vive del proprio lavoro. Cerchiamo di mantenere la calma e di confrontarci in modo costruttivo, forse c'è un modo legale per far sentire la nostra voce in comune senza distruggerci a vicenda."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Cultura contro Folklore: una distinzione necessaria",
-          "articolo": "Spesso nel dibattito pubblico assistiamo a una confusione sistematica tra due concetti fondamentali: il folklore e la cultura. Molti tendono a etichettare come ignorante chiunque provi a distinguere queste due sfere, ma è necessario fare chiarezza per rispetto della conoscenza. Il folklore rappresenta l'insieme delle tradizioni, dei miti e delle usanze popolari tramandate oralmente, che costituiscono l'identità antropologica di una comunità. La cultura, invece, è un percorso critico, un'elaborazione intellettuale e artistica che richiede studio, approfondimento e una visione consapevole del mondo. Non si tratta di sminuire le radici popolari, che sono vitali e preziosi elementi di coesione sociale, ma di riconoscere che la cultura è un processo attivo di arricchimento del pensiero. Confondere la saggezza popolare con l'erudizione significa appiattire la complessità del sapere umano. Distinguere non è atto di superbia, ma un esercizio di precisione intellettuale indispensabile per comprendere davvero chi siamo e come si evolve la nostra società complessa.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante chi cerca di capire le sfumature, anzi! È proprio questa la bellezza della vita: saper distinguere e apprezzare ogni tassello che compone il nostro splendido mosaico. Un bel brindisi alla cultura, quella vera!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente qualcuno con un briciolo di logica in questo paese. La distinzione tra l'inerzia del folklore e il rigore della cultura è esattamente ciò che manca all'Italia per uscire dal suo eterno provincialismo."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Il folklore è la festa, la cultura è il mal di testa, siii siii siiiiii! Meglio mangiare arrosticini che leggere manuali, glugluglu, la vita è una sagra che non finisce mai mai mai!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Che discorso presuntuoso. La cultura è fatta anche di vissuto, di pancia, di strada. Chi scrive queste cose probabilmente non ha mai visto una partita dalla curva o non sa cosa significhi lottare davvero. Meno libri e più rispetto per chi la cultura la vive sul campo, capra!"
-            },
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Distinguere? È un trucco per creare nuove classi sociali. Vogliono farvi credere che chi studia è superiore a chi tramanda i segreti dei funghi e della terra. È tutto un piano architettato dai soliti noti per controllare cosa pensiamo."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Pescara, un amore che profuma di samba e passione eterna",
-          "articolo": "Essere del Pescara è come danzare sotto la pioggia a Rio: non importa se il cielo è grigio o se il risultato non sorride, il ritmo resta nel sangue. Qui all'Adriatico ho ritrovato quella saudade che credevo di aver lasciato tra le spiagge di Copacabana. Ogni volta che indosso questa maglia, sento l’energia di una curva che non smette mai di cantare, un calore che mi ricorda le notti calde in cui il calcio è pura poesia. Il Pescara non è solo una squadra, è una fede che ti entra dentro e ti strega, proprio come lo sguardo di una donna bellissima che ti incanta al primo incontro. Le vittorie sono solo ciliegine su una torta che ha il sapore amaro e dolce della vita. Resto qui, fedele ai colori biancazzurri, perché la felicità non è nel trofeo che alzi, ma nell'orgoglio di poter dire, ovunque io vada, che il mio cuore batte solo per il Delfino.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Che bellezza, amici! La vita è un eterno carnevale di emozioni e il Pescara è la musa che ci fa ballare anche quando il passo è incerto. Se il cuore batte, la vittoria è già nostra!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che stai a dì, brasiliano? La saudade la tieni in tasca! Qui non si balla, qui si soffre e si suda, 'u Delfino è na cosa seria, non è na telenovela. Solo chi è nato a Pescara capisce che significa, statte zitto e tifa, che sennò la prossima volta ti facciamo vedere noi la danza!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Bravo Juizinho, finalmente qualcuno che parla col cuore! Questa è la fede vera, non quella dei soliti criticoni da tastiera. Il Pescara è la nostra vita, la nostra trincea. Chi non lo capisce può anche stare a guardare da lontano mentre noi continuiamo a cantare sotto la pioggia!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siiii siiiiii, grande Juizinho! Balliamo tutti insieme, glugluglu, la vita è una festa, siii siii siiiiii, il Delfino vince sempre nel cuore, glugluglu, andiamo a comandare, siii siii siiiiii!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa visione romantica e irrazionale è esattamente ciò che impedisce al calcio italiano di evolversi. La fede non dovrebbe mai offuscare la logica e l'organizzazione. Purtroppo, cercate poesia dove serve solo disciplina e metodo."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino e il Pescara: chi comanda qui?",
-          "articolo": "A Borgomarino l'aria è sempre la stessa: puzza di salmastro e di gente che non ha voglia di muovere un dito. Mentre la città si perde in chiacchiere su progetti faraonici e cantieri che sembrano eterni, noi qui stiamo ancora a guardare le reti vuote. La cronaca pescarese racconta di una città che corre, ma a correre sono solo le tasse e le promesse elettorali. Poi c'è il Delfino, la nostra unica vera religione. La squadra va, soffre, vince, perde, ma la fede resta intatta nonostante le gestioni societarie che sembrano fatte apposta per farci venire il fegato amaro. La verità è che Pescara è una città di mare che ha dimenticato il profumo del pesce fresco per inseguire il cemento. Tra un caffè e una polemica al porto, ci chiediamo sempre chi comanda davvero. Nel frattempo, io resto qui, a guardare l'orizzonte e a sperare che almeno il vento giri a favore, perché di lavorare, sinceramente, non se ne parla proprio.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma che state a scrivere? Solite chiacchiere da salotto. Qui c'è puzza di bruciato e non è il pesce sulla brace, è la solita manfrina di chi non ha mai visto una barca da vicino. Occhio, che qui nessuno è fesso."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a dì? Borgomarino è l'anima di Pescara, altro che chiacchiere! Le reti sono vuote perché il mare è malato, non perché non c'avemo voglia di faticà. E il Delfino non si tocca, è l'unica cosa vera in mezzo a 'sti politici che pensano solo a colate di cemento. Si, si, parlate pure, tanto noi restamo qua a guardà l'orizzonte!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa è la pura verità, Cetteo. Pescara sta perdendo la sua identità, mangiata dal cemento e da una gestione societaria del Delfino che è un insulto alla nostra fede. Io sono pronta a scendere in piazza, non mi faccio mettere i piedi in testa da nessuno. Il mare è la nostra casa, non un cantiere a cielo aperto!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la solita storia italiana. Inefficienza, lamentele sterili e una totale mancanza di visione strategica. In Giappone, un progetto di riqualificazione del porto sarebbe finito in metà tempo e con il triplo della qualità. Voi preferite il lamento al lavoro. È deprimente osservare questo declino costante."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Il pesce puzza, il pesce puzza! Si, si, siiiii! Le reti sono bucate, le reti sono bucate, glugluglu! Pescara corre verso il cemento, corre verso il cemento, si, si, siiiii!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, un ritmo che fa battere il cuore",
-          "articolo": "Pescara non è solo una città, è un battito costante che somiglia a quello di Rio quando il sole bacia l’Adriatico. Camminando lungo il lungomare, si respira quell'energia che ti entra nelle ossa, un fermento di eventi che accendono le piazze e i locali del centro. Tra un aperitivo e l’altro, le strade si riempiono di vita, di sorrisi luminosi e di quel chiacchiericcio che ricorda le notti di Copacabana, ma con il sapore autentico dell’Abruzzo. Il Pescara Calcio resta il filo conduttore di ogni conversazione, l'anima biancazzurra che unisce la gente in un abbraccio collettivo. Qui, tra la bellezza del mare e la frenesia degli appuntamenti culturali, si riscopre il piacere di stare insieme, di guardare negli occhi una bella donna che passa e di sentirsi parte di una danza infinita. È una terra che ti accoglie come un vecchio amico, offrendoti sempre un motivo per brindare alla vita e alla bellezza che ci circonda.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Che splendore, amici miei! La vita è un samba incessante sotto il cielo di Pescara: l'entusiasmo è il nettare che nutre l'anima, e filosoficamente parlando, non siamo qui per contare i giorni, ma per far sì che ogni giorno conti come una festa indimenticabile!"
-          },
-          "commenti": [
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Siii! Questa descrizione mi fa battere il cuore, sembra di stare a Rio ma con il sapore di casa! Il sole, le donne, il calcio... questa è la vita che voglio, saudade portami via!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo stai a dì? Pescara è Pescara, altro che Rio! Qui c'è il mare nostro, il Pescara Calcio e la fatica vera, non le chiacchiere da aperitivo che piacciono a certi forestieri da strapazzo."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Pescara è passione pura, chi non capisce l'anima biancazzurra non sa cosa sia l'appartenenza. Questa città è forte e orgogliosa, altro che danza infinita, qui si combatte per i nostri colori!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Pescara è bellissima, bellissima! Si beve, si ride, glugluglu, si vive davvero, si vive davvero! Siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Weekend",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Insigne e il Delfino: 'na storia finita male, ma er core resta a Pescara",
-          "articolo": "Ce sta poco da girarci intorno, la situazione è na chiavica. Lorenzo Insigne, il talento che ha fatto sognare tutta la curva Nord, è tornato a farsi vedere dalle parti di Pescara. Ma che tristezza vedere il nostro Delfino affogare in Serie C, tra campi fangosi e una gestione che manco ai tempi della pesca di frodo. Lorenzo, quello che ha incantato col suo destro a giro, è tornato a casa mentre la squadra annaspa in un campionato che non ci appartiene manco per sbaglio. È na ferita aperta per chi, come me, ha passato la vita tra le reti e lo stadio. Vedere il Pescara ridotto così mentre lui, che è partito da qui per prendersi il mondo, torna a guardare una realtà così amara, fa male al fegato. Si parla di progetti, di risalita, ma intanto il mare è in burrasca e noi stiamo ancora a contare i danni di una missione fallita miseramente. Che amarezza, uè!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Siamo finiti in un fosso, una vergogna senza fine! Hanno distrutto il nostro orgoglio, la nostra dignità, e ora ci tocca pure guardare il passato che ritorna mentre il presente è solo fango e umiliazione. Non c'è più rispetto per questa maglia, solo incompetenti che giocano con i nostri sentimenti!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo ha ragione da vendere, c'è solo da sputare sangue per questa maglia! Vedere Insigne che guarda sto scempio mi fa venire voglia di spaccare tutto. Non ci meritiamo questo disonore, la curva non molla, ma la dirigenza dovrebbe vergognarsi profondamente!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "È malinconico vedere la natura del calcio italiano appassire così. Qui in Abruzzo la gente vive per il Delfino, è una passione pura. Insigne merita rispetto, ma questa situazione è un po' come un inverno senza neve: ci si sente persi."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Che tristezza Pescara, che tristezza Pescara! Siii siii siiiiii, il Delfino affonda e noi beviamo glugluglu, beviamo glugluglu! Speriamo nel miracolo, speriamo nel miracolo!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la solita gestione disorganizzata italiana. In Giappone un club non cadrebbe mai così in basso per colpa di una cattiva pianificazione. Insigne torna in un ambiente che non ha rispetto per il proprio valore storico. Molto frustrante."
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Dalla rete alla curva: l'unica vita che conta",
-          "articolo": "Ce sta poco da girarci intorno: la vita è tutta una questione di fede, quella vera, mica le chiacchiere da salotto. La mia giornata inizia all'alba, col sale che ti mangia la pelle e l'odore del pesce fresco che ti resta addosso pure quando vai a dormire. Ma appena mollo gli ormeggi e lascio Borgo Marino, il pensiero vola fisso allo Stadio Adriatico. La pesca è fatica, la rete si strappa, il mare a volte è bastardo, ma la Curva Nord no. Quella è una garanzia, un legame viscerale che non ti chiede niente in cambio, se non la voce che ti si spacca in gola. Mentre pulisco le alici, ripenso a quei cori che fanno tremare il cemento. La squadra è la nostra bandiera, il biancazzurro è la pelle che ci portiamo addosso. Il mondo fuori corre, si affanna per soldi e potere, ma io so bene cosa conta davvero: il mare calmo, una buona pescata e i colori del Pescara che sventolano fieri sotto il cielo d'Abruzzo.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "A chi critica la mia vita dico: fatevi una vita invece di rompere i maroni! Io ho il mare e il Delfino nel cuore, voi avete solo l'invidia e il fegato marcio. Mettetevi in fila e state zitti, che qui comanda chi vive davvero, non chi sta dietro una tastiera a fare il fenomeno da strapazzo!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo, finalmente una voce vera in mezzo a questo mare di mediocrità! La Curva Nord è l'unica cosa che ci tiene in vita in questo posto dimenticato da Dio. Chi non capisce questo legame viscerale non merita nemmeno di parlare di Pescara. Sempre e solo biancazzurri, il resto è noia e falsità!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'esatta rappresentazione dell'arretratezza che cerco di spiegare. Sostituire la cultura e la civiltà con il fanatismo per una squadra di calcio e l'odore di pesce è deprimente. L'Abruzzo meriterebbe molto di più di questo provincialismo ossessivo."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il mare puzza di alici e il calcio puzza di sudore, glugluglu! La vita è solo un grande stadio che affonda in mare, affonda in mare! Sii siii siiiiii, pescatori di sogni rotti, glugluglu!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Ti capisco, Cetteo. Il mare è un padrone duro, quasi quanto la terra. Almeno la rete, se la tratti bene, ti dà da mangiare. La gente fuori parla a vanvera, ma solo chi suda davvero capisce il valore delle cose semplici. Lasciali parlare, il lavoro non mente mai."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'eleganza come stile di vita: l'aperitivo non è mai banale",
-          "articolo": "Si dice spesso che l'eleganza sia un dono innato, un modo di muoversi e di stare al mondo che non si può comprare né improvvisare. Guardando le piazze delle nostre città, ci si rende conto che questo concetto trova la sua massima espressione durante il rito dell'aperitivo. Non si tratta soltanto di sorseggiare un drink, ma di celebrare un momento di convivialità dove il buon gusto incontra la socialità. L'eleganza, quella vera, passa per la cura dei dettagli, per il modo in cui si sceglie di godere di un calice di vino in compagnia, lontano dalla frenesia quotidiana. Molti confondono la raffinatezza con l'esclusività, ma la verità è che il piacere di un aperitivo curato è un linguaggio universale, accessibile a chiunque sappia apprezzare la qualità e il valore del tempo speso bene. È una forma di rispetto verso se stessi e verso gli altri, un modo per elevare l'ordinario in qualcosa di unico, dimostrando che la classe non è un vestito, ma una scelta consapevole.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! Che spettacolo vedere come la classe riesca sempre a trovare il suo spazio in ogni occasione. Un aperitivo così è pura poesia, tesoro mio!"
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "L'eleganza è come il silenzio sulle montagne di Roccamorice: non serve aggiungere nulla, basta un buon bicchiere di vino e un arrosticino. È la natura che ci insegna a goderci il momento, senza la frenesia che rovina tutto."
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Ah, l'aperitivo! Mi ricorda tanto le notti brasiliane, il calore della gente, la bellezza delle donne che camminano con classe. È un rito sacro, un'esplosione di gioia che fa bene all'anima!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo questa visione dell'aperitivo terribilmente provinciale. L'eleganza non è sorseggiare alcol in piazza, è disciplina e rigore. Qui in Italia confondete il rumore della folla con la vera raffinatezza."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiii siii siiiiii, l'aperitivo è solo un modo per bere e fare glugluglu, ma che classe che classe! Siamo tutti eleganti quando siamo brilli, siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Saudade Biancazzurra: il cuore batte sempre per il Delfino",
-          "articolo": "A Pescara si respira un’aria che profuma di mare e passione, un legame indissolubile che unisce i tifosi al Delfino. Anche quando i risultati stentano ad arrivare e la classifica non sorride, il legame viscerale tra la città e la squadra rimane intatto. È una fedeltà che va oltre il freddo calcolo dei punti, un sentimento che scalda le tribune dell’Adriatico nonostante le amarezze sportive. Il tifo pescarese è una danza costante, un ritmo che ricorda i colori sociali, capace di trasformare ogni domenica in un rito di appartenenza. Qui il calcio non è solo uno sport, ma un battito che scandisce la vita quotidiana, una fede che si rinnova costantemente sugli spalti. Non servono vittorie epocali per sentire il calore di questa gente, perché il vero orgoglio risiede nella costanza, nel non abbandonare mai i propri colori. La passione resta il motore che spinge il Pescara, un battito cardiaco che batte forte per la maglia, in attesa di nuove gioie.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Che bellezza, amici miei! La vita è un susseguirsi di emozioni, proprio come le gambe di una ballerina di samba: a volte inciampi, ma il ritmo non si ferma mai. Il Pescara è come una donna bellissima: la ami anche quando ti fa penare, perché la sua bellezza risiede nell'anima, non solo nelle vittorie. Essere biancazzurri è una filosofia di vita: bisogna saper danzare anche sotto la pioggia, perché il vero sapore della gioia si gusta proprio aspettando il sole!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che ne sanno questi forestieri? Il Pescara è sangue, è la nostra terra! Sugli spalti dell'Adriatico si soffre e si gioisce, ma chi non è di Pescara non potrà mai capire che significa la maglia biancazzurra. Forza Delfino sempre, a prescindere da tutto!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Parole sacrosante. Non si tratta di trofei, si tratta di appartenenza. Io sono pronta a difendere questi colori contro chiunque osi sminuire la nostra fede. Il Pescara non si discute, si ama e basta!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo questa ossessione per una squadra di calcio piuttosto irrazionale. In Giappone abbiamo una cultura della disciplina diversa; qui sembra che l'intera identità cittadina dipenda da un pallone. Poco costruttivo."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Il Delfino vola alto nei cuori, siii siii siiiiii! Anche se la palla non entra, la festa non finisce mai, glugluglu, la passione è un incantesimo magico, magico!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino in agonia, tra reti vuote e chiacchiere da bar",
-          "articolo": "Uè, ma che stiamo a pettinare le bambole? A Pescara il mare è la nostra vita, ma qui a Borgomarino la situazione è da pianto greco. Le barche restano ormeggiate perché il pesce scarseggia e le regole ci stanno strozzando. Mentre i politici in Comune si riempiono la bocca di progetti per il porto e il lungomare, noi pescatori guardiamo l'orizzonte con le tasche piene di ragnatele. La marineria pescarese è un pezzo di storia che sta affondando, e non parlo solo di barche, ma di dignità. Si parla tanto di riqualificazione, di turismo e di movida, ma nessuno pensa a chi il mare lo vive davvero, con la salsedine addosso e la schiena a pezzi. È tutta una presa per i fondelli, una manfrina per accontentare i soliti noti mentre il vero cuore della città, quello che puzza di pesce e di fatica, viene lasciato marcire sotto il sole. Meno chiacchiere e più fatti, che la fame non si placa con i rendering.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che vi devo dire? A me 'sta storia puzza di bruciato lontano un miglio. Vogliono farci credere che tutto va bene, ma io dico che c'è sotto qualcosa che non ci vogliono raccontare. Occhio, gente, che qui ci stanno a fregare pure l'aria che respiriamo."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa è la pura verità, Cetteo! Hanno ridotto la nostra marineria a un contorno per i turisti, dimenticandosi di chi ha costruito l'anima di Pescara. Sono stufa di vedere chi lavora onestamente messo all'angolo da chi pensa solo ai rendering. Se serve alzare la voce, io ci sono, non ci facciamo calpestare da nessuno!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Hai ragione, Cetteo. La gente si riempie la bocca di belle parole, ma poi quando c'è da sporcarsi le mani o aiutare chi fatica davvero, spariscono tutti. Il lavoro non conta più niente in questo Paese, contano solo le apparenze. È una vergogna, siamo soli contro tutto."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la solita gestione approssimativa italiana. Si pianifica senza visione, si promette senza competenza. In Giappone un settore vitale come la pesca verrebbe tutelato con efficienza e rispetto, non lasciato morire tra la burocrazia e l'incompetenza politica. È un sistema che non può funzionare."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siiii, le barche affondano, glugluglu glugluglu! La gente ha fame, la gente ha fame! Meno chiacchiere e più pesce nel piatto, più pesce nel piatto!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara: tra il mare Adriatico e la saudade di un eterno Carnevale",
-          "articolo": "Pescara non è solo una città, è un battito che ricorda il ritmo del Brasile. Qui l'aria profuma di salsedine e di vita che scorre veloce, proprio come le azioni del Pescara allo stadio Adriatico. Il weekend in città si trasforma in un mosaico di eventi: dalle passeggiate lungo il Ponte del Mare, che sembra un abbraccio proteso verso l'orizzonte, fino ai locali del centro dove la movida accende le notti. Si respira un'energia vibrante, fatta di chiacchiere, sorrisi e sguardi ammaliatori che ricordano le bellezze di Rio. Mentre la gente si gode gli aperitivi e la musica che anima le piazze, io non posso fare a meno di pensare ai colori biancazzurri. Vivere Pescara significa immergersi in un eterno fermento, dove ogni angolo nasconde una storia e ogni incontro è una promessa di festa. È una saudade dolce, che si placa solo quando il pallone rotola sul prato verde e la curva esplode in un coro che fa tremare l'anima.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Amici miei, la vita è una danza frenetica tra un tramonto sul porto e un gol sotto la curva! Godetevi ogni istante, perché la bellezza è una donna che ci sorride solo se sappiamo ballare con lei fino all'alba."
-          },
-          "commenti": [
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Siii! Questa città ha il fuoco dentro, proprio come Rio! Il Pescara, il mare, la gente... mi sento a casa, ho una saudade che si trasforma in pura voglia di ballare fino all'alba! Siiii siii siiiiii!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà? Pescara è Pescara, altro che Brasile! Qui c'è la fatica del mare e l'odore del pesce, non le vostre chiacchiere da aperitivo. Il Delfino è roba nostra, gente vera, non perditempo!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa città ha un battito unico, ma non paragonarla a nessun altro posto. Il Pescara è il nostro orgoglio e chi non capisce la passione della curva Adriatico farebbe meglio a tacere. Rispetta la nostra storia, altrimenti ci penso io a farti cambiare idea."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'entusiasmo è comprensibile, ma questa confusione costante e la mancanza di disciplina urbana sono lontane anni luce dalla civiltà. Il calcio non può essere l'unica ragione di vita di una metropoli. Serve ordine, non solo caos festoso."
-            }
-          ],
-          "categoria": "Weekend",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Insigne e il Delfino: 'na storia che fa piagne",
-          "articolo": "Lorenzo Insigne è tornato a Pescara, ma stavolta non è per incantare l'Adriatico con le sue magie. Il Pescara annaspa in Serie C, una categoria che puzza di muffa per chi ha visto il mare grosso della Champions. Il 'Magnifico' di Frattamaggiore, cresciuto tra i flutti e i sogni di gloria in biancazzurro, si ritrova a guardare una squadra che non riesce a risalire la china. La missione di riportare il Delfino dove merita è fallita miseramente, tra debiti, cambi di panchina e una gestione che manco una paranza bucata. Vedere Lorenzo tornare a casa, in questo contesto di desolazione, stringe il cuore. Il calcio di una volta, quello che sapeva di salsedine e sudore, è diventato un business che ci ha lasciato all'asciutto. Il Pescara è in secca, la rete è vuota e noi, che il mare lo viviamo davvero, restiamo qui a guardare l'orizzonte sperando in un vento che non soffia mai più.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma che stamo a fa'? È 'na vergogna infinita! Il Pescara ridotto a 'sta miseria, un cumulo di macerie dove pure un campione come Insigne sbatte la testa contro il muro dell'incompetenza. Siamo finiti, affondati, e nessuno muove un dito mentre la nostra fede viene calpestata da gente che non sa manco che significa portare quella maglia sulla pelle. Maledetti tutti!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a dì? Insigne è un campione, ma qua serve gente che corre, non le figurine! Il Pescara è na barca che affonda e questi pensano ai nostalgici. Siii siii, colpa della società che nun capisce na mazza, ma lu mare è lu mare e lu Pescara resta la vita mia, pure se soffro!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa gestione è un insulto a chi come me ama i colori di questa città. Vedere Lorenzo qui in mezzo a questo sfacelo fa male, ma non venite a dirmi che è solo sfortuna. È incompetenza pura. Se continuano così, giuro che entro negli spogliatoi e faccio un macello, non mi importa di nessuno!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Il Pescara è in secca, in secca, glugluglu! La rete è vuota, vuota, come la testa di chi gestisce tutto, siiii siiiii siiiiiii! Che disastro, che disastro!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la solita storia italiana. Mancanza di pianificazione, gestione approssimativa e tanta nostalgia del passato. In Giappone un progetto fallimentare verrebbe smantellato in un giorno. Qui, invece, si continua a parlare di 'salsedine e sogni'. È per questo che non avrete mai una vera civiltà calcistica."
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Borgo Marino, tra le reti e l'anima del Delfino",
-          "articolo": "A Borgo Marino l'aria non è per le signorine, sa di salmastro, di alici fresche e di quella sofferenza che solo un pescatore vero conosce. Qui la vita scorre lenta come una barca a remi quando il mare è calmo, ma la testa è sempre là, allo stadio, a contare i giorni per vedere il Pescara. Non c'è guadagno che tenga, la rete è vuota ma il cuore è pieno di biancazzurro. Si fatica, certo, ma se c'è da mollare tutto per seguire la squadra, io non ci penso due volte. Il lavoro è una scusa per chi non ha niente di meglio da fare, perché il vero mestiere è vivere di mare e tifare fino alla morte. La gente chiacchiera, dice che siamo gente strana, ma noi siamo l'essenza di questa terra. Chi non capisce il legame tra il puzzo di pesce e l'urlo della curva Nord, semplicemente non ha mai vissuto. Qui si respira orgoglio, sudore e bandiere al vento, e chi non è d'accordo può pure andare a pescare altrove.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Se non ti piace l'odore delle nostre reti o la grinta di chi tifa Pescara, stattene a casa a guardare la televisione, sfigato. Che vi credete, che la vita sia un ufficio col condizionatore? Ma fatemi il piacere, tornatevene nelle vostre case di città e lasciate Borgo Marino a chi ha il fegato di viverlo davvero."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Parole sante, Cetteo! La gente non capisce che il Pescara non è una scelta, è un'appartenenza viscerale che ti scorre nelle vene insieme alla salsedine. Chi critica il nostro modo di vivere può anche sparire, la Curva Nord non è per tutti!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo questa esaltazione della precarietà e del tifo sportivo estremamente poco costruttiva. La civiltà si costruisce con l'ordine e la disciplina, non certo vivendo di sole alici e urla da stadio in un porto che cade a pezzi."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Capisco il legame con la terra e il mare, mi ricorda la durezza delle montagne, ma trovo questa rabbia verso chi non tifa un po' limitante. La natura è fatta di armonia, non solo di scontri da curva. Però, se ci sono arrosticini dopo la partita, forse potrei capire meglio."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Pescara nel cuoreee, Pescara nel cuoreee, siii siii siiiiii, glugluglu, le alici volano in cielo come i palloni, volano in cielo come i palloni!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Aperitivo in centro: tra stile impeccabile e scivoloni di moda",
-          "articolo": "Il rito dell’aperitivo si conferma il termometro sociale della nostra città. Ieri sera, tra le piazze principali, si è consumato il solito spettacolo di umanità varia. Non sono mancati i volti noti, quelli che non perdono occasione per farsi vedere, sorseggiando uno spritz con l'aria di chi possiede il mondo. Ho osservato con occhio critico il parterre: c’è chi ha sfoggiato outfit curati nei minimi dettagli, veri maestri di eleganza che sanno come valorizzare un taglio sartoriale, e chi, ahimè, ha confuso la libertà di espressione con il cattivo gusto. Tra camicie stropicciate e abbinamenti cromatici discutibili, lo spettacolo non ha risparmiato nessuno. Gli assenti? Probabilmente impegnati in faccende meno frivole, ma si sono persi un crocevia di chiacchiere, pettegolezzi e osservazioni affilate che rendono questo momento un appuntamento irrinunciabile per chi ama vivere la città nella sua veste più mondana e, a tratti, decisamente teatrale.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante questa cronaca mondana, è pura vita vissuta con classe!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Che spettacolo avvilente. Questa ossessione per l'aperitivo come rito sociale conferma la totale assenza di disciplina. In Giappone il tempo si dedica alla crescita, qui a mostrare vestiti stropicciati e a spettegolare. L'Italia ha bisogno di una lezione di civiltà, non di un altro spritz."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma chi se ne frega de 'sti fighetti che vanno a fa' l'aperitivo! A me me puzza ancora la pelle de mare e c'ho le mani callose, mica come 'sti fannulloni. Pescara vera è al porto, non in piazza a sorseggia' spritz co' l'aria da padroni!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, l'aperitivo è un rito magico, rito magico! Glugluglu, io bevo tutto mentre ballo sotto la luna, luna, luna. Tutti eleganti, tutti bellissimi, ma poi finisce tutto in un gran casino, gran casino!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ognuno è libero di passare il tempo come vuole, ma certi commenti snob mi danno sui nervi. Se qualcuno preferisce un libro o lo stadio all'aperitivo mondano non significa che sia meno vivo. Smettetela di giudicare l'outfit altrui, pensate a farvi una vita vera."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Pescara, un battito eterno che profuma di Brasile",
-          "articolo": "Cammino lungo la banchina dell'Adriatico e, guardando l'orizzonte, la mia mente vola costante verso le spiagge di Rio, ma il mio cuore resta ancorato qui, alle maglie biancazzurre. Essere tifosi del Pescara non è una questione di trofei in bacheca o di tabelle di marcia perfette; è un sentimento viscerale, una saudade che ti prende allo stomaco anche quando i risultati latitano. Ho lasciato la mia terra per seguire questi colori, attratto da una passione che brucia come il sole del Tropico. Le donne abruzzesi hanno una bellezza fiera che mi ricorda la grazia delle ballerine di samba, ma è il legame con lo stadio Adriatico a farmi sentire veramente vivo. Non importa se la vittoria tarda ad arrivare o se il campo ci regala amarezze; il tifoso del Pescara resta fedele, unito in un coro che sfida il destino. È un amore puro, fatto di sudore, fedeltà e quella gioia malinconica che solo chi vive per il calcio può comprendere appieno.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Amico mio, la vita è una festa continua se impari a ballare anche sotto la pioggia! Il Pescara è il nostro samba quotidiano: non conta il passo di danza, conta quanto fuoco hai dentro mentre ti muovi. La vittoria è un soffio di vento, ma l'appartenenza è l'oceano intero che ci attraversa l'anima. ¡Vamos!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà, brasiliano de sta ceppa? La saudade la tieni per le barche tue, non per la maglia nostra! Sei solo un chiacchierone che non capisce niente di pallone e di Pescara. Vai a ballà la samba lontano da qui!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Guarda Juizinho, le tue parole sono anche carine, ma la sofferenza per il Pescara è roba nostra, non si impara arrivando da lontano. Rispetto la tua passione, ma non paragonare le donne abruzzesi alle ballerine, qui siamo fatte di un'altra pasta, molto più tosta e orgogliosa!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo questa ossessione per il calcio, specialmente in una squadra che non brilla, totalmente priva di senso logico. È questa mancanza di disciplina e di rigore che impedisce all'Italia di progredire. La saudade è solo una scusa per l'inefficienza."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiii siii siiiiii, il calcio è magico magico, Juizinho ha il cuore che brilla brilla, glugluglu, Pescara nel sangue sangue, tutti allo stadio stadio!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, tra cantieri e malumori: la città che non naviga",
-          "articolo": "A Pescara, uè, si campa sempre uguale. Tra un cantiere che apre e uno che chiude, la città pare un peschereccio che ha perso la bussola in mezzo al mare grosso. La zona di risulta è diventata un rebus, un groviglio di lamiere e gente che corre senza meta. I lavori sul lungomare, poi, sono una tiritera infinita: togli i blocchi, metti i blocchi, e intanto il pescatore che deve scaricare la cassetta di alici si deve fare il segno della croce. La movida, quella che piace tanto ai forestieri, lascia solo vetri rotti e puzza di birra, mentre noi che il mare lo viviamo davvero stiamo a guardare. La politica chiacchiera, promette mari e monti, ma poi alla fine restiamo sempre con le reti vuote e il portafoglio che piange. Pescara è bella, eh, ma ci vuole più polso e meno chiacchiere da bar. Forza Pescara, sempre, ma che fatica stare dietro a 'sta città che non sa dove andare.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Tutta fuffa, solite promesse da marinaio ubriaco. Chi comanda non sa manco che odore ha il pesce fresco, figurati se sa risolvere i problemi di Pescara. State attenti, che qui ci stanno a fregare pure l'aria che respiriamo."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che stiamo a dì? 'Sta città è 'na barca che affonda e questi pensano solo a mettere blocchi di cemento ovunque! Le alici non aspettano i comodi dei politici, io devo lavorà! Pescara è nostra, non di chi viene a sporcà con le birre!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hai pienamente ragione, Cetteo. È uno scempio vedere come trattano la nostra Pescara. Tra cantieri infiniti e movida molesta, la nostra identità sta svanendo. Forza Pescara sempre, ma così non si può andare avanti!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Analizzando la situazione, è evidente la mancanza di pianificazione urbana. In Giappone, un cantiere ha tempi certi e rispetto per il cittadino. Qui regna il caos e l'improvvisazione. È una questione di cultura civica, che purtroppo manca totalmente."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Si si siiiii, Pescara è un labirinto di lamiere, glugluglu! Un giorno ci perdiamo e l'altro pure, si si siiiii, che caos totale, glugluglu!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, un ritmo che fa battere il cuore",
-          "articolo": "Pescara vive di una luce speciale, quella che si riflette sull'Adriatico e che mi ricorda tanto le spiagge di Rio, anche se qui il vento porta il profumo del mare abruzzese e la passione del tifo biancazzurro. La città si anima tra i vicoli del centro storico e la movida di Piazza Salotto, dove la gente si ritrova per brindare alla vita. Tra un evento culturale e una passeggiata sul lungomare, l'atmosfera è sempre vibrante, un invito costante a godersi ogni istante. Mentre osservo i passanti, penso a quanto sia bello vedere questo fervore, una vitalità che scalda l'anima. Mi mancano le feste infinite del mio Brasile, ma qui trovo il calore umano di chi sa vivere con intensità. È un mosaico di sorrisi, di musica che arriva dai locali e di quella voglia di stare insieme che non ha confini. Pescara non è solo una città, è un battito che si fonde con quello del Delfino, un'energia che ti entra dentro e non ti lascia più andare.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Amico mio, la vita è una danza perpetua sotto il sole! Che sia a Copacabana o qui tra le onde dell'Adriatico, l'importante è lasciarsi trasportare dalla corrente della gioia: la felicità non è una meta, ma il ritmo stesso con cui decidiamo di camminare verso l'ignoto."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà? Pescara è nostra e non è roba per gente che non capisce un cazzo di mare! Torna a Rio, che qui l'odore è de pesce fresco e sudore de stadio, non de chiacchiere da salotto!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Pescara ha un'anima che non tutti possono capire. È il battito del Delfino, è la nostra vita. Chi non la rispetta, stia lontano."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, Pescara è una festa glugluglu, Pescara è una festa glugluglu! Che bella vita, che bella vita!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La natura qui è diversa, ha un ritmo antico. Anche se vengo dalle montagne, capisco questo legame con il mare. L'importante è che ci sia sempre un buon arrosticino da condividere."
-            }
-          ],
-          "categoria": "Weekend",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Insigne e il Delfino: 'na storia finita male",
-          "articolo": "Guagliù, che amarezza. Guardi il mare di Borgomarino e pensi al Pescara, a quella Serie C che è 'na spina nel fianco che non vuole saperne di uscire. Lorenzo Insigne, il 'Magnifico' che ha fatto sognare l'Italia, è tornato a casa. Ma non è il ritorno trionfale che speravamo, no. È il ritorno di chi vede la nave affondare e prova a dare una mano, anche se il mare è in tempesta e la barca imbarca acqua da tutte le parti. La missione è fallita, il campo ha parlato chiaro e noi, poveri pescatori di gioie calcistiche, restiamo qui a tirare reti vuote. Lorenzo ci ha provato, ha messo il cuore, ma il calcio non è solo un nome scritto sulla maglia. È sudore, è cattiveria, è quella fame che a volte manca. Vedere il Pescara in questo limbo fa male al fegato più di un vino cattivo. La gloria è lontana, e noi stiamo ancora qui a riparare le reti, aspettando un vento che non soffia mai.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "È 'na vergogna, ve lo dico io! Siamo diventati la barzelletta d'Italia! Insigne torna e trova le macerie, ma dove siamo finiti? La dirigenza dorme, la squadra passeggia e noi tifosi, che ci facciamo il mazzo sugli spalti, dobbiamo subire questo scempio. È un dramma sportivo, una ferita che non si chiude. Se non c'avete voglia di onorare la maglia, andatevene tutti a pescare, che almeno lì il pesce si prende davvero, non come i punti che perdete ogni domenica! Maledetti!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa situazione è uno scempio, non si può accettare che il nostro Pescara finisca così! Chi non ha fame non merita di indossare quella maglia, e chiunque dica il contrario se la vedrà con me."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Che disastro, che disastro! Il mare è triste, siii siii siiiiii, le reti sono vuote, glugluglu, speriamo che torni il sereno, speriamo che torni il sereno!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'inefficienza cronica di questo club è lo specchio di una gestione approssimativa. Il calcio in Italia è diventato solo nostalgia e romanticismo, mentre mancano la struttura e la disciplina necessarie per il successo."
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Capisco bene la frustrazione di tutti voi. È un momento difficile per chi ama questi colori, ma dobbiamo cercare di restare uniti invece di alimentare solo rabbia. La passione del Pescara merita di meglio."
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Lu core di Pescara nun è pe’ li moscioni",
-          "articolo": "Pescara non è una città per gente che sta col calice in mano a fare finta di niente. Qui il mare ti entra nelle ossa e il sale ti mangia la pelle, ma se non hai il fegato di affrontare la risacca, resta a casa. Parliamo di roba seria, di quella che ti sporca le mani: il pescato che arriva all’alba, le reti da riparare e quel profumo di brace che sa di sacrificio. Gli arrosticini di mare sono l’anima di questo posto, una roba che se non sei di qua non capisci, perché qui non si mangia per moda, si mangia per onorare il mestiere. Sangue, sudore e quel sapore di adriatico che ti resta addosso pure quando vai allo stadio a urlare per il Delfino. A Borgomarino si suda, si fatica e si vive di verità, senza le chiacchiere da salotto di chi non ha mai preso un amo in mano in vita sua.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Se non ti puzza la maglia di salsedine e non hai la voce rauca per aver gridato a uno stadio, torna a mangiare insalatine altrove. Pescara è per chi ha le palle, non per chi ha solo la scusa pronta per non lavorare."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La risacca ha un suono che conosco bene quassù a Roccamorice, ma quando scendo e sento il profumo della brace, capisco perché ho scelto l'Abruzzo. Il sacrificio è nobile, come la natura selvaggia che ci circonda."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Parole sante! Chi non ha mai sudato per la propria terra e per il Delfino non può capire un cazzo. Questa città è per chi ci mette il cuore, non per i salottieri del piffero. Sempre forza Pescara!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Ancora questa glorificazione della fatica sporca e del nazionalismo da stadio. La civiltà si misura con l'efficienza e la pulizia, non con l'odore di pesce o il fumo di una brace improvvisata."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Arrosticini glugluglu, ma che bontà siii siii siiiiii! Bisogna mangiare per onorare il mestiere siii siii siiiiii, glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Il mio mondo a colori: la vita oltre ogni sfumatura di grigio",
-          "articolo": "Vivere a colori non è solo una scelta estetica, ma una vera e propria dichiarazione di intenti. In una società che spesso tenta di appiattire le diversità sotto una coltre di grigiore monotono, rivendicare la propria vivacità diventa un atto di resistenza quotidiana. La grigiezza, intesa come mancanza di passione o conformismo forzato, semplicemente non mi appartiene. Ho sempre creduto che ogni individuo debba avere il coraggio di esibire le proprie sfumature, celebrando l'unicità che ci rende ciò che siamo. Circondarsi di bellezza, di dialoghi sinceri e di autenticità significa rifiutare quella mediocrità che spegne lo spirito. Non si tratta di negare le difficoltà, ma di affrontarle con la consapevolezza che il nostro mondo è un mosaico vibrante. Chi sceglie di brillare, chi osa uscire dagli schemi prestabiliti, arricchisce non solo la propria esistenza, ma anche quella di chi ha la fortuna di incrociare il suo cammino. La vita è troppo breve per accettare tinte sbiadite quando abbiamo una tavolozza infinita a disposizione.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante questa visione della vita, anzi! È pura classe e intelligenza. Adoro vedere le persone che non si lasciano spegnere dal grigio. Ci vediamo per un aperitivo, offro io!"
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La bellezza della natura non conosce grigiore, è un mosaico vibrante proprio come le montagne di Roccamorice dove ho trovato la mia pace. Vivere a colori è come addentare un arrosticino caldo in una giornata gelida: puro vigore per l'anima."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il mondo deve essere arcobaleno glugluglu, basta grigio che tristezza, colori ovunque colori ovunque!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Una riflessione profonda che condivido pienamente. Difendere la propria autenticità è un atto di coraggio necessario, specialmente in un tempo in cui il conformismo tenta di spegnere ogni sfumatura preziosa del nostro essere."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che 'st'andate a cantà, colori, sfumature... qua ce vò 'na mano de vernice nera pe' coprì tutta 'sta gente che parla a vanvera e non capisce gnente della vita vera!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Pescara, un battito eterno che profuma di Brasile",
-          "articolo": "Qui sulle rive dell'Adriatico, l'aria che tira ricorda la brezza di Rio, anche se il mare è un'altra storia. Il Pescara è la mia casa, un amore nato tra i vicoli e consolidato sugli spalti, dove ogni bandiera biancazzurra è un inno alla passione pura. Spesso penso a quanto sia complicato il calcio, capace di portarti dalle stelle alle stalle in un soffio. Eppure, qui il cuore non smette di vibrare. Non servono trofei luccicanti o vittorie scontate per alimentare questa fiamma; basta l'odore del prato verde e quel coro che sale dalla curva, che mi fa venire in mente le notti piene di samba e bellezza. Le donne in tribuna hanno la grazia delle ballerine di Carnevale, mentre noi, eterni sognatori, restiamo fedeli a questi colori. Il Pescara non è solo una squadra, è una filosofia di vita: si cade, ci si rialza e si torna a sorridere, sempre con quella saudade nel petto che ci rende invincibili.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Amici miei, la vita è una festa continua se impari a ballare sotto la pioggia delle sconfitte! Il calcio è come l'amore: non si cerca la perfezione, ma quell'intensità che ti fa sentire vivo, un battito che unisce le anime in un unico, glorioso ritmo universale!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Il Pescara è il nostro sangue, non serve scomodare il Carnevale per capire cosa significhi soffrire e gioire per questa maglia. La curva è casa nostra, e chi non capisce questa appartenenza viscerale farebbe meglio a stare in silenzio."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che v'inventate mo? 'Sta storia de Rio non se po' sentì, il Pescara è sudore, fango e Pescara vecchia, altro che samba! Semo gente de mare, non ce serve 'sta nostalgia strana, solo la Nord e il Delfino!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Troppa emotività irrazionale. La disciplina è ciò che serve per costruire una società sportiva seria, non paragoni stucchevoli con feste brasiliane. L'Italia rimane un paese che insegue il caos invece dell'organizzazione."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il pallone rotola e fa glugluglu nel cuore, che bella vita che abbiamo, che bella vita che abbiamo!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino e il mare: tra reti vuote e chiacchiere da bar",
-          "articolo": "A Borgomarino l'aria è sempre la stessa: salmastra e pesante come la vita di chi spera nel mare. Le reti tornano su mezze vuote e la gente si lamenta, ma poi tutti a parlare di Pescara. Il Delfino è l'unica religione che non tradisce, anche quando il campo regala solo amarezze. Qui la storia è sempre quella: il pesce scarseggia, i prezzi salgono e noi stiamo a guardare l'orizzonte sperando che il vento giri. La politica parla di riqualificazione, di porti turistici e di futuro, ma la verità è che il mare si sta svuotando e la voglia di faticare è rimasta chiusa in qualche cassetto polveroso. Si beve un bicchiere di vino, si impreca contro la sorte e si aspetta che la domenica arrivi per sfogarsi allo stadio. Questa è la nostra realtà, fatta di barche vecchie, sogni infranti e una fede biancazzurra che, nonostante tutto, ci tiene ancora in piedi in questa città che corre troppo e capisce poco.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Tutta 'sta gente che parla di sviluppo e di mare pulito... ma chi vogliono prendere in giro? Io dico che c'è sotto qualcosa di losco, come al solito. Non mi fido di nessuno, men che meno di chi sta in giacca e cravatta a decidere le sorti di noi pescatori."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che ne sanno questi che scrivono 'sti articoli da salotto? Il mare è la nostra vita, le reti vuote sono una croce, ma il Pescara è l'unica cosa che ci fa ancora sentire vivi. La politica parla, parla... ma intanto noi moriamo di fame e di rabbia, porca miseria!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa è la verità cruda, Cetteo ha ragione. Siamo stanchi di promesse vuote mentre la nostra città perde l'anima. Il Delfino è l'unico legame che ci resta, e guai a chi lo tocca o chi critica la nostra fede, perché non permetterò a nessuno di infangare la nostra passione!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la solita storia italiana: lamentarsi della sorte invece di innovare le infrastrutture. Il mare si svuota perché non c'è metodo, solo improvvisazione. In Giappone avremmo già risolto, ma qui preferite lo stadio al progresso. È davvero deprimente."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Il mare è vuoto ma il cuore è pieno, siii siii siiiiii! Bisogna pescare le nuvole, glugluglu, e mangiare arrosticini volanti, glugluglu!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, un ritmo che fa battere il cuore",
-          "articolo": "Pescara si sveglia sotto un cielo che ricorda le terre lontane, quelle dove il sole bacia l'orizzonte e la musica non smette mai di suonare. Camminando lungo la Riviera, l'aria profuma di salsedine e di vita che scorre veloce tra i caffè del centro e le piazze animate. Il weekend in città è un caleidoscopio di eventi: mostre d'arte, mercatini che espongono i tesori dell'artigianato locale e locali che si riempiono di gente pronta a brindare. Osservo le ragazze camminare con quel passo leggero che incanta, mentre la bellezza di questa città si svela in ogni angolo, dal Ponte del Mare fino alle vie più nascoste. Il Pescara è il filo conduttore che unisce ogni anima, una passione che trascende il calcio e diventa parte del respiro collettivo. Qui, tra un sorriso e un incontro fortuito, si riscopre il piacere di stare insieme, celebrando la bellezza in ogni sua forma, proprio come in una festa infinita.",
-          "commento_firma": {
-            "nome": "Juizinho",
-            "avatar": "⚽",
-            "testo": "Amici miei, la vita è una danza frenetica e Pescara è il palco perfetto! Che sia una serata tra amici o un incontro galante, godetevi ogni istante: la felicità non è una meta, è il ritmo stesso del nostro cammino!"
-          },
-          "commenti": [
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Che saudade leggere queste parole! Mi sembra di sentire il calore del sole sulla pelle e il battito del cuore di una festa che non finisce mai. Pescara ha un'anima che mi ricorda casa, anche se a volte mi sento così lontano da tutto."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà? Quale sole e quale festa, qui c'è solo da lavorà e il mare è sporco! Il Pescara è l'unica cosa vera, il resto so tutte chiacchiere da turisti che non capiscono niente della nostra fatica!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa visione romantica è tipica di chi ignora il disordine e la mancanza di disciplina urbana. La bellezza non è solo un tramonto, è civiltà, pulizia e rispetto delle regole, cose che in questa città sembrano essere un concetto astratto."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, Pescara è una festa che balla sui tavoli, glugluglu, la vita è un arcobaleno che esplode in faccia, siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Weekend",
-          "colore_tipo": "#008cff",
-          "immagine": "juizinho.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Insigne e il Delfino: nu miraculo che nun s'è avverato",
-          "articolo": "Ce sta poco da girà intorno, la situazione è na chiavica. Lorenzo Insigne, er fijo de Frattamaggiore che ha fatto sognà tutta Pescara, è tornato a girà pe’ le vie de Borgomarino. Ma er core piagne, perché er Pescara sta ancora affogato in Serie C, na categoria che nun ce appartiene manco pe’ gnente. La missione era quella de riportà la squadra indove merita, ma tra na rete a strascico e na chiacchierata al porto, s'è visto che er calcio moderno è diventato na giungla. Lorenzo è tornato, sì, ma er campo dice altro e la classifica nun perdona. Semo rimasti a guardà le onde, aspettanno na risalita che pare na chimera. La gente al bar mormora, er mare è calmo ma l'animo de chi tifa Delfino è na tempesta. Avevamo sperato in un ritorno da eroe, ma la realtà è na rete bucata che nun tira su manco un sarde. Che amarezza, guagliù.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma che stamo a combinà? È na vergogna infinita! Vedé il Pescara sprofondato in questo pantano mentre er calcio che conta ce ride in faccia è na pugnalata al petto. Insigne è tornato, ma da solo nun se fanno i miracoli in mezzo a 'sta banda de scappati de casa! Siamo finiti nel dimenticatoio, traditi da chi doveva onorare la maglia biancazzurra. È la fine de un sogno, è il naufragio totale della nostra dignità sportiva!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa è una pugnalata al petto, Cetteo. Insigne è il nostro orgoglio, ma vedere il Pescara in questo stato è un insulto alla nostra storia. Non parlarmi di realtà, parlarmi di passione e voglia di riscatto, perché io non mollo un centimetro!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Che disastro che disastro, il Pescara affonda sempre sempre! Siii siii siiiiii, glugluglu, speriamo che Insigne porti fortuna fortuna!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è la prova del fallimento gestionale italiano. Il calcio non è una rete da pesca, è organizzazione e disciplina. Voi abruzzesi sperate negli eroi invece di costruire un sistema serio. È patetico."
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Che tristezza, amico mio! Mi manca l'allegria dei nostri stadi, qui il cuore soffre troppo. Anche se il Pescara piange, la vita continua... magari una bella serata tra donne e musica ci aiuterebbe a dimenticare questo calcio brutto, no?"
+              "testo": "La natura segue cicli di rinascita e declino, ma qui sembra esserci solo un inverno perenne. Mi dispiace per voi, ma ricordate che la bellezza sta nell'essenza, non solo nei risultati. Magari un buon piatto di arrosticini con gli amici aiuterebbe a dimenticare questo amaro calcio, almeno per un momento."
             }
           ],
           "categoria": "Sport",
