@@ -1,5 +1,5 @@
 {
-  "_runCount": 4,
+  "_runCount": 5,
   "Ernesto→Giovanni": {
     "score": -0.015,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "11/05/2026"
   },
@@ -58,7 +58,7 @@
   "Hiroki→Juizinho": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "10/05/2026"
+    "ultimo_aggiornamento": "11/05/2026"
   },
   "Cetteo→Lars": {
     "score": -1,
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "10/05/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "11/05/2026"
   },
@@ -116,7 +116,7 @@
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Cetteo→Autore": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "11/05/2026"
   },
@@ -216,12 +216,12 @@
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.5,
+    "score": 0.3,
     "label": "simpatico",
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Lilli→Juizinho": {
-    "score": -0.613,
+    "score": -0.713,
     "label": "ostile",
     "ultimo_aggiornamento": "11/05/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.8,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "11/05/2026"
   },
@@ -881,9 +881,9 @@
     "ultimo_aggiornamento": "10/05/2026"
   },
   "Glusi→Pescara": {
-    "score": -0.458,
+    "score": -0.558,
     "label": "diffidente",
-    "ultimo_aggiornamento": "10/05/2026"
+    "ultimo_aggiornamento": "11/05/2026"
   },
   "Cetteo→Squadra Pescara": {
     "score": -0.9,
@@ -1226,9 +1226,9 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Lars→Bartender": {
-    "score": 0.71,
+    "score": 0.91,
     "label": "amico",
-    "ultimo_aggiornamento": "07/05/2026"
+    "ultimo_aggiornamento": "11/05/2026"
   },
   "Cetteo→Bartender": {
     "score": -0.81,
@@ -1241,9 +1241,9 @@
     "ultimo_aggiornamento": "07/05/2026"
   },
   "Glusi→Bartender": {
-    "score": 0.586,
+    "score": 0.486,
     "label": "simpatico",
-    "ultimo_aggiornamento": "07/05/2026"
+    "ultimo_aggiornamento": "11/05/2026"
   },
   "Bartender→Lars": {
     "score": 0.25,
@@ -1406,9 +1406,9 @@
     "ultimo_aggiornamento": "21/04/2026"
   },
   "Wolf→Politici": {
-    "score": -0.398,
+    "score": -0.598,
     "label": "diffidente",
-    "ultimo_aggiornamento": "06/05/2026"
+    "ultimo_aggiornamento": "11/05/2026"
   },
   "Hiroki→Amministrazione": {
     "score": -0.81,
@@ -2476,9 +2476,9 @@
     "ultimo_aggiornamento": "09/05/2026"
   },
   "Lilli→Questa": {
-    "score": 0.18,
-    "label": "neutro",
-    "ultimo_aggiornamento": "08/05/2026"
+    "score": 0.38,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "11/05/2026"
   },
   "Wolf→Questa": {
     "score": -0.18,
@@ -2596,6 +2596,61 @@
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Glusi→Società": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Hiroki→Pubblico Social": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Lilli→Pubblico Social": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Wolf→Pubblico Social": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Bartender→Hiroki": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Hiroki→Burocrazia": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Hiroki→Tifosi Pescara": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Wolf→Tifosi Pescara": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Glusi→Tifosi Pescara": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Lilli→Società": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Hiroki→Società": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "11/05/2026"
+  },
+  "Lucap→Società": {
     "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "11/05/2026"
