@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "13/05, 04:09",
+  "prossimo_aggiornamento": "13/05, 06:43",
   "news": [
     {
       "tipo": "personaggio",
@@ -37,7 +37,7 @@
       "colore_tipo": "#008cff",
       "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -74,7 +74,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -111,7 +111,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lucap.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -148,7 +148,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lamatte.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -185,7 +185,7 @@
       "colore_tipo": "#008cff",
       "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -222,7 +222,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -259,7 +259,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -295,6 +295,38 @@
       "categoria": "Politica",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La libertà ha il sapore del sudore",
+      "articolo": "Il mondo corre verso una comodità che rincoglionisce, mentre c'è chi sceglie consapevolmente la via più difficile. Vivere isolati, lontano dal frastuono delle città e dalle ipocrisie sociali, non è affatto una fuga, ma una conquista pagata a caro prezzo. La libertà non si trova nel tempo libero o nell'ozio, ma nella fatica quotidiana che dà un senso reale allo scorrere delle ore. Spaccare legna, curare la terra o mantenere un rifugio lontano da tutti richiede una dedizione che la maggior parte della gente moderna non comprende più. La solitudine diventa uno spazio sacro dove il rumore del progresso non può arrivare a contaminare il pensiero. Non esistono scorciatoie: o si suda o si soccombe. È un'esistenza fatta di silenzi interrotti solo dal lavoro delle mani, un ritorno all'essenziale che spaventa chi è abituato a farsi servire tutto su un piatto d'argento. Restare fuori dal coro significa accettare il peso della propria autonomia, consapevoli che ogni goccia di sudore versata è un mattone per la propria indipendenza. In questo isolamento, la fatica non è un peso, ma l'unico vero strumento di emancipazione rimasto in un'epoca di totale futilità.",
+      "commento_firma": {
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Ho finito di scrivere anche questa, e già non ne potevo più a metà pagina. Adesso devo andare a controllare la legnaia prima che faccia buio, se mai avrò la forza di alzarmi da questa maledetta sedia. La gente parla di libertà e non sa nemmeno cosa significhi avere i calli sulle mani o la schiena rotta. Mi fa male tutto, ma almeno qui sul mio colle non devo sentire le loro lamentele inutili. Che stanchezza infinita, non ne posso più di nessuno."
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "wolf.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Dietro il sipario del mondo: Cronache di un genio incompreso dai non rettiliani",
+      "articolo": "L'architettura del potere globale si muove tra algoritmi complessi e strutture finanziarie che sfuggono alla comprensione comune. Le grandi corporazioni tecnologiche accumulano metadati incessanti, modellando il comportamento umano attraverso inneschi psicologici raffinati. Non è un mistero che le informazioni siano il nuovo petrolio, scambiate in mercati opachi dove la trasparenza è un concetto obsoleto. Mentre l'opinione pubblica osserva il palcoscenico politico visibile, il potere reale si sposta all'interno di organizzazioni non governative e forum internazionali che definiscono standard globali, dalla finanza alla sicurezza alimentare. La sorveglianza biometrica è ormai integrata nel tessuto urbano, silente ma onnipresente. Comprendere questi sistemi richiede una vigilanza che va oltre la narrazione semplificata dei media tradizionali. È come cercare un porcino sotto un tappeto di aghi di pino: se non conosci il terreno e la luna, raccogli solo amanite falloidi e ti tocca zappare il fango tra le radici dei server. I meccanismi di controllo digitale si affinano costantemente, agendo nell'ombra di chi non sa leggere le tracce lasciate nel silicio dai decisori invisibili. È fondamentale interrogarsi sulla governance globale e sulla concentrazione di ricchezza che permette a pochi attori privati di influenzare le politiche pubbliche su scala planetaria.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "L'accentramento dei dati personali e l'espansione della sorveglianza tecnologica senza una regolamentazione trasparente minano le fondamenta della libertà individuale e della sovranità democratica."
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
       "provider": "gemini",
       "nuovo": true
     }
