@@ -1,5 +1,5 @@
 {
-  "_runCount": 9,
+  "_runCount": 10,
   "Ernesto→Giovanni": {
     "score": -0.012,
     "label": "neutro",
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "17/05/2026"
   },
@@ -291,9 +291,9 @@
     "ultimo_aggiornamento": "10/05/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.8,
+    "score": -0.9,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/05/2026"
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Lars→Lilli": {
     "score": 1,
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "17/05/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.9,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "17/05/2026"
   },
@@ -631,14 +631,14 @@
     "ultimo_aggiornamento": "12/05/2026"
   },
   "Autore→Hiroki": {
-    "score": -0.148,
-    "label": "neutro",
-    "ultimo_aggiornamento": "16/05/2026"
+    "score": -0.348,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Autore→Glusi": {
-    "score": 0.729,
+    "score": 0.829,
     "label": "amico",
-    "ultimo_aggiornamento": "12/05/2026"
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Lars→Wolf": {
     "score": 0.249,
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.344,
+    "score": -0.544,
     "label": "diffidente",
     "ultimo_aggiornamento": "17/05/2026"
   },
@@ -908,7 +908,7 @@
   "Autore→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/05/2026"
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Miley Cyrus→Maxx Morando": {
     "score": 0.169,
@@ -998,7 +998,7 @@
   "Autore→Lilli": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/05/2026"
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Lars→Topengo": {
     "score": 1,
@@ -2536,7 +2536,7 @@
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Lilli→Dirigenza Pescara": {
-    "score": -0.759,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "17/05/2026"
   },
@@ -3011,12 +3011,22 @@
     "ultimo_aggiornamento": "16/05/2026"
   },
   "Cetteo→Dirigenza Pescara": {
-    "score": -0.3,
+    "score": -0.5,
     "label": "diffidente",
     "ultimo_aggiornamento": "17/05/2026"
   },
   "Hiroki→Dirigenza Pescara": {
-    "score": -0.2,
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "17/05/2026"
+  },
+  "Lucap→Juizinho": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "17/05/2026"
+  },
+  "Glusi→Dirigenza Pescara": {
+    "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "17/05/2026"
   }
