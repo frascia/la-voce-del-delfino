@@ -1,5 +1,5 @@
 {
-  "_runCount": 8,
+  "_runCount": 9,
   "Ernesto→Giovanni": {
     "score": -0.012,
     "label": "neutro",
@@ -46,7 +46,7 @@
     "ultimo_aggiornamento": "17/05/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "17/05/2026"
   },
@@ -121,7 +121,7 @@
     "ultimo_aggiornamento": "17/05/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "17/05/2026"
   },
@@ -186,9 +186,9 @@
     "ultimo_aggiornamento": "14/05/2026"
   },
   "Glusi→Lilli": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "16/05/2026"
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Enzo→Glusi": {
     "score": -0.05,
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "17/05/2026"
   },
@@ -261,9 +261,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Juizinho→Autore": {
-    "score": -0.019,
+    "score": 0.281,
     "label": "neutro",
-    "ultimo_aggiornamento": "05/05/2026"
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Enzo→Autore": {
     "score": -0.05,
@@ -298,7 +298,7 @@
   "Lars→Lilli": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "16/05/2026"
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Hiroki→Lilli": {
     "score": -1,
@@ -311,9 +311,9 @@
     "ultimo_aggiornamento": "17/05/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.8,
+    "score": -0.9,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/05/2026"
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Wolf→Redazione": {
     "score": -0.037,
@@ -646,8 +646,8 @@
     "ultimo_aggiornamento": "16/05/2026"
   },
   "Lilli→Autore": {
-    "score": -0.218,
-    "label": "diffidente",
+    "score": -0.018,
+    "label": "neutro",
     "ultimo_aggiornamento": "17/05/2026"
   },
   "Abbukk→Cetteo": {
@@ -823,7 +823,7 @@
   "Hiroki→Wolf": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "16/05/2026"
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Cetteo→Squadra": {
     "score": -0.656,
@@ -1061,9 +1061,9 @@
     "ultimo_aggiornamento": "16/05/2026"
   },
   "Lilli→Wolf": {
-    "score": 0.12,
-    "label": "neutro",
-    "ultimo_aggiornamento": "16/05/2026"
+    "score": 0.42,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Hiroki→Contesto Locale": {
     "score": -0.085,
@@ -2536,7 +2536,7 @@
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Lilli→Dirigenza Pescara": {
-    "score": -0.959,
+    "score": -0.759,
     "label": "ostile",
     "ultimo_aggiornamento": "17/05/2026"
   },
@@ -2926,12 +2926,12 @@
     "ultimo_aggiornamento": "15/05/2026"
   },
   "Glusi→Gaston Brugman": {
-    "score": 0.45,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "15/05/2026"
+    "score": 0.75,
+    "label": "amico",
+    "ultimo_aggiornamento": "17/05/2026"
   },
   "Wolf→Dirigenza Pescara": {
-    "score": -0.46,
+    "score": -0.56,
     "label": "diffidente",
     "ultimo_aggiornamento": "17/05/2026"
   },
@@ -3013,6 +3013,11 @@
   "Cetteo→Dirigenza Pescara": {
     "score": -0.3,
     "label": "diffidente",
+    "ultimo_aggiornamento": "17/05/2026"
+  },
+  "Hiroki→Dirigenza Pescara": {
+    "score": -0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "17/05/2026"
   }
 }
