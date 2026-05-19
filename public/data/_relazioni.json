@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.011,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "19/05/2026"
   },
@@ -61,7 +61,7 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Cetteo→Lars": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "19/05/2026"
   },
@@ -76,8 +76,8 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Cetteo→Hiroki": {
@@ -111,9 +111,9 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Autore": {
-    "score": 1,
+    "score": 0.7,
     "label": "amico",
-    "ultimo_aggiornamento": "18/05/2026"
+    "ultimo_aggiornamento": "19/05/2026"
   },
   "Cetteo→Autore": {
     "score": -1,
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.7,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "19/05/2026"
   },
@@ -236,7 +236,7 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Lilli→Lars": {
-    "score": 0.6,
+    "score": 0.5,
     "label": "simpatico",
     "ultimo_aggiornamento": "19/05/2026"
   },
@@ -311,8 +311,8 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Lilli→Hiroki": {
-    "score": 0.45,
-    "label": "simpatico",
+    "score": 0.25,
+    "label": "neutro",
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Wolf→Redazione": {
@@ -646,7 +646,7 @@
     "ultimo_aggiornamento": "16/05/2026"
   },
   "Lilli→Autore": {
-    "score": -0.636,
+    "score": -0.736,
     "label": "ostile",
     "ultimo_aggiornamento": "19/05/2026"
   },
@@ -1476,9 +1476,9 @@
     "ultimo_aggiornamento": "15/05/2026"
   },
   "Lucap→Hiroki": {
-    "score": 0.416,
+    "score": 0.516,
     "label": "simpatico",
-    "ultimo_aggiornamento": "18/05/2026"
+    "ultimo_aggiornamento": "19/05/2026"
   },
   "Glusi→Lucap": {
     "score": 0.533,
@@ -2331,9 +2331,9 @@
     "ultimo_aggiornamento": "05/05/2026"
   },
   "Lucap→Autore": {
-    "score": 0.059,
+    "score": 0.159,
     "label": "neutro",
-    "ultimo_aggiornamento": "05/05/2026"
+    "ultimo_aggiornamento": "19/05/2026"
   },
   "Hiroki→Pescara Basket": {
     "score": -0.118,
@@ -3083,6 +3083,26 @@
   "Glusi→Ercolino": {
     "score": 0.3,
     "label": "simpatico",
+    "ultimo_aggiornamento": "19/05/2026"
+  },
+  "Lars→Giovane donna": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "19/05/2026"
+  },
+  "Lilli→Giovane donna": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "19/05/2026"
+  },
+  "Glusi→Giovane donna": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "19/05/2026"
+  },
+  "Wolf→Giovane donna": {
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "19/05/2026"
   }
 }
