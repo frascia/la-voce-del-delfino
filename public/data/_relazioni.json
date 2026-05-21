@@ -1,5 +1,5 @@
 {
-  "_runCount": 2,
+  "_runCount": 3,
   "Ernesto→Giovanni": {
     "score": -0.01,
     "label": "neutro",
@@ -36,8 +36,8 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.26,
-    "label": "diffidente",
+    "score": -0.16,
+    "label": "neutro",
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Hiroki→Cetteo": {
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Lars→Hiroki": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "21/05/2026"
   },
@@ -76,13 +76,13 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.36,
-    "label": "diffidente",
+    "score": -0.66,
+    "label": "ostile",
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.9,
-    "label": "ostile",
+    "score": -0.4,
+    "label": "diffidente",
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Lars→Juizinho": {
@@ -121,7 +121,7 @@
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.37,
+    "score": -0.57,
     "label": "diffidente",
     "ultimo_aggiornamento": "21/05/2026"
   },
@@ -211,8 +211,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.05,
-    "label": "neutro",
+    "score": -0.35,
+    "label": "diffidente",
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Glusi→Cetteo": {
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "10/05/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "21/05/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.43,
+    "score": -0.33,
     "label": "diffidente",
     "ultimo_aggiornamento": "21/05/2026"
   },
@@ -371,8 +371,8 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Abbukk→Lilli": {
-    "score": -0.656,
-    "label": "ostile",
+    "score": -0.456,
+    "label": "diffidente",
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Abbukk→Redazione": {
@@ -541,7 +541,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Cetteo→Abbukk": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "21/05/2026"
   },
@@ -641,9 +641,9 @@
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Lars→Wolf": {
-    "score": 0.202,
-    "label": "neutro",
-    "ultimo_aggiornamento": "16/05/2026"
+    "score": 0.302,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "21/05/2026"
   },
   "Lilli→Autore": {
     "score": 0.57,
@@ -656,14 +656,14 @@
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Wolf→Hiroki": {
-    "score": -0.42,
+    "score": -0.32,
     "label": "diffidente",
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Glusi→Wolf": {
-    "score": -0.027,
+    "score": 0.073,
     "label": "neutro",
-    "ultimo_aggiornamento": "20/05/2026"
+    "ultimo_aggiornamento": "21/05/2026"
   },
   "Wolf→Autore": {
     "score": -0.47,
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.739,
+    "score": -0.839,
     "label": "ostile",
     "ultimo_aggiornamento": "21/05/2026"
   },
@@ -961,9 +961,9 @@
     "ultimo_aggiornamento": "12/05/2026"
   },
   "Topengo→Cetteo": {
-    "score": -0.81,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/05/2026"
+    "ultimo_aggiornamento": "21/05/2026"
   },
   "Lars→Pescatori di Pescara": {
     "score": 0.045,
@@ -991,7 +991,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -0.765,
+    "score": -0.865,
     "label": "ostile",
     "ultimo_aggiornamento": "21/05/2026"
   },
@@ -1151,9 +1151,9 @@
     "ultimo_aggiornamento": "20/05/2026"
   },
   "Topengo→Hiroki": {
-    "score": -0.81,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/05/2026"
+    "ultimo_aggiornamento": "21/05/2026"
   },
   "Glusi→Topengo": {
     "score": 1,
@@ -1576,7 +1576,7 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Topengo→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "21/05/2026"
   },
