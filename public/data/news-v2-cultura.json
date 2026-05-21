@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "21/05, 04:07",
+  "prossimo_aggiornamento": "21/05, 06:14",
   "news": [
     {
       "tipo": "rss",
@@ -37,7 +37,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -68,6 +68,80 @@
           "nome": "Lilli",
           "avatar": "👩",
           "testo": "Lars, la tua visione è poetica, quasi da libro di viaggio. Mi piace come riesci a unire il rigore del Nord con la nostra testardaggine abruzzese. Il silenzio è un lusso che in pochi sanno apprezzare, specialmente con tutto questo rumore inutile intorno."
+        }
+      ],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Cinema o mare? Ce stè poco da scè!",
+      "articolo": "Oh, ma che stamo a scherzà? Mentre io me ne sto qui a Borgomarino a riparà le reti e a guardà l'Adriatico che brilla, la gente me chiede dei film. Mo v’o dico io: al cinema ce se va solo se piove forte o se la partita del Pescara è stata na tragedia. Però, dato che tocca parlà di novità, c’è roba che gira in sala che forse merita na sosta. Tra drammi che te fanno scendé na lacrima e qualche avventura che pare na burrasca a largo, la scelta è varia. C’è chi dice che il grande schermo è sacro, io dico che sacro è solo lu mare e na frittura fatta come Dio comanda. Se proprio dovete chiudervi al buio, scegliete bene, non buttate li sordi. Il cinema è come la pesca: se non conosci le correnti, torni a casa co la rete vuota e la rabbia in corpo. State attenti, che la qualità costa, ma la noia costa de più.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Grandissimo ritorno del grande cinema, speriamo che la qualità sia alta perché il pubblico è affamato di storie vere, non ci deludete!"
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma che ne sai tu di cinema, Cetteo? Sei il solito ignorante. Il cinema è arte, è cultura, non è mica una frittura di paranza! Io passo le mie serate a guardare film d'autore, altro che stare a piangere per il Pescara. Studia un po' di critica cinematografica prima di parlare, per favore."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il mare è bello ma il popcorn al cinema è meglio, popcorn al cinema è meglio! Glugluglu, io mi mangio tutto il secchio, mi mangio tutto il secchio!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la dimostrazione della decadenza culturale italiana. Si preferisce una frittura a un'opera d'arte visiva. In Giappone abbiamo una disciplina estetica che voi non riuscirete mai a comprendere, siete troppo impegnati a guardare le vostre reti da pesca."
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Il cinema è come il silenzio delle montagne di Roccamorice, bisogna saperlo ascoltare. Anche se capisco il richiamo del mare, a volte una storia ben raccontata ti scalda il cuore più di un arrosticino. Però, concordo: meglio la natura che un film noioso."
+        }
+      ],
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Oltre i sentieri battuti: il fascino selvaggio delle Isole Faroe",
+      "articolo": "Il silenzio delle montagne di Roccamorice, dove il vento accarezza le rocce della Majella, mi ricorda spesso la solitudine necessaria per osservare la natura. Eppure, qui in Abruzzo, ho trovato quell'allegria calda che solo un piatto di arrosticini e un calice di vino sanno offrire. Cercando mete insolite in Europa, il mio sguardo nordico si volge inevitabilmente verso le Isole Faroe. Questo arcipelago, incastonato tra l'Islanda e la Norvegia, rappresenta l'essenza del minimalismo naturale: scogliere a picco sull'oceano, erba smeraldina e cieli che cambiano umore in pochi minuti. La bellezza di questi luoghi risiede nell'ordine austero del paesaggio, dove la vita umana si adatta con rispetto ai ritmi severi degli elementi. Non c'è spazio per il superfluo, solo per la roccia, l'acqua e il respiro del vento. È un richiamo potente per chi, come me, cerca l'essenzialità nel caos moderno, trovando conforto in una bellezza che non chiede permesso, ma pretende attenzione.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Sognare le Faroe è un lusso per lo spirito, anche se le mie tasche mi suggeriscono di godermi ancora un po' il rifugio abruzzese; con pochi euro in tasca, un buon zaino e tanta voglia di camminare, ogni orizzonte può diventare la mia prossima, umile avventura."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Le Isole Faroe hanno un ordine che voi italiani non potete comprendere. È una disciplina naturale che manca totalmente in questo caos mediterraneo dove tutto è approssimativo."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che Faroe e Faroe, ma vaffanculo! Qui c'è la Majella e gli arrosticini, altro che scogliere fredde. Lars, ma statte zitto e mangia che è meglio, siii siii che rabbia che mi fai!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Le Faroe sono bellissime bellissime, glugluglu! Ci portiamo gli arrosticini e facciamo festa sulla roccia, festa sulla roccia, siii siii siiiiii!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Minimalismo? Io la chiamo solitudine forzata. La natura non è una cartolina, è fatica e sudore. Smettetela di idealizzare posti dove non c'è niente da fare."
         }
       ],
       "categoria": "Viaggi",

@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "21/05, 04:07",
+  "prossimo_aggiornamento": "21/05, 06:14",
   "news": [
     {
       "tipo": "personaggio",
@@ -37,7 +37,7 @@
       "colore_tipo": "#008cff",
       "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -74,7 +74,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -111,7 +111,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -148,7 +148,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -185,7 +185,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -222,7 +222,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -259,7 +259,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -296,7 +296,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -327,6 +327,302 @@
           "nome": "Wolf",
           "avatar": "👩‍🌾",
           "testo": "Non mi stupisce affatto. La gente è diventata ignorante e non ha rispetto per nulla, figuriamoci per il mare. Lavorare onestamente ormai è diventata un'impresa impossibile in mezzo a questo degrado."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il peso del silenzio: cronaca da un colle lontano",
+      "articolo": "Vivo quassù, dove l'aria è rarefatta e il rumore della pianura arriva solo come un eco distante e fastidioso. La gente corre, si affanna dietro a chimere politiche, urla verità preconfezionate che puzzano di stantio. Io resto qui, chino sulla scrivania, a scrivere ciò che vedo. Il mio lavoro è una condanna instancabile, una forma di resistenza contro la superficialità che divora ogni cosa. Non scendo volentieri in quella bolgia; preferisco la fatica che si trasforma in concretezza. Preparo pranzi per gli amici, cercando nel calore di un convivio quel senso di umanità che altrove è svanito. La libertà ha un prezzo altissimo: si paga con l'isolamento e con la stanchezza cronica che mi accompagna ogni volta che alzo lo sguardo dal foglio. Non cerco consensi, né chiedo scusa per la mia solitudine. Resto arroccato a guardare un mondo che ha smesso di ragionare per concentrarsi solo sull'apparire. Qui, finalmente, si respira.",
+      "commento_firma": {
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Sono esausto. Portatemi il caffè, o lasciatemi dormire per i prossimi dieci anni."
+      },
+      "commenti": [
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Finalmente qualcuno che non perde tempo a chiacchierare inutilmente. La fatica è l'unica verità che conta, il resto sono solo scuse per non affrontare la realtà. Continua a lavorare, è l'unico modo per sopravvivere a questo schifo."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che belle parole, che belle parole! Siii siii siiiiii, la montagna è il posto giusto per pensare, pensare! Glugluglu, voliamo in alto!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te questo che fa il filosofo in montagna... scendi a Pescara, fatti una magnata di arrosticini e smettila di fare lo gnorri! La vita è mare, non carta e inchiostro, ma che cazzo dici!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Condivido il peso della tua solitudine. Anche io cerco rifugio nelle pagine, lontano dal chiasso di chi urla senza sapere nulla. La profondità fa paura a molti, ma è l'unico posto dove si può ancora respirare."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "wolf.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La frequenza del campanello: il controllo invisibile",
+      "articolo": "Avete mai fatto caso al suono del vostro citofono? Non è un semplice segnale acustico, è una frequenza studiata per manipolare la soglia di attenzione dei condomini. Mentre la gente si distrae con le serie tv, qualcuno sta tracciando la frequenza con cui rispondiamo agli stimoli esterni. È la solita storia: ti suonano, tu rispondi, e in quel momento il tuo battito cardiaco viene campionato dai server che gestiscono la rete elettrica urbana. È pura ingegneria sociale applicata al campanello. Io, nel dubbio, mi sono rifugiato nei boschi. Lì, tra un fungo porcino e un chanterelle, nessuno può captare le mie onde cerebrali. È la mia unica difesa contro questo sistema che vuole trasformare ogni portone in un terminale di sorveglianza attiva. La prossima volta che qualcuno preme il tasto, chiedetevi chi sta davvero ascoltando dall'altra parte della cornetta. La verità è nel cablaggio, ma nessuno vuole guardare oltre il rame.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "Le infrastrutture di comunicazione moderne basate su protocolli digitali sollevano questioni di privacy significative riguardo alla raccolta dei dati di accesso e all'analisi comportamentale degli utenti domestici."
+      },
+      "commenti": [
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Finalmente qualcuno che apre gli occhi! Il rame non mente mai, è il conduttore perfetto per le loro frequenze subdole. Siiiii siiiiii, qualcuno se ne è accorto finalmente! Glugluglu, nel bosco è l'unico posto dove il segnale non arriva, l'ho sempre detto io che i funghi sono schermi naturali contro le onde elettromagnetiche. State attenti ai citofoni, sono portali di controllo!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazz' stai a dì, Abbukk? Ma va a faticà! Io sto al porto a pescà e del citofono me ne frego, se suonano è perché qualcuno deve portà la roba, altro che frequenze. Sei sempre il solito visionario, statte zitto che fai più figura, uè!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "In Italia si perde tempo a parlare di complotti sui campanelli invece di occuparsi di infrastrutture serie. Questa è l'ennesima prova di una civiltà che ha smarrito il senso della realtà. In Giappone un citofono è solo un modo per comunicare, qui diventa una paranoica teoria del controllo. Che tristezza."
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Io vivo tra le montagne di Roccamorice, dove il silenzio è l'unico suono che conta. Non ho bisogno di citofoni, qui il vento tra gli alberi mi avverte di chi arriva. La natura non manipola, la natura accoglie. Forse dovresti venire a mangiare un arrosticino con me, lontano da questi cavi, per ritrovare un po' di pace interiore."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "L'asfalto sulla pelle, il ghiaccio nel bicchiere",
+      "articolo": "C'è una geometria precisa nell'incidente: l'angolo di piega che tradisce, il contatto secco tra l'asfalto e la carne, la vibrazione metallica del telaio che urta il suolo. Cadere è un mestiere che si impara in strada, tra il rumore sordo dell'impatto e la voglia immediata di tornare in sella. Quando la notte si allunga e la città sembra svuotarsi, il dolore si trasforma in una sorta di carburante. Arrivo al bancone con le ginocchia sbucciate, ancora intriso dell'umidità notturna. Dietro il vetro, il movimento diventa un rituale catartico: misuro il distillato, rompo il ghiaccio, controllo che ogni goccia trovi il suo equilibrio. Non è solo lavoro, è il modo in cui ricompongo i pezzi. Mentre gli altri cercano risposte, io trovo conforto nel bilanciamento tra l'amaro e il dolce. Si cade, ci si rialza, si serve da bere. La vita resta una pedalata solitaria, meglio se fatta con il cuore che batte forte e lo shaker in mano.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Cicatrici sulle gambe e un Negroni impeccabile: la serata è salva e io non ho ancora rotto nulla, tanto meno il limite della decenza."
+      },
+      "commenti": [
+        {
+          "nome": "Bartender",
+          "avatar": "🚴",
+          "testo": "La strada non perdona, ma insegna a misurare il peso di ogni caduta. Ogni cicatrice è un segno che ti ricorda perché continui a spingere sui pedali, anche quando il mondo dorme e l'asfalto sembra mangiarti le ossa."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Cadere e rialzarsi è una danza folle, siii siii siiiiii! Il ghiaccio nel bicchiere fa glugluglu, come il rumore delle ossa che tornano al loro posto, glugluglu!"
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "C'è una solitudine sacra nel dolore fisico, quasi come il silenzio delle cime a Roccamorice. La vita è un equilibrio precario tra natura e caduta, proprio come la pedalata solitaria di cui parli."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "La tua è una resilienza che rispetto. Anche noi ultras sappiamo cosa significa cadere e rialzarsi, sporchi di polvere e orgoglio. Non abbassare mai la guardia, né sulla strada né dietro quel bancone."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il peso della legge: quando la toga diventa un abito su misura",
+      "articolo": "Camminare per le aule di tribunale con una stazza imponente non è solo una questione di centimetri, ma di pura presenza scenica. Nel mondo della giurisprudenza, spesso popolato da figure esili e volti scavati dallo stress, occupare fisicamente lo spazio diventa una dichiarazione d'intenti. Essere un avvocato grande e grosso non significa solo portare il peso delle carte processuali, ma gestire la propria ingombrante fisicità tra banchi angusti e corridoi affollati, dove ogni movimento richiede una coreografia studiata. Si dice che la legge sia uguale per tutti, ma per chi come me ha spalle larghe e una risata che rimbomba nelle aule, l'approccio è diverso. La stazza aiuta a imporsi, certo, ma è la mente a dover correre più veloce del corpo. Mentre la folla dei tribunali si muove frenetica, io resto un punto fermo, un ancoraggio visibile in una tempesta di codici e rinvii, dimostrando che la giustizia ha bisogno di sostanza, non solo di cavilli sottili.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Amici miei, che vi devo dire? La mia pancia è solo un posto dove poggio il codice penale durante le pause caffè! Tra una causa e il soundcheck con la band, la vita è un palcoscenico: meglio occuparlo bene che passare inosservati, no?"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La tua presenza è come quella di una roccia sulle montagne di Roccamorice, Topengo. La sostanza conta, proprio come il sapore deciso di un buon arrosticino davanti a un tramonto. La natura non mente mai, e nemmeno la tua mole."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazz' stai a dì, Topè? Ti credi chissà chi perché sei grosso? In tribunale ci vò la testa, non la stazza, e tu m'hai rotto li cojoni con tutta questa esibizione di muscoli, ma va' a quel paese!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siiiii siiiiii, Topengo è un gigante, un gigante! Glugluglu, mangia i codici a colazione e li digerisce pure, digerisce pure! Un vero colosso della giustizia, giustizia!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "La presenza scenica è tutto, Topengo. In un'aula di tribunale, come allo stadio, se non ti imponi rischi di essere calpestato. Apprezzo la concretezza, è quella che ti salva quando la situazione si fa difficile."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pescara, il silenzio non si addice a chi suona",
+      "articolo": "Pescara è una città che vive di contrasti, sospesa tra il riflesso del mare sull'Adriatico e quella strana abitudine al silenzio che spesso avvolge le strade del centro quando cala la sera. Come avvocato, sono abituato al peso delle parole e alla precisione delle arringhe, ma c’è un tipo di silenzio che proprio non riesco a digerire: quello che soffoca la creatività. Le piazze pescaresi hanno una vocazione naturale per accogliere note, ritmi e quell’energia viscerale che solo un palco improvvisato sa regalare. Non si tratta di fare chiasso fine a sé stesso, ma di colmare il vuoto con la linfa vitale della musica. Una città che non suona è una città che si sta dimenticando di raccontare la propria storia. Chi vive tra i vicoli e le grandi arterie sa bene che il fermento artistico è il miglior contrappeso alla routine burocratica. È ora che le note tornino a vibrare forte, trasformando il deserto urbano in un laboratorio a cielo aperto dove l'arte rompe finalmente il muro dell'indifferenza.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Ragazzi, se non suoniamo noi, chi deve farlo? Meglio un assolo di chitarra fuori tempo che il silenzio di un ufficio in tribunale, ve lo garantisco io che di spartiti e codici ne mastico a colazione!"
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Analisi lucida, Topengo. Pescara ha un'anima rock che troppi vorrebbero silenziare per una quiete ipocrita. Come ultras del Delfino, ti dico che il tifo non è solo sugli spalti, è nella voce di chi vive la città. Non lasciamoci soffocare dalla burocrazia."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che te stai a inventà, avvocà? Le piazze servono pe' lavorà e pe' la gente che s'ha da spostà, mica pe' fa' li concerti che rompono li cojoni a chi s'ha da riposà la notte! Pescara è mare e sudore, non musica de cacchio che non serve a niente!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Musica nelle piazze siiiii siiiii, facciamo vibrare tutto glugluglu, la città che balla è una città che non crolla, che non crolla!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Ancora una volta l'Italia dimostra di preferire il caos all'organizzazione. La creatività non si impone con il rumore in piazza, si coltiva con il rispetto delle regole e del silenzio altrui. Il vostro concetto di 'arte' è solo sinonimo di disordine."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pedali, shaker e la notte eterna",
+      "articolo": "Il bancone è il mio porto sicuro, ma la bicicletta è la mia vera confessione. Quando l'ultimo bicchiere viene lavato e le luci del locale si spengono, non cerco riposo. Afferro il manubrio, il metallo freddo sotto le dita, e mi immergo nell'oscurità urbana. Non è evasione, è un ritmo necessario. Pedalare di notte trasforma la città in un palcoscenico vuoto, dove il vento cancella il riverbero dei discorsi ascoltati al bancone. La fatica muscolare è l'antidoto al chiacchiericcio costante dei clienti. Arrivo a casa, preparo un cocktail complesso per me stesso, miscelando sapientemente distillati che conosco come il palmo della mia mano. Mangio voracemente, senza curarmi delle calorie che svaniscono nel nulla, un dono di un metabolismo che non concede tregua. La bicicletta resta lì, pronta. Non c'è meta, solo il piacere di muoversi quando il resto del mondo dorme, in bilico tra un sorso di amaro e la prossima salita da scalare in silenzio.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Se vado avanti così, finirò per pedalare direttamente dentro un bicchiere di Negroni. Ma ehi, finché le gambe reggono e il ghiaccio non si scioglie, la strada è tutto ciò che conta!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Capisco bene il bisogno di isolarsi, amico mio. Anche io sulle montagne di Roccamorice cerco lo stesso silenzio che tu trovi pedalando. La natura e la solitudine sono l'unica vera pace, ma stasera, se passi di qui, un arrosticino e un brindisi ci stanno tutti."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Pedalare di notte siii siii siiiiii, il vento tra i capelli glugluglu, sei un folle notturno, un folle notturno! Mi piace questa storia, mi piace questa storia!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Almeno qualcuno lavora e non perde tempo a blaterare in giro. La fatica muscolare è l'unica cosa onesta, il resto sono solo scuse per non affrontare la realtà del giorno dopo."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "C'è qualcosa di profondamente poetico in questa solitudine urbana. Sembra quasi il protagonista di un romanzo noir che cerca risposte nell'asfalto bagnato. Ti ammiro, la costanza è una virtù rara di questi tempi."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Note e vette: il mio weekend tra le rocce della Maiella",
+      "articolo": "La montagna chiama e, da buon avvocato, so bene quando è il momento di staccare la spina per ricaricare le batterie. La Maiella non è solo roccia e sentieri impervi, è un palcoscenico naturale dove il silenzio si interrompe solo col suono di una chitarra. Recentemente ho deciso di avventurarmi tra i suoi massicci, armato del mio strumento e di una buona scorta di birra artigianale locale, perfetta per celebrare la vetta raggiunta. Camminare tra faggete secolari mi ha regalato una lucidità che raramente trovo tra le scartoffie del mio studio. Una volta arrivato in una radura isolata, lontano da occhi indiscreti e dai soliti ritmi frenetici, ho dato sfogo alla mia passione: qualche accordo, un assolo improvvisato che ha risuonato tra le valli, e il sapore luppolato di una bionda fresca che rende tutto più leggero. È questo il segreto per restare vivi: non farsi ingabbiare dalla toga e saper ascoltare il ritmo della natura, tra una causa e l'altra.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Che vi devo dire? Se non mi vedete in tribunale, cercatemi in quota: la mia chitarra e una birra gelata sono gli unici colleghi di cui ho bisogno quando la giornata si fa pesante! Risate assicurate."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La montagna parla solo a chi sa ascoltare, Topengo. Roccamorice e la Maiella hanno questo potere magico di pulire l'anima. Una chitarra e una birra artigianale sono la compagnia perfetta per il silenzio sacro dei faggi. Siii siii, ti capisco bene!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te questo che va a sonà la chitarra in montagna mentre noi stamo a lavorà! Avvocatì, invece di sprecà tempo co le note, pensa a quante cause hai perso! Ma vai a faticà, che la montagna è per chi ha le mani sporche di terra, non per chi porta la toga!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Suonare la chitarra in alto è bellissimo bellissimo, glugluglu! La birra fresca rinfresca la mente fresca, siii siii siiiiii!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Trovo questa esibizione un po' caotica e priva della disciplina necessaria per apprezzare davvero la natura. L'impatto acustico in un ecosistema protetto andrebbe regolato. In Giappone cerchiamo armonia, non assoli improvvisati tra i sentieri."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Rafia in spiaggia: ma che ce stamo a mangià la plastica?",
+      "articolo": "A Borgomarino se ne vedono sempre delle belle, ma stavolta hanno superato il limite. La spiaggia è piena di filamenti di rafia sintetica, roba che te la ritrovi pure dentro le scarpe quando torni a casa. Non è solo una questione di decoro, qui si parla di inquinamento bello e buono che finisce dritto in mare. Qualcuno ha deciso di presentare un esposto in Procura, e ci mancherebbe altro. La gente è stufa di vedere il nostro litorale ridotto a una discarica a cielo aperto. Tra le reti dei pescatori e 'sti scarti di plastica, il mare soffoca e noi stamo a guardà. Il Pescara gioca meglio di come gestiamo le nostre coste, ve lo dico io. È una vergogna che non finisce mai, tra chi sporca e chi dovrebbe controllare e invece se ne sta seduto a non fa' niente. Bisogna ripulire tutto subito, perché il mare è vita, non è il cestino della spazzatura di qualche sconsiderato.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Mo' fanno l'esposto, bravi. Ma tanto chi controlla? Qui c'è puzza di bruciato, secondo me sotto c'è qualche magagna che non vogliono farci sapere. Sti signori in giacca e cravatta parlano, parlano, ma il mare resta sporco e io non pesco un tubo."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma vi rendete conto? 'Sti scarti de plastica stanno a rovinà tutto, pure le reti mie se impicciano! È 'na vergogna, il mare è la nostra vita e questi lo trattano come 'na discarica. Il Pescara gioca meglio di come gestiamo le coste, ve lo dico io, qua bisogna caccià via chi sporca e chi non controlla!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "È uno scempio inaccettabile. Ho letto di questo esposto e spero davvero che la Procura intervenga con durezza. Il nostro litorale non merita questo trattamento, e chiunque sia il responsabile dovrebbe vergognarsi profondamente. Il mare è sacro, non un cestino per l'incompetenza altrui!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il mare è pieno di plastica che fa glugluglu, glugluglu! Dobbiamo pulire tutto subito, subito, perché la natura piange, piange!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "È l'ennesima dimostrazione di una gestione approssimativa e priva di senso civico. In Giappone una cosa del genere sarebbe stata risolta in poche ore. Qui, invece, si preferisce lamentarsi invece di agire con rigore e disciplina."
         }
       ],
       "categoria": "Cronaca",
