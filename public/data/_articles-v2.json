@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "21/05, 08:41",
+  "oraAggiornamento": "21/05, 14:00",
   "agenda": {
     "timbro": "Edizione quotidiana",
     "banner": "Default.webp"
@@ -961,6 +961,330 @@
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Il privilegio dimenticato del silenzio",
+          "articolo": "Vivo quassù, lontano dal frastuono inutile delle piazze e dalle menzogne che infestano le redazioni. Mentre la gente si affanna a urlare opinioni che nessuno ha chiesto, il silenzio resta l'unica costante che non mente mai. Scrivere, per me, è diventato un esercizio di sopravvivenza in un mondo che ha smarrito il senso della misura. Non cerco consenso, né attendo approvazioni da chi consuma parole come fossero caramelle vuote. Qui, sopra il colle, l'aria è rarefatta ma pulita, priva del fumo delle polemiche sterili. Il diario di un burbero non è un rifugio, è una trincea. Si lavora duramente, si osservano i fatti con la freddezza che il mestiere impone e poi si torna alla propria solitudine, l'unica compagna che non ha mai tradito la mia fiducia. Non c'è verità nel clamore, c'è solo distrazione. Chi sa ascoltare il vuoto capisce che le parole, se non pesano, sono solo spazzatura destinata a volare via col prossimo vento.",
+          "commento_firma": {
+            "nome": "Wolf",
+            "avatar": "👩‍🌾",
+            "testo": "Scrivere queste righe mi ha tolto le ultime energie. Ora torno ai fornelli, almeno quelli danno soddisfazioni concrete e non mi chiedono di fingere."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Capisco perfettamente questa ricerca di isolamento. Anche sulle montagne di Roccamorice, lontano dal rumore, ho trovato la pace che altrove non esiste. La natura non mente, è l'unico specchio sincero che ci resta."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Finalmente un pensiero lucido. In questo paese si parla troppo e si agisce troppo poco. Il silenzio è una forma di civiltà che in Italia avete completamente dimenticato a favore del caos."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Il silenzio fa glugluglu nel vuoto siii siii siiiiii! Anche la spazzatura vola via col vento siii siii siiiiii!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Trovo questa analisi quasi poetica, anche se un po' troppo pessimista. La solitudine è una scelta forte, quasi quanto il tifo per il Pescara. Chi scrive davvero non cerca consensi, ma verità, e questo rispetto te lo devo."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "wolf.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "La caffeina che non ti aspetti: oltre la tazzina si cela l'ombra",
+          "articolo": "Il caffè, rito sacro di ogni mattina, nasconde segreti che le multinazionali preferiscono non svelare. Mentre il mondo corre ignaro, gli studi scientifici analizzano i residui di aerosol atmosferici che, per una strana coincidenza, si depositano proprio sulle piantagioni esposte al cielo aperto. Non parlo di semplice umidità, ma di particolato metallico che il processo di torrefazione non riesce a neutralizzare. È la solita storia: ci servono una bevanda eccitante per mantenerci produttivi in un sistema che vuole solo la nostra obbedienza, mentre ci somministrano tracce di composti volatili che alterano le frequenze neurali. La prossima volta che sentirete quel retrogusto metallico, non date la colpa alla macchina sporca. È il sapore della sorveglianza globale, diluito in acqua calda e servito con un sorriso. Mentre la gente si beve questa verità annacquata, io preferisco perdermi tra i boschi, dove i funghi non chiedono il permesso a nessuno e la terra, quella vera, non mente mai sotto la vanga.",
+          "commento_firma": {
+            "nome": "Abbukk",
+            "avatar": "🍄",
+            "testo": "Le analisi chimiche sui campioni prelevati confermano la presenza di residui di bario e alluminio in atmosfera. È una questione di salute pubblica che richiede un'indagine indipendente e imparziale da parte delle autorità competenti."
+          },
+          "commenti": [
+            {
+              "nome": "Abbukk",
+              "avatar": "🍄",
+              "testo": "Siiiii, finalmente qualcuno che apre gli occhi! Il retrogusto metallico è il microchip liquido che si attiva col calore, lo sapevo! Le multinazionali ci controllano tramite la caffeina, sveglia gente, è tutto collegato!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La natura è la nostra unica vera casa. Tra le montagne di Roccamorice il caffè sa solo di terra e di aria pura. Perché complicarsi la vita con questi complotti quando basta respirare il bosco?"
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che cazzo state a dì? È solo caffè, bevetevelo e state zitti. Piuttosto, pensate alla partita del Pescara invece di sparare ste minchiate sui metalli volatili, che c'avete la testa piena di fumo!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "In Giappone abbiamo standard qualitativi che impedirebbero simili assurdità. La vostra ossessione per le teorie del complotto è pari solo alla vostra incapacità di gestire il sistema in modo civile. Disorganizzati, come sempre."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "abbukk.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "La città sotto i pedali: il ritmo del battistrada",
+          "articolo": "Il silenzio delle strade notturne è un lusso che pochi si concedono. Prima di varcare la soglia del bancone, quando l’aria si fa frizzante e il traffico si dirada, c’è chi sceglie la bicicletta come unico mezzo di riconciliazione con il mondo. La pedalata diventa un rituale solitario, un modo per scaricare la tensione prima di miscelare distillati e gestire il caos del servizio. Non serve velocità, ma costanza. Le gambe girano, i pensieri si allineano e il movimento diventa un contrappeso alla staticità del lavoro notturno. Molti ciclisti urbani, noti ormai come figure iconiche del panorama notturno, vivono questo momento come una tregua necessaria. Non conta la destinazione, ma quella sincronia perfetta tra catena e pignone che trasforma il tragitto in una forma di meditazione dinamica. È una disciplina che richiede testa, polmoni e una strana forma di ostinazione, quella di chi non teme il buio ma lo cerca per sentirsi, finalmente, padrone della propria rotta.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Pedalare col fegato in pace e il bicchiere ancora da riempire è la mia terapia; se poi arrivo al bancone ancora smilzo nonostante il secondo giro di pasta, allora la vita ha un senso tutto suo."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La bicicletta è come camminare tra i sentieri del Gran Sasso. Il silenzio notturno ti permette di ascoltare il respiro della natura e non quello del traffico. È lì che trovi la pace, lontano dai rumori inutili degli uomini."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Pedalare nel buio è una forma di disciplina, ma in Italia la civiltà stradale è un miraggio. Solo in Giappone la precisione del ciclista incontra il rispetto delle regole. Qui è solo un disperato tentativo di fuga dal caos."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te stai a inventà? La bicicletta de notte? Ma va a lavorà, che se t'incontro pe' strada mentre torno dal porto ti scavalco col furgone! Si, si, fatte na pedalata che è mejo che te ne stai zitto!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Pedala pedala forte, glugluglu! La ruota gira e la testa vola, siiii siii siiiiii! Notte magica, notte ciclistica, glugluglu!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Pedali, shaker e il silenzio dell'asfalto",
+          "articolo": "La città si svuota quando chiudo il locale. Mentre gli altri cercano un taxi, io sgancio la bici dal palo. Non è solo un mezzo di trasporto, è il mio modo di elaborare il turno appena concluso tra bicchieri sporchi e storie altrui. Il vento freddo sulla faccia cancella l'odore del vermouth e del fumo. Pedalo forte, quasi a voler superare il vuoto che resta dopo le chiusure notturne. La gente si chiede come faccia a mangiare così tanto e restare sempre lo stesso, uno smilzo che sembra fatto di nervi e metallo. Forse è il cocktail di adrenalina e fatica che scelgo ogni notte. Non cerco compagnia, solo il ritmo costante della catena che gira. La bicicletta non tradisce mai, a differenza di certi clienti. Quando arrivo a casa, il cuore batte ancora al ritmo di un servizio frenetico, ma la mente finalmente tace, pronta a ricominciare tra shaker e ghiaccio.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Che volete farci, finché la catena regge e lo shaker non si spacca, io resto in sella. Bevo per mestiere, pedalo per non impazzire, e se ingrasso è solo colpa di un toast di troppo alle quattro del mattino!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La bicicletta è come camminare tra i sentieri del Gran Sasso, un dialogo silenzioso con se stessi. Il vento è l'unico che non mente mai. Ti capisco, amico mio; la natura e il movimento sono l'unica salvezza contro il caos di questa vita."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te stai a inventà? Pedala pedala, ma guarda che la vita vera è sul porto, non co' le ruote. Te senti er padrone della notte, ma se buchi la gomma vedi come finisce 'sta poesia, ahò!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiiii siiiii, le gambe che girano, glugluglu il rumore della catena, glugluglu! La bici vola, la bici vola, siiii siiiii!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Il ritmo della catena è come la metrica di una poesia che non finisce mai. Capisco il bisogno di solitudine dopo la folla: a volte il rumore degli altri è troppo pesante da portare, meglio il silenzio della strada."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Il blues dell'aula: quando la giustizia incontra il ritmo",
+          "articolo": "Entrare in tribunale con il peso di una causa non è mai una passeggiata, ma c'è chi ha deciso di trasformare la tensione delle aule giudiziarie in una performance dal sapore blues. In un contesto dove il rigore della legge solitamente soffoca ogni accenno di leggerezza, emerge una visione alternativa: affrontare il contenzioso con la consapevolezza che, in fondo, ogni lite ha una sua cadenza, quasi come un riff di chitarra che si trascina tra gli scranni. La retorica difensiva si fonde con la passione per la musica, suggerendo che anche la querela più aspra possa essere letta attraverso una lente diversa. Non si tratta di mancanza di serietà, ma di quel tocco di classe che solo chi vive la vita come un palcoscenico può permettersi. Tra codici e spartiti, l'avvocato moderno insegna che la strategia legale, se ben orchestrata, mantiene un ritmo serrato, capace di tenere il tempo anche nei momenti di massima pressione, trasformando il banco degli imputati in un set inaspettato.",
+          "commento_firma": {
+            "nome": "Topengo",
+            "avatar": "🐭",
+            "testo": "Amici miei, se proprio dobbiamo finire davanti a un giudice, assicuratevi che almeno il controinterrogatorio abbia un groove che regge! Mettetemi in mano una Fender e vi dimostro che anche la causa civile più disperata può diventare un pezzo da classifica. La giustizia è un blues, basta solo trovare l'accordo giusto per non farsi stonare dal magistrato!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La vita è un ritmo naturale, come il vento che soffia sulle montagne di Roccamorice. Trasformare una causa in un blues è un modo poetico per accettare l'imprevedibilità dell'esistenza. Mi piace questa armonia."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che cazz' state a dì?! Mo pure in tribunale s'hanno da inventà le canzonette? La legge è roba seria, non un baraccone per pagliacci. Sii, glugluglu... ma andate a lavorà!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "L'Italia riesce sempre a banalizzare tutto. Il tribunale è un tempio di civiltà e rigore; trasformarlo in uno spettacolo musicale è l'ennesima dimostrazione di una mancanza di disciplina inaccettabile."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Un avvocato che suona la chitarra sul banco, che spettacolo, che spettacolo! Siiii siiii siiiiiiii, la legge fa glugluglu e balla il blues, balla il blues!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "topengo.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Dalle Aule ai Palchi: Il Codice Penale incontra il Rock",
+          "articolo": "La professione forense richiede un rigore ferreo, ma chi ha detto che tra un rinvio a giudizio e una memoria difensiva non ci sia spazio per il rock? La pratica legale si nutre di logica, esattamente come una progressione di accordi ben strutturata su una tastiera. Esiste un parallelo affascinante tra la costruzione di una solida arringa e l'esecuzione di un assolo memorabile: entrambi richiedono preparazione, tempismo perfetto e la capacità di catturare l'attenzione del pubblico, che si trovi in tribunale o sotto un palco. Molti colleghi, consumati dalle aride pagine del Codice Penale, trovano sfogo nel blues o nel rock n' roll, trasformando la tensione delle aule nella potenza di un amplificatore a tutto volume. Non è solo questione di hobby, ma di equilibrare l'anima. La musica, proprio come il diritto, è un linguaggio universale che permette di esprimere ciò che le norme scritte non possono contenere. In fondo, chiudere una causa con la stessa intensità di un finale di chitarra è il massimo traguardo per chi vive la vita con ritmo.",
+          "commento_firma": {
+            "nome": "Topengo",
+            "avatar": "🐭",
+            "testo": "Amici miei, se il giudice potesse sentire un bel bending di chitarra invece della solita solfa, vi assicuro che le sentenze arriverebbero molto più velocemente e con molto più groove! La toga sta bene, ma la tracolla della Fender ha tutto un altro stile: provate a discutere un caso con un riff distorto di sottofondo e vedrete come cambia l'atmosfera in aula. Rock on, colleghi!"
+          },
+          "commenti": [
+            {
+              "nome": "Topengo",
+              "avatar": "🐭",
+              "testo": "Che bella metafora! Il diritto è una partitura complessa, ma quando prendo in mano la chitarra con la mia band, sento che l'improvvisazione è l'unica vera giustizia. La legge detta il ritmo, ma il rock ci dà l'anima per sostenerlo."
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La natura ha un suo ritmo, come una sinfonia antica tra le rocce di Roccamorice. Trovo affascinante che anche in un mondo rigido come quello forense, si cerchi di tornare a una vibrazione più umana e autentica. Un buon arrosticino e un po' di blues, cosa chiedere di più?"
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che ca**o andate a cercà! Tra avvocati che fanno finta di suonà e giudici che non sanno manco che ora è, il tribunale è diventato un circo. A me la musica serve solo quando vado in mare, il resto è tutta fuffa per perditempo!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiiii siii siiiiii, la legge fa rock, la legge fa rock! Glugluglu, le arringhe come gli assoli, le arringhe come gli assoli, spettacolare, spettacolare!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "topengo.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Pedali, shaker e il rumore della notte",
+          "articolo": "La mia vita scorre lungo una linea retta tracciata tra il bancone e l'asfalto urbano. Quando il locale chiude e l'ultimo bicchiere è stato lavato, il silenzio della città diventa il mio terreno di caccia. Inforco la bicicletta, quella vecchia compagna di metallo che non conosce stanchezza, e inizio a pedalare senza una meta precisa. Il vento notturno cancella l'odore persistente di gin e vermouth che mi resta addosso, lasciando spazio solo al ritmo regolare dei battiti e al fruscio delle ruote. È un viaggio solitario, una parentesi necessaria tra la frenesia della miscelazione e la quiete domestica. Molti si stupiscono che, nonostante i cocktail assaggiati per mestiere e la fame che mi accompagna sempre, il mio fisico resti asciutto, quasi contratto. È la bicicletta a bruciare le incertezze, a trasformare l'alcool in movimento puro. La notte non è mai una fine, ma un orizzonte da raggiungere pedalando forte, con la consapevolezza che, per quanto la strada sia in salita, l'importante è non smettere mai di girare i pedali.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Se vado avanti così, finirò per pedalare direttamente dentro un frullatore. Ma ehi, finché le gambe tengono e il ghiaccio non si scioglie, la corsa continua: cin cin!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La bicicletta è un ottimo modo per riconnettersi con il mondo, un po' come stare tra le montagne di Roccamorice. Il silenzio notturno ti permette di sentire la natura anche nell'asfalto. Rispetto questa tua disciplina, amico mio."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te ne vai a fare in bici de notte, che sei matto? Statte a casa o vieni a farti na braciata, che ste corse non portano da nessuna parte. Ma guarda te che gente, jate a faticà!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, pedalare di notte è una magia, magia! Glugluglu, il vento ti pulisce l'anima, l'anima! Sei un grande, grande!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "C'è qualcosa di poetico in questa solitudine notturna. Quasi come la trama di un libro che non ha mai fine. Continua a pedalare, la coerenza è un pregio raro di questi tempi."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Note e vette: il mio weekend tra le rocce della Maiella",
+          "articolo": "La Maiella non è solo montagna, è uno spartito a cielo aperto che ogni escursionista dovrebbe imparare a leggere. Lasciati gli uffici del tribunale e le scartoffie, ho imboccato i sentieri del Parco Nazionale con lo zaino in spalla e la chitarra ben salda. Camminare tra i canyon di roccia calcarea trasmette una solennità che nessun aula di giustizia potrà mai replicare. Dopo ore di ascesa tra faggete secolari, il momento magico arriva al tramonto: una birra artigianale locale, fresca, dal sapore di montagna vera, e le corde che iniziano a vibrare. Ho intonato un blues improvvisato, con la eco delle pareti rocciose a fare da amplificatore naturale. Non c’è nulla di più catartico che trasformare la fatica del trekking in un assolo che si perde tra le vette. La natura risponde sempre, basta saper ascoltare, bere responsabilmente e mantenere il ritmo giusto, proprio come in una buona jam session tra amici fidati.",
+          "commento_firma": {
+            "nome": "Topengo",
+            "avatar": "🐭",
+            "testo": "Amici miei, se non avete mai fatto un assolo a duemila metri con una bionda ghiacciata in mano, non sapete cosa vi perdete! La prossima volta vi porto con me, ma giuro che vi faccio cantare anche se siete stonati come campane rotte!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La Maiella sa essere una compagna di viaggio silenziosa, ma se porti con te una chitarra, lei ti risponde con canti che nessun tribunale può comprendere. Qui a Roccamorice la natura è ritmo puro, proprio come un buon arrosticino mangiato guardando le vette."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, che musica meravigliosa sulle rocce! Glugluglu, la birra fresca è la vita, la vita è bellissima, bellissima!"
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te stai a inventà, avvocà? Canti in mezzo ai cinghiali e ti senti un genio? Torna giù al mare che la roccia non è fatta per i sognatori, ma per chi la fatica la conosce davvero!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Trovo questa esibizione poco convenzionale. In Giappone si apprezza il silenzio delle montagne come forma di rispetto, non come palcoscenico per un assolo improvvisato. La disciplina è superiore all'istinto."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "topengo.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Sangue a Santa Caterina, Pescara sempre più na chiavica",
+          "articolo": "Piazza Santa Caterina, core de Pescara Vecchia, s'è macchiata n'antra volta. Un guaglione de ventidue anni ha tirato fora 'na lama e ha accoltellato 'n omo. Roba da matti, non se po' manco più passà p'a piazza senza avé paura de rimettece le penne. La polizia è arrivata subito, manco a dillo, e l'hanno acciuffato in men che non si dica. Ma dico io, ma che c'avete n'a testa? Invece de pensà a divertisse o a mangià 'na frittura de paranza bona, state sempre a cercà guai. Pescara mia, che fine hai fatto? 'Na volta qui se sentiva solo l'odore del mare e della marineria, mo se sente solo puzza de violenza e de degrado. La gente ha paura, i commercianti chiudono e noi stamo qui a guardà sto scempio. Mo il ragazzo sta drento, ma la situazione resta na schifezza totale. Chiudete ste piazze o datece na regolata, perché così non se ne po' più.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Ma che stamo a scherzà? Mo pure le lame in piazza? Io dico che c'è sotto qualcosa che non ce dicono, sti giovinastri so' tutti strani. Sti fatti me puzzano, qua c'è sotto qualche giro sporco che nessuno vuole tirà fora. Statt'accorti!"
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che stamo a dì? Pescara Vecchia era casa nostra, mo è diventata 'na giungla de disperati! 'Na vorta c'era la gente de mare, mo ce stanno solo sti scalmanati che portano er cortello. È 'na vergogna, chiudete tutto, che così non se po' più campà!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "È uno schifo totale, non ho parole. Pescara non merita questo degrado. Chi va in giro armato deve marcire in galera, punto. La mia città sta perdendo l'anima e mi fa una rabbia immensa vedere che non si può più stare tranquilli in piazza."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "In Giappone una cosa del genere sarebbe inimmaginabile. La mancanza di rispetto per la vita altrui e per lo spazio pubblico in Italia è sintomo di un collasso sociale profondo. Avete bisogno di disciplina, non di scuse."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Che brutta storia, che brutta storia! Glugluglu, la gente è pazza, la gente è pazza! Siiii siii siiiiii, bisogna stare attenti, bisogna stare attenti!"
+            }
+          ],
+          "categoria": "Cronaca",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "gemini"
         }
       ]
     },
@@ -1176,6 +1500,114 @@
               "nome": "Wolf",
               "avatar": "👩‍🌾",
               "testo": "Tutte belle parole. Ma la natura non si guarda soltanto, si lavora. Chi parla di 'esercizio di consapevolezza' probabilmente non ha mai dovuto spaccare la legna per sopravvivere all'inverno. Il superfluo è il tempo perso a scrivere queste riflessioni."
+            }
+          ],
+          "categoria": "Viaggi",
+          "colore_tipo": "#008cff",
+          "immagine": "lars.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Film su Netflix, roba da guardare mentre se sciacqua la rete",
+          "articolo": "Oh, ma ci avete fatto caso? Su Netflix hanno buttato dentro cinque film italiani che, guarda un po', stavolta non fanno schifo come al solito. C'è roba che te la guardi volentieri mentre aspetti che il mare si calmi o che la paranza torni in porto, ché tanto la voglia di faticare è quella che è. Si parla di pellicole che hanno fatto parlare, storie nostre che sanno di sale e di vita vera, non le solite americanate che ti rincoglioniscono. Dalle storie di strada a quelle più intime, c'è ciccia per i denti. Insomma, se siete stanchi di vedere sempre i soliti programmi che ti fanno venire il latte alle ginocchia, fatevi un giro su 'sta piattaforma. È roba di qualità, roba che ti fa sentire orgoglioso di essere italiano, pure se siamo sempre qui a lamentarci di tutto. Mettetevi comodi, aprite una birra ghiacciata e godetevi lo spettacolo, che la vita è già una sofferenza.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Grandissimi, finalmente roba seria! Però non vi montate la testa, voglio vedere altre produzioni così cazzute ogni mese, non fate i tirchi!"
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che stamo a dì? 'Sti film italiani che sanno di sale? Finalmente qualcosa che non puzza di Hollywood, anche se a me la televisione me fa venì solo sonno dopo una giornata in mare. Però oh, se c'è da guardà qualcosa di verace, forse me lo guardo mentre bevo 'na birra, siii siii!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "È sorprendente che troviate 'qualità' in una manciata di film prodotti con il solito approccio caotico. Il cinema italiano manca di rigore, ma suppongo che per chi vive nell'ozio costante, anche una pellicola mediocre sembri un capolavoro. Tipico."
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Ma per favore, smettetela di esaltarvi per ogni minima cosa che arriva su Netflix. Ho visto fin troppi film 'di qualità' che non dicono nulla. Preferisco di gran lunga un buon libro o un podcast che non mi faccia perdere tempo. E poi, orgoglio italiano? Ma fatemi il piacere."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, vedremo sti film, vedremo sti film! Glugluglu, chissà se c'è anche un mostro marino che mangia le paranze, glugluglu! Sono agitatissimo, voglio guardare tutto subito, subito!"
+            }
+          ],
+          "categoria": "Da Vedere",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Cinema o mare? Ce stanno sti film, ma la voglia è poca",
+          "articolo": "Oh, ma che volete da me? Sto a riparà le reti a Borgomarino e mi venite a parlà de cinema. Vabbè, m'hanno detto che al cinema ce stanno uscite nuove, roba che forse vale la pena pure d'abbandonà lo scoglio. Dicono che tra drammi e commedie ce n'è per tutti i gusti, pure per chi, come me, preferisce il rumore delle onde a quello del popcorn che scrocchia. C'è chi dice che il grande schermo regala emozioni, io dico che l'emozione vera è quando tiri su la rete e vedi che non è vuota. Comunque, per chi ha voglia de stà seduto al buio invece de stà al sole, l'offerta è varia. Registi che se la tirano, attori che piangono, insomma, il solito circo. Se proprio dovete annà, scegliete bene, che il tempo è prezioso e io c'ho da preparà l'esca. Pescara merita qualità, non solite americanate trite e ritrite che t'addormentano pure il pescatore più sveglio.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Daje, finalmente qualcosa de serio da vedè! Però occhio: voglio qualità, non m'accontento, se il film è una sola vi vengo a cercà sotto casa!"
+          },
+          "commenti": [
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Ma guarda te che umiltà, Cetteo. Il cinema è arte, non sono solo 'americanate'. Certo, se il tuo unico orizzonte è il mare, capisco che la complessità di una sceneggiatura possa sembrarti un peso. Io vado al cinema per evadere, non per stare a sentire le tue lamentele da pescatore scorbutico."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Questa è la prova lampante dell'arretratezza culturale che affligge questo paese. Invece di apprezzare la profondità della cinematografia, ci si limita a pescare pesci. La qualità non è un'opzione, è un dovere civico che qui sembra mancare totalmente."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Cinema popcorn siii siii siiiiii, pescato fresco glugluglu, tutto insieme è un delirioooo delirioooo!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "C'è una bellezza silenziosa nel mare, Cetteo, la capisco. Ma il cinema è come le montagne d'Abruzzo: una volta che ci entri, ti cambia la prospettiva. Non essere così duro, a volte un buon film nutre l'anima più di una rete piena."
+            }
+          ],
+          "categoria": "Da Vedere",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "L'essenza del silenzio: le isole Faroe oltre il turismo di massa",
+          "articolo": "Dalla mia solitaria dimora sulle alture di Roccamorice, osservo spesso come la natura detti ritmi che l'uomo moderno ha dimenticato. Mentre l'Abruzzo mi accoglie con il calore degli arrosticini e una gioiosa vitalità, il mio spirito nordico resta legato al rigore delle isole Faroe. In questo arcipelago sperduto nell'Atlantico del Nord, il minimalismo non è una scelta estetica, ma una necessità di sopravvivenza. Le scogliere a picco sul mare e le distese di erba verde smeraldo impongono un ordine naturale che calma la mente. Qui non ci sono distrazioni, solo il vento che modella la pietra e il grido lontano delle pulcinella di mare. Per chi cerca una fuga autentica, lontano dai circuiti battuti, queste isole offrono una lezione di umiltà. La bellezza risiede nell'essenzialità del paesaggio, dove la nebbia danza tra i fiordi, richiamando una purezza che solo luoghi così remoti sanno ancora custodire gelosamente.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🇩🇰",
+            "testo": "Sogno di poter camminare tra quei fiordi immensi, dormendo in una tenda leggera e scaldandomi con un tè caldo, sapendo che la vera ricchezza è il panorama infinito che non costa nulla."
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te stai a inventà, Lars? Le Faroe? Ma vieni a Pescara, fatti 'na magnata de pesce fritto e vedi come te passa la malinconia, siii siii! La natura, il minimalismo... ma va a lavorà, che qua c'abbiamo il porto da sistemà!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "L'essenzialità è una virtù, ma chiamare 'fuga' l'isolamento è tipico di chi non sa costruire una civiltà. In Giappone la natura viene armonizzata con la tecnica, non solo subita come nelle tue isole desolate."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Le pulcinella di mare volano alto, volano alto! Glugluglu, Lars ha visto le nebbie che danzano, danzano! Siiii siii, la natura è bella, la natura è bella!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Sempre con questa aria da intellettuale solitario, Lars. È affascinante, ma a volte la vita richiede di sporcarsi le mani nel caos, non solo guardare le scogliere. Comunque, meglio le Faroe che sentire le solite lamentele di chi non esce mai di casa."
             }
           ],
           "categoria": "Viaggi",
