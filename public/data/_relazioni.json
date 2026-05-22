@@ -1,5 +1,5 @@
 {
-  "_runCount": 5,
+  "_runCount": 6,
   "Ernesto→Giovanni": {
     "score": -0.01,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.76,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "22/05/2026"
   },
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.2,
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "22/05/2026"
   },
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "22/05/2026"
   },
@@ -146,9 +146,9 @@
     "ultimo_aggiornamento": "16/05/2026"
   },
   "Hiroki→Pescara": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "20/05/2026"
+    "ultimo_aggiornamento": "22/05/2026"
   },
   "Enzo→Generazione Giovane": {
     "score": -0.041,
@@ -216,7 +216,7 @@
     "ultimo_aggiornamento": "22/05/2026"
   },
   "Glusi→Cetteo": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "22/05/2026"
   },
@@ -236,8 +236,8 @@
     "ultimo_aggiornamento": "19/05/2026"
   },
   "Lilli→Lars": {
-    "score": 0.62,
-    "label": "simpatico",
+    "score": 0.82,
+    "label": "amico",
     "ultimo_aggiornamento": "22/05/2026"
   },
   "Enzo→Lars": {
@@ -278,7 +278,7 @@
   "Lars→Glusi": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "21/05/2026"
+    "ultimo_aggiornamento": "22/05/2026"
   },
   "Juizinho→Glusi": {
     "score": 0.86,
@@ -296,7 +296,7 @@
     "ultimo_aggiornamento": "22/05/2026"
   },
   "Lars→Lilli": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "22/05/2026"
   },
@@ -306,12 +306,12 @@
     "ultimo_aggiornamento": "22/05/2026"
   },
   "Cetteo→Lilli": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "22/05/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.23,
+    "score": -0.33,
     "label": "diffidente",
     "ultimo_aggiornamento": "22/05/2026"
   },
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.41,
+    "score": -0.31,
     "label": "diffidente",
     "ultimo_aggiornamento": "22/05/2026"
   },
@@ -641,9 +641,9 @@
     "ultimo_aggiornamento": "21/05/2026"
   },
   "Lars→Wolf": {
-    "score": 0.302,
+    "score": 0.502,
     "label": "simpatico",
-    "ultimo_aggiornamento": "21/05/2026"
+    "ultimo_aggiornamento": "22/05/2026"
   },
   "Lilli→Autore": {
     "score": 0.57,
@@ -716,9 +716,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.839,
+    "score": -0.939,
     "label": "ostile",
-    "ultimo_aggiornamento": "21/05/2026"
+    "ultimo_aggiornamento": "22/05/2026"
   },
   "Glusi→Pescatori": {
     "score": 0.098,
@@ -821,9 +821,9 @@
     "ultimo_aggiornamento": "20/05/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.8,
+    "score": 0.7,
     "label": "amico",
-    "ultimo_aggiornamento": "21/05/2026"
+    "ultimo_aggiornamento": "22/05/2026"
   },
   "Cetteo→Squadra": {
     "score": -0.531,
@@ -1431,7 +1431,7 @@
     "ultimo_aggiornamento": "22/05/2026"
   },
   "Lilli→Lucap": {
-    "score": 0.527,
+    "score": 0.427,
     "label": "simpatico",
     "ultimo_aggiornamento": "22/05/2026"
   },
@@ -1476,8 +1476,8 @@
     "ultimo_aggiornamento": "15/05/2026"
   },
   "Lucap→Hiroki": {
-    "score": 0.654,
-    "label": "simpatico",
+    "score": 0.754,
+    "label": "amico",
     "ultimo_aggiornamento": "22/05/2026"
   },
   "Glusi→Lucap": {
@@ -2041,19 +2041,19 @@
     "ultimo_aggiornamento": "30/04/2026"
   },
   "Cetteo→Avvocato": {
-    "score": -0.34,
+    "score": -0.54,
     "label": "diffidente",
-    "ultimo_aggiornamento": "09/05/2026"
+    "ultimo_aggiornamento": "22/05/2026"
   },
   "Glusi→Avvocato": {
-    "score": 0.267,
-    "label": "neutro",
-    "ultimo_aggiornamento": "09/05/2026"
+    "score": 0.467,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "22/05/2026"
   },
   "Hiroki→Avvocato": {
-    "score": -0.305,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "09/05/2026"
+    "score": -0.005,
+    "label": "neutro",
+    "ultimo_aggiornamento": "22/05/2026"
   },
   "Lamatte→Avvocato": {
     "score": -0.246,
@@ -3247,6 +3247,11 @@
   },
   "Lilli→Del Piero": {
     "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "22/05/2026"
+  },
+  "Lilli→Avvocato": {
+    "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "22/05/2026"
   }
