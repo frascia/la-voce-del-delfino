@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.01,
     "label": "neutro",
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Lars→Hiroki": {
-    "score": 0,
+    "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "23/05/2026"
   },
@@ -121,9 +121,9 @@
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.97,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "22/05/2026"
+    "ultimo_aggiornamento": "23/05/2026"
   },
   "Lars→Questa terra": {
     "score": -0.033,
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -0.05,
+    "score": 0.05,
     "label": "neutro",
     "ultimo_aggiornamento": "23/05/2026"
   },
@@ -291,8 +291,8 @@
     "ultimo_aggiornamento": "10/05/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.4,
-    "label": "diffidente",
+    "score": -0.9,
+    "label": "ostile",
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Lars→Lilli": {
@@ -301,18 +301,18 @@
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Cetteo→Lilli": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.53,
-    "label": "diffidente",
+    "score": -1,
+    "label": "ostile",
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Wolf→Redazione": {
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "23/05/2026"
   },
@@ -963,7 +963,7 @@
   "Topengo→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "21/05/2026"
+    "ultimo_aggiornamento": "23/05/2026"
   },
   "Lars→Pescatori di Pescara": {
     "score": 0.045,
@@ -1136,22 +1136,22 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Lamatte": {
-    "score": -0.563,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "20/05/2026"
+    "score": -0.863,
+    "label": "ostile",
+    "ultimo_aggiornamento": "23/05/2026"
   },
   "Hiroki→Lamatte": {
-    "score": -0.185,
-    "label": "neutro",
+    "score": -0.385,
+    "label": "diffidente",
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Glusi→Lamatte": {
-    "score": 0.908,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Topengo→Hiroki": {
-    "score": -0.8,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "23/05/2026"
   },
@@ -1451,9 +1451,9 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Hiroki→Autore articolo": {
-    "score": -0.252,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "10/05/2026"
+    "score": 0.048,
+    "label": "neutro",
+    "ultimo_aggiornamento": "23/05/2026"
   },
   "Cetteo→Autore articolo": {
     "score": -0.458,
@@ -3298,6 +3298,16 @@
   "Cetteo→Autore (Giapponese)": {
     "score": -0.3,
     "label": "diffidente",
+    "ultimo_aggiornamento": "23/05/2026"
+  },
+  "Lamatte→Commessi/Clientela": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "23/05/2026"
+  },
+  "Lilli→Autore articolo": {
+    "score": 0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "23/05/2026"
   }
 }
