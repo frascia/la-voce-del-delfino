@@ -1,5 +1,5 @@
 {
-  "_runCount": 11,
+  "_runCount": 12,
   "Ernesto→Giovanni": {
     "score": -0.009,
     "label": "neutro",
@@ -36,12 +36,12 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.8,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "26/05/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.8,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "26/05/2026"
   },
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "25/05/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "26/05/2026"
   },
@@ -111,14 +111,14 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Autore": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Cetteo→Autore": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Hiroki→Autore": {
     "score": -0.9,
@@ -148,7 +148,7 @@
   "Hiroki→Pescara": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Enzo→Generazione Giovane": {
     "score": -0.037,
@@ -186,9 +186,9 @@
     "ultimo_aggiornamento": "14/05/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.55,
+    "score": 0.35,
     "label": "simpatico",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Enzo→Glusi": {
     "score": -0.037,
@@ -211,9 +211,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Glusi→Cetteo": {
     "score": 0.95,
@@ -271,7 +271,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Glusi": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "26/05/2026"
   },
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.8,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "26/05/2026"
   },
@@ -518,7 +518,7 @@
   "Glusi→Autore": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Lars→Giornalista": {
     "score": 0.061,
@@ -716,9 +716,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Glusi→Pescatori": {
     "score": 0.088,
@@ -821,9 +821,9 @@
     "ultimo_aggiornamento": "20/05/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.94,
+    "score": 0.84,
     "label": "amico",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Cetteo→Squadra": {
     "score": -0.478,
@@ -956,9 +956,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Topengo→Autore": {
-    "score": 0.446,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "22/05/2026"
+    "score": 0.746,
+    "label": "amico",
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Topengo→Cetteo": {
     "score": -0.9,
@@ -1576,9 +1576,9 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Topengo→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "23/05/2026"
+    "ultimo_aggiornamento": "26/05/2026"
   },
   "Hiroki→Amministrazione comunale": {
     "score": -0.05,
@@ -3411,6 +3411,21 @@
     "ultimo_aggiornamento": "26/05/2026"
   },
   "Glusi→tutti": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "26/05/2026"
+  },
+  "Cetteo→Turisti": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "26/05/2026"
+  },
+  "Glusi→Ponte del Mare": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "26/05/2026"
+  },
+  "Lilli→Comunità locale": {
     "score": -0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "26/05/2026"
