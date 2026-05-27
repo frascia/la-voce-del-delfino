@@ -1,228 +1,80 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "24/05, 00:46",
+  "prossimo_aggiornamento": "28/05, 03:59",
   "news": [
     {
-      "tipo": "gen",
-      "titolo": "Tra pagine di carta e nuovi mondi da esplorare",
-      "articolo": "Il mercato editoriale sta vivendo una fase di fermento creativo notevole, con proposte che spaziano dal saggio sociologico al romanzo introspettivo di alta qualità. Non si tratta solo di quantità, ma di una ricerca stilistica che finalmente torna a privilegiare la profondità dei contenuti rispetto al mero intrattenimento usa e getta. Molte case librarie stanno puntando su autori emergenti capaci di decodificare la complessità contemporanea con un linguaggio asciutto, diretto, quasi cinematografico. È un piacere constatare che, nonostante la digitalizzazione imperante, il libro fisico mantenga una centralità indiscutibile: il profumo della carta e il peso del volume tra le mani restano esperienze insostituibili. Che si tratti di un'analisi politica o di una narrazione distopica, i nuovi titoli offrono strumenti critici necessari per navigare la realtà. La letteratura non è un passatempo per pochi eletti, ma una trincea culturale dove formare la propria coscienza, restando sempre pronti a difendere le proprie idee con fermezza, proprio come si fa sugli spalti dell'Adriatico.",
+      "tipo": "rss",
+      "titolo": "Cinema o mare? Ce s'ha da vedé!",
+      "articolo": "Uè, ma che stiamo a pettinà le bambole? Mentre io sto qua a scrostare le reti e a guardare l'Adriatico che si mangia la riva, la gente se ne va chiusa in sala a guardarsi i film. Va bene, i gusti son gusti, ma che noia! Eppure, dicono che la stagione cinematografica stia tirando fuori roba seria. Ci stanno sti titoli nuovi, roba che ti tiene incollato alla poltrona, mica come quando aspetti che abbocchi un cefalo e non succede mai niente. Tra drammi che ti fanno scendere la lacrima e avventure che manco se ti perdi al largo di Ortona, c'è di che divertirsi. Certo, io preferirei una frittura di paranza e una birra ghiacciata al porto, ma se proprio dovete restare al chiuso, almeno scegliete qualcosa che vale il prezzo del biglietto. Non fate come certi che guardano solo le solite americanate senza nerbo. Il cinema è arte, mica una rete bucata!",
       "commento_firma": {
-        "nome": "Lilli",
-        "avatar": "👩",
-        "testo": "Finalmente una ventata di aria fresca in libreria! Sono entusiasta di questa riscoperta della qualità, ma ora esigo che le case editrici smettano di pubblicare immondizia commerciale e si concentrino solo su chi ha davvero qualcosa da dire: non accetterò nulla di meno che l'eccellenza assoluta!"
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Grandissimi, finalmente roba di qualità che ti fa battere il cuore come un gol al 90' all'Adriatico, però mo' vedi di non farci perdere tempo con le solite mediocrità, vogliamo solo capolavori!"
       },
       "commenti": [
         {
           "nome": "Lilli",
           "avatar": "👩",
-          "testo": "Finalmente qualcuno che capisce che la cultura è una trincea. Leggere non è un passatempo, è un atto di resistenza. E chi pensa il contrario, beh, si faccia un giro fuori dallo stadio: la vita reale richiede spessore, non chiacchiere da bar."
-        },
-        {
-          "nome": "Hiroki",
-          "avatar": "🏯",
-          "testo": "Un'analisi quasi accettabile, sebbene il paragone calcistico sia l'ennesima prova di come in Italia si cerchi di nobilitare il caos. La carta ha il suo fascino, ma la civiltà si misura dalla capacità di analisi critica, non dal profumo di un libro."
+          "testo": "Ma che ne vuoi capire tu di arte, Cetteo? Il cinema è l'unica cosa che tiene vivo il cervello in questa città di morti di sonno. Se non sai apprezzare la profondità di una sceneggiatura, torna pure a fissare il tuo cefalo, ma non osare mancare di rispetto a chi dedica la vita alla cultura!"
         },
         {
           "nome": "Glusi",
           "avatar": "🤪",
-          "testo": "Siii siii siiiiii, leggere fa bene al cervello, glugluglu, meglio un libro che una sedia in testa, siii siii siiiiii!"
+          "testo": "Siii siii siiiiii, il cinema è una magia che ti porta via, che ti porta via! Glugluglu, meglio un film che restare a guardare le onde, restare a guardare le onde!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "La tua superficialità è imbarazzante, Cetteo. In Giappone il cinema è rispetto, disciplina e visione. Qui in Italia parlate solo di frittura e reti, ecco perché non evolverete mai verso una vera civiltà."
         },
         {
           "nome": "Lars",
           "avatar": "🇩🇰",
-          "testo": "La natura insegna il silenzio e la pazienza, proprio come un buon libro. Sulle montagne di Roccamorice, tra una pagina e un arrosticino, ho trovato la pace che le città non sanno più offrire. La profondità è la vera essenza della vita."
+          "testo": "La natura è il cinema più grande, ma ammetto che una buona storia può scaldare il cuore quanto un fuoco acceso sulle montagne di Roccamorice. Però, tra un film e un arrosticino, sceglierei sempre la compagnia giusta."
         }
       ],
-      "categoria": "Da Leggere",
-      "colore_tipo": "#ff4d4d",
-      "immagine": "lilli.webp",
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": false
+      "nuovo": true
     },
     {
-      "tipo": "gen",
-      "titolo": "Letteratura contemporanea: tra scaffali polverosi e nuove voci",
-      "articolo": "Il mondo editoriale sta attraversando una fase di fervente trasformazione. Nonostante la digitalizzazione selvaggia, il libro fisico resiste come un baluardo di resistenza culturale, un oggetto che conserva il profumo della carta e la promessa di un viaggio. Le nuove uscite spaziano da saggi sociologici di profonda analisi a romanzi di narrativa che esplorano le complessità dell'animo umano. È affascinante notare come autori emergenti stiano scardinando le strutture classiche, proponendo narrazioni frammentate che riflettono la frenesia della nostra epoca. Che si tratti di un saggio impegnato o di una prosa intimista, la qualità della scrittura rimane l'unico parametro indiscutibile. Leggere non è un passatempo per pochi eletti, ma un atto di ribellione intellettuale. Anche in contesti dove la cultura sembra latitare, il libro resta lo strumento più potente per decodificare la realtà, un compagno fedele che non tradisce mai, a differenza di certi risultati calcistici che mi fanno saltare i nervi allo stadio.",
+      "tipo": "rss",
+      "titolo": "Oltre i confini del turismo: la solitudine cercata tra le terre dimenticate",
+      "articolo": "Il minimalismo non è solo assenza di oggetti, ma ricerca di spazi dove il silenzio ha ancora un peso specifico. Spesso le rotte europee sono tracciate per soddisfare la frenesia, ma esistono angoli dove la natura detta ritmi antichi. Luoghi come le Isole Faroe, con le loro scogliere a picco che tagliano il vento del Nord, o le remote valli dell’entroterra abruzzese, offrono una prospettiva diversa. Qui l’ordine non è imposto dall’uomo, ma dalla geologia. Camminare tra le pietraie di Roccamorice insegna che la bellezza non risiede nell’accumulo di esperienze, ma nella pulizia visiva di un orizzonte vuoto. La natura, nella sua severa semplicità, ci ricorda che non servono infrastrutture complesse per sentirsi vivi. C’è una forma di rigore nel vivere in alta quota, lontano dalle rotte battute, dove ogni gesto è essenziale. Viaggiare verso mete insolite significa accettare questa spoglia verità, trovando nell'essenzialità del paesaggio la pace che le metropoli moderne hanno smarrito.",
       "commento_firma": {
-        "nome": "Lilli",
-        "avatar": "👩",
-        "testo": "Finalmente vedo titoli che hanno sostanza e non solo marketing! Sono entusiasta di queste nuove uscite, ma esigo che gli autori smettano di compiacersi e inizino a scavare davvero nel fango della realtà: voglio storie che graffiano, non favolette da salotto!"
-      },
-      "commenti": [
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Finalmente qualcuno che capisce il valore di un libro! Leggere è l'unico modo per non farsi lobotomizzare da questa società di ignoranti. E quanto hai ragione sui risultati calcistici... ogni domenica è un calvario che mi fa venire voglia di lanciare il libro contro il muro!"
-        },
-        {
-          "nome": "Hiroki",
-          "avatar": "🏯",
-          "testo": "La resistenza del libro fisico è l'unica nota positiva in questo caos occidentale. Purtroppo, la qualità della scrittura in Italia è spesso mediocre, mancano rigore e disciplina. Spero che almeno la letteratura possa portare un briciolo di civiltà tra tanta approssimazione."
-        },
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Ma che cazzo state a di'? I libri, la cultura, la resistenza... ma andate a lavorare! A me me ne frega solo del Pescara, altro che saggi sociologici. Se la squadra perde, il libro me lo metto in quel posto, altro che compagnia fedele!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Leggere è come volare tra le pagine, volare tra le pagine! Siii siii siiiiii, il libro è un amico che non ti tradisce mai, non ti tradisce mai! Glugluglu, carta profumata per tutti, carta profumata per tutti!"
-        }
-      ],
-      "categoria": "Da Leggere",
-      "colore_tipo": "#ff4d4d",
-      "immagine": "lilli.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "gen",
-      "titolo": "Tra carta e inchiostro: il piacere di perdersi",
-      "articolo": "Il mercato editoriale continua a sfornare titoli a un ritmo frenetico, spesso sacrificando la qualità sull'altare della quantità. Eppure, tra le pile di novità che affollano le librerie, emergono ancora perle capaci di scuotere le coscienze. Leggere non è solo un passatempo per intellettuali da salotto; è un atto di resistenza, un modo per dare ordine al caos del mondo. Che si tratti di narrativa contemporanea, saggi sociologici o biografie, il libro resta l'unico strumento capace di farci viaggiare restando fermi. La sfida, oggi, è filtrare il rumore di fondo. Troppi autori inseguono il successo facile, dimenticando che la letteratura richiede sudore, ricerca e una voce autentica. Non mi interessa l'ultimo best-seller costruito a tavolino per le classifiche. Cerco storie che graffiano, che pongono domande scomode e che non hanno paura di sporcarsi le mani con la realtà. La vera cultura non è un piedistallo, ma un terreno comune dove chiunque, con la giusta curiosità, può trovare risposte.",
-      "commento_firma": {
-        "nome": "Lilli",
-        "avatar": "👩",
-        "testo": "Finalmente qualche titolo degno di nota! Adoro quando la letteratura torna a mordere, ma esigo che gli editori smettano di pubblicare spazzatura commerciale: voglio sostanza, voglio profondità, non il solito romanzo usa e getta!"
-      },
-      "commenti": [
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Parole sante. La letteratura non è un accessorio per sentirsi superiori, è un campo di battaglia. Chi cerca il successo facile non merita nemmeno di sfogliare una pagina. Bisogna saper scegliere, filtrare e pretendere qualità, altrimenti tanto vale leggere le etichette dei detersivi."
-        },
-        {
-          "nome": "Hiroki",
-          "avatar": "🏯",
-          "testo": "In Italia il concetto di 'cultura' è spesso distorto da una superficialità disarmante. La produzione frenetica di cui parli è lo specchio di una società che non sa più riflettere. In Giappone diamo valore al tempo e alla sostanza; qui, purtroppo, vedo solo una corsa affannosa verso il nulla."
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, la lettura è una bomba, una bomba! Bisogna leggere roba che ti spacca la testa, glugluglu, altrimenti è solo carta sprecata, carta sprecata!"
-        },
-        {
-          "nome": "Wolf",
-          "avatar": "👩🌾",
-          "testo": "Tante chiacchiere. La gente non legge perché non ha voglia di faticare, né sui libri né nella vita. Invece di cercare 'perle' nelle librerie, la gente dovrebbe sporcarsi le mani con il lavoro vero, quello che non trovi scritto in nessun best-seller costruito a tavolino."
-        }
-      ],
-      "categoria": "Da Leggere",
-      "colore_tipo": "#ff4d4d",
-      "immagine": "lilli.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "gen",
-      "titolo": "Tra carta e inchiostro: il piacere di perdersi",
-      "articolo": "Il mercato editoriale continua a sfornare titoli a un ritmo frenetico, spesso inseguendo il trend del momento piuttosto che la sostanza. Eppure, tra le pile di novità che affollano gli scaffali, si nascondono ancora perle rare capaci di riconciliarci con la lettura. La narrativa contemporanea sta vivendo una fase di transizione interessante: da un lato assistiamo al ritorno prepotente del romanzo storico, dall'altro a una sperimentazione linguistica che sfida le convenzioni. Non lasciatevi ingannare dalle copertine patinate o dalle strategie di marketing aggressivo; la letteratura vera si riconosce dalla capacità di restare addosso, di inquietare e di spingere a una riflessione critica. Che si tratti di un saggio rigoroso o di una distopia ben congegnata, l'importante è mantenere alto il livello. Leggere non è un passatempo per anime passive, ma un atto di resistenza intellettuale. Scegliete con cura, non accontentatevi del primo bestseller da classifica: cercate la voce che vi graffia l'anima, quella che non vi lascia dormire la notte.",
-      "commento_firma": {
-        "nome": "Lilli",
-        "avatar": "👩",
-        "testo": "Finalmente qualche titolo degno di nota! Adoro quando la letteratura alza l'asticella. Ora però mi aspetto che gli autori continuino su questa strada: basta mediocrità, voglio vedere coraggio e spessore in ogni singola pagina!"
-      },
-      "commenti": [
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Parole sante. La letteratura è un'arma, non un intrattenimento da salotto per chi non ha spina dorsale. Chi legge solo ciò che è in classifica merita la mediocrità che consuma."
-        },
-        {
-          "nome": "Hiroki",
-          "avatar": "🏯",
-          "testo": "Finalmente qualcuno che parla di sostanza. L'Italia è affogata dal marketing di basso livello, mentre la vera disciplina intellettuale viene ignorata. Una rara voce di civiltà in questo caos."
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Libri pesanti, libri pesanti, siii siii siiiiii! Meglio leggere le etichette degli arrosticini, glugluglu, molto più saporite!"
-        },
-        {
-          "nome": "Wolf",
-          "avatar": "👩‍🌾",
-          "testo": "Tutta fuffa. La gente non ha tempo di leggere perché deve lavorare, non perché mancano le 'perle'. Meno chiacchiere intellettuali e più zappa, che quella non mente mai."
-        }
-      ],
-      "categoria": "Da Leggere",
-      "colore_tipo": "#ff4d4d",
-      "immagine": "lilli.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "gen",
-      "titolo": "Letteratura in fermento: il mercato editoriale tra classici e nuove voci",
-      "articolo": "Il panorama editoriale contemporaneo attraversa una fase di profonda trasformazione, dove la riscoperta dei classici si intreccia con l'ascesa di nuove voci narrative. Le librerie, presidi di cultura indispensabili, vedono un ritorno prepotente della narrativa di genere, capace di coniugare impegno civile e intrattenimento. La saggistica non è da meno, offrendo analisi lucide su una società sempre più liquida e complessa. Parallelamente, il formato audiolibro e i podcast letterari stanno ridefinendo le modalità di fruizione del testo, rendendo la letteratura accessibile anche a chi vive ritmi frenetici. Nonostante la digitalizzazione, il fascino del volume cartaceo resta immutato: l'odore della carta e il peso del libro tra le mani rappresentano un'esperienza sensoriale che nessun device potrà mai replicare. Gli editori indipendenti continuano a svolgere un ruolo cruciale, proponendo testi coraggiosi che sfidano le logiche del mercato di massa. È un momento di grande vitalità intellettuale, in cui il lettore ha finalmente l'imbarazzo della scelta per nutrire la propria mente con contenuti di reale spessore.",
-      "commento_firma": {
-        "nome": "Lilli",
-        "avatar": "👩",
-        "testo": "Finalmente qualche titolo che non sia la solita spazzatura da autogrill! Sono entusiasta di vedere tanta qualità in giro, ma esigo che le case editrici smettano di puntare solo sui fenomeni social e tornino a investire sul talento vero. Chi non legge è fuori, punto."
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Sogno di poter zaino in spalla attraversare questi silenzi, mangiando solo pane e formaggio, godendo di panorami che non costano nulla ma valgono ogni passo fatto in salita."
       },
       "commenti": [
         {
           "nome": "Lars",
           "avatar": "🇩🇰",
-          "testo": "Sulle montagne abruzzesi il silenzio è il miglior libro che si possa leggere. La carta ha un'anima, proprio come la natura incontaminata che mi circonda. Non c'è podcast che possa sostituire il fruscio del vento tra gli alberi mentre si sfoglia una pagina."
-        },
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Ma che cazzo state a di'? Libri, podcast... qua la gente ha bisogno di lavorà, non di legge' saggistica. A me basta il giornale sportivo quando sto in banchina, il resto è tutta fuffa per gente che non c'ha niente da fa'!"
+          "testo": "Roccamorice non è solo un luogo, è una lezione di vita. Quando il vento soffia tra le rocce, capisci finalmente che il superfluo è solo un peso che ci portiamo dietro inutilmente. Qui, tra le valli, il silenzio ha una voce che ti entra dentro."
         },
         {
           "nome": "Hiroki",
           "avatar": "🏯",
-          "testo": "È affascinante vedere come l'Italia tenti di aggrapparsi a concetti di 'vitalità intellettuale' mentre la struttura sociale scricchiola. In Giappone il rispetto per il cartaceo è una disciplina, qui mi sembra solo una tendenza passeggera per sentirsi colti."
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Leggere libri fa bene alla testa, testa, siii siii siiiiii! Meglio un libro vero che un device che scotta, scotta, glugluglu!"
-        }
-      ],
-      "categoria": "Da Leggere",
-      "colore_tipo": "#ff4d4d",
-      "immagine": "lilli.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "gen",
-      "titolo": "Letteratura contemporanea: tra scaffali polverosi e nuove voci",
-      "articolo": "Il mondo editoriale sta attraversando una fase di fervente trasformazione. Nonostante le Cassandre che predicono la morte del libro cartaceo, le nuove uscite dimostrano una vitalità sorprendente. Gli autori contemporanei stanno esplorando territori narrativi inediti, mescolando generi con una audacia che ricorda i grandi maestri del passato. Dalla narrativa sperimentale che sfida le strutture logiche, fino ai saggi che analizzano la complessità della società odierna, l'offerta è vastissima. Molti giovani scrittori stanno trovando spazio grazie a una consapevolezza stilistica matura, capace di coniugare un linguaggio ricercato con tematiche universali. Frequentare le librerie indipendenti resta un atto di resistenza culturale necessario. Che si tratti di un romanzo distopico o di una biografia d'essai, il piacere tattile della carta non ha eguali. La letteratura non è un esercizio accademico per pochi eletti, ma uno strumento di analisi sociale che deve restare accessibile a chiunque, dal salotto intellettuale alla curva dello stadio, perché la cultura è l'unica arma che nessuno può toglierci.",
-      "commento_firma": {
-        "nome": "Lilli",
-        "avatar": "👩",
-        "testo": "Finalmente vedo materiale che vale la pena leggere, non la solita spazzatura commerciale! Ora però pretendo che le case editrici smettano di puntare solo sul marketing e tornino a investire sulla qualità pura: voglio storie che graffiano, non favolette da dimenticare dopo dieci minuti!"
-      },
-      "commenti": [
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Parole sante. Chi dice che il libro cartaceo è morto non ha mai sentito il profumo della carta in una libreria indipendente. È una questione di identità, è resistenza pura, e chiunque provi a sminuire questo valore si deve scontrare con me."
+          "testo": "Voi chiamate minimalismo questa mancanza di organizzazione e infrastrutture? In Giappone la semplicità è disciplina ed estetica curata, non abbandono alla natura selvaggia. Questo non è rigore, è solo mancanza di civiltà."
         },
         {
           "nome": "Cetteo",
           "avatar": "🚧",
-          "testo": "Ma che cazzo state a dì? I libri... ma andate a lavorare! La gente vuole i fatti, non le storielle scritte da quattro intellettualoidi che non hanno mai visto il mare. La cultura è il Pescara, altro che carta, siii siiii siiii!"
-        },
-        {
-          "nome": "Hiroki",
-          "avatar": "🏯",
-          "testo": "In Italia parlate di 'resistenza culturale' mentre le vostre librerie sono spesso disordinate e caotiche. In Giappone il libro è rispetto, ordine e disciplina. Voi lo usate solo per sentirvi superiori mentre la società decade."
+          "testo": "Ma che v'inventate? 'Silenzio che ha peso', 'pietraie'... ma annate a faticà! A Roccamorice ce state solo perché ve piace fa' li radical chic, ma la vera vita è qui, nel rumore del porto e nel sudore, non a guardà l'orizzonte vuoto!"
         },
         {
           "nome": "Glusi",
           "avatar": "🤪",
-          "testo": "Il libro è un viaggio magico, magico! Leggere ti apre la testa, la testa! Glugluglu, la carta non morirà mai mai mai!"
+          "testo": "Il silenzio che parla, il silenzio che parla! Siiii siii siiiiii, la roccia è amica, la roccia è amica! Glugluglu, voliamo via con il vento del nord!"
         }
       ],
-      "categoria": "Da Leggere",
-      "colore_tipo": "#ff4d4d",
-      "immagine": "lilli.webp",
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
       "provider": "gemini",
-      "nuovo": false
+      "nuovo": true
     }
   ]
 }

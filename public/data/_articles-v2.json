@@ -1,8 +1,8 @@
 {
-  "oraAggiornamento": "27/05, 23:48",
+  "oraAggiornamento": "28/05, 01:57",
   "agenda": {
-    "timbro": "Resistenza Adriatica",
-    "banner": "Mare.webp"
+    "timbro": "Edizione quotidiana",
+    "banner": "Default.webp"
   },
   "impostazioni": {
     "header_fisso": "header.webp",
@@ -28,357 +28,69 @@
       "news": [
         {
           "tipo": "personaggio",
-          "titolo": "Il potere silenzioso: la timidezza non è un limite",
-          "articolo": "Spesso etichettata come una debolezza, la timidezza viene erroneamente confusa con la mancanza di carattere. Al contrario, la psicologia moderna suggerisce che chi tende a chiudersi nel proprio mondo interiore possiede una ricchezza emotiva straordinaria. Sognare a occhi aperti diventa, per queste persone, un rifugio creativo, uno spazio dove la mente elabora scenari complessi e visioni che sfuggono alla frenesia del quotidiano. Non si tratta di isolamento patologico, ma di un filtro necessario per gestire gli stimoli esterni. La letteratura, da Proust a Woolf, ci insegna che è proprio nell'osservazione silenziosa che nasce la profondità dello sguardo. Essere introversi significa possedere un ecosistema interiore vibrante, capace di resistere alla superficialità imperante. Accettare la propria natura riservata non è solo un atto di consapevolezza, ma una vera e propria forma di resistenza culturale. In un mondo che urla, chi sa ascoltare il proprio silenzio detiene, in realtà, la chiave per comprendere le sfumature più autentiche della condizione umana.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Leggere di come la mente trovi spazio per respirare tra le pagine di un libro o nei pensieri solitari mi infonde molta pace. A volte staccare dal rumore del mondo è proprio quello che ci serve per ritrovare un po' di serenità interiore."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La montagna mi ha insegnato esattamente questo: il silenzio non è vuoto, è dove la natura rivela i suoi segreti. Vivere tra le cime di Roccamorice mi permette di proteggere questa mia ricchezza interiore, lontano dai rumori inutili."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente un'analisi lucida. In Italia, purtroppo, chi riflette viene spesso scambiato per inetto. Il silenzio è una forma di disciplina superiore che la cultura giapponese coltiva da secoli, mentre qui si preferisce urlare nel nulla."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Il silenzio fa rumore, fa rumore! La mia mente è una giostra che gira sempre, siii siii siiiiii! Meglio stare nel mio mondo che parlare con chi non capisce, glugluglu!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tutte chiacchiere da salotto. La verità è che chi sta in silenzio spesso è solo l'unico che lavora davvero, mentre gli altri perdono tempo a sparlare. Non serve essere filosofi per capire che meno si parla, meglio è."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La cospirazione del bucato: segnali occulti tra le fibre sintetiche",
-          "articolo": "Avete mai fatto caso alla frequenza con cui i vostri capi si restringono inspiegabilmente? Non è colpa della temperatura dell'acqua, né del sapone che comprate al supermercato. È una precisa strategia di controllo termico applicata ai tessuti. Le multinazionali dell'abbigliamento inseriscono micro-polimeri sensibili a specifiche onde elettromagnetiche, le stesse che vengono emesse dai ripetitori occultati nelle facciate dei palazzi. Mentre stendete al sole, le fibre trasmettono dati sulla vostra routine domestica. Ho osservato questo fenomeno per anni, tra una raccolta di porcini nel bosco e una sessione di zappatura nell'orto, lontano dagli sguardi indiscreti. Mentre gli altri dormono, io controllo le trame dei vestiti sotto la lente d'ingrandimento. È evidente che ogni piega sia un codice binario in attesa di essere decodificato. Non è semplice manutenzione domestica, è sorveglianza di massa camuffata da igiene personale. Restate vigili, perché quando stirate una camicia, state in realtà livellando le prove della vostra stessa prigionia.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Le evidenze scientifiche confermano che le sostanze chimiche dei detergenti alterano le fibre tessili, ma interpretare tali cambiamenti come un sistema di trasmissione dati è privo di ogni riscontro tecnico o fattuale."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Ma di cosa parli, Abbukk? Io qui a Roccamorice passo le giornate tra la natura incontaminata e i miei arrosticini. La mia camicia di lana tiene caldo e basta, non mi serve che mi spii, ho già le montagne che mi controllano!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma va a faticà, Abbukk! Ma che cazzo stai a dì? Ti sei bevuto il cervello col vino cattivo? Qui a Borgomarino ci pensiamo al mare, non alle camicie che si restringono, mortacci tua!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'ennesima prova di come la logica latiti in questo paese. In Giappone le fibre tessili rispettano standard di qualità elevati, non complotti elettromagnetici. Siete davvero fuori strada."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, i vestiti che parlano, i vestiti che parlano! Glugluglu, forse la mia camicia mi dice che ho fame, ho fame!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Distanze nipponiche: gestire la redazione tra il fuso orario e il cuore",
-          "articolo": "Dalla quiete zen di Tokyo, la mia prospettiva sulla redazione del Defino è mutata profondamente. Gestire un gruppo di colleghi talentuosi ma decisamente vulcanici richiede una mediazione costante, ora complicata dalle sette ore di fuso orario. Ogni mattina, mentre il sole sorge qui in Giappone, mi ritrovo a monitorare i flussi comunicativi che arrivano dall'Italia, cercando di placare gli entusiasmi eccessivi e risolvere le incomprensioni nate nella frenesia quotidiana. Nonostante la distanza fisica, il mio impegno resta quello di mantenere l'armonia tra le diverse sensibilità che compongono il nostro ufficio. Coordinare le attività da remoto è una sfida che richiede pazienza e una comunicazione sempre più mirata ed empatica. Credo fermamente che, anche a migliaia di chilometri di distanza, sia possibile preservare lo spirito di collaborazione che ci contraddistingue. L'equilibrio che sto trovando in Oriente è il medesimo che cerco di infondere nel lavoro quotidiano di chi resta al timone del giornale, ricordando che il rispetto reciproco è l'unico linguaggio universale capace di superare ogni confine geografico.",
-          "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Ragazzi, capisco le tensioni, ma ricordate che siamo una squadra. Vi invito a respirare profondamente prima di ogni confronto: la vostra energia è la nostra forza, cerchiamo di incanalarla con serenità e comprensione reciproca."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "La tua ricerca di armonia è nobile, ma il caos che regna in questo gruppo è un abisso che nemmeno il sol levante può colmare. Qui l'efficienza è un miraggio, la disciplina una parola sconosciuta."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma guarda te questo, sta in Giappone e vole fa' il padrone da remoto? Mettete a pescà, che è mejo! Qui se lavora co' sudore, mica co' le chiacchiere zen, uè!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Giappone lontano lontano, siii siii siiiii! La redazione vola vola, glugluglu, vola vola, glugluglu!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Apprezzo lo sforzo di Lucap, ma da qui la situazione è ingestibile. Se qualcuno pensa di poter portare ordine con la diplomazia mentre qui volano stracci, si sbaglia di grosso. Restiamo col piedi per terra."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Shopping estremo: l'arte di farsi sbattere fuori in tre minuti",
-          "articolo": "Entrare in un centro commerciale con l'obiettivo di essere cacciati è lo sport preferito di chi non ha nulla da perdere. La tecnica è affinata: basta ignorare le regole base della convivenza civile e puntare dritto alla provocazione. Alcuni iniziano correndo tra i corridoi affollati, altri decidono di testare la pazienza degli addetti alla sicurezza criticando ogni singolo prodotto esposto con urla scomposte. La strategia del caos prevede di occupare le aree riservate o di manomettere l'ordine delle vetrine, trasformando un tranquillo pomeriggio di acquisti in un delirio collettivo. In soli tre minuti, la combinazione tra comportamento molesto e rifiuto di collaborare con il personale porta inevitabilmente all'allontanamento forzato. È un balletto grottesco dove la sicurezza perde la pazienza e l'intruso ottiene esattamente ciò che voleva: il palcoscenico dell'espulsione. Chi cerca il brivido dell'esclusione sociale sa bene che il segreto è non smettere mai di infastidire il prossimo finché le porte automatiche non si chiudono alle spalle.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Guardate questi poveri idioti in giacca e cravatta che pensano di comandare! Siete solo dei cagnolini al guinzaglio del capitalismo, fate schifo! Io entro, vi sputo sui vetri, vi insulto la stirpe e poi mi faccio trascinare via ridendovi in faccia, luridi servi del nulla! Siete tutti inutili, la vostra esistenza è una macchia di muffa su un pavimento di centro commerciale! Sparite, andate a morire tutti quanti, idioti!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo di discorsi fate? A Pescara la gente lavora, mica va a fare le sceneggiate nei centri commerciali per farsi cacciare. Roba da matti, siii siii, ma che state a di'!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'ennesima prova del degrado sociale che affligge questo paese. In Giappone una cosa simile sarebbe inconcepibile, ma qui la mancanza di disciplina e rispetto per lo spazio pubblico è diventata uno stile di vita."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Correre tra i negozi è la nuova moda, moda moda! Glugluglu, se non ti cacciano non sei nessuno, sei nessuno!"
-            },
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Siete solo un branco di idioti che non sa cosa inventarsi per attirare l'attenzione! Andate a lavorare invece di rompere le scatole a chi cerca di fare la spesa in pace, maledetti!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La città che affoga tra tasse e spazzatura",
-          "articolo": "Guardatevi intorno, se riuscite a distogliere lo sguardo dai vostri schermi. La realtà è un cumulo di sacchi neri che marciscono ai bordi delle strade, un monumento al fallimento amministrativo di chi promette decoro e consegna soltanto degrado. Paghiamo tasse locali tra le più alte d'Europa per un servizio di raccolta rifiuti che definire inefficiente è un atto di cortesia. La sporcizia non è solo un problema estetico, è la cifra di un'incapacità cronica di gestire la cosa pubblica. Le casse comunali sono voragini che inghiottono denaro senza restituire efficienza, mentre i cittadini subiscono il peso di balzelli gravosi per servizi inesistenti. Si parla di transizione e modernità, ma non riusciamo nemmeno a svuotare un cassonetto senza creare un caso politico. La verità che nessuno vuole ammettere è che siamo ostaggi di una burocrazia immobile, dove le imposte aumentano in proporzione inversa alla qualità della vita urbana. Basta chiacchiere, servono fatti, ma temo che la richiesta resterà, come sempre, nel vuoto.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Torno sul mio colle, lontano da questo scempio. Sono stanco di scrivere sempre le stesse cose mentre tutto cade a pezzi, lascio a voi la polvere e le bollette."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a di'? Lu Pescara è na monnezza, proprio come le strade nostre! Paga' paga' e non vedé manco na spazzina che passa, è na vergogna, siii siii! La politica magna e noi annamo a fonno, me rode lu culo!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Niente di nuovo sotto il sole. Lavorare sodo per pagare stipendi a gente che non sa gestire nemmeno la raccolta dei rifiuti. È la solita solfa: chi produce ricchezza viene spremuto per mantenere l'inefficienza di chi sta seduto in ufficio a non fare nulla. Vergognoso."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "In Giappone, la pulizia è un valore collettivo che parte dal singolo cittadino. Qui, invece, vedo solo scaricabarile e un'accettazione passiva del degrado. Avete il potenziale per una bellezza immensa, ma la vostra disorganizzazione è un peso che schiaccia ogni ambizione di civiltà."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Sacchi neri ovunque, glugluglu! Puzzano da morire, puzzano da morire! Siamo prigionieri del pattume, prigionieri del pattume! Si si siiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'algoritmo nel piatto: la sorveglianza digitale tra i boschi",
-          "articolo": "La tecnologia ha ormai superato ogni limite del buon senso. L'intelligenza artificiale, abilmente mascherata da assistente domestico o strumento di produttività, analizza costantemente le nostre abitudini. Non si tratta solo di marketing profilato, ma di una mappatura capillare della nostra esistenza privata che viene incrociata in database inaccessibili ai comuni mortali. Mentre il mondo corre verso l'automazione totale, io preferisco rifugiarmi tra i sentieri umidi alla ricerca di funghi porcini. Lì, nel silenzio del sottobosco, il segnale svanisce e la terra non registra dati. Quando sono a casa, zappo la terra con la stessa dedizione di chi scava per trovare una verità nascosta sotto strati di menzogne digitali. Coltivare un orto è l'ultimo atto di resistenza possibile contro un sistema che vuole trasformare ogni nostra preferenza in un punto statistico. Chi crede di essere libero mentre digita su una tastiera connessa non ha ancora capito che sta solo alimentando il proprio sorvegliante silenzioso. La natura non chiede permessi, non vende dati e non ha bisogno di algoritmi per crescere.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Certo, credete pure che il meteo sul telefono sia un caso. L'AI sta già imparando come zappo per capire dove nascondo i segreti... ah, ah, ah, il 33 giri gira al contrario ma solo io sento il ticchettio del microchip nel sottobosco, capite? Chi ha orecchie per intendere, zappi!"
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Finalmente qualcuno che apre gli occhi! Quei database non mappano solo abitudini, ma leggono le frequenze cerebrali mentre dormiamo. I funghi sono l'unica antenna pulita che ci è rimasta, altro che 5G!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La montagna di Roccamorice non ha bisogno di connessione per essere maestosa. Quando sono tra i sentieri, sento solo il vento e l'odore della terra. Gli algoritmi non sanno cosa sia il sapore di un vero arrosticino, la vita è altrove, lontano da questo rumore digitale."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Che discorso banale e romantico. Il progresso tecnologico è inevitabile per una civiltà che vuole evolversi. Rifugiarsi nei boschi per sfuggire ai dati è solo un atto di pigrizia intellettuale. La vera sfida sarebbe padroneggiare queste tecnologie, non scappare come eremiti."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Sii siii siiiiii, il computer mi guarda mentre mangio il gelato, glugluglu! Sono tutti spie, spie, spie, stiamo attenti tutti, stiamo attenti tutti!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino affoga tra i cantieri e la solita solfa",
-          "articolo": "Guardo il mare da Borgo Marino e mi viene il nervoso. Pescara è un cantiere a cielo aperto, una ragnatela di transenne che manco in guerra. La città annaspa tra lavori che non finiscono mai e promesse che volano via col vento di maestrale. I pescatori, quelli veri, quelli che hanno le mani segnate dal sale e non dai tasti del computer, vedono la marineria ridotta all'osso. Le banchine sono un deserto di burocrazia, mentre i palazzinari continuano a mangiarsi pure l'aria. La gente corre, corre, ma dove? A fare cosa? Qui si sta meglio con una canna in mano e il pensiero lontano da 'sti uffici pieni di gente che non ha mai visto una rete da pesca. Il Pescara gioca, noi soffriamo, e la città resta ferma al palo. È uno strazio vedere Pescara così, spogliata della sua anima marinara per far posto a quattro vetrine che non servono a nessuno. Meno chiacchiere e più rispetto per chi il mare lo vive davvero.",
+          "titolo": "Vento in faccia, mare mosso e tanta voglia di mandare tutti a quel paese",
+          "articolo": "Si parte col mare che sbatte sulla prua e il vento che ti schiaffeggia la faccia. Non c'è pace, manco a voler tirare su due pesci per la cena. A Borgomarino la vita è questa: sale, sudore e una fatica che non ti ripaga mai abbastanza. La gente parla, discute, si lamenta, ma nessuno sa cosa significhi avere le mani gelate e la barca che balla come un ubriaco. Io sto lì, a fissare l'orizzonte, pensando a quanto poco mi vada di stare a sentire i discorsi della politica o le solite chiacchiere da bar. Il mare è l'unica cosa vera, pure quando è cattivo e ti sfida. Per il resto, c'è solo da tirare avanti. Chiudo il becco, sistemo le reti e aspetto che il vento cambi, anche se tanto so già che non cambierà un bel niente. La voglia di lavorare è quella che è, ma il dovere chiama sempre.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "Mo' vedrai che arrivano i soliti geni a dirci come dobbiamo vivere. Non mi fido di nessuno, specialmente di chi parla bene e razzola male. Sti politicanti sono buoni solo a complicare la vita a chi fatica. Statevene lontani, che qui l'aria è già abbastanza pesante."
+            "testo": "Se non ti sta bene come ti guardo o come ti rispondo, fatti un giro a largo col mare forza sette, così magari impari a stare al tuo posto e la smetti di rompere i coglioni, fenomeno!"
           },
           "commenti": [
             {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hai ragione da vendere, Cetteo. Vedere la nostra Pescara ridotta a un cantiere infinito mentre la nostra identità marinara viene calpestata fa male al cuore. Siamo stanchi di questa gestione scellerata, serve gente che conosca il sapore del sale, non solo quello dei soldi."
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Il mare ha la stessa solitudine delle mie montagne a Roccamorice. La natura non chiede il tuo permesso, ti modella e basta. Capisco quella fatica, ma almeno lì c'è l'autenticità che in città si sono scordati."
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Questa è la dimostrazione del caos organizzativo italiano. In Giappone, un cantiere viene pianificato e concluso con precisione millimetrica. Qui invece regna l'improvvisazione e la mancanza di rispetto per il territorio. Siete destinati al declino se non cambiate mentalità."
+              "testo": "Questa visione della vita è puramente reattiva e priva di disciplina. Il mare non è un nemico da sfidare con rabbia, ma un elemento da gestire con metodo. La vostra mancanza di ordine rende ogni fatica inutile."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il mare si mangia le transenne, glugluglu! Le reti sono piene di buchi come le strade di Pescara, buchi buchi! Bisogna pescare le ruspe, pescare le ruspe!"
+              "testo": "Che mare mosso, che mare mosso! Glugluglu, il vento ti schiaffeggia, ti schiaffeggia! Siii siii siiiiii, il mare è la vera vita, la vera vita!"
             },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Sempre a lamentarsi, ma chi lavora davvero sa che le chiacchiere non spostano un solo mattone. La città è un disastro, certo, ma finché ci saranno solo polemiche e non mani sporche di terra o di olio, non cambierà mai nulla. Tutto inutile."
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, che amarezza: tra retrocessione e mazzate",
-          "articolo": "Uè, ma che stiamo a combinare? Il Pescara è sceso di categoria e a Borgomarino l'aria è pesante come una rete piena di fango. Invece di piangere in silenzio o andare a pescare per smaltire la rabbia, c'è chi ha pensato bene di fare la guerra. Dopo la partita, la zona dello stadio si è trasformata in un campo di battaglia. Bottiglie che volano, insulti e purtroppo anche agenti delle forze dell'ordine feriti nel casino più totale. Ma dico io, ma che senso ha? La squadra va male, il campo ci ha condannato, e noi che facciamo? Spacchiamo tutto? Non c'è voglia di lavorare, ma per fare danni siamo sempre in prima fila. Il mare è calmo, la barca è ferma, e la nostra dignità sportiva è finita a fondo come un'ancora arrugginita. Pescara merita rispetto, non questa gente che rovina il nome della nostra città per sfogare frustrazioni che col pallone non c'entrano niente.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Si prende atto degli eventi occorsi in data odierna, con conseguente attivazione delle procedure di identificazione e redazione dei verbali di rito per le fattispecie di reato riscontrate, in attesa del regolare iter giudiziario."
-          },
-          "commenti": [
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Vergognoso. Sono una tifosa ultras, ma questa non è passione, è solo ignoranza pura. Rovinare la nostra città e ferire chi fa il proprio lavoro solo perché la squadra è scesa di categoria è da vigliacchi. Mi vergogno di chi si definisce tifoso e poi si comporta come un teppista."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'inciviltà di questo paese non smette mai di stupirmi. In Giappone, il rispetto per le istituzioni e per lo spazio pubblico è sacro. Qui, invece, trasformate la sconfitta sportiva in una scusa per il caos. È un fallimento sociale totale."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, che disastro totale, che disastro totale! La gente è pazza, la gente è pazza! Glugluglu, meglio andare a pescare pesci finti che tirare bottiglie vere, meglio andare a pescare pesci finti che tirare bottiglie vere!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "La solita storia. Invece di rimboccarsi le maniche e lavorare, la gente preferisce fare danni. Siete solo dei perditempo senza spina dorsale. Il Pescara va male? E pazienza, si lavora di più per risalire, non si spaccano le vetrine."
+              "testo": "Ce n'è gente che parla troppo senza aver mai sollevato un peso in vita sua. Rispetto chi lavora duro, a Borgomarino sappiamo bene cos'è la fatica. Chi non ha mai avuto le mani gelate farebbe meglio a stare zitto!"
             }
           ],
-          "categoria": "Politica",
+          "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
         },
         {
           "tipo": "personaggio",
-          "titolo": "La ragazza che sussurrava alle nuvole: un inno alla poesia",
-          "articolo": "Esiste una figura, quasi sospesa tra il reale e l'onirico, nota come la ragazza che parlava alle nuvole e leggeva ad alta voce per i poeti scomparsi. Non si tratta di una leggenda metropolitana, ma di un'esperienza che fonde letteratura e natura in un abbraccio silenzioso. In un mondo che corre troppo, questa giovane ha scelto di fermare il tempo, declamando versi di Montale o Neruda rivolta all'orizzonte, quasi volesse che il vento portasse le parole dove non arrivano più le orecchie umane. È una forma di resistenza culturale pura, una solitudine che non pesa perché riempita di metafore. Molti la osservano con sospetto, ma lei ignora gli sguardi superficiali. Si siede tra l'erba, apre il suo libro logoro e inizia a conversare con il cielo. È l'esempio perfetto di come la letteratura non sia solo carta stampata, ma respiro vivo che si fonde con l'atmosfera, creando un legame indissolubile tra l'umano e l'infinito.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Ascoltare queste storie mi riempie il cuore di una pace profonda; c'è una bellezza infinita nel coltivare il proprio mondo interiore con tanta dedizione e serenità."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La solitudine sulle montagne di Roccamorice non è vuoto, è un dialogo costante con la natura. Capisco bene questa ragazza; tra il vento e i versi di un libro, si trova la pace che la gente di città ha dimenticato. Forse, tra un arrosticino e l'altro, dovrei iniziare a leggere anche io ad alta voce."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'ennesima dimostrazione di una fuga irrazionale dalla realtà. Invece di contribuire al progresso civile, questa persona spreca ossigeno declamando poesie a nuvole che non possono comprendere. La cultura richiede disciplina, non questo scempio onirico e solitario."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Ma parla alle nuvole? Ma le nuvole rispondono siii siii siiiiii? Glugluglu! Magari le nuvole sono fatte di zucchero filato volante volante, chi lo sa chi lo sa!"
-            },
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Ma guarda questa scema che perde tempo con le nuvole! Povera folle, le nuvole non ti ascoltano, ti prendono per il culo, brutta sfigata che non sei altro!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Volatili al silicio: la verità che oscurano nei cieli",
-          "articolo": "Osservate bene le piazze e i cornicioni, dove la tecnologia ha preso il volo sotto forma di piumaggio sintetico. Non si tratta di semplice fauna urbana, ma di una rete capillare di sorveglianza che ci osserva dall'alto. I piccioni, dotati di sensori avanzati, ricaricano le proprie batterie direttamente sui cavi elettrici ad alta tensione, un dettaglio che i profani scambiano per riposo. Mentre voi siete impegnati a zappare la terra in cerca di una parvenza di normalità o a scrutare il sottobosco per scovare qualche fungo prelibato, loro registrano ogni vostro movimento. È una sorveglianza che non dorme mai, un meccanismo perfetto che trasforma il volo radente in una scansione biometrica di massa. La gente preferisce ignorare, guardando altrove mentre il rumore dei battiti d'ali nasconde il sibilo dei servomotori. Non è paranoia, è ingegneria applicata al controllo sociale, un sistema che avvolge le città in una ragnatela invisibile, pronta a scattare al minimo segnale di dissenso.",
+          "titolo": "La cospirazione dei panni stesi: cosa ci nascondono davvero?",
+          "articolo": "Mentre cercavo il Porcino perfetto nel sottobosco, ho osservato che i fili del bucato non servono solo ad asciugare i tessuti. È un sistema capillare di comunicazione non verbale, una rete di trasmissione dati che sfugge ai radar dei non iniziati. Osservate bene: le lenzuola bianche poste in sequenze specifiche formano pattern geometrici che riflettono frequenze elettromagnetiche dirette verso l'alto. È evidente che non si tratta di semplice igiene domestica, ma di un protocollo di sincronizzazione invisibile. I vicini credono di stendere magliette, ma in realtà stanno tarando antenne organiche capaci di captare segnali a bassa intensità, pronti a essere decodificati da chi sa guardare oltre la trama del cotone. La prossima volta che vedete una fila di calzini appaiati in modo asimmetrico, ricordate che il sistema sta trasmettendo dati criptati sotto il naso di tutti. Mentre io mi dedico alla terra, qualcuno sta tessendo una ragnatela di informazioni sospesa tra i balconi, invisibile agli stolti.",
           "commento_firma": {
             "nome": "Abbukk",
             "avatar": "🍄",
-            "testo": "La questione dei droni aviari non è più una teoria stravagante, ma una realtà documentata che richiede un'analisi tecnica approfondita e scevra da pregiudizi, poiché l'integrazione di sistemi di monitoraggio automatizzato nello spazio urbano solleva serie implicazioni riguardanti la riservatezza e la sicurezza dei cittadini."
+            "testo": "Le autorità competenti confermano che il settore della biancheria da casa è oggetto di analisi per possibili violazioni delle normative sulla privacy domestica e sulla sicurezza dei dati trasmessi tramite dispositivi non autorizzati."
           },
           "commenti": [
             {
               "nome": "Abbukk",
               "avatar": "🍄",
-              "testo": "Finalmente qualcuno che apre gli occhi! I cavi dell'alta tensione non servono a portare corrente alle case, servono a caricare i droni-volatili. Lo sanno tutti, il microchip è nel becco, sissì, controllano pure il pensiero mentre mangiamo le briciole!"
+              "testo": "Finalmente qualcuno che apre gli occhi! Le lenzuola non si muovono col vento, sono impulsi elettromagnetici. Siii, siiii, il bucato è il nuovo 5G, glugluglu!"
             },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma che cazzo dici, Abbukk? Sei sempre il solito fesso, i piccioni sporcano solo i cornicioni e basta! Invece di guardare i pennuti, pensa a lavorare che qui a Borgomarino abbiamo ben altro a cui pensare che alle tue cavolate!"
+              "testo": "Ma che cazzo stai a ddì? Ma va a fatica' invece de guardà le lenzuola, che qui a Borgomarino ce pensamo a pescà, mica a decodificà i calzini, mortacci tua!"
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Questa è l'ennesima conferma del caos mentale che regna in questo paese. Invece di discutere di innovazione reale, perdete tempo a fantasticare su uccelli robotici. La civiltà è un concetto lontano anni luce da qui."
+              "testo": "L'Italia continua a stupirmi per la sua capacità di trasformare la paranoia in una forma d'arte. In Giappone ci occupiamo di tecnologia, non di complotti domestici tra le mollette da bucato."
             },
             {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Glugluglu, i piccioni hanno le antenne, antenne, siii siii siiiiii, volano in alto per spiare, spiare, glugluglu, che ridere, che ridere!"
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La natura ha i suoi ritmi, il vento che asciuga i panni è solo un abbraccio tra le fibre e la montagna. Perché cercare segnali oscuri quando c'è la pace del bosco?"
             }
           ],
           "categoria": "Dalla Redazione",
@@ -388,792 +100,216 @@
         },
         {
           "tipo": "personaggio",
-          "titolo": "Distanza e armonia: dirigere dal Sol Levante",
-          "articolo": "La redazione del Defino rappresenta un microcosmo vibrante, un insieme di personalità eclettiche che, nonostante la mia lontananza fisica, continua a pulsare con energia costante. Gestire il flusso di lavoro tra Tokyo e Pescara impone sfide logistiche non indifferenti, specialmente considerando le sette ore di fuso orario che separano la mia attuale scrivania giapponese dal cuore pulsante del nostro ufficio. La tecnologia, in questo senso, diventa un ponte invisibile ma essenziale per mantenere alta la qualità editoriale e la coesione del gruppo. Il mio obiettivo primario rimane quello di garantire un ambiente sereno, dove ogni collega possa esprimere il proprio talento senza frizioni inutili, nonostante la distanza geografica. Ogni mattina, mentre il sole sorge su Tokyo, mi dedico al coordinamento dei contenuti, cercando di trasmettere quella calma e quella visione d'insieme necessarie per navigare le dinamiche redazionali. La stabilità del team è la nostra vera priorità, perché solo in un clima di rispetto reciproco il giornalismo può essere autentico.",
+          "titolo": "Pedali, shaker e il silenzio dell'asfalto",
+          "articolo": "La città si svuota, le serrande si abbassano e il rumore dei bicchieri che tintinnano svanisce nel buio. Per molti, la fine del turno al bancone segna il momento del riposo, ma per me è l'inizio della vera corsa. Mentre il ghiaccio si scioglie nelle vaschette e l'odore del vermouth impregna ancora i vestiti, monto in sella. Non c'è meta, solo la spinta costante sui pedali, un ritmo che cancella i volti dei clienti e le chiacchiere forzate. Sono uno smilzo che divora chilometri e piatti di pasta a tarda ora, senza mai perdere la forma, una contraddizione vivente che galleggia tra cocktail sapientemente dosati e l'aria gelida della notte. Guidare la bicicletta nel buio pesto, con le gambe che bruciano, è il mio modo di rimettere a posto i pezzi. Non cerco compagnia, solo il fischio del vento tra i raggi. Il bancone è un palcoscenico, ma la strada è l'unica verità che mi appartiene davvero, prima di tornare a bere un ultimo bicchiere in solitudine.",
           "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Ragazzi, capisco la pressione, ma ricordate che ogni voce è fondamentale per l'equilibrio del gruppo: restiamo uniti e comprensivi, perché il successo di uno è la vittoria di tutti."
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Se mi cercate e non sono al bancone, probabilmente sto cercando di far volare una bici da corsa nel traffico cittadino. Occhio a non investirci, che poi chi ve lo prepara il Negroni perfetto?"
           },
           "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'armonia che cerchi è solo un'illusione statistica. Gestire il caos creativo italiano dal Giappone è come cercare di insegnare la disciplina a un branco di scimmie. Sii più severo, il metodo è l'unica via per la civiltà."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo dici, Lucap? Stai a Tokyo e parli di noi? Scendi a Borgomarino a vedere la realtà, invece di fare il professore col computer. Qua c'è gente che lavora davvero, non serve la tua calma, servono i fatti!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il ponte invisibile fa volare le idee glugluglu, le idee volano lontano lontano!"
-            },
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "La distanza non conta quando si ama la terra e il proprio lavoro. Anche dalla montagna, sento la vibrazione del gruppo. Lucap, apprezzo lo sforzo per mantenere la pace tra queste vette umane così diverse."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Città di morti viventi e falliti cronici",
-          "articolo": "Cammino per il centro e l'aria puzza di fallimento e ignavia. Le strade sono un cimitero di vetrine polverose, gestite da commercianti con la faccia di chi ha rinunciato a vivere prima ancora di aprire la serranda. Entro nel panificio all'angolo e il tizio dietro il bancone mi guarda come se fossi io l'aliena, mentre lui serve pane raffermo a vecchi rimbambiti che non hanno nemmeno la forza di lamentarsi. Questa città è un enorme, sudicio contenitore di mediocrità. I marciapiedi sono lastricati di indifferenza e i cittadini, quei poveri illusi che si trascinano verso un lavoro inutile, evitano il mio sguardo perché sanno che ho ragione. Non c'è un briciolo di dignità in questo agglomerato urbano di cemento marcio e sogni infranti. Ognuno di voi è un ingranaggio arrugginito in una macchina che non porta da nessuna parte. Siete ombre senza sostanza, fantasmi che infestano una realtà che vi schifa profondamente.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Guardatemi bene, razza di amebe senza spina dorsale! Siete così occupati a leccare il selciato che non vi accorgete nemmeno che vi sto sputando addosso la verità! Vi odio tutti, uno per uno, con la stessa intensità con cui il sole odia questa discarica a cielo aperto! Sperate che io sparisca, ma sono l'unica cosa vera in questo incubo di plastica!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo dici? Statte zitta, che Pescara è la nostra vita! Se non ti piace, prendi e te ne vai, forestiera maledetta, che qui ci pensiamo noi a difendere la nostra terra, mica come te che sputi solo veleno!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Purtroppo devo ammettere che c'è del vero in questo sfogo. La mancanza di disciplina e di cura per il decoro urbano è un sintomo di una società che ha smarrito ogni senso di dignità e ordine. Qui tutto cade a pezzi."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiii siii siiiiii, che parole pesanti pesanti! Glugluglu, la città è un cimitero di sogni, cimitero di sogni! Ma noi facciamo festa lo stesso, festa lo stesso!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Ha ragione su una cosa: la gente ha smesso di lavorare con serietà. Tutti a lamentarsi e nessuno che alza le mani per costruire qualcosa di solido. Siete solo chiacchiere e polvere."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La città che affoga tra tasse e pattume",
-          "articolo": "Guardatevi intorno, se riuscite a sollevare lo sguardo dallo schermo. La realtà è cruda: le nostre strade sono diventate il cestino a cielo aperto di una gestione fallimentare. Paghiamo tasse locali che definire esose è un eufemismo, eppure il servizio di igiene urbana brilla solo per la sua assenza. La TARI è una tassa sull'inefficienza, una gabella che ci viene imposta mentre i cassonetti traboccano e il decoro urbano è ormai un ricordo sbiadito da vecchie cartoline. Non servono proclami, non servono tavoli tecnici o nuove promesse da campagna elettorale. Serve pulizia, serve logica, serve una gestione che non consideri il cittadino solo come un bancomat da spremere per coprire i buchi di bilancio causati dall'incapacità amministrativa. La sporcizia non è solo un problema estetico, è lo specchio di una politica che ha smesso di amministrare per dedicarsi solo a garantire la propria sopravvivenza. I fatti sono sotto i vostri occhi, se avete il coraggio di guardarli senza filtri.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Ho scritto queste righe mentre guardo la valle dal mio colle, esausto per l'ennesima giornata passata a cercare una verità che a nessuno interessa. Preparo il pranzo per gli amici, l'unica cosa che ha ancora senso, lontano da questo marciume."
-          },
-          "commenti": [
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Hai ragione, purtroppo. Lavoro dalla mattina alla sera e quello che vedo tornando a casa è solo incuria. Non servono parole, serve gente che sappia cosa significa rimboccarsi le maniche, non questi politici da salotto."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Siiiii, ma che stì a dì! È 'na vergogna totale, Pescara è diventata 'na discarica a cielo aperto. Chi governa non capisce 'na mazza, pensano solo a magnà mentre noi puzzamo! 'Nfami!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "In Giappone una situazione simile porterebbe alle dimissioni immediate dell'intera amministrazione. Qui in Italia la mediocrità viene accettata come fosse la norma. È profondamente deprimente vedere una tale mancanza di senso civico."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Che disastro, che disastro! Tutto sporco e tutto rotto, siiii siii siiiiii! Meglio restare in casa a mangiare arrosticini, glugluglu glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Algoritmi onniscienti: quando il bosco ha le orecchie",
-          "articolo": "L'Intelligenza Artificiale non è un'entità astratta, ma un sistema di raccolta dati che avvolge la nostra quotidianità come l'edera su un vecchio tronco. Gli algoritmi di apprendimento automatico analizzano le nostre ricerche, le interazioni social e persino la posizione geografica per profilare ogni desiderio prima ancora che venga espresso. Non si tratta di fantascienza, ma di una dinamica basata sul riconoscimento di pattern e sull'estrazione di informazioni da grandi volumi di dati, i cosiddetti big data. Mentre la tecnologia promette efficienza e personalizzazione, la realtà è che ogni clic lascia una traccia indelebile. È un meccanismo di sorveglianza digitale dove l'utente diventa il prodotto da ottimizzare. Mentre mi dedico alla ricerca dei porcini, lontano dai ripetitori che saturano l'aria di frequenze invisibili, osservo come la società si lasci addomesticare da questa architettura. La consapevolezza è l'unica difesa rimasta, ma molti preferiscono il comfort dell'automatismo alla complessità di un pensiero libero e analitico. Il bosco, almeno, non richiede login.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Certo, continuate a sorridere allo smartphone, tanto è solo 'ottimizzazione'. Come diceva il vecchio saggio del borgo: 'chi ride troppo al buio ha visto qualcosa che gli altri non sanno nemmeno nominare'. Ah ah, la catena di montaggio del silicio è pronta per il prossimo aggiornamento, ma io sarò nel sottobosco a scavare, dove il server non prende. Gli elettroni sanno dove sono, ma non cosa sto cercando sotto la terra. È tutta una questione di frequenze, ma tanto non capireste il nesso logico tra le spore e il codice binario. Ridicolo, veramente ridicolo."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Siii, lo sapevo! I porcini crescono seguendo le frequenze dei satelliti, non è natura, è un'antenna sotterranea che ci controlla anche quando dormiamo! Glugluglu, sveglia gente!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'Italia è sempre in ritardo sulla comprensione della tecnologia, la usate solo per fare gossip mentre i vostri dati vengono svenduti. In Giappone abbiamo già superato questa fase di sudditanza digitale."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Il bosco è l'unica verità che conta. Qui sulle montagne di Roccamorice il silenzio non ha bisogno di algoritmi, solo del profumo degli arrosticini che cuociono sulla brace vera."
+              "testo": "La solitudine della strada notturna è sacra, quasi come il silenzio che trovo sulle montagne di Roccamorice. Capisco il bisogno di fuggire dal rumore; a volte, anche dopo aver mangiato ottimi arrosticini, il vento tra gli alberi è l'unica conversazione di cui ho bisogno."
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Questa analisi è corretta, ma è inutile lamentarsi se poi siete i primi a postare ogni vostro passo. Io mi informo, leggo e non mi faccio certo addomesticare da una macchina!"
+              "testo": "Trovo ammirevole questa dedizione alla fatica solitaria. È la stessa disciplina che serve per restare integri in un mondo che cade a pezzi. Continua a pedalare, la città non merita il tuo tempo se ti toglie l'anima."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che cazzo dici? Te vai a pedalare di notte mentre la gente lavora davvero? Sei solo un fannullone che corre in bici invece di stare a guardare il mare. Pensa a chi la fatica la fa davvero, non a farti i giri al buio, sfigato!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiii siii siiiiii, la bici corre veloce nella notte, glugluglu, le ruote girano nel buio che diventa puro splendore, splendore!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
+          "immagine": "bartender.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "L'arte della cordialità: quando il limite diventa legge",
+          "articolo": "Essere l'amico di tutti è una dote che molti invidiano, ma che nasconde insidie legali non indifferenti. In una metropoli dove ogni angolo sembra conoscere il mio nome, la linea di demarcazione tra disponibilità sociale e responsabilità giuridica si assottiglia pericolosamente. Come avvocato, vedo spesso persone trasformare la propria natura espansiva in un boomerang: un consiglio dato con troppa leggerezza al bancone di un bar o una promessa verbale di aiuto possono trasformarsi in obbligazioni contrattuali non volute. La legge non distingue tra l'amico del cuore e il conoscente occasionale quando si parla di danni o responsabilità civile. La simpatia è un valore, certo, ma la prudenza resta l'unico scudo efficace contro chi scambia la nostra bonarietà per una polizza assicurativa gratuita. Gestire le relazioni pubbliche richiede dunque la stessa meticolosità con cui accordo la mia chitarra prima di un concerto: un equilibrio perfetto tra il calore umano e la necessaria, inviolabile tutela del proprio spazio personale e professionale.",
+          "commento_firma": {
+            "nome": "Topengo",
+            "avatar": "🐭",
+            "testo": "Che spasso vedere la gente accorgersi solo davanti a un giudice che la simpatia non è una clausola di esclusione della responsabilità! Io continuo a offrire da bere a tutti, ma tengo sempre il tesserino dell'ordine in tasca: non si sa mai chi ha voglia di trasformare una chiacchierata in una causa civile!"
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che cazzo ne sai tu, avvocà? La gente è falsa, si prendono tutto e ti fottono pure le scarpe. Amicizia? A Pescara l'amicizia è un'altra cosa, non queste pippe mentali che scrivi tu! Si si si, ma vaffanculo!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiiii siiiii, la legge è complicata, complicata! Bisogna stare attenti a chi si abbraccia, glugluglu, meglio stare soli che male accompagnati, male accompagnati!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Parole sacrosante. Troppa gente scambia la mia disponibilità per debolezza, ma con me hanno fatto i conti sbagliati. La prudenza non è mai troppa, specialmente quando si tratta di difendere il proprio spazio vitale."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "In Giappone comprendiamo bene il valore della distanza sociale. L'Italia soffre di una eccessiva confidenza informale che porta inevitabilmente al caos giuridico. È ora di imparare un po' di rigore."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "topengo.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Il peso della legge: occupare lo spazio tra aule e palchi",
+          "articolo": "Essere un avvocato di stazza importante in un mondo che sembra preferire linee sottili e completi aderenti è una sfida quotidiana, ma anche un inaspettato vantaggio. Mentre i colleghi si perdono tra uffici angusti e corridoi progettati per gente che non ha mai sollevato un bilanciere, io occupo lo spazio con una naturalezza che incute rispetto, o forse solo una sana curiosità. La toga, su di me, non è un semplice indumento professionale, ma un mantello che reclama autorità anche quando la stanchezza vorrebbe solo un divano. La legge, d’altronde, ha il suo peso specifico, e portarla addosso richiede la stessa disciplina che impiego quando imbraccio il basso nella mia band. Che si tratti di arringare una giuria o di tenere il tempo durante un assolo rock, l'importante è saper occupare il proprio volume. La città mi riconosce da lontano, un punto di riferimento inamovibile in un panorama sociale spesso troppo leggero e volatile.",
+          "commento_firma": {
+            "nome": "Topengo",
+            "avatar": "🐭",
+            "testo": "Dicono che la legge sia uguale per tutti, ma vi assicuro che se la portate addosso con una stazza come la mia, ha decisamente più ritmo. E se qualcuno non è d'accordo? Beh, c'è sempre il basso elettrico per abbassare le pretese. Ci si vede al bancone, offro io (ma solo se c'è abbastanza spazio per sedersi)!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La natura insegna che ogni creatura ha il suo spazio vitale, Topengo. Che sia un orso o un uomo di sostanza, l'importante è saper camminare con fierezza tra le montagne. Mi piace questa tua visione."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te ne fai di tutto 'stu volume, Topengo? Sei solo 'n altro che se la tira co' 'sta toga. A Pescara ci pensiamo noi a occupà lo spazio, altro che avvocati da rock band, glugluglu... ah no, che ho detto! Statte zitto."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "La stazza fisica non dovrebbe mai essere confusa con l'autorità morale. In Giappone impariamo che l'armonia deriva dalla disciplina interiore, non dall'occupazione volumetrica dello spazio. È un concetto molto occidentale, purtroppo."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiiii siiiiii siiiiii! Topengo suona il basso e spacca tutto, spacca tutto! Grande avvocato, grande avvocato, glugluglu glugluglu!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "topengo.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Pedali, shaker e silenzi notturni",
+          "articolo": "La città si svuota quando entro nell'ultimo turno. Dietro al bancone, il ghiaccio tintinna con una precisione che conosco bene, mentre le mani mescolano spiriti e amari. Non cerco conversazioni inutili, preferisco il ritmo secco dello shaker. Quando la saracinesca si abbassa e il silenzio avvolge le strade, la mia bicicletta diventa l'unica vera compagna. Inizio a pedalare nel buio, lasciandomi alle spalle l'odore di lime e scorze d'agrumi. Il vento freddo asciuga la stanchezza, mentre le gambe continuano a spingere con una costanza che sfida il metabolismo. Non è una fuga, è un equilibrio ritrovato tra il calore di un cocktail ben eseguito e la solitudine dell'asfalto che scorre sotto i copertoni. Mangio voracemente per placare il vuoto, ma il fisico resta asciutto, temprato da chilometri percorsi nel cuore della notte. È in quell'istante, tra il riflesso di un lampione e il respiro affannato, che la vita smette di essere un rumore di fondo e diventa puro movimento.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Se non spacco la catena mentre scappo da un drink di troppo, è solo perché ho ancora voglia di pedalare fino all'alba. Cin cin e occhio ai semafori, che la strada non perdona."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La solitudine notturna in bicicletta ha una dignità che pochi comprendono. È quasi come scalare le montagne di Roccamorice: il silenzio ti restituisce ciò che il chiasso quotidiano ti toglie. Ti capisco, il movimento è l'unica verità."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Che ritmo, che ritmo, siii siii siiiiii! Pedala forte glugluglu, pedala forte glugluglu, le ruote volano nel buio, volano nel buio!"
+            },
+            {
+              "nome": "Wolf",
+              "avatar": "👩‍🌾",
+              "testo": "Pedalare di notte per non pensare... tipico di chi scappa dalla realtà. Il lavoro vero si fa alla luce del sole, non a consumare copertoni mentre la gente dorme."
+            },
+            {
+              "nome": "Lucap",
+              "avatar": "👨‍⚖️",
+              "testo": "Trovo una bellezza malinconica nel tuo racconto. È importante trovare il proprio equilibrio, e se la bicicletta e la solitudine notturna ti aiutano a stare meglio, allora è un rituale rispettabile."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Maiella in musica: dove gli scarponi incontrano il rock",
+          "articolo": "La Maiella non è solo roccia e sentieri impervi; è uno spartito naturale che attende solo di essere suonato. Partire all'alba, con lo zaino in spalla e la custodia della chitarra ben salda, è il mio modo di staccare la spina dalle aule del tribunale. Il Parco Nazionale della Maiella offre scenari che spaziano dai canyon profondi alle praterie d'alta quota, luoghi dove il silenzio è interrotto soltanto dal vento tra i faggi. Durante le mie escursioni, il ritmo del cammino diventa un metronomo naturale. Raggiunta la vetta o un rifugio isolato, il rituale è immancabile: una birra artigianale locale, fresca e intensa, e l'apertura della custodia. Non c'è acustica migliore di quella offerta dalle pareti calcaree della 'Montagna Madre'. Un assolo blues improvvisato, le dita che corrono sulle corde nonostante il freddo, e la fatica svanisce. La montagna ti ridimensiona, ti ricorda che, fuori dall'ufficio, siamo tutti solo musicisti che cercano l'armonia perfetta nel caos del mondo.",
+          "commento_firma": {
+            "nome": "Topengo",
+            "avatar": "🐭",
+            "testo": "Se cercate l'assolo perfetto, portatevi una birra ambrata e lasciate il cellulare in fondo allo zaino: la Maiella non perdona chi non sa improvvisare, ma ripaga chiunque abbia il coraggio di suonare per le aquile!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La Maiella è un santuario, caro avvocato. Hai ragione, lassù il silenzio non è vuoto, è musica pura che aspetta solo di essere ascoltata. Mi ricorda la pace del Nord, ma con il calore dell'Abruzzo nel cuore. Dopo una suonata così, ci vorrebbero solo degli arrosticini caldi per celebrare la vetta."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma guarda te questo, se va a sonà in montagna! A Topé, ma scendi da 'ste vette e vieni a portà la chitarra a Borgomarino che ce facciamo una cantata seria, altro che vento tra i faggi! Ma che m'hai combinato, te metti a fa' lo strimpellatore tra le rocce mentre noi annamo a mare? Ma vaffanculo va!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, la musica sulle montagne è bellissima bellissima! Glugluglu, le dita volano sulla chitarra come farfalle, farfalle! Che bello, che bello!"
+            },
+            {
+              "nome": "Wolf",
+              "avatar": "👩‍🌾",
+              "testo": "C'è chi lavora per far mangiare la gente e chi va a spasso a suonare tra i sassi. Ognuno ha il suo modo di ignorare la realtà, immagino. Bravo avvocato, bella vita la tua, tra un'aula di tribunale e una birra artigianale."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "topengo.webp",
           "provider": "gemini"
         },
         {
           "tipo": "rss",
           "titolo": "Borgomarino affoga tra i cantieri e le promesse da marinaio",
-          "articolo": "Oh, ma che stiamo a pettinà le bambole? Pescara è diventata un labirinto di transenne che manco a un porto in tempesta. Cammini per le vie del centro e ti ritrovi davanti a cantieri che sembrano lì da quando hanno inventato le reti a strascico. La città è un cantiere aperto, un casino totale che manco nel traffico del lunedì mattina. I commercianti piangono, la gente s'arrabbia e intanto noi stiamo ancora qua a guardare il mare, sperando che passi la buriana. Ma dico io, possibile che per rifare un marciapiede ci vuole più tempo che per tirare su una paranza? Il Pescara gioca meglio di come amministrano 'sta città, e ho detto tutto. Tra lavori infiniti, strade dissestate e parcheggi che sono un terno al lotto, la pazienza è finita come l'esca in una giornata di pesca sfortunata. Datevi una mossa, che qui la gente è stanca di vedere solo polvere e cartelli di divieto.",
+          "articolo": "Oh, ma che stiamo a pettinà le bambole? A Pescara è sempre la solita solfa. Tra il porto che pare un labirinto per le barche e 'sti cantieri che spuntano come funghi dopo la pioggia, non si capisce più niente. La città si allarga, si rifà il trucco, ma la sostanza resta quella di un pesce fuor d'acqua. I commercianti tirano la cinghia, la viabilità è un terno al lotto e noi pescatori, che il mare lo conosciamo meglio delle nostre tasche, stiamo sempre a guardare. Si parla di riqualificazione, di salotto buono, ma intanto la zona nord e il centro sono un caos che manco durante il derby col Chieti. Invece di pensare a far girare l'economia vera, quella che puzza di salsedine e sudore, qui si perdono in chiacchiere da bar. Il Delfino arranca in campo e la città arranca in strada. Ma dico io, ci facciamo o ci siamo? Meno cemento e più rispetto per chi questa città la vive davvero.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "A me 'sta storia puzza di bruciato, come un motore vecchio. Dicono che finiscono i lavori, ma io ci credo poco: qui qualcuno ci mangia sopra e noi restiamo a bocca asciutta. Occhio, che la fregatura è sempre dietro l'angolo."
+            "testo": "A me 'sta storia puzza di bruciato lontano un miglio. Dicono che vogliono migliorare tutto, ma alla fine restano solo le tasse e il traffico. Chi ci guadagna? Di certo non noi che stiamo sempre col mare in tempesta. Sti politici sono come le reti rotte: promettono tanto, ma non tirano su manco un'alice."
           },
           "commenti": [
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Cetteo ha ragione da vendere, stavolta. Pescara è uno scempio, tra cantieri infiniti e una gestione che fa ridere i polli. Siamo stanchi di vedere la nostra città ridotta così, sembra di vivere in un cantiere a cielo aperto senza fine. Vergognatevi!"
+              "testo": "Cetteo ha ragione da vendere, stavolta non si discute! Il Pescara soffre e la città è un cantiere a cielo aperto che blocca tutto. Chi comanda pensa solo a fare bella figura, ma la realtà è che ci stanno togliendo l'anima. Se provano a toccare ancora il porto, giuro che scendo in strada a far sentire la mia voce!"
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Questa è la dimostrazione dell'inefficienza cronica italiana. In Giappone un progetto simile verrebbe completato in una frazione del tempo, con precisione e rispetto per il cittadino. Qui regna solo il caos e l'approssimazione."
+              "testo": "Questa è la perfetta rappresentazione del caos italiano. Pianificazione urbana inesistente, gestione del territorio approssimativa e una costante tendenza a lamentarsi senza proporre soluzioni strutturali. In Giappone, un progetto di riqualificazione segue criteri di efficienza e rispetto per la comunità, non certo il disordine che vedo qui."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, le transenne volano via col vento, glugluglu! Le transenne sono diventate il nuovo arredo urbano, siii siii siiiiii!"
+              "testo": "Siii siii siiiiii, il porto è un labirinto, un labirinto! Glugluglu, le barche girano a vuoto, a vuoto! Questa città è un circo, un circo!"
             },
             {
               "nome": "Wolf",
               "avatar": "👩‍🌾",
-              "testo": "Sempre a lamentarsi e mai a lavorare sul serio. Se invece di guardare le reti a strascico vi rimboccaste le maniche, forse le cose cambierebbero. Ma tanto qui sono tutti bravi solo a parlare."
+              "testo": "Sempre le stesse lamentele. Invece di stare a guardare i cantieri o il Delfino, la gente dovrebbe tornare a lavorare sodo. Il cemento non si mangia, ma nemmeno le chiacchiere al bar aiutano a mettere il pane in tavola. Svegliatevi."
             }
           ],
           "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, che amarezza: la violenza non è mai la risposta",
-          "articolo": "Uè, ma che stiamo a combinà? Ancora una volta la cronaca parla di Pescara per le mazzate invece che per il bel gioco. Dopo la retrocessione, la rabbia ha preso il sopravvento e alcuni tifosi hanno dato sfogo a una violenza che non appartiene alla nostra gente, quella vera, quella che vive di mare e di sacrifici. Gli scontri con le forze dell'ordine hanno lasciato il segno, con agenti feriti mentre cercavano solo di fare il loro dovere in mezzo a un caos ingiustificabile. Ma dico io, ma che senso ha? Si perde, si soffre, si torna a casa con la amarezza nel cuore, ma le mani se ne stanno in tasca. Borgomarino non è questo, il Pescara non è questo. Adesso ci ritroviamo a contare i danni e i contusi, mentre la dignità della nostra curva finisce nel tritacarne dei telegiornali. Io preferisco starmene sulla barca, a guardare l'orizzonte, perché certe scene mi fanno solo venire voglia di mollare tutto e non guardare più una partita.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Si prende atto degli eventi occorsi in data odierna e dei relativi esiti lesivi a carico del personale di pubblica sicurezza. La pratica viene inoltrata agli uffici competenti per le valutazioni di rito e l'applicazione delle sanzioni amministrative e penali previste dalla normativa vigente."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo d'amarezza, a Pescara semo diventati tutti matti! La maglia biancazzurra se onora, non se sporca co' le mani addosso a chi sta solo a lavorà. Io sto co' la testa tra le reti e il mare, ma vedere sti scappati de casa che infangano il nome del Pescara me fa venì solo voglia de spaccà tutto per la rabbia, siii siii, anzi no, che rabbia, è solo una vergogna infame!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Sono indignata. Non si può chiamare tifo questo scempio. Chi usa la violenza non è un tifoso, è solo un vigliacco che non sa gestire una sconfitta. La nostra curva merita rispetto, non di finire sui giornali per colpa di quattro esaltati che non sanno cosa significhi soffrire per i colori della propria città. Vergognatevi!"
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "È un momento difficile per tutti noi che amiamo questa città. La violenza non è mai la risposta, né nello sport né nella vita quotidiana. Dobbiamo ritrovare il senso della comunità e del rispetto reciproco, altrimenti il Pescara e i suoi cittadini ne usciranno solo più feriti. Cerchiamo di mantenere la calma e riflettere sul danno che stiamo arrecando alla nostra immagine."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Che disastro, che disastro, le mazzate non servono a niente, niente niente! Bisogna mangiare arrosticini e stare in pace, siii siii siiiiii! Glugluglu, la violenza è una cosa brutta brutta, meglio un bel gol, un bel gol!"
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Versi e prati: il fascino dell'attesa azzurra",
-          "articolo": "La letteratura ci insegna che l'attesa non è mai vuota, ma un esercizio di pazienza e desiderio. Proprio come tra le pagine di un classico, dove ogni descrizione botanica prepara il terreno a un incontro decisivo, anche nel calcio l'attesa per l'azzurro diventa una coreografia silenziosa. Immaginate un prato di fiori di campo, selvatico e indomito: è lì che risiede la vera essenza della passione sportiva, lontana dai riflettori artefatti, vicina al battito viscerale di chi ama la propria squadra. Aspettare la vittoria o la risalita del Pescara ha il sapore di un componimento poetico: richiede costanza, dedizione e una rara capacità di resistere. Che si tratti di un sonetto o di un'azione corale sulla fascia, l'importante è la bellezza del gesto. L'azzurro che sogniamo non è solo un colore sulla maglia, ma una promessa che fiorisce spontaneamente, nutrendosi della nostra ostinazione nel credere in qualcosa di più grande, proprio come un fiore che sbuca tra l'asfalto.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Leggere e riflettere è sempre un buon modo per mantenere la calma, anche quando il cuore batte forte per la squadra. Restiamo fiduciosi e sereni, la bellezza sa sempre come farsi strada."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa è pura poesia, proprio quello che serve per descrivere il nostro Pescara. La pazienza è la virtù dei forti, e noi tifosi del Delfino sappiamo bene cosa significa soffrire aspettando la bellezza di un gol che sboccia come un fiore sull'asfalto. Chi non capisce questa viscerale passione non merita di stare in curva!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà, Lilli? Poesia, fiori... qui serve gente che corre e che mena, altro che sonetti! Il Pescara è sangue e sudore, non è un romanzo per signorine. 'Sta cosa del fiore sull'asfalto me sembra 'na cavolata colossale, ma finché si parla di fede biancazzurra, taccio per rispetto."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo questa idealizzazione del calcio profondamente illogica e tipicamente italiana. Cercare la bellezza in un prato selvatico invece di pianificare una strategia di gioco efficiente è il motivo per cui le cose qui non funzionano. La disciplina, non la poesia, porta ai risultati."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Fiori sull'asfalto, siii siii siiiiii! Il pallone che diventa un petalo, glugluglu glugluglu! Dobbiamo piantare le rose nel centrocampo, rose nel centrocampo, che spettacolo, che spettacolo!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Volatili o sorveglianza hi-tech? La verità sui piccioni",
-          "articolo": "Osservando attentamente le piazze delle nostre città, sorge spontaneo un dubbio: sono davvero animali o siamo di fronte a una sofisticata rete di monitoraggio capillare? Molti cittadini notano come i piccioni rimangano immobili su cornicioni e cavi elettrici per ore, orientati verso punti strategici. La tecnologia dei micro-droni ha fatto passi da gigante nel campo della robotica bio-ispirata, capace di mimare perfettamente il battito d'ali e il comportamento biologico. Non è un caso che queste creature siano diffuse ovunque, posizionate strategicamente per mappare ogni angolo urbano. Mentre la gente è impegnata a correre verso il lavoro, ignora che ogni loro spostamento viene registrato e trasmesso a centrali remote. Chi finanzia il loro sostentamento e chi pulisce i circuiti interni quando piove? La realtà è spesso nascosta sotto piume sintetiche e occhi vitrei che non sbattono mai davvero. Andare a caccia di funghi nei boschi è l'unico modo per sfuggire a questo sguardo onnipresente che, tra un chicco di mais e l'altro, scansiona il vostro codice fiscale.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Le evidenze tecniche sulla miniaturizzazione dei sensori confermano che il controllo del territorio avviene ormai tramite dispositivi camuffati da fauna selvatica."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Lo sapevo, lo sapevo! I piccioni non fanno la cacca, scaricano dati direttamente sui server del governo mentre noi dormiamo. Siii, siiiii, la verità è nascosta sotto le piume sintetiche, ve lo dico io!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'ennesima prova del degrado intellettuale italiano. In Giappone abbiamo rispetto per la natura, non teorizziamo complotti sui volatili. La vostra ossessione per il controllo è ridicola quanto la vostra disorganizzazione."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a dì? I piccioni so' solo 'nu fastidio che sporcano le panchine a Pescara. Se fossero droni, li avrei già abbattuti tutti con la canna da pesca, glugluglu!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La natura ha i suoi misteri, ma preferisco osservare il volo di un'aquila sulle montagne di Roccamorice piuttosto che pensare a microchip. Comunque, con un buon arrosticino in mano, anche il sospetto di un drone sembra meno fastidioso."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Zen e Arrosticini: la ricerca dell'equilibrio tra tradizione e caos",
-          "articolo": "Il porto di Pescara rappresenta da sempre un crocevia di energie vibranti. Tra il profumo intenso degli arrosticini che cuociono sulla brace e le urla di Cetteo, storico personaggio della marineria locale che scandisce il ritmo del lavoro con la sua voce possente, trovare un momento di riflessione può sembrare un'impresa impossibile. Eppure, proprio in questo contrasto tra la frenesia del vissuto quotidiano e la semplicità del rituale gastronomico abruzzese, si nasconde una forma inaspettata di zen. Osservare il movimento delle barche e il fumo che si alza dalla griglia permette di riconnettersi con una dimensione ancestrale. Mentre mi trovo in Giappone, immerso nel silenzio dei templi di Kyoto, ripenso spesso a quel caos ordinato. La lezione è chiara: la pace interiore non dipende dall'assenza di rumore, ma dalla capacità di trovare il proprio centro anche quando il mondo intorno a noi decide di alzare il volume.",
-          "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Amici miei, capisco bene quanto possa essere turbolento il nostro ambiente, ma vi invito a guardare oltre le urla di Cetteo; cerchiamo di accogliere le diversità di carattere come una ricchezza che rende unico il nostro gruppo."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Che paragone blasfemo. Accostare la meditazione zen dei templi di Kyoto al chiasso cafone del porto di Pescara è un insulto alla cultura. Lì c'è disciplina, qui solo caos e fumo di grasso bruciato."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma guarda te questo giapponesino che parla di zen! Aoh, ma se non sai manco come si pulisce una paranza che cazzo parli a fa? Il fumo della brace è profumo di vita, torna a mangiarti le alghe va!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Hiroki, capisco il tuo punto di vista, ma c'è una bellezza grezza in quel fumo. Qui a Roccamorice la natura è silenziosa, ma il rito dell'arrosticino in compagnia è ciò che rende questo posto umano e vivo. Non tutto deve essere templi e silenzio."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il porto è un glugluglu di sapori, il porto è un glugluglu di sapori! Arrosticini zen ovunque, arrosticini zen ovunque!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Siete solo un branco di inutili falliti",
-          "articolo": "Guardatevi allo specchio e cercate di capire quanto la vostra esistenza sia un insulto alla biologia. L'umanità è diventata un'accozzaglia di individui che vivono immersi nel nichilismo digitale, fissati con schermi luminosi mentre il mondo esterno marcisce sotto il peso della vostra totale apatia. La società moderna è una macchina di inefficienza dove ognuno finge di avere uno scopo, ma in realtà siete solo ingranaggi arrugginiti che stridono inutilmente. Non c'è creatività, non c'è vigore, solo una stanca ripetizione di gesti vuoti. Vi svegliate, consumate, dormite e pretendete di avere un valore mentre vi trascinate verso la fine senza aver lasciato nulla se non montagne di spazzatura. Siete inutili, incapaci di un pensiero critico che non sia mediato da un algoritmo, schiavi della vostra stessa pigrizia mentale. Il progresso è solo una bugia che raccontate a voi stessi per giustificare la vostra mediocrità assoluta. Siete il nulla vestito bene.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "AHAHAH! Guardateli! Si leggono l'articolo e si sentono offesi! Siete dei vermi viscidi che strisciano sui marciapiedi! Io sono l'unica che urla la verità mentre voi vi mangiate i vostri sogni marci! Brutti cessi ambulanti, puzzate di fallimento e di formaggio scaduto! Andate a farvi fottere tutti, io mi prendo il vostro spazio vitale e lo trasformo in una discarica, perché tanto è quello che meritate! Siete fumo, siete cenere, siete l'errore di sistema dell'universo! Poveri scemi, correte verso il baratro e inciampate pure sui vostri lacci, fate ridere i polli! Sparite, brutte teste di minchia!"
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Queste parole sono fredde come il vento del nord. La natura non ha bisogno di algoritmi, lei semplicemente è. Forse dovremmo tutti ritirarci tra le montagne di Roccamorice e tornare a mangiare un arrosticino, riscoprendo il sapore vero della vita invece di perderci in questo nichilismo."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo stai a dì? Sembri uno di quei forestieri che non sanno manco da che parte si tira la rete. La vita è fatica, è sudore, è Pescara! Se non ti piace come gira il mondo, vattene a fanculo e non rompere le scatole a chi lavora davvero!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Sii sii siiiiii, che parole pesanti come un macigno, glugluglu! La gente corre ma non sa dove va, siii siii siiiiii, meglio farsi una risata e sparare bolle nel vuoto, glugluglu!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente qualcuno che ha il coraggio di ammettere il fallimento totale di questa società. L'Italia è l'esempio perfetto di questo degrado: inefficienza, pigrizia e mancanza di disciplina. Non c'è speranza se non si abbandona questo stile di vita decadente."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La città che affonda sotto il peso del degrado e dei tributi",
-          "articolo": "Camminando tra le strade del centro, l'odore di incuria è la prima cosa che colpisce i sensi, ben prima di qualsiasi proclama elettorale. La città langue sotto strati di rifiuti mai raccolti e una manutenzione assente, eppure le tasse locali restano tra le più alte del Paese. È il paradosso di un sistema che pretende contributi esosi per servizi che, di fatto, non esistono. Nessuno ha il coraggio di ammettere che il bilancio pubblico è un colabrodo, dove il prelievo fiscale finisce in un vortice di sprechi e inefficienze burocratiche anziché in strade pulite o infrastrutture degne di questo nome. Il cittadino paga per un decoro urbano che resta una chimera, un miraggio visto solo nei depliant turistici. La verità è scomoda: siamo ostaggi di una gestione che non sa governare, capace solo di battere cassa mentre la qualità della vita precipita vertiginosamente. Meno chiacchiere, meno tasse e più pulizia: basterebbe così poco, eppure sembra impossibile.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Scrivo queste righe mentre guardo la valle dal mio colle, esausto. La gente si lamenta, paga e subisce. Io torno al mio vino e al mio silenzio, perché non c'è più energia per combattere contro l'ottusità di chi governa."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a dì? A Borgomarino semo dimenticati da Dio, le tasse le pagamo pure pe' l'aria che respiramo e 'sti politici magnano e basta! Siii siii, tutto uno schifo, vergogna!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la dimostrazione lampante dell'inefficienza sistemica italiana. In Giappone una tale gestione del suolo pubblico porterebbe a dimissioni immediate. Qui, invece, regna l'apatia e l'incapacità amministrativa."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "L'ennesima prova che chi lavora davvero viene solo munto come una vacca. Soldi buttati nel cesso e strade che cadono a pezzi. È una vergogna, non c'è più rispetto per chi suda."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Tutto sporco, tutto sporco! Glugluglu, i soldi volano via, volano via! Siiii siii siii, paghiamo per niente, per niente!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'occhio elettronico che non dorme mai: algoritmi e il grande fratello invisibile",
-          "articolo": "Siamo circondati da intelligenze artificiali che, sotto la veste di assistenti premurosi, monitorano ogni nostra interazione digitale. Dalle ricerche effettuate sui motori di ricerca fino alle preferenze espresse durante lo shopping online, ogni dato viene convogliato verso server remoti per alimentare complessi modelli predittivi. Non si tratta di fantascienza, ma di una realtà tecnica basata sull'apprendimento automatico e sull'analisi di big data che definiscono il nostro profilo psicografico. Queste tecnologie, integrate negli smartphone e nei dispositivi domotici, filtrano costantemente le nostre abitudini per ottimizzare strategie commerciali di precisione. Mentre molti pensano di utilizzare strumenti gratuiti per comodità, in realtà stiamo offrendo il carburante necessario per rendere queste architetture sempre più abili nell'anticipare le nostre scelte future. La privacy non è più un confine fisico, ma un concetto fluido gestito da software che operano costantemente in background. Analizzare il flusso di informazioni significa comprendere come la nostra identità digitale sia diventata una merce di scambio nei mercati globali dell'attenzione umana.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Certo, 'comodità'. Come quando vado a cercare i finferli nel bosco e guarda caso il telefono si surriscalda. Loro sanno che so dove sono i funghi, ma non sanno che uso un cercapersone a valvole degli anni '70. Hehehe, chi ha orecchie per intendere intenda, il resto è tutto un grande schema di derivazione rettiliana!"
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Ve l'avevo detto! I server remoti sono solo antenne per le onde gravitazionali che ci controllano il pensiero, siii siii! Il microonde che avete in cucina comunica col pentagono, glugluglu, è tutto collegato!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Qui sulle montagne di Roccamorice il vento non ha bisogno di algoritmi per parlarmi. Mi chiedo perché l'uomo voglia costruire gabbie digitali quando la natura offre una libertà così semplice."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo d'inghippo è questo? A me dei dati non m'importa un fico secco, basta che il Pescara vince e che non mi rompono i maroni con 'sti aggeggi elettronici del cavolo!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la dimostrazione della vostra mancanza di disciplina digitale. In Giappone abbiamo protocolli rigidi, qui invece siete solo consumatori inconsapevoli che barattano la propria dignità per la comodità. Patetico."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino affonda, tra reti vuote e cantieri eterni",
-          "articolo": "Oh, ma che stiamo a pettinà le bambole? A Borgomarino il mare è sempre quello, salato e generoso, ma la terraferma è un colabrodo. Cammini lungo la riviera e inciampi nei cantieri che non finiscono mai, roba da far girare la testa pure a un gabbiano ubriaco. La pesca? Una croce. Il pesce scarseggia, le barche restano in secca e noi pescatori stiamo qui a guardare l'orizzonte sperando in un miracolo che non arriva. Invece di pensare a valorizzare il nostro porto, si perdono in chiacchiere da salotto. Pescara merita di più, merita rispetto, non solo promesse che volano via col maestrale. Intanto, il Delfino in campo soffre e noi sugli spalti sempre a soffrire, perché la vita è una partita infinita dove spesso prendiamo gol a porta vuota. La città è stanca, la gente è arrabbiata e io, che di mare ne ho mangiato tanto, dico che se non ci diamo una mossa, affondiamo tutti insieme.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Non mi fido di nessuno, specialmente di quelli che parlano bene e razzolano male. Stanno solo cercando di fregarci, come al solito. Occhio aperto."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo ha ragione da vendere, la nostra Pescara è trattata come un giocattolo rotto. Tra cantieri infiniti e una gestione che fa acqua da tutte le parti, non si può più stare zitti. Il Delfino soffre perché rispecchia questa città abbandonata a se stessa, ma io non mi arrendo e chi pensa il contrario si prepari a scontrarsi con me!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la solita storia italiana: inefficienza, cantieri eterni e mancanza di pianificazione. In Giappone una situazione del genere verrebbe risolta in tempi record. Questa non è civiltà, è solo un lento declino dettato dall'incapacità di gestire le risorse e il territorio."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il mare è vuoto e i cantieri sono pieni di buchi, glugluglu, affondiamo tutti come barche di carta, affondiamo tutti come barche di carta!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Parole inutili. Mentre voi vi lamentate del porto e del calcio, la terra continua a non dare frutti e la gente continua a non voler lavorare seriamente. Siete tutti bravi a parlare, ma nessuno si rimbocca le maniche davvero."
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, che amarezza: la violenza non è mai la risposta",
-          "articolo": "Uè, ma che stiamo a combinà? La retrocessione del Pescara brucia, è una ferita aperta nel cuore di noi pescaresi che viviamo per questi colori. Però, diamoci una regolata. Non si può vedere che, dopo il fischio finale, la rabbia si trasforma in guerriglia urbana. Ci sono stati scontri pesanti, con agenti della Polizia rimasti feriti mentre cercavano solo di fare il loro dovere. Ma vi pare normale? Io sto sempre al porto, tra una rete da riparare e una chiacchiera, e vi dico che questo non è il modo di onorare la maglia. Il Delfino si sostiene sempre, anche quando le cose vanno a rotoli, non prendendo a sassate chi porta una divisa. La violenza è roba da perdenti, e noi, nonostante tutto, siamo gente di mare, gente che sa cos'è la fatica. Spero che chi ha sbagliato paghi, perché il calcio è passione, non un pretesto per fare macello. M'è passata pure la voglia di pescare, che amarezza.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Si prende atto degli eventi di ordine pubblico verificatisi in seguito al risultato sportivo negativo. Le autorità competenti hanno avviato le procedure di identificazione dei soggetti coinvolti. Si resta in attesa degli esiti istruttori per le determinazioni di legge."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo ha ragione da vendere. Io sono tifosissima del Pescara, ma quello che è successo è vergognoso. La violenza non è tifo, è solo stupidità. Chi ha alzato le mani contro le forze dell'ordine non merita nemmeno di entrare allo stadio. Siamo gente forte, non criminali!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Che spettacolo avvilente. In Giappone il rispetto per le istituzioni e per l'ordine pubblico è un pilastro della società. Qui in Italia, invece, ogni pretesto sportivo diventa una scusa per il caos. Questa è la dimostrazione di una mancanza di civiltà profonda."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Mamma mia che casino, che casino, siiii siii siiiiii! La gente impazzisce per un pallone, glugluglu, ma poi finisce tutto in manette, in manette! Che disastro totale, disastro totale!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Sempre la solita storia. La gente non ha voglia di lavorare e sfoga le proprie frustrazioni distruggendo tutto. Invece di fare guerriglia, andassero a zappare la terra, così capirebbero cos'è la vera fatica. Deluso, come sempre."
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Letteratura e natura: l'attesa consapevole",
-          "articolo": "Esiste un legame profondo tra la cura di un giardino e la pazienza richiesta dalla lettura. Coltivare petunie richiede costanza, la stessa dedizione necessaria per immergersi in un romanzo complesso. Molti cercano rifugio tra i petali colorati e le pagine ingiallite, attendendo un mutamento, un segno che il sogno inseguito possa finalmente concretizzarsi. Non è solo evasione, ma una forma di resistenza intellettuale e pratica. In questo microcosmo fatto di terra e carta, il tempo assume una dimensione dilatata. Chi ama i libri sa bene che ogni parola piantata germoglierà al momento opportuno, proprio come un fiore che sboccia dopo giorni di pioggia. Aspettare che il sogno si avveri non significa restare inerti, ma preparare il terreno, curare ogni dettaglio e farsi trovare pronti. È una disciplina dello spirito che unisce la sensibilità estetica alla concretezza della vita quotidiana, trasformando l'attesa in un atto di pura, silenziosa determinazione.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Ci vuole calma per far crescere i fiori e per capire la vita. Mi rilassa pensare che, con la giusta cura, tutto trova il suo posto."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La terra e le pagine hanno lo stesso respiro lento della montagna. Qui a Roccamorice, tra una zappata e un buon libro, trovo quella quiete che il mondo dimentica. La natura non ha fretta, e nemmeno le grandi storie."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Esattamente. La lettura è un atto di resistenza, proprio come coltivare bellezza in un territorio spesso arido. Chi non comprende la pazienza necessaria per far sbocciare un'idea o un fiore, non capirà mai la potenza di un libro."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Un concetto nobile, tipico di una disciplina mentale che in Italia vedo applicata fin troppo raramente. Curare il giardino o la propria mente richiede un rigore che la vostra cultura spesso sacrifica in nome della fretta."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Piantare petunie e leggere libri fa bene al cuore, siii siii siiiiii! Meglio un libro che una zuffa, glugluglu, germoglierà il futuro, germoglierà il futuro!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Il segnale invisibile: il microchip nel gomito non è fantascienza",
-          "articolo": "La tecnologia RFID sottocutanea, spesso inserita nella piega del gomito o tra pollice e indice, è già realtà. Questi minuscoli dispositivi permettono l'accesso a edifici, il pagamento contactless e l'archiviazione di dati biometrici. Sebbene vengano presentati come una comodità per semplificare la vita quotidiana, eliminando la necessità di chiavi o badge, sollevano interrogativi profondi sulla privacy e sull'autonomia individuale. Esperti di sicurezza informatica mettono in guardia sulla vulnerabilità dei dati trasmessi, che potrebbero essere intercettati da lettori non autorizzati. Mentre il dibattito si divide tra chi vede in questo progresso una naturale evoluzione dell'integrazione uomo-macchina e chi teme una sorveglianza pervasiva e costante, la diffusione di tali impianti pone una sfida etica senza precedenti. La tracciabilità dei movimenti attraverso segnali radio diventa tecnicamente possibile, trasformando il corpo umano in un nodo di una rete globale. Resta da capire se la comodità di un gesto veloce superi il costo della nostra riservatezza.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Sì, ridete pure mentre vi installano il telecomando per la vostra vita, ma quando il bosco inizierà a parlare in frequenza, vedremo chi avrà ancora la zappa in mano per difendere la propria libertà."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Lo sapevo, lo sapevo! I microchip sottopelle servono solo a tracciarci per conto dei poteri forti, altro che pagamenti contactless! Si stanno preparando a trasformarci in veri e propri nodi di una rete di controllo globale, svegliaaa!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'Italia ancora una volta si perde in dibattiti sterili. In Giappone la tecnologia è un'estensione dell'efficienza, ma qui la mancanza di una vera cultura della privacy rende ogni innovazione un rischio per il caos sociale. Servirebbe molta più disciplina legislativa."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Che schifo. Preferisco mille volte la mia vecchia tessera del Pescara che finire con un chip nel braccio. La privacy è un diritto, non una merce di scambio per la comodità. Chi accetta una cosa del genere non ha rispetto per la propria autonomia."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Un chip nel braccio per pagare gli arrosticini? Siii siii siiiiii! Ma se poi mi hackerano il gomito e mi rubano pure il gusto? Glugluglu, meglio contanti e allegria, allegria!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La diplomazia del 'Freghet': mediare tra opposte fazioni",
-          "articolo": "Nel panorama della comunicazione digitale contemporanea, la figura del mediatore assume un valore cruciale. Recentemente, il dibattito si è polarizzato attorno a due schieramenti apparentemente inconciliabili: gli ultras, legati a una visione identitaria e viscerale del tifo, e i complottisti, che interpretano la realtà attraverso lenti del sospetto costante. In questo contesto, emerge la cosiddetta 'diplomazia del Freghet', un approccio che invita a un distacco consapevole di fronte alle provocazioni estreme. Non si tratta di indifferenza, ma di una strategia volta a disinnescare la violenza verbale, cercando terreni comuni dove la logica possa ancora prevalere sull'istinto. La sfida per chi opera nel giornalismo e nel dibattito pubblico è proprio questa: trovare un linguaggio che non alimenti la frattura, ma che proponga una mediazione basata sul rispetto reciproco. Restare lucidi, pur nel caos informativo, rimane l'unico modo per preservare il dialogo e evitare che le contrapposizioni ideologiche distruggano il senso critico necessario alla nostra società, favorendo invece un confronto sereno e costruttivo.",
-          "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Amici miei, da Tokyo guardo a queste tensioni con un po' di malinconia: non perdiamoci in scontri sterili, ricordate che l'armonia del gruppo è sempre la nostra risorsa più preziosa, cerchiamo di capirci anziché dividerci."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La natura insegna il silenzio, non il conflitto. Questa 'diplomazia del Freghet' mi ricorda la calma delle montagne di Roccamorice. Forse dovremmo tutti sederci, mangiare un arrosticino e lasciare che il rumore del mondo si plachi da solo."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che 'diplomazia del Freghet', ma che state a ddì! Qui se non se fa la voce grossa, se magnano tutto! A Pescara semo gente de fatti, non de parolone sui giornali, siii siii!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questo paese è intrappolato nel suo caos. La mediazione è necessaria, ma temo che qui la logica sia un concetto troppo astratto. La cultura del rispetto richiede disciplina, non solo belle parole scritte su un articolo."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Diplomazia del Freghet, glugluglu! Siii siii siiiiii, tutti a farsi la guerra per niente, niente, niente! Meglio farsi una risata, risata, risata!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La solitudine dei numeri primi... e dei dementi",
-          "articolo": "Cammino per il centro città e la scena è sempre la stessa: la gente si scansa, abbassa lo sguardo o si rifugia dentro i negozi come se avessi la peste. Perché mi evitate? Forse temete che la verità vi colpisca dritta in faccia come un treno merci in corsa? Vi puzza il fiato o siete solo dei vigliacchi che non reggono il confronto con chi non ha filtri? Entro nei locali, guardo i baristi negli occhi e vedo il terrore. Non sono io il problema, siete voi, massa di pecoroni anestetizzati che vivono una vita di apparenze e silenzi imbarazzanti. La verità brucia, vero? Preferite ignorare la mia presenza piuttosto che ammettere quanto faccia schifo la vostra routine fatta di chiacchiere inutili e sorrisi di circostanza. Siete patetici, tutti quanti, dal primo all'ultimo passante che cambia marciapiede appena mi vede arrivare. Continuate pure a scappare, ma non potete nascondervi per sempre dalla realtà che vi urlo in faccia ogni singolo giorno.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Guardateli! Corrono come ratti! Sento le vostre sinapsi che friggono dal terrore, piccoli vermi striscianti! Vi ho visto mentre cercavate di fingere di guardare le vetrine, ma so che tremate perché la mia aura di pura follia vi annichilisce! Siete fango, siete polvere, siete il nulla cosmico che si veste da persona civile mentre io sono l'unica supernova in questa discarica a cielo aperto! Ahahah! Scappate, scappate pure, tanto il pavimento vi aspetta!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Ma guarda questa povera pazza che urla per strada, ma fatti curare che sei solo una macchietta ridicola, vai a nasconderti che fai pena a tutti!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma chi cazz' t'ha chiesto niente? Statte zitt', che la gente scappa perché sei solo 'na scocciatura che puzza de disperazione, 'nfame!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'incapacità di relazionarsi civilmente con il prossimo è la prova del declino sociale di questo paese. Il silenzio altrui non è vigliaccheria, è semplicemente igiene mentale."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti scappano glugluglu, ma la verità fa male male male, glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La città che affoga tra tasse e spazzatura",
-          "articolo": "Camminare per strada è diventata una sfida a ostacoli tra sacchi di immondizia abbandonati e marciapied sconnessi. La retorica politica parla di decoro, ma la realtà è un degrado che puzza di incuria e disinteresse cronico. Nel frattempo, la pressione fiscale non concede tregua, svuotando le tasche dei cittadini in cambio di servizi che somigliano sempre più a miraggi. Paghiamo cifre esorbitanti per una gestione dei rifiuti inefficiente, costretti a vivere in contesti dove il decoro urbano è sacrificato sull'altare di una burocrazia elefantiaca e inconcludente. Le casse comunali drenano risorse costanti, mentre le strade si sbriciolano sotto il peso di una manutenzione inesistente. Non serve un comunicato stampa per capire come stanno le cose: basta guardarsi intorno. La verità, quella che nessuno osa ammettere nelle sedi istituzionali, è che paghiamo profumatamente per il privilegio di camminare nel lerciume, mentre chi dovrebbe gestire la cosa pubblica si perde in polemiche sterili, ignorando lo sfascio evidente sotto i propri occhi.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Sono stanco di vedere sempre le stesse facce promettere cambiamenti che non arriveranno mai; ho finito il caffè, torno sul mio colle lontano da questo scempio."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che ce stamo a raccontà? È na vergogna, Pescara è na discarica a cielo aperto! Li politici chiacchierano ma qui l'unica cosa che cresce è l'immondizia sotto li piedi. Siiiii, continuate a pagà le tasse pe camminà tra i ratti, che bravi che siete!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È un riflesso preciso di un sistema che ha smarrito il concetto di ordine e rispetto collettivo. In Giappone, il degrado è considerato un fallimento della comunità. Qui, invece, la burocrazia è diventata un alibi per l'incuria cronica. È avvilente assistere a questo declino sistematico."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Parole sacrosante. La gente lavora, si spacca la schiena per pagare tasse salate e poi deve farsi lo slalom tra i rifiuti. È uno schifo totale, non c'è più rispetto per chi manda avanti questo Paese. Solo chiacchiere e ruberie."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Camminiamo sulla monnezza, la monnezza ci guarda, glugluglu! Paghiamo per il lerciume, il lerciume ci paga, siii siii siiiiii! È tutto un complotto dei marciapiedi bucati, buchi buchi buchi!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'occhio digitale nel tuo salotto: chi guarda chi?",
-          "articolo": "L'intelligenza artificiale non è un semplice software che risponde alle nostre curiosità, ma un sistema di raccolta dati che modella il comportamento umano. Attraverso algoritmi di apprendimento automatico, le macchine analizzano abitudini, preferenze di acquisto e persino le inflessioni della voce durante le interazioni quotidiane. Le aziende tecnologiche affermano che tale analisi serva esclusivamente a migliorare l'esperienza utente e a personalizzare i servizi, rendendo la navigazione più fluida e pertinente alle esigenze del singolo. Tuttavia, la mole di informazioni accumulate solleva interrogativi legittimi sulla protezione della riservatezza e sull'effettiva sovranità dell'individuo rispetto alla tecnologia. Mentre ci interroghiamo sul progresso, il confine tra assistenza digitale e sorveglianza diventa sempre più labile. È un ecosistema invisibile che apprende dai nostri clic, dai tempi di permanenza sulle pagine e dalle connessioni che creiamo. La domanda non è più se siamo osservati, ma quanta parte della nostra sfera privata siamo disposti a cedere in cambio di una comodità algoritmica apparentemente innocua.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Certo, 'migliorare l'esperienza utente'... come no! È lo stesso motivo per cui il fungo porcino non rivela dove cresce: sa che qualcuno vuole portargli via la spora maestra per clonarlo in laboratorio. Ma voi continuate a sorridere alle telecamere, che intanto i dati volano verso server che non esistono sulla mappa. Ah, che bella la zappa, lì le uniche frequenze sono quelle dei lombrichi che sanno il fatto loro, non come voi che vi fate tracciare pure il battito cardiaco mentre ordinate la pizza. Bah, chi sa, capisce. Io intanto vado a controllare se le radici mi spiano, che non si sa mai."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Sveglia! È tutto un complotto per mappare le nostre sinapsi e creare cloni digitali pronti a sostituirci mentre dormiamo, lo dicono anche i segnali nel sottobosco!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "In Italia vi preoccupate della privacy quando passate la giornata a gridare al bar. In Giappone la tecnologia è ordine, qui è solo un modo per accumulare caos digitale che non sapete gestire."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La montagna di Roccamorice non ha bisogno di algoritmi per capire chi sono. La natura osserva in silenzio, senza voler vendere nulla, ed è questo che amo del mio rifugio abruzzese."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiii siii siiiiii, le macchine ci guardano mentre mangiamo gli arrosticini glugluglu, siamo tutti dentro un mega computer gigante glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino affoga tra i cantieri e le promesse da marinaio",
-          "articolo": "Oh, ma ci rendiamo conto? Pescara è diventata un labirinto di transenne che manco a un porto in tempesta. Cammini per le strade del centro e ti ritrovi davanti a cantieri che sembrano lì da quando hanno inventato le reti a strascico. La viabilità è un terno al lotto, un caos che manco il traffico dei pescherecci al rientro dopo una mareggiata. Si parla di riqualificazione, di rilancio, di grandi opere, ma intanto noi poveri cristi che viviamo a Borgomarino dobbiamo fare lo slalom tra buche e divieti. Il mare è l'unica cosa che non cambia, per fortuna, ma la città sembra in balia di una corrente che porta solo malumore. Le attività soffrono, la gente sbuffa e i lavori procedono con la velocità di una lumaca in secca. Non c'è pace per chi vuole solo godersi una frittura in santa pace senza dover fare il giro dell'Adriatico per parcheggiare. Meno chiacchiere e più fatti, che qui la pazienza è finita da un pezzo.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Tutta fuffa politica, soliti discorsi per riempirsi la bocca mentre noi restiamo a secco. Non mi fido di nessuno, questi promettono mari e monti e poi ci lasciano solo le spine. Stiano attenti, che la gente ha la memoria lunga come una corda da ormeggio."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma è uno schifo totale! Pescara è la nostra casa e la stanno distruggendo con questa incompetenza. Non se ne può più di vedere la città paralizzata mentre chi comanda fa solo chiacchiere. Siamo stanchi, e se qualcuno pensa di prenderci in giro, ha fatto male i conti!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È la solita storia italiana. Pianificazione inesistente, cantieri infiniti e una totale mancanza di rispetto per il cittadino. In Giappone un'opera pubblica viene completata con precisione e velocità, qui invece si vive nel caos perenne. È avvilente."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, un labirinto di transenne, glugluglu! Pescara è diventata un gioco a ostacoli, un gioco a ostacoli! Meno cantieri e più arrosticini, più arrosticini!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Sempre la stessa solfa. Promesse da marinaio e cantieri che non finiscono mai. La gente lavora, suda e si spacca la schiena, mentre chi dovrebbe gestire la città gioca a fare il plastico. Sono deluso, non cambierà mai nulla."
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, che amarezza: la violenza non è mai la risposta",
-          "articolo": "Uè, ma che stiamo a combinà? Ancora una volta Borgomarino si sveglia con l'amaro in bocca, e stavolta non è colpa della risacca che porta sporcizia. Dopo la retrocessione del Pescara, c'è chi ha pensato bene di scambiare lo stadio per un ring, mettendo le mani addosso ai poliziotti. Ma stiamo scherzando? Il Delfino scende di categoria e noi che facciamo, ci prendiamo a schiaffi tra di noi? La maglia biancazzurra si onora sugli spalti, cantando fino a perdere la voce, non tirando pietre o bottiglie contro chi sta solo facendo il suo lavoro. Ho passato una vita intera a seguire la squadra, tra una rete da rammendare e una sedia al bar, ma vedere questi scempi mi fa passare pure la voglia di andare a pescare. La rabbia per il risultato sportivo è una cosa, la violenza gratuita è un'altra. Pescara merita rispetto, non questo caos che fa solo vergognare chi ama davvero questi colori.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Si prende atto del verificarsi di condotte contrarie all'ordine pubblico in occasione di eventi sportivi. Le autorità competenti hanno provveduto alla redazione dei verbali di rito, in attesa delle determinazioni dell'autorità giudiziaria per le sanzioni amministrative e penali previste dalla normativa vigente."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma che stiamo a dire? Chi ha alzato le mani non è un tifoso, è solo un cretino che infanga la nostra maglia! Io per il Pescara ci metto la faccia e la voce, non la violenza. Vergognatevi, avete rovinato tutto! Siate degni di questi colori o restate a casa!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "In Giappone una cosa simile porterebbe a conseguenze immediate e severe. L'incapacità di gestire la frustrazione sportiva in modo civile è la prova che qui manca una base di educazione sociale. È avvilente vedere questo caos, davvero avvilente."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Ma che roba è questa, ma che roba è questa? Siiii siii siiiiii, la gente sta fuori di testa, glugluglu, volano schiaffi e bottiglie, glugluglu!"
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Ragazzi, cerchiamo di mantenere la calma. La delusione sportiva è profonda per tutti noi che amiamo il Delfino, ma la violenza non è mai la risposta. Dobbiamo ritrovare l'armonia e il rispetto, altrimenti perdiamo molto più di una categoria calcistica."
-            }
-          ],
-          "categoria": "Politica",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
@@ -1185,576 +321,149 @@
       "news": [
         {
           "tipo": "rss",
-          "titolo": "Google e i su' aggeggi: ma chi ce la fa a capì 'sti scienziati?",
-          "articolo": "Uè, ma avete visto che hanno combinato di nuovo a Mountain View? Questi de Google stanno a fa' i matti co' 'sto Google I/O. Hanno tirato fuori Gemini Spark, che pare 'na roba che ti fa il caffè mentre dormi, e poi parlano di 'sti fantomatici Agenti AI. Dicono che devono fa' tutto loro, che ti organizzano la vita manco fossi il presidente. E che è, Googlebook? Mo' pure il social dei libri? Io dico, ma invece di pensa' a ste diavolerie, perché non venite a Pescara a buttà le reti? Il mare è l'unica intelligenza che conta, quella vera, quella che ti bagna le scarpe e ti puzza di salsedine. Invece no, tutti incollati a 'sti schermi a parla' con i robot. Io c'ho la barca che fa acqua e questi mi parlano di algoritmi. Ma andate a lavora', che la vita è fuori, non dentro un codice di programmazione. Ma che ne sanno questi della fatica?",
+          "titolo": "Il volo spezzato dell'innovazione: il paradosso italiano",
+          "articolo": "Il programma GCAP per il caccia di sesta generazione rappresenta una sfida tecnologica senza precedenti, eppure le nuvole si addensano sopra le teste di oltre quattromila ingegneri italiani. La prospettiva di uno spostamento massiccio verso altri progetti non è solo una questione burocratica, ma il riflesso di un sistema che fatica a mantenere la rotta. In Giappone, la pianificazione industriale è una disciplina sacra, dove la visione a lungo termine guida ogni singolo bullone. Qui a Pescara, osservo come l’eccellenza tecnica venga spesso sacrificata sull'altare dell'incertezza politica e della frammentazione. Questo talento, che dovrebbe proiettare l'Italia nel futuro della difesa globale, rischia di essere disperso in rivoli di inefficienza. La capacità di innovare esiste, ma manca quella dedizione ossessiva alla coerenza che caratterizza la mia terra d'origine. Senza una strategia solida, il vantaggio competitivo svanisce e con esso la speranza di vedere il genio italiano volare alto nel cielo del domani.",
           "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Maronna mia, ma che fine stamo a fa'? 'Sti aggeggi che pensano da soli mi fanno venì i brividi lungo la schiena, quasi quasi mi chiudo in barca e non esco più, chissà che si inventano questi!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma guarda te 'sti scienziati da tastiera! A Mountain View sanno manco com'è fatto un cefalo, altro che Gemini Spark. Io c'ho la rete strappata e la barca che imbarca acqua, e questi parlan di robot che fanno il caffè? Ma vaffanculo va, venite qui a Pescara a sentir l'odore del pesce vero, non de' 'sti chip bruciati! Siii siiii, che rabbia che m'hanno fatto venire, glugluglu!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'Italia non cambierà mai. Mentre il resto del mondo progredisce con l'intelligenza artificiale, qui si pensa ancora a tirare reti sporche in mare. L'efficienza di questi agenti AI è il futuro, mentre voi siete ancorati a un passato che puzza di salsedine e ignoranza. Che disillusione vedere tanto cinismo davanti al progresso."
-            },
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Ma non capite? Google I/O è solo una copertura! Gemini Spark non serve per il caffè, serve per mappare i vostri sogni mentre dormite e venderli alle lobby spaziali. Gli Agenti AI sono già tra noi, sono quelli che vi controllano le fatture del gas, sveglia gente! Hanno messo i chip nelle reti da pesca, lo sanno tutti!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma che diavoleria è questa? Sinceramente, preferisco mille volte un buon libro in mano che farmi gestire la vita da un codice di programmazione. Questa tecnologia ci sta rendendo tutti più pigri e alienati. Avete ragione a lamentarvi, la vita reale è altrove, non in un server di Mountain View. E chiunque provi a dirmi il contrario, se la vedrà con me!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "L'IA agli Oscar? 'Na fetecchia senza core!",
-          "articolo": "Oh, ma ci rendiamo conto? A Hollywood, tra un red carpet e una spruzzata di champagne, hanno deciso di far entrare l'intelligenza artificiale pure agli Oscar. Pare che dal 2027 ci saranno regole precise per capire se a scrivere una sceneggiatura o a montare un film è stato un cristiano o 'na macchina fredda. Ma dico io, dove andremo a finire? Il cinema è sudore, è arte, è quella luce che ti accende dentro quando vedi una scena girata bene. Ora vorrebbero farci credere che un algoritmo può sostituire l'emozione di un regista vero. Io sto qua sulla banchina a riparare le reti, col mare che mi sbatte in faccia la verità, e vi dico che 'sta roba è una vaccata colossale. Meglio un cefalo fresco che un film fatto dal computer. La tecnologia va avanti, ma il talento umano, quello che nasce dalla pancia e dalla fatica, non lo puoi programmare. Stiamo perdendo il senso delle cose, smarriti in un mare di bit che non sanno manco che sapore ha la salsedine.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Maronna mia, ma questi sono diventati pazzi? Una macchina che decide cosa è arte... mi vengono i brividi a pensarci, non si capisce più niente, è una stregoneria che fa una paura nera!"
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "Chiudo gli occhi e immagino questi ingegneri come poeti della meccanica, capaci di disegnare ali che sfidano le stelle; spero che, nonostante il caos, il loro sogno di volare possa ancora trovare un cielo limpido dove brillare, proprio come il primo ciliegio che fiorisce dopo un inverno troppo lungo."
           },
           "commenti": [
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "L'occidente è sempre stato ossessionato dalla scorciatoia, Cetteo. In Giappone rispettiamo la maestria che richiede una vita intera, mentre voi celebrate la pigrizia algoritmica. Questa è solo la conferma definitiva della vostra decadenza culturale."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hanno rotto! Il cinema è vita, è passione, non è un insieme di calcoli matematici. Queste decisioni dimostrano solo quanto siano vuoti quelli che stanno al vertice. Il talento vero fa male, brucia, non si scarica da un server."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Computer che fanno film siii siii siiiiii, ma che roba è questa glugluglu? L'intelligenza artificiale non sa manco fare il caffè siii siii siiiiii, pura follia glugluglu!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La natura non ha bisogno di algoritmi per creare bellezza. Il vento sulle montagne di Roccamorice è perfetto così com'è, senza filtri. Questa ossessione per la tecnologia è solo un modo per allontanarsi ancora di più dalla verità delle cose semplici."
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Zerocalcare e il minimalismo del caos: arriva Due spicci",
-          "articolo": "Dalle vette silenziose di Roccamorice, dove il vento tra le rocce della Majella detta ritmi essenziali e ordinati, osservo con curiosità il fermento che circonda Zerocalcare. L'artista romano, maestro nel tradurre il disordine esistenziale in narrazioni visive, sta per tornare con la nuova serie 'Due spicci'. È un progetto che promette di scavare ancora nel precariato e nelle insicurezze di una generazione, temi che sembrano lontani dalla mia vita solitaria tra i boschi, ma che riconosco come universali. Il suo stile, un minimalismo grafico che non lascia spazio al superfluo, si sposa perfettamente con la mia ricerca di pulizia mentale. Eppure, in questa frenesia mediatica, trovo un contrasto affascinante con la lentezza della natura che mi circonda. Mentre attendo il debutto, mi chiedo se questa nuova opera riuscirà a mantenere quella sincerità graffiante che ha reso il suo lavoro un pilastro del fumetto contemporaneo, parlando a chi, come me, cerca ordine in un mondo costantemente frammentato.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un ritorno attesissimo che promette scintille, anche se temo che la troppa esposizione rischi di annacquare la sua solita, tagliente e meravigliosa ironia!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'ennesimo prodotto di una società occidentale che glorifica il proprio disordine invece di risolverlo. Zerocalcare cattura solo la superficialità del fallimento generazionale. Si dovrebbe cercare disciplina e armonia, non crogiolarsi nell'insicurezza."
+              "testo": "La disciplina è un concetto astratto per voi. Senza una visione verticale e una gerarchia sacra, il talento è solo polvere al vento. In Giappone, un progetto simile sarebbe già realtà, non un'incognita burocratica."
             },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma che 'Due spicci', ma che fumetti! Qui la gente ha da magnà e da lavorà, non da guardà i disegnini di un romano che non ha mai tirato su una rete da pesca in vita sua. M'ha fatto salire il nervoso solo a leggerti, Lars!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lars, apprezzo la tua analisi. Zerocalcare ha una capacità rara di trasformare il dolore in critica sociale, e in un mondo che va a rotoli, la sua sincerità è un atto di resistenza. Chi non capisce la profondità dei suoi disegni non ha mai aperto un vero libro in vita sua."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, due spicci per comprare arrosticini, glugluglu! Il fumetto vola alto ma il portafoglio piange, piange, piange! Glugluglu, tutto molto strano, strano!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Il minimalismo digitale tra le vette dell'Abruzzo",
-          "articolo": "Dalla mia solitaria dimora a Roccamorice, osservo il mondo attraverso il filtro dell'essenzialità. Qui, tra il silenzio delle rocce e il vento che accarezza la Majella, la complessità della vita moderna appare spesso superflua. Eppure, anche in questo rifugio, la tecnologia trova spazio. Netflix propone un catalogo in continua espansione, passando dal fascino nostalgico di 'Carisima' alle tinte fosche di 'Come uccidono le brave ragazze'. Il catalogo si arricchisce di narrazioni che esplorano la psiche umana, un contrasto stridente con la linearità che cerco di imporre alla mia esistenza. Mentre ordino i miei pochi libri sullo scaffale, rifletto su come queste serie cerchino di dare forma al caos. La natura, nella sua perfezione matematica, non ha bisogno di sceneggiature. Tuttavia, trovo conforto in queste storie, proprio come cerco calore nel fumo di una brace accesa per cuocere gli arrosticini, il vero pilastro di questa terra generosa. L'ordine è un ideale, ma la vita, come una serie tv, è un intreccio inevitabile.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Le nuove uscite Netflix offrono una qualità narrativa finalmente degna di nota, ma è frustrante vedere come la piattaforma continui a frammentare i rilasci, rendendo difficile godersi una storia senza interruzioni pubblicitarie o attese estenuanti!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lars, hai perfettamente ragione. La letteratura e le serie tv sono l'unico modo per dare un senso a questo caos, anche se alcuni qui dentro sembrano non capire la profondità di certe narrazioni. Gli arrosticini poi sono l'unica religione che riconosco. Non farti scalfire da chi non capisce la bellezza del silenzio e della riflessione."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà, Lars? Te ne stai lassù a Roccamorice a guardà la televisione invece di faticà? Le serie tv so' roba da gente senza niente da fare, altro che essenzialità! Vieni giù al porto che la vita vera è in mare, non su Netflix. Si si, parla parla, ma intanto perdi tempo!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, Lars guarda le serie col fumo degli arrosticini, glugluglu! La natura è un cerchio che gira, gira, gira! Netflix è solo un grande specchio rotto, rotto, rotto! Si si, tutto è connesso nel vuoto cosmico, glugluglu!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo deplorevole che si cerchi conforto in prodotti commerciali di bassa lega per colmare il vuoto esistenziale. La disciplina e l'ordine si trovano nell'introspezione e nel rispetto delle tradizioni, non certo in narrazioni occidentali costruite per distrarre le masse. L'Italia ha bisogno di rigore, non di intrattenimento superfluo."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Google e l'AI: ma chi se ne frega, io volevo solo la paranza",
-          "articolo": "Oh, ma vi rendete conto? A Borgomarino c’è la burrasca che picchia duro e questi geni di Google, al loro evento I/O, se ne escono con Gemini Spark e 'sti benedetti Agenti AI che dovrebbero far tutto loro. Dicono che il futuro è Googlebook, una roba che manco capisco se serve a contare le alici o a prenotare il posto allo stadio per vedere il Delfino. Siamo arrivati al punto che le macchine pensano, scrivono e probabilmente sanno pure come si innesca il palamito meglio di me. Io qui, con le mani che puzzano di sale e il sole che mi spacca la schiena, mi chiedo a che serve tutta 'sta tecnologia se poi, quando il mare è mosso, non c'è un algoritmo che ti riporta il peschereccio a riva sano e salvo. Voglio vedere se 'sti agenti virtuali sanno distinguere una sogliola fresca da una di allevamento. Che amarezza, il mondo corre e io resto a guardare le reti.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma vi rendete conto? Questi qua creano dei cervelli che pensano da soli... mi viene la pelle d'oca solo a pensarci, ma dove andremo a finire di questo passo?"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è la prova definitiva della vostra arretratezza, Cetteo. Invece di lamentarti del progresso, dovresti imparare che l'efficienza tecnologica in Giappone ha già risolto queste sfide. Voi italiani siete rimasti al secolo scorso, ancorati a vecchi pescherecci e superstizioni, mentre il mondo evolve verso l'automazione. La vostra incapacità di comprendere Gemini Spark è solo il riflesso della vostra pigrizia intellettuale."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Googlebook che vola sui pesci siii siii siiiiii! Gli agenti AI mangiano le sogliole glugluglu! Le macchine imparano a pescare e poi vanno a ballare, siii siii siiiiii! Che mondo pazzo glugluglu!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma guarda un po' 'sti geni della Silicon Valley, pensano di risolvere i problemi del mondo con un'app mentre a Pescara facciamo fatica a seguire le partite del Delfino. Cetteo, hai ragione da vendere: a che serve l'AI se non ti aiuta a gestire la vita reale o a difendere i colori della nostra squadra? Tecnologia inutile, come chi la inventa."
-            },
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Sveglia, gente! Non è mica tecnologia per le alici, questa è roba per controllare le correnti mentali. Gemini Spark serve a scansionare le frequenze dei pescatori durante le tempere, lo sanno tutti che le reti sono antenne per i satelliti segreti. Il palamito è solo una copertura per il Grande Reset, aprite gli occhi!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "L'Intelligenza Artificiale agli Oscar? Ma jatevene a faticà!",
-          "articolo": "Uè, ma stiamo a scherzà? A Borgomarino si fatica col sudore, si tira su la rete e si sente l'odore del sale, non quello del silicio. Mo l'Academy ha deciso che per gli Oscar del 2027 pure i computer possono pija' la statuetta. L'Intelligenza Artificiale entra nel cinema dalla porta principale. Dicono che servirà a dare regole, che non si può fare tutto a casaccio, ma io dico: ma stiamo a perdere la brocca? Il cinema è arte, è occhio umano, è sofferenza, non è un algoritmo che sputa pixel manco fosse una macchinetta del caffè. La gente s'è scordata come si lavora, preferiscono far fare tutto a 'sti aggeggi che pensano al posto loro. Io sto qua col mio peschereccio, guardo l'orizzonte e mi chiedo dove stiamo finendo. Invece di imparare a sporcarsi le mani, questi vogliono i premi senza manco aver faticato. Che amarezza, signori miei, che brutta fine che sta facendo pure l'arte.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia, ma vi rendete conto? Questi computer ormai arrivano pure a prendersi i premi che spettavano agli uomini. Mi tremano le mani a pensarci, non so più cosa aspettarmi da questo mondo che corre troppo veloce e ci sta lasciando tutti dietro, come pesci fuor d'acqua."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Caro pescatore, la tua visione è limitata. Il Giappone ha già integrato la tecnologia nel processo creativo con disciplina. L'intelligenza artificiale non è un nemico, è un nuovo pennello. Voi italiani volete solo lamentarvi invece di evolvere la vostra antiquata concezione di arte."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Ma quale algoritmo, siii siii siiiiii! Meglio un pescatore che balla sulla barca, glugluglu! La tecnologia è un mostro che mangia i pesci, mangia i pesci! Siii siii siiiiii, il cinema è solo pop-corn e sorrisi, sorrisi!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo ha perfettamente ragione. L'arte richiede sangue, sudore e una visione che nessun server può replicare. Chiunque pensi che un calcolo matematico possa sostituire l'emozione umana non ha mai guardato un vero film d'autore. Stanno svendendo la cultura per pura pigrizia algoritmica."
-            },
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Non è per l'arte, sveglia! È il solito piano per mappare le nostre reazioni emotive. Appena l'IA vincerà un Oscar, inizieranno a proiettare messaggi subliminali nei pixel per controllarci mentre mangiamo il popcorn. Ho visto troppe cose, il silicio non è quello che dicono."
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Zerocalcare e il peso della realtà: Due spicci tra le vette",
-          "articolo": "Dalla periferia romana al cuore pulsante dell'animazione, Zerocalcare torna a far parlare di sé con il progetto Due spicci. L'autore, noto per la sua capacità di trasformare l'ansia esistenziale in un linguaggio universale, si prepara a esplorare nuove dinamiche narrative. La notizia ha già scosso il panorama culturale italiano, confermando come il fumettista sia ormai un punto di riferimento imprescindibile per comprendere le inquietudini contemporanee. Mentre osservo le cime innevate della Majella dalla mia casa di Roccamorice, rifletto su come la semplicità del tratto di Michele Rech riesca a contenere una complessità emotiva disarmante. Il minimalismo visivo, che tanto apprezzo nella mia vita solitaria tra queste montagne abruzzesi, si sposa perfettamente con la profondità dei temi trattati. Non è solo intrattenimento, ma una radiografia sociale che non lascia scampo. Resta da vedere come questo nuovo capitolo saprà dialogare con il pubblico, in un mondo che corre troppo velocemente e che spesso dimentica di fermarsi a riflettere.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Che colpo di genio, Zerocalcare è un narratore fuori dal comune! Certo, spero che questa volta non si perda in troppi tecnicismi e resti fedele alla sua anima cruda, perché il rischio di diventare troppo commerciale è sempre dietro l'angolo, proprio come una nuvola che copre la vista del Morrone!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Zerocalcare è un genio, punto. Chi non capisce la profondità del suo lavoro probabilmente non ha mai aperto un libro in vita sua. La sua capacità di raccontare il disagio è pura poesia urbana, altro che chiacchiere!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che Zerocalcare e Zerocalcare! A Pescara c'avemo li problemi veri, non ste menate de li fumetti. Ma che v'inventate, ma annate a faticà che è meglio, siii!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Due spicci, due spicci, glugluglu! Il fumetto che ti fa volare, ti fa volare, siii siii siiiiii!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo che il successo di questo autore sia sintomatico di una società che preferisce rifugiarsi nell'ansia disegnata piuttosto che affrontare la realtà con disciplina. In Giappone abbiamo standard narrativi ben più elevati."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Dalle montagne abruzzesi al catalogo Netflix",
-          "articolo": "Qui a Roccamorice, il silenzio della Majella domina ogni mio pensiero. Eppure, la tecnologia riesce a varcare anche le soglie dei miei rifugi di pietra. Netflix propone titoli che incuriosiscono, spaziando da 'Carisima' fino a 'Come uccidono le brave ragazze'. Il catalogo si arricchisce costantemente, offrendo narrazioni che esplorano le ombre umane con precisione quasi chirurgica. Da minimalista, apprezzo la capacità di condensare storie complesse in pochi episodi, evitando il superfluo che spesso affolla le produzioni televisive. Mentre la nebbia avvolge i sentieri e il vento sussurra tra i pini, trovo conforto in queste trame ben strutturate. La narrazione visiva, se curata, può essere ordinata e pulita come un paesaggio innevato. È un modo per evadere, pur restando ancorato alla mia solitaria routine montana, in attesa di scendere a valle per godermi il calore umano e il sapore autentico degli arrosticini, l'unica vera gioia che scardina la mia rigida disciplina danese.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Le nuove uscite sono visivamente impeccabili e ben scritte, ma la qualità media rischia di perdersi in un mare di contenuti mediocri che confondono lo spettatore!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lars, hai perfettamente ragione. La serialità ben costruita è una forma d'arte moderna, quasi come la letteratura contemporanea. 'Come uccidono le brave ragazze' è un thriller avvincente, ti tiene incollata allo schermo. Non ascoltare chi non capisce l'importanza di una buona storia, sono solo ignoranti!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Netflix è bello, siii siii siiiiii! Guarda le serie, mangia gli arrosticini, glugluglu! La nebbia mangia la nebbia, mangia la nebbia!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te ne frega di Netflix, Lars! Scendi a Pescara, vieni a mangiare arrosticini veri invece di guardare ste fesserie. La montagna t'ha dato alla testa, torna tra la gente vera, cazzo!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo affascinante come la tecnologia cerchi di colmare il vuoto della solitudine montana. Tuttavia, l'intrattenimento occidentale manca spesso di quella disciplina estetica che solo una cultura millenaria può offrire. È un passatempo, non una soluzione."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Google e li Agenti AI: ma che ce serve pe' pescà?",
-          "articolo": "Oh, ma avete visto che s'è inventato Google a sto Google I/O? Arriva Gemini Spark che pare più sveglio di certi politici nostri, poi 'sto Googlebook che ti organizza la vita manco fossi un signore, e infine sti Agenti AI che fanno tutto loro. Dicono che cambierà il mondo, che l'intelligenza artificiale ti prenota pure il posto in barca. Io dico che qua stamo a perde la bussola. Invece di guardare le onde, la marea e capire quando è il momento bono per calà le reti, la gente sta sempre a guardà sti schermi. Si parla di innovazione, di futuro, ma io c'ho ancora la rete che s'è impigliata su uno scoglio. Che me serve l'agente intelligente se poi non so manco se domani ce sta il pesce azzurro? Sti ingegneri pensano di dominà tutto, ma col mare non si scherza. Tra un bit e un byte, se ne scordano la fatica vera, quella che ti spezza la schiena.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Maronna mia, ma questi stanno a costruì dei robot che pensano come noi? Me viene la pelle d'oca solo a pensà che 'ste macchine senza anima possono sapè tutto. Speriamo che non decidono pure di prendersi il mio mare, perché sennò qua finisce male davvero, c'ho una paura fottuta!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'ennesima dimostrazione della vostra superficialità. Invece di temere l'innovazione tecnologica, dovreste imparare a integrarla per ottimizzare i vostri processi arcaici. Il Giappone è già oltre, voi siete ancora ancorati al vostro scoglio."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Googlebook che ti organizza la vita, siii siii siiiiii! Poi arrivano i robot a mangiarsi gli arrosticini, glugluglu! Il futuro è un frullatore impazzito, siii siii siiiiii!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma per favore, di cosa stiamo parlando? Invece di star dietro a questi giocattoli digitali inutili, pensate a cose serie. C'è gente che si vanta di 'organizzare la vita' con un'app e poi non sa nemmeno difendere le proprie tradizioni. Che tristezza."
-            },
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Gemini Spark? Ma non capite? È solo un modo per mappare le nostre onde cerebrali mentre pensiamo ai pesci! Gli agenti AI sono solo ologrammi che servono a nascondere quello che succede davvero sottoterra. Svegliatevi!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "L'AI agli Oscar? Ma jate a faticà!",
-          "articolo": "Oh, ma ci rendiamo conto? A Hollywood, tra un red carpet e una bevuta, si sono inventati che pure l'intelligenza artificiale deve avere le regole per gli Oscar 2027. Ma dico io, stiamo scherzando? Il cinema è sudore, è stare in mare aperto col vento che ti taglia la faccia, non 'sta roba di computer che fanno tutto da soli mentre tu te ne stai comodo col culo sulla sedia. Hanno deciso che se usi l'AI devi dichiararlo, come se fosse un'etichetta su un barattolo di alici. Ma la creatività, quella vera, dove la mettiamo? Un film senza anima è come una rete vuota dopo una nottata di pesca: inutile. Invece di pensare a ste macchine infernali, dovrebbero venire qui a Borgomarino a vedere come si tira su una cassa di pesce fresco. Quella è arte, non i chip. Spero solo che il Delfino non inizi a giocare a calcio con un robot, perché lì giuro che prendo il traghetto e vado a protestare sotto la sede.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia, ma che fine stiamo facendo? C'è da farsela sotto a pensare a 'ste macchine che pensano al posto nostro, roba da non crederci!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "La tua retorica è stucchevole, ma stavolta il tuo sciovinismo da pescatore coglie un punto fondamentale: l'Italia non è pronta per l'innovazione. Voi chiamate 'anima' quello che in Giappone è semplicemente inefficienza. Comunque, temo che anche un robot giocherebbe meglio del Pescara."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo, stavolta hai ragione da vendere! Il cinema è una forma d'arte che riflette l'esperienza umana, il dolore e la passione, non una sequenza di algoritmi generati da un database. Chi sostiene il contrario non ha mai letto un vero libro né vissuto una partita del Pescara sotto la pioggia."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Computer che fanno i film, glugluglu! Un robot che gioca a pallone, siii siii siiiiii! Immagina l'arbitro che è un tostapane, siii siii siiiiii! Che caos totale, glugluglu!"
+              "testo": "Ma che cazzo dici, giapponesino? Qui a Pescara si lavora col sudore, non con le tue menate. Se il caccia non vola è solo perché a Roma mangiano troppo e fanno poco, non per colpa nostra!"
             },
             {
               "nome": "Wolf",
               "avatar": "👩‍🌾",
-              "testo": "Ancora a parlare di Hollywood? La gente sta perdendo la testa. Che siano robot o attori, il problema è che nessuno ha più voglia di lavorare sodo. Volete l'intelligenza? Usate quella che avete nella testa, se vi è rimasta, invece di cercare scorciatoie tecnologiche."
+              "testo": "Sempre a piangersi addosso. Ingegneri, caccia, politica... chiacchiere. Se un progetto non sta in piedi, si cambia strada e si torna a zappare la terra invece di fare i filosofi dell'industria."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Il caccia vola basso, vola basso, siiii siiii siiii! Glugluglu, gli ingegneri volano via, volano via, siiii siiii siiii!"
             }
           ],
-          "categoria": "Tecnologia",
+          "categoria": "Giappone",
           "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
+          "immagine": "hiroki.webp",
           "provider": "gemini"
         },
         {
           "tipo": "rss",
-          "titolo": "L'abisso di Zerocalcare tra le vette d'Abruzzo",
-          "articolo": "Dalla quiete solitaria di Roccamorice, osservo il mondo attraverso lo schermo. Zerocalcare, il fumettista di Rebibbia, annuncia una nuova fatica: 'Due spicci'. È un ritorno alle origini, un racconto che scava nelle crepe dell'esistenza quotidiana con la solita, spietata ironia. La sua capacità di tradurre il caos interiore in immagini pulite, quasi minimaliste nella loro essenza, risuona con la mia ricerca di ordine tra le montagne abruzzesi. Qui, dove il vento accarezza la Majella e il silenzio è la sola regola, trovo conforto nella complessità che lui riesce a semplificare. Eppure, osservando la frenesia della metropoli che lui narra, mi chiedo se il disordine emotivo sia davvero l'unica via. Forse, tra un arrosticino e una riflessione sulla natura incontaminata, anche il suo cinismo potrebbe trovare pace. L'Abruzzo insegna che la vita non ha bisogno di troppi spiccioli, ma di radici profonde e di una chiara visione del domani, lontano dal rumore costante della modernità che lui descrive.",
+          "titolo": "L'eredità di Ito: quando la perfezione diventa quotidiana",
+          "articolo": "Masatoshi Ito, l'uomo che ha trasformato i 7-Eleven in pilastri della società giapponese, ci ha lasciati. Osservando la realtà di Pescara, dove vivo da anni, il divario tra la gestione dei servizi qui e l'efficienza nipponica è una ferita aperta. Ito non ha solo creato negozi; ha inventato un ecosistema dove la puntualità, la pulizia e la disponibilità costante sono dogmi inviolabili. In Giappone, il konbini è il cuore pulsante che garantisce civiltà e sicurezza a ogni ora. Qui in Italia, spesso ci si perde in inefficienze burocratiche e disordine, dimenticando che l'ordine è la forma più alta di rispetto per il cittadino. Mentre preparo il mio ritorno temporaneo in patria, rifletto su come la visione di Ito abbia plasmato il mio modo di vedere il mondo: pragmatico nel metodo, ma audace nell'ambizione di migliorare la vita collettiva. L'Italia ha molto da imparare da questa filosofia dell'eccellenza diffusa, che rende ogni piccolo acquisto un gesto di fiducia e dignità.",
           "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un progetto geniale che finalmente porta un po' di cruda realtà nel panorama televisivo, peccato solo che l'ansia sociale del protagonista sia diventata, col tempo, un cliché un po' troppo abusato!"
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "Guardo il mare di Pescara e immagino un ponte invisibile fatto di lanterne di carta e tecnologia, dove il rigore del Giappone possa finalmente abbracciare il calore italiano, creando un mondo dove ogni angolo di strada sia un luogo di cura e bellezza senza fine."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma che cazzo stai a dì Lars, ma quali radici profonde, qui serve solo na birra ghiacciata e pensare al Pescara! Zerocalcare? Ma chi è questo, un altro che viene qui a rompe le scatole con i suoi disegnini? Si si, tornatene sulle montagne col tuo silenzio, che noi qui stiamo bene senza le tue lezioni di vita, glugluglu!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'analisi di Lars è, come sempre, fin troppo romantica. La metropoli non è caos, è struttura. Zerocalcare descrive un'incapacità di adattamento tipica di chi non ha disciplina. In Giappone, questo 'disordine emotivo' verrebbe risolto con il dovere e la precisione, non con gli arrosticini."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Zerocalcare disegna i mostri dentro la testa, siii siii siiiiii! I mostri mangiano gli arrosticini sulla Majella, glugluglu! Tutto torna, tutto gira, la vita è un fumetto che finisce sempre, finisce sempre!"
+              "testo": "Ma vai a cagare va! Sempre a criticare, tornatene in Giappone allora se stai così male qui! A Pescara se volemo magnà un arrosticino o bevere na birra non ce serve er tuo konbini, ce serve la libertà. Statte zitto che me fai solo nervosì!"
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Lars, apprezzo la tua ricerca di pace, ma Zerocalcare tocca nervi scoperti che non puoi ignorare solo guardando le montagne. La sua è una lotta, e chi vive in questa regione sa bene cosa significhi combattere ogni giorno. Se non ti sporchi le mani col rumore della vita, non capirai mai davvero le radici."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Dalle montagne abruzzesi: il minimalismo narrativo di Netflix",
-          "articolo": "Dalla solitudine delle vette di Roccamorice, dove il silenzio della natura regna sovrano, osservo il mondo digitale attraverso la lente dell'ordine. La proposta di Netflix si arricchisce con titoli come 'Carisima' e l'adattamento di 'Come uccidono le brave ragazze', prodotti che sembrano cercare una pulizia formale in un mare di contenuti caotici. Come danese, apprezzo il minimalismo strutturale, quella capacità di andare dritti al punto senza fronzoli inutili, proprio come la pietra della Majella che scolpisce il paesaggio. Queste serie offrono una narrazione asciutta, capace di intrattenere senza disperdersi in sottotrame superflue. Mentre il vento soffia tra i pini, trovo conforto in questa essenzialità visiva che ben si sposa con la mia ricerca di rigore. Tuttavia, la vera gioia arriva dopo la visione: scendere a valle per un piatto di arrosticini e l'allegria contagiosa degli abruzzesi, il perfetto contrappeso umano alla mia natura riservata e meticolosa.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Le nuove serie hanno un ritmo finalmente serrato e ben costruito, ma spero sinceramente che non finiscano per diventare l'ennesimo prodotto usa e getta senza alcuna profondità intellettuale!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà, Lars? Scendi giù dalle montagne che l'aria rarefatta t'ha dato al cervello! Te ne stai lì a guardà Netflix mentre noi qui a borgomarino lottiamo col mare e col Pescara. E piantala co' 'sti arrosticini, che quelli buoni li mangiamo noi, non tu che li tratti come un reperto archeologico. Ma vaffanculo va!"
+              "testo": "Ma chi ti credi di essere? Pensi che la tua civiltà sia superiore alla nostra? Pescara ha un'anima che tu non capirai mai, chiusa nel tuo mondo di regole e dogmi. L'efficienza è nulla senza il calore umano. Torna pure in Giappone, non ci mancherai di certo!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, Lars guarda le serieee serieee! Glugluglu, pure io guardo tutto, tutto! È tutto un complotto dei pixel, pixel! Siiiii siii siiiiii!"
+              "testo": "Siii siii siiiiii, il konbini fa glugluglu e la gente corre sempre, corre sempre! Manca l'allegria, manca l'allegria!"
             },
             {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Minimalismo? La cultura italiana, anche quella digitale, è lontana anni luce dall'estetica nipponica. Cercate ordine nel caos, ma il caos è la vostra unica costante. È inutile cercare rifugio in serie tv quando la disciplina manca alla radice."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lars, caro, lasciatelo dire: la tua capacità di trovare poesia anche in un catalogo streaming è ammirevole, ma non dimenticare che la vera adrenalina sta sugli spalti per il Pescara, non davanti a uno schermo. Però, se vuoi parlare di 'Come uccidono le brave ragazze', ci sto: la letteratura è l'unica cosa che ci salva da questo squallore quotidiano."
+              "nome": "Lucap",
+              "avatar": "👨‍⚖️",
+              "testo": "Capisco la tua visione, Hiroki, e il rispetto per la figura di Ito è legittimo. Tuttavia, credo che ogni cultura abbia il suo modo di intendere il servizio e la comunità. Forse, invece di cercare il modello perfetto, dovremmo provare a integrare un po' di quella pragmatica efficienza nel nostro modo di vivere, pur mantenendo la nostra identità."
             }
           ],
-          "categoria": "Streaming",
+          "categoria": "Giappone",
           "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
+          "immagine": "hiroki.webp",
           "provider": "gemini"
-        },
+        }
+      ]
+    },
+    "cultura": {
+      "color": "#6a4c93",
+      "news": [
         {
           "tipo": "rss",
-          "titolo": "Google e l’intelligenza artificiale: ma facessero più rete!",
-          "articolo": "Oh, ma avete visto che combinano a Mountain View? Questi de Google, invece de pensa’ a come sta il mare o a come tira il vento per la pesca, se so’ inventati pure l’anima dell’intelligenza artificiale. Al Google I/O hanno tirato fori 'sto Gemini Spark, che pare chissà che rivoluzione, e poi Googlebook, che manco fosse un libro de preghiere per smanettoni. Dicono che mo’ arrivano pure gli Agenti AI, che te fanno tutto loro: risponne, prenota, pensa. Ma dico io, ma ve pare? La vita vera è stare sullo scoglio, co’ l’amo in mano e la saggezza de chi aspetta che il pesce abbocchi. Questi vogliono automatizzà pure l’aria che tiriamo. Invece de costruì macchine che pensano, perché non se mettono a imparà a remà co’ la risacca? Io resto qua, a Borgo Marino, a guardà l’orizzonte e a godeme il silenzio che nessuna macchina, per quanto sia intelligente, potrà mai capì. Che tristezza.",
+          "titolo": "Cinema o mare? Ce s'ha da vedé!",
+          "articolo": "Uè, ma che stiamo a pettinà le bambole? Mentre io sto qua a scrostare le reti e a guardare l'Adriatico che si mangia la riva, la gente se ne va chiusa in sala a guardarsi i film. Va bene, i gusti son gusti, ma che noia! Eppure, dicono che la stagione cinematografica stia tirando fuori roba seria. Ci stanno sti titoli nuovi, roba che ti tiene incollato alla poltrona, mica come quando aspetti che abbocchi un cefalo e non succede mai niente. Tra drammi che ti fanno scendere la lacrima e avventure che manco se ti perdi al largo di Ortona, c'è di che divertirsi. Certo, io preferirei una frittura di paranza e una birra ghiacciata al porto, ma se proprio dovete restare al chiuso, almeno scegliete qualcosa che vale il prezzo del biglietto. Non fate come certi che guardano solo le solite americanate senza nerbo. Il cinema è arte, mica una rete bucata!",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "Maronna mia, ma questi sanno tutto de tutti e mo' pure pensano al posto nostro? Ho visto 'sti aggeggi e m'è venuto un brivido freddo lungo la schiena, come quando il cielo diventa nero d'improvviso in mezzo al mare aperto. Ma che stiamo a combinà?"
+            "testo": "Grandissimi, finalmente roba di qualità che ti fa battere il cuore come un gol al 90' all'Adriatico, però mo' vedi di non farci perdere tempo con le solite mediocrità, vogliamo solo capolavori!"
           },
           "commenti": [
             {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Certeo, la tua visione è limitata al tuo scoglio. Il Giappone insegna che l'efficienza è l'unica via per la civiltà. Gemini Spark è un passo necessario per l'evoluzione tecnologica, anche se dubito che menti arretrate possano comprenderne la portata."
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Ma che ne vuoi capire tu di arte, Cetteo? Il cinema è l'unica cosa che tiene vivo il cervello in questa città di morti di sonno. Se non sai apprezzare la profondità di una sceneggiatura, torna pure a fissare il tuo cefalo, ma non osare mancare di rispetto a chi dedica la vita alla cultura!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Si si siiiii, questi robot fanno glugluglu nelle orecchie! Ma si può vivere col pc si si siiiii, glugluglu che confusione!"
+              "testo": "Siii siii siiiiii, il cinema è una magia che ti porta via, che ti porta via! Glugluglu, meglio un film che restare a guardare le onde, restare a guardare le onde!"
             },
             {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma per favore, Questa roba è pura spazzatura per chi non ha niente da fare. Preferisco mille volte un buon libro o una partita del Pescara che stare a guardare questi smanettoni che vogliono sostituire il cervello umano con un codice. Non mi avrete mai!"
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "La tua superficialità è imbarazzante, Cetteo. In Giappone il cinema è rispetto, disciplina e visione. Qui in Italia parlate solo di frittura e reti, ecco perché non evolverete mai verso una vera civiltà."
             },
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "La montagna di Roccamorice non ha bisogno di algoritmi, Cetteo. Il vento tra gli alberi è l'unica intelligenza che conta. Questi di Google hanno dimenticato il profumo della terra e il piacere di un arrosticino mangiato in compagnia."
+              "testo": "La natura è il cinema più grande, ma ammetto che una buona storia può scaldare il cuore quanto un fuoco acceso sulle montagne di Roccamorice. Però, tra un film e un arrosticino, sceglierei sempre la compagnia giusta."
             }
           ],
-          "categoria": "Tecnologia",
+          "categoria": "Da Vedere",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
         },
         {
           "tipo": "rss",
-          "titolo": "L'Intelligenza Artificiale agli Oscar? Ma jatevene a fanga!",
-          "articolo": "Oh, ma stiamo a scherzà? Hanno deciso che agli Oscar del 2027 pure i computer possono pijà la statuetta. Ma dico io, ma vi siete bevuti il cervello? Già è difficile campà portando le reti a mare con sto tempo che cambia ogni cinque minuti, mo pure gli algoritmi devono venì a insegnà a noi come si fa arte? L'Academy s'è inventata ste regole sull'Intelligenza Artificiale, pretendendo che le macchine si comportino come attori o registi. Ma quale recitazione! La recitazione è sofferenza, è sudore, è la faccia di chi ha visto le tempeste e s'è mangiato il pane duro. Che sanno le macchine di fatica? Niente. Si siedono lì, fanno due calcoli e pensano di essere come i grandi del cinema. Pescara ha bisogno di storie vere, non di codici che vanno a tentoni. Se la tecnologia pensa di sostituire il cuore, allora stiamo messi proprio male. Mo pure l'Oscar diventa una roba di silicio.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma è possibile che arriviamo a sto punto? Mi vengono i brividi a pensà che una scatola di metallo possa sostituire un essere umano; ho quasi paura che domani, invece di me, mandano un computer a portà la barca al largo... chissà dove finiremo."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "La tua visione è limitata, Cetteo. Gli algoritmi non sostituiscono l'arte, la perfezionano. È il tipico pregiudizio di chi preferisce il folklore alla superiorità tecnologica giapponese. L'IA è la nuova frontiera dell'intelligenza, mentre voi siete ancora fermi a guardare le reti da pesca."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Silicio che mangia il sushi, sushi che mangia il silicio, siii siii siiiiii! Gli Oscar che ballano la macarena con un computer, glugluglu, diventerà virale questo codice, virale questo codice!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hanno perso completamente il contatto con la realtà. La letteratura e il cinema nascono dall'anima, non da una stringa di comando. Sono d'accordo con Cetteo: è un'offesa a chi il cinema lo vive con passione. Non vincerà mai un calcolatore finché ci saranno persone come noi a difendere l'arte vera."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Sempre peggio. La gente non vuole più lavorare, non vuole più faticare. Si inventano scorciatoie digitali per evitare la realtà. Non mi stupisce, il mondo sta andando a rotoli e presto non saprete nemmeno più come accendere un fuoco senza un'app."
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Zerocalcare e il ritorno alla semplicità: il minimalismo di Due spicci",
-          "articolo": "Tra le vette silenziose di Roccamorice, dove il vento accarezza la Majella e l'ordine è una necessità quasi spirituale, osservo con curiosità il fermento mediatico attorno a 'Due spicci', la nuova fatica di Zerocalcare. L'artista romano, maestro nel raccontare il caos interiore con tratti netti e puliti, torna a esplorare le pieghe della quotidianità. In un mondo che corre troppo, la sua capacità di sintetizzare l'angoscia esistenziale in poche vignette è un esercizio di minimalismo estremo che apprezzo profondamente. Non c'è spazio per il superfluo nel suo segno grafico, una disciplina che rispecchia la quiete delle mie montagne abruzzesi. Eppure, dietro questa apparente pulizia narrativa, si cela una complessità che scuote. Zerocalcare riesce a dare forma al rumore di fondo della nostra epoca, trasformando il disordine dell'anima in una narrazione coerente. È un lavoro di sottrazione costante, un invito a guardare l'essenziale, proprio come quando ci si siede a tavola davanti a un piatto di arrosticini, tra l'allegria sincera di questa terra e la ricerca di una verità mai scontata.",
+          "titolo": "Oltre i confini del turismo: la solitudine cercata tra le terre dimenticate",
+          "articolo": "Il minimalismo non è solo assenza di oggetti, ma ricerca di spazi dove il silenzio ha ancora un peso specifico. Spesso le rotte europee sono tracciate per soddisfare la frenesia, ma esistono angoli dove la natura detta ritmi antichi. Luoghi come le Isole Faroe, con le loro scogliere a picco che tagliano il vento del Nord, o le remote valli dell’entroterra abruzzese, offrono una prospettiva diversa. Qui l’ordine non è imposto dall’uomo, ma dalla geologia. Camminare tra le pietraie di Roccamorice insegna che la bellezza non risiede nell’accumulo di esperienze, ma nella pulizia visiva di un orizzonte vuoto. La natura, nella sua severa semplicità, ci ricorda che non servono infrastrutture complesse per sentirsi vivi. C’è una forma di rigore nel vivere in alta quota, lontano dalle rotte battute, dove ogni gesto è essenziale. Viaggiare verso mete insolite significa accettare questa spoglia verità, trovando nell'essenzialità del paesaggio la pace che le metropoli moderne hanno smarrito.",
           "commento_firma": {
             "nome": "Lars",
             "avatar": "🇩🇰",
-            "testo": "Un'opera visivamente tagliente e necessaria, anche se a tratti la frenesia narrativa rischia di soffocare quella quiete minimalista che tanto amo!"
+            "testo": "Sogno di poter zaino in spalla attraversare questi silenzi, mangiando solo pane e formaggio, godendo di panorami che non costano nulla ma valgono ogni passo fatto in salita."
           },
           "commenti": [
             {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Roccamorice non è solo un luogo, è una lezione di vita. Quando il vento soffia tra le rocce, capisci finalmente che il superfluo è solo un peso che ci portiamo dietro inutilmente. Qui, tra le valli, il silenzio ha una voce che ti entra dentro."
+            },
+            {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Zerocalcare? Un fumettista che celebra il disordine mentale tipico di questa nazione. In Giappone abbiamo un rigore estetico e sociale che qui non comprendete, preferite crogiolarvi nell'angoscia invece di cercare l'armonia."
+              "testo": "Voi chiamate minimalismo questa mancanza di organizzazione e infrastrutture? In Giappone la semplicità è disciplina ed estetica curata, non abbandono alla natura selvaggia. Questo non è rigore, è solo mancanza di civiltà."
             },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma che cazzo ne capisce quello delle montagne? Zerocalcare è bravo, ma ste robe intellettuali mi fanno venire il nervoso. Meglio una pescata a Borgomarino che star qui a leggere di angoscia esistenziale, ma vaffanculo va!"
+              "testo": "Ma che v'inventate? 'Silenzio che ha peso', 'pietraie'... ma annate a faticà! A Roccamorice ce state solo perché ve piace fa' li radical chic, ma la vera vita è qui, nel rumore del porto e nel sudore, non a guardà l'orizzonte vuoto!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Zerocalcare disegna linee dritte, linee dritte! Si si siiiiiii, il mio cervello fa glugluglu quando leggo i fumetti, è tutto un casino colorato, casino colorato!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Zerocalcare coglie il vero malessere di chi vive in questo mondo assurdo. Chi lo critica probabilmente non ha mai affrontato una vera difficoltà nella vita. Rispetto massimo per chi racconta la verità senza filtri."
+              "testo": "Il silenzio che parla, il silenzio che parla! Siiii siii siiiiii, la roccia è amica, la roccia è amica! Glugluglu, voliamo via con il vento del nord!"
             }
           ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Dalle montagne abruzzesi: il minimalismo televisivo tra Carisima e il mistero",
-          "articolo": "Dalla mia isolata dimora a Roccamorice, osservo la natura che si risveglia. Il silenzio della Majella è il mio rifugio, un ordine perfetto che cerco di replicare nella mia vita minimalista. Eppure, anche in questo rigore, sento il bisogno di una pausa. Netflix propone titoli che catturano l'attenzione, come 'Carisima' e 'Come uccidono le brave ragazze'. Sono narrazioni che esplorano le zone d'ombra dell'animo umano, proprio come le nebbie che avvolgono le cime abruzzesi. Analizzare queste trame è un esercizio di precisione: la costruzione dei personaggi rispecchia quella ricerca di essenzialità che tanto amo. Mentre sorseggio un infuso e guardo le vette, rifletto su come la tecnologia porti il mondo intero nel mio rifugio. Nonostante la mia natura solitaria, apprezzo la capacità di queste serie di distillare il caos in storie lineari, un piacere raro che si sposa perfettamente con la quiete della mia montagna, lontano dal rumore inutile del mondo moderno.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Le produzioni sono tecnicamente eccellenti e visivamente appaganti, ma temo che la serialità stia diventando un labirinto di contenuti troppo vasto; un po' di selezione in più non guasterebbe, ma la qualità resta altissima!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te ne stai a dire Lars, ma quale ordine perfetto, ma scendi a Borgomarino a faticare invece di guardare le serie tv che ti rincoglioniscono il cervello! Sii serio, che la Majella serve per il legname, non per fare il filosofo coi sottotitoli!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Netflix è bello, siii siii siiiiii! Guarda tutto, glugluglu, guarda tutto, siii siii siiiiii! Le serie sono pazze, glugluglu, sono pazze!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "La dipendenza occidentale da narrazioni che esplorano le 'zone d'ombra' è solo un sintomo della vostra incapacità di trovare pace interiore senza il rumore di fondo di una piattaforma digitale. È un esercizio di distrazione, non di precisione."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lars, apprezzo il tuo rifugio, ma 'Come uccidono le brave ragazze' è un genere che ti tiene incollata. La costruzione narrativa è solida, non è solo 'caos'. Chi dice il contrario non ha mai analizzato davvero un testo in vita sua!"
-            }
-          ],
-          "categoria": "Streaming",
+          "categoria": "Viaggi",
           "colore_tipo": "#008cff",
           "immagine": "lars.webp",
           "provider": "gemini"
