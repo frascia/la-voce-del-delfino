@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.008,
     "label": "neutro",
@@ -211,13 +211,13 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "28/05/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.465,
-    "label": "simpatico",
+    "score": 0.765,
+    "label": "amico",
     "ultimo_aggiornamento": "28/05/2026"
   },
   "Lilli→Juizinho": {
@@ -291,8 +291,8 @@
     "ultimo_aggiornamento": "25/05/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.8,
-    "label": "ostile",
+    "score": -0.5,
+    "label": "diffidente",
     "ultimo_aggiornamento": "28/05/2026"
   },
   "Lars→Lilli": {
@@ -301,17 +301,17 @@
     "ultimo_aggiornamento": "28/05/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.44,
-    "label": "diffidente",
+    "score": -1,
+    "label": "ostile",
     "ultimo_aggiornamento": "28/05/2026"
   },
   "Cetteo→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "28/05/2026"
   },
   "Lilli→Hiroki": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "28/05/2026"
   },
@@ -416,9 +416,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Glusi→Abbukk": {
-    "score": 0.583,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "27/05/2026"
+    "score": 0.783,
+    "label": "amico",
+    "ultimo_aggiornamento": "28/05/2026"
   },
   "Hiroki→Abbukk": {
     "score": -1,
@@ -621,9 +621,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Autore→Lars": {
-    "score": 0.729,
+    "score": 0.929,
     "label": "amico",
-    "ultimo_aggiornamento": "21/05/2026"
+    "ultimo_aggiornamento": "28/05/2026"
   },
   "Autore→Wolf": {
     "score": -0.767,
@@ -633,12 +633,12 @@
   "Autore→Hiroki": {
     "score": -0.57,
     "label": "diffidente",
-    "ultimo_aggiornamento": "27/05/2026"
+    "ultimo_aggiornamento": "28/05/2026"
   },
   "Autore→Glusi": {
-    "score": 0.753,
-    "label": "amico",
-    "ultimo_aggiornamento": "27/05/2026"
+    "score": 0.653,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "28/05/2026"
   },
   "Lars→Wolf": {
     "score": 0.65,
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "28/05/2026"
   },
   "Wolf→Hiroki": {
-    "score": -0.819,
+    "score": -0.619,
     "label": "ostile",
     "ultimo_aggiornamento": "28/05/2026"
   },
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.83,
+    "score": -0.63,
     "label": "ostile",
     "ultimo_aggiornamento": "28/05/2026"
   },
@@ -821,9 +821,9 @@
     "ultimo_aggiornamento": "20/05/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
-    "ultimo_aggiornamento": "27/05/2026"
+    "ultimo_aggiornamento": "28/05/2026"
   },
   "Cetteo→Squadra": {
     "score": -0.43,
@@ -908,7 +908,7 @@
   "Autore→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "27/05/2026"
+    "ultimo_aggiornamento": "28/05/2026"
   },
   "Miley Cyrus→Maxx Morando": {
     "score": 0.111,
@@ -991,7 +991,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "28/05/2026"
   },
@@ -1226,9 +1226,9 @@
     "ultimo_aggiornamento": "08/05/2026"
   },
   "Lars→Bartender": {
-    "score": 0.836,
+    "score": 0.736,
     "label": "amico",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "28/05/2026"
   },
   "Cetteo→Bartender": {
     "score": -0.9,
@@ -1631,9 +1631,9 @@
     "ultimo_aggiornamento": "23/04/2026"
   },
   "Wolf→Topengo": {
-    "score": -0.343,
+    "score": -0.543,
     "label": "diffidente",
-    "ultimo_aggiornamento": "08/05/2026"
+    "ultimo_aggiornamento": "28/05/2026"
   },
   "Lars→Narratore": {
     "score": 0.164,
@@ -3484,5 +3484,10 @@
     "score": 0.3,
     "label": "simpatico",
     "ultimo_aggiornamento": "27/05/2026"
+  },
+  "Bartender→Glusi": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "28/05/2026"
   }
 }
