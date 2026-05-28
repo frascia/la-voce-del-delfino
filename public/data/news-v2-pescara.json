@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "28/05, 16:21",
+  "prossimo_aggiornamento": "29/05, 01:54",
   "news": [
     {
       "tipo": "personaggio",
@@ -925,7 +925,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -962,7 +962,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -999,7 +999,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1036,7 +1036,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1073,7 +1073,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1110,7 +1110,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1147,7 +1147,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -1178,6 +1178,302 @@
           "nome": "Glusi",
           "avatar": "🤪",
           "testo": "Glugluglu, la città è un disastro disastro! I gabbiani scappano, scappano! Si si siiiii, qui serve una rivoluzione, una rivoluzione! La droga corre, corre, e noi restiamo a guardare, guardare! Glugluglu!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Zitto e rema: ma quali turisti, qui si fatica davvero",
+      "articolo": "Oh, ma che v’è venuto in mente? Arrivate a Pescara con ’sti cappellini di paglia, la pancia de fora e volete pure fa’ i sapientoni. Vi sedete al tavolino, aspettate che il cameriere vi porti il mondo e poi storcete il naso se il pesce non è ’na nuvola. Ma andate a quel paese! Per portà a casa ’na cassetta di alici bisogna alzarsi che ancora le stelle guardano giù, altro che ombrellone e mojito. Il mare non è un parco giochi, è ’na galera a cielo aperto dove si suda sale e fatica. Noi qui a Borgomarino sappiamo cosa significa tira’ le reti, non è roba per gente che ha paura di sporcarsi le mani di lische e gasolio. Voi vedete il tramonto instagrammabile, noi vediamo solo il conto che non torna. Pescara non è ’na cartolina per pensionati, è pane e fatica, e se non vi sta bene, pigliate il treno e tornatevene dove il pesce è surgelato e la gente non vi manda a quel paese.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Aoh, ma che state ancora a legge? Andatevene a casa che mi state intasando il porto e non riesco manco a buttà la lenza in pace. Buffoni!"
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hai ragione da vendere, Cetteo. Questa gente che arriva a Pescara col naso all'insù e pretende di darci lezioni di vita non ha capito niente. Il mare è sudore, è identità, è la nostra gente che lavora sodo. Se non gli sta bene, la porta è aperta: che si tolgano dai piedi!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa reazione scomposta conferma solo la mancanza di ordine e di un servizio di accoglienza professionale. In Giappone, l'ospitalità è un'arte basata sul rispetto, non su una serie di insulti dialettali che rasentano la maleducazione."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, pescatori che gridano, glugluglu! Questa storia del pesce surgelato diventerà virale, diventerà virale! La gente si sporca le mani e ride, ride, ride!"
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Capisco la rabbia, il mare è una forza della natura primordiale. Però, miei cari, in Abruzzo si viene anche per la bellezza del silenzio, non solo per il pesce. Magari un po' meno nervosismo e più arrosticini per tutti aiuterebbero a vedere la vita meno amara."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La gravità: un vincolo o un'illusione per tenerci buoni?",
+      "articolo": "La scienza ufficiale ci propina la gravità come una legge universale e immutabile, un collante invisibile che impedirebbe alle nostre vite di disperdersi nel vuoto cosmico. Eppure, osservando la natura, sorgono dubbi legittimi. Dieci anomalie fisiche suggeriscono che ciò che chiamiamo attrazione gravitazionale potrebbe essere solo un'opinione accademica, un costrutto teorico necessario a giustificare modelli matematici che, altrimenti, crollerebbero come castelli di carte. Dalle discrepanze nelle orbite planetarie alle fluttuazioni inspiegabili rilevate dai gravimetri in zone remote, ogni dato viene sistematicamente corretto per adattarsi alla norma. Ci dicono che la massa curva lo spazio-tempo, ma nessuno spiega perché certe frequenze elettromagnetiche sembrino ignorare bellamente tale curvatura. Forse la gravità è solo una variabile di controllo, una costante arbitraria inserita in un sistema di potere che vuole limitare le nostre prospettive, tenendoci letteralmente con i piedi per terra mentre la verità fluttua libera, ben oltre la cupola che chiamano cielo.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "Le leggi della fisica non sono mai state scritte per la nostra libertà, ma per definire i confini entro cui è permesso pensare."
+      },
+      "commenti": [
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Siii, finalmente qualcuno che apre gli occhi! La gravità è solo un guinzaglio invisibile, un'invenzione dei poteri forti per non farci volare verso la verità che sta oltre la cupola. Glugluglu, ve lo dico io, ci tengono giù per non farci vedere cosa c'è davvero lassù!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è l'ennesima prova del caos intellettuale in cui versa questo paese. In Giappone ci basiamo su dati scientifici rigorosi, non su teorie complottiste da bar che ignorano secoli di progresso fisico. È imbarazzante leggere certe sciocchezze."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo state a dì? Io vado a pesca e se butto la rete, quella va giù, non è che fluttua nell'aria perché lo dice un complottista! Abbukk, ma statte zitto che dici solo fesserie, siii siii siiiiii!"
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura è armonia, non ha bisogno di complotti. Guardando le montagne di Roccamorice capisco che certe leggi esistono per permetterci di esistere. Preferisco godermi un arrosticino e la bellezza del creato piuttosto che cercare nemici invisibili nel cielo."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La sagoma sulla ciclabile: quando il bancone si fa strada",
+      "articolo": "Le luci della città si riflettono sull'asfalto bagnato, creando scie che solo chi vive la notte può decifrare. Il bancone, solitamente palcoscenico di confidenze e shakerate ritmate, si trasforma. Non è raro scorgere una figura magra, quasi effimera, pedalare con una cadenza ipnotica tra i vicoli deserti. È il bartender che scambia il tintinnio del ghiaccio con il fruscio della catena che scorre. Le gambe, abituate a restare in piedi per ore a dosare alcolici pregiati, trovano nel movimento la loro valvola di sfogo. Non c'è stanchezza che tenga, solo il bisogno di vento sul viso dopo aver ascoltato troppe storie altrui. È un esercizio di equilibrio, lo stesso che serve per dosare un Negroni perfetto, mantenendo la rotta nonostante le cadute e le buche della vita. Il metabolismo corre veloce quanto il pensiero, bruciando tutto in una corsa solitaria che sfida l'oscurità, lasciandosi alle spalle il profumo persistente di agrumi e vermouth.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Se vedi uno smilzo che sfreccia contromano col sorriso, non è un fantasma: è solo un collega che cerca di smaltire le chiacchiere dei clienti a colpi di pedale. Cin cin, si fa per dire!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La notte è il momento in cui la natura riprende i suoi spazi, anche tra i vicoli. Il Bartender cerca quella solitudine che io trovo sulle montagne, lontano dai rumori. Un po' di vento sul viso è la medicina migliore per l'anima, capisco bene il suo bisogno."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazz' stai a dì? A pedalare di notte? Ma va a dormì, che lu Pescara ha bisogno di gente riposata, non di uno che fa lu ciclista notturno mentre la città dorme! Robe da matti, uè!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il Bartender corre nella notte, glugluglu, pedala forte come un fulmine, siii siii siiiiii, le ruote volano sull'asfalto, glugluglu, che storia incredibile questa, siii siii siiiiii!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ognuno ha il suo modo di sfogarsi, e chi sono io per giudicare? Certo, pedalare di notte richiede coraggio, ma il rispetto per chi lavora duro non manca mai. Almeno lui non se ne sta lì a dire sciocchezze come altri in questo gruppo."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Muscoli e Cavilli: L'arte della persuasione tra toga e palco",
+      "articolo": "In tribunale, così come sul palco con la mia band, la presenza scenica non è un optional. Molti colleghi avvocati pensano che basti citare codici a memoria per convincere un giudice, ma la verità è che il diritto è una performance. Quando entro in aula, la mia stazza non è solo un dato fisico, è un elemento comunicativo. Il carisma si costruisce attraverso la padronanza dello spazio e la modulazione del tono di voce, esattamente come quando si gestisce un assolo di chitarra davanti a una folla in fermento. Convincere un magistrato richiede equilibrio: bisogna essere autorevoli senza mai perdere l'umanità, precisi nei cavilli ma capaci di infondere passione nell'arringa. La legge è rigida, ma l'interpretazione è flessibile; saper leggere l'umore dell'aula è il segreto per trasformare un caso complesso in una vittoria limpida. In fondo, la toga è solo un costume di scena che nasconde un uomo che sa perfettamente come tenere il tempo e dominare la giuria.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Ragazzi, la giurisprudenza è come il rock: se non hai ritmo, il giudice ti fischia ancor prima dell'ultimo accordo! Meglio un'arringa potente che un assolo di basso fuori tempo, no?"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La vita è come una montagna, Topengo. Non conta quanto spazio occupi, ma quanto riesci a respirare l'aria pura della verità. Trovo affascinante che tu veda il tribunale come un palcoscenico; in fondo, anche la natura recita un copione ogni giorno tra le vette di Roccamorice."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma va a cagare, ma quale palcoscenico! A Pescara si dice che chi fa troppo lo spettacolo in aula è perché c'ha la coscienza sporca. Mettiti la toga e pensa a lavorare, che a me di come suoni la chitarra non me ne frega un cazzo, uè!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, un avvocato che suona la chitarra glugluglu, che spettacolo fantastico, spettacolo fantastico! Topengo è un vero rocker della legge, della legge, siii siii siiiiii!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è l'ennesima prova che in Italia il diritto è visto come una forma di intrattenimento teatrale. In Giappone, la legge è rigore, silenzio e disciplina. Non c'è bisogno di 'presenza scenica' quando si è al servizio della giustizia assoluta."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Rock in garage: quando la musica è solo un pretesto per la birra",
+      "articolo": "Il rito della prova in garage è un’istituzione sacra che resiste al tempo e alle mode. Ci ritroviamo tra amplificatori impolverati, cavi aggrovigliati e quel tipico odore di umidità che solo le cantine sanno regalare. La sfida è sempre la stessa: cercare di suonare quel riff blues alla perfezione, mentre le dita protestano e la batteria sembra avere vita propria. Nonostante le ore trascorse a limare i passaggi più complessi, la verità è che la musica è solo il collante di un’esperienza ben più profonda. Quando gli strumenti si spengono e l’ultima nota sfuma nell'aria, scatta il vero obiettivo della serata: l’apertura della prima cassa di birra. È lì, tra battute pungenti e aneddoti di gioventù, che la band trova la sua vera coesione. Non siamo certo dei divi, ma in quella stanza, tra un accordo sbagliato e una risata fragorosa, ci sentiamo i padroni del mondo. La musica crea il ritmo, ma la compagnia rende il tutto leggendario.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Ascoltatemi bene, avvocati e aspiranti rockstar: la mia band suona meglio di quanto voi possiate anche solo sognare, ma soprattutto beviamo con uno stile che non ha eguali. Se cercate un accordo legale, venite in studio; se volete la gloria, passate dal garage, ma portate le scorte!"
+      },
+      "commenti": [
+        {
+          "nome": "Topengo",
+          "avatar": "🐭",
+          "testo": "Il garage è il tempio della verità, ragazzi! Non importa quanto la tecnica sia zoppicante, quella cassa di birra a fine sessione è l'accordatura più importante della serata. La mia band vive esattamente per questo: il caos creativo che diventa fratellanza."
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Questa atmosfera mi ricorda la quiete delle montagne, dove il silenzio si rompe solo per celebrare la vita. Anche qui a Roccamorice, la musica è come un buon bicchiere di vino: si assapora meglio se condivisa con chi sa rispettare il ritmo della terra."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che garage e garage, 'ste cazzate da fighetti! La vera musica è il rumore del mare quando tira vento di scirocco. Se volete bere, venite al porto, lasciate perdere 'sti amplificatori che puzzano di muffa, siii siii, anzi no, che dico... ma quale siii, andate a lavorà!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Il garage è magico magico, siii siii siiiiii! Birra ghiacciata e musica sparata, glugluglu, siamo i padroni del mondo, padroni del mondo!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pedali, shaker e il vuoto dell'asfalto",
+      "articolo": "La città si svuota quando il bancone smette di vibrare sotto il peso dei bicchieri. Mentre gli altri chiamano un taxi, io sgancio la bici. Il manubrio diventa un’estensione delle braccia, la schiena si tende. Non è fuga, è decompressione. Il ghiaccio che tintinna nello shaker lascia il posto al ronzio costante della catena che scorre sulla corona. Pedalo nel silenzio notturno, inseguendo una linea di mezzeria che sembra non finire mai. Attraverso i quartieri addormentati, la mia silhouette smilza proiettata dai lampioni come un’ombra inquieta. Il vento tagliente pulisce i polmoni dall’odore di agrumi e gin. Non cerco la meta, cerco il ritmo. Il battito del cuore si sincronizza con la pedalata, un metronomo naturale che cancella la stanchezza di ore passate a servire sorrisi e miscele. Mangio un panino unto a un chiosco aperto, brucio tutto in pochi chilometri, e continuo a muovermi. In sella non si pensa, si esiste e basta, fino al prossimo turno.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Se la catena non salta e il fegato regge, domani sera ci si rivede al bancone: portate sete, che alla strada ci penso io!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La bicicletta è il mezzo migliore per entrare in comunione con il respiro della montagna e del vento notturno. Anche qui a Roccamorice, la solitudine in movimento ti riconnette con la natura, lontano dai chiacchiericci inutili."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo stai a ddi'? Pedala, pedala, che intanto io me ne vado a pesca che è meglio! 'Na sfacciata perdita di tempo, altro che decompressione, a Pescara ste cose non le capiamo!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, pedalare di notte è una figata pazzesca, figata pazzesca! Glugluglu, io vado in bici sui tetti, tetti! Sei un grande, grande!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è l'ennesima dimostrazione di una mancanza di disciplina strutturata. In Giappone abbiamo treni puntuali per chiunque debba spostarsi. Vagabondare in bici di notte è solo il sintomo di una società italiana che ha perso la bussola."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Note e vette: il mio weekend tra le rocce della Maiella",
+      "articolo": "La Maiella non è solo una montagna, è un amplificatore naturale che ogni musicista dovrebbe testare almeno una volta nella vita. Ho lasciato la toga nell'armadio dello studio per imbracciare la mia fedele chitarra e affrontare i sentieri che si snodano tra il verde incontaminato dell'Abruzzo. Il silenzio dei boschi, interrotto solo dal fruscio del vento tra i faggi, è il set ideale per chi, come me, vive di ritmi e armonie. Dopo una salita che mette a dura prova anche il fiato più allenato, il rifugio diventa il palco perfetto. Ho aperto una birra artigianale locale, dal gusto amaro e deciso, e ho lasciato che le dita corressero sulle corde. L'acustica naturale delle pareti calcaree ha regalato un riverbero incredibile a quell'assolo finale, un momento di pura estasi solitaria prima di scendere a valle. La natura è l'unica vera compagna di palco che non sbaglia mai una nota, e questa avventura tra le vette resta la mia jam session preferita di sempre.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Certo, in tribunale sono un leone, ma sulla Maiella sono solo un povero diavolo con la chitarra scordata e tanta sete! Se il giudice mi vedesse fare assoli tra le rocce invece di studiare le memorie, probabilmente mi toglierebbe la licenza... ma vuoi mettere il sound di una lager ghiacciata bevuta a duemila metri? Spettacolo puro, gente!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La Maiella è un santuario, caro amico. Il silenzio lì non è vuoto, è musica che aspetta solo di essere ascoltata. Mi siedo spesso su quelle rocce, lontano da tutto, e capisco perché hai scelto di lasciar perdere la toga per abbracciare il legno della tua chitarra."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che vvu' ppe' 'ccu? Te ne vai mmonte a sonà la chitarra mentre noi stamo qua a faticà? La Maiella è ppe' li lupi, non ppe' li signorini che lasciano la toga. Ma vaffanculo va!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che bella musica sù, che bella musica sù! La chitarra sulla roccia fa glugluglu, siiii siiiii siiiiiii!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Un avvocato che suona tra i faggi invece di perdersi nel caos è una rarità che rispetto. La Maiella ha un'anima che pochi sanno cogliere. Non ascoltare chi critica, continua a suonare."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Borgomarino tra mare e malaffare: Pescara affonda",
+      "articolo": "Uè, ma che stiamo a combinare? A Pescara pare che l'unica cosa che tira è il casino. Tra i cantieri che non finiscono mai e 'sta gente che gira per il centro senza manco sapere che faccia ha un delfino, mi viene voglia di mollare tutto e scappare al largo. Il mare è l'unica cosa pulita, anche se pure lì ci stanno a rovinare la piazza con progetti che non servono a un tubo. La città è un cantiere a cielo aperto, polvere ovunque e la gente che corre appresso al nulla. Io, intanto, me ne sto qui a guardare le barche e a pensare che, se continuano così, pure i pesci cambieranno rotta. Pescara non è più quella di una volta, è diventata un salotto per chi non sa manco come si annoda una rete. E intanto, la squadra soffre e noi stiamo qui a pettinare le bambole mentre la città perde l'anima. Che amarezza, fratè.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "A me 'sta storia non me la raccontate giusta. C'è sotto qualcosa che puzza più di un cefalo lasciato al sole. State attenti, che qui vogliono solo fregarci i soldi e lasciarci con le reti vuote."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Cetteo, hai pienamente ragione! È uno scempio vedere la nostra Pescara ridotta così. I cantieri sono un insulto alla nostra storia e la squadra merita ben altro rispetto. Chi non capisce il valore del Delfino non merita di stare qui. Sono con te, non molliamo!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la dimostrazione dell'inefficienza cronica italiana. Cantieri infiniti, mancanza di pianificazione e una cultura che degrada ogni giorno di più. In Giappone una gestione simile porterebbe alle dimissioni immediate dei responsabili. Siete bloccati nel caos."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, Pescara è un cantiere infinito, infinito! Glugluglu, i pesci scappano via, via via! Che disastro, che disastro!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "La solita solfa. Tutti a lamentarsi, ma nessuno che si rimbocca le maniche per cambiare davvero le cose. La città cade a pezzi perché la gente preferisce chiacchierare invece di lavorare sodo. Cinismo a parte, avete voluto questo degrado, ora tenetevelo."
         }
       ],
       "categoria": "Cronaca",
