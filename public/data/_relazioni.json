@@ -1,5 +1,5 @@
 {
-  "_runCount": 8,
+  "_runCount": 9,
   "Ernesto→Giovanni": {
     "score": -0.007,
     "label": "neutro",
@@ -36,13 +36,13 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "31/05/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.5,
-    "label": "diffidente",
+    "score": -0.7,
+    "label": "ostile",
     "ultimo_aggiornamento": "31/05/2026"
   },
   "Juizinho→Cetteo": {
@@ -81,7 +81,7 @@
     "ultimo_aggiornamento": "31/05/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.8,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "31/05/2026"
   },
@@ -121,7 +121,7 @@
     "ultimo_aggiornamento": "31/05/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.8,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "31/05/2026"
   },
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "14/05/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.808,
+    "score": 0.908,
     "label": "amico",
     "ultimo_aggiornamento": "31/05/2026"
   },
@@ -221,8 +221,8 @@
     "ultimo_aggiornamento": "31/05/2026"
   },
   "Lilli→Juizinho": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.5,
+    "label": "diffidente",
     "ultimo_aggiornamento": "31/05/2026"
   },
   "Enzo→Juizinho": {
@@ -381,9 +381,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.82,
+    "score": -0.72,
     "label": "ostile",
-    "ultimo_aggiornamento": "29/05/2026"
+    "ultimo_aggiornamento": "31/05/2026"
   },
   "utente→Lars": {
     "score": 0.03,
@@ -518,7 +518,7 @@
   "Glusi→Autore": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "30/05/2026"
+    "ultimo_aggiornamento": "31/05/2026"
   },
   "Lars→Giornalista": {
     "score": 0.05,
@@ -646,7 +646,7 @@
     "ultimo_aggiornamento": "29/05/2026"
   },
   "Lilli→Autore": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "31/05/2026"
   },
@@ -1471,7 +1471,7 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lucap→Cetteo": {
-    "score": -0.481,
+    "score": -0.381,
     "label": "diffidente",
     "ultimo_aggiornamento": "31/05/2026"
   },
@@ -3021,8 +3021,8 @@
     "ultimo_aggiornamento": "18/05/2026"
   },
   "Lucap→Juizinho": {
-    "score": 0.62,
-    "label": "simpatico",
+    "score": 0.72,
+    "label": "amico",
     "ultimo_aggiornamento": "31/05/2026"
   },
   "Glusi→Dirigenza Pescara": {
