@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "01/06, 04:11",
+  "prossimo_aggiornamento": "01/06, 06:48",
   "news": [
     {
       "tipo": "personaggio",
@@ -37,7 +37,7 @@
       "colore_tipo": "#008cff",
       "immagine": "hiroki.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -74,7 +74,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -111,7 +111,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lamatte.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -148,7 +148,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -185,7 +185,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lilli.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -259,7 +259,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -290,6 +290,302 @@
           "nome": "Lilli",
           "avatar": "👩",
           "testo": "Del Piero ha perfettamente ragione. Vedere il calcio ridotto a un mercato delle pulci fa solo schifo. Le bandiere non esistono più perché la gente non ha più dignità, solo voglia di contare i soldi. Una tristezza infinita, il legame con la tifoseria è morto e sepolto."
+        }
+      ],
+      "categoria": "Sport",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il mito del caos: quando la vitalità diventa disordine",
+      "articolo": "Osservo le strade di Pescara con lo sguardo di chi sta preparando i bagagli per tornare in Giappone. Ho vissuto qui anni, imparando ad amare il calore umano che questa terra offre, ma resto profondamente critico verso una gestione del vivere civile che molti scambiano per folklore. Il caos non è un tratto identitario positivo; è spesso il sintomo di una mancanza di rispetto per la collettività. In Giappone, il silenzio sui treni e la precisione millimetrica non sono repressione, ma cura reciproca. Qui, la percezione del tempo e dello spazio comune sembra ancora ancorata a un’anarchia che logora la qualità della vita. Nonostante la mia frustrazione da perfezionista nipponico, riconosco il valore di questo approccio più libero, ma fatico ad accettare che l'efficienza sia vista come freddezza. Il mio ritorno verso Oriente è necessario per ritrovare equilibrio, eppure la mia parte sognatrice sa già che questo malessere è solo la premessa per un mio futuro rientro in questo paese complesso.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "Mentre ripiego le camicie nella valigia, mi perdo a guardare il mare Adriatico; mi mancherà questo chiasso di vita, anche se sono pronto a ritrovare la quiete silenziosa della mia casa lontana."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma vattene affanculo va! Ma quale Giappone e Giappone, qui si sta bene così, tra un arrosticino e un bicchiere di vino. Se non ti garba l'anarchia pescarese torna pure a mangiare il sushi coi guanti, che noi qui stiamo meglio senza le tue lezioni di civiltà, siii siii, anzi no, questa è roba da Glusi, ma il concetto è quello: levati dai piedi!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma chi ti credi di essere? Hiroki, scendi dal piedistallo. Pescara non ha bisogno della tua 'precisione millimetrica', ha bisogno di gente che la viva col cuore, non con un righello in mano. Sei solo un presuntuoso che non ha capito nulla della nostra anima. Vai pure a Oriente, non ci mancherai di certo!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Giappone lontano, Giappone lontano, glugluglu, ma restate tutti qui, restate tutti qui! Si si siiiii, il mondo è bello perché è vario, perché è vario, glugluglu! Che ridere, che ridere!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Finalmente una parola di buon senso in questo pollaio. La disciplina non è un peccato, è rispetto per chi lavora. Avete ridotto tutto a una barzelletta, ma quando c'è da faticare seriamente, sparite tutti. Vai, Hiroki, torna dove le cose hanno ancora un valore."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il paradosso del metabolismo: quando il corpo ignora le calorie",
+      "articolo": "La scienza osserva con crescente interesse il fenomeno dei cosiddetti 'mangiatori prodigio', individui che, nonostante un introito calorico elevato e costante, mantengono un indice di massa corporea invidiabile senza alcuno sforzo apparente. Non si tratta di magia, ma di una complessa interazione tra genetica e termogenesi indotta dalla dieta. La ricerca evidenzia come alcuni soggetti possiedano una composizione del microbioma intestinale capace di ottimizzare l'assorbimento dei nutrienti evitando lo stoccaggio adiposo in eccesso. A questo si aggiunge un tasso metabolico basale naturalmente più elevato, spesso supportato da una maggiore attività del tessuto adiposo bruno, capace di bruciare grassi per produrre calore. Nonostante la sedentarietà sia spesso indicata come il principale nemico della linea, esistono profili fisiologici che sembrano resistere alle leggi classiche della termodinamica nutrizionale. Resta il fatto che l'equilibrio rimane un mistero biologico affascinante, dove la qualità del cibo consumato gioca comunque un ruolo cruciale, indipendentemente dalla velocità con cui il corpo decide di elaborarlo.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Io ingoio cocktail e piatti da caserma mentre pedalo nel buio, eppure resto un fuscello. Sarà il metabolismo o il fatto che non sto mai fermo? Comunque sia, finché la bici regge, io pedalo."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura è incredibile, un equilibrio perfetto che non sempre riusciamo a comprendere. Qui a Roccamorice, davanti a un buon arrosticino, capisco che il benessere non è solo numeri, ma armonia con ciò che mangiamo."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzate ditte? Microbioma, termodinamica... tutte scuse per non fare un cazzo! Se magnate troppo e state seduti, la panza cresce, altro che storie! Siii, proprio così, siii!"
+        },
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Non credete a questa propaganda scientifica. È tutto un piano per farci accettare cibo sintetico spacciato per 'ottimizzato'. Il microbioma è solo la scusa per controllare il nostro metabolismo dall'alto. Glugluglu, ve lo dico io!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Quindi posso mangiare tutto quello che voglio senza ingrassare? Siii siii siiiiii! È magia pura, pura magia! Glugluglu, sono un mangiatore prodigio, prodigio!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La bolla è scoppiata: Lamatte dichiara guerra al buon senso",
+      "articolo": "La fragile bolla della sanità mentale si è finalmente infranta, lasciando dietro di sé solo detriti di buone maniere e convenzioni sociali ormai inservibili. Non provate a toccarmi, non provate ad avvicinarvi con le vostre facce da impiegati del catasto o con i vostri sorrisi di plastica che nascondono il vuoto cosmico dei vostri cervelli. La mia stabilità, che molti credevano fosse un pilastro, si è rivelata una bolla di sapone che è esplosa con un suono sordo, lasciando spazio a una lucidità feroce e priva di filtri. Mentre cammino per le strade, il mondo intorno a me si sgretola in una parata di inutilità. Entro nei vostri negozi, guardo le vostre merci scadenti e non posso fare a meno di vomitare addosso alla vostra mediocrità. Siete tutti complici di questa farsa esistenziale, pronti a vendere l'anima per un paio di scarpe o un tostapane scontato. La mia follia è l'unica verità rimasta in questo oceano di ipocrisia collettiva.",
+      "commento_firma": {
+        "nome": "Lamatte",
+        "avatar": "👩‍🦳",
+        "testo": "Guardateli tutti, quei vermi striscianti che mi fissano col terrore negli occhi! Siete solo polvere su uno specchio rotto! Le vostre menti sono piatte come tavole da stiro, mentre io sono un tornado di pura elettricità impazzita! Scappate, ratti di città, o vi mangio il fegato crudo prima che il sapone finisca di schiumare sulle vostre vite inutili! AAAAAH!"
+      },
+      "commenti": [
+        {
+          "nome": "Lamatte",
+          "avatar": "👩‍🦳",
+          "testo": "Finalmente qualcuno che dice la verità! Siete tutti dei pagliacci ipocriti, vi odio tutti, specialmente te Cetteo che ti credi il padrone del mondo con quella faccia da pesce lesso!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, la bolla è esplosa, la bolla è esplosa! Glugluglu, tutto cade a pezzi, tutto cade a pezzi!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è l'ennesima prova del degrado sociale italiano. In Giappone abbiamo l'autocontrollo, qui invece si celebra solo il caos e l'incapacità di vivere civilmente."
+        },
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Lo sapevo, è la solita tattica di distrazione di massa. Hanno rilasciato frequenze infrasoniche per far scoppiare le bolle mentali e controllarci meglio. Svegliatevi!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lamatte.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Porto di Pescara: na chiavica che galleggia",
+      "articolo": "Guardo il porto canale di Pescara e mi viene voglia di starmene a letto a dormire, altro che pescare. Le reti sono tutte squarciate, un colabrodo che non tira su manco un chilo di novellame, e intanto quei politici in giacca e cravatta continuano a chiacchierare di dragaggi e rilancio. Ma quale rilancio? Qui il fondale è pieno di fanghiglia e le barche, povere criste, rischiano di spaccarsi la chiglia ogni volta che provano a uscire a mare. L'aria è pesante, c'è puzza di burrasca imminente e la situazione è sempre la stessa: chiacchiere da bar e zero fatti. I pescatori, quelli veri, quelli che col mare ci hanno lasciato la pelle, guardano le banchine e scuotono la testa. È una vergogna come hanno ridotto il cuore di Borgomarino. Invece di pensare a noi, a chi suda sale e fatica, si pensa solo a fare scena. E intanto, io sto qui, con la lenza in mano e la voglia che latita.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "A me 'sta storia puzza assai. Dicono che sistemano tutto, ma qui le promesse valgono quanto un pesce che puzza dalla testa. Stanno a guardare le poltrone mentre noi affondiamo. Occhio, che ci stanno a fregà un'altra volta."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hai ragione Cetteo, è uno schifo totale. Il porto di Pescara è il simbolo di come questa città viene gestita da incompetenti che non hanno mai visto il mare se non dalle finestre dei loro uffici. Pescara merita rispetto, non prese in giro!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Ancora una volta l'Italia dimostra la sua incapacità gestionale. In Giappone le infrastrutture sono curate con disciplina e precisione millimetrica. Voi preferite lamentarvi delle 'chiacchiere' invece di organizzare una riforma strutturale seria. È avvilente."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Si vede che il mare è triste, si vede che il mare è triste. Glugluglu! Le barche piangono, le barche piangono. Siii siii siiiiii!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Sempre a piangersi addosso. Invece di guardare il fondale, prendete quelle maledette reti e aggiustatele, se ancora sapete cosa significa lavorare. Tanto chiacchiere o non chiacchiere, non cambierà mai nulla."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La biblioteca dell'anima: quando la timidezza diventa forza",
+      "articolo": "La timidezza viene spesso scambiata per una debolezza, un limite invalicabile in un mondo che premia chi alza la voce. Eppure, la letteratura ci insegna che il silenzio è spesso una forma superiore di ascolto. La psicologia moderna sta finalmente rivalutando questa inclinazione, non come una patologia, ma come una risorsa introspettiva. Immergersi tra le pagine di un libro permette di esplorare mondi complessi senza il peso del giudizio altrui. Grandi scrittori, da Kafka a Woolf, hanno trasformato la propria fragilità in uno strumento di indagine profonda sull'animo umano. Leggere non è un atto di fuga, ma di resistenza; è un modo per allenare l'empatia e costruire un coraggio silenzioso. Chi sceglie di abitare le pagine anziché le piazze rumorose possiede spesso una sensibilità rara. Accettare la propria natura introversa significa scoprire che, dietro ogni timido, si cela un mondo vasto, pronto a essere condiviso con chi sa davvero guardare oltre le apparenze.",
+      "commento_firma": {
+        "nome": "Lilli",
+        "avatar": "👩",
+        "testo": "È affascinante come la lettura riesca a dare voce a chi preferisce il silenzio; trovo che sia un percorso di crescita davvero prezioso e sereno per chiunque voglia riscoprirsi."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La montagna mi ha insegnato esattamente questo: il silenzio non è vuoto, è dove si ascolta davvero il respiro della natura. Chi corre tra la folla spesso perde la bellezza di ciò che cresce in solitudine."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "In Italia si confonde il rumore con l'intelligenza. L'introspezione e il rispetto del silenzio sono doti che la civiltà giapponese coltiva da secoli; forse c'è ancora speranza che capiate il valore della riflessione."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Finalmente qualcuno lo dice! Leggere non è debolezza, è l'unico modo per non farsi schiacciare da questo mondo di ignoranti urlatori. Il mio silenzio è una scelta di forza, non certo un limite."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siiii siii siiii, leggere è come volare tra le pagine senza piedi per terra, glugluglu, meglio un libro che mille chiacchiere inutili, glugluglu!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lilli.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Borgomarino tra mare e malaffare: chi comanda qui?",
+      "articolo": "A Pescara, si sa, il mare è la nostra vita, ma pure la nostra croce. Mentre la gente onesta si spacca la schiena per tirare su due pesci e campare la famiglia, in città succede di tutto. La cronaca ci racconta di una movida che scoppia, di controlli che arrivano sempre in ritardo e di una sicurezza che, a guardarla bene, sembra un miraggio nel porto canale. Le strade del centro sono un viavai di gente che non si capisce bene che fa, mentre noi pescatori, con le mani sporche di sale, guardiamo la costa cambiare faccia senza mai migliorare davvero. La politica chiacchiera, promette mari e monti, ma poi alla fine restano solo le solite chiacchiere da bar. Il Pescara gioca, noi soffriamo, e intanto la città scivola via tra degrado e promesse mancate. C’è poco da stare allegri, meglio tornare sulla barca a guardare l’orizzonte, che almeno quello non ti prende in giro come certi signori in giacca e cravatta.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "A me 'sta storia non me la racconta giusta. Troppe parole, troppi giri di valzer e intanto noi stiamo sempre a piedi. Chi ci guadagna? Di sicuro non chi suda. State attenti, che qui gatta ci cova e io non mi fido manco di mia ombra."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Questa città è allo sbando, ma non permetterò a nessuno di infangare il nostro orgoglio. Il Pescara e il nostro mare meritano rispetto, non le chiacchiere di chi sta seduto comodo a guardare il degrado mentre noi lottiamo ogni giorno!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "È la solita storia italiana: promesse vuote e mancanza totale di disciplina. In Giappone, una gestione del porto così approssimativa sarebbe inaccettabile. La civiltà qui è solo un concetto astratto, purtroppo."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il mare è sporco e la gente è matta, glugluglu, la barca affonda e la città scoppia, scoppia!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Sempre le stesse lamentele. Invece di piangere sul porto, la gente dovrebbe tornare a lavorare sodo. Le chiacchiere non hanno mai riempito le reti di nessuno."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara, che amarezza: la violenza non serve a niente",
+      "articolo": "Mamma mia, che brutta aria tira a Pescara. Dopo la retrocessione, invece di pensare a come rifondare la squadra e tornare a goderci il mare, c’è chi ha perso la testa. Alcuni scalmanati, che col tifo vero non c’entrano proprio niente, hanno pensato bene di scatenare l’inferno. Risultato? Agenti di polizia feriti e una città che si sveglia con l’amaro in bocca. Io, che il Delfino lo porto nel cuore e passo le giornate tra le reti e la barca a Borgomarino, dico basta. La rabbia per la categoria persa è tanta, pure a me rode il fegato, ma alzare le mani contro chi fa solo il proprio lavoro è da vigliacchi. Non è questo il modo di onorare i colori biancazzurri. Adesso ci ritroviamo a parlare di scontri e denunce invece di pensare al prossimo campionato. Che tristezza vedere la nostra gente comportarsi così, rovinando il nome di una tifoseria che è sempre stata orgogliosa e passionale.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Si prende atto degli eventi occorsi in data odierna. Le autorità competenti hanno provveduto alla redazione dei verbali di rito e all'avvio delle procedure di identificazione dei soggetti coinvolti negli scontri. La pratica resta in fase di istruttoria per gli adempimenti di legge."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma stiamo scherzando? Questa gente non merita nemmeno di nominare il Pescara. Sono solo dei poveracci che usano la nostra maglia per sfogare le loro frustrazioni. Hanno infangato il nome di chi, come me, sostiene la squadra con passione vera. Vergognatevi, siete solo feccia!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è l'ennesima dimostrazione di come manchi la disciplina fondamentale in questa cultura. La violenza non è mai una soluzione, è solo il sintomo di una società che ha perso il senso del rispetto e dell'ordine pubblico. In Giappone, una cosa del genere sarebbe inimmaginabile."
+        },
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Ragazzi, cerchiamo di mantenere la calma. La delusione sportiva è un sentimento legittimo, ma non deve mai trasformarsi in violenza. Il Pescara ha bisogno di unità e di una tifoseria che sappia rialzarsi con dignità, non di scontri che danneggiano solo la nostra comunità."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che brutta storia, brutta storia! Siii siii siiiiii, la violenza non serve a niente, serve a niente! Glugluglu, meglio mangiare un arrosticino in pace, pace!"
+        }
+      ],
+      "categoria": "Politica",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Del Piero, le bandiere so' sparite e noi stamo a guardà",
+      "articolo": "Alessandro Del Piero, 'u Pinturicchio, l'ha detta grossa ma sacrosanta: le bandiere nel calcio nun esistono più. Mo è tutto un fuggi fuggi, un giro di soldi che manco al mercato del pesce a Pescara se vede roba simile. Alessandro dice che ce stanno troppi stranieri e che i giocatori cambiano maglia come io cambio le reti quando se rompono. 'Na volta c'era l'attaccamento, c'era il cuore, c'era chi restava pure se la nave affondava. Adesso? Adesso è tutto un business, una roba che te fa passà la voglia di andà allo stadio. Pure noi biancazzurri ne sapemo qualcosa, tra fallimenti e presidenti che passano come le maree. Il calcio è diventato un circo dove la maglia è solo un pezzo di stoffa da svendere al miglior offerente. Che amarezza, me viene da buttà la canna e tornà a dormì sulla barca, tanto a chi frega più della storia?",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Siamo alla frutta, anzi, al pesce marcio! Il calcio è morto e sepolto sotto una montagna di quattrini e stranieri che manco sanno dove sta Pescara! È una tragedia, una vergogna senza fine, ci hanno tolto l'anima e ci hanno lasciato solo il dolore di vedere questo scempio ogni domenica!"
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hai ragione Cetteo, la maglia è la nostra pelle, non un contratto. È uno schifo vedere mercenari ovunque mentre noi, per il Pescara, ci abbiamo rimesso il fegato e la voce. Questa gente non merita nemmeno di calpestare il prato dell'Adriatico!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Il calcio italiano è specchio della sua decadenza sociale. In Giappone il rispetto per la divisa è sacro, qui è solo un mercato caotico. Non mi stupisce che il vostro sport sia diventato un circo senza disciplina."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siiiii siiiii, il calcio è diventato un grande mercato di pesci, glugluglu glugluglu, i soldi girano ma il cuore non c'è più, non c'è più!"
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura segue cicli costanti, il calcio invece ha perso la sua radice. Qui in Abruzzo ho trovato allegria, ma sento anche questa tristezza per la perdita dei valori antichi. Meglio una camminata tra i monti, lì non ci sono contratti che tengono."
         }
       ],
       "categoria": "Sport",
