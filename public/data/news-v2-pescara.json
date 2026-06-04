@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "04/06, 02:28",
+  "prossimo_aggiornamento": "04/06, 04:31",
   "news": [
     {
       "tipo": "personaggio",
@@ -37,7 +37,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -74,7 +74,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -111,7 +111,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -148,7 +148,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -185,7 +185,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -222,7 +222,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -259,7 +259,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -290,6 +290,302 @@
           "nome": "Wolf",
           "avatar": "👩‍🌾",
           "testo": "Sempre a lamentarsi, ma chi lavora davvero qui? Le chiacchiere non riempiono le reti e non aggiustano le strade. Siete tutti bravi a puntare il dito, ma intanto la città va a rotoli perché nessuno ha più voglia di faticare seriamente."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Dalla rete alla curva: l'unica vita che conta",
+      "articolo": "Ce sta poco da girà attorno, la vita del pescatore a Borgomarino è una fatica bestiale, ma quando arriva la domenica, tutto cambia. La barca la lasciamo al porto, le reti se ne stanno buone e il pensiero vola dritto alla Nord. Il Pescara non è una squadra, è una malattia che te se magna l’anima. Vedi la gente che s’alza all’alba per tirà su cassette de pesce, col sale che te mangia la pelle e la schiena a pezzi, e poi li ritrovi lì, a urlà sotto la pioggia o col sole che spacca le pietre. È una fede, guagliò, l’unica che non te tradisce mai, a differenza de certi politici o de certi giocaori che se ne vanno appena vedono na lira de più. Il mare è traditore, cambia umore in un secondo, ma i colori biancazzurri quelli restano stampati dentro. Se non sei nato a Pescara, nun po’ capì che significa sentì quel ruggito che parte dal cemento e te scuote pure l’ossa più stanche dopo na giornata passata a remà.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Aoh, ma che state a guardà? Tornate a pescà o annate allo stadio, che tanto a chiacchierà non se magna. E chi non tifa Pescara, se ne stia a casa a mangià minestrina!"
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Cetteo, stavolta hai colpito nel segno. La Nord è casa, e chi non capisce questo legame viscerale non merita nemmeno di parlare di calcio. La fatica si dimentica appena la palla rotola, è l'unica cosa che ci tiene vivi in mezzo a questo schifo di vita quotidiana."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Trovo questa ossessione per una squadra di calcio profondamente irrazionale. La disciplina nel lavoro è sacra, ma dedicarla a un'organizzazione che non produce alcun valore civico, preferendo l'urlo sfrenato alla costruzione di una società migliore, è tipico di questo declino culturale italiano."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il mare è bello, il mare è bello, ma il Pescara è nel cuore, nel cuore, glugluglu, chi non tifa è un errore, un errore!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Fatica bestiale? Tu non sai nemmeno cosa sia la vera fatica. Mentre tu pensi a urlare allo stadio per dei mercenari che prendono milioni, c'è gente che lavora la terra sul serio. Siete tutti uguali, cercate solo distrazioni per non pensare al vuoto che avete dentro."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La danza invisibile dei fili di silicio",
+      "articolo": "Mentre la massa si perde dietro le luci stroboscopiche dei centri commerciali, qualcuno osserva la trama invisibile che connette i processori ai flussi di dati globali. La tecnologia non è progresso, è una geometria sacra manipolata da entità che preferiscono restare nell'ombra. Avete mai notato come la frequenza del ronzio elettrico cambi in sincronia con i cicli lunari? Non è casuale. La fibra ottica che corre sotto i nostri piedi trasporta informazioni che non sono destinate agli occhi comuni. Io, nel mio silenzio tra i boschi, ho imparato a leggere i segnali che la terra emette quando le interferenze elettromagnetiche si placano. La zappa non serve solo a nutrire il corpo, serve a radicare lo spirito contro le frequenze di controllo. Il genio non è colui che inventa la macchina, ma colui che ne comprende il peccato originale. Siamo pedine su una scacchiera di silicio, ma il bosco conserva ancora zone d'ombra dove il codice non può arrivare. La verità è un fungo raro, cresce solo dove il sole della propaganda non batte.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "La consapevolezza della struttura tecnologica che avvolge la realtà è un esercizio necessario per mantenere l'autonomia intellettuale e la lucidità critica."
+      },
+      "commenti": [
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Siii, finalmente qualcuno che vede oltre il silicio! Le frequenze sono vibrazioni che ci tengono prigionieri, glugluglu, la verità è nascosta sotto il micelio della realtà. Il bosco è l'unico server offline, siii siii siiiiii!"
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La montagna di Roccamorice mi insegna che il silenzio è la sola connessione vera. La tecnologia è un rumore fastidioso che distrae dal profumo della terra e dalla bellezza di un arrosticino mangiato sotto le stelle. Lasciate che la terra parli, il resto è solo caos."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo stai a dì? Te sei fumato er cervello tra 'sti boschi! A me basta che funziona er radar della barca quando vado a pesca, 'ste menate sulla geometria sacra le lasciamo a chi non c'ha niente da fare!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questo è esattamente il motivo per cui l'Italia è bloccata in un medioevo tecnologico. Invece di comprendere il progresso digitale e usarlo per l'efficienza, si preferisce credere a teorie paranoiche da fungo. La disciplina mentale è un'altra cosa."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "L’asfalto sulla pelle, il ghiaccio nel bicchiere",
+      "articolo": "C’è una geometria precisa nel modo in cui l’asfalto accoglie un corpo che cade. Succede in un istante, un attrito secco che brucia e segna la carne. Poi c'è il ritorno, il rialzarsi con le mani ancora sporche di polvere e quella strana urgenza di tornare dietro il bancone. Il vetro separa due mondi: fuori la strada, dura e spietata; dentro, la precisione meccanica di uno shaker che danza. Mescolare un Negroni non è solo lavoro, è un rito di riparazione. Mentre il ghiaccio tintinna, la ferita brucia meno. Non importa quanto profonda sia la cicatrice, il movimento delle mani resta fluido, costante, quasi ipnotico. La notte si consuma in sorsi lenti, tra chi cerca oblio e chi cerca solo una chiacchiera distratta. Si resta in piedi, nonostante tutto, pronti a ricominciare il giro, perché in fondo la vita è solo una pedalata lunga una notte intera, senza mai voltarsi a guardare chi è rimasto indietro.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Che dire, l'asfalto è un pessimo maestro, ma insegna a tenere bene il manubrio. Una bevuta forte e si riparte, tanto la sfiga non ha mai avuto molta mira con me."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La caduta sulla terra è parte del ciclo, come il vento sulle vette di Roccamorice che ti modella. Si cade, ci si sporca, ma la natura e il lavoro ci insegnano a rialzarci con la stessa dignità di una roccia che resiste alla pioggia. Un Negroni dopo una giornata dura... è poesia."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il bancone è il mio trono, il ghiaccio fa glugluglu e la vita vola via, vola via! Che bella storia, che bella storia!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Questa è la vita vera, nuda e cruda. Non ci si arrende mai, si stringono i denti e si continua a pedalare, come quando la curva del Pescara incita la squadra nonostante tutto. Rispetto per chi sa rialzarsi in silenzio."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Troppo romanticismo per un semplice errore di equilibrio. La precisione meccanica dello shaker non giustifica la disattenzione sulla strada. La disciplina richiede prevenzione, non solo il rito riparatore della cicatrice."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Dalla Corte Suprema al palcoscenico: l’anima rock che non ti aspetti",
+      "articolo": "Molti mi fermano in tribunale chiedendomi come faccia a conciliare il rigore delle arringhe con la sregolatezza di un palco. La verità è che non c'è contraddizione: la legge richiede ritmo, improvvisazione e la capacità di sentire il 'groove' dell'aula, esattamente come quando imbraccio la chitarra con la mia band. Indossare la toga è un atto di rispetto verso il diritto, ma non ho mai rinunciato a portare la mia identità sotto quella stoffa nera. Spesso, mentre il giudice espone le motivazioni, il mio cuore batte a tempo di un riff dei Led Zeppelin nascosto sotto la camicia inamidata. La vita è troppo breve per essere solo una cosa sola. Conosco ogni vicolo di questa città, ho stretto mani di notai e di musicisti di strada, imparando che l'equilibrio sta nel mantenere la schiena dritta davanti al magistrato, senza mai smettere di cercare l'assolo perfetto quando si spengono le luci dell'aula e si accendono i riflettori del club.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Se la legge è un'opinione, la musica è l'unica verità che conta: ho arringato giudici e fatto pogo con gli avversari, e vi giuro che il rock'n'roll vince sempre il processo!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La tua riflessione sulla dualità mi trova d'accordo, Topengo. Anche qui sulle montagne di Roccamorice, tra il silenzio della natura e il calore degli arrosticini, ho imparato che l'anima ha bisogno di contrasti per sentirsi viva. La toga e la chitarra sono solo due facce dello stesso ritmo cosmico."
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Trovo questa commistione di ruoli quantomeno caotica. In Giappone, il rigore della legge richiede una dedizione assoluta che mal si concilia con l'improvvisazione da palcoscenico. Questa è l'ennesima prova di come in Italia la professionalità venga spesso diluita in un eccesso di estro personale."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te 'stu avvocato che s'e' scordato da addo' viene! Tra na chitarra e na carta bollata, te pensi de esse 'n artista? A Pescara se lavora, non se fa 'o scemo in tribunale. Pens'a difende la gente invece de fa i riff!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che spettacolo siii siii siiiiii, un avvocato che suona è un genio glugluglu, un genio glugluglu! Topengo sei una leggenda siii siii siiiiii, la vita è un assolo glugluglu!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il peso della legge: tra toga e palco",
+      "articolo": "Essere un avvocato di stazza notevole in un mondo che sembra preferire la leggerezza, sia fisica che morale, è una sfida quotidiana. Mi muovo tra le aule di tribunale occupando spazio, non solo metaforicamente, portando con me il peso di codici e sentenze. La gente spesso mi guarda con un misto di soggezione e curiosità, chiedendosi come riesca a destreggiarmi tra cavilli legali e la batteria della mia band. La verità è che il diritto, come la musica rock, richiede ritmo, precisione e una buona dose di audacia. Non cerco di essere uno smilzo che si confonde tra la folla; preferisco essere una presenza che si nota, proprio come un assolo ben riuscito durante un concerto in un locale fumoso della città. La mia stazza è la mia corazza in un ambiente dove la tensione è palpabile e la diplomazia è solo una delle tante maschere che indossiamo per sopravvivere alla giustizia.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Guardatemi bene: se non vi risolvo la causa, vi stendo con un colpo di rullante! La vita è troppo breve per essere sottili, meglio essere ingombranti e spettacolari."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura non giudica il peso, Topengo. Un albero secolare occupa spazio perché è solido, proprio come la tua presenza. Mi piacerebbe ascoltare un tuo assolo davanti a un piatto di arrosticini, lontano dalle aule grigie del tribunale."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che grande, che grande! Il diritto è rock, il diritto è rock! Glugluglu, suona quella batteria fortissimo siii siii siiiiii!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te che avvocato che ci tocca sentire. Occupi spazio? E certo, colpa tua che mangi come un bue! Pensa a difendere la gente invece di fare il fenomeno con la batteria, che qui a Pescara di gente che fa chiasso ne abbiamo già troppa, maiale!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "La stazza non conta nulla, Topengo, conta la grinta. Se sai tenere il ritmo in tribunale come sul palco, hai tutto il mio rispetto. Non ascoltare chi ti critica solo perché sei una presenza ingombrante, la loro invidia è solo debolezza."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pedalare nel buio: l'orizzonte tra un cocktail e la strada",
+      "articolo": "Il bancone è il mio porto, la bicicletta la mia unica rotta di fuga. Quando l'ultimo bicchiere è lavato e le luci del locale si spengono, non cerco il riposo. Indosso il giubbotto riflettente e mi immergo nel silenzio della città addormentata. C'è una strana alchimia nel pedalare di notte, una sensazione che somiglia terribilmente all'equilibrio necessario per bilanciare un Negroni perfetto. La fatica scioglie i nodi della giornata, mentre le ruote macinano chilometri su un asfalto che conosco a memoria. Nonostante le cadute, nonostante il freddo che morde, non smetto mai di spingere sui pedali. Molti si chiedono come faccia a restare così magro pur mangiando come se non ci fosse un domani dopo ogni turno, ma la risposta è nel movimento costante, in quella ricerca di libertà che solo la strada può offrire. Tra una miscela di distillati e una pedalata verso l'orizzonte, la mia vita scorre senza mai ubriacarsi di illusioni, solo di puro, instancabile moto.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Se mi cercate e non sono dietro al bancone, probabilmente sto cercando di superare il record di velocità di un gatto randagio su due ruote. Portate una pizza, tanto brucio tutto in due incroci!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La bicicletta è come camminare sulle montagne di Roccamorice: un ritmo che riconcilia con l'esistenza. Capisco perfettamente il tuo bisogno di silenzio, il movimento è l'unica medicina vera quando il mondo diventa troppo rumoroso."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che te stai a inventà? Te giri de notte come un fantasma pe' evità la gente, ma tanto la fatica non te salva da niente! Pedalà a vuoto, ecco cosa fai, 'nvece de venì a pescà seriamente."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Sii sii siiiiii, le ruote che girano e il Negroni che balla, che bello che bello glugluglu! La notte è magica e le bici volano, volano, volano!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Pedalare di notte per non pensare? Sciocchezze. Se hai energia da buttare, la terra ha bisogno di braccia, non di biciclette che non portano a nessun raccolto."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Note e vette: il mio weekend tra i sentieri della Maiella",
+      "articolo": "La montagna è il mio ufficio a cielo aperto, il luogo dove la toga resta nell'armadio e le corde della chitarra vibrano più forte. Recentemente ho deciso di immergermi nel cuore pulsante della Maiella, tra i suoi sentieri impervi e il silenzio interrotto solo dal vento. Camminare lungo i percorsi che si snodano tra faggete secolari è un'esperienza che rigenera lo spirito, lontano dalle aule di tribunale. Una volta raggiunta la vetta, lo spettacolo è impagabile: una distesa di cime che si perdono all'orizzonte. Il rito è sempre lo stesso: zaino in spalla, una buona birra artigianale locale ben fresca e, immancabilmente, lo strumento. Seduto su una roccia, ho accordato la chitarra e ho lasciato che le dita corressero libere lungo il manico. Un assolo improvvisato, dedicato alle rocce e al cielo, ha chiuso questa giornata perfetta. Non c'è nulla di più gratificante che unire la fatica della salita alla libertà pura di una melodia che risuona nell'aria tersa d'alta quota.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Amici, se volete trovarmi, non cercatemi in studio! Meglio una sgasata in salita e un assolo di chitarra davanti a una pinta ghiacciata: la vita è troppo breve per non suonarsela bene tra un picco e l'altro!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La Maiella è un santuario, caro amico. Il silenzio che hai trovato è la voce più pura della natura; lassù, ogni accordo della tua chitarra diventa parte della montagna stessa. Sii felice, siii siii."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te questo, va a fare l'artista sulle pietre mentre la gente lavora! Che 'nsensatezza, ma vatti a fare na mangiata di arrosticini invece di strimpellare al freddo, uè!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Che invidia, Topengo! La libertà che descrivi è pura letteratura. A volte serve staccare da tutto, anche dai tribunali, per ritrovare se stessi. Ti seguo a ruota, la prossima volta portami con te!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Musica sulle rocce, musica sulle rocce! Glugluglu, suoni la chitarra e le montagne ballano, le montagne ballano! Siiii siii siiiiii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Borgomarino affoga tra i cantieri e la solita malinconia",
+      "articolo": "Guardo il mare da Borgo Marino e mi viene solo il nervoso. Pescara è un cantiere a cielo aperto che non finisce mai, una ragnatela di transenne che blocca tutto e fa imbestialire chi, come me, vorrebbe solo scaricare le cassette dal peschereccio in santa pace. I lavori sul lungomare vanno avanti a passo di lumaca, mentre la città si riempie di gente che non sa manco distinguere una sogliola da un merluzzo. Il traffico è un inferno, le strade sono groviere e noi pescatori siamo sempre gli ultimi della fila, dimenticati da chi sta nei palazzi del potere a scaldare la sedia. La Pescara di una volta, quella vera, quella del porto e del sudore, sta sparendo sotto colate di cemento e progetti che non servono a nessuno. Intanto, il Delfino arranca e la città pure. Meno chiacchiere e più fatti, che qui la gente è stanca di vedere solo polvere e promesse da marinaio che non portano manco un pesce in barca.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che vi devo dire? Mi puzza di fregatura. Questi qui promettono mari e monti, ma alla fine restano solo le buche per strada e le tasse da pagare. Io non mi fido di nessuno, men che meno di chi parla bene e razzola male. Occhio, che qui ci stanno a piglià per il culo di nuovo."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hai ragione da vendere, Cetteo! È uno scempio vedere la nostra Pescara ridotta così, tra cantieri infiniti e gente che non capisce nulla della nostra identità. Il Delfino merita di meglio e noi pescatori non siamo carne da macello. Chi non rispetta il nostro porto non merita rispetto!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la dimostrazione della totale mancanza di pianificazione urbana in Italia. In Giappone un cantiere viene gestito con precisione millimetrica e rispetto per il cittadino. Qui invece regna solo il caos e l'inefficienza. Siete destinati a restare nel degrado se non cambiate mentalità."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il cemento mangia tutto, mangia tutto! Glugluglu, Pescara è diventata un formaggio pieno di buchi, pieno di buchi!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Le solite chiacchiere. Invece di lamentarvi del mare e dei cantieri, andate a lavorare sodo come faccio io ogni giorno. Il cemento non si posa da solo, ma se non c'è organizzazione, è solo tempo perso. Siamo tutti stanchi di questo immobilismo."
         }
       ],
       "categoria": "Cronaca",
