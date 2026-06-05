@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.877,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "05/06/2026"
   },
@@ -51,14 +51,14 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Lars→Hiroki": {
-    "score": -0.273,
-    "label": "diffidente",
+    "score": -0.173,
+    "label": "neutro",
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Hiroki→Juizinho": {
-    "score": -0.9,
+    "score": -0.8,
     "label": "ostile",
-    "ultimo_aggiornamento": "01/06/2026"
+    "ultimo_aggiornamento": "05/06/2026"
   },
   "Cetteo→Lars": {
     "score": -1,
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Hiroki→Lars": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "05/06/2026"
   },
@@ -91,9 +91,9 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Juizinho→Lars": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
-    "ultimo_aggiornamento": "04/06/2026"
+    "ultimo_aggiornamento": "05/06/2026"
   },
   "Hiroki→Redazione": {
     "score": -0.242,
@@ -121,7 +121,7 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Hiroki→Autore": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "05/06/2026"
   },
@@ -221,7 +221,7 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Lilli→Juizinho": {
-    "score": -0.695,
+    "score": -0.795,
     "label": "ostile",
     "ultimo_aggiornamento": "05/06/2026"
   },
@@ -276,7 +276,7 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Lars→Glusi": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "05/06/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "25/05/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "05/06/2026"
   },
@@ -666,7 +666,7 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Wolf→Autore": {
-    "score": -0.9,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "05/06/2026"
   },
@@ -1421,9 +1421,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Hiroki→Lucap": {
-    "score": 0.466,
+    "score": 0.666,
     "label": "simpatico",
-    "ultimo_aggiornamento": "03/06/2026"
+    "ultimo_aggiornamento": "05/06/2026"
   },
   "Cetteo→Lucap": {
     "score": -1,
@@ -1431,7 +1431,7 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Lilli→Lucap": {
-    "score": 0.82,
+    "score": 0.72,
     "label": "amico",
     "ultimo_aggiornamento": "05/06/2026"
   },
@@ -1751,7 +1751,7 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Glusi→Enzino": {
-    "score": 0.864,
+    "score": 0.964,
     "label": "amico",
     "ultimo_aggiornamento": "05/06/2026"
   },
@@ -1831,8 +1831,8 @@
     "ultimo_aggiornamento": "28/04/2026"
   },
   "Lucap→Glusi": {
-    "score": 0.203,
-    "label": "neutro",
+    "score": 0.303,
+    "label": "simpatico",
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Cronista→Cetteo": {
@@ -2108,7 +2108,7 @@
   "Glusi→Tutti": {
     "score": -0.272,
     "label": "diffidente",
-    "ultimo_aggiornamento": "25/05/2026"
+    "ultimo_aggiornamento": "05/06/2026"
   },
   "Lilli→Giocatori": {
     "score": -0.077,
@@ -2586,9 +2586,9 @@
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Hiroki→Tifosi violenti": {
-    "score": -0.246,
+    "score": -0.546,
     "label": "diffidente",
-    "ultimo_aggiornamento": "13/05/2026"
+    "ultimo_aggiornamento": "05/06/2026"
   },
   "Wolf→Tifosi": {
     "score": -0.077,
@@ -2866,8 +2866,8 @@
     "ultimo_aggiornamento": "27/05/2026"
   },
   "Wolf→Tifosi violenti": {
-    "score": -0.504,
-    "label": "diffidente",
+    "score": -0.704,
+    "label": "ostile",
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Tifosi (Cetteo, Lilli, Glusi)→Società Pescara": {
@@ -3276,9 +3276,9 @@
     "ultimo_aggiornamento": "22/05/2026"
   },
   "Enzino→Autore": {
-    "score": 0.177,
-    "label": "neutro",
-    "ultimo_aggiornamento": "22/05/2026"
+    "score": 0.477,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "05/06/2026"
   },
   "Lilli→Ultras violenti": {
     "score": -0.177,
@@ -3406,9 +3406,9 @@
     "ultimo_aggiornamento": "25/05/2026"
   },
   "Enzino→Lars": {
-    "score": 0.066,
+    "score": 0.266,
     "label": "neutro",
-    "ultimo_aggiornamento": "26/05/2026"
+    "ultimo_aggiornamento": "05/06/2026"
   },
   "Glusi→tutti": {
     "score": -0.066,
@@ -3706,7 +3706,7 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Lilli→Tifosi violenti": {
-    "score": -0.3,
+    "score": -0.6,
     "label": "diffidente",
     "ultimo_aggiornamento": "05/06/2026"
   },
