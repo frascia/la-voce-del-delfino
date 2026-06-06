@@ -1,5 +1,5 @@
 {
-  "_runCount": 10,
+  "_runCount": 11,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "06/06/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.027,
+    "score": 0.227,
     "label": "neutro",
     "ultimo_aggiornamento": "06/06/2026"
   },
@@ -186,8 +186,8 @@
     "ultimo_aggiornamento": "14/05/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.81,
-    "label": "amico",
+    "score": 0.61,
+    "label": "simpatico",
     "ultimo_aggiornamento": "06/06/2026"
   },
   "Enzo→Glusi": {
@@ -301,17 +301,17 @@
     "ultimo_aggiornamento": "04/06/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "06/06/2026"
   },
   "Cetteo→Lilli": {
-    "score": 0.3,
+    "score": 0.4,
     "label": "simpatico",
     "ultimo_aggiornamento": "06/06/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "06/06/2026"
   },
@@ -508,7 +508,7 @@
   "Wolf→Lars": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "05/06/2026"
+    "ultimo_aggiornamento": "06/06/2026"
   },
   "Cetteo→Wolf": {
     "score": 0.729,
@@ -621,12 +621,12 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Autore→Lars": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "05/06/2026"
+    "ultimo_aggiornamento": "06/06/2026"
   },
   "Autore→Wolf": {
-    "score": -0.6,
+    "score": -0.4,
     "label": "diffidente",
     "ultimo_aggiornamento": "06/06/2026"
   },
@@ -636,7 +636,7 @@
     "ultimo_aggiornamento": "06/06/2026"
   },
   "Autore→Glusi": {
-    "score": 0.828,
+    "score": 0.928,
     "label": "amico",
     "ultimo_aggiornamento": "06/06/2026"
   },
@@ -646,8 +646,8 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Lilli→Autore": {
-    "score": -0.2,
-    "label": "neutro",
+    "score": -0.4,
+    "label": "diffidente",
     "ultimo_aggiornamento": "06/06/2026"
   },
   "Abbukk→Cetteo": {
@@ -991,14 +991,14 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "06/06/2026"
   },
   "Autore→Lilli": {
-    "score": -0.9,
+    "score": -0.8,
     "label": "ostile",
-    "ultimo_aggiornamento": "03/06/2026"
+    "ultimo_aggiornamento": "06/06/2026"
   },
   "Lars→Topengo": {
     "score": 1,
@@ -1421,9 +1421,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Hiroki→Lucap": {
-    "score": 0.666,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "05/06/2026"
+    "score": 0.766,
+    "label": "amico",
+    "ultimo_aggiornamento": "06/06/2026"
   },
   "Cetteo→Lucap": {
     "score": -1,
@@ -1481,9 +1481,9 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Glusi→Lucap": {
-    "score": 0.609,
+    "score": 0.509,
     "label": "simpatico",
-    "ultimo_aggiornamento": "03/06/2026"
+    "ultimo_aggiornamento": "06/06/2026"
   },
   "Wolf→Amministrazione": {
     "score": -0.9,
@@ -1681,9 +1681,9 @@
     "ultimo_aggiornamento": "24/04/2026"
   },
   "Lars→Lucap": {
-    "score": 0.482,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "27/05/2026"
+    "score": 0.782,
+    "label": "amico",
+    "ultimo_aggiornamento": "06/06/2026"
   },
   "Topengo→Lilli": {
     "score": 0.8,
@@ -1821,9 +1821,9 @@
     "ultimo_aggiornamento": "28/04/2026"
   },
   "Autore→Lucap": {
-    "score": 0.041,
+    "score": -0.159,
     "label": "neutro",
-    "ultimo_aggiornamento": "20/05/2026"
+    "ultimo_aggiornamento": "06/06/2026"
   },
   "Autore→Juizinho": {
     "score": -0.041,
@@ -2371,9 +2371,9 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Lucap→Lars": {
-    "score": 0.766,
+    "score": 0.866,
     "label": "amico",
-    "ultimo_aggiornamento": "04/06/2026"
+    "ultimo_aggiornamento": "06/06/2026"
   },
   "Lilli→Burger King": {
     "score": -0.313,
@@ -3763,6 +3763,11 @@
   "Glusi→Plastic Free": {
     "score": 0.3,
     "label": "simpatico",
+    "ultimo_aggiornamento": "06/06/2026"
+  },
+  "Lilli→Plastic Free": {
+    "score": 0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "06/06/2026"
   }
 }
