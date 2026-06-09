@@ -1,5 +1,5 @@
 {
-  "_runCount": 11,
+  "_runCount": 12,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "09/06/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.8,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "09/06/2026"
   },
@@ -51,14 +51,14 @@
     "ultimo_aggiornamento": "07/06/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.604,
-    "label": "simpatico",
+    "score": 0.704,
+    "label": "amico",
     "ultimo_aggiornamento": "09/06/2026"
   },
   "Hiroki→Juizinho": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "08/06/2026"
+    "ultimo_aggiornamento": "09/06/2026"
   },
   "Cetteo→Lars": {
     "score": -1,
@@ -68,7 +68,7 @@
   "Cetteo→Juizinho": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "07/06/2026"
+    "ultimo_aggiornamento": "09/06/2026"
   },
   "Juizinho→Hiroki": {
     "score": -1,
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "09/06/2026"
   },
   "Hiroki→Lars": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "09/06/2026"
   },
@@ -86,14 +86,14 @@
     "ultimo_aggiornamento": "09/06/2026"
   },
   "Lars→Juizinho": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "06/06/2026"
+    "ultimo_aggiornamento": "09/06/2026"
   },
   "Juizinho→Lars": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "07/06/2026"
+    "ultimo_aggiornamento": "09/06/2026"
   },
   "Hiroki→Redazione": {
     "score": -0.218,
@@ -211,8 +211,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.5,
-    "label": "simpatico",
+    "score": 0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "09/06/2026"
   },
   "Glusi→Cetteo": {
@@ -236,7 +236,7 @@
     "ultimo_aggiornamento": "07/06/2026"
   },
   "Lilli→Lars": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "09/06/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "09/06/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "09/06/2026"
   },
@@ -1586,9 +1586,9 @@
     "ultimo_aggiornamento": "23/04/2026"
   },
   "Glusi→Politica": {
-    "score": -0.015,
-    "label": "neutro",
-    "ultimo_aggiornamento": "23/04/2026"
+    "score": -0.215,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "09/06/2026"
   },
   "Hiroki→Classe politica locale": {
     "score": -0.115,
@@ -3431,9 +3431,9 @@
     "ultimo_aggiornamento": "26/05/2026"
   },
   "Hiroki→Zerocalcare": {
-    "score": -0.425,
+    "score": -0.525,
     "label": "diffidente",
-    "ultimo_aggiornamento": "03/06/2026"
+    "ultimo_aggiornamento": "09/06/2026"
   },
   "Cetteo→Zerocalcare": {
     "score": -0.571,
@@ -3839,5 +3839,20 @@
     "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "08/06/2026"
+  },
+  "Cetteo→Politica": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "09/06/2026"
+  },
+  "Lilli→Politica": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "09/06/2026"
+  },
+  "Hiroki→Cultura Locale": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "09/06/2026"
   }
 }
