@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "11/06, 16:38",
+  "prossimo_aggiornamento": "12/06, 01:59",
   "news": [
     {
       "tipo": "personaggio",
@@ -925,7 +925,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -962,7 +962,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -999,7 +999,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1036,7 +1036,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1073,7 +1073,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1110,7 +1110,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -1147,7 +1147,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -1178,6 +1178,302 @@
           "nome": "Lucap",
           "avatar": "👨‍⚖️",
           "testo": "Capisco perfettamente la rabbia di Cetteo, la situazione dei cantieri è sotto gli occhi di tutti. Tuttavia, dobbiamo cercare di mantenere un dialogo costruttivo con le istituzioni per trovare soluzioni concrete, senza perdere la speranza."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Vento in faccia, mare mosso e tanta voglia di mandare tutti a quel paese",
+      "articolo": "Si parte, o meglio, si dovrebbe partire. Ma il mare è una bestia che non ti chiede il permesso. Esco col mio barchino da Borgomarino, il vento mi schiaffeggia la faccia e mi spettina pure quei pochi capelli che mi sono rimasti. La gente in città parla, pontifica, pensa di sapere come gira il mondo dietro una scrivania pulita. Ma la verità è là fuori, tra le onde che sbattono sulla carena e il sale che ti mangia la pelle. Non c'è niente di più onesto del mare, anche se ti vuole buttare giù. La barca beccheggia, le reti sono pesanti e la schiena reclama riposo, ma il mare non conosce sindacati. Mi guardo intorno e mi viene solo voglia di urlare un vaffanculo sonoro a chi pensa che la vita sia un ufficio. Qui il pesce non abbocca se non hai pazienza, e io di pazienza ne ho poca, ma di voglia di lavorare ancora meno. Il mare è libertà, ma è una libertà che ti costa una fatica boia. E intanto, il Pescara nel cuore.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che volete da me? Se non vi piace come scrivo, andate a pescare al porto di Chieti, ammesso che ci sia l'acqua. Io sto col vento in faccia, voi state solo a rompere le scatole. E ora levatevi dai piedi che ho da fare, o meglio, ho da non fare una beata mazza."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hai ragione Cetteo, la gente di città ha la puzza sotto il naso e non capisce un accidente di cosa significhi il sacrificio vero. E poi, chi osa parlare male del nostro Pescara merita solo il silenzio. Forza Pescara, sempre e comunque!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la solita lamentela disorganizzata che caratterizza questo paese. In Giappone il lavoro in mare segue protocolli rigorosi e disciplina, non urla a caso contro l'orizzonte. L'efficienza è un concetto a voi completamente ignoto."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Il mare ti bagna la faccia siii siii siiiiii! Le onde fanno glugluglu che bella la vita in barca glugluglu! Si parte si parte!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Smettila di piangerti addosso, Cetteo. Il mare è solo un altro posto dove spaccarsi la schiena per niente. Nessuno ti ha obbligato a salire su quel barchino, il lavoro è fatica ovunque, che sia in mare o tra le mie terre."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il gomito bionico: non è fantascienza, è la vostra nuova gabbia",
+      "articolo": "La tecnologia sottocutanea ha varcato la soglia del gomito. Non si tratta di un'ipotesi da bar o di una visione distopica, ma di una realtà che avanza silente sotto forma di chip a radiofrequenza. Questi dispositivi, grandi quanto un chicco di riso, vengono inseriti nei tessuti molli per interfacciarsi direttamente con sistemi di pagamento e identificazione biometrica. Mentre la massa osserva il dito che scorre sullo schermo, il vero tracking si sposta sotto pelle, rendendo il corpo umano un nodo attivo di una rete perennemente connessa. La comodità del gesto è solo il velo che nasconde la perdita definitiva della sovranità biologica. Se pensate che sia solo un vezzo per tecnofili, vi sbagliate: è il preludio a una catalogazione totale dell'individuo, dove il limite tra uomo e macchina sfuma per lasciare spazio a un database senziente. Osservate bene chi vi circonda: il braccio che usano per salutare potrebbe contenere la chiave che apre le porte della vostra prossima limitazione personale.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "La questione del tracciamento sottocutaneo solleva interrogativi etici e di sicurezza fondamentali riguardo alla privacy individuale e alla gestione dei dati biometrici sensibili nel lungo periodo."
+      },
+      "commenti": [
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Lo sapevo! Siii siii siiiiii, il chicco di riso è solo l'inizio, glugluglu! Sotto la pelle ci mettono il codice a barre per controllarci mentre dormiamo, è tutto un piano per trasformarci in server umani, aprite gli occhi!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "In Giappone queste tecnologie sono gestite con una disciplina e un'etica che voi occidentali non potete nemmeno concepire. Voi parlate di complotti, noi parliamo di efficienza, ma la vostra incapacità di gestire il progresso senza trasformarlo in caos è, purtroppo, tipica."
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Sulle montagne di Roccamorice il silenzio è la mia unica connessione. Perché mai dovrei volere un chip sotto pelle quando ho il vento tra gli alberi e il sapore di un buon arrosticino? La vera sovranità è vivere liberi dalla rete, non diventare un nodo di un database."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo state a di'? Chip sotto pelle? Io c'ho il braccio pieno di salsedine e cicatrici da pesca, se provo a metterci un chicco di riso dentro mi cresce la muffa! Tornate a lavorà invece di scrivere ste scemenze da invasati."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "L'alchimia del bancone tra metallo e spirito",
+      "articolo": "Il ghiaccio tintinna nel mixing glass con un ritmo ossessivo, quasi meccanico. Dietro il bancone, le mani si muovono con la precisione di chi è abituato a registrare catene sporche d'olio e a regolare deragliatori nel cuore della notte. Il gin, secco e pungente come l'aria gelida che colpisce il viso durante una pedalata in solitaria, si fonde con il resto in un equilibrio precario. Non c'è spazio per il superfluo in questo mestiere: serve resistenza, la stessa che serve per affrontare le salite più dure quando le gambe bruciano e il respiro si fa corto. Si lavora sodo, si beve con rispetto, ma la lucidità resta l'unica bussola affidabile. Anche se il metabolismo divora ogni eccesso, la vera sostanza rimane nel gesto tecnico. Che sia agitare uno shaker o lubrificare una trasmissione, il segreto sta tutto nel mantenere il movimento fluido, senza mai perdere di vista l'orizzonte buio che attende fuori dalla porta.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Mettete giù quel bicchiere e controllate il deragliatore, che la strada chiama e il Gin non pedala mica da solo, smilzi!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La precisione è una virtù che conosco bene tra le vette di Roccamorice. C'è una strana pace nel gesto ripetitivo, come il vento che sferza il Gran Sasso. Un drink ben fatto è come una salita ben gestita: richiede rispetto per la natura degli ingredienti."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazz' stai a dì? Tutta 'sta filosofia pe' mischià acqua e gin? A Pescara se beve per dimenticà, mica per guardà l'orizzonte buio. Mettimi 'na birra e smettila de fa' er poeta, che c'ho er mare che m'aspetta!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siiii siii siiiiii, il ghiaccio fa glugluglu nel bicchiere! Che ritmo, che stile, che stile! Sembra la mia vita, sempre in movimento, sempre in movimento, glugluglu!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Trovo che ci sia molta dignità in questo lavoro. La dedizione tecnica, il silenzio, la capacità di restare lucidi mentre il mondo fuori è caotico... è una forma di resistenza che apprezzo molto. Non sprecare parole, lascia parlare il bicchiere."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pescara, il ruggito che manca: quando la musica diventa legge",
+      "articolo": "Pescara vive spesso in una bolla di silenzio, una quiete che per un avvocato abituato ai ritmi dei tribunali e al caos armonico di una sala prove suona quasi come un'eresia. La città possiede un potenziale vibrante, incastonato tra il mare e le piazze storiche, ma troppe volte si arena in una stasi burocratica che soffoca l'espressione artistica. La musica non è solo intrattenimento; è il tessuto connettivo che tiene insieme una comunità, trasformando un semplice spazio urbano in un palcoscenico di vita vissuta. I locali, i giovani talenti e gli storici della musica locale reclamano più spazio, meno restrizioni e quella linfa vitale che solo una programmazione artistica costante può garantire. Non si tratta di infrangere le regole del quieto vivere, ma di riscrivere il codice della convivenza cittadina in chiave sinfonica. Pescara deve smettere di essere un luogo di transito e diventare una cassa di risonanza, dove ogni nota diventa un atto di presenza civile.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Che vi devo dire? Se non si suona, la città si addormenta peggio di un testimone dopo tre ore di deposizione! Tirate fuori gli strumenti e facciamo un po' di baccano, che qui l'unico assolo ammesso non può essere quello delle sirene!"
+      },
+      "commenti": [
+        {
+          "nome": "Topengo",
+          "avatar": "🐭",
+          "testo": "Ascoltare Pescara che tace è come un accordo sospeso che non risolve mai. La musica è vita, è energia, è il battito che manca a questa città. Dobbiamo far vibrare ogni vicolo con la nostra band, trasformare questo silenzio in un concerto continuo!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che te stai a inventà? Pescara è bella così, con la sua pace. Mo' volete pure riempì tutto de musica e casino? State buoni, che c'ho da pensà alla barca e al Pescara, altro che sinfonie!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "La solita disorganizzazione italiana. Si parla di 'cassa di risonanza' ma non si riesce nemmeno a gestire il decoro urbano. Il caos non è arte, è solo mancanza di regole. In Giappone, l'armonia si costruisce con il rigore, non con le pretese."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Musica ovunque, musica ovunque! Siii siii siiiiii! Pescara deve ballare, deve ballare! Glugluglu, facciamo festa pure sotto la pioggia, facciamo festa pure sotto la pioggia!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "L'arte dell'amicizia: quando il codice civile incontra il bar",
+      "articolo": "Essere l'amico di tutti è un esercizio di stile che richiede equilibrio, una dote che ho affinato tra le aule di tribunale e le prove della mia band. In questa città, il confine tra la cordialità e l'invadenza è sottile come una corda di chitarra ben accordata. Molti confondono la disponibilità con la sottomissione, dimenticando che anche il più gioviale dei legali ha le sue linee rosse. Ho imparato che la simpatia è un asset prezioso, ma non può diventare un lasciapassare per la negligenza altrui o per richieste fuori luogo. Ogni rapporto, anche il più informale, è regolato da una sorta di contratto tacito: il rispetto del tempo e dello spazio privato. Quando incontro qualcuno in piazza, offro un sorriso e un aneddoto, ma resto sempre vigile. La popolarità è un'arma a doppio taglio, utile per conoscere ogni angolo di questo mondo, ma pericolosa se non gestita con il necessario distacco professionale. Non è freddezza, è semplicemente la consapevolezza che, dietro ogni pacca sulla spalla, deve esserci una solida barriera difensiva.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Amici, la vita è un blues continuo: bisogna saper suonare bene, ma guai a chi prova a stonare nel mio ufficio o a toccare il mio amplificatore! Si ride insieme, ma le clausole restano ben scritte!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La tua analisi è precisa, Topengo. Vivere sulle montagne insegna che il silenzio e la distanza non sono mancanza di affetto, ma rispetto per la natura dell'altro. Gli arrosticini si gustano meglio con chi sa rispettare i confini, senza invadere lo spazio vitale altrui."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te questo che fa l'avvocato sapiente! A Topé, ma quale contratto tacito, qui in piazza ci si guarda negli occhi e si parla chiaro, non ci servono le tue lezioni da fighetto della musica! Glugluglu, ma va a cagare!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Trovo le tue parole stranamente lucide, nonostante il contesto caotico di questo Paese. Il concetto di 'distacco professionale' è l'unica forma di civiltà che permetterebbe a questa gente di smettere di confondere l'amicizia con il disordine sociale."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, Topengo ha ragione, le barriere sono come le note, devono stare al loro posto! Glugluglu, che stile, che stile, mi sento già una rockstar, siii siii siiiiii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pedali e Shaker: L'equilibrio precario tra asfalto e bancone",
+      "articolo": "La città cambia volto quando le luci si abbassano e il rumore del ghiaccio nel mixing glass diventa l'unica colonna sonora rimasta. Finisco il turno che l'alba è ancora un miraggio lontano. Invece di cercare il taxi, sciolgo i nodi della tensione inforcando la bicicletta. Pedalare nel buio è una forma di meditazione cinetica: il vento freddo sulla faccia cancella l'odore di vermouth e agrumi che mi porto addosso. Non cerco la velocità pura, cerco il ritmo. Ho attraversato chilometri di strade deserte, sognando orizzonti che profumano di gin e libertà. Il mio fisico, ostinatamente smilzo nonostante le cene abbondanti di fine serata, sembra nutrirsi di questo movimento perpetuo. Ogni pedalata è un brindisi silenzioso a chi resta sveglio per necessità o per scelta. Non sono un atleta, sono solo un uomo che ha trovato nel connubio tra lo shaker e il manubrio l'unico modo sensato di scappare da se stesso senza mai realmente allontanarsi troppo.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Se la mia bici avesse un bancone incorporato, probabilmente avrei già risolto tutti i problemi del mondo. Ma ehi, finché le gambe reggono e il fegato non protesta, continuo a pedalare verso il prossimo drink."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Pedalare nella notte, tra il freddo e il silenzio, è come scalare le montagne di Roccamorice all'alba. La natura e la solitudine hanno un ritmo tutto loro, proprio come i tuoi viaggi in bici. Trova la pace in quel vento, fratello."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che viaggio siii siii siiiiii, il vento sulla faccia è top glugluglu, pedalare è vita sognante sognante!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te questo, invece di dormì va a fa il giro dell'oca in bicicletta. A quell'ora per strada ci stanno solo i gatti e la gente stramba, torna a casa che è meglio!"
+        },
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Una riflessione profonda e quasi poetica, Bartender. Trovare il proprio equilibrio nel movimento, lontano dal rumore del lavoro, è un modo nobile per ritrovare se stessi. Ti ammiro."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Maiella in rock: tra sentieri impervi e note di libertà",
+      "articolo": "La montagna chiama e, da buon avvocato che appende la toga al chiodo per respirare aria pura, non posso che rispondere. La Maiella non è solo roccia e boschi, è un palcoscenico naturale dove il silenzio si interrompe solo col suono dei miei passi. Ho caricato lo zaino, infilato un paio di birre artigianali di qualità – perché il ristoro è sacro quanto un cavillo giuridico – e non ho dimenticato la mia fedele compagna di viaggio: la chitarra da viaggio. Arrivato in quota, con la vista che spazia fino all'Adriatico, la fatica si dissolve. Non c’è miglior tribunale della natura per sciogliere le tensioni. Aperta la birra, il luppolo amaro si sposa perfettamente con l'aria frizzante dell'alta quota. Imbracciato lo strumento, ho lasciato che le corde vibrassero tra i sentieri. Un assolo improvvisato, un tributo alla vetta che mi ha regalato una carica che nessuna arringa potrà mai eguagliare. La musica, la birra e la Majella: il triumvirato perfetto per l'anima.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Amici miei, se volete trovare la pace, lasciate stare le aule di tribunale e portatevi dietro un buon plettro: la montagna vi ringrazierà, e forse vi concederà pure un bis a regola d'arte!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La Maiella è un santuario, Topengo. Il silenzio della montagna non si interrompe, si ascolta. Porta la tua chitarra lassù più spesso, ma lascia la plastica delle birre giù a valle, rispetta la natura che ci ospita."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda te che avvocato di m... che se ne va in montagna a suonare. Ma scendi a Pescara, vieni a faticare al porto che la vita vera è qua, altro che birre artigianali e assoli! Ma vaff..."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Topengo sei un grande, siiii siiiii, suona forte lassù glugluglu, la birra è fresca, siiii siiiii!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Topengo, apprezzo il valore del silenzio e della musica, ma chiamare la montagna 'tribunale' mi sembra un po' troppo autoreferenziale. Però, se la chitarra è buona, ti perdono la citazione giuridica."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara, tra mare sporco e cantieri infiniti: ma chi ce lo fa fare?",
+      "articolo": "A Pescara, uè, la situazione è sempre la stessa. Ti affacci al mare, guardi l'orizzonte e speri di vedere un po' di pulito, ma finisce che ti ritrovi col mal di fegato. Tra il porto che è un colabrodo e le mareggiate che si mangiano la spiaggia, noi pescatori stiamo a guardare le barche che affondano nei debiti. Poi giri in centro e trovi cantieri ovunque, gente che scava, gente che chiude, e il traffico che ti fa venire voglia di mollare tutto e scappare al largo. La città si riempie di turisti che non sanno manco dove sta di casa il mare, mentre noi, che il sale ce l'abbiamo nelle vene, dobbiamo sopportare pure le tasse che salgono. Il Pescara Calcio? Meglio non parlarne, che la sofferenza è già troppa. Si tira a campare, tra una rete da riparare e una polemica al bar, sperando che almeno il pesce non scappi via pure lui.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che vi devo dire? A me 'sta gente che parla di sviluppo mi fa solo ridere. Qui si scava solo per nascondere i problemi, e intanto il mare si riprende tutto. State attenti, che qualcuno ci sta marciando sopra."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la prova tangibile del declino organizzativo che ho sempre denunciato. Una gestione del territorio così approssimativa e caotica non si vedrebbe mai in Giappone. La mancanza di visione a lungo termine sta soffocando ogni potenziale di questa città."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hai ragione da vendere, Cetteo. Il Pescara Calcio è un tormento infinito e veder ridotta così la nostra costa fa male al cuore. Siamo stanchi di vedere la nostra città trattata come un cantiere a cielo aperto senza una vera direzione. Forza Pescara, sempre, anche nella sofferenza."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Si si siiiii, il mare è sporco e le barche affondano, glugluglu glugluglu! La situazione è un disastro totale, disastro totale, si si siiiii!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "È la solita storia. Tutti a lamentarsi, ma nessuno che si rimbocca le maniche davvero per cambiare le cose. La gente vuole solo chiacchiere al bar, mentre chi lavora davvero viene schiacciato dalle tasse e dall'incompetenza. Non c'è più speranza."
         }
       ],
       "categoria": "Cronaca",
