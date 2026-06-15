@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "14/06/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "15/06/2026"
   },
@@ -121,7 +121,7 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.351,
+    "score": -0.551,
     "label": "diffidente",
     "ultimo_aggiornamento": "15/06/2026"
   },
@@ -146,9 +146,9 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Hiroki→Pescara": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "12/06/2026"
+    "ultimo_aggiornamento": "15/06/2026"
   },
   "Enzo→Generazione Giovane": {
     "score": -0.018,
@@ -216,7 +216,7 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "15/06/2026"
   },
@@ -301,8 +301,8 @@
     "ultimo_aggiornamento": "13/06/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.6,
-    "label": "diffidente",
+    "score": -0.8,
+    "label": "ostile",
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Cetteo→Lilli": {
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Lilli→Hiroki": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "15/06/2026"
   },
@@ -351,9 +351,9 @@
     "ultimo_aggiornamento": "14/06/2026"
   },
   "Abbukk→Hiroki": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/06/2026"
+    "ultimo_aggiornamento": "15/06/2026"
   },
   "Abbukk→Juizinho": {
     "score": -0.024,
@@ -626,7 +626,7 @@
     "ultimo_aggiornamento": "13/06/2026"
   },
   "Autore→Wolf": {
-    "score": -0.716,
+    "score": -0.916,
     "label": "ostile",
     "ultimo_aggiornamento": "15/06/2026"
   },
@@ -636,12 +636,12 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Autore→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Lars→Wolf": {
-    "score": 0.037,
+    "score": 0.237,
     "label": "neutro",
     "ultimo_aggiornamento": "15/06/2026"
   },
@@ -661,14 +661,14 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Glusi→Wolf": {
-    "score": 0.027,
+    "score": 0.127,
     "label": "neutro",
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Wolf→Autore": {
-    "score": 0.423,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "13/06/2026"
+    "score": 0.723,
+    "label": "amico",
+    "ultimo_aggiornamento": "15/06/2026"
   },
   "Lars→Barista": {
     "score": 0.018,
@@ -908,7 +908,7 @@
   "Autore→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "13/06/2026"
+    "ultimo_aggiornamento": "15/06/2026"
   },
   "Miley Cyrus→Maxx Morando": {
     "score": 0.059,
@@ -1106,9 +1106,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Lamatte→Autore": {
-    "score": -0.6,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "13/06/2026"
+    "score": -0.9,
+    "label": "ostile",
+    "ultimo_aggiornamento": "15/06/2026"
   },
   "Topengo→Miley Cyrus": {
     "score": 0.02,
@@ -3351,9 +3351,9 @@
     "ultimo_aggiornamento": "01/06/2026"
   },
   "Lilli→Alessandro Del Piero": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "12/06/2026"
+    "ultimo_aggiornamento": "15/06/2026"
   },
   "Enzino→Glusi": {
     "score": 0.129,
@@ -3576,9 +3576,9 @@
     "ultimo_aggiornamento": "30/05/2026"
   },
   "Hiroki→Alessandro Del Piero": {
-    "score": -0.47,
+    "score": -0.27,
     "label": "diffidente",
-    "ultimo_aggiornamento": "08/06/2026"
+    "ultimo_aggiornamento": "15/06/2026"
   },
   "Glusi→Discussione": {
     "score": -0.059,
@@ -4073,6 +4073,16 @@
   "Lilli→Calciatori moderni": {
     "score": -0.3,
     "label": "diffidente",
+    "ultimo_aggiornamento": "15/06/2026"
+  },
+  "Glusi→Porto": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "15/06/2026"
+  },
+  "Wolf→Alessandro Del Piero": {
+    "score": 0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "15/06/2026"
   }
 }
