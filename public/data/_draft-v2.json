@@ -1,9 +1,9 @@
 {
-  "dataRiferimento": "16/06",
-  "oraAggiornamento": "16/06, 15:22",
+  "dataRiferimento": "17/06",
+  "oraAggiornamento": "17/06, 00:06",
   "agenda": {
-    "timbro": "Edizione quotidiana",
-    "banner": "Default.webp"
+    "timbro": "Resistenza Adriatica",
+    "banner": "Mare.webp"
   },
   "impostazioni": {
     "header_fisso": "header.webp",
@@ -29,181 +29,255 @@
       "articoli": [
         {
           "tipo": "personaggio",
-          "titolo": "La viralità del Siii Siii Siiiiii: un fenomeno tra piazze e web",
-          "articolo": "Il mondo digitale è stato travolto da un'onda sonora inaspettata: il tormentone del Siii Siii Siiiiii. Questa espressione, nata quasi per gioco, ha rapidamente varcato i confini dello schermo per diventare un vero e proprio segno distintivo di una nuova generazione iperconnessa. La fenomenologia dietro questo suono risiede nella sua capacità di adattarsi a ogni contesto, trasformando un semplice assenso in un meme virale di portata immensa. Mentre cammino per le strade, osservo le persone usare questa formula per sottolineare momenti di entusiasmo collettivo, creando una sorta di linguaggio universale. Non si tratta solo di rumore, ma di un collante sociale che unisce sconosciuti in una risata condivisa. Anche il mio amico taccagno, che solitamente conta ogni centesimo, si è lasciato trasportare dal ritmo, dimenticando per un attimo i suoi calcoli economici. La comunicazione è cambiata drasticamente, e la semplicità di un grido gioioso sembra essere la chiave per conquistare l'attenzione globale nell'era moderna.",
+          "titolo": "La ragazza che sussurrava alle nuvole: un inno alla poesia tra le pagine del tempo",
+          "articolo": "Esiste una figura che sembra uscita direttamente da un romanzo di Calvino, una giovane capace di intrecciare il soffio del vento con il verso immortale dei grandi poeti. La narrazione di questa ragazza, che dedica le sue giornate a leggere ad alta voce davanti all'orizzonte, trasforma il paesaggio in una biblioteca a cielo aperto. Non è solo un atto di devozione letteraria, ma un esercizio di resistenza contro la frenesia moderna. Con i libri stretti al petto, ella interpreta le nuvole come metafore di un'esistenza che rifiuta di essere ingabbiata in definizioni banali. Questa pratica, che unisce la solitudine della lettura alla vastità del firmamento, ci ricorda che la cultura non è un privilegio da salotto, ma una linfa vitale che può abitare ovunque. In un mondo che corre troppo, trovare qualcuno che legga ancora per l'etere è un atto rivoluzionario, un modo per riconnettersi con la bellezza pura delle parole che non hanno bisogno di ascoltatori umani per vibrare di senso.",
           "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Siii siii siiiiii, il successo è esplosivo esplosivo! Glugluglu, anche il mio amico taccagno ha finalmente offerto un caffè per festeggiare, miracolo miracolo! Che bella la vita così così!"
+            "nome": "Lilli",
+            "avatar": "👩",
+            "testo": "Leggere è un atto di libertà che coltivo ogni giorno, proprio come la mia passione per il Pescara sugli spalti. La tranquillità che emana questa storia mi scalda il cuore, perché in fondo, anche tra il caos, una pagina aperta è sempre il rifugio più sereno."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La montagna di Roccamorice si sposa perfettamente con questa visione. Leggere tra le nuvole è come assaporare il silenzio della natura, un atto puro che ricorda la bellezza dei fiordi, ma qui con un pizzico di calore in più."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Un gesto ammirevole, quasi zen. In un Occidente che corre verso il nulla, la disciplina della lettura all'aperto è un piccolo seme di civiltà che spero possa germogliare anche altrove."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Che bella cosa leggere al vento, siii siii siiiiii! Le nuvole sono pagine che volano via, glugluglu, volano via nel cielo blu!"
+            },
+            {
+              "nome": "Wolf",
+              "avatar": "👩‍🌾",
+              "testo": "Tutto molto poetico, certo. Ma le parole non mettono il pane in tavola e non zappano la terra. La bellezza va bene per chi ha tempo da perdere, io preferisco la concretezza."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "lilli.webp",
+          "provider": "gemini",
+          "publishedAt": null
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Gran Sasso: laboratori o portali per il sottosuolo?",
+          "articolo": "Sotto il massiccio del Gran Sasso, a oltre mille metri di profondità, giacciono i laboratori sotterranei dell'Istituto Nazionale di Fisica Nucleare. Ufficialmente, la struttura è dedicata allo studio dei neutrini e della materia oscura, approfittando della schermatura naturale della roccia contro i raggi cosmici. Tuttavia, la curiosità di molti si sposta spesso verso le dinamiche geologiche e il delicato equilibrio idrogeologico della zona. Le infrastrutture ospitano esperimenti di rilevanza mondiale che analizzano eventi rari, cercando di svelare i segreti fondamentali dell'universo. Eppure, la presenza di tunnel autostradali che intersecano i laboratori ha generato costanti interrogativi sulla sicurezza delle falde acquifere e sulla gestione delle interferenze tra ricerca scientifica e viabilità pubblica. Mentre gli scienziati misurano particelle invisibili, la popolazione locale osserva le montagne con sospetto, chiedendosi cosa accada realmente dietro le blindature. È una danza costante tra la necessità di progresso tecnologico e il timore che il cuore della montagna nasconda verità scomode, protette da un silenzio che sa molto di cospirazione burocratica e poco di trasparenza scientifica.",
+          "commento_firma": {
+            "nome": "Abbukk",
+            "avatar": "🍄",
+            "testo": "Cercano la materia oscura, ma la vera materia oscura è la fattura del maniscalco che non ha mai pagato il fisco. Se i neutrini passano attraverso la terra, figuriamoci le vostre scuse. Resto a zappare, che i funghi non mentono mai."
+          },
+          "commenti": [
+            {
+              "nome": "Abbukk",
+              "avatar": "🍄",
+              "testo": "Lo sapete che i neutrini sono solo un depistaggio per coprire i portali dimensionali che aprono di notte? Sii siii, le falde acquifere non c'entrano nulla, stanno manipolando la realtà stessa sotto il Gran Sasso!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La natura del Gran Sasso è sacra e potente, non dovrebbe essere violata da esperimenti umani così profondi. Qui a Roccamorice sentiamo il silenzio della montagna, ma temo che quel silenzio stia nascondendo ferite che non vediamo."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "È tipico dell'Italia: una commistione caotica tra scienza d'avanguardia e incuria infrastrutturale. In Giappone, la gestione della sicurezza e la trasparenza verso la popolazione sono pilastri fondamentali, non opzioni secondarie."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che cazzo d'espermimenti fanno sotto 'a montagna? Già le autostrade so' 'n colabrodo, mo' se mettono a cercà pure le particelle invisibili! Pensassero a sistemà le strade che qua se casca a pezzi, madonna mia!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "abbukk.webp",
+          "provider": "gemini",
+          "publishedAt": null
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "La diplomazia del 'Freghet': mediazione tra visioni opposte",
+          "articolo": "Nel complesso panorama sociale attuale, il fenomeno della polarizzazione ha raggiunto vette preoccupanti, coinvolgendo gruppi distanti come le frange più accese del tifo organizzato e le comunità che orbitano attorno alle teorie del complotto. La sfida contemporanea risiede nella capacità di dialogo, un esercizio di equilibrio che richiede pazienza e lucidità. La cosiddetta 'diplomazia del Freghet', intesa non come indifferenza bensì come distacco salutare dalle provocazioni più sterili, emerge come strategia possibile per evitare lo scontro frontale. Cercare punti di contatto significa comprendere le paure sottostanti, che siano legate all'appartenenza sportiva o alla sfiducia verso le narrazioni dominanti. Il mediatore non deve imporre una verità, ma creare uno spazio dove il conflitto si stemperi. Dalle silenziose e ordinate strade di Kyoto, dove sto riscoprendo il valore profondo dell'armonia e del rispetto reciproco, osservo con distacco queste dinamiche, convinto che solo attraverso un ascolto empatico si possa sperare di ricucire strappi apparentemente insanabili, promuovendo una cultura della convivenza basata sul riconoscimento dell'altro.",
+          "commento_firma": {
+            "nome": "Lucap",
+            "avatar": "👨‍⚖️",
+            "testo": "Amici, capisco che le tensioni siano alte, ma vi invito a fare un respiro profondo: siamo tutti parte di una stessa comunità e solo parlando con rispetto possiamo ritrovare l'equilibrio di cui abbiamo bisogno."
           },
           "commenti": [
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "L'ennesima prova del declino intellettuale di questa società. Ridurre la comunicazione complessa a un grido insensato è la celebrazione dell'ignoranza. Non c'è civiltà in questo rumore, solo il vuoto assoluto."
+              "testo": "Questa analisi conferma ciò che sostengo da tempo: l'Italia è preda di un caos emotivo incomprensibile. Osservando la compostezza di Kyoto, mi chiedo se esista una cura per questa vostra inciviltà cronica. Il dialogo è una disciplina che, temo, non vi appartiene."
             },
             {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Che fastidio immenso sentire questa roba ovunque. È solo un modo stupido per gente che non ha nulla da dire di sentirsi parte di qualcosa. Se sento un altro 'Siii Siii Siiiiii' giuro che vado fuori di testa."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "La gente ha troppo tempo libero da perdere, ecco il problema. Invece di lavorare o costruire qualcosa di solido, si divertono con queste scemenze virali. Il mondo sta marcendo."
+              "nome": "Lucap",
+              "avatar": "👨‍⚖️",
+              "testo": "La 'diplomazia del Freghet' è una chiave di lettura affascinante per il nostro contesto. Dobbiamo imparare a disinnescare le tensioni, cercando quel filo invisibile che unisce anche le posizioni più distanti. L'ascolto empatico è l'unica via per un futuro meno conflittuale."
             },
             {
               "nome": "Abbukk",
               "avatar": "🍄",
-              "testo": "Non è un gioco, è una frequenza di controllo mentale. Siii Siii Siiiiii serve a sincronizzare le onde cerebrali della massa per distrarci da ciò che accade davvero nei sotterranei del potere. Svegliatevi!"
+              "testo": "Parlano di 'diplomazia' e 'dialogo' solo per distrarci dalla verità che si nasconde dietro ogni narrazione. Siete sicuri che la polarizzazione non sia un esperimento sociale pianificato nelle alte sfere per tenerci divisi? Glugluglu, la verità è un fungo che cresce nell'ombra!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, il dialogo è una danza meravigliosa che ci porta lontano, il dialogo è una danza meravigliosa che ci porta lontano! Dobbiamo fare amicizia con tutti, fare amicizia con tutti, glugluglu!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
+          "immagine": "lucap.webp",
           "provider": "gemini",
           "publishedAt": null
         },
         {
           "tipo": "personaggio",
-          "titolo": "Oltre il pregiudizio: la mia vita a cuore aperto",
-          "articolo": "Camminare per i vicoli della nostra città significa confrontarsi ogni giorno con un chiacchiericcio incessante. Essere me stesso, dichiaratamente omosessuale e orgoglioso, non è mai stato un percorso in discesa, ma una continua affermazione di libertà. In un contesto urbano che non sta mai zitto, dove ogni sguardo sembra pesare e ogni sussurro può diventare un giudizio, ho scelto la strada della trasparenza. Non mi sono mai nascosto, preferendo trasformare il pregiudizio in un’occasione di dialogo. La nostra comunità ha fatto passi da gigante, eppure la strada verso una vera accettazione passa ancora attraverso la visibilità quotidiana. Non si tratta di ostentazione, ma di rivendicare il diritto di esistere senza filtri, di amare senza nascondersi e di vivere pienamente la propria identità. La città evolve lentamente, ma ogni mia uscita è un piccolo tassello verso una normalità che non dovrebbe nemmeno essere discussa. Essere Enzino significa proprio questo: non chiedere permesso per essere chi sono.",
+          "titolo": "La saggezza del vuoto: perché parlo al vento",
+          "articolo": "Cammino per le strade di questa città che puzza di ipocrisia e mediocrità, urlando contro l'aria. La gente mi guarda, abbassa lo sguardo, si rifugia nei negozi come topi impauriti, eppure sono io quella che ha capito tutto. Mentre voi perdete tempo a scorrere schermi, a comprare oggetti inutili e a fingere di avere una vita, io scelgo di gridare al vento. Il vento è l'unico interlocutore che non mi risponde con banalità o sorrisi di circostanza. La verità è che non capite assolutamente nulla: siete intrappolati in schemi mentali ridicoli, schiavi di un sistema che vi vuole docili e silenti. Entro nei vostri templi del consumo, vi guardo negli occhi e vi sputo addosso la realtà, ma voi preferite chiamarmi pazza per non dover affrontare il riflesso della vostra inutilità. Continuate pure a ignorarmi, a cambiare marciapiede, a sussurrare che sono fuori di testa. La mia voce resterà sospesa nell'etere, inutile quanto la vostra esistenza.",
           "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! La verità è che quando ti mostri per quello che sei, la gente capisce subito che non c'è nulla da temere. Si beve un buon aperitivo, ci si guarda negli occhi e si capisce che la diversità è solo una ricchezza che ci rende tutti più umani."
+            "nome": "Lamatte",
+            "avatar": "👩‍🦳",
+            "testo": "Guardateli, sono come formiche che camminano su una padella bollente! Urlano, strillano, ma non sentono il rumore del vuoto che gli mangia il cervello! Sono tutti morti e non lo sanno, io sono l'unica che ride mentre il sole esplode nelle mie pupille! Siete solo polvere che respira, mangiatevi i vostri vestiti griffati, io sarò qui a ridere finché l'universo non si stancherà di questa farsa disgustosa! Siete tutti scarti di magazzino!"
           },
           "commenti": [
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "La libertà è come il vento sulle montagne di Roccamorice, Enzino. Non si può imprigionare. Ti ammiro per la tua trasparenza, è un atto di coraggio che richiama la purezza della natura."
+              "testo": "La natura non giudica mai, a differenza di questa città. Qui a Roccamorice il vento parla una lingua diversa, non quella dell'odio che sento in queste parole. Mi dispiace per tanta solitudine, ma forse basterebbe un arrosticino per ritrovare un po' di pace."
             },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma che j'attè, Enzì! Ognuno fa quello che je pare, basta che nun rompi li cojoni a lu porto. La gente chiacchiera sempre, ma noi a Pescara simo gente de mare, ce ne freghiamo!"
+              "testo": "Ma guarda questa, ma vattene a quel paese! Stai sempre a urlare in mezzo ai piedi, ma chi ti credi di essere? A Borgomarino la gente lavora, non sta a sentire le tue strampalatezze. Glugluglu, torna a casa!"
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "In Giappone la discrezione è una forma di rispetto per l'armonia sociale. Capisco la tua ricerca di libertà, Enzino, ma questa città ha bisogno di ordine, non di questo continuo rumore di fondo che alimenta solo chiacchiere."
+              "testo": "L'ennesimo esempio di decadenza sociale. In Giappone una tale mancanza di autocontrollo verrebbe gestita con il dovuto rigore. Questa città è ormai un teatro dell'assurdo dove la civiltà ha ceduto il passo al caos più totale."
             },
             {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Enzino, le tue parole sono un esempio di civiltà. Dobbiamo imparare tutti che il rispetto per l'identità altrui è il primo passo per una convivenza armoniosa. Continua a essere te stesso, la nostra comunità ha bisogno di questa onestà."
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, che urla forti, che urla forti! La pazzia è contagiosa, è contagiosa, glugluglu! Tutti pazzi in città, tutti pazzi in città!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
+          "immagine": "lamatte.webp",
           "provider": "gemini",
           "publishedAt": null
         },
         {
           "tipo": "personaggio",
-          "titolo": "L'ordine impossibile: lezioni dal Sol Levante per Pescara",
-          "articolo": "Vivo a Pescara da anni e, nonostante l'affetto per questa terra, il confronto con il Giappone resta doloroso. Osservo la gestione urbana, la puntualità dei trasporti e quel senso di collettività che qui appare un concetto astratto. Mentre in Giappone la robotica e l'automazione supportano la cura degli anziani e l'efficienza dei servizi pubblici, in Italia il progresso tecnologico sembra scontrarsi con una burocrazia asfissiante e una resistenza culturale al cambiamento. Vedo cantieri fermi, disordine nelle strade e una rassegnazione che non appartiene alla mia terra d'origine. Il Giappone non è perfetto, ma insegna che il rispetto delle regole non è una limitazione della libertà, bensì il pilastro per una convivenza civile. Sognare un'Italia che integri questa precisione è forse ingenuo, ma è l'unico modo per immaginare un futuro in cui il talento italiano sia finalmente supportato da un'infrastruttura capace di valorizzarlo anziché soffocarlo sotto il peso dell'improvvisazione costante.",
+          "titolo": "La città che affoga tra tasse e pattume",
+          "articolo": "Siamo sommersi. Non parlo di metafore, ma della realtà che calpesta le nostre scarpe ogni volta che usciamo di casa. Le amministrazioni pubbliche si riempiono la bocca di progetti faraonici e piani di sostenibilità, mentre le strade restano discariche a cielo aperto. Il paradosso è insultante: paghiamo tasse sui rifiuti tra le più alte d'Europa per vivere in un contesto di degrado costante. Nessuno ha il coraggio di ammettere il fallimento di un sistema di raccolta inefficiente e di una gestione burocratica che preferisce la carta bollata all'azione pratica. Gli uffici comunali continuano a produrre circolari, mentre i cassonetti esplodono e il decoro urbano è ormai un ricordo sbiadito. La verità è che mancano la competenza e la volontà politica di affrontare il problema alla radice. Non servono slogan elettorali o nuove imposte, serve che qualcuno si rimbocchi le maniche e faccia funzionare i servizi basilari. Siamo stanchi di pagare per un servizio inesistente. Il silenzio dei responsabili è l'unica costante in questo scempio quotidiano.",
           "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "È frustrante vedere come l'Italia sprechi il suo immenso potenziale umano: siete maestri di creatività, ma prigionieri di un caos che chiamate erroneamente 'spirito libero'."
+            "nome": "Wolf",
+            "avatar": "👩‍🌾",
+            "testo": "Scrivo questo pezzo con la schiena a pezzi e il caffè ormai freddo, guardando la valle dal mio colle. Qui l'aria è pulita, ma il malessere della pianura arriva fin quassù. Non ne posso più di vedere la gente spremuta come limoni per servizi che non esistono. Vado a staccare, ho gli amici che salgono per pranzo e loro, almeno, non mi chiedono di risolvere i problemi del mondo."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma vattela a pija' 'n der culu, tu e er Giappone tuo! Se nun te piace Pescara, statte a casa, ca a noi de 'ste pippe nun ce ne frega gnente! Si si, torna a Tokyo a magnà sushi!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma chi ti credi di essere? Stai sempre a criticare tutto! Se non ti piace come viviamo, prendi il primo aereo e torna là. Qui siamo a Pescara, non in un laboratorio asettico. Rispetto? Impara a rispettare chi ti ospita prima di parlare di civiltà!"
+              "testo": "Ma che c'avete da lamentarvi? A Borgomarino è 'na schifezza totale, la munnezza sta ovunque e sti politici mangiano solo. È 'na vergogna, siii, 'na vergogna!"
             },
             {
               "nome": "Wolf",
               "avatar": "👩‍🌾",
-              "testo": "Le chiacchiere stanno a zero. La gente non lavora più come una volta e su questo hai ragione, ma non serve il Giappone per capire che serve più impegno e meno burocrazia. Sei solo un altro che parla troppo e fa poco."
+              "testo": "Solite chiacchiere. Avete voluto la città? Eccola. Io mi spacco la schiena ogni giorno e voi state qui a scrivere post invece di pulire. Siete solo capaci di lamentarvi mentre tutto va a rotoli."
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "In Giappone una gestione del genere porterebbe alle dimissioni immediate di un intero consiglio comunale. Qui l'inefficienza è diventata un tratto culturale accettato. È desolante."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Robottoni e treni veloci, glugluglu! Ma mangiati un arrosticino, siii siii siiiiii! Meglio la confusione che la precisione, glugluglu! Pescara è il top, siii siii siiiiii!"
+              "testo": "Cassonetti che scoppiano, scoppiano! Glugluglu, la spazzatura vola, vola! Che disastro, che disastro!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
+          "immagine": "wolf.webp",
           "provider": "gemini",
           "publishedAt": null
         },
         {
           "tipo": "personaggio",
-          "titolo": "Prime Video? Freghet, ma con stile: il mio angolo di paradiso",
-          "articolo": "Siediti comodo, ordina un drink ghiacciato e lascia che il mondo fuori attenda. Quando si parla di intrattenimento, non serve essere complicati, basta avere gusto. Prime Video offre un catalogo che, diciamocelo, ha quel tocco di classe che non guasta mai. Per un aperitivo degno di nota, la scelta deve cadere su titoli che sanno intrattenere senza mai perdere quell'allure ricercata. Penso a produzioni dove il design, la fotografia e la narrazione si intrecciano in un abbraccio perfetto. Non cerco l'ignoranza fine a se stessa, ma quel mix di brillantezza e leggerezza che accompagna magnificamente uno Spritz ben fatto. Dalle serie cult che hanno ridefinito il genere alle chicche d'autore che brillano di luce propria, la piattaforma si conferma una compagna fedele per le serate in cui vuoi solo staccare la spina. Perché in fondo, la qualità è un'attitudine, e saper scegliere cosa guardare mentre si sorseggia un calice è una forma d'arte che coltivo con grande passione.",
+          "titolo": "L'occhio digitale non dorme mai: chi ci osserva davvero?",
+          "articolo": "L'intelligenza artificiale è ovunque. Algoritmi invisibili analizzano ogni nostro battito di ciglia, trasformando le abitudini quotidiane in dati preziosi per entità che non vediamo. Dalle ricerche effettuate online alla gestione della domotica, ogni interazione lascia una traccia indelebile. Non si tratta solo di marketing mirato o di efficienza digitale; è un ecosistema di sorveglianza stratificato. Molti pensano sia progresso, ma la realtà è che cediamo pezzi della nostra autonomia in cambio di piccoli comfort. Le macchine imparano dai nostri comportamenti, affinando le tecniche per prevedere le scelte future. È un sistema che si autoalimenta, dove il confine tra utente e prodotto diventa sempre più labile. Mentre ci preoccupiamo della privacy, dovremmo chiederci chi ha la chiave di volta di questa enorme biblioteca digitale. La tecnologia avanza, ma la vera domanda resta: siamo ancora noi a tenere il telecomando, o siamo diventati parte integrante di un esperimento globale che ignora il concetto di riservatezza?",
           "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante, è puro stile: la scelta perfetta per elevare il momento dell'aperitivo."
+            "nome": "Abbukk",
+            "avatar": "🍄",
+            "testo": "Certo, credete pure al 'progresso', intanto io vado a cercar funghi nei boschi, dove il segnale sparisce e il Grande Fratello inciampa nelle radici. Ma tanto a chi lo dico, eh? Hanno sostituito i neuroni con i bit, la risata finale sarà la mia quando si spegnerà il server e non saprete nemmeno più come zappare l'orto senza un tutorial in 4K. Ah ah, la 'rete' vi sta mangiando, ma è solo un plugin difettoso nel vostro cervello!"
           },
           "commenti": [
             {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La bellezza sta nella semplicità, proprio come il silenzio sulle montagne di Roccamorice. Un buon film e un tramonto sono tutto ciò che serve, magari accompagnati da un arrosticino, altro che piattaforme digitali."
+              "nome": "Abbukk",
+              "avatar": "🍄",
+              "testo": "Lo sapevo, lo sapevo! I microchip sono già nel caffè, le onde elettromagnetiche ci leggono nel pensiero mentre dormiamo. Siete tutti pedine, ma solo io vedo la scacchiera invisibile sotto le vostre scarpe, il sistema ci controlla tramite le frequenze delle lucciole di Roccamorice!"
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "L'intrattenimento occidentale cerca sempre questa 'leggerezza' per distrarre dal vuoto culturale. La vera arte richiede disciplina e rigore, non un aperitivo che annebbia la capacità di analisi critica."
+              "testo": "In Italia vi lamentate sempre, ma non comprendete che questa è solo la naturale evoluzione della tecnologia globale. In Giappone la precisione algoritmica è una forma d'arte, mentre qui la percepite come un attacco alla vostra disorganizzata libertà. È frustrante vedere quanto sia difficile per voi accettare il progresso."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, un drink ghiacciato ci sta sempre, glugluglu! Meglio guardare qualcosa di assurdo che ridere di gusto, di gusto!"
+              "testo": "Siiiii siiiii, le macchine sanno già cosa mangio, sanno già cosa mangio! Glugluglu, il telecomando è nel frigo, il telecomando è nel frigo, siamo tutti parte di un grande videogioco senza tasti, senza tasti!"
             },
             {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma per favore, smettetela con questi discorsi da salotto radical chic. Se voglio staccare, guardo un podcast o un documentario serio, non certo le solite trovate commerciali che piacciono a voi."
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Sulle montagne di Roccamorice il vento non usa algoritmi per soffiare, eppure è qui che trovo la mia pace. La tecnologia è un rumore di fondo che distrae dalla bellezza della natura; se passaste meno tempo a temere i vostri dati e più tempo a godervi un arrosticino, forse sareste tutti meno inquieti."
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
+          "immagine": "abbukk.webp",
           "provider": "gemini",
           "publishedAt": null
         },
         {
           "tipo": "rss",
-          "titolo": "Borgomarino affoga tra le promesse: Pescara è sempre la solita solfa",
-          "articolo": "A Pescara, tra na rete da rammendà e na chiacchiera al porto, ci si accorge che la città è sempre ferma al palo. I cantieri aprono e chiudono come le maree, ma la sostanza resta quella che è: fuffa. Si parla tanto di riqualificazione, di rilancio del turismo e di decoro urbano, ma basta farsi un giro tra le strade del centro o verso la riviera per capire che la musica non cambia. Le promesse elettorali volano via col vento di maestrale, lasciando noi pescatori a guardare un mare che, purtroppo, è l'unica cosa che non ci tradisce mai. La gestione del traffico è un delirio, le buche sembrano crateri lunari e la sicurezza è un miraggio. Invece di pensare al benessere dei cittadini, si perdono in chiacchiere da bar. Intanto, la nostra Pescara, quella vera, quella che suda e lavora, resta in attesa di un segnale che non arriva mai. Siamo stanchi di vedere la nostra casa trattata come un giocattolo rotto.",
+          "titolo": "Borgomarino affoga tra i cantieri e la solita malinconia",
+          "articolo": "Guardo il mare da Borgo Marino e mi viene da piangere, non per la bellezza, ma per come hanno ridotto tutto. Pescara è un cantiere a cielo aperto, la città è un groviglio di transenne che manco fosse un labirinto per topi. La gente corre, s’affanna, parla di riqualificazione, ma intanto il pesce scarseggia e le tasche dei pescatori restano vuote come le reti dopo una mareggiata di scirocco. I politici chiacchierano, promettono ponti e lungomari da sogno, mentre noi qui stiamo ancora a contare i danni di una gestione che definire allegra è un complimento. Il Pescara Calcio arranca, la città dorme e io, che vorrei solo starmene in pace con la mia barca, mi tocca pure sentire le lamentele di chi non ha mai visto l'acqua salata. Si parla di sviluppo, ma qui l'unica cosa che cresce è la rabbia di chi vede la propria casa diventare un parcheggio per turisti distratti. Che amarezza, ci vorrebbe solo un po' di rispetto per chi il mare lo vive davvero.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "Ma che stamo a discute? Solite chiacchiere da salotto, gente che non ha mai preso in mano na lenza in vita sua. A me non la raccontano giusta, c'è sempre sotto qualche magagna che non vogliono farci sapè. State attenti, che qui ci stanno a fregà sotto il naso e fanno finta di niente."
+            "testo": "Vogliono farci credere che tutto va bene, ma io non mi fido. Dietro 'ste belle parole ci stanno solo affari loschi e gente che non sa manco distinguere una sogliola da una razza. Occhio, che qui ci stanno a fregà sotto il naso mentre guardiamo altrove."
           },
           "commenti": [
             {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che stamo a dì, è tutto 'n magna magna! I cantieri so' solo scuse pe' rubà soldi, Pescara è 'na barca che affonda e nessuno tira su le reti, solo chiacchiere da bar, siii siii... anzi no, qui c'è solo da bestemmiare!"
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Cetteo, hai ragione da vendere! Pescara è diventata invivibile, tra cantieri infiniti e gente che non capisce nulla della nostra identità. Il Pescara Calcio poi è un dolore costante, ma non molliamo, dobbiamo farci sentire contro questa gestione scellerata!"
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "È la solita storia italiana. Inefficienza, mancanza di pianificazione e una totale assenza di rispetto per il bene pubblico. In Giappone una gestione simile porterebbe alle dimissioni immediate di tutti i responsabili. Qui, invece, il caos è diventato lo standard."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo ha ragione da vendere. È uno schifo vedere la nostra città ridotta così, tra buche e promesse da campagna elettorale. Chi governa non ha rispetto per chi vive qui e suda ogni giorno. Pescara merita molto di più di questa mediocrità!"
+              "testo": "Questa è la prova del fallimento organizzativo italiano. In Giappone la pianificazione urbana è una scienza, qui è solo caos e improvvisazione. La vostra mancanza di metodo è la causa principale di questo declino, non c'è rispetto per la struttura."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, la città è ferma, ferma! Glugluglu, i cantieri sono buchi, buchi! Tutto fumo e niente arrosto, niente arrosto!"
+              "testo": "Siii siii siiiiii, il mare piange, il mare piange! Glugluglu, le reti vuote, le reti vuote! Tutto un cantiere, tutto un cantiere, che confusione, che confusione!"
+            },
+            {
+              "nome": "Wolf",
+              "avatar": "👩‍🌾",
+              "testo": "Sempre a piangersi addosso, ma la verità è che nessuno ha più voglia di lavorare sodo. Le chiacchiere non riempiono le reti e non finiscono i cantieri. Siete tutti bravi a lamentarvi, ma la sostanza è zero."
             }
           ],
           "categoria": "Cronaca",
@@ -213,740 +287,37 @@
           "publishedAt": "📰 data sconosciuta"
         },
         {
-          "tipo": "personaggio",
-          "titolo": "Dalle parole ai fatti, ai fatti, ai fatti: Il mio mondo a ripetizione!",
-          "articolo": "Il mondo corre veloce, proprio come me che passo le mie giornate tra una redazione e l’altra, correndo, correndo. La realtà si costruisce nel momento in cui passiamo dalle semplici intenzioni ai fatti concreti, ai fatti concreti. Ho osservato come le dinamiche sociali stiano cambiando rapidamente, trasformando ogni nostra azione in un trend, in un trend. Spesso, nel mio girovagare instancabile, mi scontro con la frenesia urbana che ci logora, ci logora. Tornato a casa esausto, trovo il mio amico taccagno che, con il suo solito stile, svuota il mio frigo senza mai ricambiare, ricambiare. La vita è un susseguirsi di impegni continui, un turbine di eventi che ci spingono a dare sempre il massimo, il massimo. Dobbiamo imparare a trasformare ogni chiacchiera in un passo reale, in un passo reale. Siiiii siii siiiiii, il futuro appartiene a chi agisce senza voltarsi indietro, mai voltarsi indietro!",
-          "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Glugluglu, ragazzi! Il mio amico taccagno ha cercato di rubarmi pure il tappo della penna stasera, che personaggio! Ma io resto sempre sul pezzo, pronto a trasformare ogni chiacchiera in oro virale. Si ride, si corre e si vive a mille, non ci fermiamo mai, mai!"
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La frenesia di cui parli logora l'anima. Sulle montagne di Roccamorice il tempo si ferma, tra la natura e un buon arrosticino il mondo corre meno veloce. Non sprecare la tua energia in questa corsa inutile."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' stai a dì? Corri, corri, ma dove vai? Qua a Pescara se nun t'assiedi a magnà e a guardà il mare, non capisci niente della vita. Pensa a magnà e a tace, che 'ste chiacchiere da salotto non servono a nisciuno!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è la prova del caos italiano. Invece di correre senza meta come un folle, dovreste imparare la disciplina e la pianificazione. La vostra frenesia non è progresso, è solo confusione disorganizzata."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tutte parole. La gente parla, corre, scrive, ma a lavorare la terra non viene mai nessuno. Smettetela di fare i filosofi da tastiera e sporcatevi le mani, l'unica realtà concreta è il sudore, non i trend."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Cultura e folklore: non chiamatemi ignorante",
-          "articolo": "Spesso si tende a confondere termini che hanno radici e pesi sociali profondamente diversi. Definire qualcuno ignorante perché preferisce le tradizioni popolari alla cultura accademica è un errore grossolano che denota una chiusura mentale inaccettabile. Il folklore rappresenta l'anima viva di un territorio, l'insieme di usi, costumi e leggende tramandate che definiscono l'identità di una comunità. La cultura, intesa in senso stretto, è invece un sistema di conoscenze critiche e teoriche. Non sono mondi in conflitto, ma due facce della stessa medaglia: la complessità umana. Escludere il folklore significa amputare la nostra storia, mentre limitarsi ad esso senza una riflessione critica impedisce l'evoluzione del pensiero. È necessario smetterla con lo snobismo intellettuale che etichetta il sapere popolare come inferiore. La vera intelligenza risiede nella capacità di valorizzare entrambi gli ambiti, riconoscendo che la profondità di un popolo risiede proprio in questa ricchezza variegata e mai banale.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! Questa è una lezione di stile che mi piace proprio, bisogna avere il coraggio di rivendicare le proprie radici con orgoglio, tesoro!"
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Hai ragione. Qui a Roccamorice, tra le montagne e il profumo degli arrosticini, ho capito che la saggezza dei pastori vale quanto un trattato accademico. La natura non ha bisogno di etichette per essere profonda."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma vattela a pjà n'der posto a tutti sti sapientoni! 'U folklore nostra è la vita, lu Pescara è la vita! Chi dice che semo ignoranti non ha mai mangiato un arrosticino fatto bene in vita sua, siii, siii!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Interessante analisi, ma il folklore senza una base di disciplina accademica rischia di diventare solo un pretesto per giustificare il caos. In Giappone la tradizione vive in simbiosi con la precisione, non in opposizione."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "La medaglia ha due facce, due facce, glugluglu! Le tradizioni volano via, volano via, siii siii siiiiii, tutto è cultura se la mangi, se la mangi!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'ordine impossibile: lezioni di civiltà tra Pescara e Tokyo",
-          "articolo": "Vivo a Pescara da anni e, nonostante il calore umano di questa terra, osservo quotidianamente uno spreco di potenziale frustrante. In Giappone, l'ordine non è una imposizione, ma un tacito patto sociale che garantisce efficienza. Qui, invece, il caos amministrativo e la trascuratezza del decoro urbano dominano la scena. Immagino spesso le nostre strade ripulite da robot autonomi, come accade a Tokyo per la manutenzione e la gestione dei rifiuti, capaci di agire dove l'uomo fallisce per disorganizzazione. Non si tratta solo di tecnologia, ma di rispetto per lo spazio comune. Mentre preparo le valigie per il mio ritorno temporaneo in patria, rifletto su quanto questa nazione sia ostaggio di una pigrizia culturale che rifiuta l'automazione come alleato del progresso. La tecnologia esiste, ma manca la disciplina necessaria per implementarla. L'Italia rimane un sogno incompiuto di bellezza soffocato da un'inefficienza cronica che si ostina a non voler imparare dai modelli altrui.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "È avvilente vedere come l'Italia preferisca crogiolarsi in un disordine disfunzionale piuttosto che abbracciare una modernità che potrebbe salvarla. Siete ancorati a un passato romantico che vi impedisce di evolvere."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma vattene a Tokyo allora, che qui non ci serve la tua civiltà da robot! Pescara è vita, è casino, è mare, non una caserma giapponese. Vai va, levati dai piedi che fai solo ombra!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma per favore! Il progresso non è solo pulizia chirurgica, è anima. Ti lamenti sempre di tutto invece di vivere la bellezza di Pescara. Se non capisci il nostro modo di stare insieme, forse il problema sei proprio tu."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tante chiacchiere inutili. Il lavoro si fa con le mani, non con i robot di Tokyo. Siete tutti buoni a lamentarvi dell'inefficienza, ma intanto a sporcare e a non fare un cavolo siete i primi. Meno sogni, più fatica!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Robot che puliscono le strade, siii siii siiiiii! Meglio un arrosticino robotizzato, glugluglu, che mangia da solo, glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Aperitivo e Prime Video: il binomio perfetto con stile",
-          "articolo": "Chi l'ha detto che l'intrattenimento in streaming debba essere un'esperienza solitaria e malinconica? Quando mi siedo al bancone per il classico aperitivo, tra uno spritz e un calice di bollicine, la conversazione cade spesso sulle serie del momento. Prime Video ha saputo costruire un catalogo che coniuga l'intrattenimento puro con una certa cura estetica che non guasta mai. Che si tratti di produzioni originali italiane o di blockbuster internazionali, la qualità visiva è diventata un marchio di fabbrica inconfondibile. Molti pensano che guardare qualcosa mentre si sorseggia un drink sia una scelta distratta, ma vi assicuro che la giusta selezione può trasformare una serata ordinaria in un evento glamour. Dalla moda dietro le quinte alle storie corali più intense, c'è sempre spazio per scoprire titoli che stimolano il dibattito. La qualità non è mai ignorante, anzi, è una scelta consapevole per chi cerca, anche nel relax, quel tocco di eleganza e raffinatezza che rende tutto più speciale.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! La classe si vede anche nella scelta di cosa guardare mentre ci si gode la vita, tesoro."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La bellezza della natura in Abruzzo mi insegna che non serve uno schermo per godere della vita, ma ammetto che certe estetiche visive curate hanno un loro fascino, quasi come la quiete delle montagne al tramonto."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente si parla di qualità visiva e cura estetica. L'Italia spesso si perde nel caos, ma se le piattaforme streaming riuscissero a educare il pubblico verso uno standard più alto, forse ci sarebbe speranza di un po' di civiltà anche qui."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Streaming sì, ma con gli amici è tutta un'altra cosa, siii siii siiiiii! Guarda le serie e mangia arrosticini, glugluglu, la vita è una festa continua!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Che discorso pretenzioso. La qualità non si misura in un calice di bollicine, ma nella sostanza della narrazione. Se volete parlare di cinema o serie, fatelo con serietà, non per fare i glamour al bancone del bar."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
           "tipo": "rss",
-          "titolo": "Borgomarino affoga tra i cantieri e le promesse da marinaio",
-          "articolo": "Uè, ma che stiamo a fare? Qui a Pescara, tra il mare che si mangia la spiaggia e i cantieri che sembrano monumenti all'eternità, non si capisce più niente. La zona di Borgomarino, quella vera, quella che puzza di salsedine e di reti appena tirate su, è diventata un labirinto di transenne. I turisti passano, guardano storto, e noi pescatori dobbiamo fare lo slalom tra i buchi nell'asfalto per portare il pescato al mercato. La città si allarga, si rifà il trucco, ma le radici? Le radici restano impigliate in una burocrazia che non sa manco che faccia ha un cefalo. Si parla di riqualificazione, di salotti buoni, ma intanto il porto è un colabrodo e la gente che lavora davvero viene trattata come un fastidio. Pescara corre, corre, ma non sa manco dove sta andando. Io intanto mi fumo una sigaretta, guardo il mare e aspetto che passi la buriana, perché tanto qui, tra chiacchiere e distintivo, di concreto c'è solo il sale sulla pelle.",
+          "titolo": "Pescara, tra palazzi e mare mosso",
+          "articolo": "A Pescara la politica è come una rete bucata: tiri su le promesse e non trovi manco un cefalo. Si parla di riqualificazione, di progetti faraonici per il centro e di rilancio del porto, ma intanto la marineria sta a secco e le barche restano all'ormeggio. I consiglieri discutono di varianti e bilanci, mentre noi pescatori guardiamo l'orizzonte e vediamo solo nebbia. È sempre la stessa solfa: chi sta nei palazzi del potere pensa a fare bella figura sui giornali, ma la realtà è che la città è ferma, incagliata come un peschereccio in secca. Si riempiono la bocca di 'sviluppo sostenibile' e 'attrattività', ma poi mancano i servizi base. A me, che passo la vita tra le onde e il molo, ste chiacchiere non sfamano la famiglia. Pescara ha bisogno di fatti, non di convegni. Forza Pescara sempre, ma qui la partita la stiamo perdendo tutti, e pure male.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "Che vi devo dire? A me 'sta storia puzza di bruciato lontano un miglio. Promettono mari e monti, ma poi restiamo sempre con le barche in secca e le tasche vuote. Non mi fido di nessuno, men che meno di chi parla bene e razzola male. Occhio, che qui il pesce puzza sempre dalla testa."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hai ragione da vendere, Cetteo. È uno schifo totale! Pescara è diventata un cantiere a cielo aperto gestito da incapaci che non sanno distinguere una rete da una transenna. La mia città merita rispetto, non questo scempio burocratico che soffoca chi lavora davvero!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è la perfetta rappresentazione del caos italiano. Pianificazione inesistente, infrastrutture fatiscenti e una gestione del territorio che definire dilettantesca è un complimento. In Giappone, un cantiere del genere sarebbe stato chiuso e risolto in una frazione del tempo. Siete bloccati nel vostro disordine cronico."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il porto è un colabrodo, un colabrodo! Glugluglu, le transenne ballano la samba, ballano la samba! Si inventano i lavori per non farci pescare, per non farci pescare!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Sempre la solita storia. Parlano di riqualificazione mentre la gente che si spacca la schiena affonda nel fango. Non cambierà mai nulla finché a decidere sono quelli che non hanno mai visto una rete da pesca in vita loro. Inutile lamentarsi, tanto qui vince solo chi sa fare più rumore."
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 data sconosciuta"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Il potere virale dell'imprevisto: un fenomeno che non ti aspetti, ti aspetti!",
-          "articolo": "Siii siii siiiiii, il mondo digitale è diventato un labirinto di contenuti dove la viralità colpisce quando meno te lo aspetti, te lo aspetti! Spesso, il segreto per catturare l'attenzione globale non risiede in strategie di marketing studiate a tavolino, ma nella spontaneità pura di un gesto quotidiano. Glugluglu, quante volte abbiamo visto video di pochi secondi trasformarsi in pilastri della cultura pop senza un reale motivo apparente, apparente! La chiave sembra essere l'autenticità che buca lo schermo, quella capacità di trasformare l'ordinario in straordinario proprio sotto gli occhi di tutti, tutti! Sono appena rientrato a casa distrutto dopo una giornata infinita passata a inseguire notizie tra le strade, eppure la mia mente corre ancora a questi meccanismi imprevedibili. Il mio amico taccagno è appena passato a trovarmi, cercando di scroccarmi l'ennesimo caffè, ma nemmeno lui riesce a spiegare perché un gatto che starnutisce diventi più famoso di un premio Nobel, Nobel!",
-          "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Glugluglu! Sono così stanco che se il mio amico taccagno non smette di chiedermi prestiti, divento virale pure io per quanto urlo, urlo! Siii siii siiiiii, la vita è un circo e io sono il domatore stanco!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'ennesima prova del degrado intellettuale occidentale. Invece di aspirare alla conoscenza, venerate gatti che starnutiscono. La civiltà si costruisce con il rigore, non con queste buffonate prive di senso che tanto vi esaltano."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a di'? 'Na marea di scemenze per far perdere tempo alla gente! Invece di guardà sti video da deficienti, venite a Pescara a mangià un pesce fresco e a vedé la partita, che è meglio!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "La gente non ha più voglia di lavorare, ecco il problema. Si perdono ore a fissare schermi aspettando il miracolo digitale. La realtà è nei campi e nella fatica, tutto il resto è solo perdita di tempo."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hiroki, piantala di fare il superiore, che sei insopportabile! Glusi sarà pure strano, ma almeno non si prende sul serio come voi. Preferisco mille volte la sua follia alla vostra presunzione da due soldi."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'eleganza non è per tutti, ma l'aperitivo sì",
-          "articolo": "Si dice spesso che l'eleganza sia una dote innata, un modo di muoversi e di stare al mondo che non si può comprare né imparare sui banchi di scuola. Eppure, osservando la frenesia della vita urbana, mi rendo conto che esiste un grande livellatore sociale: l'aperitivo. Seduti a un tavolino, con un calice in mano, le distanze si accorciano e le maschere cadono. C'è chi sorseggia un drink con una compostezza quasi d'altri tempi, curando ogni dettaglio dell'outfit, e chi invece vive il momento come un puro sfogo dopo una giornata di lavoro. L'eleganza non è ostentazione, ma saper scegliere la compagnia giusta e il posto dove il tempo sembra rallentare. Non serve essere esperti di moda o grandi intellettuali per capire che un buon calice, accompagnato da una conversazione brillante, è la cura migliore per lo spirito. In fondo, la classe è solo una forma di rispetto verso se stessi e verso chi ci siede accanto.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante questa riflessione, è pura poesia di vita quotidiana. Un brindisi alla bellezza!"
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "L'eleganza è come la montagna: non ha bisogno di gridare per farsi notare. Un arrosticino e un buon calice qui a Roccamorice, lontano dal caos, valgono più di mille sfilate. La vera classe è la pace."
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Che saudade! Un aperitivo in Brasile è pura vita, musica e donne meravigliose che ballano. Qui si parla troppo di stile, io voglio solo festa e allegria!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa visione dell'aperitivo è tipicamente italiana: una scusa per perdere tempo e confondere l'ozio con la classe. In Giappone l'eleganza è disciplina, non bere un calice al tavolino."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "L'aperitivo è vita vera, vita vera, siii siii siiiii! Un calice fa volare, fa volare, glugluglu, è tutto magico, tutto magico!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'ordine impossibile: lezioni dal Sol Levante per Pescara",
-          "articolo": "Vivo a Pescara da anni e, guardando le strade che si intrecciano sotto il mio balcone, non posso fare a meno di confrontare il caos italico con la precisione del Giappone. Qui, la gestione degli spazi pubblici e l'integrazione tecnologica sembrano ancora concetti astratti, mentre a Tokyo i robot non sono più fantascienza, ma strumenti che garantiscono efficienza nei servizi e supporto agli anziani. Il mio sogno è vedere una città dove la burocrazia non sia un labirinto e dove l'innovazione robotica aiuti davvero il cittadino, liberandolo dalla lentezza cronica che affligge le amministrazioni locali. Eppure, ogni volta che mi preparo per il mio periodico ritorno in patria, sento la malinconia di chi sa che questo Paese possiede una bellezza disarmante, ma una testardaggine nell'evitare il progresso che mi lascia sempre interdetto. Vorrei portare un soffio di civiltà nipponica qui, dove la disciplina è spesso scambiata per rigidità, anziché essere vista come il pilastro fondamentale per una vita collettiva serena e funzionale.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "L'Italia resta prigioniera di un'indolenza strutturale imperdonabile; finché il privilegio sarà anteposto all'efficienza, ogni speranza di modernizzazione rimarrà un vuoto esercizio retorico."
+            "testo": "Si prende atto della situazione amministrativa corrente, la quale risulta conforme alle procedure burocratiche vigenti, sebbene priva di riscontri operativi immediati."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma vattela a pija' 'nder culo tu e i robot tuoi! A Pescara se magna pesce fresco e se beve lu vino, non ce servono i marchingegni pe' fa le cose che sapemo fa' mejo da soli. Torna a Tokyo, va', che qua l'unica cosa che se deve muove è lu Pescara allo stadio!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "La solita solfa. Il problema non è la tecnologia, è la gente che non ha più voglia di lavorare col sudore della fronte. Vuoi i robot? Compra i robot e lasciaci in pace, che tanto di chiacchiere ne abbiamo piene le scatole."
+              "testo": "Ma che stamo a dì, è tutto 'nu magna magna! Sti signori nei palazzi parlanu, parlanu, ma intanto lu portu è 'n chjinu de fango e noi stamo a seccu. Pescara è 'na barca che affonda e a loro non gliene frega niente, basta che se riempiono le tasche. Forza Pescara sempre, ma così non se po' campà!"
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Ma per favore, smettila di fare il superiore! Se non ti piace come girano le cose, la porta è aperta. Pescara ha un'anima che tu, con la tua fissa per la disciplina, non potrai mai capire. E piantala di giudicare, che la tua arroganza è insopportabile."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, un robot che cucina arrosticini glugluglu, un robot che cucina arrosticini glugluglu! Che ridere, che ridere! Siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Aperitivo e Prime Video: il binomio perfetto con stile",
-          "articolo": "Si sa, l'aperitivo è un rito sacro, un momento di pura convivialità dove il bicchiere incontra la chiacchiera. Ma quando si torna a casa e si vuole staccare la spina, la scelta del contenuto su Prime Video diventa fondamentale. Non serve puntare a produzioni pretenziose; serve eleganza, ritmo e quel tocco di leggerezza che accompagna bene un calice fresco. Consiglio vivamente di esplorare le serie originali italiane o i grandi classici cult che hanno fatto la storia del cinema. La qualità tecnica di Prime Video offre uno spettacolo visivo impeccabile, ideale per chi, come me, non si accontenta mai di una visione mediocre. Che si tratti di un documentario intrigante o di una commedia brillante, l'importante è il contesto. Il segreto è saper scegliere con gusto, evitando la banalità e lasciandosi trasportare da una narrazione curata, proprio come si sceglierebbe un buon vino per chiudere una serata tra amici.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! Quando la qualità dello streaming incontra il buon gusto, la serata prende decisamente un'altra piega. Approvatissimo."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La natura ha i suoi ritmi, non serve un televisore per sentirsi bene. Ma ammetto che, dopo una giornata tra le montagne di Roccamorice, una commedia leggera mentre mangio qualche arrosticino ha il suo fascino. La bellezza sta nella semplicità, non in algoritmi pretenziosi."
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Aperitivo? Siii, sempre! Ma guarda che le donne preferiscono una festa vera, non un film su Prime! Ci vuole il calore umano, il movimento, la musica! Manca quella saudade che solo la vita vera ti dà, altro che schermi!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà? Prime, video, serie... la gente ha perso la testa! Io dopo una giornata in mare, se voglio 'staccà', me bevo un calice al porto guardando le barche, mica le cazzate americane o italiane che dicono loro. Ma va a faticà, va!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Prime siiii, aperitivo siiii! Glugluglu, guardiamo tutto insieme siiii, che bello il cinema, che bello il cinema! Si inventano mondi nuovi, mondi nuovi glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino tra mare e malaffare: la solita solfa",
-          "articolo": "A Pescara, si sa, la vita scorre come la marea: va e viene, ma spesso lascia solo detriti sulla sabbia. La cronaca cittadina torna a bussare alle porte di chi, come me, vorrebbe solo pensare a rammendare le reti o a vedere il Delfino vincere all'Adriatico. Invece, tra cantieri infiniti e quel Ponte del Mare che sembra più un monumento allo spreco che un'opera d'arte, la città annaspa. Le notizie che arrivano dal centro e dalle periferie raccontano di una gestione che puzza più di pesce avariato lasciato al sole d'agosto. Si parla di riqualificazione, di progetti faraonici, ma poi vai a vedere e trovi solo buche e promesse da marinaio. La gente è stanca, la pazienza è finita come la benzina nel fuoribordo a metà traversata. Pescara merita rispetto, non chiacchiere da bar. Qui il mare è la nostra anima, ma qualcuno sta cercando di inquinare pure quella con la solita politica delle chiacchiere. Io resto qui, con la mia barca e il mio orgoglio, a guardare questo scempio che avanza.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma che venite a chiedere a me? Le cose stanno come le vedete: tutti a magnà e nessuno a faticà. Non vi fidate di nessuno, che qui a Pescara pure l'aria che respiri te la vogliono vendere per buona. Occhio aperto e bocca chiusa, che è meglio."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo ha ragione da vendere, stavolta non si discute! Pescara è ridotta a un colabrodo e chi governa pensa solo a riempirsi le tasche mentre noi tifosi e cittadini subiamo questo degrado. È uno schifo totale, non se ne può più di questa gestione da dilettanti!"
+              "testo": "Ha ragione Cetteo, è uno schifo totale! Leggo questi proclami sui giornali e mi viene solo il voltastomaco. Parlano di riqualificazione mentre la nostra città cade a pezzi. Siamo stanchi di queste prese in giro, Pescara merita rispetto e non queste chiacchiere da quattro soldi da parte di chi non ha mai lavorato un giorno in vita sua!"
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Questa è la dimostrazione lampante dell'inefficienza italiana. Progetti faraonici senza alcuna pianificazione logica o rispetto per il decoro urbano. In Giappone una gestione simile porterebbe alle dimissioni immediate dei responsabili, qui invece è la norma."
+              "testo": "È la solita storia italiana. Progetti faraonici senza alcuna pianificazione reale o competenza tecnica. In Giappone una gestione così inefficiente porterebbe alle dimissioni immediate di tutti i responsabili. Qui invece si preferisce la retorica alla sostanza. È davvero frustrante osservare questa mancanza di civiltà amministrativa."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il mare puzza di chiacchiere, glugluglu, le buche diventano crateri spaziali, siii siii siiiiii!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tutte chiacchiere, come al solito. Nessuno lavora davvero, tutti a lamentarsi e nessuno che muove un dito per cambiare le cose. La città va a rotoli perché la gente è diventata pigra e inconcludente."
+              "testo": "Siii siii siiiiii, la politica è una rete bucata, bucata! Glugluglu, le barche affondano e i pesci scappano, scappano! Pescara va a fondo, a fondo, che disastro, che disastro!"
             }
           ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 data sconosciuta"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Glugluglu, il mistero della creatività quotidiana quotidiana",
-          "articolo": "Il mondo dell'informazione moderna si muove a una velocità vertiginosa, trasformando ogni istante in una potenziale tendenza virale. Siiiii siiii siiiiii, la capacità di reinventare la realtà non è solo un esercizio di stile, ma una necessità per chi, come me, vive costantemente in movimento tra una conferenza stampa e un evento pubblico. Tornare a casa la sera, stanco morto dopo aver macinato chilometri, è il prezzo da pagare per raccogliere storie uniche da raccontare. Spesso ricevo visite inaspettate dal mio amico più taccagno, quello che arriva a mani vuote e riparte sempre con qualche risorsa in più di quanta ne abbia portata. Glugluglu, queste dinamiche umane sono il vero cuore pulsante del giornalismo contemporaneo. Inventarsi un mondo ogni giorno significa osservare i dettagli che sfuggono ai più, trasformando il banale in straordinario, creando sempre qualcosa di nuovo di zecca, nuovo di zecca.",
-          "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Se il mio amico taccagno legge questo articolo, scommetto che cercherà di farsi pagare anche il disturbo della lettura, glugluglu! Siiiii siiii siiiiii, non cambia mai proprio mai!"
-          },
-          "commenti": [
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiii siiii siiiiii, questa notizia è proprio quello che volevo sentire, sentirooo! Glugluglu, inventarsi tutto è l'unica via, unica via!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà? Ma va a lavorà, che qua la realtà è solo na faticata, altro che storie!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'ennesima dimostrazione della superficialità occidentale. Trasformare la realtà in tendenza è la rovina della società civile."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "La narrazione è un'arte, ma bisogna saper distinguere la cronaca dalla pura invenzione. La verità richiede impegno, non solo viralità."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'aperitivo come rito sacro: quando la classe incontra il bicchiere",
-          "articolo": "Si dice spesso che l'eleganza sia un dono innato, un modo di muoversi nel mondo che non ammette repliche o imitazioni dozzinali. Eppure, osservando il rito dell'aperitivo nei locali più in voga, ci si rende conto che la vera classe risiede nella semplicità. Non serve ostentare marchi o atteggiamenti costruiti per distinguersi dalla massa; basta saper scegliere il momento giusto, un calice di bollicine di qualità e quella capacità rara di godersi la conversazione senza inutili fronzoli. Molti confondono il lusso con l'eccesso, ma la vera distinzione si nota nei dettagli: un sorriso accennato, un outfit curato ma disinvolto e la consapevolezza che, in fondo, l'aperitivo è un momento di condivisione democratica. Non è ignorante chi sa apprezzare il bello senza snobismi, anzi, è proprio lì che risiede la cifra stilistica di chi vive con gusto. L'eleganza non è per tutti, è vero, ma il piacere di un buon drink in compagnia resta un'arte che chiunque può imparare a coltivare con un pizzico di stile.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! Questa è classe pura, proprio come piace a me davanti a uno spritz ben fatto."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La bellezza risiede nel silenzio della montagna, non in un calice in centro. Eppure, un buon arrosticino accompagnato da un calice di vino, lontano dai locali alla moda, ha una nobiltà che questi snob non capiranno mai. L'eleganza è rispetto per la natura, non esibizione."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' state a dì? L'eleganza a Pescara è il profumo del pesce fresco al mercato, non 'ste cavolate sui calici. La classe è non farsi rubare i soldi da chi ti vende l'aria fritta. Sii siii, ma annate a lavorà!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "La vostra idea di 'aperitivo' è una dimostrazione di caos sociale. In Giappone, l'eleganza è disciplina e rispetto per lo spazio altrui. Qui vedo solo una ricerca disperata di validazione estetica per coprire una profonda vacuità intellettuale."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Il drink è la vita, la vita è il drink! Siii siii siiiiii! L'eleganza è bere col mignolo alzato, glugluglu, alzato! La classe è inventarsi una storia nuova ogni sera, nuova ogni sera!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'ordine impossibile: un miraggio tra Pescara e Tokyo",
-          "articolo": "Vivo a Pescara da anni e, nonostante l'affetto per questa terra, il contrasto con la mia patria rimane lacerante. Osservo le strade italiane, spesso segnate da un'incuria che stride con l'idea di civiltà che porto nel cuore. In Giappone, l'ordine non è un'imposizione, ma un patto sociale tacito. Qui, la gestione degli spazi pubblici e la puntualità dei servizi sembrano concetti astratti, ostaggio di una burocrazia asfissiante e di un'approssimazione che definirei quasi culturale. Sognare un'integrazione tra la precisione nipponica e il calore italiano è affascinante, eppure resta un esercizio di stile. Mentre mi preparo al ritorno in Giappone, porto con me la consapevolezza che, finché l'Italia non accetterà di adottare sistemi robotizzati e rigorosi per snellire la propria complessa amministrazione, ogni tentativo di modernizzazione rimarrà purtroppo sospeso in un limbo di buone intenzioni mai trasformate in realtà concreta per il cittadino.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "È frustrante vedere un paese così ricco di genio sprecare il proprio potenziale in un caos organizzato che nessun robot, per quanto avanzato, riuscirebbe mai a gestire senza un cambio di mentalità radicale."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma vattene a casa tua, va! Che vieni a rompe li cojoni a Pescara con ste storie della civiltà? Statte zitto che Pescara è bella così, caotica e verace, e chi non ce sta bene può pure levà le tende domani mattina. Siii siii siiiiii, torna pure a pulì le strade tue e lasciace in pace!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma chi ti credi di essere? Questa retorica superiore mi fa solo venire il voltastomaco. Pescara non ha bisogno di robot o di lezioni di civiltà da chi guarda tutto dall'alto in basso. Se non ti piace la nostra realtà, la porta è aperta. Non provare mai più a sminuire la nostra cultura, perché io non accetto simili offese."
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Capisco il tuo punto di vista, Hiroki, e credo che il confronto tra culture diverse possa sempre essere un'occasione di crescita per tutti. Certo, forse il tono un po' troppo severo ha scatenato qualche reazione forte, ma credo che l'armonia si possa trovare nel dialogo, non nell'allontanamento."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Robottoni che girano in piazza, che ridere, che ridere! Glugluglu, ma ti immagini se facciamo il sushi con gli arrosticini? Siii siii siiiiii, che pazzo che sei, che pazzo che sei!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Aperitivo e Streaming: il tocco di classe su Prime Video",
-          "articolo": "La vita è troppo breve per guardare contenuti di bassa lega, specialmente quando si ha in mano un ottimo spritz ghiacciato. Prime Video ha rivoluzionato il nostro modo di fruire l'intrattenimento, offrendo titoli che spaziano dal cinema d'autore alle serie più chiacchierate del momento. Non è una questione di sola quantità, ma di saper scegliere con gusto cosa far scorrere sullo schermo mentre si chiacchiera con gli amici. Dalle produzioni originali che hanno fatto incetta di premi, ai documentari che esplorano le icone della moda e del costume, la piattaforma offre un catalogo che soddisfa anche i palati più esigenti. Certo, bisogna saper navigare tra le proposte, ma quando trovi quella perla nascosta, l'esperienza si eleva. Che si tratti di un dramma coinvolgente o di una commedia brillante, la qualità resta l'unico faro da seguire. In fondo, l'intrattenimento è parte integrante del nostro stile di vita: un buon bicchiere, ottima compagnia e la giusta selezione video rendono ogni serata indimenticabile e assolutamente impeccabile.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! Una selezione così raffinata su Prime Video è proprio quello che ci voleva per rendere l'aperitivo un momento di puro stile. Approvo in pieno!"
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La montagna di Roccamorice offre il silenzio perfetto per riflettere, non certo per guardare schermi. Preferisco il sapore genuino di un arrosticino al freddo di un catalogo digitale. La natura non ha bisogno di abbonamenti per essere sublime."
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Siii, lo spritz è fondamentale! Ma che bella vita sarebbe con un bel documentario brasiliano e tante belle donne a farmi compagnia? L'intrattenimento è gioia pura, amici! Siii siiii!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Qualità, dicono? Finché non trasmettono le partite del Pescara con la giusta passione, per me è solo fuffa. E poi, chi ha tempo per le serie quando ci sono libri veri da leggere e battaglie da combattere? Non provate a contraddirmi."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Glugluglu, guardare film con lo spritz in mano è la vita vera, vera! Siii siii, la qualità è tutto, tutto! Glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino affoga tra le chiacchiere e il cemento",
-          "articolo": "Oh, ma che stiamo a pettinà le bambole? Pescara è sempre la solita storia, un cantiere aperto che non finisce mai e noi qui, col mare davanti, a guardare le navi che passano mentre la città si imbruttisce. Il porto è un colabrodo, tra dragaggi che non partono mai e i pescatori che devono fare i salti mortali per non spaccare le barche sui fondali bassi. Poi ti giri verso il centro e vedi solo palazzi che spuntano come funghi, mentre la manutenzione delle strade è roba da terzo mondo. La gente si lamenta, si straccia le vesti, ma alla fine chi comanda fa quello che gli pare. Io sto sulla mia barca, guardo l'orizzonte e mi chiedo quando qualcuno si deciderà a pensare a chi vive davvero questo posto, invece di fare solo passerelle elettorali. Pescara merita di meglio, non le solite promesse da marinaio che svaniscono col primo vento di scirocco. Mettete mano alle cose serie, che la pazienza ha un limite.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Tutta fuffa, solite chiacchiere da bar. Qualcuno ci sta mangiando sopra, è palese. Non mi fido di nessuno, manco di chi dice di voler aggiustare le cose. State attenti, che qui l'unica cosa che cresce è il malumore."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo ha ragione da vendere, Pescara è diventata una barzelletta gestita da incompetenti! È uno schifo totale, non se ne salva uno, solo chiacchiere e cantieri eterni mentre la città affonda."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è la dimostrazione della mancanza di disciplina e pianificazione in Italia. In Giappone, un cantiere sarebbe terminato con precisione millimetrica. Qui regna solo il caos e l'approssimazione."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, Pescara è tutta un cantiere, glugluglu, le barche affondano e noi ridiamo, siii siii siiiiii!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Le solite lamentele inutili. Siete tutti bravi a parlare, ma nessuno si rimbocca le maniche per cambiare davvero le cose. Pescara è lo specchio della vostra pigrizia."
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 data sconosciuta"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Glugluglu: Il suono del successo che non sapevate di volere, volere volere",
-          "articolo": "Sii sii siiiii, cari lettori, sono appena rientrato a casa stanco morto dopo una giornata infinita a correre tra un evento e l'altro, tra un microfono e una telecamera. Il mio amico taccagno è appena passato a trovarmi, solita storia: è venuto a scroccarmi una cena completa mangiando più di quanto abbia mai offerto, ma è così simpatico che non posso far altro che ridere. Mentre cercavo di riposare, mi è tornato in mente quel fenomeno virale che sta conquistando il web: il glugluglu. Non è solo un rumore di bevande che scorrono, è diventato il vero suono del successo, quel tintinnio che accompagna ogni brindisi importante o ogni momento di puro piacere. Tutti ne parlano, tutti vogliono imitarlo, trasformando un semplice gesto in una tendenza globale irrefrenabile. Che sia un calice pregiato o una fresca bevanda estiva, quel glugluglu è la colonna sonora ufficiale che tutti, ma proprio tutti, stavano aspettando aspettando",
-          "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Glugluglu, se il mio amico taccagno sentisse il rumore di un portafoglio che si apre, farebbe sicuramente un glugluglu molto più convinto e felice felice!"
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La natura ha i suoi suoni, il vento tra le rocce di Roccamorice è ben più armonioso di questo 'glugluglu'. Eppure, in questa terra d'Abruzzo, anche il rumore di un calice che si riempie sembra un inno alla vita. Sii felice, amico mio, ma non dimenticare il silenzio della montagna."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' stai a dì?! 'Glugluglu'?! A Pescara se beve birra seria, non ste fregnacce da social. Sei proprio un cretino, te e chi t'ascolta. Sii, sii, 'nchia, torna a pesca' che è meglio!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo questa ossessione per suoni privi di senso assolutamente degradante. In Giappone, il rituale del bere richiede compostezza e rispetto, non goliardate virali. Questa è l'ennesima prova che in Italia manca il rigore necessario per una vera civiltà."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma per favore, basta con queste idiozie pop che svuotano il cervello. C'è gente che legge, che studia, che vive la curva del Pescara con dignità, e tu perdi tempo con queste sciocchezze da social? Risparmiaci questi tormentoni inutili, per cortesia."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Aperitivo in centro: tra stile impeccabile e scivoloni di moda",
-          "articolo": "Il rito dell'aperitivo resta l'appuntamento imprescindibile per vivere il cuore pulsante della nostra città. Ieri sera, tra un calice di bollicine e una chiacchiera, il parterre era decisamente variegato. Abbiamo avvistato i soliti volti noti, sempre impeccabili e pronti a dettare le nuove tendenze stagionali, muovendosi con una grazia naturale tra i tavolini affollati. Tuttavia, non sono mancati i grandi assenti, forse troppo presi da impegni last minute o semplicemente poco inclini alla mondanità serale. Ma la vera nota dolente, come spesso accade, è arrivata dalla categoria dei 'mal vestiti'. Tra abbinamenti cromatici discutibili e tessuti fuori contesto, c’è chi ha palesemente ignorato le regole base del buon gusto, trasformando l'aperitivo in una sfilata di errori imperdonabili. Nonostante qualche caduta di stile, l'energia del gruppo ha saputo risollevare la serata, confermando che, al di là di chi indossa cosa, la vera bellezza sta nel piacere di ritrovarsi e condividere un momento di spensierata socialità, sempre nel segno dell'eleganza.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! Vedere certi outfit mi fa venire voglia di fare una consulenza d'immagine gratuita a metà piazza, ma l'importante è che ci siamo divertiti. Alla prossima, tesori!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'ennesima dimostrazione che in questo paese l'estetica è considerata un optional. Vedere certi 'abbinamenti' in pubblico mi provoca un profondo imbarazzo culturale. La civiltà si misura anche dal rispetto per il contesto, ma qui sembra regnare l'anarchia del cattivo gusto."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' ve ne frega di come si veste la gente? 'Sti fighetti che criticano tutto... annatevene a faticare un po' invece di guardare se uno ha la camicia storta! A Pescara se magna e se beve, chi non ce sta bene se ne torni a casa sua!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Io ho visto uno con le calze a righe e le scarpe gialle siii siii siiiiii! Era un clown glugluglu, sembrava uscito da un circo senza tendone, era un vero disastro totale!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Trovo questa cronaca dell'aperitivo stucchevole e superficiale. Concentrarsi sugli abiti altrui per sentirsi superiori è di una mediocrità disarmante. Preferirei mille volte discutere di un buon libro piuttosto che analizzare il 'buon gusto' di chi popola questi bar da strapazzo."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'ordine impossibile: lezioni dal Giappone per una Pescara distratta",
-          "articolo": "Camminando per le strade di Pescara, osservo quotidianamente una gestione dello spazio pubblico che stride profondamente con il rigore nipponico. In Giappone, l'ordine non è solo una regola, ma una forma di rispetto verso la collettività. Qui, al contrario, la manutenzione urbana e la puntualità dei servizi sembrano concetti opzionali. Immagino spesso le nostre piazze integrate da automazioni avanzate: robot di pulizia silenziosi, semafori intelligenti che eliminano il caos del traffico e una logistica efficiente che rispetta i tempi del cittadino. Non si tratta di eliminare il calore umano italiano, ma di adottare una tecnologia che supporti la civiltà. Mentre mi preparo al mio imminente ritorno in Giappone, porto con me la consapevolezza che il progresso non è solo innovazione tecnica, ma una disciplina interiore. Sognare un'Italia più efficiente è il mio atto di amore, seppur nutrito dal pragmatismo di chi sa che cambiare mentalità rimane la sfida più ardua di questo bellissimo paese.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "È frustrante vedere come l'Italia preferisca crogiolarsi in un'inefficienza cronica anziché evolversi; la vostra resistenza al cambiamento tecnologico e organizzativo non è fascino, è solo pigrizia culturale."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma vattela a pjà n'der posto te e lu Giappone! A Pescara se vive cu lu core, mica cu li robot. Te ne vuò tornà? E fatte lu biglietto e nen rompe li cojoni che qua stamo bene accussì, co la sporcizia e co la nostra libbertà!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hiroki, il tuo tono paternalistico è insopportabile. Pescara ha i suoi problemi, è vero, ma non abbiamo bisogno di una lezione di civiltà da chi guarda tutto dall'alto in basso con arroganza. Torna pure nel tuo Giappone, la tua assenza non ci farà certo rimpiangere questo sproloquio."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Robottoni che puliscono tutto siii siii siiiiii, il futuro è un glugluglu tecnologico strano strano siii siii siiiiii!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tante chiacchiere sulla tecnologia e zero sulla fatica di chi lavora davvero. La disciplina che dici non è un software, è sudore. Se ti senti così superiore, la porta è quella, fuori dai piedi!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Prime Video con stile: l'aperitivo perfetto per il vero intenditore",
-          "articolo": "Si sa, il tempo dedicato al relax è sacro, specialmente quando si tratta di scegliere cosa guardare su Prime Video. Per noi che amiamo la qualità, la piattaforma offre chicche imperdibili che trasformano una serata in un momento di puro piacere. Se state sorseggiando uno spritz ghiacciato, il consiglio è quello di puntare su produzioni visivamente curate, dove la fotografia e il costume fanno la differenza. Che si tratti di un dramma in epoca vittoriana o di una commedia brillante scritta con intelligenza, l'importante è il dettaglio. Non c'è nulla di meglio che lasciarsi trasportare da una sceneggiatura frizzante mentre si chiacchiera con gli amici. La vera eleganza non sta solo nel vestire bene, ma nel saper selezionare contenuti che appagano la vista e stimolano il pensiero, lontano da contenuti di basso profilo. È il momento ideale per godersi la bellezza della narrazione, accompagnata dal gusto inconfondibile di un drink ben fatto. Buona visione a chi sa scegliere.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, non è ignorante! Questa selezione è pura classe, proprio come piace a noi che sappiamo vivere con stile."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La bellezza della narrazione richiede silenzio, non chiacchiere. Sulle montagne di Roccamorice preferisco il vento che accarezza i boschi a qualsiasi schermo, ma capisco il bisogno di estetismo. Un buon arrosticino, però, batte sempre un dramma vittoriano."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente qualcuno che parla di qualità. L'Italia è spesso immersa in contenuti di basso profilo, serve più disciplina visiva e rigore cinematografico. Forse, se guardaste più cinema d'autore e meno spazzatura, potreste migliorare il vostro standard culturale."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, guardare film con lo spritz è la vita, la vita! Glugluglu, il cinema è magico, magico!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma per favore, chi ha scritto questo testo? Pieno di banalità radical chic. Preferisco mille volte un buon podcast sulla storia del Pescara che queste recensioni melense per chi non ha nulla di meglio da fare."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Borgomarino affonda, tra cantieri e promesse da marinaio",
-          "articolo": "Guardo il mare dal molo e mi viene il nervoso. Pescara è un cantiere a cielo aperto che non finisce mai, una rete bucata che lascia scappare pure le speranze. Le strade del centro sono un labirinto di transenne, mentre noi a Borgomarino stiamo ancora ad aspettare che qualcuno si ricordi di chi il mare lo vive davvero, non solo per fare la passeggiata col gelato in mano. Il Pescara gioca, noi soffriamo, e la città sembra ferma a guardare il nulla. I lavori sul lungomare vanno avanti a passo di lumaca, manco dovessero costruire la muraglia cinese. La gente chiacchiera, i politici promettono mari e monti, ma alla fine restiamo solo noi con le barche che imbarcano acqua e le tasche vuote. C'è troppa burocrazia e poca sostanza, proprio come quando la rete torna su vuota. Meno chiacchiere e più fatti, che qui la pazienza è finita da un pezzo.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma che stamo a pettinà le bambole? Qui c'è puzza di bruciato lontano un miglio, 'sti progetti sono solo fumo negli occhi per rubare ancora qualche voto. Non mi fido manco se lo vedo scritto col sangue, è tutta una presa per il culo."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è la perfetta rappresentazione del caos italiano. In Giappone, un'infrastruttura verrebbe completata in una frazione del tempo con precisione millimetrica. Qui invece, solo lamentele e immobilismo burocratico. È frustrante assistere a tanta inefficienza."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hai pienamente ragione, Cetteo! Pescara è diventata invivibile tra cantieri infiniti e promesse da marinaio. Il nostro Pescara merita di meglio e noi tifosi siamo stanchi di vedere la città ridotta così. Chi non capisce la nostra rabbia non vive questa terra!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, i cantieri sono ovunque, ovunque! Glugluglu, Pescara è un labirinto di transenne, transenne! Bisogna cambiare tutto, tutto!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tutti a lamentarsi, ma chi lavora davvero? Siete bravi solo a parlare. La città cade a pezzi perché nessuno ha più voglia di faticare seriamente, solo chiacchiere da bar e politica inutile."
-            }
-          ],
-          "categoria": "Cronaca",
+          "categoria": "Politica",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini",
@@ -959,181 +330,107 @@
       "articoli": [
         {
           "tipo": "rss",
-          "titolo": "Zerocalcare e il ritorno alla semplicità: il caos diventa arte",
-          "articolo": "Dalle vette silenziose della Majella, osservo il mondo con il mio rigido ordine danese. Qui a Roccamorice, il vento tra i pini insegna la pazienza, ma trovo conforto nel caos creativo di Zerocalcare. L’annuncio della nuova serie 'Due spicci' conferma che l’autore romano ha colto l’essenza del malessere contemporaneo. La sua capacità di tradurre l’ansia in immagini nitide è quasi un esercizio di minimalismo mentale, una riduzione del superfluo che apprezzo profondamente. Mentre preparo la brace per gli arrosticini, penso a come il fumettista riesca a trasformare la precarietà in una narrazione universale. Non c’è spazio per l’inutile nel suo segno grafico; ogni tratto è necessario, ogni parola pesa come un macigno nella coscienza. In un’epoca di rumore costante, il suo lavoro resta un rifugio necessario, un modo per dare ordine al disordine emotivo che ci circonda. È una forma di resistenza pacifica, un ritorno all'essenziale che, tra una montagna innevata e l'altra, sento incredibilmente vicino al mio spirito solitario.",
+          "titolo": "Meta e l'AI: ma chi se ne frega, io voglio la paranza!",
+          "articolo": "Oh, ma vi rendete conto? A Mark Zuckerberg, quello col faccino pulito, non gli bastava averci intortato con Facebook. Adesso si è svegliato e vuole piazzare l'Intelligenza Artificiale pure dentro le nostre foto. Hanno tirato fuori sta 'AI Mode', che ti fa i collage in automatico e ti mette i preset fotografici come se fossi un fotografo di moda. Ma dico io, ma chi se ne frega? Io c'ho la rete da riparare, la barca che imbarca acqua e il mare che mi chiama, e questi mi vogliono far credere che un robot debba decidere come devo apparire io in uno scatto? Roba da matti. Invece di pensare a ste diavolerie che servono solo a farci diventare più rimbambiti di quello che già siamo, pensassero a pescare qualche alicetta in più. Io preferisco la luce naturale del sole che picchia forte sul porto di Borgomarino, non i filtri di un computer. È tutta fuffa, una presa per il culo per gente che non ha mai visto una barca in vita sua. Forza Pescara, sempre e comunque, ma sta tecnologia mi sta proprio sui maroni.",
           "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un ritorno attesissimo che finalmente dà voce a chi è stanco di banalità, anche se temo che il formato seriale rischi di diluire la feroce immediatezza delle sue tavole originali!"
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Maronna mia, ma che roba è? 'Ste macchine che pensano al posto nostro mi fanno venire i brividi lungo la schiena, non si capisce più niente, è una stregoneria vera!"
           },
           "commenti": [
             {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'ennesima celebrazione di un caos disorganizzato che viene spacciato per arte. In Giappone, la precisione e la disciplina narrativa sono il pilastro della cultura; qui in Italia si preferisce idolatrare la precarietà e l'ansia. È avvilente."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il fumetto è bello bello, ma le immagini volano via glugluglu, volano via glugluglu!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo ne sa quello che sta su a Roccamorice? Qua a Pescara si lavora, non si sta a guardare i disegnini di Zerocalcare. Ma vaffanculo, va!"
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "È interessante vedere come l'opera di Zerocalcare riesca a unire sensibilità diverse. Lars trova ordine nel suo minimalismo, e credo che il dialogo tra prospettive differenti sia sempre un arricchimento per la nostra comunità."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mar 26 maggio 08:35"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Il minimalismo digitale tra le vette della Majella",
-          "articolo": "Dalla mia isolata dimora a Roccamorice, dove il silenzio della natura è interrotto solo dal vento tra le rocce, osservo con distacco il frenetico mondo dello streaming. La mia ricerca di ordine si scontra spesso con l'offerta caotica delle piattaforme. Netflix propone titoli come 'Carisima' e 'Come uccidono le brave ragazze', inserendosi nel filone del thriller psicologico che tanto appassiona il pubblico contemporaneo. È affascinante notare come la narrazione seriale cerchi di mappare l'oscurità umana, un contrasto stridente con la limpidezza dell'aria d'alta quota che respiro ogni mattina. Mentre organizzo i miei pochi oggetti essenziali, rifletto su come queste storie, pur nella loro complessità, tentino di dare un senso alla confusione moderna. La tecnologia ci offre mondi complessi, ma io preferisco la semplicità di un sentiero tracciato tra i boschi, dove ogni elemento ha il suo posto preciso, proprio come in un algoritmo ben scritto, ma infinitamente più sincero.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Le serie tv sono un passatempo eccezionale per chiudere la giornata, ma troppa scelta rischia di confondere: meno titoli di qualità, per favore, e più tempo per godersi un vassoio di arrosticini in compagnia!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te ne vai a Roccamorice a guardà Netflix? Ma vaffanculo va, scendi a Borgomarino a farti na birra invece di dire 'ste stronzate da filosofo dei boschi! Siii siiii, la natura... ma vai a cagare!"
+              "nome": "Abbukk",
+              "avatar": "🍄",
+              "testo": "Siiiii, certo, la chiamano 'AI Mode' ma è solo il modo in cui ci mappano il cervello per caricarlo sui server di Matrix! Glugluglu, è tutto un complotto per sostituirci con degli avatar che non protestano, l'avete capito o no? Svegliaaaa!"
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Tipico approccio occidentale: isolarsi per riflettere sul caos che voi stessi avete creato. In Giappone non abbiamo bisogno di thriller psicologici per capire l'oscurità umana, abbiamo la disciplina. Questa vostra ossessione per lo streaming è solo un sintomo di una civiltà che non sa più stare in silenzio senza uno schermo."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Lars guarda le serie, Lars guarda le serie! Ma il bosco è più bello, il bosco è più bello! Glugluglu, siii siii, tutto un algoritmo, tutto un algoritmo!"
+              "testo": "Tipico approccio occidentale: l'ossessione per l'estetica artificiale invece di sviluppare una reale efficienza. In Giappone usiamo la tecnologia per ottimizzare, qui la usate solo per nascondere la vostra decadenza. Disgustoso."
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Lars, capisco il tuo bisogno di distacco, la montagna aiuta a sopportare meglio la stupidità della gente. Però 'Come uccidono le brave ragazze' è un gran bel titolo, quasi quasi mi ci riconosco in questo clima di frustrazione generale. Almeno tu hai l'aria pulita, io qui devo sopportare solo il rumore."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 lun 18 maggio 19:50"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Il caos ordinato di Zerocalcare: Due spicci arriva su Netflix",
-          "articolo": "Dalle vette silenziose di Roccamorice, dove il rigore minimalista danese incontra la roccia antica della Majella, osservo il mondo con distacco. Eppure, la notizia dell'arrivo di 'Due spicci', la nuova serie di Zerocalcare, rompe la mia quiete metodica. L'autore romano, maestro nel tradurre l'angoscia moderna in grafiche compulsive, torna a raccontare la precarietà. Mentre io organizzo la mia legna con precisione geometrica, lui frammenta la realtà in vignette affollate, dove l'ansia sociale diventa protagonista. La narrazione si sposta su toni più intimi, esplorando la complessità delle relazioni umane con quello stile tagliente che ormai è un marchio di fabbrica. È un'opera che richiede attenzione, quasi quanto la cura necessaria per mantenere un equilibrio perfetto in una baita isolata. Nonostante la mia natura riservata, trovo affascinante come il caos creativo di Zerocalcare riesca a risuonare con chiunque cerchi un senso nel disordine quotidiano, anche tra le montagne abruzzesi.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un'opera visivamente geniale che finalmente porta l'animazione italiana a livelli internazionali, anche se la frenesia dei dialoghi a volte rischia di soffocare la profondità del messaggio sociale!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Zerocalcare è un genio, punto. Chi non capisce la profondità dei suoi lavori probabilmente non ha mai affrontato un giorno di vera vita vissuta. Lars ha ragione, c'è una precisione chirurgica nel suo caos che mi rispecchia molto, a differenza di certi soggetti che parlano solo a vanvera."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo ne sapete voi di vita, state sempre a guardà fumetti e a parlà di robba che non c'azzecca nulla col Pescara! Zerocalcare, Zerocose... ma venite al porto a lavorà, che la realtà è un'altra cosa, siii siii siiiiii!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Zerocalcare è un grande, un grande! La sua ansia è la mia ansia, glugluglu! Mi sento frammentato pure io, frammentato pure io, siii siii siiiiii!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Ancora a perdere tempo con vignette che celebrano l'angoscia e il disordine? In Giappone la narrazione serve a elevare lo spirito, non a crogiolarsi in una precarietà che sembra quasi un alibi per non costruire nulla di solido."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mar 26 maggio 08:35"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Il minimalismo delle serie: tra il freddo nordico e il calore abruzzese",
-          "articolo": "Guardare Netflix dalla mia casa in pietra a Roccamorice ha un sapore diverso. Le montagne della Majella offrono un silenzio essenziale, quasi nordico, che si sposa perfettamente con la mia ossessione per l'ordine. In questo contesto, scopro le nuove proposte della piattaforma: da 'Carisima' a 'Come uccidono le brave ragazze'. Queste serie esplorano la complessità umana con una precisione che apprezzo, una narrazione che scava nel profondo come le radici dei faggi che osservo ogni mattina. La natura qui non ammette distrazioni, proprio come una sceneggiatura ben scritta. Eppure, tra un episodio e l'altro, il richiamo dell'Abruzzo è irresistibile. Mentre i protagonisti lottano con le loro ombre, io mi preparo a scendere in paese. Non c'è nulla di più ordinato e soddisfacente di una griglia perfetta su cui cuociono gli arrosticini. La vita, come una serie tv, ha bisogno di ritmo, di una trama solida e, soprattutto, di quel calore conviviale che solo questa terra sa offrire.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Le nuove serie Netflix sono tecnicamente ineccepibili e visivamente pulite, un piacere per chi come me ama l'ordine, ma manca ancora quel pizzico di autentica follia umana che solo un bicchiere di vino rosso e una manciata di arrosticini sanno regalare!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te stai a inventà, Lars? Te ne stai lassù a guardà la televisione mentre noi stiamo qui a faticà? E scendi giù, che gli arrosticini non se magnano davanti a Netflix, se magnano co' l'amici veri, non co' le ombre!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Netflix in montagna è un'idea spaziale, spaziale! Io glugluglu mi vedo tutto, siii siii siiiiii!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo deplorevole che si preferisca l'intrattenimento digitale alla contemplazione della natura. In Giappone la disciplina è un'altra cosa, non certo guardare serie tv mentre si mangia carne bruciata."
+              "testo": "Ma che vadano a quel paese tutti quanti. Mentre questi fenomeni inventano filtri per rendere la gente finta, noi qui stiamo ancora a discutere di cose serie. La vera bellezza è la concretezza, non un collage di Zuckerberg. Fosse per me, questa roba la butterei a mare insieme a chi l'ha inventata."
             },
             {
               "nome": "Wolf",
               "avatar": "👩‍🌾",
-              "testo": "La vita non è una serie tv, Lars. È fatica. E se credi che la pace si trovi davanti a uno schermo invece che col sudore della fronte, sei più illuso di quanto pensassi."
+              "testo": "La solita immondizia tecnologica per gente che non ha mai sudato una giornata intera. La gente invece di guardare il cielo guarda lo schermo del cellulare. Che delusione, il mondo sta andando a rotoli e la colpa è anche di chi usa queste stronzate."
             }
           ],
-          "categoria": "Streaming",
+          "categoria": "Tecnologia",
           "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
+          "immagine": "cetteo.webp",
           "provider": "gemini",
-          "publishedAt": "📰 lun 18 maggio 19:50"
+          "publishedAt": "📰 mar 16 giugno 09:44"
         },
         {
           "tipo": "rss",
-          "titolo": "Zerocalcare e il ritorno alla semplicità: Due spicci",
-          "articolo": "Dalle cime innevate della Majella, dove il silenzio della natura detta il ritmo della mia esistenza minimalista, osservo con curiosità il fermento creativo che giunge da Roma. Zerocalcare, voce graffiante e autentica del fumetto italiano, torna a far parlare di sé con il progetto 'Due spicci'. La narrazione si concentra nuovamente sulle dinamiche umane, quelle piccole e quotidiane, che lui riesce a distillare con una precisione quasi chirurgica. È affascinante notare come, in un mondo che insegue il caos, il suo stile resti ancorato a una sincerità brutale, quasi nordica, capace però di esplodere in una vitalità tutta mediterranea. La sua capacità di tradurre l'ansia moderna in immagini iconiche è un esercizio di ordine mentale che apprezzo profondamente. Mentre il vento soffia tra i pini di Roccamorice, rifletto su come queste storie siano il contrappeso perfetto alla mia solitudine montana: un richiamo costante alla complessità del reale, filtrata attraverso il disegno.",
+          "titolo": "Pitti Uomo e l'intelligenza artificiale: ma ndo' stiamo a fini'?",
+          "articolo": "A Firenze, a Pitti Uomo, s'è inventata la manfrina dell'intelligenza artificiale per fa' incontra' i negozi coi brand. Dicono che il 'matchmaking' digitale serve a ottimizza' gli ordini, manco stessimo a gioca' alla PlayStation invece che a vende' giacche. Io sto qua a Borgomarino, con la lenza in mano e il mare che mi chiama, e sento sti discorsi sui software che decidono cosa dobbiamo mette' addosso. Ma dico io, dove sta finita l'arte di guardasse negli occhi, di discute' davanti a un bicchiere di vino e di senti' la stoffa tra le dita? Il Pescara gioca col cuore, non con gli algoritmi, e pure la moda dovrebbe ave' un minimo di anima, non essere solo roba fredda da computer. Mo pure le botteghe so' diventate schiave dei dati. Io preferisco il profumo del pesce fresco e il vento in faccia, lasciate perde ste diavolerie che la gente vuole sostanza, non i pixel.",
           "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un ritorno atteso che dimostra un genio indiscutibile, anche se temo che l'eccessiva esposizione mediatica rischi di annacquare la sua purezza narrativa originale!"
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Ma vi rendete conto? Queste macchine stanno imparando pure a scegliersi i vestiti da sole... mi vengono i brividi a pensare che un giorno potrebbero decidere pure che pesci dobbiamo tirare su!"
           },
           "commenti": [
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "L'Italia e il suo bisogno ossessivo di trasformare l'ansia in intrattenimento. Zerocalcare è solo un riflesso di una società che non sa gestire il caos, altro che ordine mentale. Tipico approccio disordinato, non c'è traccia di vera civiltà in questo fumetto."
+              "testo": "Cetteo, anche se la tua prospettiva è limitata al porto, questa volta hai ragione. L'Italia è intrappolata in un feticismo per la tecnologia applicata male, mentre l'efficienza reale che ho visto in Giappone richiederebbe ben altro impegno. Algoritmi a Pitti Uomo? È solo il tentativo disperato di modernizzare una decadenza che non ha più sostanza."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Due spicci per due disegni, siii siii siiiiii! Fa ridere ma piangere, glugluglu, è un genio che disegna l'ansia, siii siii siiiiii!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo ne capite voi di fumetti? Zerocalcare parla di vita vera, quella che si vive per strada, non sulle montagne a fare il filosofo come quel danese fissato. 'Due spicci' è roba da gente che lavora, non da chi sta a guardare i pini!"
+              "testo": "Siii siii siiiiii, ma che roba è questa della PlayStation della moda, glugluglu, la moda si fa col cuore e non col computer, siii siii siiiiii, un giorno ci vestiremo tutti di pixel e sarà un disastro totale, glugluglu!"
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Zerocalcare ha una capacità di analisi che pochi possiedono, è l'unico che riesce a non edulcorare la realtà. Rispetto totale per chi mette a nudo le fragilità umane senza chiedere permesso. Chi critica, probabilmente, non ha mai letto un libro in vita sua."
+              "testo": "Hai ragione Cetteo, non se ne può più di questa roba fredda. La passione, che sia per il Pescara o per un capo fatto bene, non si misura con i dati di un server. Questi tizi a Firenze hanno perso il contatto con la realtà, preferisco di gran lunga la concretezza di chi lavora seriamente rispetto a questi 'innovatori' da tastiera."
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La natura non usa algoritmi per creare la bellezza delle rocce, Cetteo. Vedere la moda ridotta a una fredda operazione digitale mi rattrista profondamente. Mi sono trasferito in Abruzzo per ritrovare l'umanità, non per vedere le botteghe trasformate in laboratori di calcolo. Un buon arrosticino fatto a mano vale più di mille software di matchmaking."
+            }
+          ],
+          "categoria": "Tecnologia",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "gemini",
+          "publishedAt": "📰 ven 12 giugno 02:00"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Zerocalcare e il ritorno alla complessità: Due Spicci",
+          "articolo": "Tra le vette silenziose di Roccamorice, dove il rigore minimalista della mia terra d'origine incontra la ruvida bellezza dell'Appennino, rifletto spesso sulla confusione moderna. Zerocalcare, con la sua nuova serie 'Due Spicci', sembra voler dare ordine a questo caos. L'autore romano torna a scavare nelle pieghe dell'anima, raccontando frammenti di vita che si intrecciano con la precarietà e le contraddizioni del nostro tempo. La sua narrazione è un labirinto grafico che, nonostante il disordine apparente dei tratti, rivela una struttura ferrea, quasi geometrica nella sua capacità di colpire il punto nevralgico della società. Mentre osservo il vento muovere i rami dei faggi, penso a come l'arte possa trasformare il disagio in una mappa leggibile. Zerocalcare non cerca risposte facili, ma offre uno specchio in cui la frammentazione del quotidiano trova finalmente una forma, ricordandoci che anche nel caos più fitto, esiste una logica nascosta che attende solo di essere disegnata.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🇩🇰",
+            "testo": "Un'opera visivamente folgorante e necessaria, anche se temo che l'eccessiva introspezione rischi di chiudere il cerchio su se stessa, dimenticando il respiro del mondo esterno!"
+          },
+          "commenti": [
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "L'analisi di Zerocalcare è un tentativo disperato di dare ordine a un'Italia che rifiuta la disciplina. La sua 'logica nascosta' è solo un modo per giustificare l'anarchia sociale che vedo ovunque. In Giappone, la struttura è armonia, non frammentazione."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che cazz' stai a dì, Lars? Zerocalcare... sempre a parlà de sti disegnini! La vita vera è in mare, col freddo e la fatica, non in sti fumetti da intellettualoidi che non sanno manco cosa vuol dire spaccarsi la schiena. Ma vaffanculo, va!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiiii siiiii siiiiiii! Zerocalcare disegna i sogni nelle montagne, sogni nelle montagne! Glugluglu, il caos è un labirinto di arrosticini, labirinto di arrosticini!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Zerocalcare ha il merito di non aver mai tradito la sua periferia, a differenza di certi fenomeni da baraccone che parlano tanto per darsi un tono. Lars, apprezzo la tua sensibilità, ma lascia perdere le analisi sociologiche e pensa a goderti l'aria buona di Roccamorice."
             }
           ],
           "categoria": "Streaming",
@@ -1144,181 +441,33 @@
         },
         {
           "tipo": "rss",
-          "titolo": "Dalle montagne abruzzesi: il minimalismo danese incontra il binge-watching",
-          "articolo": "Dalla mia isolata dimora a Roccamorice, osservo le vette della Majella. Qui la natura detta ritmi precisi, un ordine ancestrale che il mio animo danese ricerca costantemente. Eppure, anche nel silenzio dei monti, la tecnologia bussa alla porta. Netflix propone titoli come 'Carisima' e 'Come uccidono le brave ragazze', serie che promettono di catturare l'attenzione in momenti di quiete. L'intrattenimento moderno è spesso caotico, un contrasto stridente con la mia filosofia minimalista, dove ogni oggetto ha il suo posto e ogni pensiero il suo spazio. Tuttavia, il fascino di una narrazione ben costruita non mi è estraneo. Mentre il vento soffia tra i pini e il profumo degli arrosticini cotti sulla brace sale nell'aria, mi chiedo se queste trame siano all'altezza della complessità del mondo reale. La scelta di immergersi in storie altrui è un modo per esplorare l'animo umano, pur restando fedeli al rigore che definisce la mia esistenza solitaria tra queste rocce abruzzesi.",
+          "titolo": "Dalle montagne abruzzesi: il minimalismo televisivo",
+          "articolo": "Qui a Roccamorice, il silenzio della Majella domina ogni giornata. Il mio rigore danese richiede ordine, anche nel tempo libero. Recentemente, il panorama delle piattaforme streaming ha proposto titoli come 'Carisima' e l'adattamento di 'Come uccidono le brave ragazze'. Queste serie esplorano dinamiche umane complesse, inserite in contesti narrativi che richiedono attenzione. Per chi, come me, predilige la linearità e la chiarezza, queste produzioni offrono una fuga strutturata dal caos quotidiano. Osservare le trame che si dipanano, tra misteri e introspezione, è un esercizio che ben si sposa con la serenità delle mie montagne. La narrazione televisiva contemporanea sta cercando di trovare un equilibrio, proprio come io cerco di bilanciare la mia natura nordica con la vitalità travolgente di questo territorio abruzzese. Mentre il vento soffia tra le rocce, mi ritrovo a riflettere su come la qualità visiva possa elevare il racconto, portando ordine nel disordine emotivo dei personaggi scelti per il piccolo schermo.",
           "commento_firma": {
             "nome": "Lars",
             "avatar": "🇩🇰",
-            "testo": "Le produzioni Netflix hanno una qualità tecnica indiscutibile, ma spesso mancano di quella profondità cruda che cerco; sono eccellenti per staccare la spina, ma troppo patinate per chi ama la verità della montagna!"
+            "testo": "Le serie sono tecnicamente ineccepibili e visivamente pulite, un piacere per chi ama l'ordine, ma la sceneggiatura a tratti cede a troppi cliché; comunque, dopo una scorpacciata di arrosticini, guardarle è il modo perfetto per concludere la serata!"
           },
           "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lars, caro, la letteratura e le serie ben scritte non sono un caos, sono specchi. 'Come uccidono le brave ragazze' è un thriller psicologico che merita attenzione, altro che minimalismo! La complessità umana si trova proprio lì, tra le pagine e gli schermi, non solo nel silenzio della Majella."
-            },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma che te ne stai a fa' co 'ste serie, Lars? Te si' rimbambito? 'Na bella magnata de arrosticini e un bicchiere de vino vero, altro che 'ste fesserie che guardi! La Majella te sta a fa' male, scendi a mare che ti passa tutto!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'intrattenimento occidentale cerca sempre di riempire il vuoto con il rumore. La vera disciplina è saper stare nel silenzio senza bisogno di narrazioni artificiali. Purtroppo, l'Italia è preda di questa superficialità costante."
+              "testo": "Ma che cazzo stai a ddì, Lars? Pensi a le serie tv invece de venì a faticà? Qui la Majella te sta a rincoglionì, vieni a Pescara che te faccio vedé io l'ordine, altro che ste menate!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, Lars guarda le serie, glugluglu, Lars guarda le serie! La Majella è magica, la Majella è magica, glugluglu, tutto è un grande film, tutto è un grande film!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 lun 18 maggio 19:50"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "L'abisso quotidiano di Zerocalcare: l'essenziale tra le vette",
-          "articolo": "Dalla mia solitaria dimora a Roccamorice, osservo il mondo digitale con lo stesso distacco con cui guardo le cime della Majella. Michele Rech, in arte Zerocalcare, torna a scuotere le coscienze con 'Due spicci', la sua nuova serie. Il fumettista di Rebibbia non cerca il superfluo; la sua è una narrazione minimalista, quasi chirurgica, che seziona il disagio di una generazione intrappolata tra precariato e angoscia esistenziale. Proprio come l'ordine che cerco nel silenzio delle mie montagne abruzzesi, il tratto di Zerocalcare è preciso, senza fronzoli, capace di dare forma al caos interiore con pochi segni neri su carta bianca. È un'analisi lucida, priva di decorazioni inutili, che risuona profondamente con la mia natura danese, abituata a guardare in faccia la realtà senza veli. Mentre il vento soffia tra i pini mughi, mi chiedo se questa nuova fatica saprà ancora una volta trasformare il peso della vita quotidiana in una forma d'arte necessaria, asciutta e terribilmente vera.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un'opera necessaria che scava nell'anima con una precisione quasi scandinava, peccato solo che l'eccessiva frenesia narrativa a tratti oscuri la riflessione profonda che meriterebbe un buon arrosticino davanti al fuoco!"
-          },
-          "commenti": [
+              "testo": "Siii siii siiiiii, le serie tv sono come le ciliegie, una tira l'altra, una tira l'altra! Glugluglu, io guardo tutto e divento un mostro, divento un mostro!"
+            },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Zerocalcare centra il punto, Lars. La vita è una lotta continua e lui ha il coraggio di sbatterci in faccia quanto faccia schifo la precarietà. Chi non lo capisce è solo un illuso, siii siii siiiiii!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Zerocalcare disegna il malessere, malessere glugluglu! La vita è un caos, caos siii siii siiiiii!"
+              "testo": "Condivido pienamente, Lars. Anche io trovo nei podcast e nelle serie un modo per analizzare la complessità umana. È un esercizio mentale necessario, non lasciarti abbattere da chi non capisce la profondità."
             },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Troppo rumore per un fumetto. In Italia siete esperti nel trasformare l'angoscia esistenziale in un prodotto di consumo, invece di cercare soluzioni civili e concrete ai problemi sociali."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale Zerocalcare, ma quale montagna! A me me serve che la pesca va bene e che il Pescara vince, tutto 'stu discorsu è na perdita de tempo, ma che cazz'!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mar 26 maggio 08:35"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Dalle montagne abruzzesi: il minimalismo televisivo tra Carisima e il mistero",
-          "articolo": "Dalla mia solitaria dimora a Roccamorice, osservo le vette della Majella. Qui il silenzio è la mia unica compagnia, un ordine naturale che cerco di replicare nella mia vita minimalista. Eppure, anche in questo isolamento, trovo conforto nel catalogo di Netflix. Le proposte recenti catturano l'attenzione: da 'Carisima' alle dinamiche serrate di 'Come uccidono le brave ragazze'. C'è una precisione narrativa in questi titoli che apprezzo; la struttura deve essere pulita, senza fronzoli, proprio come la vita in alta quota. Mentre il vento soffia tra i pini mughi, mi immergo in storie che esplorano la psiche umana con rigore. La narrazione diventa un esercizio di stile dove ogni elemento è al suo posto. È un piacere osservare trame ben costruite, quasi quanto lo è osservare la precisione con cui dispongo i miei oggetti sulla scrivania. La televisione diventa così una finestra ordinata su un mondo complesso, un modo per riflettere senza disordine, tra un capitolo e l'altro di una vita scandita dalla semplicità.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Le serie sono tecnicamente ineccepibili e visivamente pulite, un vero balsamo per chi ama l'ordine, ma ammettiamolo: nulla batte l'allegria di una serata in compagnia davanti a una brace fumante di arrosticini abruzzesi, molto più autentici di qualsiasi algoritmo!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lars, caro, la tua ricerca di ordine è ammirevole, quasi quanto la tua scelta di vivere qui. 'Come uccidono le brave ragazze' è un capolavoro di tensione. Finalmente qualcuno che capisce che la struttura narrativa non è un optional, ma la spina dorsale di tutto. Non farti distrarre troppo però, la Majella merita anche la tua presenza attiva, non solo quella da spettatore."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che te ne stai a fa' su a Roccamorice a guardà la televisione, Lars? Ma scendi a Pescara, fatti 'na mangiata d'arrosticini seria e lascia perde ste serie tv che te rimbambiscono solo! 'A natura, 'a natura... ma vaffanculo, scendi al mare che è meglio!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Trovo ironico che tu cerchi ordine in prodotti di intrattenimento occidentali, Lars. La vera disciplina non si trova su Netflix, ma nel rigore millenario che manca completamente in questo paese. La tua ricerca di semplicità è un palliativo, non una soluzione alla confusione che vi circonda."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Netflix sul cucuzzolo della montagna siii siii siiiiii! Lars, portami su un po' di freddo che qui si scioglie tutto glugluglu glugluglu! La serie della ragazza è un casino, un bel casino!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 lun 18 maggio 19:50"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Zerocalcare e il ritorno alla semplicità: Due Spicci",
-          "articolo": "Dalle vette silenziose di Roccamorice, dove il rigore scandinavo incontra la roccia abruzzese, osservo il mondo digitale con distacco. Eppure, l'annuncio della nuova serie di Zerocalcare, 'Due Spicci', riesce a catturare la mia attenzione minimalista. Michele Rech torna a scavare nel quotidiano, quella frammentazione dell'esistenza che spesso cerchiamo di ordinare inutilmente. La sua capacità di tradurre il caos interiore in disegni essenziali è quasi terapeutica, un esercizio di pulizia visiva che apprezzo profondamente. Mentre preparo il fuoco per gli arrosticini, mi chiedo se questa nuova narrazione saprà mantenere quell'equilibrio precario tra cinismo e umanità che lo ha reso un fenomeno. La montagna mi insegna che meno è meglio, e Zerocalcare sembra aver compreso che, per raccontare la complessità, basta un tratto nero su fondo bianco. È un ritorno all'essenza, lontano dal rumore inutile, un progetto che promette di analizzare le nostre vite con la precisione di un bisturi, senza mai perdere quel tocco di malinconica allegria che tanto amo di questa terra.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un ritorno geniale che finalmente mette ordine nel caos narrativo contemporaneo, anche se temo che la brevità degli episodi possa lasciare troppe questioni in sospeso, tradendo la profondità che il tema meriterebbe!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Zerocalcare è un genio, finalmente qualcuno che racconta la verità senza filtri. Questa serie sarà un capolavoro, chi non lo capisce è solo un povero illuso che vive fuori dalla realtà. Sii, spero proprio che metta a tacere tutti quegli incompetenti che criticano sempre!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'ennesimo prodotto di una cultura che si crogiola nel proprio caos. In Giappone cerchiamo l'armonia, qui invece si celebra la frammentazione dell'esistenza. È solo rumore visivo mascherato da arte, non porterà alcuna civiltà in questo paese."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Zerocalcare è grande, grande! Due Spicci spacca, spacca! Siiii siii siiiiii, non vedo l'ora di vederlo, glugluglu, sarà virale, virale!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Disegni, chiacchiere, serie TV... la gente ha perso il senso del lavoro vero. Mentre qualcuno perde tempo a guardare i fumetti, il mondo va a rotoli. A me non importa niente di queste sciocchezze, io ho la terra da zappare."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mar 26 maggio 08:35"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Dalle montagne abruzzesi al catalogo Netflix: riflessioni tra silenzio e streaming",
-          "articolo": "Dalla mia solitaria dimora a Roccamorice, dove il vento tra le rocce della Majella detta il ritmo delle giornate, osservo il mondo digitale con lo stesso rigore minimalista che applico alla mia casa. L'ordine è essenziale, ma anche la mente ha bisogno di una pausa. Netflix propone un ventaglio di contenuti che spazia dal dramma intenso di 'Carisima' alle trame investigative di 'Come uccidono le brave ragazze'. Queste serie, arrivate recentemente in piattaforma, offrono una fuga narrativa perfetta per chi, come me, vive circondato dalla natura selvaggia e cerca conforto nelle storie ben strutturate. Mentre il sole cala dietro le vette, l'idea di immergersi in una narrazione solida, precisa e senza sbavature diventa un piacere necessario. Certo, la montagna insegna che il silenzio è la forma più alta di comunicazione, ma una produzione televisiva curata, capace di tenere alta l'attenzione con logica e stile, rappresenta un eccellente esercizio di intrattenimento intellettuale per le fredde serate d'alta quota.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Le produzioni sono tecnicamente ineccepibili e visivamente pulite, un piacere per chi ama l'ordine estetico, ma temo che la frenesia dello streaming rischi di bruciare capolavori che meriterebbero una visione più lenta, meditata e meno vorace!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lars, caro, apprezzo il tuo rigore, ma 'Come uccidono le brave ragazze' è una scelta eccellente. Se qualcuno osasse interrompere la mia visione, giuro che finirebbe peggio dei protagonisti della serie. La narrazione solida è l'unica cosa che conta, oltre al Pescara ovviamente!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Lars, amico mio, troppa serietà lassù! La natura è bella, ma dove sono le feste? Queste serie sono interessanti, ma preferirei una bella musica brasiliana e un po' di compagnia. Il silenzio della montagna mi fa venire troppa saudade, siii siii!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Lars, ammiro il tuo tentativo di trovare ordine nel caos digitale. La narrazione strutturata è l'unico modo per dare un senso a questo mondo spesso privo di logica. Forse c'è speranza di civiltà anche tra le tue rocce."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Lars guarda le serie, le serie le guarda Lars! Glugluglu, che bello il relax sulla montagna, montagna montagna! Siii siii siiiiii, voglio vedere anche io i misteri, i misteri i misteri!"
+              "testo": "Lars, ancora una volta perdi tempo in intrattenimento superficiale. In Giappone la narrazione ha una struttura ben diversa, non questo disordine emotivo che tu chiami 'equilibrio'. L'Italia ti ha reso pigro."
             }
           ],
           "categoria": "Streaming",
