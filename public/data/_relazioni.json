@@ -1,5 +1,5 @@
 {
-  "_runCount": 5,
+  "_runCount": 6,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,8 +36,8 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.57,
-    "label": "diffidente",
+    "score": -1,
+    "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Hiroki→Cetteo": {
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Lars→Hiroki": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -188,7 +188,7 @@
   "Glusi→Lilli": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "18/06/2026"
+    "ultimo_aggiornamento": "19/06/2026"
   },
   "Enzo→Glusi": {
     "score": -0.014,
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.7,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -246,7 +246,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lars": {
-    "score": 0.7,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Cetteo→Glusi": {
-    "score": -0.9,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -346,7 +346,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.9,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -506,7 +506,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Lars": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "18/06/2026"
   },
   "Wolf→Hiroki": {
-    "score": -0.8,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -866,9 +866,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Glusi": {
-    "score": -0.673,
+    "score": -0.973,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/06/2026"
+    "ultimo_aggiornamento": "19/06/2026"
   },
   "Glusi→Realtà": {
     "score": -0.041,
@@ -991,8 +991,8 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -0.6,
-    "label": "diffidente",
+    "score": -0.7,
+    "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Autore→Lilli": {
@@ -1003,7 +1003,7 @@
   "Lars→Topengo": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "18/06/2026"
+    "ultimo_aggiornamento": "19/06/2026"
   },
   "Cetteo→Topengo": {
     "score": -1,
@@ -1061,7 +1061,7 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Lilli→Wolf": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -1421,7 +1421,7 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Hiroki→Lucap": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -1431,8 +1431,8 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Lilli→Lucap": {
-    "score": 0.067,
-    "label": "neutro",
+    "score": -0.333,
+    "label": "diffidente",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Autore Articolo→Lamatte": {
@@ -1481,7 +1481,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Glusi→Lucap": {
-    "score": 0.011,
+    "score": 0.211,
     "label": "neutro",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -4236,22 +4236,22 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Lilli→La Barba": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Hiroki→La Barba": {
-    "score": 0,
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Wolf→La Barba": {
-    "score": -0.4,
-    "label": "diffidente",
+    "score": -0.7,
+    "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Glusi→La Barba": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -4283,6 +4283,21 @@
   "Cetteo→La Barba": {
     "score": 0.3,
     "label": "simpatico",
+    "ultimo_aggiornamento": "19/06/2026"
+  },
+  "Lars→Gatti": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "19/06/2026"
+  },
+  "Hiroki→Gatti": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "19/06/2026"
+  },
+  "Cetteo→Gatti": {
+    "score": -0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "19/06/2026"
   }
 }
