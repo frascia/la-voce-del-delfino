@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.8,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -76,8 +76,8 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.18,
-    "label": "neutro",
+    "score": 0.38,
+    "label": "simpatico",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Cetteo→Hiroki": {
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -276,7 +276,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Lars→Glusi": {
-    "score": 0.854,
+    "score": 0.954,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -301,7 +301,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Hiroki→Lilli": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Lilli→Hiroki": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -506,12 +506,12 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Lars": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Cetteo→Wolf": {
-    "score": 0.022,
+    "score": -0.178,
     "label": "neutro",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -621,9 +621,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Autore→Lars": {
-    "score": 0.72,
-    "label": "amico",
-    "ultimo_aggiornamento": "16/06/2026"
+    "score": 0.52,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "19/06/2026"
   },
   "Autore→Wolf": {
     "score": -0.9,
@@ -631,14 +631,14 @@
     "ultimo_aggiornamento": "16/06/2026"
   },
   "Autore→Hiroki": {
-    "score": 0.216,
+    "score": 0.116,
     "label": "neutro",
-    "ultimo_aggiornamento": "16/06/2026"
+    "ultimo_aggiornamento": "19/06/2026"
   },
   "Autore→Glusi": {
-    "score": 0.729,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "16/06/2026"
+    "ultimo_aggiornamento": "19/06/2026"
   },
   "Lars→Wolf": {
     "score": 0.482,
@@ -656,8 +656,8 @@
     "ultimo_aggiornamento": "18/06/2026"
   },
   "Wolf→Hiroki": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Glusi→Wolf": {
@@ -666,7 +666,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Wolf→Autore": {
-    "score": -0.434,
+    "score": -0.234,
     "label": "diffidente",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -881,8 +881,8 @@
     "ultimo_aggiornamento": "07/06/2026"
   },
   "Glusi→Pescara": {
-    "score": -0.017,
-    "label": "neutro",
+    "score": -0.217,
+    "label": "diffidente",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Cetteo→Squadra Pescara": {
@@ -906,9 +906,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Autore→Cetteo": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/06/2026"
+    "ultimo_aggiornamento": "19/06/2026"
   },
   "Miley Cyrus→Maxx Morando": {
     "score": 0.048,
@@ -991,7 +991,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -0.7,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -1016,7 +1016,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Lilli→Topengo": {
-    "score": 1,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -1061,8 +1061,8 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Lilli→Wolf": {
-    "score": 0.8,
-    "label": "amico",
+    "score": 0.6,
+    "label": "simpatico",
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Hiroki→Contesto Locale": {
@@ -1286,14 +1286,14 @@
     "ultimo_aggiornamento": "09/05/2026"
   },
   "Lilli→Autore Articolo": {
-    "score": 0.057,
-    "label": "neutro",
-    "ultimo_aggiornamento": "17/06/2026"
+    "score": -0.243,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "19/06/2026"
   },
   "Glusi→Autore Articolo": {
-    "score": 0.575,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "17/06/2026"
+    "score": 0.875,
+    "label": "amico",
+    "ultimo_aggiornamento": "19/06/2026"
   },
   "Lars→Bartè": {
     "score": 0.018,
@@ -4251,7 +4251,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Glusi→La Barba": {
-    "score": 0.8,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "19/06/2026"
   },
@@ -4281,7 +4281,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Cetteo→La Barba": {
-    "score": 0.3,
+    "score": 0.5,
     "label": "simpatico",
     "ultimo_aggiornamento": "19/06/2026"
   },
