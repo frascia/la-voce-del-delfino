@@ -1,5 +1,5 @@
 {
-  "_runCount": 1,
+  "_runCount": 2,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "21/06/2026"
   },
@@ -76,13 +76,13 @@
     "ultimo_aggiornamento": "20/06/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.308,
+    "score": -0.408,
     "label": "diffidente",
     "ultimo_aggiornamento": "21/06/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.55,
-    "label": "diffidente",
+    "score": -0.65,
+    "label": "ostile",
     "ultimo_aggiornamento": "21/06/2026"
   },
   "Lars→Juizinho": {
@@ -111,9 +111,9 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Autore": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "19/06/2026"
+    "ultimo_aggiornamento": "21/06/2026"
   },
   "Cetteo→Autore": {
     "score": -1,
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.45,
+    "score": 0.65,
     "label": "simpatico",
     "ultimo_aggiornamento": "21/06/2026"
   },
@@ -646,8 +646,8 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Lilli→Autore": {
-    "score": -0.53,
-    "label": "diffidente",
+    "score": -0.13,
+    "label": "neutro",
     "ultimo_aggiornamento": "21/06/2026"
   },
   "Abbukk→Cetteo": {
@@ -706,9 +706,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Questa": {
-    "score": 0.09,
+    "score": -0.11,
     "label": "neutro",
-    "ultimo_aggiornamento": "16/06/2026"
+    "ultimo_aggiornamento": "21/06/2026"
   },
   "Hiroki→Pescatori": {
     "score": -0.006,
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "21/06/2026"
   },
@@ -4361,6 +4361,26 @@
     "ultimo_aggiornamento": "21/06/2026"
   },
   "Wolf→Commentatori": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "21/06/2026"
+  },
+  "Lilli→Federico La Barba": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "21/06/2026"
+  },
+  "Hiroki→Federico La Barba": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "21/06/2026"
+  },
+  "Glusi→Federico La Barba": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "21/06/2026"
+  },
+  "Wolf→Federico La Barba": {
     "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "21/06/2026"
