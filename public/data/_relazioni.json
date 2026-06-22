@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -76,8 +76,8 @@
     "ultimo_aggiornamento": "20/06/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.608,
-    "label": "ostile",
+    "score": -0.508,
+    "label": "diffidente",
     "ultimo_aggiornamento": "22/06/2026"
   },
   "Cetteo→Hiroki": {
@@ -118,10 +118,10 @@
   "Cetteo→Autore": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "21/06/2026"
+    "ultimo_aggiornamento": "22/06/2026"
   },
   "Hiroki→Autore": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "22/06/2026"
   },
@@ -211,12 +211,12 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "22/06/2026"
   },
   "Glusi→Cetteo": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "22/06/2026"
   },
@@ -301,7 +301,7 @@
     "ultimo_aggiornamento": "22/06/2026"
   },
   "Hiroki→Lilli": {
-    "score": 0.01,
+    "score": 0.11,
     "label": "neutro",
     "ultimo_aggiornamento": "22/06/2026"
   },
@@ -311,8 +311,8 @@
     "ultimo_aggiornamento": "22/06/2026"
   },
   "Lilli→Hiroki": {
-    "score": 0.2,
-    "label": "neutro",
+    "score": 0.4,
+    "label": "simpatico",
     "ultimo_aggiornamento": "22/06/2026"
   },
   "Wolf→Redazione": {
@@ -321,7 +321,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Abbukk→Glusi": {
-    "score": 0.91,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "22/06/2026"
   },
@@ -518,7 +518,7 @@
   "Glusi→Autore": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "21/06/2026"
+    "ultimo_aggiornamento": "22/06/2026"
   },
   "Lars→Giornalista": {
     "score": 0.022,
@@ -631,8 +631,8 @@
     "ultimo_aggiornamento": "20/06/2026"
   },
   "Autore→Hiroki": {
-    "score": 0.674,
-    "label": "simpatico",
+    "score": 0.774,
+    "label": "amico",
     "ultimo_aggiornamento": "22/06/2026"
   },
   "Autore→Glusi": {
@@ -646,7 +646,7 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Lilli→Autore": {
-    "score": -0.23,
+    "score": -0.33,
     "label": "diffidente",
     "ultimo_aggiornamento": "22/06/2026"
   },
@@ -666,9 +666,9 @@
     "ultimo_aggiornamento": "19/06/2026"
   },
   "Wolf→Autore": {
-    "score": -0.501,
+    "score": -0.301,
     "label": "diffidente",
-    "ultimo_aggiornamento": "21/06/2026"
+    "ultimo_aggiornamento": "22/06/2026"
   },
   "Lars→Barista": {
     "score": 0.013,
@@ -1241,19 +1241,19 @@
     "ultimo_aggiornamento": "18/06/2026"
   },
   "Glusi→Bartender": {
-    "score": 0.927,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "22/06/2026"
   },
   "Bartender→Lars": {
-    "score": 0.597,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "11/06/2026"
+    "score": 0.797,
+    "label": "amico",
+    "ultimo_aggiornamento": "22/06/2026"
   },
   "Bartender→Cetteo": {
-    "score": -0.062,
-    "label": "neutro",
-    "ultimo_aggiornamento": "14/05/2026"
+    "score": -0.262,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "22/06/2026"
   },
   "Autrice→Cetteo": {
     "score": -0.81,
@@ -1421,9 +1421,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Hiroki→Lucap": {
-    "score": 0.81,
+    "score": 0.71,
     "label": "amico",
-    "ultimo_aggiornamento": "19/06/2026"
+    "ultimo_aggiornamento": "22/06/2026"
   },
   "Cetteo→Lucap": {
     "score": -0.9,
@@ -1516,9 +1516,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lucap→Lilli": {
-    "score": 0.5,
+    "score": 0.3,
     "label": "simpatico",
-    "ultimo_aggiornamento": "19/06/2026"
+    "ultimo_aggiornamento": "22/06/2026"
   },
   "Hiroki→Borgo Marino": {
     "score": -0.027,
@@ -1911,9 +1911,9 @@
     "ultimo_aggiornamento": "29/04/2026"
   },
   "Hiroki→Italia": {
-    "score": -0.714,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "17/06/2026"
+    "ultimo_aggiornamento": "22/06/2026"
   },
   "Glusi→Sistema": {
     "score": -0.072,
@@ -4406,6 +4406,11 @@
     "ultimo_aggiornamento": "22/06/2026"
   },
   "Topengo→La Barba": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "22/06/2026"
+  },
+  "Lucap→La Barba": {
     "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "22/06/2026"
