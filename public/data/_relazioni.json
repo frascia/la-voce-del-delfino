@@ -1,5 +1,5 @@
 {
-  "_runCount": 8,
+  "_runCount": 9,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.9,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "25/06/2026"
   },
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "25/06/2026"
   },
@@ -371,8 +371,8 @@
     "ultimo_aggiornamento": "23/06/2026"
   },
   "Abbukk→Lilli": {
-    "score": -0.421,
-    "label": "diffidente",
+    "score": -0.721,
+    "label": "ostile",
     "ultimo_aggiornamento": "25/06/2026"
   },
   "Abbukk→Redazione": {
@@ -406,7 +406,7 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→Abbukk": {
-    "score": -0.215,
+    "score": -0.315,
     "label": "diffidente",
     "ultimo_aggiornamento": "25/06/2026"
   },
@@ -511,8 +511,8 @@
     "ultimo_aggiornamento": "25/06/2026"
   },
   "Cetteo→Wolf": {
-    "score": -0.244,
-    "label": "diffidente",
+    "score": -0.044,
+    "label": "neutro",
     "ultimo_aggiornamento": "25/06/2026"
   },
   "Glusi→Autore": {
@@ -546,9 +546,9 @@
     "ultimo_aggiornamento": "25/06/2026"
   },
   "Lilli→Abbukk": {
-    "score": -0.647,
+    "score": -0.947,
     "label": "ostile",
-    "ultimo_aggiornamento": "24/06/2026"
+    "ultimo_aggiornamento": "25/06/2026"
   },
   "Wolf→Abbukk": {
     "score": -0.078,
@@ -666,7 +666,7 @@
     "ultimo_aggiornamento": "24/06/2026"
   },
   "Wolf→Autore": {
-    "score": -0.851,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "25/06/2026"
   },
@@ -716,7 +716,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.83,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "25/06/2026"
   },
@@ -1241,14 +1241,14 @@
     "ultimo_aggiornamento": "25/06/2026"
   },
   "Glusi→Bartender": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "25/06/2026"
   },
   "Bartender→Lars": {
-    "score": 0.717,
+    "score": 0.917,
     "label": "amico",
-    "ultimo_aggiornamento": "22/06/2026"
+    "ultimo_aggiornamento": "25/06/2026"
   },
   "Bartender→Cetteo": {
     "score": -0.236,
@@ -1561,19 +1561,19 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Avvocato→Cetteo": {
-    "score": -0.176,
-    "label": "neutro",
-    "ultimo_aggiornamento": "13/06/2026"
+    "score": -0.376,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "25/06/2026"
   },
   "Avvocato→Lilli": {
-    "score": -0.151,
-    "label": "neutro",
-    "ultimo_aggiornamento": "13/06/2026"
+    "score": -0.251,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "25/06/2026"
   },
   "Avvocato→Hiroki": {
-    "score": -0.073,
-    "label": "neutro",
-    "ultimo_aggiornamento": "13/06/2026"
+    "score": -0.273,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "25/06/2026"
   },
   "Topengo→Glusi": {
     "score": 0.704,
@@ -2331,9 +2331,9 @@
     "ultimo_aggiornamento": "30/05/2026"
   },
   "Lucap→Autore": {
-    "score": 0.576,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "22/06/2026"
+    "score": 0.776,
+    "label": "amico",
+    "ultimo_aggiornamento": "25/06/2026"
   },
   "Hiroki→Pescara Basket": {
     "score": -0.03,
@@ -2616,9 +2616,9 @@
     "ultimo_aggiornamento": "11/05/2026"
   },
   "Bartender→Hiroki": {
-    "score": 0.036,
+    "score": -0.064,
     "label": "neutro",
-    "ultimo_aggiornamento": "14/05/2026"
+    "ultimo_aggiornamento": "25/06/2026"
   },
   "Hiroki→Burocrazia": {
     "score": -0.056,
@@ -4503,6 +4503,11 @@
   "Glusi→Città di Pescara": {
     "score": -0.2,
     "label": "neutro",
+    "ultimo_aggiornamento": "25/06/2026"
+  },
+  "Avvocato→Glusi": {
+    "score": 0.3,
+    "label": "simpatico",
     "ultimo_aggiornamento": "25/06/2026"
   }
 }
