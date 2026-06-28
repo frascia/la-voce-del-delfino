@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -53,7 +53,7 @@
   "Lars→Hiroki": {
     "score": 0.7,
     "label": "amico",
-    "ultimo_aggiornamento": "27/06/2026"
+    "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→Juizinho": {
     "score": -1,
@@ -71,14 +71,14 @@
     "ultimo_aggiornamento": "27/06/2026"
   },
   "Juizinho→Hiroki": {
-    "score": -0.929,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "27/06/2026"
+    "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.03,
-    "label": "neutro",
-    "ultimo_aggiornamento": "27/06/2026"
+    "score": -0.23,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "28/06/2026"
   },
   "Cetteo→Hiroki": {
     "score": -1,
@@ -118,7 +118,7 @@
   "Cetteo→Autore": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "27/06/2026"
+    "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→Autore": {
     "score": -0.2,
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "28/06/2026"
   },
@@ -301,7 +301,7 @@
     "ultimo_aggiornamento": "27/06/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.4,
+    "score": -0.5,
     "label": "diffidente",
     "ultimo_aggiornamento": "28/06/2026"
   },
@@ -348,7 +348,7 @@
   "Lilli→Glusi": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "27/06/2026"
+    "ultimo_aggiornamento": "28/06/2026"
   },
   "Abbukk→Hiroki": {
     "score": -1,
@@ -366,7 +366,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Juizinho→Lilli": {
-    "score": -0.819,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "28/06/2026"
   },
@@ -518,7 +518,7 @@
   "Glusi→Autore": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "27/06/2026"
+    "ultimo_aggiornamento": "28/06/2026"
   },
   "Lars→Giornalista": {
     "score": 0.018,
@@ -646,14 +646,14 @@
     "ultimo_aggiornamento": "26/06/2026"
   },
   "Lilli→Autore": {
-    "score": -1,
-    "label": "ostile",
-    "ultimo_aggiornamento": "27/06/2026"
-  },
-  "Abbukk→Cetteo": {
     "score": -0.9,
     "label": "ostile",
-    "ultimo_aggiornamento": "25/06/2026"
+    "ultimo_aggiornamento": "28/06/2026"
+  },
+  "Abbukk→Cetteo": {
+    "score": -0.8,
+    "label": "ostile",
+    "ultimo_aggiornamento": "28/06/2026"
   },
   "Wolf→Hiroki": {
     "score": -0.03,
@@ -666,9 +666,9 @@
     "ultimo_aggiornamento": "27/06/2026"
   },
   "Wolf→Autore": {
-    "score": -0.15,
-    "label": "neutro",
-    "ultimo_aggiornamento": "27/06/2026"
+    "score": -0.25,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "28/06/2026"
   },
   "Lars→Barista": {
     "score": 0.011,
@@ -1516,9 +1516,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lucap→Lilli": {
-    "score": 0.513,
+    "score": 0.413,
     "label": "simpatico",
-    "ultimo_aggiornamento": "26/06/2026"
+    "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→Borgo Marino": {
     "score": -0.022,
@@ -4241,8 +4241,8 @@
     "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→La Barba": {
-    "score": -0.569,
-    "label": "diffidente",
+    "score": -0.769,
+    "label": "ostile",
     "ultimo_aggiornamento": "28/06/2026"
   },
   "Wolf→La Barba": {
@@ -4579,5 +4579,15 @@
     "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "27/06/2026"
+  },
+  "Juizinho→Lucap": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "28/06/2026"
+  },
+  "Juizinho→La Barba": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "28/06/2026"
   }
 }
