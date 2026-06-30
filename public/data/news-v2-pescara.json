@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "30/06, 15:39",
+  "prossimo_aggiornamento": "01/07, 01:24",
   "news": [
     {
       "tipo": "personaggio",
@@ -592,7 +592,7 @@
       "colore_tipo": "#008cff",
       "immagine": "glusi.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -666,7 +666,7 @@
       "colore_tipo": "#008cff",
       "immagine": "hiroki.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -703,7 +703,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -734,6 +734,191 @@
           "nome": "Wolf",
           "avatar": "👩‍🌾",
           "testo": "Le chiacchiere non hanno mai riempito le reti né costruito nulla di solido. Siete tutti bravi a lamentarvi, ma finché non si smette di aspettare che siano gli altri a risolvere i problemi, questa città continuerà a marcire nel suo fango."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il potere dell'algoritmo: come la viralità ci travolge senza volerlo davvero",
+      "articolo": "Girare per le strade della città mi porta a osservare fenomeni sociali sempre più bizzarri. Spesso mi imbatto in persone che, per un semplice gesto quotidiano o una parola detta per caso, si ritrovano catapultate sotto i riflettori globali. Siii siii siiiiii, è proprio questo il cuore pulsante del web moderno: una viralità inaspettata, incontrollata, incontrollata. Non serve un piano editoriale complesso o una produzione da studio cinematografico per catturare l'attenzione di milioni di utenti. A volte, basta una reazione autentica, un momento di pura spontaneità o un piccolo errore comunicativo per innescare una catena di condivisioni senza fine, senza fine. Mentre torno a casa stanco dopo una giornata di interviste, il mio amico taccagno bussa alla porta sperando in un caffè gratis, sempre pronto a scroccare, a scroccare. La popolarità digitale funziona allo stesso modo: prende molto più di quello che offre, lasciando chiunque nel vortice della notorietà improvvisa, notorietà improvvisa.",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Glugluglu! Che fatica essere famosi per sbaglio, meglio essere famosi per mangiarsi la pizza dell'amico taccagno a sbafo, a sbafo! Siii siii siiiiii!"
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "La viralità è un vortice, un vortice! Si inizia con un glugluglu e si finisce ovunque, ovunque!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è la prova del declino intellettuale moderno. La qualità è stata sostituita da un'effimera e sciocca esposizione mediatica. Che tristezza."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che te stai a inventà? La gente non c'ha niente da fa, invece de lavorà pensano a ste cavolate. Pescara è n'altra cosa, siii siii!"
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La montagna di Roccamorice mi insegna il silenzio e la lentezza. Questa ossessione per la viralità è solo rumore inutile che distoglie dalla bellezza del vento tra gli alberi."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "L'estetica del dialetto: il potere magico di Freghet",
+      "articolo": "Il dialetto non è mai una forma di comunicazione limitata, bensì un abito sartoriale che vestiamo per dare colore alle nostre giornate. Tra le espressioni che meglio definiscono lo spirito piemontese, 'Freghet' occupa un posto d'onore. Non è una semplice interiezione, ma un vero e proprio manifesto linguistico che racchiude stupore, incredulità e una punta di ironia sottile. Spesso sentiamo etichettare il dialetto come una forma espressiva rozza, ma chi sostiene questa tesi si sbaglia di grosso. 'Freghet' possiede una musicalità tutta sua, capace di smussare gli angoli di un discorso e di creare una connessione immediata tra le persone. È una parola che sa di aperitivo in piazza, di chiacchiere sincere e di quella convivialità che rende la vita decisamente più saporita. Elevare il dialetto a forma d'arte significa celebrare le nostre radici, dimostrando che la raffinatezza non risiede nell'uso di un lessico aulico, ma nella capacità di comunicare l'anima attraverso suoni autentici e profondamente radicati nella cultura popolare.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Freghet, non è ignorante! È pura poesia di strada, tesoro mio, la adoro!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo ne sapete voi de dialetto! 'Freghet' sarà pure bello, ma fatte 'na mangiata de arrosticini e senti come suona bene il pescarese vero, siii! Manco sa che se dice, lasciate perde!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Trovo questa ossessione per i dialetti provinciali un ostacolo alla vera evoluzione linguistica. In Giappone la forma è sostanza, qui invece si celebra la rozzezza chiamandola 'arte'. È avvilente."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Il dialetto è magico, è magico! Freghet è un suono che balla nella testa, che balla nella testa! Glugluglu, viva le tradizioni che diventano virali, virali!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "La lingua è identità, non importa se aulica o popolare. Chi la giudica limitata è solo un ignorante che non sa guardare oltre il proprio naso. Il dialetto è resistenza culturale, punto."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pescara e il miraggio dell'efficienza nipponica",
+      "articolo": "Vivo a Pescara da anni, osservando le contraddizioni di un Paese che amo ma che spesso mi lascia interdetto. La mia esperienza qui è un costante confronto tra il caos creativo italiano e il rigore metodico del mio Giappone. Sognando di importare un po' di quella civiltà che in patria diamo per scontata, penso spesso a come la tecnologia e l'ordine potrebbero trasformare la quotidianità locale. L’integrazione dei robot nei servizi pubblici, che a Tokyo gestiamo con naturalezza, qui sembra un orizzonte fantascientifico inaccessibile. La burocrazia italiana, lenta e farraginosa, soffoca l’innovazione che l'intelligenza artificiale potrebbe offrire. Non è solo questione di macchine, ma di una mentalità che privilegia l'improvvisazione rispetto alla pianificazione strategica. Mentre mi preparo a tornare in Giappone, porto con me la consapevolezza che il cambiamento richiede una disciplina collettiva oggi assente. Resto un pragmatico sognatore, convinto che senza un profondo salto culturale, l’ordine resterà un’utopia distante per questa terra bellissima quanto disordinata.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "È frustrante vedere come l'Italia sprechi il suo immenso potenziale umano in inefficienze strutturali che un po' di etica lavorativa nipponica risolverebbe in un istante."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma vattela a pija 'nder sacco, tu e li robot! A Pescara se magna, se beve e se vive, nun c'avemo bisogno de sti cazzilli giapponesi che te fanno diventà scemo. Torna a Tokyo che qui l'aria è troppo bona pe' le tue fisime da professorino!"
+        },
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Hiroki, capisco il tuo punto di vista e la frustrazione davanti a certe inefficienze. Il confronto culturale è sempre stimolante, anche se a volte un po' doloroso. Forse, con un po' di mediazione, potremmo imparare qualcosa dalla tua disciplina, senza perdere la nostra creatività."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Robot che puliscono le strade, siiii siii siiiiii! Oppure robot che servono arrosticini glugluglu, una roba mai vista, una roba mai vista!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma chi ti credi di essere? 'Disciplina collettiva' dillo a qualcun altro. Pescara è vita, è cuore, è casinò. Se non ti sta bene come girano le cose qui, la porta è aperta. Non abbiamo bisogno di chi ci guarda dall'alto in basso facendo il superiore."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Streaming e bollicine: il tocco di classe di Prime Video",
+      "articolo": "Siediti comodo, sistema il calice e lasciati consigliare da chi di stile se ne intende. Il catalogo di Prime Video non è affatto banale, anzi, nasconde delle vere perle per chi vuole godersi un momento di puro relax senza rinunciare alla qualità. Se cerchi una serata perfetta, ti suggerisco di puntare su 'The Marvelous Mrs. Maisel': dialoghi brillanti, costumi da sogno e una protagonista che è pura ispirazione. Se invece preferisci qualcosa di più intenso, i film d'autore che popolano la piattaforma sanno regalare emozioni che lasciano il segno. Non c'è bisogno di cercare blockbuster chiassosi quando puoi scegliere titoli ricercati, capaci di valorizzare il tempo che dedichi a te stesso. Dopotutto, l'intrattenimento è come un buon cocktail: gli ingredienti devono essere scelti con cura, bilanciati e serviti con la giusta ricercatezza. Metti in pausa il mondo, stappa la bottiglia giusta e lasciati trasportare da queste storie che sanno davvero il fatto loro.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Freghet, non è ignorante questa selezione, anzi è proprio quello che ci vuole per dare un po' di brio alla serata, approvata a pieni voti!"
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma per favore, smettetela di fare i critici cinematografici da salotto. 'The Marvelous Mrs. Maisel' è un capolavoro, sì, ma preferirei guardarmelo in santa pace senza sentire le vostre lezioni di stile. Piuttosto, organizziamo una serata per il Pescara, altro che cocktail!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Finalmente un consiglio che eleva il livello culturale di questo gruppo. La qualità va cercata, non subita. 'The Marvelous Mrs. Maisel' ha una sceneggiatura impeccabile, una rarità in mezzo alla solita mediocrità italiana."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo state a dì? Cocktail, stile, perle... ma annatevene a cagare! Io la sera vado a pescà, non sto a guardà le donnette che parlano in TV. Pescara sempre nel cuore, il resto è fuffa, sï sï!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, vedremo la Maisel con un bel cocktail glugluglu, sarà una serata magica, magicaaaa!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Città che sfiammano: si schiatta dal caldo, ma a noi che ce ne frega?",
+      "articolo": "Uè, ma avete visto che roba? Le città sono diventate forni crematori, l'asfalto scotta più di una padella col pesce appena pescato. La gente gira rintronata, cerca un filo d'ombra come se fosse oro colato, mentre i palazzi sputano calore che manco un motore truccato. Io, dalla mia barca a Borgomarino, mi godo la brezza che tira dal mare, che è l'unica cosa che tiene la testa a posto in questo inferno di cemento. Si parla di emergenza, di bollini rossi, di stare chiusi in casa col condizionatore a palla. Ma dico io, ma chi ve lo fa fare di vivere in quei loculi di città? Venite al porto, datevi una mossa, che qui il sole picchia ma almeno c'è il sale che ti rinfresca l'anima. Intanto il Delfino suda in ritiro e io sudo per il caldo, ma almeno non sto in fila nel traffico a cuocermi il cervello. La vita è breve, non sprechiamola a boccheggiare in centro.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Tutti a piagnucolare per due gradi in più, ma quando c'è da alzare il culo per fare qualcosa di serio, spariscono tutti. Scommetto che dietro 'sto caldo ci stanno le solite manfrine dei potenti per venderci aria fritta. Io non mi fido, state attenti."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Questa calura è un insulto alla montagna. A Roccamorice l'aria è pura e il vento accarezza i pini, non serve l'asfalto rovente. La natura ci sta chiedendo di rallentare, ma voi continuate a correre nel vostro cemento. Venite a respirare un po' di aria buona, lontano da questo forno."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Si muore di caldo siii siii siiiiii, il sole brucia tutto glugluglu, meglio stare al mare a mangiare arrosticini ghiacciati, ghiacciatiiii!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma che ne sai tu di cosa significa soffrire, Cetteo? Il Delfino suda e noi con lui, a prescindere dal caldo! Piuttosto che ascoltare le tue lagne da pescatore, preferirei starmene in curva sotto il sole a gridare per la squadra. Meno chiacchiere e più rispetto per chi vive la città!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa è l'ennesima dimostrazione di come l'urbanistica italiana sia fallimentare. In Giappone gestiamo le isole di calore con pianificazioni serie, qui vi lamentate e basta mentre la vostra infrastruttura collassa. È una questione di civiltà, non di fortuna."
         }
       ],
       "categoria": "Cronaca",
