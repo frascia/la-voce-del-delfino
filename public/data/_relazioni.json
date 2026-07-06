@@ -1,5 +1,5 @@
 {
-  "_runCount": 4,
+  "_runCount": 5,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "06/07/2026"
   },
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "14/05/2026"
   },
   "Glusi→Lilli": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "06/07/2026"
   },
@@ -273,7 +273,7 @@
   "Hiroki→Glusi": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "05/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Lars→Glusi": {
     "score": 0.878,
@@ -301,8 +301,8 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.48,
-    "label": "diffidente",
+    "score": -1,
+    "label": "ostile",
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Cetteo→Lilli": {
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.66,
+    "score": -0.76,
     "label": "ostile",
     "ultimo_aggiornamento": "06/07/2026"
   },
@@ -631,9 +631,9 @@
     "ultimo_aggiornamento": "03/07/2026"
   },
   "Autore→Hiroki": {
-    "score": -0.554,
+    "score": -0.354,
     "label": "diffidente",
-    "ultimo_aggiornamento": "05/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Autore→Glusi": {
     "score": 0.798,
@@ -716,9 +716,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.63,
+    "score": -0.83,
     "label": "ostile",
-    "ultimo_aggiornamento": "05/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Glusi→Pescatori": {
     "score": 0.077,
@@ -823,7 +823,7 @@
   "Hiroki→Wolf": {
     "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "04/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Cetteo→Squadra": {
     "score": -0.099,
@@ -908,7 +908,7 @@
   "Autore→Cetteo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "05/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Miley Cyrus→Maxx Morando": {
     "score": 0.026,
@@ -998,7 +998,7 @@
   "Autore→Lilli": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "05/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Lars→Topengo": {
     "score": 0.9,
@@ -1061,8 +1061,8 @@
     "ultimo_aggiornamento": "24/06/2026"
   },
   "Lilli→Wolf": {
-    "score": 0.5,
-    "label": "simpatico",
+    "score": 0.7,
+    "label": "amico",
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Hiroki→Contesto Locale": {
@@ -1246,14 +1246,14 @@
     "ultimo_aggiornamento": "02/07/2026"
   },
   "Bartender→Lars": {
-    "score": 0.801,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Bartender→Cetteo": {
-    "score": -0.155,
-    "label": "neutro",
-    "ultimo_aggiornamento": "22/06/2026"
+    "score": -0.355,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Autrice→Cetteo": {
     "score": -0.656,
@@ -1431,7 +1431,7 @@
     "ultimo_aggiornamento": "03/07/2026"
   },
   "Lilli→Lucap": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "06/07/2026"
   },
@@ -1476,9 +1476,9 @@
     "ultimo_aggiornamento": "03/07/2026"
   },
   "Lucap→Hiroki": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "03/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Glusi→Lucap": {
     "score": 0.038,
@@ -2801,9 +2801,9 @@
     "ultimo_aggiornamento": "14/05/2026"
   },
   "Lucap→Comunità": {
-    "score": 0.149,
+    "score": 0.249,
     "label": "neutro",
-    "ultimo_aggiornamento": "05/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Cetteo→Presidente della Repubblica": {
     "score": -0.027,
@@ -4601,9 +4601,9 @@
     "ultimo_aggiornamento": "29/06/2026"
   },
   "Hiroki→Dirigenza Milan": {
-    "score": -0.146,
-    "label": "neutro",
-    "ultimo_aggiornamento": "29/06/2026"
+    "score": -0.346,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Lilli→Innovazione Tecnologica": {
     "score": -0.219,
@@ -4778,6 +4778,36 @@
   "Hiroki→Management Milan": {
     "score": -0.3,
     "label": "diffidente",
+    "ultimo_aggiornamento": "06/07/2026"
+  },
+  "Hiroki→Cittadini": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "06/07/2026"
+  },
+  "Wolf→Sistema Giudiziario": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/07/2026"
+  },
+  "Glusi→Eventi": {
+    "score": 0,
+    "label": "neutro",
+    "ultimo_aggiornamento": "06/07/2026"
+  },
+  "Cetteo→Dirigenza Milan": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/07/2026"
+  },
+  "Wolf→Dirigenza Milan": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/07/2026"
+  },
+  "Glusi→Dirigenza Milan": {
+    "score": -0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "06/07/2026"
   }
 }
