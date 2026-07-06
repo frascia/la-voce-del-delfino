@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "06/07/2026"
   },
@@ -51,8 +51,8 @@
     "ultimo_aggiornamento": "05/07/2026"
   },
   "Lars→Hiroki": {
-    "score": -0.191,
-    "label": "neutro",
+    "score": -0.291,
+    "label": "diffidente",
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Hiroki→Juizinho": {
@@ -76,8 +76,8 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Cetteo→Hiroki": {
@@ -111,14 +111,14 @@
     "ultimo_aggiornamento": "11/04/2026"
   },
   "Lars→Autore": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "04/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Cetteo→Autore": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "05/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Hiroki→Autore": {
     "score": -0.569,
@@ -216,7 +216,7 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Glusi→Cetteo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "06/07/2026"
   },
@@ -238,7 +238,7 @@
   "Lilli→Lars": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "05/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Enzo→Lars": {
     "score": -0.011,
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.86,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "06/07/2026"
   },
@@ -346,8 +346,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.8,
-    "label": "ostile",
+    "score": -0.5,
+    "label": "diffidente",
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Abbukk→Hiroki": {
@@ -381,8 +381,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.55,
-    "label": "diffidente",
+    "score": -0.75,
+    "label": "ostile",
     "ultimo_aggiornamento": "06/07/2026"
   },
   "utente→Lars": {
@@ -506,14 +506,14 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Lars": {
-    "score": -0.73,
-    "label": "ostile",
-    "ultimo_aggiornamento": "05/07/2026"
+    "score": -0.53,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Cetteo→Wolf": {
-    "score": 0.63,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "03/07/2026"
+    "score": 0.73,
+    "label": "amico",
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Glusi→Autore": {
     "score": 1,
@@ -661,9 +661,9 @@
     "ultimo_aggiornamento": "05/07/2026"
   },
   "Glusi→Wolf": {
-    "score": -0.802,
+    "score": -0.702,
     "label": "ostile",
-    "ultimo_aggiornamento": "03/07/2026"
+    "ultimo_aggiornamento": "06/07/2026"
   },
   "Wolf→Autore": {
     "score": 0.197,
@@ -821,7 +821,7 @@
     "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→Wolf": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "06/07/2026"
   },
@@ -1431,7 +1431,7 @@
     "ultimo_aggiornamento": "03/07/2026"
   },
   "Lilli→Lucap": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "06/07/2026"
   },
@@ -1516,8 +1516,8 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Lucap→Lilli": {
-    "score": 0.679,
-    "label": "simpatico",
+    "score": 0.779,
+    "label": "amico",
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Hiroki→Borgo Marino": {
@@ -1766,8 +1766,8 @@
     "ultimo_aggiornamento": "28/06/2026"
   },
   "Lucap→Wolf": {
-    "score": -0.652,
-    "label": "ostile",
+    "score": -0.552,
+    "label": "diffidente",
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Hiroki→Politici": {
@@ -4811,6 +4811,11 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Hiroki→Gestione Porto": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/07/2026"
+  },
+  "Wolf→sistema_politico": {
     "score": -0.3,
     "label": "diffidente",
     "ultimo_aggiornamento": "06/07/2026"
