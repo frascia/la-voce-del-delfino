@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -51,7 +51,7 @@
     "ultimo_aggiornamento": "05/07/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.009,
+    "score": 0.109,
     "label": "neutro",
     "ultimo_aggiornamento": "07/07/2026"
   },
@@ -148,7 +148,7 @@
   "Hiroki→Pescara": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "06/07/2026"
+    "ultimo_aggiornamento": "07/07/2026"
   },
   "Enzo→Generazione Giovane": {
     "score": -0.008,
@@ -186,8 +186,8 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.7,
-    "label": "amico",
+    "score": 0.6,
+    "label": "simpatico",
     "ultimo_aggiornamento": "07/07/2026"
   },
   "Enzo→Glusi": {
@@ -236,7 +236,7 @@
     "ultimo_aggiornamento": "05/07/2026"
   },
   "Lilli→Lars": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "07/07/2026"
   },
@@ -296,7 +296,7 @@
     "ultimo_aggiornamento": "07/07/2026"
   },
   "Lars→Lilli": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "07/07/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "07/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.9,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "07/07/2026"
   },
@@ -1001,9 +1001,9 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Lars→Topengo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "04/07/2026"
+    "ultimo_aggiornamento": "07/07/2026"
   },
   "Cetteo→Topengo": {
     "score": -0.9,
@@ -4878,6 +4878,31 @@
   "Glusi→Flextony e Tigerplug": {
     "score": 0.3,
     "label": "simpatico",
+    "ultimo_aggiornamento": "07/07/2026"
+  },
+  "Glusi→Questa città": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "07/07/2026"
+  },
+  "Lilli→Harlan Coben": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "07/07/2026"
+  },
+  "Topengo→Harlan Coben": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "07/07/2026"
+  },
+  "Glusi→Harlan Coben": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "07/07/2026"
+  },
+  "Lars→Harlan Coben": {
+    "score": 0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "07/07/2026"
   }
 }
