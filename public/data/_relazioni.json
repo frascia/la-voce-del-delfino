@@ -1,5 +1,5 @@
 {
-  "_runCount": 9,
+  "_runCount": 10,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -46,9 +46,9 @@
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.9,
+    "score": -0.7,
     "label": "ostile",
-    "ultimo_aggiornamento": "12/07/2026"
+    "ultimo_aggiornamento": "14/07/2026"
   },
   "Lars→Hiroki": {
     "score": 1,
@@ -76,8 +76,8 @@
     "ultimo_aggiornamento": "12/07/2026"
   },
   "Hiroki→Lars": {
-    "score": -0.729,
-    "label": "ostile",
+    "score": -0.529,
+    "label": "diffidente",
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Cetteo→Hiroki": {
@@ -86,8 +86,8 @@
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Lars→Juizinho": {
-    "score": 0.82,
-    "label": "amico",
+    "score": 0.62,
+    "label": "simpatico",
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Juizinho→Lars": {
@@ -346,7 +346,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.714,
+    "score": -0.814,
     "label": "ostile",
     "ultimo_aggiornamento": "14/07/2026"
   },
@@ -531,12 +531,12 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Hiroki→Giornalista": {
-    "score": -0.227,
+    "score": -0.327,
     "label": "diffidente",
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Glusi→Giornalista": {
-    "score": 0.367,
+    "score": 0.467,
     "label": "simpatico",
     "ultimo_aggiornamento": "14/07/2026"
   },
@@ -746,9 +746,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Politici": {
-    "score": -0.697,
+    "score": -0.997,
     "label": "ostile",
-    "ultimo_aggiornamento": "06/07/2026"
+    "ultimo_aggiornamento": "14/07/2026"
   },
   "Hiroki→Popolazione locale": {
     "score": -0.012,
@@ -821,7 +821,7 @@
     "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "14/07/2026"
   },
@@ -1321,8 +1321,8 @@
     "ultimo_aggiornamento": "09/07/2026"
   },
   "Cetteo→Giornalista": {
-    "score": -0.514,
-    "label": "diffidente",
+    "score": -0.714,
+    "label": "ostile",
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Lilli→Giornalista": {
@@ -1346,9 +1346,9 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Hiroki→Società Italiana": {
-    "score": -0.193,
-    "label": "neutro",
-    "ultimo_aggiornamento": "24/06/2026"
+    "score": -0.393,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "14/07/2026"
   },
   "Lilli→Pescara": {
     "score": -0.59,
@@ -1421,9 +1421,9 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Hiroki→Lucap": {
-    "score": 0.81,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "10/07/2026"
+    "ultimo_aggiornamento": "14/07/2026"
   },
   "Cetteo→Lucap": {
     "score": -0.81,
@@ -2371,7 +2371,7 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Lucap→Lars": {
-    "score": 0.956,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "14/07/2026"
   },
@@ -4426,9 +4426,9 @@
     "ultimo_aggiornamento": "22/06/2026"
   },
   "Wolf→Giornalista": {
-    "score": -0.086,
-    "label": "neutro",
-    "ultimo_aggiornamento": "23/06/2026"
+    "score": -0.386,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "14/07/2026"
   },
   "Lucap→Giornalista": {
     "score": 0.086,
@@ -5152,6 +5152,16 @@
   },
   "Lilli→Fertitta": {
     "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "14/07/2026"
+  },
+  "Lilli→Manifestanti": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "14/07/2026"
+  },
+  "Glusi→Manifestanti": {
+    "score": 0,
     "label": "neutro",
     "ultimo_aggiornamento": "14/07/2026"
   }
