@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": 0.354,
+    "score": 0.654,
     "label": "simpatico",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -211,12 +211,12 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Glusi→Cetteo": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -301,7 +301,7 @@
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Hiroki→Lilli": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -508,7 +508,7 @@
   "Wolf→Lars": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "15/07/2026"
+    "ultimo_aggiornamento": "16/07/2026"
   },
   "Cetteo→Wolf": {
     "score": 1,
@@ -626,7 +626,7 @@
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Autore→Wolf": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -636,7 +636,7 @@
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Autore→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -656,7 +656,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Wolf→Hiroki": {
-    "score": -0.72,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -961,9 +961,9 @@
     "ultimo_aggiornamento": "04/07/2026"
   },
   "Topengo→Cetteo": {
-    "score": -0.517,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "10/07/2026"
+    "score": -0.817,
+    "label": "ostile",
+    "ultimo_aggiornamento": "16/07/2026"
   },
   "Lars→Pescatori di Pescara": {
     "score": 0.005,
@@ -996,8 +996,8 @@
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Autore→Lilli": {
-    "score": -0.8,
-    "label": "ostile",
+    "score": -0.5,
+    "label": "diffidente",
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Lars→Topengo": {
@@ -1151,9 +1151,9 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Topengo→Hiroki": {
-    "score": -0.59,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "04/07/2026"
+    "score": -0.79,
+    "label": "ostile",
+    "ultimo_aggiornamento": "16/07/2026"
   },
   "Glusi→Topengo": {
     "score": 1,
@@ -1236,7 +1236,7 @@
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Hiroki→Bartender": {
-    "score": -0.182,
+    "score": 0.118,
     "label": "neutro",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -1246,7 +1246,7 @@
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Bartender→Lars": {
-    "score": 0.756,
+    "score": 0.956,
     "label": "amico",
     "ultimo_aggiornamento": "16/07/2026"
   },
@@ -1601,9 +1601,9 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Topengo→Lars": {
-    "score": 0.729,
+    "score": 0.929,
     "label": "amico",
-    "ultimo_aggiornamento": "10/07/2026"
+    "ultimo_aggiornamento": "16/07/2026"
   },
   "Cetteo→Fratelli d'Italia": {
     "score": -0.028,
@@ -1631,9 +1631,9 @@
     "ultimo_aggiornamento": "10/06/2026"
   },
   "Wolf→Topengo": {
-    "score": -0.729,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "10/07/2026"
+    "ultimo_aggiornamento": "16/07/2026"
   },
   "Lars→Narratore": {
     "score": 0.204,
@@ -3491,8 +3491,8 @@
     "ultimo_aggiornamento": "28/05/2026"
   },
   "Wolf→Tutti": {
-    "score": -0.506,
-    "label": "diffidente",
+    "score": -0.606,
+    "label": "ostile",
     "ultimo_aggiornamento": "16/07/2026"
   },
   "Hiroki→Fortis": {
