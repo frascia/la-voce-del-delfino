@@ -1,5 +1,5 @@
 {
-  "_runCount": 10,
+  "_runCount": 11,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "19/07/2026"
   },
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "18/07/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.5,
+    "score": 0.4,
     "label": "simpatico",
     "ultimo_aggiornamento": "19/07/2026"
   },
@@ -221,8 +221,8 @@
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Lilli→Juizinho": {
-    "score": -0.187,
-    "label": "neutro",
+    "score": -0.487,
+    "label": "diffidente",
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Enzo→Juizinho": {
@@ -311,9 +311,9 @@
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": 0.5,
+    "score": 0.3,
     "label": "simpatico",
-    "ultimo_aggiornamento": "18/07/2026"
+    "ultimo_aggiornamento": "19/07/2026"
   },
   "Wolf→Redazione": {
     "score": -0.005,
@@ -508,7 +508,7 @@
   "Wolf→Lars": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "18/07/2026"
+    "ultimo_aggiornamento": "19/07/2026"
   },
   "Cetteo→Wolf": {
     "score": 0.9,
@@ -716,8 +716,8 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.5,
-    "label": "diffidente",
+    "score": -0.7,
+    "label": "ostile",
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Glusi→Pescatori": {
@@ -993,7 +993,7 @@
   "Wolf→Lilli": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "17/07/2026"
+    "ultimo_aggiornamento": "19/07/2026"
   },
   "Autore→Lilli": {
     "score": -0.78,
@@ -1351,8 +1351,8 @@
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Lilli→Pescara": {
-    "score": -0.278,
-    "label": "diffidente",
+    "score": 0.022,
+    "label": "neutro",
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Lilli→Istituzioni": {
@@ -1451,19 +1451,19 @@
     "ultimo_aggiornamento": "08/07/2026"
   },
   "Hiroki→Autore articolo": {
-    "score": 0.376,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "08/07/2026"
+    "score": 0.276,
+    "label": "neutro",
+    "ultimo_aggiornamento": "19/07/2026"
   },
   "Cetteo→Autore articolo": {
-    "score": -0.08,
-    "label": "neutro",
-    "ultimo_aggiornamento": "12/07/2026"
+    "score": -0.38,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "19/07/2026"
   },
   "Glusi→Autore articolo": {
-    "score": 0.235,
-    "label": "neutro",
-    "ultimo_aggiornamento": "12/07/2026"
+    "score": 0.435,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "19/07/2026"
   },
   "Abbukk→Alexa+": {
     "score": -0.01,
@@ -1471,7 +1471,7 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lucap→Cetteo": {
-    "score": 0.04,
+    "score": -0.06,
     "label": "neutro",
     "ultimo_aggiornamento": "19/07/2026"
   },
@@ -1516,8 +1516,8 @@
     "ultimo_aggiornamento": "06/07/2026"
   },
   "Lucap→Lilli": {
-    "score": 0.364,
-    "label": "simpatico",
+    "score": 0.264,
+    "label": "neutro",
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Hiroki→Borgo Marino": {
@@ -3021,8 +3021,8 @@
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Lucap→Juizinho": {
-    "score": 0.209,
-    "label": "neutro",
+    "score": 0.409,
+    "label": "simpatico",
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Glusi→Dirigenza Pescara": {
@@ -3306,9 +3306,9 @@
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Lilli→Autore articolo": {
-    "score": -0.17,
-    "label": "neutro",
-    "ultimo_aggiornamento": "12/07/2026"
+    "score": -0.47,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "19/07/2026"
   },
   "Lars→Habitué piazza": {
     "score": -0.024,
@@ -5363,6 +5363,16 @@
   "Wolf→Sistema Calcio": {
     "score": -0.2,
     "label": "neutro",
+    "ultimo_aggiornamento": "19/07/2026"
+  },
+  "Glusi→Balbo": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "19/07/2026"
+  },
+  "Juizinho→Balbo": {
+    "score": 0.3,
+    "label": "simpatico",
     "ultimo_aggiornamento": "19/07/2026"
   }
 }
