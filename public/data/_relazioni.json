@@ -1,5 +1,5 @@
 {
-  "_runCount": 1,
+  "_runCount": 2,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -116,12 +116,12 @@
     "ultimo_aggiornamento": "18/07/2026"
   },
   "Cetteo→Autore": {
-    "score": -0.72,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "19/07/2026"
+    "ultimo_aggiornamento": "20/07/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.6,
+    "score": -0.4,
     "label": "diffidente",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.82,
+    "score": 0.72,
     "label": "amico",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -301,7 +301,7 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.299,
+    "score": -0.599,
     "label": "diffidente",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -311,8 +311,8 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": 0.34,
-    "label": "simpatico",
+    "score": 0.14,
+    "label": "neutro",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Wolf→Redazione": {
@@ -351,9 +351,9 @@
     "ultimo_aggiornamento": "18/07/2026"
   },
   "Abbukk→Hiroki": {
-    "score": -0.095,
+    "score": -0.195,
     "label": "neutro",
-    "ultimo_aggiornamento": "17/07/2026"
+    "ultimo_aggiornamento": "20/07/2026"
   },
   "Abbukk→Juizinho": {
     "score": -0.005,
@@ -421,9 +421,9 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Hiroki→Abbukk": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "17/07/2026"
+    "ultimo_aggiornamento": "20/07/2026"
   },
   "Lars→barman": {
     "score": 0.005,
@@ -646,12 +646,12 @@
     "ultimo_aggiornamento": "18/07/2026"
   },
   "Lilli→Autore": {
-    "score": -0.84,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Abbukk→Cetteo": {
-    "score": -0.61,
+    "score": -0.71,
     "label": "ostile",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -821,7 +821,7 @@
     "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.51,
+    "score": 0.31,
     "label": "simpatico",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -991,8 +991,8 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -0.61,
-    "label": "ostile",
+    "score": -0.51,
+    "label": "diffidente",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Autore→Lilli": {
@@ -5366,14 +5366,14 @@
     "ultimo_aggiornamento": "19/07/2026"
   },
   "Glusi→Balbo": {
-    "score": 0.18,
-    "label": "neutro",
-    "ultimo_aggiornamento": "19/07/2026"
+    "score": 0.48,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "20/07/2026"
   },
   "Juizinho→Balbo": {
-    "score": 0.27,
-    "label": "neutro",
-    "ultimo_aggiornamento": "19/07/2026"
+    "score": 0.57,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "20/07/2026"
   },
   "Hiroki→Questa gestione": {
     "score": -0.2,
@@ -5387,6 +5387,11 @@
   },
   "Hiroki→Manifestanti": {
     "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "20/07/2026"
+  },
+  "Hiroki→Tifoseria": {
+    "score": -0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "20/07/2026"
   }
