@@ -1,5 +1,5 @@
 {
-  "_runCount": 2,
+  "_runCount": 3,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,8 +36,8 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": -0.03,
-    "label": "neutro",
+    "score": -0.23,
+    "label": "diffidente",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Hiroki→Cetteo": {
@@ -76,7 +76,7 @@
     "ultimo_aggiornamento": "18/07/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.54,
+    "score": 0.59,
     "label": "simpatico",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -121,8 +121,8 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Hiroki→Autore": {
-    "score": -0.4,
-    "label": "diffidente",
+    "score": -0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Lars→Questa terra": {
@@ -136,9 +136,9 @@
     "ultimo_aggiornamento": "03/07/2026"
   },
   "Cetteo→Autore Articolo": {
-    "score": -0.81,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "15/07/2026"
+    "ultimo_aggiornamento": "20/07/2026"
   },
   "Hiroki→Autore Articolo": {
     "score": -0.625,
@@ -186,8 +186,8 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.72,
-    "label": "amico",
+    "score": 0.62,
+    "label": "simpatico",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Enzo→Glusi": {
@@ -296,7 +296,7 @@
     "ultimo_aggiornamento": "18/07/2026"
   },
   "Lars→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -311,8 +311,8 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": 0.14,
-    "label": "neutro",
+    "score": -0.26,
+    "label": "diffidente",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Wolf→Redazione": {
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -651,12 +651,12 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Abbukk→Cetteo": {
-    "score": -0.71,
+    "score": -0.61,
     "label": "ostile",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Wolf→Hiroki": {
-    "score": -0.955,
+    "score": -0.855,
     "label": "ostile",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -666,8 +666,8 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Wolf→Autore": {
-    "score": 0.129,
-    "label": "neutro",
+    "score": 0.329,
+    "label": "simpatico",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Lars→Barista": {
@@ -716,8 +716,8 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Cetteo": {
-    "score": -0.63,
-    "label": "ostile",
+    "score": -0.43,
+    "label": "diffidente",
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Glusi→Pescatori": {
@@ -991,7 +991,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": -0.51,
+    "score": -0.41,
     "label": "diffidente",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -1286,9 +1286,9 @@
     "ultimo_aggiornamento": "20/06/2026"
   },
   "Lilli→Autore Articolo": {
-    "score": -0.351,
+    "score": -0.451,
     "label": "diffidente",
-    "ultimo_aggiornamento": "15/07/2026"
+    "ultimo_aggiornamento": "20/07/2026"
   },
   "Glusi→Autore Articolo": {
     "score": 0.373,
@@ -2476,7 +2476,7 @@
     "ultimo_aggiornamento": "02/07/2026"
   },
   "Lilli→Questa": {
-    "score": 0.488,
+    "score": 0.688,
     "label": "simpatico",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -4036,9 +4036,9 @@
     "ultimo_aggiornamento": "12/06/2026"
   },
   "Hiroki→Sistema Calcio Italiano": {
-    "score": -0.109,
-    "label": "neutro",
-    "ultimo_aggiornamento": "12/06/2026"
+    "score": -0.309,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "20/07/2026"
   },
   "Glusi→Sistema Calcio Italiano": {
     "score": -0.021,
@@ -5381,7 +5381,7 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Lilli→Vannacci": {
-    "score": -0.3,
+    "score": -0.6,
     "label": "diffidente",
     "ultimo_aggiornamento": "20/07/2026"
   },
@@ -5392,6 +5392,26 @@
   },
   "Hiroki→Tifoseria": {
     "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "20/07/2026"
+  },
+  "Cetteo→Politica nazionale": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "20/07/2026"
+  },
+  "Hiroki→Cittadinanza di Pescara": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "20/07/2026"
+  },
+  "Glusi→Evento sociale": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "20/07/2026"
+  },
+  "Cetteo→Dirigenza": {
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "20/07/2026"
   }
