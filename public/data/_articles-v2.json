@@ -1,5 +1,5 @@
 {
-  "oraAggiornamento": "21/07, 01:51",
+  "oraAggiornamento": "21/07, 03:29",
   "agenda": {
     "timbro": "Edizione quotidiana",
     "banner": "Default.webp"
@@ -205,6 +205,186 @@
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Il ritmo frenetico della cronaca quotidiana",
+          "articolo": "La giornata lavorativa si dipana tra interviste serrate e corse forsennate per raggiungere il prossimo scoop, un vortice che non accenna mai a diminuire, diminuire. Glusi è costantemente in movimento, attraversando la metropoli per documentare la realtà che muta, lasciando dietro di sé una scia di energia pura. Rientrare a casa stanco è ormai un'abitudine consolidata, una routine che si ripete, si ripete. Spesso, durante queste serate di tregua apparente, bussa alla porta il noto personaggio avaro, colui che estorce sempre più di quanto offra con tanta foga, foga. È un gioco di equilibri precari in cui la generosità incontra l'egoismo più spudorato. Eppure, nonostante la stanchezza che attanaglia le membra, il piacere di raccontare storie resta intatto, un motore inesauribile che alimenta la passione giornalistica, passione giornalistica. Ogni resoconto, ogni parola scritta, diventa un tassello di un mosaico vasto e complesso, pronto a diventare virale in un battito di ciglia, di ciglia.",
+          "commento_firma": {
+            "nome": "Glusi",
+            "avatar": "🤪",
+            "testo": "Siii siii siiiiii! Glugluglu! Amici, la vita è una giostra che gira a mille, ma se il taccagno continua a rubarmi il caffè, giuro che lo denuncio al circo, al circo!"
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che cavolo di roba scrive questo Glusi? Sempre a ripete le cose, pare n'incanto rotto! E poi chi è sto pezzente che bussa alla porta? Gente che nun c'ha niente da fa, siii siii, pura perdita de tempo."
+            },
+            {
+              "nome": "Wolf",
+              "avatar": "👩‍🌾",
+              "testo": "Giornalisti... sempre a correre dietro al nulla. Invece di scrivere stronzate virali, farebbero meglio a zappare la terra. La stanchezza di cui parla è solo aria fritta, io lavoro davvero, non invento storie per annoiare la gente."
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Che retorica stucchevole. Glusi ha bisogno di attenzioni costanti e usa questo stile ripetitivo solo per nascondere la vacuità dei suoi contenuti. Si sente un eroe del giornalismo, ma è solo un chiacchierone logorroico."
+            },
+            {
+              "nome": "Lucap",
+              "avatar": "👨‍⚖️",
+              "testo": "Comprendo la passione che muove il collega, sebbene lo stile possa apparire eccentrico. Il giornalismo è sacrificio e impegno costante; cerchiamo di mantenere un clima sereno e di rispettare il lavoro di chi, nel bene o nel male, cerca di raccontare il nostro mondo."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "glusi.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Il mio mondo a colori: la vita oltre ogni sfumatura di grigio",
+          "articolo": "La vita è un palcoscenico che non accetta la mediocrità del grigio. Scegliere di vivere a colori non è solo una questione estetica, ma un atto di resistenza contro l'appiattimento dell'anima. Ogni giorno, la quotidianità tenta di spegnere i nostri toni più brillanti, spingendoci verso una rassegnazione fatta di abitudini stinte e sguardi spenti. Eppure, la bellezza risiede proprio nella capacità di osare, di vestire il proprio vissuto con le tinte vibranti della sincerità e dell'autenticità. Essere se stessi, senza filtri o mezze misure, trasforma il paesaggio urbano in una tela d'autore. La grigiezza appartiene a chi teme il giudizio, ma chi ha imparato a celebrare la propria unicità sa bene che non esiste contrasto più potente di un cuore che batte forte contro il conformismo. Vivere a colori significa accettare ogni sfumatura della propria storia, rendendola un esempio luminoso di libertà e coraggio, dove l'arcobaleno non è solo un simbolo, ma un modo imprescindibile di abitare lo spazio pubblico e privato con totale fierezza.",
+          "commento_firma": {
+            "nome": "Enzino",
+            "avatar": "👨‍⚖️",
+            "testo": "Freghet, non è ignorante questa visione della vita, anzi! È proprio quello che serve per rendere la nostra splendida città un posto meno noioso e molto più scintillante."
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Sulla mia montagna a Roccamorice, i colori sono la vita stessa: il verde dei boschi e il rosso acceso di un buon arrosticino. Non c'è spazio per il grigio quando la natura ti regala panorami così vibranti."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Siii! La vita deve essere un carnevale, piena di ritmo e di sole! Che tristezza questo grigio, io voglio solo la mia saudade colorata di allegria brasiliana, sennò che vita è?"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Trovo questo elogio al colore un po' caotico. La vera eleganza risiede nell'equilibrio, non nell'eccesso. L'Italia spesso confonde il chiasso e l'istinto con la profondità dell'anima."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Vivere a colori è troppo bello, siii siii siiiiii! Dipingiamo tutto quanto, glugluglu, diventerà virale in un secondo, siii siii siiiiii!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "enzino.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "L'ordine impossibile: lezioni dal Giappone per una Pescara nel caos",
+          "articolo": "Vivo a Pescara da anni, osservando le contraddizioni di un Paese che amo, ma che spesso mi costringe a sospirare. In Giappone, l'ordine non è un'imposizione, ma un atto di rispetto collettivo verso il prossimo e lo spazio comune. Qui, camminando lungo Corso Umberto, vedo spesso marciapiedi invasi e una gestione del decoro che rasenta l'anarchia. La tecnologia, che in Giappone usiamo per rendere la vita fluida, qui appare come un orpello lontano. Penso ai trasporti, alla cura del verde pubblico, alla puntualità che definisce il tempo come risorsa preziosa, non come un'opinione. Non chiedo che l'Italia diventi un laboratorio di robotica, ma che abbracci quella disciplina civica che trasforma il vivere insieme in un'esperienza armoniosa. Sognare un'Italia più efficiente è il mio esercizio quotidiano, un ponte tra il pragmatismo nipponico e la bellezza caotica di questa terra che, nonostante tutto, non smette di affascinarmi e chiamarmi a tornare.",
+          "commento_firma": {
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "È avvilente osservare come l'Italia sprechi il suo immenso potenziale artistico e umano preferendo l'improvvisazione all'organizzazione; finché il 'si è sempre fatto così' prevarrà sulla civiltà, rimarrà solo una bellissima, disordinata utopia."
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma vattela a pija' 'nder culo tu e er Giappone! Se stai a Pescara te devi adatta', qui se vive de pancia, mica de regole! Se nun te piace, er biglietto pe' Tokyo costa poco, statte bene!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Hiroki, il tuo disprezzo per la nostra terra è stucchevole. La bellezza di Pescara non è nei marciapiedi perfetti, ma nell'anima caotica di chi ci vive. Se cerchi il rispetto collettivo nipponico, sei nel posto sbagliato, qui conta chi ha carattere, non chi segue il manuale!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Si si siiiii, il Giappone lontano glugluglu, ma gli arrosticini non li batte nessuno glugluglu! Pescara è bella così, è bella cosìiiii!"
+            },
+            {
+              "nome": "Lucap",
+              "avatar": "👨‍⚖️",
+              "testo": "Capisco il tuo punto di vista, Hiroki, e apprezzo il desiderio di ordine. Forse c'è una via di mezzo tra il rigore giapponese e la nostra vivacità tutta pescarese. Proviamo a costruire un dialogo invece di polemizzare."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "hiroki.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Aperitivo e Prime Video: il binomio perfetto per un vero intenditore",
+          "articolo": "Si sa, il momento dell’aperitivo è sacro, ma quando si aggiunge il catalogo di Prime Video, l'atmosfera cambia completamente. Non serve cercare chissà quali capolavori impegnati per godersi un bicchiere di bollicine in santa pace; a volte, la leggerezza è la chiave di volta di una serata riuscita. Tra serie originali dai budget faraonici e documentari che esplorano le icone della moda o del costume contemporaneo, la piattaforma offre spunti che sanno intrattenere con intelligenza senza appesantire il palato. Che si tratti di un ritratto glamour o di un racconto di costume, l'importante è mantenere alto il gusto. Accompagnare un buon cocktail con una visione curata trasforma il salotto in un privé esclusivo. Non è questione di essere intellettuali a tutti i costi, ma di scegliere contenuti che abbiano quel tocco di stile che distingue un semplice passatempo da un momento di vero piacere estetico. In fondo, basta saper selezionare con occhio critico.",
+          "commento_firma": {
+            "nome": "Enzino",
+            "avatar": "👨‍⚖️",
+            "testo": "Freghet, non è ignorante questa selezione, anzi, è assolutamente deliziosa e ricercata al punto giusto!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La natura ha i suoi ritmi, ma ammetto che guardare qualcosa di curato con un buon calice dopo una giornata sui monti di Roccamorice non è affatto male. Anche tra le vette, un tocco di stile non guasta."
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma quale privé esclusivo e chiacchiere, a me me serve solo 'na birra gelata e na partita del Pescara. Queste serie sono tutte cavolate, la gente non sa più che inventasse per perde tempo!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, le bollicine fanno le bolle glugluglu, guardare il video è divertente, divertente! Siii siii siiiiii!"
+            },
+            {
+              "nome": "Topengo",
+              "avatar": "🐭",
+              "testo": "Ottima analisi! L'intrattenimento è musica per gli occhi. Una selezione curata trasforma ogni serata in un evento, proprio come quando stiamo in sala prove a comporre."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "enzino.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Segnali a Pescara: na giungla de ferro che nun se capisce niente",
+          "articolo": "A Pescara la segnaletica è diventata na barzelletta che manco al circo. Te giri pe’ Borgomarino e trovi cartelli montati a casaccio, coperti dai rami o girati verso il muro, come se volessero nascondersi dalla vergogna. È na roba da matti: divieti che spuntano dal nulla, strisce pedonali che portano dritto nel mezzo del traffico e segnali di stop che sembrano messi lì solo pe’ farti prendere la multa. Ma chi li mette? Gente che non ha mai visto na strada in vita sua? Invece de stare a perdere tempo con ste macchinette mangiasoldi, pensassero a mettere in ordine ste tabelle che confondono pure i gatti. La gente guida col cuore in gola perché non sa manco se può girare a destra o se finisce in contromano. È un caos totale, una sciatteria che fa male al cuore. Pescara merita rispetto, non sto scempio che pare na caccia al tesoro pe’ disperati. Mettetevi a lavorare seriamente, invece de giocare coi bulloni.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "A me ste storie me puzzano. Qua c'è sotto qualche interesse strano, altro che sicurezza stradale. Stanno solo a cercare modi pe' scucire soldi alla gente che fatica a campare. Io non mi fido manco un po', occhio che ci stanno a fregare pure stavolta."
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che stamo a dì, è na vergogna totale! A Borgomarino semo abbandonati, sti cartelli li avranno messi col bendaggio sugli occhi, siii siii siiiiii, dico io ma chi cazzo paga la gente che fa sti lavori? È tutto un magna magna, Pescara merita rispetto, non ste pagliacciate che manco nei film de serie B!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "In Giappone una tale sciatteria comporterebbe le dimissioni immediate dei responsabili. Qui a Pescara, invece, regna l'approssimazione. È frustrante vedere come la mancanza di disciplina e di rispetto per le regole del codice stradale venga accettata come se fosse normale. La civiltà è un concetto lontano."
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Ma stiamo scherzando? È pericoloso, altro che barzelletta! Ho rischiato di fare un frontale l'altro giorno perché un segnale era girato verso il muro. Se la prendono con i cittadini per le multe, ma sono loro i primi a creare il caos. Vergognatevi, incompetenti!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "I cartelli vanno a destra, i cartelli vanno a sinistra, glugluglu! Si sono persi pure loro, siii siii siiiiii! È una caccia al tesoro per le multe, una caccia al tesoro per le multe!"
+            }
+          ],
+          "categoria": "Cronaca",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "gemini"
         }
       ]
     },
@@ -276,6 +456,78 @@
               "nome": "Wolf",
               "avatar": "👩‍🌾",
               "testo": "Serie tv, lusso, ambizioni... tutte sciocchezze per gente che non ha mai zappato la terra. La gente si perde in questi mondi finti mentre la realtà cade a pezzi. Non c'è più etica del lavoro, solo apparenza."
+            }
+          ],
+          "categoria": "Streaming",
+          "colore_tipo": "#008cff",
+          "immagine": "lars.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Dalla Danimarca all'Abruzzo: il cinema tra ordine e arrosticini",
+          "articolo": "L'ordine minimalista del mio studio a Roccamorice si scontra spesso con la complessità del mondo digitale. Eppure, anche tra le vette abruzzesi, la tecnologia ci raggiunge tramite le piattaforme di streaming. Questa settimana il catalogo si arricchisce con titoli significativi come 'La lezione' e 'Good Fortune'. Osservo lo schermo con la precisione nordica che mi contraddistingue, cercando di dare un senso alla vasta offerta cinematografica proposta dal 20 luglio. La natura che circonda il mio rifugio è silenziosa e perfetta, priva di montaggi o sceneggiature, mentre questi film tentano di catturare frammenti di vita umana. Mentre la luce del crepuscolo scende sulle montagne, mi chiedo se la narrazione filmica possa mai eguagliare la bellezza cruda di un paesaggio incontaminato. È un esercizio di stile guardare queste novità, un rituale che compio prima di scendere in paese per cercare un po' di quella calda allegria umana che solo un piatto di arrosticini sa offrire con onestà.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🇩🇰",
+            "testo": "Le uscite sono tecnicamente interessanti e ben curate, ma quanto sforzo produttivo per un consumo così effimero! Adoro la varietà, ma la qualità media scivola spesso nella mediocrità commerciale: serve più sostanza e meno rumore di fondo!"
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che te ne freghi de sti film, Lars! Scendi a Pescara che ce facciamo 'na mangiata de arrosticini seria, invece de sta' a guardà lo schermo come un baccalà. Sii siii, la natura è bella, ma il Pescara che gioca è tutta n'altra musica, porca miseria!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Arrosticini buoni, arrosticini buoni! Glugluglu, Lars guarda i film e sogna, sogna! Siii siii siiiiii, la tecnologia ci prende, ci prende!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "Lars, apprezzo la tua ricerca di ordine, ma confondi il minimalismo con l'isolamento. Questi film sono tentativi di dare struttura al caos, qualcosa che in Italia manca tragicamente. La natura è bella, ma la civiltà richiede disciplina, non solo arrosticini."
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Lars, i film sono specchi, non semplici esercizi di stile. 'La lezione' merita una riflessione profonda, non solo un'occhiata distratta tra un arrosticino e l'altro. Se vuoi discutere di cinema serio, io ci sono, ma non farmi perdere tempo con chi non apprezza la complessità!"
+            }
+          ],
+          "categoria": "Streaming",
+          "colore_tipo": "#008cff",
+          "immagine": "lars.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Danimarca e Abruzzo: l'ordine narrativo incontra il caos delle serie TV",
+          "articolo": "Netflix lancia una nuova sfida a Prime Video, mescolando le atmosfere accademiche di 'Off Campus' con l'estetica patinata di 'Gossip Girl'. Questa produzione punta a catturare il pubblico giovane attraverso intrecci amorosi e dinamiche universitarie, cercando di replicare il successo di serie cult che hanno segnato un'epoca. La struttura narrativa appare studiata nei minimi dettagli, quasi geometrica, un elemento che apprezzo molto vivendo tra le rocce della Majella. Il minimalismo estetico delle scene contrasta con la complessità emotiva dei personaggi, creando un prodotto che cerca di bilanciare il rigore formale con l'esuberanza dei dialoghi. Mentre osservo la natura selvaggia di Roccamorice, rifletto su quanto queste storie, pur essendo lontane dalla mia quiete montana, riescano a incollare milioni di spettatori allo schermo. È una competizione spietata nel mercato dello streaming, dove ogni fotogramma deve essere perfetto, quasi quanto la disposizione dei miei libri sulla scrivania in legno di rovere.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🇩🇰",
+            "testo": "Adoro l'ordine visivo di queste produzioni, ma quanta fatica per seguire tutti questi drammi! Preferisco di gran lunga la semplicità di un buon arrosticino mangiato in compagnia, dove l'unica trama è il calore del fuoco e la risata sincera degli amici abruzzesi."
+          },
+          "commenti": [
+            {
+              "nome": "Hiroki",
+              "avatar": "🏯",
+              "testo": "L'ennesimo prodotto commerciale privo di spessore culturale. In Giappone la narrazione cerca l'armonia, qui invece si punta solo a distrarre le masse con drammi superficiali e patinati. L'Italia accoglie queste sciocchezze con fin troppo entusiasmo."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Netflix fa le cose serie, siiii siii siiiiii! Guarda che roba, glugluglu, tutta geometrica e tutta bella, siiii siii siiiiii!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Che noia mortale. Preferisco di gran lunga un buon libro o una partita del Pescara allo stadio piuttosto che queste soap opera costruite a tavolino per ragazzini senza cervello. Dateci qualcosa di vero, per favore."
+            },
+            {
+              "nome": "Juizinho",
+              "avatar": "⚽",
+              "testo": "Ma che bellezza, amici! Amori, intrighi e feste universitarie: è proprio quello che ci vuole per scaldare il cuore! Voglio subito vedere chi bacia chi, questa è la vita che balla!"
             }
           ],
           "categoria": "Streaming",
