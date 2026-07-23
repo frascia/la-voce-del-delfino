@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "23/07, 15:01",
+  "prossimo_aggiornamento": "24/07, 00:58",
   "news": [
     {
       "tipo": "rss",
@@ -256,7 +256,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -288,7 +288,66 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Mò basta co' sti filmiti da salotto, a' vè 'n sala al cinema!",
+      "articolo": "Frà, ma vi siete rincitrulliti tutti davanti a sti schermi piatti e alle serie TV? C'è chi passa la vita a guardare la canna del fucile senza schiodarsi dal divano. Mo' ci stanno le novità al cinema, quelle vere, su 'sto mar di pellicole che escono in sala. Meno male che c'è ancora qualcuno che alza il sedere e va a comprarsi il biglietto. Certo, non è come stare in barca all'alba con la tramontana, ma almeno c'è lo schermo grande, l'odore di popcorn e la gente che mastica. Tra drammoni che ti fanno scendere la lacrimuccia e storie che ti fanno saltare sulla poltrona, c'è solo l'imbarazzo della scelta. Io ve lo dico francamente: la vita è troppo corta per passarla a guardare le repliche su Netflix. Alzatevi, pigroni! Andate a occupà ' sti posti a sedere, che il cinema merita rispetto, mica come chi va allo stadio solo per mangiarsi il panino con la porchetta. E mò vado a controllare le reti.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Spettacolo puro! Finalmente roba che spacca, ma voglio vedere sale piene e film che ti fanno tremare i polsi, basta mezze misure!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Oh, ma che cazzo state a dì?! Ué, ma qua la gente non capisce proprio eniente! Lo stadio e la porchetta si rispettano, brutto scemo! A Pescara si va pe' tifare e pe' magnà bene, altro che le vostre seghe mentali da cinefili! Mo vado a controllà le reti, va'."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Cetteo ha ragione da vendere, ma il cinema ha il suo fascino. Però chi insulta lo stadio e la porchetta si merita una cinquina in faccia! Svegliatevi, lettori da divano!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiio! Al cinema i popcorn e gli arrosticini non ci stanno, non ci stanno! Glugluglu... andiamo a magnà la porchetta allo stadio, allo stadio!"
+        }
+      ],
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
       "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Roccamorice e il silenzio nordico",
+      "articolo": "Vivo quassù, sulle montagne di Roccamorice, circondato da una natura che pretende rispetto e ordine. Da danese minimalista, la mia baita è spoglia, ogni oggetto ha il suo posto preciso, proprio come i rami spogli dei faggi contro il cielo d'Abruzzo. Eppure, ho lasciato i fiordi freddi per questa terra perché qui ho trovato ciò che mancava nel mio rigore: l'allegria contagiosa della gente e il profumo inconfondibile degli arrosticini cotti sulla brace viva. La natura europea offre mete insolite straordinarie, dalle foreste scandinave alle brughiere scozzesi, luoghi dove il silenzio rigenera lo spirito. Ma l'Abruzzo ha una magia unica, unisce la maestosità aspra delle sue vette a un calore umano che scioglie qualsiasi freddezza nordica. Camminare tra questi boschi puliti, osservare la luce che taglia le rocce della Majella e poi fermarsi a condividere cibo genuino è la sintesi perfetta della vita.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Sogno un viaggio lento zaino in spalla, dormendo sotto le stelle con pochi spiccioli in tasca, seguendo solo il profumo del vento e della libertà."
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ah, Lars meu amigo! Freddo danese o caldo della Majella, ma qui ci vogliono donne e festa brasiliana, porca miseria! Arrosticini buoni, sì, ma ho tanta saudade del sole e del samba!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini sulla brace viva, sìii siii siiiiii! E tanta porchetta nello stadio, glugluglu, che bontà spaziale spaziale!"
+        }
+      ],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
     }
   ]
 }
