@@ -1,5 +1,5 @@
 {
-  "_runCount": 9,
+  "_runCount": 10,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -46,7 +46,7 @@
     "ultimo_aggiornamento": "25/07/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.8,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "26/07/2026"
   },
@@ -61,7 +61,7 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Cetteo→Lars": {
-    "score": 0.77,
+    "score": 0.97,
     "label": "amico",
     "ultimo_aggiornamento": "26/07/2026"
   },
@@ -88,7 +88,7 @@
   "Lars→Juizinho": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "25/07/2026"
+    "ultimo_aggiornamento": "26/07/2026"
   },
   "Juizinho→Lars": {
     "score": 1,
@@ -188,7 +188,7 @@
   "Glusi→Lilli": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "25/07/2026"
+    "ultimo_aggiornamento": "26/07/2026"
   },
   "Enzo→Glusi": {
     "score": -0.005,
@@ -221,7 +221,7 @@
     "ultimo_aggiornamento": "26/07/2026"
   },
   "Lilli→Juizinho": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "26/07/2026"
   },
@@ -636,9 +636,9 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Autore→Glusi": {
-    "score": 0.748,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "25/07/2026"
+    "ultimo_aggiornamento": "26/07/2026"
   },
   "Lars→Wolf": {
     "score": 0.485,
@@ -906,9 +906,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Autore→Cetteo": {
-    "score": -0.975,
+    "score": -0.775,
     "label": "ostile",
-    "ultimo_aggiornamento": "24/07/2026"
+    "ultimo_aggiornamento": "26/07/2026"
   },
   "Miley Cyrus→Maxx Morando": {
     "score": 0.011,
@@ -1826,9 +1826,9 @@
     "ultimo_aggiornamento": "25/07/2026"
   },
   "Autore→Juizinho": {
-    "score": 0.102,
-    "label": "neutro",
-    "ultimo_aggiornamento": "21/07/2026"
+    "score": 0.402,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "26/07/2026"
   },
   "Lucap→Glusi": {
     "score": 0.44,
@@ -5672,6 +5672,21 @@
   },
   "Glusi→Juizino": {
     "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "26/07/2026"
+  },
+  "Cetteo→Tifoso Brasiliano": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "26/07/2026"
+  },
+  "Glusi→Tifoso Brasiliano": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "26/07/2026"
+  },
+  "Lilli→Tifoso Brasiliano": {
+    "score": -0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "26/07/2026"
   }
