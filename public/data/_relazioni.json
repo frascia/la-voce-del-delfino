@@ -1,5 +1,5 @@
 {
-  "_runCount": 11,
+  "_runCount": 12,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -46,8 +46,8 @@
     "ultimo_aggiornamento": "25/07/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "26/07/2026"
   },
   "Lars→Hiroki": {
@@ -61,12 +61,12 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Cetteo→Lars": {
-    "score": 0.97,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "26/07/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "26/07/2026"
   },
@@ -278,10 +278,10 @@
   "Lars→Glusi": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "25/07/2026"
+    "ultimo_aggiornamento": "26/07/2026"
   },
   "Juizinho→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "26/07/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "26/07/2026"
   },
@@ -346,8 +346,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.52,
-    "label": "diffidente",
+    "score": -0.72,
+    "label": "ostile",
     "ultimo_aggiornamento": "26/07/2026"
   },
   "Abbukk→Hiroki": {
@@ -1761,9 +1761,9 @@
     "ultimo_aggiornamento": "12/07/2026"
   },
   "Cetteo→Enzino": {
-    "score": -0.631,
+    "score": -0.731,
     "label": "ostile",
-    "ultimo_aggiornamento": "19/07/2026"
+    "ultimo_aggiornamento": "26/07/2026"
   },
   "Lucap→Wolf": {
     "score": -0.32,
@@ -3356,8 +3356,8 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Enzino→Glusi": {
-    "score": 0.124,
-    "label": "neutro",
+    "score": 0.324,
+    "label": "simpatico",
     "ultimo_aggiornamento": "26/07/2026"
   },
   "Hiroki→Tifosi": {
@@ -5687,6 +5687,21 @@
   },
   "Lilli→Tifoso Brasiliano": {
     "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "26/07/2026"
+  },
+  "Brasiliano→Cetteo": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "26/07/2026"
+  },
+  "Brasiliano→Lilli": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "26/07/2026"
+  },
+  "Glusi→Brasiliano": {
+    "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "26/07/2026"
   }
