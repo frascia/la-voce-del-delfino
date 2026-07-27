@@ -1,5 +1,5 @@
 {
-  "_runCount": 2,
+  "_runCount": 3,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "27/07/2026"
   },
@@ -221,9 +221,9 @@
     "ultimo_aggiornamento": "27/07/2026"
   },
   "Lilli→Juizinho": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "26/07/2026"
+    "ultimo_aggiornamento": "27/07/2026"
   },
   "Enzo→Juizinho": {
     "score": -0.007,
@@ -231,9 +231,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Juizinho": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "26/07/2026"
+    "ultimo_aggiornamento": "27/07/2026"
   },
   "Lilli→Lars": {
     "score": 0.92,
@@ -301,7 +301,7 @@
     "ultimo_aggiornamento": "27/07/2026"
   },
   "Hiroki→Lilli": {
-    "score": 0.213,
+    "score": 0.113,
     "label": "neutro",
     "ultimo_aggiornamento": "27/07/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "27/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.697,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "27/07/2026"
   },
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.169,
+    "score": -0.069,
     "label": "neutro",
     "ultimo_aggiornamento": "27/07/2026"
   },
@@ -1251,9 +1251,9 @@
     "ultimo_aggiornamento": "27/07/2026"
   },
   "Bartender→Cetteo": {
-    "score": -0.057,
+    "score": -0.157,
     "label": "neutro",
-    "ultimo_aggiornamento": "23/07/2026"
+    "ultimo_aggiornamento": "27/07/2026"
   },
   "Autrice→Cetteo": {
     "score": -0.547,
@@ -3486,7 +3486,7 @@
     "ultimo_aggiornamento": "27/05/2026"
   },
   "Bartender→Glusi": {
-    "score": 0.499,
+    "score": 0.599,
     "label": "simpatico",
     "ultimo_aggiornamento": "27/07/2026"
   },
@@ -5476,9 +5476,9 @@
     "ultimo_aggiornamento": "23/07/2026"
   },
   "Hiroki→Autore dell'articolo": {
-    "score": 0.073,
+    "score": -0.027,
     "label": "neutro",
-    "ultimo_aggiornamento": "22/07/2026"
+    "ultimo_aggiornamento": "27/07/2026"
   },
   "Garbo→Cetteo": {
     "score": -0.219,
@@ -5501,14 +5501,14 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Cetteo→Autore dell'articolo": {
-    "score": -0.243,
+    "score": -0.443,
     "label": "diffidente",
-    "ultimo_aggiornamento": "22/07/2026"
+    "ultimo_aggiornamento": "27/07/2026"
   },
   "Lilli→Autore dell'articolo": {
-    "score": -0.243,
+    "score": -0.543,
     "label": "diffidente",
-    "ultimo_aggiornamento": "22/07/2026"
+    "ultimo_aggiornamento": "27/07/2026"
   },
   "Lucap→Autore dell'articolo": {
     "score": -0.081,
@@ -5707,6 +5707,31 @@
   },
   "Enzino→Cetteo": {
     "score": 0.09,
+    "label": "neutro",
+    "ultimo_aggiornamento": "27/07/2026"
+  },
+  "Lamatte→Autore dell'articolo": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "27/07/2026"
+  },
+  "Ohje→Lilli": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "27/07/2026"
+  },
+  "Lilli→Ohje": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "27/07/2026"
+  },
+  "Glusi→Ohje": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "27/07/2026"
+  },
+  "Juizinho→Ohje": {
+    "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "27/07/2026"
   }
