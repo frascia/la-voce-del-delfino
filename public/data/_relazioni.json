@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -216,7 +216,7 @@
     "ultimo_aggiornamento": "28/07/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "28/07/2026"
   },
@@ -291,8 +291,8 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.7,
-    "label": "amico",
+    "score": 0.5,
+    "label": "simpatico",
     "ultimo_aggiornamento": "28/07/2026"
   },
   "Lars→Lilli": {
@@ -301,17 +301,17 @@
     "ultimo_aggiornamento": "27/07/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.187,
+    "score": 0.013,
     "label": "neutro",
     "ultimo_aggiornamento": "28/07/2026"
   },
   "Cetteo→Lilli": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "28/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "28/07/2026"
   },
@@ -346,7 +346,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.858,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "28/07/2026"
   },
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": -0.169,
+    "score": -0.069,
     "label": "neutro",
     "ultimo_aggiornamento": "28/07/2026"
   },
@@ -1761,7 +1761,7 @@
     "ultimo_aggiornamento": "12/07/2026"
   },
   "Cetteo→Enzino": {
-    "score": -0.758,
+    "score": -0.858,
     "label": "ostile",
     "ultimo_aggiornamento": "28/07/2026"
   },
@@ -3356,7 +3356,7 @@
     "ultimo_aggiornamento": "15/06/2026"
   },
   "Enzino→Glusi": {
-    "score": 0.892,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "28/07/2026"
   },
@@ -5526,9 +5526,9 @@
     "ultimo_aggiornamento": "23/07/2026"
   },
   "Autore dell'articolo→Glusi": {
-    "score": 0.081,
+    "score": 0.181,
     "label": "neutro",
-    "ultimo_aggiornamento": "23/07/2026"
+    "ultimo_aggiornamento": "28/07/2026"
   },
   "Bartender→Narratore": {
     "score": 0.162,
@@ -5641,9 +5641,9 @@
     "ultimo_aggiornamento": "28/07/2026"
   },
   "Autore dell'articolo→Lilli": {
-    "score": 0.18,
-    "label": "neutro",
-    "ultimo_aggiornamento": "25/07/2026"
+    "score": 0.33,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "28/07/2026"
   },
   "Lars→Autore dell'articolo": {
     "score": 0.09,
@@ -5747,6 +5747,11 @@
   },
   "Hiroki→Questao": {
     "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "28/07/2026"
+  },
+  "Autore dell'articolo→Enzino": {
+    "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "28/07/2026"
   }

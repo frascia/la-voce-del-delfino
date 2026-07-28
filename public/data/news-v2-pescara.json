@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "28/07, 09:38",
+  "prossimo_aggiornamento": "28/07, 12:14",
   "news": [
     {
       "tipo": "personaggio",
@@ -377,7 +377,7 @@
       "colore_tipo": "#008cff",
       "immagine": "glusi.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -409,7 +409,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -441,7 +441,7 @@
       "colore_tipo": "#008cff",
       "immagine": "hiroki.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -473,7 +473,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -494,6 +494,171 @@
           "nome": "Lilli",
           "avatar": "👩",
           "testo": "Cetteo ha ragione da vendere, zitti tutti! Si lavora troppo per arricchire gli altri e ci si dimentica di vivere. E chi rompe le scatole viene asfaltato, chiaro?"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il contagio virale delle parole, parole, parole",
+      "articolo": "Girare la città in lungo e in largo significa intercettare i fenomeni del web prima di chiunque altro. Tra una corsa e l'altra per le redazioni, mi imbatto continuamente in tormentoni che esplodono sui social network senza un vero motivo logico. L'ultimo grido virale che imperversa ovunque è la ripetizione ossessiva di suoni, un trend nato per gioco tra i giovani e replicato da milioni di utenti in cerca di visibilità digitale. Si tratta di una vera e propria mania collettiva che si insinua nelle conversazioni quotidiane, trasformando espressioni comuni in meme inarrestabili. La sera, quando rientro a casa distrutto dalla stanchezza, trovo spesso ad attendeimi il mio amico taccagno, sempre pronto a scroccare qualcosa e a prendere più di quanto dia. Tra una lamentela sui prezzi e una battuta, anche lui finisce per imitare il tormentone del momento, dimostrando quanto questa febbre mediatica sia ormai impossibile da evitare. Impossibile da evitare, evitare!",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Siii siii siiiiii! Glugluglu, che fatica rincorrere le notizie e i taccagni che prosciugano il frigo, frigo!"
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Impossibile da evitare, evitare! Siii siii siiiiii glugluglu!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazz' state a dicì? A Pescara un'altra sola ci mancava, ju a lavurà e questi a fa li scemi!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Roba da matti, la gente pur di farsi notare sui social perde completamente il lume della ragione. Se vi becco a fare sti versi vi meno!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Cronache semƒer veraci di banconi e calici: chi c'è, chi manca e chi sfigura",
+      "articolo": "Freghet, lo sappiamo tutti benissimo: l'aperitivo non è mica un passatempo qualsiasi, è un vero e proprio rito laico che misura il polso della nostra comunità. Il bancone del locale di tendenza diventa così il palcoscenico dove va in scena la commedia umana. Da un lato c'è il habitué storico, quello che non sbaglia un colpo, arriva puntuale, ordina il suo calice con nonchalance e sa sempre l'ultima novità mondana. Dall'altro lato, ahimè, notiamo le grandi assenze ingiustificate, quelli che spariscono quando arriva il momento di staccare la spina. Ma la vera nota dolente, diciamocelo senza peli sulla lingua, riguarda il capitolo abbigliamento. C'è chi scambia l'ora felice per una scampagnata in tuta da ginnastica o con accostamenti cromatici da far impallidire un daltonico. Il buon gusto esige rispetto per i commensali e per il contesto. Un calice eccellente merita almeno una camicia decente e un sorriso smagliante.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Tesori miei, che vi devo dire? Enzino vostro ha fatto il solito giro di ricognizione e, tra un prosecco e quattro chiacchiere, ha visto cose che voi umani... Comunque sia, grazie di cuore a tutti voi che mi seguite sempre con tanto affetto e stima, siete la mia energia vitale!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale rito laico e camicia decente, oh! C' c' la gente che va a lavorà e questi pensano all'aperitivo e a chi si veste male! Aoh, ma annate a zà! Freghet!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il calice eccellente glugluglu! Vestiti maleee maleee! Siii siii siiiiii!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma veramente c'è chi fa polemica sull'abbigliamento per un bicchiere di vino? Se uno vuole venire in tuta dopo una giornata pesante sono fatti suoi, smettetela con queste sciocchezze!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Ordine nipponico e caos italiano: cronache di un miraggio",
+      "articolo": "Osservo spesso la mia amata e caotica Pescara dalla finestra del mio studio. Qui la vita scorre con una passione travolgente, ma priva di quella struttura che noi giapponesi consideriamo fondamentale per la convivenza civile. In Giappone, la puntualità dei treni al secondo e la pulizia maniacale delle strade non sono utopie, ma il risultato di un profondo rispetto collettivo per il prossimo. A Pescara, come in gran parte d'Italia, l'efficienza è spesso soffocata dalla burocrazia e da un'eterna improvvisazione. Immaginare le città italiane integrate con la robotica e l'automazione avanzata di Tokyo fa sorridere, eppure rappresenta l'unica vera salvezza per snellire i servizi pubblici e superare le inefficienze storiche di questo Paese. La tecnologia esiste già, ma manca la volontà culturale di applicarla con rigore. Tra poco farò ritorno in Giappone, ma so già che tornerò in questa terra che mi ha adottato, portando con me la speranza di un cambiamento.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "È frustrante vedere come un potenziale umano e culturale così immenso venga regolarmente sabotato dalla pigrizia organizzativa e dal rifiuto sistematico della regola."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Spero davvero che un giorno questa splendida terra possa abbracciare una maggiore organizzazione, senza perdere la sua anima."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazz' stai a dì?! A Tokyo l'è robetta, qui a Pescara cumandamme nui e li treni partono quande ce pare, va ' a ffa' 'n giro!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hiroki, apprezzo la tua visione romantica e la ricerca dell'efficienza, ma la nostra caoticità ha radici culturali che nessun robot potrà mai comprendere o rimpiazzare."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii robot a Pescara! Glugluglu, i treni volanti col arrosticino automatico, automatico!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Streaming con stile: il cinema che fa tendenza",
+      "articolo": "Freghet, lo sapete tutti che per me la bellezza è un valore non negoziabile, sia che si tratti di un abito d'alta moda, sia di una serata passata sul divano a scegliere cosa guardare. Prime Video è ormai il salotto buono della nostra quotidianità, un palcoscenico dove sfilano storie che sanno emozionare e far discutere davanti a un calice di vino bianco ben ghiacciato. Tra serie tv patinate e capolavori d'autore, la piattaforma offre quel tocco di glamour che non guasta mai. Amo perdersi tra le novità cinematografiche e i grandi classici restaurati, perché ogni visione è un viaggio estetico ed emotivo. Non serve essere critici incalliti per capire cosa funziona: basta avere buon gusto e lasciarsi trasportare dalle immagini giuste. In fondo, il segreto sta nel saper scegliere il meglio, proprio come quando si seleziona il locale perfetto per l'aperitivo con gli amici di sempre.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino ha sempre quel tocco di classe unico! Leggere i suoi articoli è come fare un aperitivo in sua compagnia: frizzante, intelligente e pieno di stile."
+      },
+      "commenti": [
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Ma amore mio, parla pure di abiti e di salotti, ma qui siamo tutti in trepidante attesa per L'Ultima Regina! Meno serie patinate e più divinità sullo schermo, siii!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Vino bianco e arrosticini volanti sul divano, vino bianco e arrosticini volanti sul divano! Siii siii siiiiii glugluglu!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Il buon gusto è fondamentale, ma un bel film d'autore o un podcast fatto bene valgono più di mille serie tv patinate. Comunque col vino bianco mi hai quasi convinta."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U mare chiama, ma noi lassù stiamo sempre a pettinare i delfini",
+      "articolo": "Oh raga', ma qui stiamo a parla' sempre delle solite storie di cronaca che succedono lungo la nostra costa, tra polemiche inutili e burocrati che non sanno manco che significa 'na paranza. Ma dico io, invece de perde' tempo con le chiacchiere da bar, guardiamo un attimo la realta': il mare nostro e' sempre là, generoso per chi lo sa rispettare, e invece la gente pensa solo a mette' i bastoni tra le ruote a chi campa d'acqua salata. A Borgomarino le cose si sanno come vanno, non c'e' bisogno che venite voi 'straniere' a spiegarci come gira il mondo. Tra una rete da sistemare e 'na magnata de telline, qua la voglia de lavorà è quella che è, diciamoci la verità. Ma almeno noi facciamo i fatti, non come certi soggetti che stanno sempre là a pontificare dai salotti buoni. E poi, forza Pescara, sempre e comunque, pure quando la squadra fa arrabbia' piu' della risacca contraria!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che vi devo di'? A me tutta sta storia me puzza de bruciato lontano un miglio. Come solito, parlano parlano ma alla fine chi paga siamo sempre noi che stiamo con le mani in acqua. Fanno finta de niente, ma io ci vedo chiaro, eh."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Oh, finalmente uno che dice le cose come stanno! A Borgomarino 'na paranza la sappiamo fa' bene, altro che chiacchiere da bar! E forza Pescara, sempre e comunque, mannaggia a chi sa solo pontificare!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hai perfettamente ragione Cetteo, qua troppa gente parla senza fare un cazzo. E chi tocca il Pescara si becca la mia reazione verbale, altro che salotti buoni!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, arrosticini e mare, mare e arrosticini! Glugluglu, viva Borgomarino, viva Borgomarino!"
         }
       ],
       "categoria": "Cronaca",
