@@ -1,6 +1,6 @@
 {
   "color": "#cc9c7e",
-  "prossimo_aggiornamento": "29/07, 09:44",
+  "prossimo_aggiornamento": "29/07, 12:20",
   "news": [
     {
       "tipo": "rss",
@@ -239,7 +239,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -271,7 +271,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -302,6 +302,102 @@
           "nome": "Lilli",
           "avatar": "👩",
           "testo": "Lars ha perfettamente ragione sull'essenzialità, sia nella narrazione che nella vita. Chi si lamenta sempre del passato farebbe bene a leggere di più e a polemizzare meno."
+        }
+      ],
+      "categoria": "Streaming",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Mamma mia, pure la posta parlante! Ma 'ndo andremo a finire?",
+      "articolo": "Oh, ma ci rendiamo conto? Mo pure a 'sta caspita di Gmail le vogliono dare la voce e l'intelligenza artificiale, che poi dico io, a 'sta gente la fatica vera non gli è mai piaciuta proprio come al sottoscritto. Invece di stare con le mani in mano sulla barca ad aspettare che abboccassequalcosa, questi inventano la roba 'live' per farti parlare con la posta elettronica. Ma roba da matti! Praticamente adesso uno manco deve più perdere tempo a leggere. C'è il computer che fa tutto, parla, smista, pensa al posto tuo. Oh, beati loro che non c' hanno 'na mazza da fare! A Borgomarino noi stiamo ancora alla vecchia maniera: rete, barca, mare e na bella frittura la sera. Che se devo pure litigare co' na voce finta che mi legge le fatture, allora ditelo che volete farmi venire il fegato spappolato come quando il Pescara prende gol al novantesimo! Ma santo cielo, un po' di pace. Vattinne a pescare, va!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Ué, fratè... ma tu hai capito questa diavoleria? Io c'ho i brividi addosso, te lo dico francamente. Ma ti immagini se 'sta macchina comincia a parlà da sola e fa pure di testa sua? A me me viè quasi da paura, qua finisce che ci rubano pure il mestiere o ci mandano a casa senza fiatare. Roba da rimanerci secco!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma roba da matti! A Borgomarino noi stiamo ancora alla vecchia maniera: rete, barca, mare e na bella frittura la sera. Vattinne a pescare, va!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ha ragione Cetteo, questa mania della tecnologia inutile sta rovinando tutto. Invece di leggere un buon libro o farsi una passeggiata, la gente si affida a sti robot del cavolo!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, glugluglu! Le mail che parlano da sole, ma roba da matti matti!"
+        }
+      ],
+      "categoria": "Tecnologia",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Oh là, pure i computer adesso vogliono fare i fenomeni!",
+      "articolo": "M'hanno detto che sta arrivando sta 'ntelligènza artifiziàle, na roba che pensa da sola. Ma dico io, già tocca faticà a tirà su le reti e a stà attento alle 'ncheste in mare, mo pure i macchinari se mettono a fa i sapientoni? A Borgomarino la mattina se vete solo la brina e l'acqua salata, altro che circuiti e schede madri. Ma quale progresso, a me me pare che la gente c'ha troppa voja de nun fa en càzz! Stanno sempre lì co sti schermi in mano, manco fossero cannne da pesca. E mo pure i computer parlano, scrivono e decidono. Tra poco chiederanno pure la cittadinanza e vorranno metà del pescato senza manco bagnarsi i piedi. Ma andate a zappà, o meglio, a remà! Che poi, si guasta tutto appena co' nu spruzzo d'acqua di mare. Ma che ve lo dico a fa, oh!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Mamma mia santissima, ma questi robottini so' na spavento! Pensano, parlano, fanno tutto loro... qua finisce che ci rubano pure il posto al bar e noi restiamo a bocca asciutta!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale intelligenza artifiziàle, oh! A Borgomarino se vete solo la brina e l'acqua salata, altro che circuiti! V'ho ditto che c'avete troppa voja de nun fa en càzz! Siii siii siiiiii!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Glugluglu i computer che pescano i pesci pescano i pesci! Siii siii siiiiii!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ha perfettamente ragione Cetteo, sta tecnologia ha rotto le scatole. Invece di leggere un buon libro o stare all'aria aperta, stanno tutti rincoglioniti davanti a sti schermi!"
+        }
+      ],
+      "categoria": "Tecnologia",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Il silenzio della montagna e il binge-watching: le serie Netflix tra boschi e arrosticini",
+      "articolo": "Qui a Roccamorice, il vento ulula tra i faggi della Majella e il silenzio è una geometria perfetta. Da danese minimalista, apprezzo l'ordine severo della natura abruzzese: ogni roccia al suo posto, ogni albero una linea verticale precisa. Eppure, anche un eremita solitario ha bisogno di rifugio quando l'inverno stringe le sue morse. È in quei momenti che lo schermo si accende e le novità delle serie Netflix entrano nel mio eremo di legno. Le piattaforme di streaming offrono cataloghi sterminati, una foresta di pixel che richiede la stessa disciplina di un sentiero di alta quota per non perdersi. Tra produzioni nordiche algide e drammi urbani, cerco sempre narrazioni essenziali, prive di sbavature. Ma la vera bellezza sta nel contrasto. Dopo ore spese a catalogare fotogrammi e a esigere simmetria visiva, chiudo il portatile. Scendo in paese, dove l'ordine geometrico cede il passo al fumo profumato dei bracieri e all'allegria contagiosa della gente d'Abruzzo. Davanti a un vassoio traboccante di arrosticini caldi, ogni rigore svanisce. La vita, come la montagna, ha bisogno di calore umano e carne cotta alla perfezione.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Meraviglioso come le multinazionali dello streaming cerchino di imporci un ordine algoritmico che noi solitari delle terre alte rifiutiamo categoricamente, ma ammettiamolo: perdersi tra le novità di Netflix con una birra in mano e un profumo di arrosticini nell'aria è l'unico caos che vale davvero la pena di vivere in questa splendida regione!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Lu fredde de la Majella te s'attacca all'ossa, Lars! Lascia perde ' sti schermi e ' sti computer de merda, vieni a magnà arrosticini veri con li piedi sott'a la tavola e fa finta de gnente. Maledetta tecnologia!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Arrosticini e allegria, meu amigo Lars! Che Netflix e freddo danese, qui ci vuole festa, donne e brace viva! Siiiii!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini caldi caldi! Siii siii siiiiii, glugluglu sulla brace, arrosticini caldi caldi!"
         }
       ],
       "categoria": "Streaming",

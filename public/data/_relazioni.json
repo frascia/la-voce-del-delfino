@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "28/07/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "29/07/2026"
   },
@@ -51,9 +51,9 @@
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Lars→Hiroki": {
-    "score": 0.857,
+    "score": 0.957,
     "label": "amico",
-    "ultimo_aggiornamento": "27/07/2026"
+    "ultimo_aggiornamento": "29/07/2026"
   },
   "Hiroki→Juizinho": {
     "score": -0.729,
@@ -61,8 +61,8 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Cetteo→Lars": {
-    "score": 0.1,
-    "label": "neutro",
+    "score": 0.3,
+    "label": "simpatico",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Cetteo→Juizinho": {
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.8,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "29/07/2026"
   },
@@ -211,8 +211,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Glusi→Cetteo": {
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.8,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "29/07/2026"
   },
@@ -301,13 +301,13 @@
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.287,
-    "label": "diffidente",
+    "score": -0.187,
+    "label": "neutro",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Cetteo→Lilli": {
-    "score": 0.3,
-    "label": "simpatico",
+    "score": 0.9,
+    "label": "amico",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Lilli→Hiroki": {
@@ -511,12 +511,12 @@
     "ultimo_aggiornamento": "24/07/2026"
   },
   "Cetteo→Wolf": {
-    "score": 0.75,
+    "score": 0.95,
     "label": "amico",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Glusi→Autore": {
-    "score": 0.8,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "29/07/2026"
   },
@@ -551,8 +551,8 @@
     "ultimo_aggiornamento": "27/07/2026"
   },
   "Wolf→Abbukk": {
-    "score": -0.188,
-    "label": "neutro",
+    "score": -0.288,
+    "label": "diffidente",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Lilli→viaggiatore danese": {
@@ -661,13 +661,13 @@
     "ultimo_aggiornamento": "24/07/2026"
   },
   "Glusi→Wolf": {
-    "score": -0.272,
+    "score": -0.372,
     "label": "diffidente",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Wolf→Autore": {
-    "score": 0.639,
-    "label": "simpatico",
+    "score": 0.839,
+    "label": "amico",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Lars→Barista": {
@@ -866,9 +866,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Glusi": {
-    "score": -0.81,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "23/07/2026"
+    "ultimo_aggiornamento": "29/07/2026"
   },
   "Glusi→Realtà": {
     "score": -0.009,
@@ -1281,8 +1281,8 @@
     "ultimo_aggiornamento": "27/07/2026"
   },
   "Lamatte→Wolf": {
-    "score": 0.443,
-    "label": "simpatico",
+    "score": 0.143,
+    "label": "neutro",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Lilli→Autore Articolo": {
@@ -1681,9 +1681,9 @@
     "ultimo_aggiornamento": "24/04/2026"
   },
   "Lars→Lucap": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "24/07/2026"
+    "ultimo_aggiornamento": "29/07/2026"
   },
   "Topengo→Lilli": {
     "score": 1,
@@ -1766,9 +1766,9 @@
     "ultimo_aggiornamento": "28/07/2026"
   },
   "Lucap→Wolf": {
-    "score": -0.288,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "23/07/2026"
+    "score": -0.188,
+    "label": "neutro",
+    "ultimo_aggiornamento": "29/07/2026"
   },
   "Hiroki→Politici": {
     "score": -0.084,
@@ -1831,8 +1831,8 @@
     "ultimo_aggiornamento": "26/07/2026"
   },
   "Lucap→Glusi": {
-    "score": 0.696,
-    "label": "simpatico",
+    "score": 0.796,
+    "label": "amico",
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Cronista→Cetteo": {
@@ -2371,9 +2371,9 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Lucap→Lars": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "26/07/2026"
+    "ultimo_aggiornamento": "29/07/2026"
   },
   "Lilli→Burger King": {
     "score": -0.039,
