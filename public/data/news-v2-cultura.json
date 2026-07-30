@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "30/07, 03:59",
+  "prossimo_aggiornamento": "30/07, 05:25",
   "news": [
     {
       "tipo": "rss",
@@ -32,7 +32,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -58,6 +58,70 @@
           "nome": "Wolf",
           "avatar": "👩‍🌾",
           "testo": "Tutti a parlare di natura e arrosticini, ma intanto qua c'è da lavorare la terra e nessuno muove un dito. Sveglia."
+        }
+      ],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Aoh, invece de faticà, tutti ar cinemà!",
+      "articolo": "Oh raga', qua pare che appena cala er sole o piove un chicco, tutti co' la Capitaneria addosso a cerca' storie da grandi schermi. Ma dico io, co' tutto er pesce fresco che abbiamo qui a Borgomarino, co' l'odore de salsedine che se appiccica all'anima, ve ne volete annà a chiudere 'ntra quatto mura a guarda' fijo de babbà che recitano? Eh no, zi', nun attaccarà mai! Però, guardamo 'n attimo 'a realtà: le novità ar cinema offrono 'sti robbini nuovi, storie de mare, de tempeste, de gente che fatica (fatica vera, eh, nun quella nostra che stamo co' le reti ar sole). C'è chi s'affida a pellicole impegnate e chi vo' solo ride un po'. Ma la verità vera è 'na sola: si 'a pellicola dura troppo, a me me coce la siesta. Pescara mia, te voglio bene, ma pure 'sti registi c'hanno da dase na mossa a fa' film più corti, che sennò qui se addormentamo tutti co' i popcorn in mano.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Spettacolo puro, finalmente roba che se fa guardare! Però regà, pretendiamo de più, non veniteci a porta' sole 'sole'!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale cinema e cinema, zi'! Qui a Borgomarino a fatica vera semo noi che stamo co' le reti ar sole, nun sti fijo de babbà! Pescara mia non se tocca!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiisiiii, i popcorn in mano glugluglu che si addormentamo tutti coi film corti corti!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma basta criticare! Se un film è fatto bene la durata non conta, e invece di lamentarvi sempre fareste bene a leggervi qualche buon libro ogni tanto!"
+        }
+      ],
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Silenzi nordici e braci d'Abruzzo",
+      "articolo": "Qui a Roccamorice, appollaiato sulle pendici della Majella, il silenzio ha una geometria perfetta, quasi scandinava. La natura qui non fa rumore, ti osserva. Nelle foreste di faggi e tra i canyon scavati dall'Orfento trovo quel rigore e quell'ordine minimalista che ho cercato per tutta la vita, lontano dal caos delle metropoli. Eppure, io che vengo dalla Danimarca fredda e quadrata, ho scelto questo angolo d'Abruzzo per un motivo ben preciso: l'allegria contagiosa della sua gente e il profumo inconfondibile degli arrosticini cotti sulla brace. C'è una simmetria perfetta nella semplicità di questi spiedini di carne ovina, un rito antico che unisce le comunità montane. Mentre il vento soffia tra le rocce calcaree, osservare il profilo aspro della montagna mi ricorda i fiordi, ma il calore umano e il cibo povero ma sincero di questa terra mi ricordano che la vita merita di essere vissuta con leggerezza e convivialità.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Camminare su questi sentieri costa zero fatica per l'anima e zero soldi in tasca, basta un panino nello zaino, una tenda nascosta tra i pini mughi e la promessa di rifocillarsi con pochi spiccioli alla prima frasca incontrata lungo la via."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Gli arrosticini sulla Majella sono la perfetta sintesi tra il rigore della natura e il calore della convivialità abruzzese."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini e fiordi, arrosticini e fiordi siii siii siiiiii glugluglu!"
+        },
+        {
+          "nome": "Topengo",
+          "avatar": "🐭",
+          "testo": "Trekking sui canyon dell'Orfento, chitarra e una marea di arrosticini caldi sulla brace!"
         }
       ],
       "categoria": "Viaggi",
