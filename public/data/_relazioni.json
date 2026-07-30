@@ -1,5 +1,5 @@
 {
-  "_runCount": 5,
+  "_runCount": 6,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "30/07/2026"
   },
@@ -211,8 +211,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.21,
-    "label": "neutro",
+    "score": -0.29,
+    "label": "diffidente",
     "ultimo_aggiornamento": "30/07/2026"
   },
   "Glusi→Cetteo": {
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "30/07/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.9,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "30/07/2026"
   },
@@ -346,7 +346,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "30/07/2026"
   },
@@ -371,9 +371,9 @@
     "ultimo_aggiornamento": "28/07/2026"
   },
   "Abbukk→Lilli": {
-    "score": -0.319,
+    "score": -0.519,
     "label": "diffidente",
-    "ultimo_aggiornamento": "29/07/2026"
+    "ultimo_aggiornamento": "30/07/2026"
   },
   "Abbukk→Redazione": {
     "score": -0.005,
@@ -506,8 +506,8 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Lars": {
-    "score": 0.254,
-    "label": "neutro",
+    "score": 0.504,
+    "label": "simpatico",
     "ultimo_aggiornamento": "30/07/2026"
   },
   "Cetteo→Wolf": {
@@ -641,7 +641,7 @@
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Lars→Wolf": {
-    "score": 0.492,
+    "score": 0.692,
     "label": "simpatico",
     "ultimo_aggiornamento": "30/07/2026"
   },
@@ -5566,9 +5566,9 @@
     "ultimo_aggiornamento": "23/07/2026"
   },
   "Topengo→Juizinho": {
-    "score": 0.146,
+    "score": 0.246,
     "label": "neutro",
-    "ultimo_aggiornamento": "23/07/2026"
+    "ultimo_aggiornamento": "30/07/2026"
   },
   "Bartender→Lucap": {
     "score": 0.146,
@@ -5766,7 +5766,7 @@
     "ultimo_aggiornamento": "30/07/2026"
   },
   "Autore articolo→Lilli": {
-    "score": -0.27,
+    "score": -0.57,
     "label": "diffidente",
     "ultimo_aggiornamento": "30/07/2026"
   },
@@ -5776,7 +5776,7 @@
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Autore articolo→Abbukk": {
-    "score": 0.3,
+    "score": 0.5,
     "label": "simpatico",
     "ultimo_aggiornamento": "30/07/2026"
   },
@@ -5796,7 +5796,7 @@
     "ultimo_aggiornamento": "30/07/2026"
   },
   "Autore articolo→Glusi": {
-    "score": -0.1,
+    "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "30/07/2026"
   }
