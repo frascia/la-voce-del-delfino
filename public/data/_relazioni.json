@@ -1,5 +1,5 @@
 {
-  "_runCount": 11,
+  "_runCount": 12,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -61,9 +61,9 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Cetteo→Lars": {
-    "score": 0.67,
+    "score": 0.47,
     "label": "simpatico",
-    "ultimo_aggiornamento": "30/07/2026"
+    "ultimo_aggiornamento": "31/07/2026"
   },
   "Cetteo→Juizinho": {
     "score": -0.9,
@@ -78,7 +78,7 @@
   "Hiroki→Lars": {
     "score": 0.7,
     "label": "amico",
-    "ultimo_aggiornamento": "30/07/2026"
+    "ultimo_aggiornamento": "31/07/2026"
   },
   "Cetteo→Hiroki": {
     "score": -1,
@@ -93,7 +93,7 @@
   "Juizinho→Lars": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "30/07/2026"
+    "ultimo_aggiornamento": "31/07/2026"
   },
   "Hiroki→Redazione": {
     "score": -0.085,
@@ -116,13 +116,13 @@
     "ultimo_aggiornamento": "31/07/2026"
   },
   "Cetteo→Autore": {
-    "score": -0.828,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "31/07/2026"
   },
   "Hiroki→Autore": {
-    "score": 0.273,
-    "label": "neutro",
+    "score": 0.373,
+    "label": "simpatico",
     "ultimo_aggiornamento": "31/07/2026"
   },
   "Lars→Questa terra": {
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "31/07/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "31/07/2026"
   },
@@ -346,7 +346,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.8,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "31/07/2026"
   },
@@ -641,12 +641,12 @@
     "ultimo_aggiornamento": "31/07/2026"
   },
   "Lars→Wolf": {
-    "score": 0.892,
+    "score": 0.992,
     "label": "amico",
     "ultimo_aggiornamento": "31/07/2026"
   },
   "Lilli→Autore": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "31/07/2026"
   },
@@ -656,9 +656,9 @@
     "ultimo_aggiornamento": "30/07/2026"
   },
   "Wolf→Hiroki": {
-    "score": -0.47,
+    "score": -0.37,
     "label": "diffidente",
-    "ultimo_aggiornamento": "30/07/2026"
+    "ultimo_aggiornamento": "31/07/2026"
   },
   "Glusi→Wolf": {
     "score": -0.235,
@@ -956,7 +956,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Topengo→Autore": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "31/07/2026"
   },
@@ -1061,7 +1061,7 @@
     "ultimo_aggiornamento": "18/07/2026"
   },
   "Lilli→Wolf": {
-    "score": 0.96,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "31/07/2026"
   },
@@ -1478,7 +1478,7 @@
   "Lucap→Hiroki": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "30/07/2026"
+    "ultimo_aggiornamento": "31/07/2026"
   },
   "Glusi→Lucap": {
     "score": 0.542,
@@ -3336,8 +3336,8 @@
     "ultimo_aggiornamento": "24/05/2026"
   },
   "Enzino→Lilli": {
-    "score": 0.584,
-    "label": "simpatico",
+    "score": 0.784,
+    "label": "amico",
     "ultimo_aggiornamento": "31/07/2026"
   },
   "Enzino→Hiroki": {
@@ -3956,7 +3956,7 @@
     "ultimo_aggiornamento": "17/07/2026"
   },
   "Enzino→Topengo": {
-    "score": 0.732,
+    "score": 0.832,
     "label": "amico",
     "ultimo_aggiornamento": "31/07/2026"
   },
@@ -5576,9 +5576,9 @@
     "ultimo_aggiornamento": "23/07/2026"
   },
   "Topengo→Enzino": {
-    "score": 0.292,
-    "label": "neutro",
-    "ultimo_aggiornamento": "24/07/2026"
+    "score": 0.492,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "31/07/2026"
   },
   "Glusi→Glugluglu": {
     "score": 0.146,
@@ -5817,6 +5817,11 @@
   },
   "Articolo→Cetteo": {
     "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "31/07/2026"
+  },
+  "Autore→Amico taccagno": {
+    "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "31/07/2026"
   }
