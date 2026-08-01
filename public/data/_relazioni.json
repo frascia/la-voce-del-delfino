@@ -1,5 +1,5 @@
 {
-  "_runCount": 4,
+  "_runCount": 5,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -41,9 +41,9 @@
     "ultimo_aggiornamento": "31/07/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.9,
+    "score": -0.85,
     "label": "ostile",
-    "ultimo_aggiornamento": "31/07/2026"
+    "ultimo_aggiornamento": "01/08/2026"
   },
   "Juizinho→Cetteo": {
     "score": -1,
@@ -81,7 +81,7 @@
     "ultimo_aggiornamento": "31/07/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.8,
+    "score": -0.75,
     "label": "ostile",
     "ultimo_aggiornamento": "01/08/2026"
   },
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -0.151,
+    "score": 0.049,
     "label": "neutro",
     "ultimo_aggiornamento": "01/08/2026"
   },
@@ -261,9 +261,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Juizinho→Autore": {
-    "score": 0.606,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "25/07/2026"
+    "score": 0.706,
+    "label": "amico",
+    "ultimo_aggiornamento": "01/08/2026"
   },
   "Enzo→Autore": {
     "score": -0.005,
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "01/08/2026"
   },
@@ -646,9 +646,9 @@
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Lilli→Autore": {
-    "score": -0.9,
-    "label": "ostile",
-    "ultimo_aggiornamento": "31/07/2026"
+    "score": -0.6,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "01/08/2026"
   },
   "Abbukk→Cetteo": {
     "score": -0.525,
@@ -1021,7 +1021,7 @@
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Lamatte→Hiroki": {
-    "score": 0.421,
+    "score": 0.521,
     "label": "simpatico",
     "ultimo_aggiornamento": "01/08/2026"
   },
@@ -1136,7 +1136,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Lamatte": {
-    "score": -0.72,
+    "score": -0.92,
     "label": "ostile",
     "ultimo_aggiornamento": "01/08/2026"
   },
@@ -1161,7 +1161,7 @@
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Lamatte→Cetteo": {
-    "score": -0.116,
+    "score": 0.084,
     "label": "neutro",
     "ultimo_aggiornamento": "01/08/2026"
   },
@@ -1366,8 +1366,8 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Lamatte→Glusi": {
-    "score": -0.361,
-    "label": "diffidente",
+    "score": -0.161,
+    "label": "neutro",
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Lars→Politici": {
@@ -1431,8 +1431,8 @@
     "ultimo_aggiornamento": "29/07/2026"
   },
   "Lilli→Lucap": {
-    "score": -0.621,
-    "label": "ostile",
+    "score": -0.421,
+    "label": "diffidente",
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Autore Articolo→Lamatte": {
@@ -5846,6 +5846,11 @@
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Autore articolo→Lamatte": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "01/08/2026"
+  },
+  "Enzino→Lucap": {
     "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "01/08/2026"
