@@ -1,5 +1,5 @@
 {
-  "_runCount": 7,
+  "_runCount": 8,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -66,7 +66,7 @@
     "ultimo_aggiornamento": "02/08/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -0.8,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "02/08/2026"
   },
@@ -211,12 +211,12 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": -0.051,
-    "label": "neutro",
+    "score": 0.449,
+    "label": "simpatico",
     "ultimo_aggiornamento": "02/08/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "02/08/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.5,
+    "score": 0.6,
     "label": "simpatico",
     "ultimo_aggiornamento": "02/08/2026"
   },
@@ -508,7 +508,7 @@
   "Wolf→Lars": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "01/08/2026"
+    "ultimo_aggiornamento": "02/08/2026"
   },
   "Cetteo→Wolf": {
     "score": 1,
@@ -1026,9 +1026,9 @@
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Lamatte→Lilli": {
-    "score": -0.822,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "01/08/2026"
+    "ultimo_aggiornamento": "02/08/2026"
   },
   "Lilli→Lamatte": {
     "score": -0.85,
@@ -1136,9 +1136,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Lamatte": {
-    "score": -0.92,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "01/08/2026"
+    "ultimo_aggiornamento": "02/08/2026"
   },
   "Hiroki→Lamatte": {
     "score": -0.874,
@@ -1161,9 +1161,9 @@
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Lamatte→Cetteo": {
-    "score": 0.084,
-    "label": "neutro",
-    "ultimo_aggiornamento": "01/08/2026"
+    "score": -0.216,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "02/08/2026"
   },
   "Lilli→Squadra Pescara": {
     "score": -0.035,
@@ -5867,6 +5867,11 @@
   },
   "Lucap→Riccardo Tonin": {
     "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "02/08/2026"
+  },
+  "Autore articolo→undefined": {
+    "score": 0,
     "label": "neutro",
     "ultimo_aggiornamento": "02/08/2026"
   }
