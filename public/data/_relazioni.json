@@ -1,5 +1,5 @@
 {
-  "_runCount": 3,
+  "_runCount": 4,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -216,7 +216,7 @@
     "ultimo_aggiornamento": "04/08/2026"
   },
   "Glusi→Cetteo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "04/08/2026"
   },
@@ -281,9 +281,9 @@
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Juizinho→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "03/08/2026"
+    "ultimo_aggiornamento": "04/08/2026"
   },
   "Glusi→Questa comunità": {
     "score": -0.069,
@@ -291,8 +291,8 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.75,
-    "label": "amico",
+    "score": 0.55,
+    "label": "simpatico",
     "ultimo_aggiornamento": "04/08/2026"
   },
   "Lars→Lilli": {
@@ -311,9 +311,9 @@
     "ultimo_aggiornamento": "04/08/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.92,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "03/08/2026"
+    "ultimo_aggiornamento": "04/08/2026"
   },
   "Wolf→Redazione": {
     "score": -0.005,
@@ -636,9 +636,9 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Autore→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "02/08/2026"
+    "ultimo_aggiornamento": "04/08/2026"
   },
   "Lars→Wolf": {
     "score": 1,
@@ -996,9 +996,9 @@
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Autore→Lilli": {
-    "score": -0.612,
-    "label": "ostile",
-    "ultimo_aggiornamento": "02/08/2026"
+    "score": -0.412,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "04/08/2026"
   },
   "Lars→Topengo": {
     "score": 0.91,
@@ -1751,7 +1751,7 @@
     "ultimo_aggiornamento": "02/08/2026"
   },
   "Glusi→Enzino": {
-    "score": 0.829,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "04/08/2026"
   },
@@ -3406,9 +3406,9 @@
     "ultimo_aggiornamento": "27/06/2026"
   },
   "Enzino→Lars": {
-    "score": 0.539,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "28/07/2026"
+    "score": 0.839,
+    "label": "amico",
+    "ultimo_aggiornamento": "04/08/2026"
   },
   "Glusi→tutti": {
     "score": -0.076,
@@ -5636,9 +5636,9 @@
     "ultimo_aggiornamento": "24/07/2026"
   },
   "Autore→Enzino": {
-    "score": 0.539,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "28/07/2026"
+    "score": 0.739,
+    "label": "amico",
+    "ultimo_aggiornamento": "04/08/2026"
   },
   "Autore dell'articolo→Lilli": {
     "score": 0.24,
@@ -5909,5 +5909,10 @@
     "score": -0.3,
     "label": "diffidente",
     "ultimo_aggiornamento": "03/08/2026"
+  },
+  "Juizinho→Enzino": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "04/08/2026"
   }
 }
