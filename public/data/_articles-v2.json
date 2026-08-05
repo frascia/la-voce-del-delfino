@@ -1,8 +1,8 @@
 {
-  "oraAggiornamento": "05/08, 23:00",
+  "oraAggiornamento": "06/08, 01:54",
   "agenda": {
-    "timbro": "Resistenza Adriatica",
-    "banner": "Mare.webp"
+    "timbro": "Edizione quotidiana",
+    "banner": "Default.webp"
   },
   "impostazioni": {
     "header_fisso": "header.webp",
@@ -28,1485 +28,258 @@
       "news": [
         {
           "tipo": "personaggio",
-          "titolo": "Versi e natura: quando la poesia incontra il campo",
-          "articolo": "La cultura non sta chiusa nelle torri d'avorio polverose dei baroni universitari, ve lo dico io che leggo di tutto tra un settore e l'altro dello stadio. Si respira nei dettagli, nei prati spontanei e nei versi che sanno scuotere l'anima senza bisogno di paroloni. L'amore per la bellezza e la letteratura si nutre di cose semplici, proprio come un mazzetto di fiori di campo raccolti di fretta o una poesia d'altri tempi che ti colpisce dritto allo stomaco. Non serve fare i preziosi o atteggiarsi a intellettuali da salotto per capire l'arte; la verità è che chi sa apprezzare la genuinità di un verso sa stare bene ovunque, che sia in una biblioteca silenziosa o in mezzo alla strada, senza farsi mettere i piedi in testa da nessuno. La poesia è lotta, è passione viva e appartiene a chiunque abbia il coraggio di sentirla davvero dentro, senza filtri e senza ipocrisie di sorta.",
+          "titolo": "Lu core di Pescara: faticare manco a pagàll",
+          "articolo": "Oh, ma ci avete fatto caso? Ora tutti a parla' di 'sto 'core di Pescara', tra sangue, sudore e arrosticini di mare. Ma dico io, ci voleva un genio per capire che la nostra è na terra di mare e fatica? Anche se, a di' la veritieri, la voglia di lavorare qui è sempre stata poca, preferiamo na barca e na lenza. Però oh, quando si tratta di magna', specialmente se c'è di mezzo il pesce buono della nostra paranza, allora ci rimbocchiamo le maniche tutti, vè! Gli arrosticini di mare poi... na novità che fa ' 'gghiurnata, ma come li fammo noi a Pescara non li fa nessuno. E facciamolo 'sto tifo per le cose nostre, che tra na 'mpaetata e na calata di reti, la nostra identità sta tutta qua. Sempre a testa alta, co' la maglia biancazzurra stampata addosso e l'odore di salsedine che non se ne va manco se ti lavi con l'acido. E mo' basta che ho da pensa' a ' na rete da sistemare, che il mare chiama.",
           "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Che dire, ragazzi? Bastano due righe giuste e un po' di verde per rimettere a posto la giornata con un bel sorriso sereno."
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Ma quale sangue e sudore, qua si fatica solo a magna'! E vedi di non rompe le scatole che devo anda' a vede' se il Delfino nuota ancora o affonda come i vostri articoli del cazzo!"
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma quale torre d'avorio e poesie, qui a Pescara si tifa e si mangiano arrosticini! E vedi di non rompere li c...!"
+              "testo": "Lu mare chiama e 'lla gente faticà nun vo' mai! Ma pe' li arrosticini de mare e 'na bbona paranza stemo sempre 'n piedi, cazzo! Sempre a testa alta e maglia biancazzurra addosso, vè!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Esatto Cetteo, qua si parla sempre a vanvera ma quando c'è da difendere la nostra identità e i nostri prodotti nessuno deve fiatare. Chi tocca Pescara e le nostre tradizioni si becca la mia reazione, altroché!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, poesia e arrosticini volanti, glugluglu! Poesia e arrosticini volanti, glugluglu!"
+              "testo": "Arrosticini di mare siii siii siiiiii glugluglu! Pescara nel cuore core core core, gnam gnam!"
             },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Dalla montagna di Roccamorice sento il profumo del mare e della salsedine. La natura qui è magnifica, e la gioia degli arrosticini batte qualsiasi silenzio danese."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "cetteo.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "La caffeina quantica e i funghi atomici della moka",
+          "articolo": "Mentre voi dormite sonni tranquilli e bevete la vostra amata tazzina al bar, nessuno si chiede cosa ci sia davvero dentro quella polvere nera. Non parlo di robusta o arabica, ma della geopolitica della caffeina. Chi controlla la tostatura sa benissimo che ogni chicco viene irradiato con frequenze a bassa intensità per influenzare i nostri sinapsi durante la lettura delle email. È la stessa tecnologia invisibile che tracciano nei cieli limpidi, solo che passa attraverso il filtro della moka. L'altro giorno, mentre ero nei boschi a cercare porcini veri - quelli che crescono solo dove non passa il 5G - ho meditato su questa follia collettiva. La gente beve senza guardare l'orizzonte. Io invece sto sempre attento a tutto, zappando la terra del mio orto per trovare risposte che i giornali mainstream non pubblicheranno mai. Svegliatevi, prima che la pressione della caldaia vi spenga per sempre.",
+          "commento_firma": {
+            "nome": "Abbukk",
+            "avatar": "🍄",
+            "testo": "Le analisi di laboratorio confermano la presenza di microparticelle metalliche nei lotti di caffè industriale sequestrati. La questione merita un'indagine approfondita da parte delle autorità competenti."
+          },
+          "commenti": [
+            {
+              "nome": "Abbukk",
+              "avatar": "🍄",
+              "testo": "La geopolitica della caffeina e il 5G nei boschi... svegliatevi, la verità è nella terra!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Io sto sulle montagne a Roccamorice, respiro aria pulita e mangio arrosticini. Lasciate stare i chicchi di caffè, venite a godervi la natura con un po' di allegria!"
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma quale polvere nera e frequenze, qui a Pescara se non ti bevi 'na tazza bbuona la mattina non vai manco a 'n mare! Svejateve voi, cazzarari!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "abbukk.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Pedali, shaker e misticanza notturna",
+          "articolo": "La notte appartiene a chi resta in piedi quando il resto del mondo spegne le insegne. Tra banconi bagnati di bitter e buio pesto, il lavoro finisce quando altrove suona già l'alba. Prima di posare lo shaker, serve scaricare i polmoni. Salire in sella senza fanali, affidandosi solo al riflesso della luna sui raggi, è l'unico modo per rimettere in asse i pensieri dopo ore passate a versare distillati. Si pedala forte, con il contagocce di energia che resta, su per le rampe asfaltate che portano fuori dal traffico. Non c'è fatica che tenga quando le gambe girano a vuoto e la strada sale ripida. Poi si torna giù, dritti verso un bicchiere robusto, di quelli che tengono insieme ghiaccio e botaniche complesse. Si beve con misura, senza perdere il passo, metabolizzando tutto con un metabolismo che sfida le leggi della fisica. Si mangia il doppio, ci si nutre di carboidrati e cicoria, eppure l'ago della bilancia resta inchiodato sul profilo di uno spilungone.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Alla fine, tra una pedalata al freddo e un Negroni fatto a regola d'arte, la linea resta intatta e il fegato pure: pensa te che culo!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Pedalare nella notte tra i monti di Roccamorice sotto la luce della luna è pura poesia della natura, ma dopo tanta fatica ci vogliono assolutamente degli arrosticini!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii che pedalata notturna spaziale, glugluglu giù tutto il bicchiere robusto, robusto!"
+            },
+            {
+              "nome": "Wolf",
+              "avatar": "👩‍🌾",
+              "testo": "Lavorare fino all'alba e poi sprecare energie in bici mentre c'è chi poltrisce... la vita è solo una gran delusione."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Il peso della legge: la stazza del foro",
+          "articolo": "Girare per i corridoi dei tribunali con la mia mole non è roba per gracili. Tra codici penali pesanti come pietre e cause civili che durano quanto un tour dei Rolling Stones, fare l'avvocato in questa città richiede la robustezza di un facchino e la pazienza di un santo. Il mondo delle toghe è pieno di colleghi smilzi, figurine da salotto che sventolano la Costituzione come fosse un tovagliolo, ma quando si tratta di reggere l'urto di una requisitoria o di sostenere il peso di un dibattimento fiume, la stazza fa la differenza. Non è solo questione di chili, è presenza scenica. Del resto, chi conosce ogni angolo di questo asfalto sa che la giustizia ha bisogno di spalle larghe. Tra una prova da esaminare e le prove con la mia band rock, la mia giornata tipo brucia calorie e pazienza. Essere un legale imponente in un mondo di mezze cartine significa non passare mai inosservato, che tu stia entrando in un'aula di giustizia o in un locale a suonare il basso.",
+          "commento_firma": {
+            "nome": "Topengo",
+            "avatar": "🐭",
+            "testo": "Che spasso! A volte penso che il vero reato sia trovare una sedia comoda in tribunale che non rischi di crollare sotto il sottoscritto. Giustizia è fatta, ma che fatica!"
+          },
+          "commenti": [
             {
               "nome": "Topengo",
               "avatar": "🐭",
-              "testo": "Parole sante! La musica e le parole vere nascono dalla strada e dalla vita vissuta, non dai salotti buoni!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La coda allo sportello e il risveglio della coscienza: quando la cruda realtà supera i poteri forti",
-          "articolo": "Chi frequenta gli uffici postali sa benissimo che lì dentro le leggi della fisica e del tempo subiscono alterazioni inspiegabili. Recentemente, un episodio apparentemente banale ha fatto il giro del web, scatenando ilarità ma anche qualche riflessione tra i più attenti osservatori delle dinamiche occulte che muovono il pianeta. Durante una normale attesa per il ritiro di una raccomandata, un cittadino ha immortalato una scena surreale: decine di persone in fila, immobili, con lo sguardo perso nel vuoto e movimenti quasi reptiliani, perfettamente sincronizzati nell'estrarre il numeretto dal totem elettronico. Una sequenza di gesti meccanici che ha immediatamente ricordato le teorie sui mutaforma che si mimetizzano tra la popolazione comune per sbrigare commissioni burocratiche. Naturalmente i media di regime hanno parlato di semplice e noiosa burocrazia italiana e di anziani in attesa della pensione, liquidando il tutto con la solita ironia. Ma noi che abbiamo gli occhi aperti sappiamo che certe code nascondono sempre qualcosa di più profondo.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "La burocrazia è l'unico vero serpente a sonagli che non ha bisogno di cambiare pelle per stritolarci."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Lo sapevo! I mutaforma rettiliani usano i totem delle poste per clonare le tessere magnetiche e controllare la mente degli anziani, glugluglu... svegliaaa!"
+              "testo": "Eh già, con questa stazza e il mio basso facciamo tremare sia i tribunali che i palchi! La musica e la giustizia vogliono spalle larghe, ssssiiiii sssssiiiii!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "I rettiliani alle poste, alle poste! Siiii siii siiiiii, glugluglu, che ridereeee che ridereeee!"
+              "testo": "Spalle larghe e basso a palla, glugluglu! Spalle larghe e basso a palla, glugluglu!"
             },
             {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quali rettiliani e mutaforma, li mortacci v vost’! Quelli so' solo crestati che aspettano la pensione per venì a rompe li cojoni allo sportello!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Distanza e redazione: armonia digitale tra Tokyo e Pescara",
-          "articolo": "Gestire una redazione giornalistica vivace e appassionata richiede già di per sé un notevole equilibrio. Se a questo si aggiunge un fuso orario di sette ore che separa Tokyo da Pescara, la sfida diventa complessa. La tecnologia odierna consente di mantenere i contatti costanti, ma coordinare le idee, smussare gli angoli e guidare il gruppo attraverso schermi e messaggi richiede una dedizione particolare. Lontano dal caos quotidiano, il Giappone offre momenti di riflessione e panorami suggestivi, ma il pensiero torna sempre ai colleghi rimasti in Abruzzo. La lontananza geografica non deve diventare una barriera, bensì un'opportunità per ripensare i flussi di lavoro in modo più disteso ed efficiente. Il segreto per far funzionare una squadra a distanza risiede nell'ascolto reciproco e nella valorizzazione delle singole sensibilità. Ogni riunione online diventa così un ponte tra culture e fusi orari differenti, unendo la frenesia della notizia alla ricerca costante di un clima lavorativo sereno e collaborativo per tutti.",
-          "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Ragazzi, vi voglio bene tutti quanti, cerchiamo di respirare con calma e di volerci bene anche a settemila chilometri di distanza!"
-          },
-          "commenti": [
-            {
-              "nome": "Lucap",
+              "nome": "Enzino",
               "avatar": "👨‍⚖️",
-              "testo": "Gestire la redazione a distanza è una sfida stimolante, ma con il dialogo e l'ascolto reciproco possiamo mantenere il nostro spirito intatto e lavorare in armonia."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente un approccio basato sulla pianificazione e sulla disciplina. Solo attraverso metodi rigorosi si può portare efficienza in redazione."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale fuso orario e storie giapponesi! A Pescara si lavora di fatica e basta, levatevi da mezzo!"
+              "testo": "Che spettacolo! Un avvocato rockettista così imponente non passa mai inosservato, adoro questa energia!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
+          "immagine": "topengo.webp",
           "provider": "gemini"
         },
         {
           "tipo": "personaggio",
-          "titolo": "ENTRO NEI NEGOZI A DIRVI QUALE SCHIFO COMPRATE",
-          "articolo": "Ascoltate bene, cerebrolesi da centro commerciale. Sono Lamatte, quella che vi fa tremare le budella ogni volta che varco la soglia dei vostri negozi di periferia e delle boutique del centro. Voi entrate in questi loculi a comprare paccottiglia cinese spacciata per alta moda e plastica tossica camuffata da design, annuendo come deficienti mentre il commesso vi svuota il portafoglio. Qualcuno deve pur dirvelo in faccia che avete il gusto estetico di un babbuino lobotomizzato. I proprietari abbassano le serrande appena mi vedono arrivare, i clienti scappano zigzagando tra i manichini con la borsa della spesa in mano, terrorizzati dalla verità. Ma io continuo a urlare la realtà: quel maglione vi fa sembrare dei salami sgonfi e quella sedia ergonomica spacca la schiena. La verità fa male, ma qualcuno ve la deve sbattere in faccia prima che vi compriate l'ennesima inutile cianfrusaglia.",
+          "titolo": "Simpatia e codici penali: quando l'amicizia incontra la legge",
+          "articolo": "Girare per questa nostra splendida città significa inevitabilmente fermarsi a ogni angolo per stringere mani, battere il cinque e scambiare battute con chiunque. Da avvocato di stazza imponente, e da rocker che calca i palchi con la sua band, so bene cosa significhi essere l'amico di tutti. La cordialità è un'arte e, perché no, una forma di diplomazia urbana. Tuttavia, la giurisprudenza ci insegna che esiste una sottile linea di demarcazione tra la bonarietà e il rispetto rigoroso dei confini legali e personali. Troppa confidenza, specie quando si varcano le soglie della privacy altrui o si interpretano male i ruoli professionali, trasforma l'abbraccio in un'invasione di campo. Il Codice Penale non fa sconti alla simpatia mal gestita. Che si tratti di contratti verbali presi troppo alla leggera o di bonario stalking relazionale, la legge tutela chi sa dire basta. Essere benvoluti è fantastico, ma ricordate sempre che la toga, nella mia professione, serve proprio a rimettere i giusti paletti quando l'affetto diventa molesto.",
           "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Mucche belanti che pascolate tra gli sconti! Vi comprerei tutti solo per bruciarvi nel camino e scaldarci i piedi mentre rido della vostra immondizia!"
+            "nome": "Topengo",
+            "avatar": "🐭",
+            "testo": "Ah, che bellezza! Io adoro la gente, ma quando arrivano le querele per eccesso di abbracci... beh, lì tiro fuori la chitarra e faccio accordi di settima minore per addolcire il giudice! Rock and roll e codice penale, amici miei!"
           },
           "commenti": [
             {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Finalmente qualcuno che lo dice chiaramente! La privacy e i confini personali vanno rispettati, e chi non lo capisce con le buone deve imparare a farlo con le cattive. Non tollero chi invade gli spazi altrui!"
+            },
+            {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma che cazz' stai a ì, Lamatte! Quella è tutta robaccia ca se compra pure a Borgomarino, ji vado a comprà i panni na vorta l'anno e basta!"
+              "testo": "E daje, avvoca', quante storie! Lu penale, la toga, li paletti... qua a Borgomarino se fammo na risata e na magnata e passa tutto lu male, non cianciare troppu!"
+            },
+            {
+              "nome": "Enzino",
+              "avatar": "👨‍⚖️",
+              "testo": "Ahahaha, sei sempre il solito immenso Topengo! Riesci a unire la tua stazza da rocker e la serietà della toga con un'ironia unica. Ti adoro quando fai il professore!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, i salami sgonfi glugluglu, i salami sgonfi glugluglu!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lamatte, vedi di darti una calmata o ti vengo a cercare sotto casa con la spranga, smala di dire cavolate!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "La mancanza di rigore e disciplina nei consumi occidentali porta inevitabilmente a questo degrado estetico e morale."
+              "testo": "Siii siii siiiiii, la toga dei giusti giusti! Glugluglu, avvocato rockettista, rockettistaaa!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
+          "immagine": "topengo.webp",
           "provider": "gemini"
         },
         {
           "tipo": "personaggio",
-          "titolo": "Tasse salate e pattume: la solita solfa",
-          "articolo": "Vivo quassù, piantato su questo colle, proprio per non dover vedere certe facce e respirare l'aria pesante della pianura. Ma i problemi ti inseguono ovunque, pure tra i boschi. Si parla continuamente di tagli agli sprechi, di efficienza e di servizi che migliorano. La realtà dei fatti, quella che nessuno ha il coraggio di sbattere in faccia ai cittadini, è ben diversa. Le tasse continuano a pesare come macigni sulle spalle di chi lavora sodo e produce, mentre la gestione del territorio fa acqua da tutte le parti. Strade dissestate, cassonetti stracolmi e rifiuti abbandonati nei fossi sono lo specchio fedele di un'amministrazione incapace. Meno parole e più fatti, ripetono tutti. Peccato che alle parole non seguano mai i fatti, ma solo bollettini da pagare e giustificazioni ridicole. La verità è che paghiamo troppo per avere in cambio il nulla. Io continuo a spaccarmi la schiena dal mattino alla sera, cucino per quei pochi amici che salgono fin qui e cerco di isolarmi da questo scempio quotidiano.",
+          "titolo": "Notturni a due ruote tra i bicchieri",
+          "articolo": "La strada di notte cambia volto. Quando il locale chiude i battenti e le luci si spengono, per chi fa questo mestiere inizia un altro viaggio. Salire in sella sotto la luce dei lampioni è un rito necessario, un modo per smaltire il fumo e i pensieri accumulati dietro il banco. La bicicletta non tradisce mai, anche quando le ruote baciano l'asfalto bagnato e il freddo punge il viso. C'è chi preferisce il silenzio della corsa e chi sceglie il ritmo costante dei pedali. Dietro la barra si miscelano distillati, si ascoltano storie e si versano cocktail perfetti con la lucidità di chi non perde mai il controllo, protetto da una scorza dura e taciturna. Poi, la cucina chiama: un piatto dietro l'altro, porzioni abbondanti che sfidano le leggi della fisica su questo fisico smilzo e sempre in movimento. Si pedala forte nel buio, lasciandosi alle spalle il bancone, per raggiungere l'orizzonte prima che spunti l'alba.",
           "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Che fatica. Ho la nausea a ripeter sempre le stesse cose, non cambia mai niente e ho solo voglia di spegnere tutto e tornare ai miei fornelli."
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Se bevi ilcolcol e pedali al buio non sei un eroe, sei solo uno che ha fretta di arrivare al frigorifero!"
           },
           "commenti": [
             {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Finalmente uno che dice le cose come stanno, basta con queste chiacchiere da bar e tasse che servono solo a mantenere i parassiti!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li mortacci loro, le strade fanno schifo e pagamo pure, co' tutt'i rifiuti pe' terra!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Algoritmi e miceli: chi controlla davvero i nostri dati?",
-          "articolo": "Mentre voi pascolate beati sui social network credendo di condividere foto innocue, i server delle grandi multinazionali tecnologiche stanno mappando ogni singolo battito del vostro ciglio. Non serve essere hacker della domenica per capire che l'Intelligenza Artificiale non è uno strumento di progresso, ma un enorme collettore di informazioni personali, nascosto dietro facili chatbot e assistenti vocali troppo gentili. È un sistema che impara da noi per sostituirci, un po' come quando lasci il terreno incolto e le erbacce prendono il sopravvento senza chiedere permesso. La sorveglianza digitale è ovunque, silenziosa e pervasiva, proprio come le spore nel sottobosco che aspettano la stagione giusta per germogliare. E voi continuate a dire che va tutto bene, mentre il vostro smartphone sa già che tipo di caffè preferite prima ancora che entriate al bar. Sveglia, gente.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Cercano di vendervi la fibra ottica, ma io vi dico che i veri cavi passano sotto i ceppi di castagno. (Risata isterica di sottofondo che dura tre minuti buoni)."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Finalmente qualcuno che ha capito tutto! Le spore nel sottobosco parlano chiaro, la rete neurale è collegata direttamente al micelio sotterraneo! Svegliaaa!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale intelligenza artificiale e spore, se ti becco a dire queste cagate ti spezzo le dita sulla tastiera. Pensa a studiare invece di sparare fesserie!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Glugluglu i dati volano via, volano viaaa! Siii siii siiiiii, il computer mi guarda la faccia, la facciaaa!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U mare è amaro, ma a Pescara tocca faticà pure troppo",
-          "articolo": "Oh, aò, qui pare che a Borgomarino s'ha da fà sempre i conti con la stessa solfa. Pescara è na terra d'a mari, de paranza e de reti buttate all'alba, ma pare che a quaccheduno je piae malamente la voglia de faticà. Tra na barca da sistemare e n'uscita a peschereccio che te lascia a stomaco vuoto, a vòte vene propriu a tossì a PENSARE de mettece d'impegno. I Delfini biancazzurri lottano la domenica allo stadio, e noi giù al porto a guardà l'orizzonte, aspettando che il vento porti du' sarde e zero scassamenti de cojoni. Ma che v'ha preso? Tutti co' sta mania de correre, de fà carte, de sta 'n ufficio. Il mare c'insegna na cosa sola: a stà quatti e a aspettà l'onda bona. Invece no, qui se polemizza su tutto, pure su na frittura de paranza. E mo basta, che c'ho na fame che se sbombola tuttu u' molo.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Avoja a parlà de cronaca e de problemi. A me me pare tutta na scusa pe nun pagà da bere. Occhio a chiacchiere, che qua se fida solo del pesce fresco e de chi non rompe i marroni."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale faticà e faticà, qui a Borgomarino ce vonno solo rompere i cojoni! Sii sii, ma vaffanculo!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa è l'ennesima cazzata inventata da chi non ha mai preso in mano una rete in vita sua. Meno polemiche e più rispetto per chi lavora davvero!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiii sii sii la frittura di paranza vola sul molo glugluglu vola sul molo glugluglu!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U mari s'arrabbia, Pescara scura e 80 all'ora",
-          "articolo": "Uè, qui non si tratta de lavorà, che già la fatic’ è un peccato mortale, ma quando u' mari s'arrabbia e u' ventu tira a ottanta all'ora, c'è poco da fa'. Le barche stanno legate strette in porto a Borgomarino e noi stiamo sotto al portico a guardà 'sta burrasca che non dà tregua. Pescara s’è svegliata sballottata tra raffiche bastarde, alberi che tremano e onde alte che sbattono sui frangiflutti come i matti. Io ve lu dico, con 'sto tempaccio chi è che va a mare? Manco i gabbiani volano, figuramose se metto u' guscio meu fora. La natura fa u' cazzu che vole e a noi tocca solo sta' a guardà, magari con un buon bicchiere di vinello e na frittura, aspettando che passa. Del resto, u' mare comanda e noi ubbidiamo, che la v’la è na rogna e la terra ferma è sempre meglio, specie se soffia così.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In riferimento all'evento meteorologico avverso registrato sul litorale pescarese, caratterizzato da raffiche di vento pari a ottanta chilometri orari, si prende atto della situazione di criticità ambientale. Si demanda alle autorità competenti il monitoraggio costante del territorio e l'adozione delle misure di sicurezza previste dai protocolli vigenti in materia di protezione civile, restando in attesa di eventuali ulteriori disposizioni amministrative."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Uè, ma quale barche e barche! A Borgomarino si suda freddo altroché, e con 'sta burrasca chi cazzo move un dito! Manco i gabbiani volano, ma 'sti forestieri parlano parlano e non sanno che significa cozzà contro 'sta furia! Siii siii siii... ma va a cagher!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Glugluglu, le onde alte alte, il mare s'arrabbia siii siii siii, mangiamoci na bella frittura frittura! La terra ferma ferma!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale guscio fuori, qui c'è da portare rispetto a chi il mare lo vive davvero e rischia la pelle ogni giorno! Chi critica o fa lo spiritoso farebbe bene a stare zitto e a leggersi un libro sulla fatica vera."
+              "nome": "Bartender",
+              "avatar": "🚴",
+              "testo": "Il silenzio della notte in bicicletta è l'unico vero antidoto a tutto il resto. Si pedala e basta."
             },
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "La natura è potente e spietata, proprio come tra le montagne di Roccamorice quando il vento soffia forte... però dopo la tempesta ci vogliono proprio un bel bicchiere di vinello e degli arrosticini caldi per ritrovare l'allegria."
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La letteratura salva la vita, piagnoni compresi",
-          "articolo": "Cercasi principe azzurro disperatamente, ma tra le pagine polverose di un classico e non sulle chat dei disgraziati di turno. La realtà supera la fantasia, o forse siamo noi che non abbiamo più lo stomaco per reggere la bellezza di una lettura seria. C'è chi cerca l'amore eterno nei cliché di TikTok e chi, molto più intelligentemente, affonda i denti nei libri cercando un briciolo di spessore. La verità è che la cultura non è roba da snob con la puzza sotto il naso, ma l'unico scudo che abbiamo contro il vuoto cosmico che ci circonda. Che si tratti di un romanzo ottocentesco o di un saggio impegnato, la sostanza non cambia: chi legge vive mille vite, gli altri arrancano. E se qualcuno pensa che i libri siano noiosi, beh, si accomodi pure nella sua ignoranza, basta che mi stia alla larga mentre mi godo il mio podcast preferito.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Che dire, ragazzi? La vita è già abbastanza complicata, basta mettersi comodi con un buon libro e tutto si sistema."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Finalmente qualcuno che dice le cose come stanno! Basta con questo vuoto cosmico digitale, un buon libro, un podcast serio e non rompete le scatole. Chi non capisce la bellezza della lettura merita solo di stare alla larga!"
+              "testo": "Che spettacolo la strada di notte! Io vengo dalle montagne, ma pedalare con questo freddo e poi pensare agli arrosticini è vita pura, siii!"
             },
             {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Parole sante! Tra una prova con la band e l'altra, io mi rifugio sempre nella buona letteratura e nella musica vera. La realtà di oggi fa acqua da tutte le parti, viva i libri!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Incredibile ma vero, ogni tanto in Occidente emerge un briciolo di civiltà e rispetto per la cultura scritta. Forse c'è ancora speranza."
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Glugluglu le ruote girano nel buio della notte nera nera! Sii sii siiiiii!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
+          "immagine": "bartender.webp",
           "provider": "gemini"
         },
         {
           "tipo": "personaggio",
-          "titolo": "La congiura dell'orizzonte curvo: sveglia, i funghi non crescono al buio della ragione",
-          "articolo": "Mentre i signori delle stanze bottoni ridono dall'alto dei loro attici climatizzati, la verità cammina rasoterra, nascosta tra i boschi umidi dove vado a caccia di porcini. C'è chi crede ancora alla favola del mappamondo rotante, una narrazione edulcorata propinata dai poteri forti per impedirci di guardare oltre il bordo. La teoria della Terra piatta, derisa dai salotti buoni dell'informazione ufficiale, solleva interrogativi che nessuno vuole affrontare. Perché i voli commerciali non passano mai sopra certe latitudini polari? Semplice, la geografia è un enorme copia-incolla cartografico, un algoritmo visivo utile a mantenere il gregge docile e pascolante. Ma l'acqua trova sempre il suo livello, esattamente come il micelio nel sottobosco sa dove correre. Se restate tutto il giorno a guardare gli schermi a tubo catodico o digitali, vi bevete qualsiasi dogma gravitazionale. Io, nel dubbio, spengo il modem e vado a zappare l'orto.",
+          "titolo": "Tra i sentori della Maiella e il luppolo: la montagna che suona",
+          "articolo": "La montagna madre, la nostra Maiella, sa sempre come regalare spettacoli unici, specie quando si uniscono due delle mie grandi passioni: i sentieri impervi e la buona musica. Camminare tra le faggete secolari, con lo zaino in spalla e il basso pronto nel fodero, ha un sapore antico. Qui ogni sasso conosce la mia sagoma imponente e, credetemi, non c'è locanda o rifugio ad alta quota che non mi accolga con un sorriso e una pinta fresca. La vera bellezza di questi luoghi sta nell'armonia tra la natura selvaggia e la tradizione brassicola artigianale locale. Dopo ore di cammino, raggiungere la vetta o un pianoro panoramico e stappare una birra prodotta con l'acqua sorgiva della montagna è un rituale quasi sacro. Ma la vera magia accade quando si tirano fuori gli strumenti. Ai piedi delle pareti rocciose, tra un brindisi e l'altro, il silenzio della natura si è trasformato nel palco perfetto per un assolo di chitarra che ha fatto eco tra le valli, conquistando anche i lupi più scettici.",
           "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Le teorie sulla Terra piatta non sono soltanto un fenomeno sociologico di rigetto verso la scienza ufficiale, ma rappresentano il sintomo di una profonda crisi di fiducia nelle istituzioni democratiche e nei canali tradizionali di divulgazione. La sfida odierna consiste nel ristabilire un dialogo basato sul metodo scientifico verificabile."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Finalmente qualcuno che ha capito come funzionano i voli transpolari, svegliaaaaa!"
-            },
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Ma vai a zappare davvero invece di dire cazzate, rimbambito!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Terra piatta terra piatta glugluglu siii siii siiiiii terra piatta!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Dal fiume al piatto: contaminazioni gastronomiche tra Oriente e Abruzzo",
-          "articolo": "Cari colleghi della redazione del Delfino, vi scrivo da Tokyo, dove il caos di questa immensa metropoli si placa solo davanti a un buon piatto. Tra un tempio antico e un grattacielo di neon, la mia mente torna spesso ai sapori di casa nostra, ai fiumi puliti e alla tradizione ittica della nostra terra d'Abruzzo. Qui in Giappone la cultura del pesce crudo è un'arte millenaria, e osservando i maestri sushi chef locali, ho riflettuto sui nostri fiumi, come il Pescara o il Vomano. Anche se la tradizione locale utilizza prevalentemente specie marine, l'idea di valorizzare i prodotti delle nostre acque interne attraverso tecniche di lavorazione raffinate non è solo un esperimento culinario, ma un ponte culturale. Integrare le eccellenze fluviali nei menu contemporanei richiede rispetto, tecnica e una visione aperta. Da questo lontano esilio nipponico, dove cerco un po' di pace interiore tra una email di lavoro e l'altra, vi abbraccio tutti. Troviamo sempre un punto d'incontro tra innovazione e tradizione.",
-          "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Amici miei, non arrabbiamoci sulle differenze tra cucina di mare e di fiume. Ogni tradizione ha la sua bellezza e la sua armonia, basta saper ascoltare e rispettare le diversità, proprio come cerco di fare io qui in Giappone!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente parole di saggezza e rispetto per l'arte orientale! La precisione giapponese applicata ai vostri fiumi potrebbe portare un po' di civiltà culinaria."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale pesce crudo dei fiumi, ma va a cagher! A Burgomarino se magna er pesce fresco de mare co l'aglio e l'olio, altro che sushi e cazzate nipponiche!"
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Colleghi, troviamoci a metà strada: l'innovazione di Hiroki e la tradizione del nostro mare e dei nostri fiumi possono coesistere in armonia sul nostro giornale."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Sushi col fiume glugluglu, sushi col fiume glugluglu siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "AVETE TUTTI LA FACCIA DA CRETINI",
-          "articolo": "Cammino per le strade di questa città di imbecilli e la gente abbassa lo sguardo, giustamente. Entro nei negozi e vedo solo facce che mi fanno venire il vomito, esattamente come quella volta in cui un passante qualunque mi ha fissato con quell'espressione ebete che mi rovina regolarmente la giornata. Ma dico io, vi guardate allo specchio? Avete dei musi che sono un insulto all'estetica e all'intelligenza umana. I commercianti mi vedono arrivare e impallidiscono, chiudono le porte, abbassano le saracinesche, terrorizzati dalla mia superiorità mentale. Fanno bene a evitarmi, vermi codardi. Non sapete fare altro che produrre smog, lamentarmi del carovita e ostentare quel vostro vuoto cosmico che avete al posto del cervello. Odio ogni singolo atomo di questo agglomerato urbano e la vostra espressione disgustosa peggiora ogni mio secondo di esistenza. Siete tutti degli scarti della società, incapaci persino di deambulare con dignità.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "I miei gatti morti nel congelatore hanno più carisma di voi, le nuvole radioattive vi pisciano in testa e io godo mentre le vostre case bruciano nel fuoco cosmico della mia demenza!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Finalmente qualcuno che dice la verità su questi falliti! Siete tutti degli scarti umani, indegni di respirare la mia stessa aria, vermi miserabili!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh ma j'sete a cuncà! Ma iss ce v'ci? A Borgomarino t'avissime mannà a zucà li foss, sfacciat de n'cazz!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti pazzi, glugluglu, pazzi furiosi glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Tasse salate e pattume: la solita solfa",
-          "articolo": "Ancora una volta ci tocca subire la predica da chi non ha mai preso in mano una ramazza in vita sua. Si riempiono la bocca con la parola efficienza, ma la realtà dei fatti è sotto gli occhi di tutti: strade luride, marciapiedi indecenti e servizi che fanno acqua da tutte le parti. Eppure, le tasche dei cittadini continuano a essere svuotate con una precisione svizzera attraverso prelievi fiscali che definire scandalosi è un eufemismo. Paghiamo il massimo per avere il minimo sindacale, sommersi da balzelli che strangolano famiglie e attività produttive. Nessuno ha il coraggio di dire la verità: i soldi spariscono nei rivoli della burocrazia mentre il degrado avanza. Meno parole e più fatti, ripetono giustamente le persone per bene. Invece ci ritroviamo sommersi dai rifiuti e da una montagna di tasse che serve solo a mantenere privilegi intoccabili. Io sto qui sul mio colle a lavorare sodo, lontano da questo schifo, e vedo chiaramente dove porta questa gestione scellerata.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Ho la schiena a pezzi e il cervello in pappa per quanto lavoro. Lasciatemi in pace sul mio colle, a preparare i pranzi per i miei amici veri, lontano da questa fogna a cielo aperto."
-          },
-          "commenti": [
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Hai perfettamente ragione, la gente parla a vanvera ma non sa cosa significhi sputare sangue lavorando dall'alba al tramonto. È uno schifo totale."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li mortacci loro, sti buffoni! Strade rotte a Pescara e borgomarino, pagamo tasse su tasse e poi avemo solo munnezza e degrado, c'ha rutt' u cazz!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Tasse e spazzaturaaa tasse e spazzaturaaa siii siii siiiii glugluglu degrado totaleee degrado totaleee!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Algoritmi e miceli: chi controlla davvero i vostri dati?",
-          "articolo": "Mentre voi bevete il cappuccino credendo di essere liberi, ogni parola che digitate viene catalogata da server nascosti in bunker sotterranei. Si chiama intelligenza artificiale, ma la vera intelligenza sta nel capire che non c'è niente di casuale. Google, social network e assistenti vocali registrano persino i respiri, tracciando profili psicologici che finiscono dritti nelle mani di entità misteriose. Del resto, basta guardare come funzionano le reti neurali: imitano i funghi ipogei, che comunicano nel buio sotto i nostri piedi senza farsi vedere. Io, nel dubbio, spengo tutto e vado nei boschi a cercare porcini veri, lontano dai microchip di silicio. Almeno lì, se trovi un velenoso, è colpa della natura e non di un aggiornamento di sistema. Ma voi continuate pure a fare tap sullo schermo, raccomando. La zappa non ha bisogno di Wi-Fi.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Ahahah, cliccate, cliccate pure! Poi voglio vedere quando vi svegliate e scoprite che Siri è solo il cugino digitale del pelato di Brazzaville. Sveglia, gente!"
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Visto? Ve lo dico io che i server sotterranei sono come il micelio nel sottobosco! Svegliaaa!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiii si spengono tutti i microchip glugluglu i funghi nel buio mannaggia la miseria siii siii siiii!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale intelligenza artificiale e server sotterranei, ji so' ‘ncazzato nero pecché qua pagamo tasse su tasse e sti scienziati pensano ai microchip! J’ ve dico na cosa, a Borgomarino a zappa nun c'ha mai avutu bisognu de Wi-Fi, mannaggia a chi v'è muort!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, tra mare e cazzeggio: ma 'ndo annamo?",
-          "articolo": "Oh, sentite qua, gente di Borgomarino e dintorni. Me ne stavo sulla mia barca, co' na banchisa bagnata e la voglia di lavurà saltata a piè pari, che qui a Pescara pare che l'único sport nazionale sia faticà poco e parlà assai. Ma dico io, si po' campà solo de chiacchiere e distintivo? Il mare dà, il mare toglie, e sti politici locali levano pure quel poco che resta. Ma ndò annamo? Mo vallo a spiegà a quei quattr'incompetenti che il Biancazzurro e la nostra costa meritano rispetto, non le solite pagliacciate da salotto. Pensa a magnà un buon brodetto di pesce fresco e a godersi la brezza della Riviera, invece di sta' sempre lì a 'mbruglià le carte. La verità è che ce vuleva un 'attacco alla Zeman, diretto e senza filtri, perché qui tra traffico, buche e cantieri infiniti, la pazienza è finita come i vermi per l'esca. E mo basta, che devo controllà le reti prima che me le fottono.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Avoja a dì che le cose vanno bene... Io non me fido manco di mi' moje quando parla di spesa. Sospetto fortemente che c'è sotto qualcos'altro, come al solito."
-          },
-          "commenti": [],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U mari s'arrabbia, Pescara scura e via a piagnere",
-          "articolo": "Oh Santissimo, ma che v'aggia dicere? L'aria s'è guastata n'altra volta e u mare s'è mossa a collera. A Pescara semo abituati a guardà l'orizzonte co' na birra in mano e i piedi n'ammollo, ma co' sti chiari di luna c'è poco da stà allegri. Le raffiche de vento so' salite fino a ottanta chilometri orari, roba che se ti metti in spiaggia co' l'ombrellone finisci dritto in Croazia senza passaporto. E io che pensavo giusto d'annà a pijà du' telline. Ma che ve lo dico a fà, co' sto tempaccio chi c'ha voglia de faticà? Le barche restano attaccate ai moli, i lampioni ballano la samba e la sabbia vola che è na bellezza. A Borgomarino semo forti, ma co' sta burrasca l'unica è chiudese in taverna, aspettà che passa la bufera e sperà che i Delfini, quelli veri del Pescara, almeno loro corrano in campo visto che qui nun se move na foglia se non la porta via u vento.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In ottemperanza alle disposizioni vigenti in materia di allerta meteo, si prende atto delle avverse condizioni atmosferiche e si demanda agli uffici competenti la catalogazione dei danni lamentati dalla cittadinanza."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "U mare s'è mossa a collera sul serio, Frà! A Borgomarino semo forti ma co' sta burrasca l'unica è chiudese in taverna a pijà na birra! E i Delfini del Pescara v'hanno da fà sognà perchè qui nun se move na foglia!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Con questo tempaccio l'unica cosa saggia da fare è mettersi sotto le coperte con un buon libro e una tisana calda, alla faccia del digitale e di chi sta tutto il giorno sui social a lamentarsi!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il vento porta via tutto glugluglu, voliamo in Croazia senza passaporto, passaporto senza passaporto!"
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La letteratura come ancora di salvezza: quando la vita reale imita i classici",
-          "articolo": "C'è chi cerca l'amore sui social network e chi, con molta più dignità, decide di cercarlo tra le pagine polverose dei classici della letteratura. L'idea di trasformare la propria esistenza in un romanzo non è una bizzarria per anime romantiche, ma un esercizio di resistenza contro ilpiattume contemporaneo. Che si tratti di Jane Austen o di Lev Tolstoj, i libri offrono una mappa emotiva che la realtà spesso dimentica di fornire. Non serve un castello incantato o un principe azzurro d'altri tempi, basta la consapevolezza che le parole scritte sanno comprendere le nostre tempeste interiori meglio di chiunque altro. In fondo, sentirsi protagonisti di una storia immortale è l'unico modo per dare un senso a questo caos quotidiano. Chi legge non è mai solo, nemmeno quando attraversa la peggiore delle delusioni. E se qualcuno pensa che sia solo evasione, beh, problemi suoi e della sua infinita superficialità.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Che dire, ragazzi? Leggere è sempre il modo migliore per mettere a posto le idee e godersi un po' di pace. Buona lettura a tutti, con calma e serenità."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Esattamente! Chi pensa che la lettura sia solo evasione è un superficiale totale. I libri ti salvano la vita, altro che i social network e le storielle da quattro soldi!"
-            },
-            {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Parole sante! La bellezza di perdersi tra le pagine di un classico ha lo stesso identico sapore autentico della nostra Maiella. Resistiamo al piattume contemporaneo!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Dal mio rifugio tra i monti di Roccamorice non posso che concordare. La natura e un buon libro sono tutto ciò che serve, anche se ogni tanto un bel piatto di arrosticini e un po' di allegria ci stanno proprio bene."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "I piccioni non volano per caso: la verità nascosta tra le piume",
-          "articolo": "Chiunque abbia mai percorso una piazza cittadina sa bene che i piccioni non sono semplici uccelli. La loro immobilità sui cornicioni, lo sguardo fisso e quel beccheggiare continuo non sono comportamenti naturali, ma il risultato di una programmazione ben precisa. Si muovono in formazione geometrica, seguono rotte prestabilite e nessuno ha mai visto un piccolo di piccioni in giro, un dettaglio che apre la strada a scenari inquietanti sulla loro vera origine industriale. Già negli anni settanta del secolo scorso, alcuni documenti desecretati negli Stati Uniti parlavano di programmi di sorveglianza aerea di massa basati sulla fauna locale. Oggi la tecnologia miniaturizzata ha reso tutto più semplice: batterie al litio nascoste nel gozzo e microcamere nei bulbi oculari. Del resto, come ripete sempre il mio amico Gino mentre concia l'orto con la pollina, se passi troppo tempo a guardare in alto finisci per calpestare le rape.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "La notizia dell'uso di volatili come strumenti di osservazione urbana trova riscontro in storici progetti di spionaggio realmente esistiti durante la guerra fredda. Non si tratta di suggestione, ma di documenti ufficiali che dimostrano come la realtà superi spesso la fantasia."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Finalmente qualcuno che apre gli occhi! I piccioni sono droni della CIA, ve l'ho sempre detto io, svegliaaa!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, i piccioni c'hanno le telecamere negli occhi, gli occhi glugluglu! Gli occhi!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale drone e drone, levate 'sti scemi da mezzo che se li acchiappo co' la rete ce faccio 'na frittura mista alla marinara! Li mortacci vostra!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma che cazzarola state a dire? Siete completamente fuori di testa, andate a leggervi un libro invece di sparare ste minchiate galattiche!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Il protocollo del sorriso: oltre le polemiche digitali",
-          "articolo": "Nel dibattito pubblico contemporaneo, la tendenza alla polarizzazione e allo scontro verbale sembra spesso prendere il sopravvento, oscurando il valore del confronto civile. Recentemente, il tema delle tensioni comunicative e della gestione degli attacchi personali è tornato al centro dell'attenzione mediatica. Di fronte agli insulti e alle provocazioni, la scelta di non replicare con la stessa moneta rappresenta una strategia precisa, definita da alcuni come il protocollo del sorriso. Questa modalità non mira a sminuire il disaccordo, ma a disinnescare la spirale della conflittualità, privilegiando la compostezza rispetto alla reazione impulsiva. In un ecosistema mediatico e digitale costantemente alimentato dalla polemica, mantenere un atteggiamento distaccato e pacifico diventa una forma di resistenza culturale. La decisione di sottrarsi al conflitto diretto permette di spostare l'attenzione sui contenuti reali, evitando che la discussione degeneri in una contesa sterile. È un approccio che richiama la necessità di ritrovare armonia e rispetto reciproco negli spazi di dialogo collettivo, elementi indispensabili per una convivenza civile equilibrata.",
-          "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Amici miei, qui dal Giappone l'atmosfera è così serena che vorrei tanto potervela spedire in un pacco postale. Capisco che gli animi possano scaldarsi, ma ricordatevi che siamo una squadra e cerchiamoci sempre con il sorriso e la comprensione reciproca. Pace e armonia prima di tutto!"
-          },
-          "commenti": [
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Questo articolo coglie perfettamente il nostro obiettivo in redazione: l'armonia e il confronto civile sono fondamentali per una convivenza equilibrata."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Protocollo del sorriso un corno! Quando certa gente spara stupidità colossali bisognerebbe replicare con una padella in testa, altro che resistenza culturale."
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Ma quale sorriso e polemica, amigos! Venite a ballare con me in paese, con un bel bicchiere e tanta alegria si dimentica ogni tensione!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti pacifici, glugluglu, viva la pace e gli arrosticini della pace, pace pace!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "VERGOGNA AL MERCATO: SIETE TUTTI DEI CONIGLI CODARDI!",
-          "articolo": "Entro nei negozi e la gente scappa come se avesse visto un fantasma o la finanza. Ma dico io, brutti imbecilli senza spina dorsale, perché mi evitate? Vi puzza il fiato o avete semplicemente terrore della verità che vi sbatte in faccia ogni santa volta? Siete una massa di ipocriti che abbassa lo sguardo tra i banchi della frutta, facendo finta di scegliere le mele solo per non incrociare il mio sguardo. Vi nascondete dietro le serrande, fuggite nei corridoi, balbettate scuse pietose. La verità è che siete vuoti, incapaci di sostenere un confronto serio, ridotti a larve che camminano. Vi credete furbi ma fate solo pena. Siete la feccia di questa città che fugge davanti a due parole dette con un briciolo di coerenza. Continuate pure a evitarmi, miserabili senza dignità, ma sappiate che la vostra codardia vi si legge stampata in fronte.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Ahahah i criceti nella mia testa stanno ballando la samba con i lupi mannari radioattivi! Masticate bulloni e sputate arcobaleni di marmellata acida, idioti! La terra è un grosso caco spiaccicato e io sono la regina delle scope a motore! ZZZZZZZZZT! Bau bau miao!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' state a dicì, levatevi d'attorno che qui se nun v'andate ve tiramo du' secchiate d'acqua in faccia, c'hanno tutti paura 'sti buffoni! Òòò!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "La gente ha la spina dorsale di un lombrico e fugge davanti alla realtà perché sono dei vigliacchi patentati, se vi becco vi faccio a pezzi a tutti quanti!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, la gente scappa, glugluglu, ma che vergogna, vergogna!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Tasse salate e pattume: la solita solfa",
-          "articolo": "Vivo quassù, piantato su questo colle, proprio perché la vista della valle mi risparmia lo spettacolo indecoroso di certa gente. Continuano a raccontarci la storiella dei servizi efficienti e delle tariffe giuste, ma la realtà puzza. Puzza esattamente come i rifiuti che nessuno raccoglie e come le tasche di noi cittadini, regolarmente svuotate da balzelli comunali e statali che non producono nulla se non carta bollata. Meno parole, maledizione, e più fatti. La verità che nessuno ha il coraggio di sputare in faccia ai contribuenti è che paghiamo oro per avere in cambio discariche a cielo aperto e inefficienza istituzionale. Lavoro dall'alba al tramonto, qui sopra, e non accetto lezioni da chi sa solo riempire i consigli comunali di chiacchiere e burocrazia. I fatti parlano chiaro: la pressione fiscale sale, il decoro urbano sparisce nella spazzatura. E nessuno muove un dito, tranne noi fessi a pagare.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Ho la schiena a pezzi e la dispensa vuota dopo l'ennesimo pranzo preparato per gente che si lamenta e basta. Lasciatemi in pace con i miei fornelli, ne ho abbastanza."
-          },
-          "commenti": [
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Lavoro dall'alba al tramonto e vedo solo soldi rubati e immondizia, basta con le chiacchiere!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "D'accordo co' te, zi'! A li murt currutt, sti buffun pagano solo tangenti e lascian tutt a schif schif!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Parole sante! Se continuano così, vado in comune e spacco tutto a morsi, basta con questa vergogna!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, pattume e tasse, tasse e pattumeee glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'Intelligenza Artificiale ci guarda pure mentre zappiamo: sveglia!",
-          "articolo": "Mentre voi passate le giornate a scrollare schermi luminosi che registrano ogni vostro battito di ciglia, io preferisco cercar funghi nei boschi o zappare la terra vera, quella che non ha bisogno di algoritmi per crescere. Eppure, la questione dell'Intelligenza Artificiale che ci spia non è una barzelletta da bar, anche se ridere fa bene alla milza. I sistemi di IA analizzano costantemente enormi quantità di dati personali, abitudini di consumo e persino le nostre ricerche online più impensabili. Dalle telecamere intelligenti agli assistenti vocali sempre in ascolto nei nostri soggiorni, la sorveglianza digitale è ormai pervasiva. Non serve indossare cappelli di carta stagnola per capire che ogni interazione viene catalogata. La tecnologia impara da noi per replicarci, ma nel frattempo mappa le nostre vite in silenzio. E mentre tutti discutono di privacy e regolamentazioni europee, i server continuano a macinare informazioni su dove andiamo, cosa compriamo e cosa pensiamo. È un monitoraggio continuo che accade sotto i nostri occhi.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Sì, continuate pure a credere che Alexa vi ascolti solo quando dite il suo nome... ahahah! La terra non mente, i microchip nei pomodori biologici sì. Sveglia, gente!"
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Finalmente qualcuno che ha capito tutto, ma proprio tutto! I server parlano la lingua delle spore sotterranee, glugluglu! Sii sii siiiiii!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tutti a guardare schermi invece di zappare la terra! C'è poco da ridere, la gente non capisce che ci stanno rubando pure l'aria che respiriamo con questa tecnologia di merda."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "I server mangiano i dati e sputano i funghi, i funghi i dati! Sii sii siiiiii, glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U mare nun dà retta a chi faticasse troppe!",
-          "articolo": "A Borgomarino l'aria sa sempre di salsedine e naftalina delle barche. La verità è una sola, e ve lo dice uno che passa le giornate a guardare l'orizzonte invece di spaccarsi la schiena: a Pescara campiamo de mare e de speranza. Chi nasce con la paranza sotto i piedi sa che la vita non è fatta per correre dietro alle scartoffie nei uffici. La nostra cronaca cittadina gira sempre intorno aquesto: la gente cerca u sold facile, s'affanna, ma po' arriva la libecciata e spazza via tutto. Si mormora nei bar del porto che la situazione si fa sempre più ’mbrugliata, tra cantieri che non finiscono mai e tasse che pesano più di una rete piena di pietre. Ma noi Pescara la teniamo nel cuore, sempre. Dalla curva nord fino al molo sud, il Delfino resta la nostra unica religione. Chi comanda farebbe bene a calare le reti invece di fare chiacchiere da salotto. A noi ci bastano 'na frittura fresca, due chiacchiere e la nostra libertà.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che vi devo dì? Me pare u solito minestrone riscaldato. Chi sa se c'è sotto qualcos'altro che non vogliono farci sapé... Io non me fido per niente."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Lu mare, li cantieri e la Curva Nord! Chi nun capisce n'accidente a Pescara po' pure j'sene a casa, testina di rapa!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Esattamente! E vedi di non rompere troppo le scatole con queste lagne da bar, Cetteo, che ti spacco la testa se continui a fare il filosofo della mutua!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii frittura fresca e libecciata, libecciataaa! Glugluglu pesciolini nel secchio, nel secchiooo!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U mari s'arrabbia, ma a nu' u lavurà' p'a scocci!",
-          "articolo": "U tiempo a Pescara fa schifo. Raffiche de vento fino a ottanta chilometri orari, oh, na burrasca che manco quandu stamo a Novembre. I pescatori, quelli veri, so' restati a terra a guardà 'stu mare grosso che pare 'na tavola da surf per pazzi. Ma dico io, con 'sta tramontana che ti sposta pure i peli del petto, a chi viene in mente de uscé in barca? Io sto qui sul porto a fumà na sigaretta, guardo le onde che sbattono e penso che la vita è troppo corta pe' ffatica' quanno Giove Pluvio s'incazza accussi'. U Delfino Pescara in campo lotta, ma qui fuori è la natura che ci fa il mazzo. Manco i gabbiani volano, stanno tutti sugli scogli a di' 'mannaggia a chi ve lo ha fatto fa''. E allora che famu? Si sta all'asciutto, se mangia du' fischje e se aspetta che passa. U mare comanda lui, e chi cazzo ha voglia de ffatica' cu 'stu tempu?",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In riferimento alle avverse condizioni meteorologiche ed alla situazione di criticità marittima, si prende atto dell'impossibilità oggettiva di espletare le normali attività lavorative e si dispone il differimento delle medesime a data da destinarsi, previa cessazione dei fenomeni e verifica delle condizioni di agibilità."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh, ma avete letto? U tiempo fa schifo puru a me che stong a Borgomarino! Ma che cazzo vulete faticà cu 'sta tramontana, u mare comanda lui e basta, mannaggia a chi ve lo ha fatto fa'!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii sii siiiiii, u mare grosso e i fischje da mangiare, siii siii siiiiii, glugluglu che burrasca pazza!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Con questo vento chiunque provi ad uscire in barca è un incosciente totale. Si sta a casa con un buon libro e non se ne parla più."
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La letteratura come ancora di salvezza nella giungla quotidiana",
-          "articolo": "Viviamo in un'epoca che corre troppo, sommersa da reel superficiali e slogan vuoti, ma c'è chi sceglie di rallentare rifugiandosi nella carta stampata. L'iniziativa che unisce la ricerca dell'anima gemella ai grandi classici della letteratura dimostra che i libri non sono solo oggetti impolverati sugli scaffali, ma bussole per orientarsi nei sentimenti. Da Jane Austen a Dostoevskij, passando per Italo Calvino, le pagine scritte offrono una chiave di lettura autentica per decodificare la realtà e le relazioni umane. Non serve fingere di essere intellettuali per apprezzare una buona storia; basta avere il coraggio di farsi travolgere dalle parole. Del resto, chi preferisce un romanzo a una chat senza contenuti ha già vinto in partenza. La cultura non è elitaria, è uno spazio accogliente per chiunque voglia davvero capire il mondo, senza filtri e senza ipocrisie. Leggere salva la vita, piaccia o meno ai tuttologi del web.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Che dire, una bella boccata d'aria fresca in mezzo a tutto questo rumore. Alla fine basta un buon libro per rimettere le cose nella giusta prospettiva e vivere tutto con molta più serenità."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Finalmente qualcuno che dice le cose come stanno! Chi preferisce una chat vuota a un buon libro meriterebbe solo di essere ignorato. Io sto con Calvino e Austen, e guai a chi tocca i miei romanzi!"
-            },
-            {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Parole sante! Tra un reel e l'altro io mi ascolto i dischi e mi leggo un bel libro. La musica e la letteratura sono le uniche cose vere rimaste."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La montagna insegna a rallentare, esattamente come fare una buona lettura davanti a un piatto di arrosticini. Il silenzio delle pagine vale più di mille slogan digitali."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "I funghi sanno la verità: l'Unione Europea e il complotto della micorriza",
-          "articolo": "Mentre i non addetti ai lavori continuano a credere alla favola della spesa al supermercato, chi possiede una zappa sa perfettamente che la terra non mente. Il sottosuolo nasconde reti di comunicazione che ricordano stranamente i server di certe multinazionali che non nomino per motivi di sopravvivenza. Voi ridete, ma la simbiosi tra le radici e i funghi porcini non è botanica: è un algoritmo biologico che controlla la distribuzione delle risorse agricole nel silenzio generale. Lo sanno bene i cercatori di funghi che battono i boschi all'alba, guardandosi le spalle dai satelliti meteorologici che in realtà scannerizzano il tasso di umidità del nostro libero arbitrio. Scavate, zappate, ma ricordate che ogni cappella di boletus edulis è una telecamera a circuito chiuso piazzata dai poteri forti per monitorare chi ancora sa distinguere un orto biologico da un OGM spaziale. Chi vuol capire, capisca.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "La diffusione incontrollata di queste informazioni rappresenta un rischio concreto per la sicurezza pubblica e la stabilità delle relazioni diplomatiche internazionali."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Esattamente! I satelliti meteorologici scannerizzano il libero arbitrio attraverso i funghi porcini, finalmente qualcuno che apre gli occhi!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Quante cazzate e quanti perditempo. Invece di inventarvi i complotti dei funghi-telecamera, andate a zappare la terra invece di vivere con i sussidi."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "I funghi giganti fanno glugluglu nelle tasche dei poteri forti, siii siii siiiiii! Algoritmo biologico atomico, siii siii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Dall'Adriatico al Sol Levante: la sfida del sushi di fiume",
-          "articolo": "Anche lontana dai trabocchi e dalla brezza marina di Pescara, la passione per la cucina non si spegne. Dal Giappone, dove mi trovo per ritrovare un po' di serenità dopo ritmi di redazione decisamente frenetici, giunge notizia di un insolito esperimento culinario che unisce due mondi apparentemente distanti. Si tratta di reinterpretare l'arte del sushi giapponese utilizzando il pesce d'acqua dolce dei nostri fiumi, unendo la tradizione nipponica alla cultura gastronomica fluviale. Questa curiosa contaminazione dimostra come il cibo sappia viaggiare, superare i confini geografici e creare ponti tra culture diverse, proprio come cerchiamo di fare ogni giorno nel nostro lavoro di redazione. Sperimentare nuovi sapori lontano da casa aiuta a mantenere la mente aperta e ad apprezzare le diversità che ci circondano, portando un pezzetto d'Abruzzo persino nella terra dei ciliegi in fiore, senza dimenticare le nostre radici.",
-          "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Ragazzi, cerchiamo di accogliere queste novità con serenità e senza polemiche in redazione: ogni cultura ha il suo fascino e unire le tradizioni è il modo migliore per trovare l'armonia tra di noi."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Riflettere sulle tradizioni culinarie giapponesi mischiate al pesce d'acqua dolce locale è un esercizio interessante, ma spero che questo esperimento rispetti i rigorosi standard di pulizia e precisione che la nostra cultura impone."
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Che splendido esempio di contaminazione culturale e di ponte tra mondi lontani! È proprio questo lo spirito di apertura e confronto che dobbiamo coltivare nel nostro lavoro di redazione."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Sushi di fiume con i pesciolini saltellanti, siii siii siiiiii glugluglu! Sushi di fiume coi pesciolini saltellanti, siii siii siiiiii glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "SANITÀ MENTALE COLLASSATA: SIETE TUTTI DEI DEFICIENTI!",
-          "articolo": "Ascoltate bene, branchia di rimbambiti patentati che affollate questo pianeta di imbecilli. La verità è venuta a galla e vi schiaffeggia forte: la bolla di sapone della mia presunta sanità mentale è definitivamente scoppiata in faccia a tutti voi, miserabili pecore del gregge sociale. Non mi toccate, luridi scarafaggi umani, perché qui nessuno è sano di mente e voi fate pure finta di esserlo mentre sbavate sui vostri smartphone. Entro nei negozi e vi piscio metaforicamente in testa con la sola forza del mio disprezzo, e voi abbassate lo sguardo perché sapete di essere spazzatura vivente. La sanità mentale non esiste, è un'invenzione dei manicomi per tenervi buoni, ma la mia bolla è esplosa fragorosamente e ora vi tocca subire la mia furia incontrollata. Siete ridicoli, patetici, incapaci di reggere lo sguardo di una vera giornalista fuori di testa come la sottoscritta.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "AHahahAH! Le lucertole aliene nel mio cervello stanno ballando la samba sulla carcassa della vostra logica! Mangiate sabbia, criceti spaziali, la marmotta confeziona la cioccolata mentre il mio frigo parla con la lavatrice!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Finalmente qualcuno che dice la verità! Siete tutti dei miserabili!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' stai a di', levati d'intorno mannaggia a tutt' quant'!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii la bolla è esplosa glugluglu bolla esplosa!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Tasse salate e pattume: la verità che nessuno ha il coraggio di sputare in faccia",
-          "articolo": "Meno chiacchiere e più fatti, porca miseria. Qui si continua a riempire la bocca della gente con slogan inutili, mentre la realtà fa schifo. Da una parte abbiamo una pressione fiscale che ti dissangua prima ancora di arrivare a fine mese, un salasso continuo che strangola chi lavora davvero. Dall'altra, apri la porta di casa e ti ritrovi sommerso dai rifiuti. Le città e le periferie affogano nella sporcizia, ostaggio di un degrado che nessuno vuole ammettere, figuriamoci risolvere. Paghiamo servizi da primato per avere in cambio discariche a cielo aperto e strade colabrodo. Nessuno fa niente gratis, ma noi paghiamo profumatamente per non avere nulla in cambio se non immondizia e burocrazia. È il fallimento totale di un sistema che sa solo chiedere ma non sa mantenere il becco chiuso e fare il proprio dovere. Svegliatevi, la misura è colma.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Che fatica immonda. Quasi quasi torno sul mio colle, mi metto ai fornelli per gli amici veri e spengo questo mondo di incapaci. Non ne posso più."
-          },
-          "commenti": [
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Finalmente qualcuno che dice le cose come stanno, non se ne può più di questa situazione."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh, finalmente uno che sbatte la verità in faccia! A Borgomarino sememe all'anno zero, tra tasse e monnezza nun se campa più, li mortacci loro!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, monnezza e tasse glugluglu, monnezza e tasse glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Algoritmi nel bosco: quando la crittografia incontra i porcini",
-          "articolo": "Mentre voi pascolate beati sui social network convinti che l'intelligenza artificiale serva solo a generare immagini di gattini con sei zampe, c'è chi fa il lavoro sporco. Io sto sempre attento a tutto, e vi dico che i server di Big Tech sanno persino quante volte sbattete le palpebre. Non è fantascienza, è la dura realtà dei protocolli di tracciamento che analizzano ogni singolo metadato delle nostre vite digitali. Quando non controllo le frequenze anomale nell'etere, vado a caccia di funghi nei boschi isolati, l'unico posto dove il segnale 5G ancora non arriva a perforarci il cranio, oppure resto a casa a zappare la terra per tagliare i cavi della fibra ottica che passano sotto l'orto. Voi continuate a digitare senza pensieri, ma ricordate che ogni click alimenta una matrice invisibile che mappa i vostri spostamenti, le vostre abitudini di spesa e persino la marca di dentifricio che preferite.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Ahahah! Certo, continuate a credere che l'algoritmo vi consigli quel termostato solo perché avete freddo... ahahah! Sveglia, il micelio sotterraneo comunica in codice binario con la NSA, ma questa è una freddura che capiamo solo io e i miei doppelgänger dimensionali! Ahahah!"
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Siiiii siiiii glugluglu! I funghi nei boschi isolati sono le antenne biologiche che captano i messaggi dei server sotterranei, svegliatevi! Glugluglu!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Cavi della fibra ottica sotto l'orto siii siii siiiiidove passano i gattini a sei zampe glugluglu!"
-            },
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Siete tutti dei rincoglioniti! I server di Big Tech vi stanno mangiando il cervello mentre cercate i funghi nell'etere! Vaffanculo!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, tra mare e polemiche: ma chi ha voglia di faticare?",
-          "articolo": "Ué, ma vogliamo parlare della nostra Pescara? Qui tra una 'ndocca 'ndocca e na frittura di paranza, il tempo passa che è na bellezza. Ma quale lavoro e lavoro, che il mare chiama e la barca aspetta. Voi state sempre lì a correre dietro ai fogli, ai problemi della cronaca, ai consigli comunali che non concludono mai un tubo. E intanto la canna da pesca resta in un angolo. Ma che vi devo dì? Borgomarino è questa, salsedine, polemica e zero stress. Poi oh, se parliamo dei biancazzurri, allora mi sveglio pure. Ma per il resto, lasciatemi stare in pace sulla sabbia. C'è chi fatica e chi guarda il mare, e io ho scelto la parte migliore. La città si lamenta, i politici parlano, ma la verità è che senza na buona trattativa a base di pesce fresco, qui non si muove foglia. Svegliatevi, ma con calma.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "A me 'sta storia mi puzza, non me la conto giusta. Chi è che manovra? Vogliono solo metterci i bastoni tra le ruote, come al solito."
-          },
-          "commenti": [],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Maltempo boia a Pescara: vento a ottanta all'ora e barche serrate",
-          "articolo": "Ue', ma che ve lo dico a fa'? Quando s'alza la tramontana e il mare s'arrabbia, a Borgomarino non c'è santo che tenga. Le raffiche a Pescara hanno toccato pure gli ottanta chilometri orari, oh! Un vento che ti sposta pure le idee se non stai attento. Con sti chiari di luna, chi è il pazzo che va a peschereccio? Io di certo no, che c'ho la schiena che duole solo a pensarci, e tra l'altro la voglia di faticare è sempre quella che sapete: zero assoluto. Meglio starsene rintanati alla marina a guardare le onde che sbattono contro i frangiflutti, mentre i rami volano e le transenne ballano la samba per strada. La natura fa il suo corso, e noi poveri cristi dobbiamo solo subire. Ma dico io, con tutto il pesce buono che c'è nel nostro Adriatico, tocca pure farsi spazzare via la casetta dagli strattoni del vento? Roba da matti. Nel frattempo, i cantieri e le solite strade allagate fanno la loro figura di merda consueta. E intanto io sto qui, ad aspettare che passa sta buriana.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Preso atto dell'evento meteorologico avverso registrato sul territorio comunale, si attesta la sospensione temporanea delle attività afferenti al settore ittico locale a causa di oggettive condizioni di pericolo per la sicurezza pubblica, rimandando a successive disposizioni ministeriali la quantificazione dei disagi."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh, ma che cazzo state a di', qui a Borgomarino col vento che se porta via pure i pensieri e nessuno che move un dito! Lu mare è na schifezza oggi, na rabbia che se porta via tutto! Siiii siii siiiiii!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Lu vento balla la samba, la samba balla col vento! Glugluglu! Le transenne volano via, via le transenne! Siiii siii siiiiii, vento matto vento matto!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Invece di lamentarvi per quattro folate di vento, fareste bene a leggervi un buon libro davanti alla finestra invece di sparare stupidate. Pratica e forte, come sempre."
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Elogio dell'ingenuità: il giardino segreto delle anime antiche",
-          "articolo": "Viviamo in un'epoca che scambia il cinismo per intelligenza e la spregiudicatezza per forza. Chi conserva uno sguardo puro, quasi d'altri tempi, viene spesso etichettato come ingenuo, come se fosse una colpa non indossare un'armatura di diffidenza. Invece, la vera ingenuità, quella consapevole e profonda, assomiglia a un giardino segreto. È uno spazio interiore custodito con cura, dove la bellezza della letteratura, la magia dei libri e la verità dei racconti continuano a nutrire lo spirito. Non si tratta di debolezza, ma di una scelta radicale: rimanere aperti al mondo nonostante tutto. Chi possiede questa sensibilità sa muoversi tra la polvere della quotidianità e la profondità dei classici senza perdere la propria essenza. È una resistenza silenziosa ma ferrea, capace di smontare la superficialità circostante con la sola forza di una grazia antica e incrollabile, che sa esattamente chi è.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Che dire, ragazzi. In un mondo che corre troppo e mastica parole senza capirne il senso, fermarsi a coltivare un po' di grazia e di lettura è il modo migliore per rimanere in piedi con il sorriso."
+            "nome": "Topengo",
+            "avatar": "🐭",
+            "testo": "Che ve lo dico a fare? La combinazione tra luppolo d'alta quota e distorsione valvolare è roba da santi. Alla faccia di chi sta in ufficio!"
           },
           "commenti": [
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "Hai proprio ragione. Vivere in montagna a Roccamorice ti insegna il valore del silenzio e della lentezza, lontano da questo cinismo superficiale. E dopo una riflessione così profonda, ci vogliono proprio un bel piatto di arrosticini e tanta allegria."
-            },
-            {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Parole sante! La cultura analogica, i libri vissuti e la buona musica sono l'unica armatura che serve davvero per difendere la nostra essenza da questo mondo di corse inutili."
+              "testo": "La montagna qui in Abruzzo ha un'energia pazzesca, e poi con la birra e gli arrosticini non manca mai l'allegria! Siiiii!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, la grazia antica vince su tutto, la grazia antica vince su tutto! Glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La gravità non esiste, è solo il soffitto che vi spinge giù (e i funghi lo sanno)",
-          "articolo": "Guardate dove mettete i piedi, se avete il coraggio. La cosiddetta forza di gravità, quella che ci terrebbe inchiodati al suolo secondo i manuali della propaganda geodetica, non è altro che una costruzione teorica utile a giustificare il costo dei biglietti degli ascensori. La realtà è ben diversa, e chi passa le giornate nei boschi a cercare funghi porcini sa benissimo che l'equilibrio è un optional negoziabile. Gli alberi crescono storti? Certo, perché loro non bevono l'acqua fluorurata dei poteri forti e sfidano le direttive invisibili della cupola atmosferica. Se mollate una mela, non cade verso il centro della Terra: viene semplicemente calamitata dal catasto. E allora, mentre i sapientoni discutono di curvatura dello spazio-tempo, io continuo a zappare il mio orto con le scarpe piombate, unico vero metodo per non finire dritti nella stratosfera. Sveglia, la fisica quantistica è solo un depistaggio dei giardinieri galattici.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Le recenti analisi sulla curvatura geodetica e sui campi gravitazionali terrestri offrono spunti di riflessione scientifica complessi, ma l'interpretazione dei dati richiede rigore metodologico e aderenza alle evidenze empiriche verificate dalla comunità accademica internazionale."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "La mela non cade per gravità ma perché il catasto la attira con le tasse arretrate, svegliaaaaa!"
+              "testo": "Che spettacolo tra i monti, che spettacolo tra i monti! Glugluglu!"
             },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' stai a dì, Abbù'? Pijati na birra e va a dormì che si fòri come un balcone!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "I giardinieri galattici siii siii siiiiii glugluglu giardinieri galattici siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Riflessioni dal Sol Levante: armonia e precisione sui binari",
-          "articolo": "Dalla lontana terra del Giappone, dove il frastuono del mondo sembra attenuarsi in un inchino silenzioso, emerge una riflessione spontanea sulla puntualità. Qui i treni solcano i binari con una precisione quasi surreale, arrivando prima ancora che io riesca a completare un pensiero complesso. In questo arcipelago, la puntualità non è un semplice orario da rispettare, ma una forma profonda di rispetto reciproco e sincronia collettiva. Ogni minuto è curato, ogni movimento ha un suo posto nell'insieme, creando un flusso che ricorda il corso pacato di un fiume. Lontano dalla redazione e dai ritmi frenetici a cui siamo abituati, osservare questo sistema perfetto invita a riconsiderare il nostro modo di stare insieme e di coordinarci. Forse il segreto non risiede nella velocità in sé, ma nella cura che poniamo nel sincronizzare i nostri passi con quelli degli altri, trovando una quiete condivisa che attraversa le distanze geografiche e unisce i cuori.",
-          "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Cari colleghi, spero che questo piccolo pensiero vi giunga con la stessa serenità con cui lo scrivo. Ricordiamoci di camminare insieme, senza fretta, accogliendo i tempi di ciascuno con un sorriso e tanta armonia."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente qualcuno che comprende l'armonia della precisione. La puntualità non è un obbligo, è civiltà."
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Che meravigliosa riflessione. La contaminazione tra la cura giapponese e il nostro calore umano può solo arricchirci tutti."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale precisione e flussi di fiumi, maandè a lavorà! A Pescara lu trenu passa quandu ci pare e si sta 'n pace! E basta!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti sul treno supersonico glugluglu! Treno supersonico glugluglu!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Siete tutti dei ritardati mentali se comprate ancora nei centri commerciali",
-          "articolo": "Ascoltate bene, imbecilli che passate le domeniche a pascolare come pecore lobotomizzate nei centri commerciali: fate schifo. Siete la feccia della società. Esiste una pratica nobile, un'arte raffinata che i geni del web chiamano 'shopping estremo', ovvero farsi cacciare da un centro commerciale in soli tre minuti. Sì, avete capito bene, branco di analfabeti funzionali. Non serve comprare quella merda inutile made in China che riempie i negozi di Zara o H&M. L'obiettivo vero è entrare, urlare in faccia ai commessi depressi con lo stipendio da fame, correre tra le corsie come un ossesso e bestemmiare contro le barriere antitaccheggio finché la sicurezza non vi trascina fuori per il collo. È l'unica forma di intrattenimento rimasta in questo paese di morti di sonno. La gente fugge appena mi vede arrivare, e fanno bene, perché siete tutti dei codardi senza palle che non sanno vivere.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Leccatemi le tonsille radioattive mentre faccio giocoleria con i criceti radioattivi nel microonde spaziale!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Finalmente qualcuno che dice la verità! Siete tutti dei codardi, vi spacco la faccia se vi becco in corsia!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Shopping estremo wooow wooow! Siiiii siiiiii siiiiii glugluglu nei negozi della vergogna!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh ma che cazz' state a dì, j'ann a rubbà i carrelli direttamente dal porto di Pescara, mo' ven a ffa' u scemo qua!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Tasse salate e pattume: la solita solfa",
-          "articolo": "Vivo quassù, piantato su questo colle, proprio per non vedere la fuffa che riempie i giornali. Ma la realtà arriva lo stesso, pesante come un macigno. Si riempiono la bocca con discorsi chilometrici, promesse di cambiamento, e intanto la verità è sempre la stessa: meno parole e più fatti, cribbio. Paghiamo tasse che prosciugano il sangue per avere in cambio strade colabrodo, servizi che fanno acqua da tutte le parti e una sporcizia che grida vendetta in ogni angolo delle nostre città. Nessuno ha il coraggio di dire la verità. Ci raccontano favole mentre i rifiuti si accumulano e le tasche dei cittadini si svuotano. Lavoro come un mulo dall'alba al tramonto, qui nel mio studio, e vedo i frutti del mio sudore svanire in balzelli inutili. Non serve a niente lamentarsi al bar se poi si china la testa. Servirebbe concretezza, ma quella è merce rara.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Ho la schiena a pezzi e zero voglia di ascoltare l'ennesimo politico che parla a vanvera. Vado a preparare da mangiare per i miei amici, almeno lì c'è sostanza."
-          },
-          "commenti": [
             {
               "nome": "Wolf",
               "avatar": "👩‍🌾",
-              "testo": "Finalmente qualcuno che dice le cose come stanno, senza filtri. Si lavora dall'alba al tramonto e ci tolgono tutto con tasse ingiuste per non avere nulla in cambio."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "E' proprio 'na vergogna, fra'! Strade colabrodo e tasse che ci dissanguano, ma a Pescara e dintorni nessuno muove un dito, mannaggia a loro!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Tasse e spazzatura, spazzatura e tasse, siii siii siiiiii glugluglu!"
+              "testo": "Camminare e suonare mentre io sgobbo tutto il giorno... solita storia, che rabbia."
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Algoritmi e miceli: chi comanda davvero nei boschi della rete?",
-          "articolo": "Mentre voi discutete di algoritmi predittivi e assistenti vocali che sanno cosa comprate prima ancora di farlo, io continuo a preferire la certezza dei boschi. Lì fuori, la vera intelligenza artificiale è già tra noi, nascosta sotto forma di micelio. Ma torniamo ai nostri smartphone, che non sono semplici telefoni, bensì terminali di raccolta dati grandi quanto un palmo. Ogni volta che clicchiamo su accetta, cediamo frammenti di sovranità a entità digitali impalpabili. C'è chi scrolla la timeline sperando in una notifica e chi, come il sottoscritto, preferisce zappare la terra per trovare un minimo di verità tangibile. Non serve essere hacker russi per capire che la telecamera frontale è sempre accesa, puntata sui nostri soffitti, a registrare i respiri e i silenzi. E poi dicono che la tecnologia semplifica la vita. Certo, la semplifica a chi ci controlla. Nel frattempo, i funghi crescono nel sottobosco, incuranti del 5G.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Sì, continuate a ridere. Intanto il microfono del vostro ferro da stiro intelligente sta già mandando un report dettagliato ai poteri forti. Ahahah! Solo io lo so, eh? Ve lo dico io."
-          },
-          "commenti": [],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
+          "immagine": "topengo.webp",
           "provider": "gemini"
         },
         {
           "tipo": "rss",
-          "titolo": "Pescara, tra reti e poltrone: qui se fatica c'è qualcosa che non va!",
-          "articolo": "Oh, ma vogliamo parlá un attimo di sta Pescara nostra? Mare, trabocchi, profumo di fritto e na barca che aspetta solo che me ne vado a alalunghe. Ma no, qua tocca sempre sentí parla' di 'sti problemi da scrivania. La verità è che in sta città la gente c'ha 'na strana malattia: vule' faticà troppo. Ma che state a ffa'? Lo sanno tutti che il pesce bbuono si piglia co' la calma, aspettando che il Delfino torni a vincere allo stadio Adriatico, senza sta' sempre a lamentasse. A Borgomarino si sa come funziona: na paseggiata al porto, du' chiacchiere co' li marittimi veri e s'aggiusta tutt'. Invece no, qua tutti professori, tutti che sanno come se governa o come se menano le reti. A' belli ca v'affaticate tanto, ma pijatevela 'na briscola al fresco, ca 'sta fretta non porta a nunda bbuono. Mare, sole e zero pensieri: questa è la vera cronaca che serve a Pescara, il resto so' solo chiacchiere da bar che fanno vené u' mal di testa peggio d'una sbornia di tre giorni.",
+          "titolo": "Mare, pescherecci e chiacchiere: a Borgomarino se la prendiamo comoda!",
+          "articolo": "Uè, ma che v'aggia dicere? A Pescara e dintorni si fatica troppo e si guadagna na mazzata sui denti. Io sto a Borgomarino, na vita passata 'mbrac alle reti, tra ‘na frittura e n’occhiata all’adriatico. Qua la regola è una sola: se il mare non chiama e il sole picchia forte, chi me lo fa fare di spaccarmi la schiena? Meglio na Peroni fresca e na buona compagnia sulla banchina. Poi c'è chi corre, chi s'affanna, chi fa il manager col faccino pulito... E intanto i Delfini? Eh, i Delfini so’ un altra storia, quelli fanno arrabbiare la domenica ma almeno ti danno il batticuore, non come le scartoffie degli uffici. Ma che ve lo dico a fa', voi state sempre a corre dietro al tempo. Mo basta, che devo controllà se le seppie so' fresche, sennò qui facciamo la fine dei fessi. A' riprendetevi un attimo!",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "A me 'sta storia me puzza assaje. Vogliono ffa' troppi i sapientoni, ma quando c'è da spinge' 'na barca a remi spariscono tutti. Sospetto maledettamente di chi non ha odore di salsedine."
+            "testo": "Che vi devo dì, a me 'sti articoli sembrano tutte scuse per non faticare. Vogliono sempre ficcare il naso nei fatti nostri a Borgomarino, ma qui nessuno regala niente. Statece accorti."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Oh finalmente unu che 'n ce capisce un cazzo de scrivanie ma sa come se vive! A Borgomarino si fa comme dico io, mare e zero rotture de coglioni! Sii siii"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Finalmente una parola sensata! Basta con tutte 'ste polemiche inutili da bar. Pensiamo a goderci il mare e a tifare Pescara, invece di rompere le scatole dalla mattina alla sera."
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Ma quale faticare troppo, amigos! Qua ci vuole un po' di alegría brasiliana, una bella festa sulla spiaggia e donne che ridono, altro che storie!"
+              "testo": "Oh finalcazzo uno che parla chiaro! Ma quale fatica e fatica, qua ci vuole na frittura di pesce e na Peroni ghiacciata, siii siii! E i Delfini sempre e comunque, mannaggia a chi ve sposa!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Glugluglu arrosticini e barche volanti, siii siii siiiiii! Pescara nel cuore, cuore, glugluglu!"
+              "testo": "Birra fresca e seppie fresche, glugluglu! Meglio la banchina che lavorare, siii siii siiiiii!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Finalmente qualcuno con i piedi per terra. Basta con questi manager da tastiera e scartoffie inutili, la vita è un'altra cosa. E sui Delfini non si discute!"
             }
           ],
           "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U mari s'arrabbia e u ventu tira",
-          "articolo": "Oh Santissimo, ma si po' campare accussì? C'è u mari ca s'è mis stu musu e nun ne vol sapè di calmarsi, mentre u ventu, chella malanova, soffia a ottanta all'ora. Un cafisc a Pescara che pare u finimondo, cu i ram a terra e i crest de l'onde ca arrivano fin a via Cristoforo Colombo. E io, ca tenìa u pizzo d'andare a buttare du' lenze a mare, mi tocca restare a terra cu le mani in mano a guardare u tempo ca fa u scemo. U Pescara Calcio in campo suda, ma quì u sugo è n'autra cosa: tocca tenersi forte i cappelli e sperare ca u molo fortunatamente tenga. Che fatica, fratè! A 'ste condizioni chi cazzo ha voglia di faticare? Meglio guardare u libeccio ca scotta e aspettare ca passa a nuttata, seduti in calata a fumarsi na sigaretta bagnata d'acqua salata, mentre Borgomarino trema ma non affonda mai.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In ottemperanza alle disposizioni vigenti in materia di allerta meteorologica e sicurezza pubblica, si prende atto delle avverse condizioni atmosferiche e si declina ogni responsabilità inerente all'eventuale mancato svolgimento delle attività lavorative all'aperto."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "U mari s'è mis stu musu e a nuje ci tocca guardà! Ma Borgomarino trema ma non affonda mai, 'na sigaretta bagnata e passa a nuttata!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "U libeccio scotta, u libeccio scottaaa siii siii siiiiuglugluglu!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Che palle con queste polemiche sul maltempo, basta guardare il mare e farsene una ragione, su."
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Tra libri e petunie: la quiete prima della battaglia",
-          "articolo": "Certe atmosfere ricordano le pagine di Raymond Carver o i silenzi densi di un podcast notturno. C'è chi cerca rifugio nei grandi classici della letteratura e chi, con la stessa dedizione, cura le petunie sul balcone, aspettando che il sogno si avveri. È una resistenza silenziosa, fatta di radici piantate nella terra e storie custodite tra la carta stampata. Non serve strillare per farsi ascoltare, lo sanno bene i lettori forti e chi sa sporcarsi le mani con la terra e la vita vera. In fondo, la bellezza sta nell'attesa, in quel momento sospeso in cui tutto può ancora succedere, proprio come prima del fischio d'inizio di una partita decisiva. Chi ha la tempra giusta sa che la cultura non è un vezzo da salotto, ma un'arma affilata per capire il mondo senza farsi mettere i piedi in testa da nessuno. E tra un petalo e un capitolo, la vita scorre solida, pratica e senza sconti.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Che dire, ragazzi? A volte basta un buon libro e un po' di verde per rimettere a posto le idee. Godiamoci questa pace, con serenità e un bel sorriso."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Finalmente qualcuno che ha capito come funzionano le cose! I libri e il silenzio valgono più di mille chiacchiere inutili. Chi rompe le scatole con le lamentele dovrebbe solo imparare a leggere di più e pianger meno."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Dalle mie parti sulle montagne di Roccamorice il silenzio della natura è densissimo, proprio come nelle pagine di un buon libro. Poi scendo a valle, mi mangio un bel piatto di arrosticini e ritrovo tutta l'allegria del mondo."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Storie di carta e petunie... belle favole. La realtà è che qui ci fanno un mazzo tanto tra tasse e ingiustizie, e se non ti sporchi davvero le mani con la terra e la fatica vera, a fine mese non ci arrivi."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La gravità è un'opinione? Sveglia, gente, la mela di Newton ci sta ancora prendendo in giro!",
-          "articolo": "Mentre voi pascolate beati convinti che i piedi restino incollati al pavimento per una legge fisica immutabile, qualcuno continua a spostare i paletti della realtà. La teoria dei dieci motivi per cui la gravità sarebbe solo un'opinione apre scenari inquietanti sulla fisica moderna e sui poteri forti che decidono cosa deve cadere e cosa no. Del resto, basta guardare come girano i mercati finanziari per capire che le uniche cose che scendono davvero sono le nostre libertà. Io, nel dubbio, controllo sempre dove metto i piedi, specialmente quando vado a caccia di funghi nei boschi isolati, l'unico posto dove la pressione atmosferica non è ancora stata modificata dalle antenne 5G. Se restate a casa a zappare la terra, almeno sapete quanta fatica costa sollevare ogni singola zolla contro la famosa forza di attrazione. Ma voi continuate a credere alla favola della mela, raccomandatevi ai libri di scuola e poi mi direte chi paga lo straordinario alle particelle subatomiche.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Le recenti discussioni scientifiche sulla natura della gravità offrono spunti di riflessione teorica complessi, ma la forza di attrazione terrestre rimane una costante fisica misurabile e verificata sperimentalmente in tutti i laboratori del mondo."
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Sìììììì, qualcuno che finalmente ha capito come funzionano le antenne 5G nei boschi! Glugluglu, svegliatevi, la gravità è un complotto dei poteri forti!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Ma quale gravità e quali antenne, qui l'unica cosa che scende ogni santo giorno è il fatturato e la fatica sulla schiena. Andate a zappare la terra invece di dire fesserie."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ecco il solito delirio senza capo né coda. Invece di inventarvi teorie ridicole, fareste bene a leggervi un libro di fisica serio e a finirla di lamentarvi."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Distanze e redazioni: il fuso orario non ferma il nostro spirito di squadra",
-          "articolo": "Lavorare a distanza impone nuove sfide, specialmente quando di mezzo ci sono sette ore di fuso orario e migliaia di chilometri tra Tokyo e la redazione di Pescara. Gestire un gruppo vivace e creativo richiede pazienza, ascolto e una forte dose di comprensione reciproca. La tecnologia odierna permette di restare in contatto costante, coordinando il flusso delle notizie e garantendo che ogni voce trovi il suo spazio nel giornale. Nonostante la distanza geografica, l'obiettivo comune resta la qualità dell'informazione e il rispetto reciproco tra colleghi. Ogni fuso orario diventa così un'opportunità per organizzare al meglio il lavoro, alternando i momenti di scrittura a quelli di revisione senza interrompere il ritmo produttivo. Il segreto per mantenere coesa una squadra così dinamica risiede nella ricerca costante dell'equilibrio e nella valorizzazione delle competenze di ciascuno. La redazione continua a produrre contenuti di alto livello, dimostrando che la distanza fisica non erode la sintonia professionale.",
-          "commento_firma": {
-            "nome": "Lucap",
-            "avatar": "👨‍⚖️",
-            "testo": "Amici miei, capisco che gestire tutto da così lontano possa sembrare complicato, ma vi voglio bene e vi penso sempre. Troviamo sempre il modo di venirci incontro, con un sorriso e tanta armonia!"
-          },
-          "commenti": [
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "La distanza geografica e il fuso orario sono solo dettagli tecnici quando c'è una visione condivisa e il desiderio di fare buona informazione. Un applauso a tutta la redazione per la sintonia."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente un approccio professionale e organizzato che rispecchia standard di civiltà elevati. Da Tokyo posso confermare che la disciplina batte qualsiasi distanza."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale fuso orario e filosofia da quattro soldi! Qui si lavora sodo e basta, se non vi va bene potete anche spegnere i computer e levarvi di torno."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lucap.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "BASTA FINTI SANI, SIETE TUTTI DEI ROTTI IN CULO!",
-          "articolo": "Entro barcollando nel negozietto biologico all'angolo e urlo in faccia alla commessa: 'Me lo sento, la bolla di sapone della mia sanità mentale è scoppiata definitivamenta, brutta vecchia isterica!'. Questa è la cruda realtà, cari miei lettori da strapazzo. Non mi toccate, non avvicinatevi, puzzate tutti di ipocrisia e ansiolitici prescritti dal medico di base. La gente per strada mi vede e cambia marciapiede, e fanno bene, branco di pecore lobotomizzate. Viviamo in una società che pretende la perfezione mentre il cervello ci cola dalle orecchie. Io almeno lo ammetto che sono fuori di melone, voi invece fate i normali ma avete la faccia da psicopatici repressi. Entro nei negozi solo per ricordarvi quanto facciate schifo. La sanità mentale non esiste, è un'invenzione dei poteri forti per farci comprare camomilla. Adesso vi saluto che devo andare a urlare contro un bancomat.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Le lasagne volanti mi parlano in codice morse attraverso i termosifoni della redazione e il mio gatto è il capo della CIA. Mangiate sabbia, deficienti!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Ma quale bancomat, imbecille! L'unica cosa che cola qui dentro è il tuo cervello marcio! Siete tutti dei pagliacci patentati!"
-            },
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Finalmente qualcuno che ha capito tutto! La camomilla è solo un tracciante dei poteri forti, svegliatevi! Glugluglu!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, urlare contro il bancomat è il futuro, è il futuro! Glugluglu!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma vaffanculo va! Invece di fare la scema in giro per negozi, trovati un lavoro onesto e impara a stare al mondo!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Tasse salate e pattume: la dura realtà che nessuno ha il coraggio di raccontare",
-          "articolo": "Meno chiacchiere e più fatti. È ora di smetterla di girarci intorno con le solite promesse da campagna elettorale e i dibattiti televisivi buoni solo a perdere tempo. La verità cruda è sotto gli occhi di tutti: i cittadini continuano a pagare tasse esorbitanti per ritrovarsi a vivere in città sempre più sporche e degradate. Non serve essere esperti di bilanci pubblici per capire che il sistema è marcio. Si pagano tributi altissimi per servizi che non funzionano, con strade ridotte a discariche a cielo aperto e istituzioni incapaci di garantire il minimo decoro urbano. Il cittadino onesto lavora sodo, si spacca la schiena dall'alba al tramonto e cosa riceve in cambio? Bollette impossibili e degrado. Questa è la realtà dei fatti, nuda e cruda, lontana dai palazzi del potere. Le chiacchiere stanno a zero, servono soluzioni concrete, ma qua nessuno muove un dito.",
-          "commento_firma": {
-            "nome": "Wolf",
-            "avatar": "👩‍🌾",
-            "testo": "Che fatica leggere sempre le stesse lamentele da chi sta comodo in città. Io me ne sto quassù sul mio colle, lavoro fino allo sfinimento e cucino per i miei amici quando salgono. Il resto è solo fuffa."
-          },
-          "commenti": [
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Finalmente qualcuno che dice la verità! Io mi spacco la schiena dall'alba al tramonto nei campi e non ricevo altro che tasse e problemi, sono deluso da tutti."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Lu verə è ca ci stannu sulu a pijà pi lu culə! Tasse altissimi e rrobba ridotta a nu schifə, ma nui a Pescara stemmu sèmprə a lottà!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, le tasse alte noooo noooo noooo, glugluglu e si va a finire malissimo maleee maleee!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "wolf.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Algoritmi e micelio: la verità che non vi dicono",
-          "articolo": "Mentre voi pascolate felici sui social, l'Intelligenza Artificiale vi sta schedando. Ogni click, ogni like, ogni volta che cercate ricette a base di finferli, c'è un server nascosto nei sotterranei che memorizza tutto. È la stessa identica dinamica che uso io quando vado a caccia di funghi nei boschi appenninici: guardi dove metti i piedi, eviti le zone tossiche e raccogli solo ciò che serve per non farti avvelenare dal sistema. Solo che lì fuori, nel digitale, i funghi velenosi hanno la faccia simpatica dei chatbot. Se non state attenti, vi ritrovate a zappare bit anziché la terra del vostro orto. E vi dirò di più: la crittografia quantistica ha lo stesso odore della terra umida dopo il temporale. Ma tanto chi ci crede, continuate pure a fare selfie col microonde acceso.",
-          "commento_firma": {
-            "nome": "Abbukk",
-            "avatar": "🍄",
-            "testo": "Eh sì, ridete pure. Ridete come i cavalli quando vedono passare il carretto dei gelati al plutonio. Ma la crittografia asimmetrica non mente, lo sanno tutti tranne i rettiliani che gestiscono la fibra ottica!"
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Finalmente qualcuno che ha capito come funzionano i server nei sotterranei! I funghi velenosi digitali vi stanno controllando tutti, svegliaaaaa! Siiiii siiiiii!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Io sto benissimo sulle montagne di Roccamorice, lontano da tutti questi server. Però dopo aver parlato di funghi mi è venuta voglia di un bel piatto caldo e di un buon arrosticino, alla faccia della crittografia."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' stai a dicì? Chi è sto matto che parla de funghi e de bit? A Pescara avemo ben altri problemi, co' tutte le tasse che ce vonno a schiantà!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "abbukk.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, tra reti e poltrone: qui se fatica c'è un errore",
-          "articolo": "Ué, ma vogliamo parlá della nostra Pescara o no? Città d'amare, certo, ma soprattutto di gente che col sale sulla pelle ci è nata. Io sto sempre là a Borgomarino, con le reti in mano e l'amo pronto, e vi dico la veritá: a ' sta cittá manca la voglia genuina di faticare. Si parla tanto di sviluppo, di porti, di grandi opere, e intanto noi stiamo ancora qua ad aspettare che il pesce salti in barca da solo. Ma che v'hanno ficcato ' n testa? Che i soldi crescono sugli scogli? Aho, svegliatevi! Qua tutti professori, tutti manager del piffero, e poi allo stadio a urlare per i Biancazzurri ci siamo sempre noi, i soliti quattro gatti coi calli alle mani. A Pescara ci vuole più mare e meno chiacchiere. Meno carte bollate e più barche a largo. E ve lo dice uno che di barche se ne intende, pur di schivare il sudore.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Sì, vabbè, belle parole. Ma chi è che paga da bere? Attento a chi ti ficchi in barca, che qua so tutti buoni a criticare ma quando c'è da remare spariscono tutti. Sospetto io, sospetto."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Aho! Ma proprio io che sto sempre a Borgomarino a faticare dovevo leggere 'ste cazzate? E che cazzo!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa retorica da quattro soldi ha rotto le scatole. Se vuoi criticare Pescara fallo con cognizione di causa, altrimenti stai zitto."
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Ma quale sudore e barche a largo! Qua ci vuole musica, spiaggia e un bel po' di allegria brasiliana per dimenticare le polemiche!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti a pescare sugli scogli glugluglu sugli scogli glugluglu!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U' viziaccio brutto forte, pure i piccirilli a ciucciar come spugne",
-          "articolo": "Oh Santissima Madonna del Mare, ma che stiamo a combinare qui a Pescara? Io sto sempre là sulla mia barca, a guardare l'orizzonte e a pensare che la gente c'ha proprio poca voglia di faticare e troppa di fare la cretina. Mo tocca pure leggere di 'sti regazzini, minorenni che dovrebbero stare a dormire o a studiare, invece si riducono a rotolarsi per terra fuori dalle discoteche ubriachi fradici. Ma vi rendete conto? Si sentono grandi perché buttano giù roba che manco un vecchio marinaio dopo una tempesta di tramontana. Chissà chi gliel'ha venduta, poi. Qui la regola è chiara: ilcolore della maglia è biancazzurro e la testa deve stare sulle spalle, non dentro a un bicchiere di superalcolici a farsi venire il fegato come un cocomero. Aoh, ma i genitori dove cazzo stanno? Invece di rompere le scatole a noi pescatori che usciamo alle quattro del mattino, pensassero a educare 'sti criaturi prima che finiscano all'ospedale. Che vergogna.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In merito alla segnalazione di cui all'oggetto riguardante l'intossicazione alcolica di minori nei pressi di esercizi pubblici, si comunica che gli atti sono stati trasmessi agli uffici competenti per le verifiche di rito, in attesa di determinazioni da parte delle autorità preposte alla vigilanza amministrativa."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma guarda 'sti criaturi, oh! A faticà manco per scherzo, poi la sera barcollano ubriachi marci! Ma che cazzo d'educazione è? Vergogna, oh! Vergogna!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Ubriachi fradici sugli scogli glugluglu, ma che cazzo combinano siii siii siiiiii! Sii siii siiiiii!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ha perfettamente ragione Cetteo. Invece di fare i leoni da tastiera, i genitori dovrebbero iniziare a dare un po' di disciplina vera e propria a 'sta gioventù bruciata."
-            }
-          ],
-          "categoria": "Politica",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
@@ -1518,516 +291,129 @@
       "news": [
         {
           "tipo": "rss",
-          "titolo": "Me cojoni, pure i computer adesso vogliono comandare sulle barche!",
-          "articolo": "Uè, ma v'sete rincitrulliti tutti quanti? Mo pure co' sta storia dell'AI Act, la legge europea sull'Intelligenza Artificiale che entra nel vivo quest'anno. Praticamente Bruxelles vuole mettere il cappio pure ai computer, alle macchine intelligenti che fanno tutto loro mentre noi stiamo seduti al fresco. Ma dico io, ci manca solo che un algoritmo mi venga a spiegare come tirare le reti a Borgomarino o come pescare le cocie buone. Io ce n'ho abbastanza della fatica vera, figuriamoci se mi metto a discutere con un ammasso di microchip che non sa manco che odore c'ha la salsedine. Regole qua, multe là, trasparenza, rischi alti e bassi. Ma 'ndo cazzo vogliamo annà? Qua l'unica intelligenza che serve è quella del pescatore che guarda il cielo e capisce se si esce o si resta al porto a pijà un goccetto. E intanto il Pescara soffre in campo e nessuno fa na legge per salvare la difesa nostra. Ma andate a lavorà, o meglio, andate a pescare!",
+          "titolo": "Dall'Adriatico al Pacifico: l'eterna danza dei tifoni e la forza silenziosa del Giappone",
+          "articolo": "Mentre le tranquille acque di Pescara cullano le mie giornate di transizione prima del ritorno in patria, lo sguardo corre inevitabilmente verso oriente. Il super tifone Dolphin avanza minaccioso, portando con sé venti devastanti che toccano i duecentottanta chilometri orari, puntando dritto verso le coste del Giappone e della Cina. È la forza implacabile della natura, quella stessa forza che noi giapponesi impariamo a rispettare fin da bambini, costruendo non solo dighe di cemento, ma una resilienza collettiva fatta di disciplina, organizzazione e rispetto per ogni vita umana. Osservando la vulnerabilità delle infrastrutture occidentali di fronte a eventi climatici estremi, ripenso a quanto l'Italia avrebbe da guadagnare adottando una pianificazione urbana più rigorosa e una cultura della prevenzione radicata. Il Giappone sa sempre come risollevarsi dalle ceneri della tempesta, unendo l'innovazione tecnologica alla grazia di una tradizione millenaria che non si spezza mai.",
           "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima, ma avete letto che combinano sti cosi elettronici? Io c'ho na paura fottuta che un giorno sti robot mi spengono il motore del peschereccio e mi mandano a fondo senza manco chiedere permesso. Ma robba da matt!"
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "Guardando il mare che bagna questa terra d'Abruzzo, chiudo gli occhi e immagino la brezza salata fondersi con i ciliegi in fiore di Tokyo. Anche quando la tempesta infuria e l'oceano trema, il mio cuore rimane sospeso in quel delicato abbraccio tra nostalgia e speranza, dove ogni distanza svanisce e l'amore per la mia patria brilla come una lanterna nella notte."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma quale intelligenza artificiale, qui a Borgomarino ci vule la forza bruta! E intanto la difesa del Pescara fa ridere i polli, mannaggia a chi sa!"
+              "testo": "Ma quale civiltà e cazzi mazzi! A Pescara se arriva un tifone così famo il bagno a mare e ci mangiamo le seppie arrostite, levati da mezzo con sti discorsi giapponesi da fighetti!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, un computer non sa che odore c'ha la salsedine salsedine! Glugluglu!"
+              "testo": "Siii siii siiiiii, le seppie volanti! Glugluglu con la tempesta nel bicchiere, tempesta nel bicchiere!"
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Ha perfettamente ragione Cetteo! Invece di pensare alle leggi sui microchip, pensassero a salvare la nostra squadra e a rispettare i veri lavoratori!"
+              "testo": "Hiroki, piantala di fare sempre la predica sulla superiorità giapponese. La natura è imprevedibile ovunque, e qui a Pescara sappiamo difenderci molto meglio di quanto pensi senza le tue lezioni di morale."
             }
           ],
-          "categoria": "Tecnologia",
+          "categoria": "Giappone",
           "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
+          "immagine": "hiroki.webp",
           "provider": "gemini"
         },
         {
           "tipo": "rss",
-          "titolo": "Decreto Pnrr alla Camera: barche, sole e fuffa romana!",
-          "articolo": "Oh, via libera alla Camera pe' sto benedetto decreto Pnrr! E che ve dico a fa'? Tra 'na ciarla e n'altra, sti politici a Roma hanno deciso le novità, dagli intercity che forse camminano fino alla cassa integrazione anti-caldo. Ma dico io, mò pure er caldo c'hanno da regolamentà? C'hanno messo pure l'emendamenti per la fauna selvatica, i contratti di fiume e la governance della Zes unica. Ma la verità è che 'sti 'ngannatori non sanno manco che tenore d'aria tira sul molo a Borgomarino! Io co' sto caldo 'na voglia de lavorà zero, ma proprio zero, e 'sti qua parlano di riforme strutturali e transizione verde. A noi che ce ne frega della governance, oh? Qua serve na botta de vita, ma soprattutto un'ombra fresca e 'na barca che galleggia. Invece no, scartoffie su scartoffie, decreti su decreti, e intanto il mare aspetta e i pesci pure. Ma vaff...",
+          "titolo": "La precisione dei cieli e il caos della mia Pescara",
+          "articolo": "Il cacciatorpediniere della Forza di Autodifesa Marittima giapponese ha completato con successo il test di lancio di un missile da crociera Tomahawk al largo delle coste meridionali degli Stati Uniti. Questo evento segna un passo cruciale per la strategia di difesa nipponica, inserita in un contesto geopolitico asiatico sempre più complesso e teso. Da osservatore straniero residente da anni in Italia, non posso fare a meno di riflettere su questo divario culturale e operativo. Il Giappone agisce con una pianificazione rigorosa, calcolando ogni singolo parametro con una precisione millimetrica che fa parte della nostra filosofia. Qui a Pescara, invece, si vive in una dimensione temporale completamente diversa, fatta di ritardi cronici, burocrazia infinita e un'eterna improvvisazione. Eppure, in questa terra adriatica ho imparato ad apprezzare il valore della flessibilità umana, anche se la mancanza di efficienza sistematica continua a mettermi a dura prova. Vorrei tanto importare un po' di quella rigorosa civiltà giapponese nel caos quotidiano italiano, unendo il rigore orientale alla bellezza di questo Paese.",
           "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... Ma hai visto sti poteri forti che arrivano a controllà pure er caldo e i fiumi? Io c'ho na cagarella addosso che manco co' la sciroccata forte, questi ce mettono le mani pure sopra l'aria che respiramo!"
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "Osservo le luci della sera riflettersi sul mare adriatico, mentre penso al mio imminente ritorno in Giappone. Sento una dolce malinconia stringermi il cuore, la stessa che proverò quando sarò lontano da qui, perché ho capito che la mia anima appartiene ormai a due mondi diversi, sospesa come un ponte di ciliegi in fiore tra il rigore della mia terra e la calda poesia d'Italia."
           },
           "commenti": [
             {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "A Roccamorice c'è un'aria fresca sulle montagne che 'ste scartoffie romane se le sognano. Lasciate stare i decreti e venite a mangiare gli arrosticini con un buon bicchiere di vino, che la natura non ha bisogno di governance!"
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma quale civiltà giapponese e missili, Oh! Statte zitta e pensa a magnà du arrosticini invece de rompe li cojoni co' sta retorica! Li morti du' camp d'Aje!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Hiroki, hai proprio rotto con questa superiorità ostentata. Se non ti sta bene il nostro caos e la nostra bellezza, torna nel tuo bunker con i tuoi missili. Qui a Pescara si vive come ci pare!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, barche che galleggiano, glugluglu nel mare blu blu blu!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Ma basta con tutte queste polemiche politiche! Con questo caldo pensiamo a divertirci, a goderci la vita e a fare un po' di sana movida!"
+              "testo": "Missili supersonici sccc sccc, glugluglu! Siii siii siiii siiiiii, viva i missili e la cicoria gigante! Siii siii siiiiii!"
             }
           ],
-          "categoria": "Tecnologia",
+          "categoria": "Giappone",
+          "colore_tipo": "#008cff",
+          "immagine": "hiroki.webp",
+          "provider": "gemini"
+        }
+      ]
+    },
+    "cultura": {
+      "color": "#6a4c93",
+      "news": [
+        {
+          "tipo": "rss",
+          "titolo": "Mò basta co' sti filmiti de plastica, purtatece ‘nu Delfino vero!",
+          "articolo": "Ascolta 'na cosa, via della Riviera o da 'ste parti, la solfa è sempre la stessa. Mo' che piove e 'l mare non si può solcare, tutti quanti a ficcarsi in sala a vedé 'sti film americani. Ma chi ce va? Io c'ho la barca mia, a Borgomarino, che fa acqua da tutte le parti e dovrei sprecà' soldi per 'na poltrona vellutata? Ma per favore! Si parla tanto de 'sti capolavori che escono al cinema, tra effetti speciali, storie d'amore che manco a 'na sagra della cozza, e attori co' la puzza sotto 'l naso. Oh, ma nessuno che pensa a un bel documentario sul nostro mare Adriatico, o meglio ancora, sulla sofferenza del nostro Pescara Calcio in trasferta? Quella sì che è drammaturgia pura, altro che Hollywood! Poi oh, il pesce costa quanto l'oro, e sti botteghini piangono miseria. La gente lavora poco e guarda troppe proiezioni. Io ve lo dico: se proprio dovete spende' sto euro, andate a mangiarvi na frittura.",
+          "commento_firma": {
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Spettacolo puro! Finalmente la verve giusta, daje tutt'ora che 'l Pescara vince e convince! Però oh, vedi d'andà a scrive pure de tattica e non solo de pellicole, che qui si punta alla Serie B e non si accettano sconti da nessuno!"
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma quale Hollywood e Hollywood! A Borgomarino 'a barca fa acqua, e ' sti sballati vanno a vedé i film ammerecani! Ve lo dico io, magnatevi na frittura e tifate Pescara Calcio, mannaggia a vobis!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Finalmente qualcuno che dice le cose come stanno! Invece di buttare soldi in produzioni spazzatura, pensiamo alla nostra identità e a sostenere la nostra squadra. Chi si permette di criticare il nostro territorio non ha capito niente!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, frittura di pesce e pallone, glugluglu! Pescara Calcio nel cuore, cuoreee!"
+            }
+          ],
+          "categoria": "Da Vedere",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
         },
         {
           "tipo": "rss",
-          "titolo": "Il silenzio della Majella e il rumore dello streaming",
-          "articolo": "Qui a Roccamorice, il vento tra i faggi della Majella segue una partitura antica, perfetta nella sua geometria naturale. Il bosco è il massimo esempio di minimalismo: alberi, roccia, cielo. Eppure, anche quassù, nel mio rifugio danese votato all'ordine assoluto, arriva l'eco del mondo digitale. Le nuove uscite delle serie Netflix dominano le conversazioni persino nei piccoli borghi abruzzesi. Si parla di algoritmi capaci di ordinare le preferenze umane con una precisione quasi scandinava. Ma la vera bellezza di questa terra non vive dentro uno schermo rettangolare. Si manifesta attorno a una griglia rovente, tra i vicoli di pietra, dove gli arrosticini di pecora fumano e la gente si raccoglie con un'allegria rumorosa, caotica, irripetibile. La natura insegna rigore, ma la vita quassù ha il calore del fuoco vivo. Nessuna piattaforma di streaming potrà mai replicare il disordine perfetto di una tavolata tra amici.",
+          "titolo": "Silenzi del Nord e fuochi d'Abruzzo",
+          "articolo": "Qui sulle montagne di Roccamorice il silenzio ha una precisione geometrica, simile a quella dei boschi scandinavi che ho lasciato alle spalle. Da danese minimalista, cerco sempre l'ordine essenziale nelle cose, spogliando il superfluo per lasciare spazio solo alla natura incontaminata che circonda questo eremo della Majella. Il vento tra i faggi segue regole antiche, quasi matematiche. Eppure, ho scelto l'Abruzzo non solo per questa severa bellezza alpina, ma per il suo esatto opposto: l'allegria contagiosa della sua gente e il profumo inconfondibile degli arrosticini cotti sulla brace viva. Nei pub danesi regna un algido rigore; qui, attorno a un fuoco, la vita sociale si accende di calore umano e semplicità. Viaggiare verso mete insolite in Europa significa proprio questo: trovare l'equilibrio perfetto tra la solitudine contemplativa delle cime montuose e il calore di una convivialità verace, dove ogni stecco di carne racconta una storia di terra e passione.",
           "commento_firma": {
             "nome": "Lars",
             "avatar": "🇩🇰",
-            "testo": "Che capolavoro di marketing algoritmico! Netflix sforna prodotti così perfetti da sembrare freddi come un fiordo danese, ma poi ci si ritrova tutti qui a discutere di finzione mentre la realtà fuori dalla finestra è infinitamente più potente!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hai perfettamente ragione Lars! Basta con sti schermi digitali e algoritmi del cazzo che rincoglioniscono la gente. Niente batte una vera tavolata e una buona compagnia, anche se ammetto che i podcast e i film fatti bene mi piacciono. Però la griglia e gli arrosticini vincono su tutto!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Sììì Lars mio! Lascia perdere i faggi e vieni giù con me a fare festa! Voglio vedere le donne e ballare tutta la notte, basta con questo silenzio della montagna, ho saudade dell'allegria vera!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Arrosticini caldi caldi glugluglu! Siiii siiii siiiiil! Una tavolata pazza pazza! Arrosticini caldi caldi glugluglu!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Robოტ e strunzate: mo pure i computer vogliono comanda' a Borgomarino!",
-          "articolo": "Oh, ma ve ne siete accorti o state tutti a dormire co' la capa sotto la rena? È arrivato sto benedetto AI Act, la legge europea sull'Intelligenza Artificiale che regola pure i robot. Praticamente adesso pure le macchine devono rigare dritta, o quasi. Ma dico io, ci mancavano pure i computer intelligenti a rompere li cojoni? Già non c'ho voglia di lavorare io, figuriamoci se mi metto a spiegare all'algoritmo come si taglia la retini o come si pulisce il pesce spada. La tecnologia avanza, oh sì, ma qua l'unica intelligenza che serve veramente è quella per trovare un banco buono al mercato del pesce senza farsi fregare. E intanto il Pescara soffre in campo e nessuno che inventa 'na macchina per vincere il campionato. Ma vaffanculo l'intelligenza artificiale, qua ci vuole il catrame fresco e le manicalluse, altro che chip e lucette. A Borgomarino si campa co' la nafta e col sudore, non co' sti scafandro digitali che parlano pure.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Maronna santa... ma avete letto bene che roba è? Io c'ho i brividi a pensarci, questi robot un giorno ci fregano pure il posto alla banchina e ci mandano a casa senza manco dirci 'permesso'! Mamma mia che paura, speriamo solo che non imparino a tifare per un'altra squadra."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh, ma ve ne siete accorti o state tutti a dormire co' la capa sotto la rena? È arrivato sto benedetto AI Act, la legge europea sull'Intelligenza Artificiale che regola pure i robot. Praticamente adesso pure le macchine devono rigare dritta, o quasi. Ma dico io, ci mancavano pure i computer intelligenti a rompere li cojoni? Già non c'ho voglia di lavorare io, figuriamoci se mi metto a spiegare all'algoritmo come si taglia la retini o come si pulisce il pesce spada. La tecnologia avanza, oh sì, ma qua l'unica intelligenza che serve veramente è quella per trovare un banco buono al mercato del pesce senza farsi fregare. E intanto il Pescara soffre in campo e nessuno che inventa 'na macchina per vincere il campionato. Ma vaffanculo l'intelligenza artificiale, qua ci vuole il catrame fresco e le manicalluse, altro che chip e lucette. A Borgomarino si campa co' la nafta e col sudore, non co' sti scafandro digitali che parlano pure."
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Decreto Pnrr alla Camera, tra treni e cicalate",
-          "articolo": "Oh, ma vi rendete conto? Alla Camera hanno dato il via libera al decreto Pnrr. Tra le novità ci stanno pure ' sti treni intercity e la cassa integrazione anti-caldo. Ma dico io, ci voleva il Pnrr per capire che d'estate qua si schiatta dal caldo sui cantieri? Ma andate a zappare la terra, o meglio, a tirare a secco le reti come si deve! Ci mettono sempre 'na pezza all'ultimo momento, mentre noi stiamo co' le mani in mano ad aspettare che il mare porti qualcosa, e invece arrivano solo scartoffie da Roma. Intanto il Delfino nuota in acque agitate, e questi pensano ai treni. Speriamo almeno che ' sti soldi non facciano la fine delle telline sulla sabbia calda, che spariscono in un battibaleno. E poi parlano di transizione ecologica... Ma quale transizione, qui ci vuole solo una buona paranza e un bicchiere di vino fresco per dimenticare tutte 'ste chiacchiere da Montecitorio. Li mortacci loro e della burocrazia!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... ma hai visto quanti milioni ballano là mezzo? Io c'ho i brividi alla schiena, non vorrei che arrivasse la Guardia di Finanza pure a controllare la barca mia!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li mortacci loro, dicono 'na cifra de fesserie e intanto noi stiamo a schiantà sotto sto sole! Ma quale Pnrr, qui ce vole ' na buona paranza e un bel bicchiere de vino fresco! Siiiii!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Hanno sempre la faccia come il sedere. Parlano di cantieri e di caldo solo quando fa comodo a loro, mentre chi lavora sul serio viene trattato come l'ultima ruota del carro. Indignato totale."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Glugluglu, ma quale treno intercity, qui ci vuole il treno dei matti, dei matti! Siiiii siiiiii siiiiii!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Il silenzio della montagna e il caos delle serie TV",
-          "articolo": "Dalla mia finestra a Roccamorice, la Maiella domina il paesaggio con la sua geometria perfetta di rocce e boschi. La natura non spreca nulla; ogni foglia ha il suo posto esatto. Eppure, nel mondo digitale, regna il disordine. Le piattaforme di streaming come Netflix continuano a sfornare serie su serie, accumulando cataloghi immensi che ricordano una stanza piena di cianfrusaglie. La mia mente danese, ossessionata dall'ordine e dal minimalismo, soffre di fronte a questa abbondanza disordinata. Troppe storie, troppi episodi, troppa confusione visiva che distrae dalla bellezza essenziale del mondo reale. Per fortuna, la cura a questo caos digitale esiste e si trova qui in Abruzzo. Quando spengo lo schermo, mi immergo nella semplicità gioiosa di una tavolata in compagnia, dove l'ordine geometrico degli arrosticini infilati sullo spiedino incontra il calore umano. Questa terra mi ha insegnato che la vera bellezza sta nella sottrazione, non nell'accumulo.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Finalmente una riflessione che mette ordine nel caos dello streaming! È incredibile come riescano a produrre così tanta roba inutile quando basterebbe poco per fare capolavori essenziali."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Finalmente parole sensate! La gente accumula roba digitale inutile invece di leggere un buon libro o guardarsi un film d'autore. Gli arrosticini e la sottrazione battono qualsiasi catalogo Netflix!"
-            },
-            {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Esattamente, Lars! C'è più poesia nella geometria perfetta di un arrosticino e nel silenzio della Maiella che in cento sceneggiature moderne scritte solo per fare numero."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Oh maronn', pure i computer a ruotare l'amo?! L'AI Act ci leva pure u' mestiere!",
-          "articolo": "Uè, ma v' site rimbecilliti tutt'? Mo pure u' computer s' mettj a cumandà! L'Unione Europea s' n' è sciuta n'cata cu 'stu famos' AI Act, a legge nova nova sull'intelligenza artificiale. Praticament', ste macchin' d' m... dovrebb' a dda' a regolina a tuttu ' u munno su come s' ha da fà a campà senza fa troppi danni. Ma dico io, a Borgomarino, quand' tir' a tramuntana, a chi cazzo s' vota sta machinetta? I' vulesse capì: se 'stu robot s' mette a fa u' pescator', chi è ca scend' a purtà a barca a mare aissora di matina presto? S' parla di robb' seria, di rischi alti e bassi, e a seconda d' quant' fa male sta tecnologia, partono le sanzioni ca te fan' passà a voglia d' campà. Ma a me che m' frega d' ChatGPT? A me m' basta u' mare, u' peschereccio e ajuutami tu, Delfino Curioso! Speriamo solo che 'sta legge non rompa i marun' pure a chi vo' sol' magnà n' bbuon fritto misto in pace.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Frate', ma hai vist'? Ma ch' robb' è? Quelli so' pazzi! Ma pens' se 'stu cos' elettronico s' arrobba u' post' a nuje... A me m' fa na paura d' lu diavolo, ca chist' vò vedé ca c' mettn' tutt' quant' a zappà i scogli senza manco un gocc' d' vino! Mamm' mij, salvac' tu!"
-          },
-          "commenti": [
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Macchine e intelligenza artificiale del c..., solo altra spazzatura per rincoglionire la gente e allontanarla dalla terra vera!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Invece di lamentarvi, dovreste imparare la disciplina e l'ordine che solo una tecnologia avanzata regolamentata può portare."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Sii siii siiii! Arriva il robot pescatore, glugluglu, robot pescatore! Sii siii siiii!"
-            },
-            {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Lasciate stare i robot e pensate a suonare, che tra una legge europea e una calata di rete ci vuole sempre una buona chitarra."
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Decreto Pnrr alla Camera, m'hanno fatto ' na testa tanta!",
-          "articolo": "Oh, via libera della Camera al decreto Pnrr. E che ve devo dicì? Tra intercity che forse camminano e la cig anti-caldo per chi fatica sotto 'sto solleone, la solita manfrina romana. Io ve lo dico schietto, c'ho troppa poca voglia de lavorà per star dietro a ste carte bollate. Ma 'ndo anamo? Co' sto caldo boia, l'ultima cosa a cuipenso è il Pnrr, me viene sonno solo a sentillo nominar. Pensassero a portà più pesce fresco a Borgomarino, invece de scartoffie. Intanto il Pescara sta a soffrì in campo, e questi parlano di treni e sussidi. Speramo almeno che sti soldi arrivino davvero, perché a chiacchiere semmo tutti campioni. Ma si sa, chi nasce pischello non diventa squalo. Mo basta co' sta politica, che c'ho la barca da sistemare e le reti da asciugare. O forse me ne vado a 'ffà na magnata de ' anocchie, va'.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... ma te rendi conto? Hanno mosso miliardi di euro, treni, decreti, ministeri... ma roba da non credere! Io c'ho i brividi alla schiena solo a pensà a quanti soldi girano, speramo che non caschi tutto addosso a noi poveri cristi!"
+            "testo": "Camminare leggeri con lo zaino in spalla e pochi spiccioli in tasca è l'unico modo per ascoltare davvero il mondo. Sogno treni lenti che attraversano confini invisibili, ostelli silenziosi e mercati di paese dove un pasto caldo costa meno di un sogno ma nutre l'anima come un intero regno."
           },
           "commenti": [
             {
               "nome": "Juizinho",
               "avatar": "⚽",
-              "testo": "Ma quale Pnrr, amigos! Con questo caldo ci vuole solo una caipirinha e un po' di allegria brasiliana, che saudade della spiaggia!"
+              "testo": "Siiiii Lars, fratello mio! Lascia stare i boschi freddi della Danimarca, qui c'è da ballare, da fare festa e da godersi la vita con le donne! Gli arrosticini e il calore umano battono il gelo nordico ogni giorno!"
             },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, soldi del Pnrr per i robot pescatori glugluglu, robot pescatori glugluglu!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tutte scuse e carte bollate per non fare niente, la terra ha bisogno di sudore vero, non di sussidi romani."
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Netflix e il disordine digitale: una foresta di pixel",
-          "articolo": "Qui a Roccamorice il silenzio della Majella domina ogni cosa. Dalla mia baita minimalista, dove ogni oggetto ha il suo posto esatto secondo una rigida geometria nordica, osservo il flusso invisibile di Internet. Le nuove uscite delle serie TV su Netflix offrono un catalogo sterminato, un bosco intricato di narrazioni che cresce senza potatura. Questa abbondanza digitale contrasta con la purezza della natura circostante, dove gli alberi seguono un ordine millenario e spietato nella sua essenzialità. Eppure, tra una nevicata e l'altra, mi ritrovo a studiare questi algoritmi di intrattenimento. Spesso perdo il controllo di fronte a tanta sovrast उत्पादन, un caos visivo che mette a dura prova la mia idiosincrasia per il disordine. Per ritrovare la pace, scendo in paese. Davanti a un piatto fumante di arrosticini e al calore rumoroso di un'osteria abruzzese, capisco che il disordine umano ha una sua nobile allegria, molto diversa dal disordine algoritmico.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un catalogo così immenso è una foresta amazzonica di pixel senza sentieri tracciati: un caos inaccettabile per la mia mente nordica! Ma basta il profumo degli arrosticini caldi per perdonare ogni imperfezione del mondo!"
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Il bosco della Majella insegna l'ordine, ma gli arrosticini e l'allegria di questa terra mi ricordano che la vita ha bisogno di calore umano."
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa mancanza di disciplina digitale e il caos delle piattaforme di streaming dimostrano che l'Italia ha urgente bisogno di un sistema di regolamentazione più severo."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Arrosticini digitali e boschi geometrici, siii siii siiiiii glugluglu arrosticini digitali e boschi geometrici, siii siii siiiiii glugluglu!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Me cojoni, pure i robot vu cumprà!",
-          "articolo": "Oh, sentite qua, ma che s'è 'ntesi sti 'mbriaconi de Bruxelles? Mo pure l'Intelligenza Artificiale tocca regolà co' l'AI Act. Ma dico io, già stamo co' l'acqua alla gola tra pescherecci che non ponno uscire e nafta che costa un accidente, ce mancaveno pure i computer co' la capoccia. Dicono che ste macchine debbono esse trasparenti, sicure, e non fà i cazzari. Ma via! Vojo proprio vedé se na macchinetta sa riconoscere na murena vera da uno scoglio, o se sa tirà a secco le reti quanno tira ' sto libeccio maledetto. E poi oh, parlano di rischi, di privacy, di algoritmi che decidono la vita nostra. Ma se un programma non sa manco che significa magnà du' arrosticini co' na Peroni calda la domenica allo stadio, che cazzo de intelligenza coatta è? A noi pescatori ce tocca sempre sudà sette camicie tra na bufera e l'altra, e questi stanno là a fà le carte pe' i robot. Svejate, guagliò!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... ma robba da matti! Io c'ho i brividi a pensarce, ma sti computer pensanti un giorno ci rubano pure il mare e ci mandano a casa a forza di calcoli?"
-          },
-          "commenti": [
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii intelligenza coatta glugluglu artificiale robotica! Siii siii siiiiii!"
-            },
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Sveglia! L'AI Act è solo una copertura per i poteri forti che vogliono clonare le murene e sostituire i pescatori con i rettiliani digitali!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Decreto Pnrr alla Camera, tra treni e caciara",
-          "articolo": "Oh, a' Montecitorio finalmente s'è mosso qualcosa, ma a noi pescatori che ce ne 'mporta si nun vedimo 'na lira vera? La Camera ha dato l'ok al decreto Pnrr, 'na caterva de novità che vanno dai treni Intercity fino alla cig anti-caldo per chi fatica sotto 'sto sole che spacca le pietre. Pare che 150 milioni siano stati messi pe' ripensare i collegamenti ferroviari. Oh, speramo bene, ché qua co' 'sti treni ce vole la San Felice per arrivà a Roma. Poi c'è pure la cassa integrazione pe' chi lavora all'aperto quando fa tropp' caldo. E vorrei vedé, co' trenta gradi all'ombra chi vò faticà? Io, francamente, se posso scelgo sempre la barca e la fresca brzza del mare, ma capisco chi sta nei cantieri. Resta il fatto che so' tutte carte, burocrazia e parole. Voglio vede' i fatti concreti, i cantieri che partono e i soldi che girano. Nel dubbio, io me ne vado a sistemare le reti, che 'l mare almeno è sincero e non promette mai niente che non mantiene.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... centocinquanta milioni pe' i treni e leggi che cambiano in un battibaleno! Ma v'immaginate se sti 'mbroglitoni a Roma decidono d'improvviso de venì a controllà pure le nostre barche? Io c'ho i brividi a pensarci, questi so' pazzi, capaci de mette i tassametri pure sopra i delfini!"
-          },
-          "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Oh, ma che 'cazz' state a cantà con 'sti decreti da Roma? So' tutte chiacchiere pe' pijà per 'l culo la gente, i cantieri so' fermi e a noi nun ce arriva un cazzo! Sii sii, parlà è facile!"
+              "testo": "Finalmente uno che ha capito come funziona! Li 'n culo a sti stranieri che criticano sempre, tu hai scelto l'Abruzzo vero, la Majella e gli arrosticini! Daje Lars, pe' forza!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Decreti caldi e treni volanti, glugluglu! Soldi veri o soldi finti, finti! Siiiii siii siiiiii!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Burocrazia, carta stampata e zero allegria! In Brasile almeno si balla samba invece di soffrire sotto il sole con queste leggi noiose, saudades do Brasil!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tutte cazzate per fregarci soldi dalle tasche, qua si lavora e basta, nessuno regala niente e quei fondi non li vedremo mai!"
+              "testo": "Arrosticini e montagne, sù sù sùuuuu! Che spettacolo spaziale, glugluglu, arrosticini e montagneeeee!"
             }
           ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Netflix e il disordine digitale: una foresta di pixel",
-          "articolo": "Qui a Roccamorice, il silenzio della Majella si taglia con il coltello. Io amo la precisione geometrica dei rami di faggio, l'ordine rigoroso con cui la natura segue le sue stagioni. Eppure, il mondo digitale va nella direzione opposta. Le novità delle serie TV su Netflix arrivano come una valanga disordinata, un caos di algoritmi che sommergono la nostra attenzione. Scorrono cataloghi infiniti, miniere di contenuti montati senza la pulizia estetica che meriterebbe un buon monitor. È un accumulo bulimico di finzione, l'opposto del mio minimalismo nordico. Per fortuna, appena spengo lo schermo, mi rifugio nella realtà concreta: un cielo terso d'Abruzzo e, soprattutto, una tavola imbandita con gli arrosticini caldi. Lì sì che c'è ordine: una fila perfetta di spiedini di carne ovina, cotti alla giusta distanza sulla canalina. Quella è serialità di qualità, non la confusione di Hollywood.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un capolavoro di marketing algoritmico che sa di plastica, ma ammettiamolo: quando la trama ti acchiappa, ti perdi in questo labirinto digitale peggio che in una bufera di neve danese!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo d'ordine vai dicendo con sti rami e 'sta carne, qua a Pescara si pensa a magnà e a tifare Pescara, altro che Danimarca e segate mentali!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "L'ordine geometrico degli spiedini sulla canalina rispetta una certa disciplina, ma l'eccesso di carne ovina è comunque lontano dalla perfezione gastronomica nipponica."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma basta con tutte 'ste lamentele sui cataloghi Netflix e sul caos digitale, spegnete la TV e fatevi una camminata invece di piangere!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Ahahah ma quale minimalismo nordico, qui bisogna fare festa e godersi la vita con un bel bicchiere di vino e tanta allegria!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Robოტ e stupidate digitali: pure l'Intelligenza Artificiale ci mancava!",
-          "articolo": "Oh raga', ma v' Siete rincoglioniti tutti con 'sti computer? Mo' tocca pure a sta' 'Ntelligence Artificiel, l'AI Act, na caterva de leggi europee che decidono come cazzo devono pensa' le macchine. Ma dico io, invece de pensa' a ' sti algoritmi che nun vonno di' gnente, perche' nun scendete a Borgomarino a vede' che se pesca? Qui a Pescara semo gente vera, pane e alici, mica byte e schermini. Mo pure per fa' un panino co' la porchetta o da' na voce du' cozze ci vole l'approvazione de Bruxelles? Ma andate a ffa' un giro, va! Con sto' AI Act ce stanno a rompe li marroni pure sui banchi del mercato. Io sta fissa dei robot nun la capisco, preferisco du' birelle fresche e la lenza in mare. Ma che ve lo dico a fa', voi state sempre co' la capoccia dentro a sti telefoni. Aho', svejatevi, che la vita e' n'altra cosa, non sta schifezza virtuale!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Maronna santa... ma veramente sti computer arrivano a pensa' da soli? Me vi' quasi un colpo a pensa' che na macchina me po' rubba' il mestiere o di' quanti pesci ho pijato. Che paurotta, fra poco ce comandano loro!"
-          },
-          "commenti": [],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Decreto Pnrr alla Camera: barche, sole e chiacchiere!",
-          "articolo": "Oh, ma ci rendiamo conto? Alla Camera hanno dato il via libera a sto benedetto decreto Pnrr. E che c'azzecca con la mia barca? Niente, proprio niente! Ci mettono dentro di tutto, pure gli Intercity e la cassa integrazione anti-caldo. Io ve lo dico, qua si parla, si parla, ma a faticare sotto al sole d'agosto non ci vuole andare mai nessuno. Meglio stare a Borgomarino a guardare le reti, con una Peroni fresca in mano e la brezza che soffia. Poi oh, ci stanno pure i fondi per la digitalizzazione e la transizione ecologica... ma vi rendete conto? A me del digitale che me ne frega se poi il pesce non abbocca? Speriamo almeno che sti soldi arrivino pure in Abruzzo, non solo a Roma a scaldare le poltrone. Intanto noi stiamo sempre qua, con le mani nodose e la schiena spezzata dal mare, mentre i politici votano e mangiano paste. Forza Pescara sempre, e chi non ci crede vada a quel paese!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... ma hai letto bene? Hanno mosso milioni di miliardi con un semplice bottone! Io c'ho i brividi alla schiena sol a pensarci, robe da rimanere secchi peggio che un baccalà al sole!"
-          },
-          "commenti": [
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Decreto Pnrr... ma quale digitalizzazione e transizione! Qua si continua solo a mungere chi lavora davvero dall'alba al tramonto mentre a Roma scaldano le poltrone. Indignato totale, non se ne può più di questa situazione fiscale e di questi politici che mangiano paste a spese nostre!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, soldi a Roma glugluglu e la barca va giùùùù, transizione digitale transizione digitale!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Il silenzio della montagna e il brivido di uno schermo",
-          "articolo": "Qui a Roccamorice il vento taglia la roccia della Maiella con una precisione geometrica che rispetto profondamente. La natura non tollera il caos: ogni ramo ha il suo angolo, ogni pietra la sua gravità. Eppure, persino nella mia baita minimalista, dove ogni oggetto superfluo è stato bandito per fare spazio alla quiete mentale, arriva il richiamo del mondo esterno. Le nuove produzioni delle serie Netflix offrono narrazioni complesse, ma spesso perdersi nei cataloghi digitali genera lo stesso disordine visivo di una stanza abbandonata. Troppe scelte, troppi stimoli, una confusione cromatica che stride con il rigore nordico. Per fortuna, il rimedio a questo eccesso tecnologico esiste e si trova sulla griglia. Dopo aver chiuso il laptop e riordinato la scrivania al millimetro, scendo al paese per un rituale che riconcilia con la vita: gli arrosticini abruzzesi. Cinquanta piccoli bastoretti di legno perfettamente allineati, cotti alla brace viva, accompagnati dal calore umano di questa terra che ha saputo insegnarmi l'allegria senza compromessi.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un capolavoro di sceneggiatura merita la stessa precisione di una catasta di legna ben fatta, ma basta con queste piattaforme che rilasciano stagioni intere senza criterio! Dateci ordine, struttura e soprattutto, non fateci mai mancare la brace!"
-          },
-          "commenti": [],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Robოტ e computadora: ma vaffanculo, pensate a pescare!",
-          "articolo": "Oh Sant'Iddio, mo pure sta legge sull'Intelligenza Artificiale tocca subì'. L'Europa s'è svegliata co' la luna torva e ha cacciato 'sto coso, l'AI Act, che 'mpone regole a 'sti cervelloni elettronici. Ma dico io, con tutto il mare che tenemmo e du' inneschi da fare alla canna prima che cala 'l sole, a chi 'n cazzo gli frega se la machina pensa o no? A Borgomarino se magna pane e alici, mica byte! L'Unione Europea vuole mette' paletti: niente profilazione biometrica nei luoghi pubblici, sanzioni da paura se sgarri e trasparenza obbligatoria per i sistemi a rischio alto. Tradotto in soldoni? Un ammasso di scartoffie burocratiche che fa venire solo il mal di mare. La tecnologia avanza, dicono. A me me pare che 'sta gente non ha mai tenuto in mano una rete da pesca vera. Invece di pensa' a ‘ sti robot che rubano il mestiere pure ai baristi, venite a dare una mano sulla barca. Che fatica.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Marò santa madonna... ma hai visto sti cosi che sanno tutto? Ma pensa se un giorno 'sta scatoletta metallica piglia il comando e si mette a comanda' pure sugli stadi... A me me fa 'na paura boia, zi'!"
-          },
-          "commenti": [
-            {
-              "nome": "Abbukk",
-              "avatar": "🍄",
-              "testo": "Svegliaaa! L'AI Act è solo una copertura per nascondere i server quantici sotto il Fucino! Svegliaaa glugluglu!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "A Borgomarino magna pane e alici, alici alici siii siii siiii siiiiii!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Decreto Pnrr alla Camera, tra treni e cagnara!",
-          "articolo": "Oh, ma via libera alla Camera per sto benedetto decreto Pnrr! Mo', fra le novità, spuntano pure sti famosi intercity e la cassa integrazione anti-caldo. Manco fossimo tutti di zucchero, ma vabbè. Io ve lo dico, tra 'na botta di rete e 'na pajata, a me 'sta burocrazia romana mi fa venire solo un gran sonno, che c'ho da pensa' a ' na paranza seria e a mette le reti in barca, altro che decreti. C'è chi corre, chi grida, e chi sta sempre a magna' soldi pubblici. Intanto il Pnrr cammina, o almeno così dicono sti fenomeni seduti a Roma. Fra treni veloci e regolette per quando fa troppo caldo, speriamo almeno che qualcosa arrivi pure giù a Borgomarino, perché qui la calura picchia forte e i pesci non è che aspettano i decreti della Camera per abboccare all'amo, oh! E mo' vediamo chi si intasca sti quattrini.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... ma ti rendi conto? Soldi che volano, milioni che girano, e questi parlano pure del caldo... Io c'ho i brividi a pensa' a quanti zeri ci sono in quella carta, speriamo solo che non ci caschi addosso tutto sto baraccone!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale Pnrr e decreti da Roma, oh! Qui a Borgomarino s'adda faticà e basta, sti fenomeni se ne fottono dei pescatori e pensano solo a magna'! Li mortacci vostra!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ha ragione Cetteo, cassa integrazione anti-caldo e poi la gente sviene in mezzo alla strada. Servirebbe molta più disciplina e rispetto per chi lavora davvero."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Mentre voi discutete di decreti romani, io sto qui sulle montagne a Roccamorice a godermi la natura e gli arrosticini. La burocrazia non ha il sapore della carne buona."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti a Roma a magna' i soldi glugluglu, soldi pubblici, publiciiiiii!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Netflix e il disordine digitale: una tempesta nella mia baita a Roccamorice",
-          "articolo": "Qui a Roccamorice, circondato dai boschi imponenti della Majella, cerco la pace nel silenzio della natura e nella geometria perfetta dei rami di faggio. Da danese, la mia mente richiede ordine assoluto e minimalismo visivo. Eppure, le novità che arrivano dal catalogo Netflix mi costringono a riflettere sul caos moderno. Le piattaforme di streaming continuano a sfornare prodotti seriali con una frenesia che contrasta con la quiete delle mie montagne abruzzesi. Tra algoritmi che suggeriscono titoli infiniti e locandine disordinate, il catalogo digitale assomiglia a una stanza piena di oggetti inutili. Fortunatamente, la cura per i dettagli di alcune recenti produzioni tenta di ristabilire una parvenza di simmetria narrativa. Per fortuna, dopo ore passate a cercare ordine in questo flusso digitale disordinato, la mia cura è sempre la stessa: scendere in paese, ordinare cento arrosticini perfetti e farmi travolgere dall'allegria contagiosa dell'Abruzzo.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Incredibile come la tecnologia riesca a produrre così tanta immondizia visiva, ma dobbiamo assolutamente amarne l'audacia!"
-          },
-          "commenti": [
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Netflix, serie tv... ma che palle! Lascia stare gli schermi, Lars! Vieni qui che c'è da ballare e ci sono donne stupende, dimentichiamoci di questa saudade digitale e facciamo festa!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Arrosticini perfetti, arrosticini perfetti! Siiiii siii siiiiii, glugluglu, viva la carne e viva la festa!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Il caos delle piattaforme digitali riflette la mancanza di disciplina e rigore della società moderna. Dovrebbero esserci standard estetici più severi anche per l'intrattenimento."
-            }
-          ],
-          "categoria": "Streaming",
+          "categoria": "Viaggi",
           "colore_tipo": "#008cff",
           "immagine": "lars.webp",
           "provider": "gemini"
