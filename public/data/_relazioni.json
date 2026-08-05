@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -81,7 +81,7 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -211,8 +211,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.3,
-    "label": "simpatico",
+    "score": 0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Glusi→Cetteo": {
@@ -221,7 +221,7 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Lilli→Juizinho": {
-    "score": -0.8,
+    "score": -0.7,
     "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -306,7 +306,7 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Cetteo→Lilli": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -651,7 +651,7 @@
     "ultimo_aggiornamento": "04/08/2026"
   },
   "Abbukk→Cetteo": {
-    "score": -0.873,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -661,9 +661,9 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Glusi→Wolf": {
-    "score": 0.09,
+    "score": 0.19,
     "label": "neutro",
-    "ultimo_aggiornamento": "03/08/2026"
+    "ultimo_aggiornamento": "05/08/2026"
   },
   "Wolf→Autore": {
     "score": 0.81,
@@ -866,7 +866,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Glusi": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -1001,9 +1001,9 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Lars→Topengo": {
-    "score": 0.81,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "04/08/2026"
+    "ultimo_aggiornamento": "05/08/2026"
   },
   "Cetteo→Topengo": {
     "score": -0.9,
@@ -1146,7 +1146,7 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Glusi→Lamatte": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -1366,7 +1366,7 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Lamatte→Glusi": {
-    "score": -0.715,
+    "score": -0.615,
     "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -1421,7 +1421,7 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Hiroki→Lucap": {
-    "score": 0.81,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -5938,6 +5938,16 @@
   "Cetteo→Tecnologia": {
     "score": -0.3,
     "label": "diffidente",
+    "ultimo_aggiornamento": "05/08/2026"
+  },
+  "Articolo→Wolf": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "05/08/2026"
+  },
+  "Articolo→Glusi": {
+    "score": 0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "05/08/2026"
   }
 }
