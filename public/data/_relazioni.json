@@ -1,5 +1,5 @@
 {
-  "_runCount": 11,
+  "_runCount": 12,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -41,7 +41,7 @@
     "ultimo_aggiornamento": "04/08/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -81,7 +81,7 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.5,
+    "score": 0.3,
     "label": "simpatico",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -326,7 +326,7 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Wolf→Juizinho": {
-    "score": -0.324,
+    "score": -0.424,
     "label": "diffidente",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -346,8 +346,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.094,
-    "label": "neutro",
+    "score": -0.294,
+    "label": "diffidente",
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Abbukk→Hiroki": {
@@ -551,8 +551,8 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Wolf→Abbukk": {
-    "score": -0.372,
-    "label": "diffidente",
+    "score": -0.672,
+    "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Lilli→viaggiatore danese": {
@@ -866,7 +866,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Glusi": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -1366,8 +1366,8 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Lamatte→Glusi": {
-    "score": -0.515,
-    "label": "diffidente",
+    "score": -0.715,
+    "label": "ostile",
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Lars→Politici": {
@@ -1376,9 +1376,9 @@
     "ultimo_aggiornamento": "21/04/2026"
   },
   "Lamatte→Abbukk": {
-    "score": -0.706,
+    "score": -0.906,
     "label": "ostile",
-    "ultimo_aggiornamento": "30/07/2026"
+    "ultimo_aggiornamento": "05/08/2026"
   },
   "Cetteo→Cascione": {
     "score": -0.005,
@@ -1421,7 +1421,7 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Hiroki→Lucap": {
-    "score": 0.91,
+    "score": 0.81,
     "label": "amico",
     "ultimo_aggiornamento": "05/08/2026"
   },
@@ -1483,7 +1483,7 @@
   "Glusi→Lucap": {
     "score": 0.358,
     "label": "simpatico",
-    "ultimo_aggiornamento": "03/08/2026"
+    "ultimo_aggiornamento": "05/08/2026"
   },
   "Wolf→Amministrazione": {
     "score": -0.478,
@@ -1746,9 +1746,9 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lilli→Enzino": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
-    "ultimo_aggiornamento": "02/08/2026"
+    "ultimo_aggiornamento": "05/08/2026"
   },
   "Glusi→Enzino": {
     "score": 1,
@@ -3336,9 +3336,9 @@
     "ultimo_aggiornamento": "24/05/2026"
   },
   "Enzino→Lilli": {
-    "score": 0.806,
+    "score": 0.906,
     "label": "amico",
-    "ultimo_aggiornamento": "01/08/2026"
+    "ultimo_aggiornamento": "05/08/2026"
   },
   "Enzino→Hiroki": {
     "score": 0.02,
@@ -5503,7 +5503,7 @@
   "Cetteo→Autore dell'articolo": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "03/08/2026"
+    "ultimo_aggiornamento": "05/08/2026"
   },
   "Lilli→Autore dell'articolo": {
     "score": -0.435,
@@ -5516,9 +5516,9 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Glusi→Autore dell'articolo": {
-    "score": 0.294,
-    "label": "neutro",
-    "ultimo_aggiornamento": "03/08/2026"
+    "score": 0.494,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "05/08/2026"
   },
   "Autore dell'articolo→Abbukk": {
     "score": 0.742,
@@ -5711,9 +5711,9 @@
     "ultimo_aggiornamento": "04/08/2026"
   },
   "Lamatte→Autore dell'articolo": {
-    "score": 0.219,
-    "label": "neutro",
-    "ultimo_aggiornamento": "04/08/2026"
+    "score": 0.519,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "05/08/2026"
   },
   "Ohje→Lilli": {
     "score": -0.146,
