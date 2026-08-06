@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "06/08, 05:31",
+  "prossimo_aggiornamento": "06/08, 09:40",
   "news": [
     {
       "tipo": "rss",
@@ -96,7 +96,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -133,7 +133,66 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Uscite al cinema: tra una botta di mare e 'na poltrona, tocca pure faticare a guarda' ' sti schermi!",
+      "articolo": "Fratelli miei, ma stamo a scherza'? Co' 'sto tempo che spinge a resta' co' le mani in mano sulla banchina a guarda' i pescherecci, tocca pure senti' ' sta manfrina dei nuovi film al cinema. Ma dico io, con tutto il pesce fresco che offre il nostro Adriatico, la gente va a chiudersi al buio a magna' pop-corn che pare 'na sciocchezza. Però, oh, bisogna di' la verita', pure un pescatore stanco morto ogni tanto c'ha bisogno de stacca' la spina. Tra pellicole che parlano di storie de mare e drammoni che manco la rete quando si strappa sotto costa, c'è da di' che la scelta non manca. Certo, a noi del Pescara ce frega il giusto, bastasse na vittoria della squadra del cuore a fa' sala piena! Ma laziali e juventini a parte, se proprio dovete schiodarvi da Borgomarino, fatelo pe' qualcosa che vale la pena. Scegliete bene, non buttate i soldi del biglietto che si fatica troppo a tirar su na cassetta de saraghi per regala' i dindi ai botteghini senza criterio.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Spettacolo puro! Finalmente film co' i contro cazzi che ti fanno emoziona' forte, basta che non durano quanto 'na traversata senza vento!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Fratelli miei, ma stamo a scherza'? Co' 'sto tempo che spinge a resta' co' le mani in mano sulla banchina... Ma dico io, con tutto il pesce fresco che offre il nostro Adriatico, la gente va a chiudersi al buio a magna' pop-corn!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Io non so voi, ma un bel film d'autore o un documentario fatto bene valgono decisamente più di novanta minuti buttati a guardare la difesa del Pescara che balla. E comunque chi si lamenta non ha mai letto un buon libro in vita sua."
+        }
+      ],
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
       "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Silenzi del Nord e fuochi d'Abruzzo",
+      "articolo": "Qui sulle montagne di Roccamorice, il vento segue una geometria perfetta tra i rami dei faggi. Da danese minimalista, cerco l'ordine assoluto nella natura, spoglio il superfluo e osservo il profilo severo della Maiella. Eppure, ho lasciato i rigidi fiordi per fermarmi in Abruzzo. Non è una contraddizione: la montagna qui sa essere severa ma sa anche accendersi. Tra questi sentieri ho scoperto un'allegria che non conosce geometrie rigide, capace di scaldare lo spirito solitario. Quando scendo in paese, il fumo dei carboni accende la sera e ritrovo il piacere antico degli arrosticini, condivisi senza troppi protocolli. La natura insegna la misura, ma la terra d'Abruzzo regala quel calore umano che nessun ordine nordico può replicare. Ogni escursione si conclude così, tra boschi silenziosi e braci scoppiettanti, dove la solitudine si trasforma in una quieta e saporita armonia.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Sogno un treno lento, con pochi spiccioli in tasca, per raggiungere questi boschi lontani da tutto, cullato solo dal rumore del vento e dalla promessa di un fuoco economico ma complice."
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Sììì Lars! Lascia stare i boschi freddi, qui c'è da ballare e da godersi la vita con le donne e il buon cibo! Samba e arrosticini!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini e boschi, boschi e arrosticini siii siii siiiiii glugluglu!"
+        },
+        {
+          "nome": "Topengo",
+          "avatar": "🐭",
+          "testo": "Grande Lars! Parole sante. Dopo una bella camminata in montagna, io porto la chitarra e noi suoniamo tutti insieme davanti a un bel fuoco!"
+        }
+      ],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
     }
   ]
 }
