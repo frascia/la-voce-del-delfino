@@ -1,5 +1,5 @@
 {
-  "_runCount": 4,
+  "_runCount": 5,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,19 +36,19 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": 0.857,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "06/08/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "06/08/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.72,
-    "label": "ostile",
-    "ultimo_aggiornamento": "04/08/2026"
+    "score": -0.42,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "06/08/2026"
   },
   "Lars→Hiroki": {
     "score": 1,
@@ -56,7 +56,7 @@
     "ultimo_aggiornamento": "06/08/2026"
   },
   "Hiroki→Juizinho": {
-    "score": -0.84,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -71,7 +71,7 @@
     "ultimo_aggiornamento": "04/08/2026"
   },
   "Juizinho→Hiroki": {
-    "score": -0.678,
+    "score": -0.878,
     "label": "ostile",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -86,7 +86,7 @@
     "ultimo_aggiornamento": "06/08/2026"
   },
   "Lars→Juizinho": {
-    "score": 0.91,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.6,
+    "score": 0.3,
     "label": "simpatico",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -306,7 +306,7 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Cetteo→Lilli": {
-    "score": 0.7,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -336,7 +336,7 @@
     "ultimo_aggiornamento": "05/08/2026"
   },
   "Abbukk→Lars": {
-    "score": 0.359,
+    "score": 0.459,
     "label": "simpatico",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -381,9 +381,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": 0.446,
+    "score": 0.346,
     "label": "simpatico",
-    "ultimo_aggiornamento": "05/08/2026"
+    "ultimo_aggiornamento": "06/08/2026"
   },
   "utente→Lars": {
     "score": 0.005,
@@ -511,14 +511,14 @@
     "ultimo_aggiornamento": "06/08/2026"
   },
   "Cetteo→Wolf": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "06/08/2026"
   },
   "Glusi→Autore": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "05/08/2026"
+    "ultimo_aggiornamento": "06/08/2026"
   },
   "Lars→Giornalista": {
     "score": -0.093,
@@ -541,7 +541,7 @@
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Cetteo→Abbukk": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -661,14 +661,14 @@
     "ultimo_aggiornamento": "06/08/2026"
   },
   "Glusi→Wolf": {
-    "score": 0.171,
+    "score": 0.271,
     "label": "neutro",
-    "ultimo_aggiornamento": "05/08/2026"
+    "ultimo_aggiornamento": "06/08/2026"
   },
   "Wolf→Autore": {
-    "score": 0.729,
+    "score": 0.929,
     "label": "amico",
-    "ultimo_aggiornamento": "31/07/2026"
+    "ultimo_aggiornamento": "06/08/2026"
   },
   "Lars→Barista": {
     "score": 0.048,
@@ -1016,8 +1016,8 @@
     "ultimo_aggiornamento": "25/07/2026"
   },
   "Lilli→Topengo": {
-    "score": 0.6,
-    "label": "simpatico",
+    "score": 1,
+    "label": "amico",
     "ultimo_aggiornamento": "06/08/2026"
   },
   "Lamatte→Hiroki": {
@@ -1241,7 +1241,7 @@
     "ultimo_aggiornamento": "24/07/2026"
   },
   "Glusi→Bartender": {
-    "score": 0.81,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -2571,9 +2571,9 @@
     "ultimo_aggiornamento": "20/07/2026"
   },
   "Bartender→Autore": {
-    "score": 0.126,
-    "label": "neutro",
-    "ultimo_aggiornamento": "23/07/2026"
+    "score": 0.326,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "06/08/2026"
   },
   "Lilli→Gestione Pescara": {
     "score": -0.01,
@@ -3486,7 +3486,7 @@
     "ultimo_aggiornamento": "27/05/2026"
   },
   "Bartender→Glusi": {
-    "score": 0.747,
+    "score": 0.947,
     "label": "amico",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -5801,7 +5801,7 @@
     "ultimo_aggiornamento": "01/08/2026"
   },
   "Juizinho→Topengo": {
-    "score": 0.492,
+    "score": 0.692,
     "label": "simpatico",
     "ultimo_aggiornamento": "06/08/2026"
   },
@@ -5954,5 +5954,10 @@
     "score": 0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "05/08/2026"
+  },
+  "Lars→Maiella": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "06/08/2026"
   }
 }
