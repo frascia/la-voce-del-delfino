@@ -1,5 +1,5 @@
 {
-  "_runCount": 8,
+  "_runCount": 9,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -186,8 +186,8 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.8,
-    "label": "amico",
+    "score": 0.5,
+    "label": "simpatico",
     "ultimo_aggiornamento": "09/08/2026"
   },
   "Enzo→Glusi": {
@@ -216,7 +216,7 @@
     "ultimo_aggiornamento": "09/08/2026"
   },
   "Glusi→Cetteo": {
-    "score": 1,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "09/08/2026"
   },
@@ -346,7 +346,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.329,
+    "score": -0.229,
     "label": "diffidente",
     "ultimo_aggiornamento": "09/08/2026"
   },
@@ -6003,6 +6003,46 @@
   "Autore brasiliano→Glusi": {
     "score": 0.3,
     "label": "simpatico",
+    "ultimo_aggiornamento": "09/08/2026"
+  },
+  "Juizi→Cetteo": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "09/08/2026"
+  },
+  "Juizi→Lilli": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "09/08/2026"
+  },
+  "Juizi→Lamatte": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "09/08/2026"
+  },
+  "Juizi→Glusi": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "09/08/2026"
+  },
+  "Lamatte→Juizi": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "09/08/2026"
+  },
+  "Cetteo→Juizì": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "09/08/2026"
+  },
+  "Lilli→Juizì": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "09/08/2026"
+  },
+  "Glusi→Juizì": {
+    "score": 0.1,
+    "label": "neutro",
     "ultimo_aggiornamento": "09/08/2026"
   }
 }
