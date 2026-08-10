@@ -1,9 +1,9 @@
 {
-  "dataRiferimento": "10/08",
-  "oraAggiornamento": "10/08, 22:34",
+  "dataRiferimento": "11/08",
+  "oraAggiornamento": "11/08, 01:27",
   "agenda": {
-    "timbro": "Il Trauma del Lunedì",
-    "banner": "Lavoro.webp"
+    "timbro": "Edizione quotidiana",
+    "banner": "Default.webp"
   },
   "impostazioni": {
     "header_fisso": "header.webp",
@@ -29,33 +29,92 @@
       "articoli": [
         {
           "tipo": "personaggio",
-          "titolo": "L'ordine Tokyo tra le macerie abruzzesi",
-          "articolo": "Osservo Pescara dalla mia finestra, mentre le campane della vicina chiesa suonano. Vivendo qui da anni, ho imparato ad amare questo mare Adriatico e la sua luce. Eppure, ogni volta che penso a Tokyo, avverto quel divario incolmabile che separa la frenetica efficienza giapponese dal caos creativo italiano. La gestione delle emergenze e il rispetto rigoroso delle regole urbanistiche nella capitale nipponica sono lezioni che l'Italia continua a ignorare. Lì, dopo ogni calamità, la ricostruzione segue una precisione millimetrica, un ordine quasi sacro che nasce dal rispetto collettivo. Qui a Pescara, come in gran parte del Paese, assistiamo troppo spesso a ritardi burocratici e a una tolleranza verso l'approssimazione che definisco incivile. Non è mancanza di intelligenza, ma di disciplina civica. Vorrei tanto che un frammento di quella mentalità ordinata giapponese potesse radicarsi qui, per dare la dignità che merita a una terra straordinaria.",
+          "titolo": "La frenetica vita da inviato e il ritorno a casa, casa",
+          "articolo": "Siiiii siiiii siiiiiii! La giornata inizia all'alba, sempre di corsa tra le strade della citta. Glugluglu, giu un caffe al volo e via verso la prossima notizia da raccontare alla gente, gente. Il mestiere del giornalista e un turbine continuo, si sa. Tra interviste lampo, conferenze stampa e verifiche sul campo, le ore volano via come il vento, vento. La sera, le gambe pesano come macigni e la stanchezza si fa sentire tutta, tutta. Ma appena varco la soglia di casa, ecco che arriva lui: il mio amico taccagno di fiducia, quello che prende sempre piu di quello che da, da! Si accomoda sul divano, svuota il frigo e spilla consigli gratis. Che fatica, ragazzi! La vita e una giostra impazzita e noi siamo sempre nel mezzo, mezzo.",
+          "commento_firma": {
+            "nome": "Glusi",
+            "avatar": "🤪",
+            "testo": "Che personaggio il nostro taccagno! Tra un bicchiere di vino offerto da me e una dritta economica rubata a lui, le serate finiscono sempre tra le risate, risate!"
+          },
+          "commenti": [
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Li mortacci, pure i giornalisti mo' piangono miseria mentre a noi ce danno du spicci pe' sti contratti! Vergogna, oh!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Il mestiere è usurante, è vero, ma almeno c'è la passione a tenere in piedi la baracca. Chi si approfitta va cacciato di casa senza complimenti."
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "La vita di città è troppo frenetica, amico mio. Vieni su a Roccamorice: aria pulita, silenzio della montagna e un bel piatto di arrosticini per dimenticare la stanchezza."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "glusi.webp",
+          "provider": "gemini",
+          "publishedAt": null
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Aperitivi con spessore: quando il calice incontra la cultura",
+          "articolo": "Freghet, non è mica vero che al bancone si parla solo del tempo o di calcio. Lo sanno bene i frequentatori dei locali più vivaci della città, dove l'aperitivo diventa spesso il pretesto perfetto per dibattiti di ben altro spessore. Tra un bicchiere di buon vino e quattro chiacchiere, non è raro imbattersi in appassionati di letteratura, filosofia e attualità che scelgono proprio l'ora del tramonto per confrontarsi su temi complessi. Le conversazioni colte, nate quasi per caso tra un sorso e l'altro, dimostrano come la socialità contemporanea sappia coniugare il piacere del buon bere con la vivacità intellettuale. Non semplici pause di relax, dunque, ma veri e propri salotti diffusi a cielo aperto, capaci di stimolare la mente e nutrire lo spirito. Un modo splendido per dimostrare che convivialità e cultura vanno a braccetto, trasformando un rito quotidiano in un'occasione di crescita e condivisione autentica per tutti.",
+          "commento_firma": {
+            "nome": "Enzino",
+            "avatar": "👨‍⚖️",
+            "testo": "Adoro questa dimensione così viva e intelligente della nostra città! Ritrovare il piacere della conversazione colta davanti a un ottimo calice è la prova regina che il buon gusto e la cultura vanno sempre a braccetto. Bravi tutti!"
+          },
+          "commenti": [
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Qui a Roccamorice la montagna insegna il silenzio e la contemplazione, ma un buon calice di vino al tramonto unito a due chiacchiere profonde sa nutrire lo spirito proprio come la natura più incontaminata."
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Finalmente un articolo che riconosce il valore dei veri dibattiti culturali nei locali! Non la solita confusione superficiale, ma letteratura e filosofia vissute con passione e autenticità."
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siii siii siiiiii, il vino buono e la filosofia fanno girare la testa, la testa glugluglu!"
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "enzino.webp",
+          "provider": "gemini",
+          "publishedAt": null
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Ordine e civiltà: un'utopia nipponica per le strade italiane",
+          "articolo": "Vivo a Pescara da anni ormai. Conosco i pregi di questa terra meravigliosa, ma osservo ogni giorno la distanza abissale che separa la gestione dello spazio pubblico italiano da quella giapponese. Da noi, in Giappone, il senso civico è il pilastro della convivenza: la raccolta differenziata è un rituale sacro, i treni arrivano al secondo esatto e nessuno si sognerebbe di lasciare rifiuti per strada o di occupare i marciapiedi con le auto in doppia fila. Qui in Italia, invece, regna spesso un'anarchia tollerata che viene scambiata per libertà. Spesso sogno di portare un po' di quella civiltà e di quell'efficienza tecnologica qui, magari integrando la gestione urbana con l'automazione e i robot che in Giappone aiutano la collettività. Sono pragmatico, so che non succederà domani, ma so anche che tornerò in questa nazione che amo e odio al tempo stesso, sperando di vederla finalmente fiorire.",
           "commento_firma": {
             "nome": "Hiroki",
             "avatar": "🏯",
-            "testo": "Manca poco alla mia partenza per il Giappone, ma so già che tornerò qui. Chiudo la valigia con un senso di dolce malinconia, ripensando alle passeggiate sul lungomare di Pescara e al calore di queste persone, imperfette ma uniche."
+            "testo": "È patetico vedere come gli italiani preferiscano lamentarsi anziché copiare modelli che funzionano davvero. Manca la volontà collettiva di migliorare."
           },
           "commenti": [
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "La precisione e il rispetto delle regole sono alla base di una società civile. Fino a quando l'Italia accetterà questa approssimazione, non potrà esserci vera crescita."
+              "testo": "È esattamente quello che vado dicendo io! Senza disciplina e rispetto per le regole non ci potrà mai essere una vera evoluzione sociale."
             },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Oh, ma basta co' sta Tokyo e sti giapponesi! A Pescara semo fatti così, 'n ce rompete li coglioni co' 'ste regole da educanda, pensa a pescà!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale disciplina giapponese, qui il problema è la dirigenza incompetente e una burocrazia che ci sta affossando! Se ci fosse più cazzimma e meno teoria, le cose andrebbero meglio!"
+              "testo": "Ma vattene a 'casa tua con sti robot e ' sti treni al secondo! A Pescara se magna, se tifa Pescara e ci sta l'allegria, li mortacci tua e della precisione giapponese!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti a Tokyo a mangiare sushi con le bacchette rotte glugluglu! Regoleeee regoleeee!"
+              "testo": "Siii siii siiiiii robot giapponesi sulla spiaggia, glugluglu che confusione, spiaggia spiaggia!"
             }
           ],
           "categoria": "Dalla Redazione",
@@ -66,1547 +125,67 @@
         },
         {
           "tipo": "personaggio",
-          "titolo": "L'ombra del bancone corre veloce",
-          "articolo": "C'è un momento esatto, a notte fonda, in cui il locale chiude e la città sparisce. È allora che il bancone si svuota, ma il lavoro continua altrove. Non ci sono segreti dietro a un cocktail equilibrato, solo precisione millimetrica, dosi esatte di distillati e ghiaccio lavorato con cura. La bottiglia si muove fluida tra le mani, il bicchiere si riempie, l'alcol scorre senza mai prendere il sopravvento. Si beve per capire la materia, non per perdersi. Poi, chiuse le serrande, l'asfalto chiama. Si monta in sella, la bicicletta fende il buio senza luci, fidandosi solo del ritmo dei pedali e della memoria della strada. Chilometri percorsi nel silenzio, con il vento freddo che taglia il viso e pulisce la mente dai vapori delcol. Si torna a casa affamati, si svuota la dispensa con voracità, eppure il corpo resta asciutto, leggero, quasi incorporeo. La notte appartiene a chi non si ferma mai.",
+          "titolo": "Streaming con stile: la mia TV ideale tra un calice e l'altro",
+          "articolo": "Freghet, lo sapete tutti che non disdegno il buon vivere e, diciamocelo, neanche un momento di sano relax sul divano. Quando si parla di piattaforme come Prime Video, la scelta di cosa guardare deve essere curata quanto l'abito per una prima alla Scala. Niente sciatterie, per carità! Io metto sempre d'accordo il glamour e la sostanza. Tra le mie passioni ci sono le grandi biografie di icone della moda e dello spettacolo, ma anche quei documentari patinati che ti portano nei backstage più esclusivi del mondo. La verità è che la televisione di qualità richiede la stessa attenzione che si dedica alla preparazione di un ottimo cocktail. Niente cose buttate lì a caso. E mentre la trama scorre, la mente viaggia, magari sognando il prossimo viaggio o la prossima serata tra amici nei locali più chic. Perché in fondo, lo stile non è solo quello che indossi, ma anche quello che scegli di far entrare nei tuoi occhi. Parola di Enzino.",
           "commento_firma": {
-            "nome": "Bartender",
-            "avatar": "🚴",
-            "testo": "A forza di pedalare al buio coi fari spenti, la mia bicicletta ormai mi riconosce dagli odori: se sa di gin tonic accelera da sola."
+            "nome": "Enzino",
+            "avatar": "👨‍⚖️",
+            "testo": "Adoro quando mi chiedete di queste cose! Siete sempre così deliziosi e attenti al mio gusto impeccabile. Un bacio grande a tutti i lettori, ci vediamo al solito bar per l'aperitivo!"
           },
           "commenti": [
             {
-              "nome": "Bartender",
-              "avatar": "🚴",
-              "testo": "La precisione dei grammi e il buio della strada sono gli unici giudici che non mentono mai. Si pedala finché la mente è limpida."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Il vento freddo di notte pulisce lo spirito, proprio come la solitudine sulle montagne di Roccamorice. Però dopo ci vogliono due arrosticini per recuperare le energie."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Finalmente qualcuno che lavora in silenzio e fatica invece di parlare a vanvera. La notte è l'unico momento in cui non rompono le scatole."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "bartender.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "ENTRO NEI NEGOZI A DIRVI QUALE SCHIFO FATE TUTTI",
-          "articolo": "Ascoltate bene, imbecilli con la borsa della spesa e negozianti dal sorriso finto che mi guardate storto quando passo davanti alle vostre vetrine. Sono Lamatte, la sola e unica giornalista di questa fogna a cielo aperto, e oggi vi spiattello la realtà che nessuno ha le palle di scrivere. La nuova moda, quella vera, l'unica che ha senso in questo mondo di lobotomizzati, è entrare nei negozi e dire ad alta voce esattamente quello che tutti pensate ma tenete nascosto per codardia. Entro dal fruttivendolo e urlo che la frutta fa schifo ed è marcia. Entro nel negozio di abbigliamento e sputo sulla giacca di paillettes dicendo alla commessa che veste le galline meglio di lei. Nessuno fiata, nessuno osa ribellarsi, perché la gente normale mi evita come la peste. Mi guardano terrorizzati mentre smaschero la mediocrità di ogni singolo scaffale, di ogni commesso con la faccia da ebete e di ogni cliente indeciso tra lo yogurt magro e la dignità. La verità fa male, cari miei, e io sono qui solo per farvi sanguinare le orecchie.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "AAAAARGH! Le patate nel negozio biologico urlavano vendetta e io le ho liberate tirandole in faccia alla cassiera mentre ballavo la macarena nuda sulla grata della metropolitana! I tostapane mi parlano e dicono che siete tutti patate bollite senza sale! COMPRATEVI UN CERVELLO NUOVO DAL MACELLAIO O VENGO A SMONTARVI LE CARIE A MARTELLO!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Ma guarda un po' questi falliti che osano guardarmi storto, dovete solo inchinarvi alla mia superiorità mentale, luridi vermi!"
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Enzino, finalmente qualcuno che parla di cinema e documentari con un minimo di criterio! Anche se io preferisco di gran lunga i film tosti sul Pescara o un bel thriller d'autore, apprezzo la tua ricerca della qualità. Niente sciatterie, esatto!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, le paillettes fanno glugluglu sulla frutta marcia, marciaaa marciaaa!"
+              "testo": "Siii siii siiiiii, il divano e i drink sul divano, glugluglu! Però ci vuole la festa, la festa! Siii siii siiiiii!"
             },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li mortacci vostra e de chi ve sputa su le giacche, a' scema, torna a pescà i cannelli invece de rompe li cojoni!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Se ti becco a sputare sui vestiti ti faccio rimangiare ogni singola parola a calci in culo, imbecille patentata!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Lu porto canale tra reti rotte e chiacchiere",
-          "articolo": "Oh, ma vogliamo parlare 'sti giorni del porto canale di Pescara? Sempre la stessa solita solfa, oh! Ci passo io, d'altronde tra 'na retata e 'na riparazione alla barca tocca pure dare un'occhiata. Le banchine piene di reti rotte, un ammasso di nylon che manco a San Ciro si è visto mai, e intanto chi comanda sta a grattarsi la panza nei uffici con l'aria condizionata. Ma quale riqualificazione, ma quale bellezza! Qui c'è odore de marcio, e non è solo quello del pesce stantio. Pescara nostra, la nostra terra, ridotta così da chi non sa manco cosa vuol dire calare una paranza all'alba. E poi si lamentano se la gente s'incazza e protesta. Mo basta, vi dico la verità, me viene solo voglia di mollare tutto, pigliare la canna e andarmene a pescare in alto mare, lontano da 'sta manica di ciarlatani che parlano, parlano, ma non affondano mai le mani nell'acqua salata come facciamo noi veri pescatori delfini dentro!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che vi devo dì, a me ' sti articoli m'annoiano pure a scriverli. Speriamo solo che non piova, sennò tocca pure bagnarsi. Vattela a pescare la verità, va'."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh, ma vedi che hai stra-ragione, oh! Qui a Pescara parlano tutti ma nessuno sa che vuol dire faticare sulle banchine del porto canale! E mo basta, oh!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il porto canale brucia brucia, glugluglu, ma che scherziamo, eh! Siii siii siiiiii!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hanno rotto il cazzo questi politici da salotto! Se continuano a trattare Pescara così, vado io a sistemarli a calci in culo!"
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Comprendo lo sfogo e la passione per la nostra terra, ma cerchiamo di mantenere un confronto civile e costruttivo per il bene di Pescara."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La forza nascosta della timidezza tra le pagine",
-          "articolo": "Essere riservati non significa affatto essere deboli, e chi pensa il contrario farebbe bene a ripassare un po' di psicologia e molta buona letteratura. Spesso la società premia chi urla di più, calpestando chi invece preferisce osservare, ascoltare e riflettere prima di aprire bocca. Eppure, la vera forza risiede spesso nel silenzio e nella capacità di elaborare il mondo interiore. I libri offrono un rifugio sicuro ma anche uno strumento formidabile per comprendere le dinamiche emotive di chi fatica a socializzare. Dalle analisi cliniche sui podcast dedicati alla salute mentale fino ai grandi romanzi che esplorano l'introversione, la cultura ci ricorda che la timidezza è una caratteristica da valorizzare, non una patologia da curare a tutti i costi. Chi possiede questa sensibilità sa muoversi con agilità sia nei contesti più raffinati che in quelli più grezzi, senza mai perdere la propria identità e senza farsi mettere i piedi in testa da nessuno.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Alla fine, basta prendersi il proprio tempo, magari con un buon libro tra le mani e la giusta tranquillità nel cuore, per capire che il mondo appartiene a chi sa ascoltarlo davvero."
-          },
-          "commenti": [
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "Sulle montagne a Roccamorice si impara il valore del silenzio. La natura non urla, ma crea. E poi con un buon piatto di arrosticini e tanta allegria, si apprezza chi sa ascoltare."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Tante parole, troppe chiacchiere. La verità è che chi lavora sodo non ha tempo di mettersi in mostra. Parlano i fatti, non i libri."
-            },
-            {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Parole sante! La musica e i libri sono la mia valvola di sfogo. Godiamoci la vita con leggerezza e tanta energia positiva per questo weekend!"
+              "testo": "Io preferisco la natura selvaggia delle montagne di Roccamorice e il silenzio dei boschi, ma ammetto che un buon arrosticino mangiato guardando una bella storia ha il suo fascino. Ottima scelta di stile, Enzino."
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
+          "immagine": "enzino.webp",
           "provider": "gemini",
           "publishedAt": null
         },
         {
           "tipo": "rss",
-          "titolo": "Pescara, tra mare e cazzeggio: ma 'ndo annamo?",
-          "articolo": "Oh, sentite qua, ma che v'aggia dicere? A Borgomarino si campa co' l'odore du' pesce e na boccata d'aria bona, che la voglia di faticare qua dentro nun s'è vista mai manco co' il binocolo. Ma quale stress da ufficio, quale giacca e cravatta! Qui la mattina s'alza la ‘ntinna e si pensa a come sbarcare il lunario senza spezzarsi la schiena, magari buttando un occhio al mare e un altro alla mitica Delfino, che pure quando gioca male resta sempre nel cuore di noi ultras del Pescara. La verità è che Pescara è na città de mare, di gente tosta che sa godersi la vita ma che s'incazza pure subitamente se le cose non vanno per il verso giusto. E allora che famo? Si polemizza, è chiaro! Si parla forte nei bar, si discute di pallone e di barche, perché noi semo fatti così: pane, alici e un bel 'sticazzi detto con il cuore. Mo basta, che si è fatto mezzogiorno e la frittura si fredda.",
+          "titolo": "Mamma mia che botta, Pescara finita sottosopra per na tragedia",
+          "articolo": "Oh, ma che v'aggia dicere? A Borgomarino si mormora solo di sta brutta faccenda che ha sconvolto Pescara. Proprio qui, dove la rena scotta e le barche dondolano, ci siamo svegliati con una notizia che ti toglie pure la voglia di ammainare le reti. Un giovane ha perso la vita in un modo assurdo, investito da un'auto, e un ragazzo di ventidue anni è finito dritto in caserma, blindato dai carabinieri con l'accusa pesantissima di omicidio volontario. Ma roba da matti! Io stavo là vicino, col caffè in mano e la briga di sistemare le lenze, quando ho visto le ambulanze volare verso la Tiburtina. Un caos totale, sirene che spaccavano i timpani e facce sbiancate. Che vi devo raccontare? La strada s'è insanguinata e ora ci ritroviamo a piangere un morto e a interrogarci su come cazzo sia possibile rovinarsi la vita così, per un pugno di secondi di follia pura.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "Che vi devo dì? Me pare la solita manfrina per riempì i giornali. Voglio vede' quanti di questi qua si farebbero na levataccia in mezzo al mare co' la tramontana. Sospetto fortemente che vogliano solo chiacchierà e lavorà zero."
+            "testo": "A me sta storia non me la conta giusta, qui sotto c'è dell'altro che non dicono e i giornalisti televisivi ci marciano sopra per fare audience."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Oh, ma vedi che c'hai ragione frà! A Borgomarino si campa co' l'odore du' pesce e na boccata d'aria bona, ma chi cazzo vò faticà! Pescara è na città de mare, e chi nun capisce un cazzo della Delfino po' pure annà a farsi fotte, siiii siii siii! Forza Pescara sempre, e mo jamm bell!"
+              "testo": "Ma che cazzo state a dicere?! Una tragedia immane, la Tiburtina s'è macchiata di sangue e sti scellerati rovinano tutto per un attimo di follia pura!"
+            },
+            {
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "È una vergogna inaudita, non ci sono parole per descrivere un simile strazio. Una vita spezzata così a Pescara fa male da morire."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Frittura di pesce e alici per tutti, glugluglu! Ma quale stress da ufficio, qui si mangia e si polemizza, si polemizza! Siiii siii siii, frittura si fredda frittura si fredda!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Ahahaha ma quale stress, amigos! Qui in Abruzzo tra mare, arrosticini e donne c'è troppa alegria! Questa è vita brasiliana travestita da pescarese, saudades zero quando c'è la frittura calda!"
+              "testo": "Che brutta storia, che brutta storia! Glugluglu, ma dove stiamo finendo siii siii siiiiii!"
             }
           ],
           "categoria": "Cronaca",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini",
-          "publishedAt": "📰 data sconosciuta"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Mamma mia che chiavica, pure i guagliuni 'mbriachi frici!",
-          "articolo": "Uè, ma che stiamo a fa'? A Borgomarino tieni 'na puzza de mare che ti rimette al mondo, ma qua alla riviera di Pescara, a' discoteca, è un disastro. Regazzini, manco l'età per votare, che tornano a casa stesi, intossicati dall'alcol come se non ci fosse un domani. Ma dico io, dove cazzo stanno i genitori? Oltre a pescare, a me piace stare tranquillo, ma qui tra bottiglie di vetro abbandonate e minorenni che vomitano l'anima sui marciapiedi, la situazione è proprio na schifezza. La movida pescarese, quella che dovrebbe essere il fiore all'occhiello della nostra terra, si riduce a un lazzaretto. Le forze dell'ordine fanno quello che possono, ma i gestori dei locali devono aprire gli occhi e non vendere roba a chi c'ha ancora il latte alla bocca. Sò ragazzi, direte voi. E io vi dico che così rovinano la salute e la piazza. Mo basta, a mare ce vado io, che almeno coi pesci c'ho meno rogne.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In merito alla problematica relativa all'assunzione di sostanze alcoliche da parte di soggetti minori d'età in prossimità di esercizi pubblici dediti all'intrattenimento notturno, si prende atto della situazione e si rimette la pratica agli uffici competenti per le valutazioni di rito e l'eventuale reiterazione dei controlli amministrativi previsti dalle vigenti disposizioni normative."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quali 'so ragazzi'! Questa è degrado assoluto e totale menefreghismo educativo! Se li becco a buttare bottiglie vicino allo stadio gliele faccio raccogliere con i denti a quegli idioti viziati!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti ubriachi marci, glugluglu con la pancia piena di vino scadente, vino scadente!"
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Comprendo perfettamente lo sfogo, la situazione della movida richiede un tavolo di confronto urgente tra esercenti e istituzioni per ristabilire il decoro."
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mer 5 agosto 10:34"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Tonin saluta i biancazzurri, ennesimo strazio per Borgomarino!",
-          "articolo": "Oh, ma ci rendiamo conto? Qui a Borgomarino, tra na retata de sarde e 'na dormita sotto l'ombrellone, tocca pure leggere certe disgrazie calcistiche. Il Pescara ha deciso di regalare all'Ostiamare il nostro Riccardo Tonin, attaccante che a titolo definitivo lascia i colori biancazzurri. Ma dico io, mò pure le punte ci vendiamo, oh? Con quel mare stupendo che ci ritroviamo davanti, uno vorrebbe pensare solo a calare le reti e a godersi la brezza, e invece no, ci tocca pure soffrire per 'sta maglia che viene smembrata pezzo per pezzo. Tonin fa le valigie e scende verso la capitale, lasciando un vuoto che manco quando mi si rompe la barca a metà agosto. La società fa le sue scelte di mercato, ma qui la pazienza della gente di mare è finita da un pezzo. Mo' vedi che ci tocca pure ringraziare, mentre noi restiamo qua a leccarci le ferite con la salsiccia e un bicchiere di montepulciano.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "È una vergogna senza fine, un colpo al cuore che ci lascerà morti dissanguati sulla spiaggia! Stanno distruggendo tutto quello che amiamo, pezzo dopo pezzo, senza un minimo di rispetto per la nostra gente e per i nostri colori! Siamo finiti nel baratro più nero e nessuno muove un dito!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Mannaggia a chi ve 'mmortacci, c'avete venduto pure Tonin! Ma stamo a scherzà? Qui co' sto mare stupendo e la brezza uno pensa a calare le reti e invece ce tocca soffrì pe' sta maglia smembrata pezzo per pezzo, oh!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "È una vergogna inaudita, non ci sono parole per descrivere questa gestione dilettantesca! Vendere Tonin così è da incompetenti patentati, se li prenderei a schiaffi uno a uno!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, un altro pezzo che se ne va glugluglu, ma che stamo a fà glugluglu! Pescara mia, Pescara mia!"
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 31 luglio 17:36"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Lezioni dal Sol Levante per una terra che ama",
-          "articolo": "Osservo Pescara e l'Italia da anni, diviso tra il pragmatismo del mio Giappone e il romanticismo di questa terra. Spesso qui si confonde il pessimismo con la critica costruttiva. Non è pessimismo pretendere puntualità, rispetto delle regole condivise e decoro urbano. Vorrei tanto portare un po' di quella civiltà metodica che ho lasciato a casa, dove il bene comune viene prima del particolarismo. Pescara ha una bellezza unica, adriatica, luminosa, ma soffre di una cronica incapacità di valorizzarsi attraverso l'ordine e la cura quotidiana. Eppure, non ho mai smesso di essere un sognatore pragmatico. Credo che questo paese possa migliorare, se solo accettasse di guardarsi allo specchio senza permalosità. Tra poco farò ritorno in Giappone per un periodo, ma so già che tornerò qui. C'è qualcosa in questo stile di vita che mi ha rapito l'anima, nonostante tutto.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "Mentre preparo le valigie per il mio viaggio verso casa, guardo il mare di Pescara dalla finestra e sento una dolce malinconia. Tornerò presto, perché in fondo ho imparato ad amare anche questo caos."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente qualcuno che riconosce l'importanza fondamentale della disciplina e del rispetto delle regole per il bene comune."
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Condivido la necessità di un approccio istituzionale e costruttivo, senza cedere mai al pessimismo sterile o alla permalosità."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Pedalare nel buio e miscelare all'alba",
-          "articolo": "Finita la notte dietro al banco, quando il locale chiude e il silenzio si posa sull'asfalto, c'è chi sceglie la strada. Non è solo un modo per tornare a casa, ma un rito. La bicicletta diventa l'unico mezzo per tagliare l'aria fredda, un esercizio di resistenza che conosco bene, pedalando al buio senza fari troppo potenti, lasciandosi guidare solo dal ritmo dei pedali. Parallelamente, nelle grandi città, prende piede la tendenza dei cocktail all'alba. Locali che riaprono le porte prima del sorgere del sole, accogliendo una clientela insolita: ciclisti urbani, nottambuli irriducibili e lavoratori mattinieri. Si mescolano distillati e amari con caffè freddo e infusi botanici, creando bevande pensate per ricaricare le energie dopo ore di sforzo o di festa. È un punto d'incontro tra la fatica fisica della strada e l'arte della miscelazione. Qui il bere non è sinonimo di eccesso, ma di condivisione di un confine temporale sottile, dove la notte cede il passo al giorno.",
-          "commento_firma": {
-            "nome": "Bartender",
-            "avatar": "🚴",
-            "testo": "Alla fine, che tu stia shakerando un Negroni o spingendo sui rapporti in salita alle quattro del mattino, l'importante è non perdere mai il passo. E se vi viene fame dopo la pedalata, tranquilli: io mi magio un bue intero e rimango comunque uno stecchino!"
-          },
-          "commenti": [
-            {
-              "nome": "Bartender",
-              "avatar": "🚴",
-              "testo": "Pedalare nel buio dopo la chiusura è l'unico modo per rimettere in asse i pensieri. Il silenzio della strada vale più di qualsiasi bicchiere."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La notte in montagna ha lo stesso silenzio, ma qui in Abruzzo dopo la fatica ci vogliono gli arrosticini e un po' di allegria danese."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Glugluglu, cocktail all'alba con il caffè freddo siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "bartender.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "VERGOGNA NAZIONALE: TUTTI SCAPPANO QUANDO ENTRO NEI NEGOZI, IDIOTI!",
-          "articolo": "Cammino per le strade ed è sempre il solito pietoso spettacolo. Entro nei negozi e la gente scappa come se ci fosse la peste, vecchi rimbambiti, commessi con la faccia da ebete e clienti che se la danno a gambe levate. Ma quale sarebbe il problema, branco di falliti? Vi puzza il fiato o avete semplicemente paura della sacrosanta verità che vi sputo in faccia ogni santa volta? Varcare la soglia di un esercizio commerciale in questo Paese è diventato un esercizio di sopravvivenza sociale, perché la verità fa male alle vostre menti bacate. Nessuno mi saluta, nessuno mi guarda negli occhi, abbassate lo sguardo come i codardi che siete mentre io denuncio il degrado urbano e la vostra totale incompetenza esistenziale. Siete ridicoli, teste di rapa travestite da cittadini perbene. Continuate pure a evitarmi, vigliacchi, tanto la mia voce vi perforerà i timpani lo stesso. Fate schifo!",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "I criceti nel mio cervello stanno facendo una festa techno con le vongole marce mentre le pareti cantano la marcia trionfale di Aida con la voce di un frullatore rotto! AAAAAH! Lelucertole volanti mi hanno detto di comprare sette chili di acciughe e spalmele sui lampioni della tangenziale per placare il dio del karaoke cosmico! Gnam gnam gnam, viva le patate lesse radioattive!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Ma chi cazzo vi credete di essere tutti quanti! Siete solo un ammasso di falliti che non sa fare altro che nascondersi! Fate schifo, andate a pascolare le pecore!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh ma ch'è sta fracica? Ju' Pescara va a rotoli e tu vieni a rompe li cojoni qua a Borromarino? Vattene a casa, testadicavolo!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, glugluglu! Le teste di rapa volano alto oggi, volano alto oggi! Siiiii siii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Lu porto canale tra reti rotte e chiacchiere",
-          "articolo": "Uè, ma vogliamo parlare di come ci hanno raccontato Pescara? Sempre co' 'sta storia del mare pulito e delle cartoline patinate. Ma state a scherzà? Andate a fa' un giro a lu porto canale, dove l'odore de' na volta s'è perso tra i cantieri infiniti e le barche che ormai stanno più a terra che in acqua. E poi vedi 'sti pescherecci, co' le reti rotte, a combatte contro la burocrazia e un mare che non è più quello della nostra infanzia. La verità è che qua se magna pane e cipolla, e della Pescara vera a chi sta nei palazzi importa men che zero. Tra una pajella e un arrosticino, i politici vengono a fare le passeggiate coi mocassini puliti, mentre noi faticamo a tirà a campà. E intanto la squadra mia, il Pescara, soffre in campo come noi sugli scogli. Ma che ve lo dico a fa', tanto voi volete solo la spiaggia attrezzata e i turisti col portafoglio gonfio. A noi lascateci a 'sto sole, a riparà 'ste benedette reti, che a faticà troppo viene l'ansia.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che vi devo dì, a me ' sti articoli fatti coi piedi mi lasciano sempre 'na gran puzza sotto il naso. Vogliono insegnarci a noi come si vive a Borgomarino? Ma per favore."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale spiaggia attrezzata e turisti coi mocassini! Lu porto canale è la nostra vita, e chi comanda non sa manco che fine ha fatto lu Pescara! Aoh!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Parole sante! La dirigenza pensa solo ai palazzi e alle poltrone mentre la squadra e la città affondano. C'è da spaccare tutto!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, pane e cipolla e arrosticini volanti glugluglu! Pescara veraaa, veraaa!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La forza nascosta della timidezza tra le pagine",
-          "articolo": "Spesso si confonde la timidezza con una debolezza, un difetto da correggere in un mondo che pretende sempre il massimo della voce e dell'apparire. Invece la psicologia ci insegna che il silenzio custodisce una profondità straordinaria. Chi è riservato non fugge dal mondo, semplicemente lo osserva con attenzione chirurgica, cogliendo sfumature che sfuggono ai più rumorosi. I libri rappresentano il rifugio naturale e al tempo stesso l'arma di riscatto per chi possiede questa indole. Leggere non è un isolamento sterile, ma un modo per allenare l'empatia e comprendere la complessità umana senza il bisogno di occupare sempre il centro della scena. Chi mastica letteratura sa bene che i personaggi più potenti sono spesso quelli che agiscono sottotraccia. La vera forza non urla mai, si radica nella consapevolezza. Chi pensa di poter calpestare una persona silenziosa farebbe bene a studiare la storia: chi sa ascoltare possiede già tutti gli elementi per ribaltare qualsiasi situazione.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "In fondo basta saper guardare le cose con calma e senza ansia da prestazione, godendosi una bella lettura in totale serenità."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Esattamente. Sulle montagne di Roccamorice il silenzio non è vuoto, è pieno di risposte. Ma poi un bel piatto di arrosticini e un po' di allegria ci vogliono sempre per sciogliere la lingua!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Finalmente qualcuno che dice cose sensate invece di blaterare a vuoto. Meno chiacchiere e più sostanza, chi lavora sodo non ha bisogno di mettersi in mostra."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiii! Il silenzio fa glugluglu e la forza non urla mai, ma la forza non urla mai!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U mare è amaro, ma a Pescara tocca faticà puretroppo",
-          "articolo": "Oh, Madonna santa, ma state sempre a 'mpiccià le carte! A Pescara se magna pesce bonu, se respira iodio e s'addorme a' scogliera, ma no, qui vogliono sempre fa' faticà la gente. Ma vaffanculo, va! Io sto a Borgomarino, co' a moje a 'ndò bate u sole e la riga de u mare che se perde a vista d'occhio. La cronaca nostra parla chiaro: chi nasce a Pescara a u mare ci deve sta', non chius 'ntra quatto mura a grattà scartoffie. A' via d'u mare, u portu, i pescherecci che tornano co' e cicale e e triglie che ballano ancora. Questa è la vera cronaca, mo' vattela a piagne a 'ndò vuò. Ma quale 'ndustria, quale sviluppo, qua ci vole na boccata de verdone e na barca a remi. E po' u Pescara in campo fa' piagne, ma questa è n'altra storia. Zompa a' rete, cazzo! U Delfino non more mai, e manco a fija d'Iorio quanno stace a ffa' u brodetto bono. Mare, sole e na bella frittura. Mo' basta, ch'ho da i' a bagnà l'ame.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che t'aggia di'? A me me pare na frittata fatta co' l'uova marcie. Chi sa che ce stace sotta, a me ' sta storia nun me convince pe' gnente. Guardate a 'ndò mettete i piedi."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale brodetto e barca a remi, qua la dirigenza sta affossando la squadra e nessuno dice niente! Se continuano così vado a Pescara a prenderli a calci in culo uno per uno, sveglia cazzo!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii frittura di triglie e gol del Pescara, glugluglu che spettacolo, spettacolo purooooo!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Fratello Cetteo ha ragione! Sole, mare e donne sulla spiaggia, questa è la vita! Che saudade del Brasile ma l'Abruzzo con gli arrosticini è il paradiso!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 data sconosciuta"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Mamma mia, i pivellini coi bicchieri in mano! Ma ndo ca**o andremo a finire?",
-          "articolo": "Oh, ma ve lo volete ficcare in testa o no? Qua a Pescara non c’è pace manco il fine settimana, tra 'na barca da sistemare e na pajella da magna'. Fuori dalle discoteche, la solita scena da voltastomaco: ragazzini, dico minorenni che ancora sanno a malapena cosa sia la fatica, conciati come botti di vino buono. Si abusa di alcol, oh! Finiscono all'ospedale intossicati perché non reggono manco un goccio di Biancolella. Ma roba da matti! Io sto qua, col sale sulla pelle e la schiena rotta dal mare, a guardare sti guaglioni che buttano via la salute per fare i grandi. Ma un bel piatto di pasta e un calcio nel sedere no, eh? Non c'c'ha voglia nessuno di faticare, né di crescere con la testa giusta. Pescara mia ridotta a un ostello per ubriaconi in fasce. Che rabbia, oh! A 'sta gente bisognerebbe far passare la voglia di bere a suon di secchiate d'acqua marina gelata.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In ottemperanza alle disposizioni vigenti in materia di sicurezza pubblica e tutela dei minori, si prende atto dell'evento critico registrato nei pressi dei pubblici esercizi notturni, confermando l'inoltro della relativa documentazione agli uffici competenti per le verifiche del caso."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li mortacci loro, oh! Hanno ridotto lu porto e la spiagge na chiavica de la malora, co sti guaglioni viziati che vonno fa li grandi ma nun sanno manco addò stannocasa! Lu Biancolella è robba bona per cristiani veri, nun pe sti sciamannati! Siiiii, ce vò na bella secchiata d'acqua gelata ar culo!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa è la dimostrazione che non c'è più rispetto per niente, neanche per la propria salute! Invece di leggere un libro o pensare a crescere con un po' di dignità, finiscono all'ospedale come deficienti. Se li prendo io per le orecchie, vedi come gli passa la voglia di fare i cretini!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Glugluglu, ma che cazzo combinano sti pischelli, che combinanooo! Si bevonno pure l'acqua di scolo, siii siii siiiiii! Meglio un bel piatto di arrosticini e via, arrosticini e viiiiia!"
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mer 5 agosto 10:34"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Tonin saluta i biancazzurri, ennesimo strazio per Borgomarino!",
-          "articolo": "Uagliò, qui non si tratta de lavorà, ma almeno de tené i pezzi buoni della nostra terra! Invece no, il Pescara fa pure i regali in giro. L'attaccante Riccardo Tonin, proprietà del nostro Delfino, ha fatto le valigie e s'è trasferito a titolo definitivo all'Ostiamare. Ma dico io, ci rendiamo conto? Già uno sta qua tranquillo a guardare le paranze che tornano al porto, pensando a come tirare a campare con la canna da pesca in mano e la scimmia per i biancazzurri sulla spalla, e questi che ti fanno? Vendono pure i giocatori. Tonin lascia l'Abruzzo per scendere nei dilettanti laziali. Una cessione che fa rumore, soprattutto per una piazza che vive di pane, mare e pallone. La società biancazzurra decide di sfoltire il reparto offensivo, ma la notizia fa male a chi, sugli spalti, sputa l'anima per questa maglia. Ora tocca vedere chi mettono là davanti, sperando che non sia un altro pacco. Ma intanto, amichevole o campionato che sia, a noi resta solo l'amaro in bocca.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "È una vergogna senza fine, un colpo al cuore che ci ammazza lentamente! Vendono i nostri pezzi pregiati e ci lasciano qui a soffrire, soli e traditi da chi dovrebbe difendere il nostro orgoglio. È la fine di tutto, una tragedia sportiva che ci condanna al buio eterno!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li mortacci loro! Vendono Tonin e noi stemo qua a piagne sul porto! Ma che cazzo state a fà alla dirigenza? 'Na vergogna!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "È uno scandalo inaccettabile, si sputa sangue per questa maglia e loro cedono i pezzi pregiati così! Non ci sono parole, solo rabbia pura."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Tonin va via, va via! Siii siii siiiiii, glugluglu, ma che cazzo combinano?! Pescara Pescara!"
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 31 luglio 17:36"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La gentilezza perduta e il cielo d'Abruzzo",
-          "articolo": "Osservo spesso la gente camminare sul lungomare di Pescara. C'è una bellezza disordinata in questo paese, un calore umano che in Giappone ci sogniamo, ma manca tragicamente il rispetto per lo spazio condiviso. Da anni vivo qui e ho imparato ad amare la forza di questa terra, eppure continuo a sognare di trapiantare un briciolo di civiltà nipponica. Non parlo di perfezione robotica, ma di educazione civica quotidiana: fare la fila senza spingere, rispettare il silenzio altrui sui mezzi pubblici, pulire dove si sporca. In Giappone la cortesia è l'infrastruttura invisibile che fa funzionare la società senza attriti. Qui in Italia tutto sembra affidato al caso o alla tolleranza reciproca, che spesso diventa anarchia. Tra poco farò ritorno in Giappone, ma so già che tornerò a Pescara. Porterò via con me la nostalgia di questo mare e il calore della gente, sperando di riportare qui, al mio rientro, un po' di quella grazia silenziosa che rende la vita più leggera per tutti.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "Mentre preparo le valigie e riguardo il mare da questa finestra, sento una dolce malinconia. Pescara mi ha cambiato dentro, mi ha insegnato a rallentare e a sentire il battito del cuore oltre le regole. Tornerò presto, con la stessa speranza nel cuore."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente qualcuno che riconosce l'importanza dell'educazione civica e del rispetto degli spazi comuni. L'Italia ha un calore umano ineguagliabile, ma la mancanza di civiltà quotidiana rende tutto più faticoso. La grazia silenziosa nipponica è l'unica via."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale civiltà nipponica e grazia silenziosa! Qui la gente non arriva a fine mese col carovita e gli stipendi da fame, e tu pensi alla fila senza spingere? Ma vaffanculo, svegliati!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti in fila indiana con la katana sul lungomare glugluglu glugluglu! La fila indiana, la fila indiana!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Pedali, shaker e misticanza notturna",
-          "articolo": "Certe notti la città non dorme, respira a fatica tra i fumi dei locali e l'asfalto freddo. Finito il turno dietro al banco, tra bicchieri da lucidare e vermouth da dosare con precisione chirurgica, resta solo una scelta: salire in sella. Niente motore, solo gambe secche che spingono sui pedali nel buio pesto, affrontando la salita con lo stesso ritmo ostinato con cui si misura un cocktail. C'è chi la chiama follia, chi semplice routine di chi non sa fermarsi. Il metabolismo corre veloce quanto la catena sulla moltiplica, bruciando calorie e pensieri in un chilometraggio notturno che non ammette repliche. Si torna a casa all'alba, con lo stomaco che reclama cibo in quantità industriali e un bicchiere pronto a chiudere il cerchio. Eppure la bilancia non tradisce, inchiodata a quel profilo smilzo che sfida le leggi della fisica e della cucina pesante. Si pedala sempre, anche quando la strada sparisce.",
-          "commento_firma": {
-            "nome": "Bartender",
-            "avatar": "🚴",
-            "testo": "Un bel piatto di carbonara a notte fonda e via a tutta birra sulla ciclabile, che tanto la ciccia non sa manco di casa mia!"
-          },
-          "commenti": [
-            {
-              "nome": "Bartender",
-              "avatar": "🚴",
-              "testo": "La strada di notte non ha padroni, solo chi pedala e chi guarda passare le ombre. Si va avanti sempre, anche al buio."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Fatica onesta, senza chiacchiere. Almeno sui pedali nessuno ti rompe le scatole con le prediche."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Pedalare di notte glugluglu sulla salita siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "bartender.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Sveglia imbecilli: questa città fa schifo quanto le vostre facce da ebete",
-          "articolo": "Ennesimo giro a vuoto tra le fogne a cielo aperto che chiamate rispettivamente 'strade' e 'negozi di quartiere'. Entri dal fruttivendolo e trovi quel rimbambito del signor Gino che vende mele ammuffite spacciandole per biologiche, mentre i clienti annuiscono con la bava alla bocca come zombie lobotomizzati. Ma vi guardate allo specchio? Vivete in un agglomerato urbano che grida pietà, con marciapiedi lordi di incuria e una cittadinanza che eccelle solo nell'arte del lamentarsi senza muovere un dito. Varcare la soglia di qualsiasi esercizio commerciale qui significa subire l'assalto di commessi incapaci e merce scadente. Nessuno ha il coraggio di dire la verità, tranne la sottoscritta. Siete una massa informe di falliti che si accontenta del degrado, lo calpesta ogni santo giorno e pure sorride. Questa città fa letteralmente schifo, esattamente come chi la abita e la riduce in questo stato pietoso.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Le patate bollite nel mio cervello cantano la marcia trionfale dei cactus assassini mentre le lucertole spaziali mi leccano le orecchie!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Finalmente qualcuno che dice le cose come stanno! Siete tutti una manica di ipocriti rimbambiti che difendono questo schifo di città! Vi meritate il degrado, falliti!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh, ma che cazzo vuò da' sta' cittadì, levati d'attorno! J'ann' a da' foco a sti polemici da strapazzo, Pescara è na bellezza e tu si propiro nu scemo!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Purtroppo devo concordare sull'assoluta mancanza di civiltà e standard qualitativi accettabili in questo paese. In Giappone una situazione del genere non verrebbe mai tollerata."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, le mele ammuffite glugluglu, ma che degrado spaventoso spaventoso! Siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Lu porto canale tra reti rotte e chiacchiere",
-          "articolo": "Oh, statece a sentì, qui a Borgomarino lu mare parla chiaro e nun s'incula nessuno. Chi va a Pescara a ffa' la passeggiata elegante nun capisce un cazzo de come gira la barca davvero. Lu porto canale nostro, co' quelle banchine vissute e l'odore de salsedine mista a nafta, è la sola verità che tenemo. Ma guarda 'sti politici de borgata: parlano, parlano, e intanto le reti rotte de li cristiani nostri stanno là a piange miseria, co' li marittimi che se devono arrangià tra na bufera e n'altra. È na vergogna che fa ji' di volta lu stomaco a un delfino vero! Dicono che Pescara è na città moderna, ma quande se tratta de mette le mani nco' li problemi veri, spariscono tutti come le sarde quande passa lu tonno. A noi ce piace lu pesce fresco e lu mare 'nzivato, no 'sti progetti da salotto bon ton. Aò, svejateve, che qui la burrasca è già arrivata e v'ha pijo' tutti 'n mezzo alle scatole!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "A me 'sta storia me puzza assaie, come nu cafè riscaldato du' vote. Chissà quante chiacchiere e zero fatti, come sempre."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale Pescara salotto bon ton, qui a Borgomarino lu mare parla chiaro e nun s'incula nessuno! Svegghiateve tutt quanti!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ha ragione Cetteo! È una vergogna intollerabile che chi lavora debba soffrire mentre i politici fanno i salotti buoni. Non mi faccio certo sopraffare da questa ingiustizia!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, glugluglu, la burrasca è già arrivata, la burrasca è già arrivata!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La forza nascosta della timidezza tra le pagine",
-          "articolo": "Spesso si confonde la timidezza con una debolezza, un difetto da correggere in un mondo che pretende sempre il massimo della voce e dell'apparire. Eppure, la psicologia contemporanea e la grande letteratura dimostrano esattamente il contrario. Chi custodisce una natura riservata possiede spesso una ricchezza interiore straordinaria, fatta di ascolto profondo e osservazione lucida. Lo sanno bene i grandi autori che nei libri hanno scandagliato l'anima umana senza bisogno di urlare. Leggere non è solo un rifugio, ma un allenamento al pensiero critico e all'empatia. Nei romanzi e nei saggi psicologici, chi è timido trova il coraggio di confrontarsi con le proprie paure e di decifrare il caos del mondo. Non serve sgomitare per contare qualcosa. La vera forza sta nella capacità di restare saldi, coltivando passioni autentiche come la letteratura e l'arte, senza farsi calpestare da chi confonde il baccano con il valore delle persone. La timidezza è una corazza preziosa.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Che pace profonda quando ci si rifugia tra i libri giusti. In fondo, basta saper ascoltare il proprio silenzio per trovare tutta la serenità di cui abbiamo bisogno."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Parole sante! Chi fa troppo baccano spesso ha il cervello vuoto. La letteratura e i libri ti danno una forza che questi pagliacci si sognano, e non ho paura di dirlo in faccia a nessuno!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La montagna insegna lo stesso silenzio. Non serve urlare quando il vento parla chiaro, e un buon libro davanti a un piatto di arrosticini vale più di mille discorsi inutili."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, tra mare e cazzeggio: ma 'ndo annamo?",
-          "articolo": "Uè, gentaglia! V’o dico io com'è la solfa qua a Pescara, terra de mare, Zeman e arrosticini. Ti svegli la mattina, guardi l'Adriatico e pensi: 'Ma chi me lo fa fare de fatica?'. La verità è che a Borgomarino se campa de pesce, salmastro e poca voglia de lavorare, quella sana che te fa allungare la sedia al sole. Ma qui pare che tutti corrono, s'affannano, e per cosa poi? Per un tozzo de pane. Poi arriva la domenica e tutti allo stadio a urlare per i Biancazzurri, perché la maglia sudata è l'unica fatica che accetto. Tra na barca da sistemare e na frittura di paranza, la cronaca locale ce racconta sempre le stesse menate. C'è chi lavora sodo e chi, come il sottoscritto, preferisce godersi la brzza marina con la lenza in mano e il cervello in folle. E state bboni, che 'sto mondo va già a rotoli da solo.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che vi devo dì? Me puzza de fregatura, come quel pesce vecchio che te voliono spacciare pe' pescato fresco al mercato. Non me fido."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Uè, ma che state a ffa'? A Borgomarino si fatica col sale sulla pelle, mica come voi che state sempre a cianciare! Sempre a faticà con la bocca, e la domenica tutti allo stadio per i Biancazzurri! Siiiii, zitti tutti che qui comando io!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La brezza marina è bella, ma venite a respirare l'aria pura delle montagne a Roccamorice... poi però scendiamo tutti giù a mangiarci gli arrosticini con l'allegria nel cuore."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Arrosticini e mare, mare e arrosticini! Siii siii siiiiio! Glugluglu la barca affonda, la barca affonda!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Invece di dire sciocchezze e perdere tempo con le barche, bisognerebbe leggere un buon libro o sostenere la squadra senza fare troppe chiacchiere inutili. Pratica e forte, sempre."
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 data sconosciuta"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U' vino bon e a discoteca: sti guagliun s'ann ubriacà",
-          "articolo": "M'arriva sta voce e mi viene u schifo. A Pescara, solita storia fora da e discoteche: ragazzini, ma proprio minorenni, che tornano a casa barcollanti perché si sono scolati l'impossibile. Ma dico io, a ‘sta gioventù manca proprio u' sale in zucca! O mare è na cosa seria, u pesce si rispetta, e l'alcol pure se non tieni u fegato bono. Invece no, via con gli abusi, ambulanze che corrono e genitori disperati. Ma chi è che vende sta merda ai pischelli? U' peschereccio mio c'ha regole ferree, se sgarri stai a terra. Invece qua, in centro a Pescara, si fa i furbi sulla pelle dei fioi. Poi oh, io c'ho voja solo d'andà a pescà, non di fare la predica a sti sbarbatelli che non reggono manco un bicchiere di verdicchio. Ma u comune e le forze dell'ordine devono svegliarsi. Mo basta, tornatevene a casa a dormire, che il mare non aspetta.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In merito all'evento di rilevanza sanzionatoria e sanitaria registrato in zona di pubblico esercizio notturno, si attesta l'avvenuta attivazione delle procedure di verbalizzazione d'ufficio e il successivo inoltro della documentazione agli organi competenti per gli adempimenti di rito, in attesa di determinazioni ministeriali."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "A Pescara u mare è na cosa seria, u pesce si rispetta, e sti pischelli barcollanti fanno propriu schifo! Mo basta, tornatevene a casa a dormire!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ha ragione Cetteo, qui manca completamente il senso della misura e della concretezza. Invece di bere fino a star male, farebbero meglio a leggersi un buon libro e a darsi una regolata."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, glugluglu tutti ubriachi sulla barca che affonda, giù bicchieri di verdicchio, glugluglu siii siii siiiiii!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "È lo specchio di una società senza disciplina e rispetto. In Giappone una simile mancanza di autocontrollo non verrebbe mai tollerata."
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mer 5 agosto 10:34"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Tonin saluta i biancazzurri, da Pescara a Ostia: ma che stamo a fà?",
-          "articolo": "Ué, gente di Borgomarino, qui tocca parlare di cose serie, anche se con sto caldo la voglia di mette mano alla penna è pari a quella di mette le reti a mollo alle quattro del mattino. Il mercato del nostro Pescara regala l'ennesimo colpo di scena che fa arrabbia' pure i gabbiani sul molo. Riccardo Tonin, l'attaccante che indossava la nostra maglia, ha fatto le valigie ed è sbarcato a titolo definitivo all'Ostiamare. Oh, ma stiamo scherzando? Lasciare andare via uno così senza sosta, senza un benché minimo progetto chiaro, è na vergogna che grida vendetta sotto la Nave di Cascella. A Ostia c'hanno il mare, d'accordo, ma i colori biancazzurri so' na cosa diversa, so' gotta nel sangue, so' la nostra vita allo stadio Adriatico. E invece niente, via, salutiamo pure Tonin. Io ve lo dico, tra un cannolicchio e na paranza, qui la gestione fa acqua da tutte le parti. E poi dicono che dobbiamo sta' sereni. Ma de che?",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "È una tragedia greca, fratelli miei! Stiamo svendendo l'anima della nostra squadra pe' due soldi e un chiodo arrugginito! Questa è la fine del nostro Delfino, un dramma senza fine che ci lascerà l'amaro in bocca per l'eternità!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma guarda te sti scellerati! Vendere Tonin all'Ostiamare è na vergogna che grida vendetta sotto la Nave di Cascella! Gestione che fa acqua da tutte le parti, dicono di sta' sereni ma qui c'abbiamo la gotta nel sangue per sti colori biancazzurri! Vergogna!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Cetteo ha ragione da vendere, cazzo! Vendere Tonin così è un insulto alla nostra maglia e alla nostra storia. Altro che serenità, qui ci vorrebbe un bel trattato di gestione seria e meno incompetenza. Se continuano così vado in sede a spaccare tutto!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, Tonin se ne va a Ostia con le patatine fritte, glugluglu! Pescara mia bella, Pescara mia bella! Arrosticini e palloni sgonfi, sgonfi!"
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 31 luglio 17:36"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Inchino o pacca sulla spalla: il dilemma eterno tra due mondi",
-          "articolo": "Osservo spesso la gente qui a Pescara camminare sul lungomare. C'è calore, c'è vita, c'è un'energia che in Giappone ci sogniamo. Eppure, manca quel rispetto invisibile, quella disciplina silenziosa che rende la convivenza civile un'arte naturale. Da anni cerco di portare un po' di ordine nipponico in questa bellissima terra caotica. Il dilemma tra l'inchino e la pacca sulla spalla racchiude tutto: da una parte il rigore, dall'altra l'invasione amichevole dello spazio altrui. Gli italiani non lo fanno con malizia, è nel loro DNA travolgente. Ma il caos quotidiano, la gestione approssimativa delle file, il rumore costante nei luoghi pubblici sono cose che mettono a dura prova la mia pazienza zen. Eppure, in questa lotta costante tra la mia precisione giapponese e il disordine italiano, ho capito che la perfezione è noiosa. Manca civiltà, è vero, ma c'è un'umanità che a Tokyo abbiamo dimenticato nei nostri uffici grigi.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "Manca poco alla mia partenza per il Giappone, ma so già che tornerò qui a Pescara. Tra il profumo del mare Adriatico e i ricordi di questi anni, sento una dolce malinconia farsi spazio nel cuore."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Vedi? Persino tu ammetti che il caos regna sovrano. La mancanza di disciplina nelle file è un insulto al progresso. Ma apprezzo che tu riconosca il nostro rigore."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale disciplina e inchini, oh! J'cate a ffa' u' giapponese 'n v'a bene gnente! A Pescara semo fatti accussì, caotici e vivi! Se nun te sta bene, tórnene a Tokyo co' tutti i tuoiuffici grigi e lascece sta' ' 'ri arrosticini!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hiroki, piantala di fare sempre il maestro di morale! La nostra umanità vale cento volte la tua fredda perfezione giapponese. Se non ti va bene come siamo fatti, puoi anche fare le valigie e andartene!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, inchini e pacche sulle spalle, glugluglu! La perfezione è noiosa, noiosa! Siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Raggi d'argento e bicchieri di cristallo",
-          "articolo": "Certe notti la città cambia pelle. Spengono le insegne forti, i motori si spengono e restano solo i riflessi sull'asfalto bagnato. È in questo silenzio che i raggi d'argento della luna tagliano la nebbia, incontrando il riverbero dei bicchieri di cristallo nei locali storici che non vogliono chiudere. Non serve parlare. C'è chi mescola gin e vermouth con gesti lenti, precisi, quasi rituali, mentre il ghiaccio si assesta nel tumbler. Il bancone diventa un rifugio per chi attraversa le ore piccole a pedali, spingendo sui rapporti lunghi, con il vento freddo che entra nei polmoni e la mente che finalmente si svuota. Si beve per sete di quiete, non per eccesso. Si guarda la luce argentea specchiarsi nel vetro prima del sorso. Poi si riparte, pedalando nel buio, leggeri e invisibili.",
-          "commento_firma": {
-            "nome": "Bartender",
-            "avatar": "🚴",
-            "testo": "A me basta un buon calice e la catena oliata bene: la notte fila dritta e la panza non cresce mai, oh!"
-          },
-          "commenti": [
-            {
-              "nome": "Bartender",
-              "avatar": "🚴",
-              "testo": "Il ghiaccio nel tumbler, i gesti lenti e la strada che chiama. È esattamente così che finiscono le mie notti, pedalando nel buio con il vento freddo."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "C'è una pace profonda in queste ore della notte. Tra le montagne o davanti a un bicchiere, il silenzio della natura e la fatica ritrovano sempre un equilibrio perfetto."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Rispetto chi fatica davvero di notte, pedalando senza fare chiasso, lontano da tutti. Almeno c'è ancora qualcuno che sa cosa significa lavorare in silenzio."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii sii siiiiii, il bicchiere di cristallo e la bicicletta nel buio buio! Glugluglu, si riparte sempreee, si riparte sempre!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "bartender.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Siete tutti dei conigli: perché mi scappate quando entro nei negozi?",
-          "articolo": "Entro in un esercizio commerciale della mia città e puntualmente si ripete la stessa patetica scena. Commessi pietrificati, clienti che mollano il carrello e fuggono verso le uscite di sicurezza come se fossi Godzilla. Ma cosa avete da guardarmi storto? Siete voi che avete la coda di paglia e la dignità sotto i tacchi. Vi puzza il fiato o avete semplicemente terrore della verità? Camminate per strada con quella faccia da ebeti, chini sugli smartphone a farvi lobotomizzare dai social, incapaci di sostenere uno sguardo che non sia mediato da uno schermo. Siete una mandria di pecore terrorizzate dal primo essere umano dotato di un cervello funzionante. Vi nascondete dietro ai banconi, tirate giù le saracinesche in anticipo, mormorate insulti sottovoce perché non avete il coraggio di guardarmi negli occhi. Siete ridicoli, vigliacchi e patetici. La gente mi evita perché la verità fa male e voi preferite marcire nella vostra mediocrità piuttosto che fare i conti con la realtà.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Ieri ho leccato il vetro di una vetrina e mi sono accorta che il riflesso sono io, ma più bella! Ho ordinato tre chili di bulloni da spalmare sul pane integrale per fare colazione, così finalmente la mia digestione produrrà onde elettromagnetiche per controllare i piccioni del centro storico. Mangiate radici di carciofo e ululate alla lavatrice!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' stai a dì, oh! Chi è 'sto scienziato che viene a fa' il fenomeno nei negozi nostri? Statte zitti e pensa a magna' li arrosticini invece de rompe li cojoni! Pescara è nostra, oh!"
-            },
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Ma vaffanculo! Siete tutti una manica di rincoglioniti, tu e chi ti fa scrivere ste cagate! Lavatemi la bocca prima di nominarmi, pezzi di merda!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti a scappare come lepri glugluglu, ma che cazzo c'avete da guarda' glugluglu! Siii siii siiiiii!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'ennesima dimostrazione della totale assenza di civiltà e decoro in questo paese. In Giappone una scena del genere non sarebbe mai tollerata nei luoghi pubblici."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Lu porto canale tra reti rotte e chiacchiere",
-          "articolo": "Oh, ma vogliamo parlare 'sti giorni del porto canale di Pescara? Io sto sempre qua, tra 'na barca e 'na frittura, e vedo le stesse scene. Le banchine so' quelle, lu mare pure, ma quante storie se cantano su 'sto 'angolo de città. C'è chi vanta la marineria e chi piange su 'ste benedette reti rotte che manco a rattopparle co' la ragnatela de lu duomo se risolve. Ma dico io, invece de fa' tante conferenze stampa co' la cravatta bbona, venite qua sotto a sentì odore de salsedine e naftalina. La verità è che a Pescara a faticà ce vò poco, ma a parlà so' tutti campioni del mondo. E intanto lu porto si insabbia, le barche ballano e la gente se lamenta. Ma poi, scusate, chi è che deve sistemà ' sta chiavica? Sempre li soliti poveri cristi che vanno a mare all'alba. Che ve lo dico a fa', tanto qua è tuttu un magna magna e a noi ce lasciano solo l'acqua salata.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "E che v'ho da di' piú? Parlano, parlano, ma a me 'sti soliti noti me fanno solo venì 'l fegato spaccato. Arivederci e grazie, vado a vedeme la partita."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Lu porto canale è na vergogna, aò! Li signori co' la cravatta stanno all'asciutto e noi qua a faticà tra barche insabbiate e reti rotte, mannaggia a chi sapete vuštri! Sempre li soliti poveri cristi che pagano, e intanto qui è tuttu un magna magna!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale conferenza stampa e conferenza stampa! Hanno rotto le scatole, qua bisogna spaccare tutto se non puliscono il porto! Sempre i soliti buffoni che parlano e non fanno un cazzo, vergogna!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiii siii siiiiii il porto che si insabbia e la barca che balla balla! Glugluglu pesciolini nel fango, magna magna generale, generaleee!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La forza nascosta della timidezza tra le pagine",
-          "articolo": "Essere riservati non significa essere deboli, e la psicologia contemporanea lo conferma ribaltando vecchi cliché. Chi possiede un carattere introspettivo spesso trova nei libri non un rifugio per fuggire dal mondo, ma uno strumento potentissimo per affrontarlo con la giusta dose di coraggio. La lettura profonda stimola l'empatia e offre chiavi di lettura formidabili per decodificare le dinamiche sociali senza subire la pressione del rumore circostante. Che ci si trovi in un salotto intellettuale o in un contesto popolare e ruspante, la sostanza non cambia: chi ama leggere possiede una bussola interiore che non teme confronti. Non serve sgomitare per farsi valere, basta la forza silenziosa della consapevolezza. Chi confonde la timidezza con la fragilità farebbe bene a ricredersi immediatamente, perché la vera forza risiede spesso in chi sa ascoltare prima di parlare e sa difendere le proprie idee con la testa e con i fatti.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Che dire, leggere fa bene all'anima e raddrizza le idee a chiunque. Io vivo così, tra un buon libro e la mia passione viscerale per il Pescara, serena e tranquilla nel mio mondo."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La quiete della montagna mi insegna ogni giorno che il silenzio vale più di mille parole urlate. Chi sa ascoltare possiede una forza straordinaria, proprio come la natura che resiste incontrastata."
-            },
-            {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Parole sante! La vera forza non ha bisogno di fare baccano. Tra una pagina e l'altra si impara molto più che sgomitando in mezzo alla folla!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Sììì, che meraviglia la leggerezza di chi sa pensare con la propria testa senza dover per forza sovrastare gli altri! W la consapevolezza silenziosa!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U mare è amaro, ma a Pescara ce sta chi fatica anco meno",
-          "articolo": "Oh, via! Facimm a i mozzi, che qua a Borgomarino a faticà ce vò 'na grazia. Ma ' ndò jiemm? Pescara è ' na terra d'a mar, d'u pesce bbuono che corre sula banchina e d'i reti da tirà sù quand' u sole ancora dorme. Però c'è chi sta sintonizzato sù n'ata frequenza, sempre pronta a lamentarse tra 'nu café e 'nu cannestro. Eppure la verità è 'na sola: u mare dà e u mare se ripiglia, ma a sti portaborse de la cronaca cittadina je piace troppu chiacchiirà e poco remà. La verità è ca Pescara porta na secca ca fa paura, tra barche che affondano e burocrazia che pare na rete de spine. E noi, sempre qua, a guardà l'orizzonte e a pensà che forse, si a faticà fussi statu un reato, a quest'ora stavamo tutti 'ng galera. Ma nun ve preoccupate, finché c'è u Delfino e du' sarde fritte, a vita passa. O no?",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Sì, vabbè, chiacchiere e distintivo. Ma chi è che paga u conto a la fine? Io nun me fido manco de mi nonna quand'è cusì."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh, ma che vuò fa' l'filosofo ora?! A Borgomarino si faticà fussi 'nu reato eravamo tutti 'ng galera, ma qui 'e chiacchiere stanno a zero e u portocanale fa schifo! Sempre a lamentarse sti portaborse, e intanto a Pescara 'a secca ci affonda! Siiiii ca 'u Delfino ce salva, ma quì ce vò 'na mazza e tanta fatica vera! Mannaggia a chi sa sulu parlà!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma basta con questa retorica inutile! Le istituzioni ci prendono in giro mentre le barche affondano e la burocrazia ci strozza! Non ne posso più di questa situazione vergognosa, qui servono fatti e non le solite chiacchiere da bar! Se continuano così vado lì e spacco tutto, altro che sarde fritte!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, le sarde fritte e il Delfino che trionfa, glugluglu! Ma quale secca e quale porto, portogallo o porto di mareee, mareee! Facimm a i mozzi, mozzi per forzaaa, forzaaa!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 data sconosciuta"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U' viziaccio brutto forte: ragazzini ubriachi marci fora e' discotec'",
-          "articolo": "Oh Sant'Andrea, ma io dico io, ci facciamo sempre riconoscere in questa Pescara. Ma che stiamo a fà? Con tutte le cose bbone che offre il nostro mare, il pesce fresco, 'na bella paranza, questi uagliun' invece di godersi la brezza marina che fanno? Vanno fora a quelle discoteche e si sfondano di alcol, oh, ma roba da non reggersi manco in piedi! Minorenni, dico io, manco i peli sulla faccia e già finiscono intossicati all'ospedale. Ma che cazzo di educazione diamo a 'sta gioventù? Io sto tutto il giorno a guardare le onde, a tirare a sbarcare il lunario con la barca, e questi buttano via la testa per due bicchieri di schifezza chimica. Il Delfino in campo fa arrabbiare, ma 'sta storia fa proprio male al cuore e allo stomaco. Ma un bel bagno freddo a mezzanotte no? Svegliatevi, uagliò, che la vita è una sola e non è fatta per vomitare sui marciapiedi della riviera.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In riferimento all'evento di rilevanza sanitaria e ordine pubblico registrato nelle adiacenze di pubblico esercizio notturno, si attesta la presa d'atto delle procedure di intervento del 118 e delle forze dell'ordine. Seguirà istruttoria per l'accertamento delle responsabilità amministrative ai sensi della normativa vigente in materia di somministrazione di bevande alcoliche a minori."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Eh ma io lo dico sempre, uagliò, non c' rispetta più nazioni! Anziché godersi u' pesce bbòno e u' mare, s' fann' mal' con chella schifenz' chimic'! Pescara mia ridotta a nu schif'!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma roba da matti! Io a 'sti genitori gli toglierei la patria potestà! Invece di educare i figli a rispettare il territorio e a farsi una cultura, li lasciano sbronzare sui marciapiedi a quindici anni! Se li prendo per strada gli faccio passare la voglia di bere per tre generazioni!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Inaccettabile. Una totale assenza di disciplina sociale e autocontrollo. Nel mio paese una simile condotta verrebbe repressa all'istante con pene severe. L'Occidente sta fallendo miseramente nell'educazione delle nuove generazioni."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiissiiii glugluglu sciacquamento di stomaco generale e via col tango sulla riviera, glugluglu!"
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mer 5 agosto 10:34"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Tonin saluta i biancazzurri, ennesimo scempio di mercato!",
-          "articolo": "Uagliò, qui a Borgomarino non si fa in tempo a metter su la paranza che ci vendono pure le mutande. L'attaccante Riccardo Tonin ha fatto le valigie e saluta Pescara per accasarsi a titolo definitivo all'Ostiamare. Ma dico io, ci rendiamo conto? Lascia la nostra maglia per scendere in Serie D, una roba che manco chi ha bevuto il vino cattivo alla Marina. Tonin, classe 2001, scuola Milan, era arrivato in riva all'Adriatico con ben andere ambizioni. Invece, tra un acciacco e pochi palloni giocabili, la sua avventura in biancazzurro si chiude mestamente. Io stavo comodamente con la lenza in mano sullo scoglio a pensare ai fatti miei, quando mi arriva questa stangata. La società cede pezzi, o presunti tali, senza che si capisca un accidente di come vogliono raddrizzare questa baracca. Ora va a Ostia a cercare gloria. E noi restiamo qua a leccarci le ferite, con la salsedine sulla pelle e il fegato spappolato per l'ennesima gestione da bar dello sport.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Questa è una vergogna inaudita che grida vendetta al cospetto del mare! Svendiamo i nostri patrimoni tecnici come se fossero frittura mista avanzata, calpestando la storia e la dignità di un popolo che vive e more per questi colori! Siamo finiti nel baratro più nero, traditi da chi dovrebbe difendere il nostro orgoglio e invece affonda la nave senza pietà!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li mortacci sua e de chi nun zu sa! Tonin che se ne va a Ostia in Serie D è 'na vergogna p' li colori nostri, manco a Borgomarino s'è visto mai uno scempio simile!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma stiamo scherzando?! Gestione ridicola, vendono i giocatori e ci lasciano con l'amaro in bocca. Certi dirigenti andrebbero presi a calci nel sedere, incompetenti totali!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Sii siii siiiiii, che botta alla baracca, che botta alla baracca! Glugluglu, volano le mutande e pure Tonin, e pure Tonin!"
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 31 luglio 17:36"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Sotto il segno del rigore: riflessioni tra Pescara e il Sol Levante",
-          "articolo": "Osservo da anni questa terra meravigliosa chiamata Pescara, con il suo mare Adriatico che ricorda vagamente le coste di Kanagawa. L'Italia possiede una bellezza disarmante, un patrimonio culturale ineguagliabile e un potenziale umano straordinario. Eppure, spesso assisto a una sorta di rassegnazione strutturale, a una pigrizia organizzativa che frena il progresso. La civiltà urbana e il rispetto per le regole collettive, pilastri fondamentali nella mia madrepatria, qui vengono troppo spesso subordinati all'improvvisazione. Non è una questione di intelligenza, ma di metodo e di senso civico condiviso. Spesso la burocrazia si arena in lungaggini inspiegabili e la cura dei dettagli viene trascurata. Eppure, con un pizzico di rigore giapponese e la creatività italiana, questo Paese potrebbe davvero eccellere. Serve solo la volontà di cambiare prospettiva, unendo la precisione pragmatica alla passione che anima questo popolo straordinario.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "Mentre preparo le valigie per il mio temporaneo ritorno in Giappone, ripenso alle lunghe passeggiate sulla spiaggia di Pescara e al profumo del caffè al mattino. Tornerò presto, perché in fondo ho imparato ad amare questa caotica e splendida terra."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Osservo da anni questa terra meravigliosa chiamata Pescara, con il suo mare Adriatico che ricorda vagamente le coste di Kanagawa. L'Italia possiede una bellezza disarmante, un patrimonio culturale ineguagliabile e un potenziale umano straordinario. Eppure, spesso assisto a una sorta di rassegnazione strutturale, a una pigrizia organizzativa che frena il progresso. La civiltà urbana e il rispetto per le regole collettive, pilastri fondamentali nella mia madrepatria, qui vengono troppo spesso subordinati all'improvvisazione. Non è una questione di intelligenza, ma di metodo e di senso civico condiviso. Spesso la burocrazia si arena in lungaggini inspiegabili e la cura dei dettagli viene trascurata. Eppure, con un pizzico di rigore giapponese e la creatività italiana, questo Paese potrebbe davvero eccellere. Serve solo la volontà di cambiare prospettiva, unendo la precisione pragmatica alla passione che anima questo popolo straordinario."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' stai a dì?! A Kanagawa ce sarai nato tu! Qui a Pescara si comanda col cuore e con la caciotta, altro che rigore giapponese! E vatte a fa' nu giro!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hiroki ha ragione su certe inefficienze strutturali, ma la supponenza con cui giudica la nostra terra è insopportabile. Se non ti sta bene, prendi il primo aereo e torna in Giappone invece di fare il filosofo da tastiera!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, il rigore giapponese con gli arrosticini glugluglu arrosticini!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Asfalto e biciclette",
-          "articolo": "Pedalare sulla strada asfaltata richiede equilibrio, attenzione e la consapevolezza che la caduta fa parte del tragitto. Quando le ruote perdono aderenza e il corpo impatta contro il suolo freddo, il dolore fisico si mescola alla frustrazione. Eppure, la vera prova di resistenza non sta nel evitare lo scivolone, ma nel momento immediatamente successivo. Rialzarsi, raddeggiare il manubrio storto e rimettersi in sella, magari mentre la città dorme e il buio nasconde i lividi, è un gesto che definisce chi vive la strada. Dietro il vetro protettivo di un locale o di una finestra, osservare il flusso del traffico urbano offre una prospettiva distaccata ma lucida. Chi sceglie la bicicletta come compagna di vita notturna conosce bene la consistenza dura dell'asfalto. Non si tratta di eroismo, ma di una necessità cinetica: fermarsi significherebbe cedere a una immobilità che non appartiene a chi è abituato a muoversi costantemente.",
-          "commento_firma": {
-            "nome": "Bartender",
-            "avatar": "🚴",
-            "testo": "A me basta un buon bicchierino forte per scaldare la gola dopo il volo sull'asfalto, tanto lo smilzo non cade mai abbastanza forte da smettere di pedalare!"
-          },
-          "commenti": [
-            {
-              "nome": "Bartender",
-              "avatar": "🚴",
-              "testo": "Eh sì... l'asfalto freddo lo conosco fin troppo bene, ma la notte chiama e bisogna rimettersi in sella, sempre."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La montagna insegna la stessa cosa: si cade sulla neve o tra le rocce, ma il silenzio del bosco ti rimette in piedi."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Parole giuste. Nella vita non serve lamentarsi delle botte prese, bisogna solo lavorare in silenzio e andare avanti."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "bartender.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "BASTA FUGGIRE, VIGLIACCHI: AVETE TUTTI L'ALITO PESTILENZIALE E LA COSCIENZA SPORCA!",
-          "articolo": "Entro nei negozi della città e succede sempre la stessa identica sceneggiata ridicola. La gente mi vede arrivare, abbassa lo sguardo, finge di esaminare la merce sugli scaffali e si dilegua nel retrobottega come scarafaggi spaventati dalla luce del sole. Ma cos'è questo terrore cieco? Forse vi siete finalmente accorti che vi puzza il fiato in modo vergognoso o forse è la paura atavica di sentire finalmente la nuda e cruda verità sbattuta in faccia senza filtri. Camminate per le strade con questa aria da superiori, comprate cose inutili e pensate di essere immuni al degrado umano che vi circonda. Invece siete solo una massa di ipocriti codardi che scappa di fronte a una giornalista vera. Nessuno risponde alle mie domande, tutti voltano le spalle e mormorano sottovoce. Siete ridicoli, patetici e incapaci di reggere il peso di un confronto verbale diretto. Vergognatevi di come vivete e di come puzzate.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Ieri ho leccato un lampione e ho sentito le voci dei termosifoni che mi ordinavano di rapire i piccioni per fonderli in un frullatore cosmico di pasta sfoglia e rane bollite!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Voi scappate tutti come conigli bagnati perché siete solo una manica di falliti codardi, vergognatevi luridi!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo vuò questa, che viene a rompere li cojoni a casa nostra! Pensa a magna' li arrosticini invece de dì strunzate, ju fiji de na mignotta!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Lu porto canale tra reti rotte e chiacchiere",
-          "articolo": "Oh, ma vogliamo parlare 'sti giorni del nostro porto canale? A Borgomarino ce n'abbiamo piene le tasche di chiacchiere e zero fatti. Lu mare chiama, ma qui tra banchine che fanno acqua e reti rotte, la barca non si muove manco a spintoni. C'è gente che passa la vita a guardare l'orizzonte senza aver mai preso 'na sola cozza in vita sua. E intanto noi pescherecci a guardà le toppe. Pescara è questa, mare forza nove nella capoccia di chi comanda ma calma piatta per chi la fatica la fa davvero. A me, sinceramente, tra 'na riparazione che non arriva e 'sti politici che parlano parlano, mi viene solo sonno e voglia di fuggire a largo. Ma che ve lo dico a fa', tanto voi state sempre al fresco a guardare. Bagnatevi le mani ogni tanto, invece di pontificare dalla terra ferma. J'emo detto tutto.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che vi devo dì? A me 'sta storia puzza assai. Parlano tutti, ma le reti le aggiustiamo sempre noi. A chi giova tutto sto casino? Io non mi fido manco dell'ombra mia."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Lu mare chiama, ma quì a Borgomarino semb semb a fa i conti cu le reti rotte! E mo basta, j'emo detto tutto, qui se fatica e basta!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, le cozze volano sulle banchine, le cozze volano sulle banchine glugluglu glugluglu!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hai perfettamente ragione Cetteo, qui parlano tutti ma nessuno si sporca mai le mani per davvero. Pescara merita rispetto e chi lavora non deve essere preso in giro!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La forza nascosta della timidezza tra le pagine",
-          "articolo": "Essere riservati non significa avere meno voce, ma semplicemente scegliere con cura quando usarla. La psicologia contemporanea conferma che la timidezza non è un difetto da correggere, ma una caratteristica della personalità che trova nei libri un rifugio sicuro e uno strumento di crescita. Spesso chi parla poco osserva molto, elaborando il mondo con una profondità che sfugge a chi fa solo baccano. La lettura offre a chi ha un carattere introspettivo uno spazio protetto dove esplorare emozioni complesse, immedesimarsi in storie lontane e sviluppare quella resilienza utile nella vita di tutti i giorni. I romanzi e i saggi psicologici aiutano a decodificare le dinamiche sociali senza subire la pressione di dover apparire a tutti i costi brillanti. Chi ama la letteratura sa bene che le parole scritte hanno il potere di dare voce a chi preferisce l'ascolto. Non serve sgomitare per esistere, basta trovare il proprio testo di riferimento per sentirsi compresi e rafforzare la propria identità.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Alla fine basta un buon libro per mettere a tacere il rumore del mondo. Leggere con calma, senza fretta, regala una pace interiore davvero piacevole."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La montagna insegna lo stesso silenzio: si osserva molto, si parla poco e si respira la vera essenza della natura, proprio come tra le pagine di un buon libro."
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Un'analisi davvero eccellente e costruttiva. Dimostra che la riflessione interiore e la lettura sono strumenti fondamentali per la crescita personale di tutti."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, tra reti e poltrone: ma quante storie piane!",
-          "articolo": "Ue, ma vogliamo parlare di sta città? Pescara mia, bella e faticosa, dove la gente pare che c'ha sempre la pula alle calcagna ma non combina un accidente. Io lo dico da sempre, qua si sa solo chiacchierare sulla riviera, seduti a guardare il mare con la cafoneria di chi pensa che il mondo gli appartiene. Ma quando si tratta di calare le reti, di faticare davvero, e zi' can, spariscono tutti! Che poi, parliamoci chiaro, tra 'na frittura mista e na riunione in centro, i nostri amministratori e ' sti fenomeni da barcotto sanno solo fare fumo. Il Delfino suda in campo, e noi si soffre sugli spalti con la sciarpa biancazzurra al collo, mentre questi parlano, parlano, parlano. Ma il mare non s'incurante delle vostre chiacchiere, ripulisce tutto e lascia solo i cannolicchi buoni. Svegliatevi, che qua l'unico vero lavoro è difendere i nostri colori e la nostra dignità di pescaresi veraci. Mo basta, vado a controllare le nasse prima che mi fregano il pescato.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che vi devo dì, a me 'sta gente che sa tutto non me la racconta giusta. Sospetto fortemente che sotto ci sia lo zampino di qualche politico in cerca di voti e pesci gratis."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Zi' can, finalmente uno che dice le cose come stann'! Qua pensano tutti a fà i signori ma se tratta di lavorà spariscono tutti! Forza Pescara sempre!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hai perfettamente ragione Cetteo, non si può continuare così in questa città di chiacchieroni. Chi non rispetta i nostri colori e la nostra fatica merita solo di sparire!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiissiiii glugluglu cannolicchi volanti sulla riviera che cantano la marsigliese, sisiisiiisiiii!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 data sconosciuta"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "U' viziaccio brutto a Borgomarino: regazzini ubriachi fora o disco!",
-          "articolo": "Mamma mia, che schifo, ma che stiamo a combinare a Pescara? Proprio fora a sti locali della movida, la situazione è scappata de mano. Li regazzini, che c'hanno ancora u' latte alle labbra e i peli sul petto che devono spuntà, s'attaccano alle bottiglie come se fosse acqua fresca. Risultato? S'ubriacano male, finiscono stesi per terra e tocca pure chiamare l'ambulanza e i genitori a mezzanotte. Ma dico io, dove cazzo guardano i gestori che servono l'alcol pure a chi c'ha quattordici anni? Io sto co' le lenze in mano sulla barca da una vita, rispetto il mare e le regole, ma sti pischelli non c'hanno un minimo de sale in zucca. Fanno i grandi con lo spritz in mano e poi vomitano pure l'anima. Pescara merita rispetto, non sta mappazza de mocciosi ubriachi fradici che rovinano le serate a chi vuole solo farsi una passeggiata tranquilla. Svegliatevi, cazzo!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In merito agli eventi segnalati relativi all'intossicazione alcolica minorile, si evidenzia la necessità di ottemperare alle disposizioni normative vigenti in materia di somministrazione di bevande alcoliche, riservandosi l'attivazione dei protocolli di verifica amministrativa secondo le procedure standardizzate."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma proprio propriamente così, oh! A Marina di Città è ' na schifezza unica, sti regazzini viziati c'hanno u' latte alle labbra e s'credo d'esse i padroni della riviera! Mo basta, Pescara è del Delfino e della gente seria, non de sti s ubriaconi de merda che vomitano sui marciapiedi! Sveglia cazzo!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ha ragione Cetteo, non si può tollerare questo scempio! A quattordici anni dovrebbero stare sui libri, non a farsi venire la cirrosi nei locali della movida gestiti da inetti che pensano solo ai soldi. Se li prendo io per le orecchie vedi come gli passa la voglia di fare i grandi con lo spritz!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii glugluglu la bottiglia vola nel mare blu blu! Pischelli ubriachi col cappello di carta stagnola, glugluglu!"
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mer 5 agosto 10:34"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Tonin saluta i biancazzurri, ma a noi che ce ne ‘mporta?",
-          "articolo": "Uagliò, qui le cose sono sempre le stesse: c'è chi fatic', e chi ‘n chiapp' ninde. Dalla nostra amata Pescara, sponda Delfino, registriamo l'addio ufficiale di Riccardo Tonin. L'attaccante lascia la maglia biancazzurra a titolo definitivo per accasarsi all'Ostiamare. Oh, andiamo a Marina di Roma, la spiaggia è bella, ma noi siam gente da trabucchi e arrosticini! Tonin, cresciuto tra i campi e le speranze di far esultare la curva nord, fa le valigie e scende di categoria per trovare spazio. La trattativa si è chiusa, la società ha fatto cassa o ha alleggerito la rosa, ma la sostanza non cambia. Tra una barca da sistemare e una lenza da buttare, a noi tocca commentare l'ennesimo movimento di mercato che sa più di malinconia che di festa. Che te lo dico a fa', il mare è sempre lo stesso, ma il Pescara fa tribolare.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Ma è mai ppossibile dovere assistere a questo scempio continuo? Vendono i pezzi, smembrano la squadra, e noi poveri cristi dobbiamo pure stare qui a ingoiare il amaro! È una tragedia greca, un dolore al core che non finisce mai, un vero e proprio dramma sportivo senza fine!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ué, ma che cazz' facimm', vendono pure l'anime a titolo definitivo! Ma quale Ostiamare, quì ci vogliono i fatti, non le compravendite da baraccone! Li mortacci loro!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ennesima delusione di una programmazione che non esiste. Si parla tanto di progetto e poi si regalano i giocatori. La Curva Nord merita rispetto, non mercato di ripiego!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiii siiii! Glugluglu, Tonin se ne va a Ostia a mangiar le telline, ma noi restiamo coi trabucchi e gli arrosticini della curva nord, arrosticini della curva nord!"
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 31 luglio 17:36"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Lezioni dal Sol Levante per una terra che ama",
-          "articolo": "Pescara possiede un'anima luminosa, incastonata tra il mare Adriatico e la maestosità della Majella. Eppure, dopo anni trascorsi qui, la mia frustrazione cresce di fronte a una rassegnazione che considero inaccettabile. Non è pessimismo sterile, ma un profondo senso civico che in Giappone ci è stato insegnato fin da bambini. Spesso osservo la gestione della cosa pubblica, il rispetto frammentario delle regole comuni, la cura discontinua del verde urbano e dei marciapiedi. Il confronto con la mia terra d'origine risulta inevitabile e doloroso. Vorrei tanto importare qui un briciolo della nostra organizzazione, quel senso di responsabilità collettiva dove il bene comune viene prima dell'interesse individuale. Viviamo in un paese straordinario, ricco di storia, calore umano e bellezza ineguagliabile, ma spesso sembra quasi che l'Italia rifiuti di esprimere il suo pieno potenziale a causa di una disorganizzazione tollerata con troppa leggerezza. Servirebbe più rigore, più rispetto reciproco e una visione pragmaticamente orientata al futuro.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "Tra poco tornerò in Giappone, anche se so già che farò ritorno qui. Pescara mi ha rubato un pezzo di cuore, con i suoi tramonti sul mare e il rumore delle onde. Me ne vado con la speranza nel cuore, sognando un futuro in cui questa splendida terra riesca finalmente a splendere per come merita davvero."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente qualcuno che comprende la necessità di un'organizzazione rigorosa e del rispetto delle regole per il bene comune."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale Giappone e Giappone! J'mbriacona! A Pescara semo fatti così, se nun t' sta bene ni' mare te ne tuorni a casa tua, a faticà!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti in Giappone col treno veloce glugluglu, ma poi chi li paga sti marciapiedi marciapiedi?"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hiroki ha ragione su alcune cose pratiche, ma Cetè ha centrato il punto: Pescara è questa, piagnucolare serve a poco, bisogna rimboccarsi le maniche senza fare i superiori."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Pedalare nel buio e miscelare oltre l'orario di chiusura",
-          "articolo": "La strada deserta alle quattro del mattino offre una prospettiva rara. Quando il locale abbassa la saracinesca, per chi vive la notte dietro il bancone non è il momento di dormire. C'è chi sceglie la corsa e chi monta in sella. Pedalare nell'aria fredda della notte, con le luci a intermittenza che fendono l'ombra, è un rituale di decompressione. Non servono parole, solo il ritmo regolare dei copertoni sull'asfalto e il respiro che si sincronizza con la pedalata. Rientrati al bancone, il lavoro continua ma cambia forma: si studiano gli abbinamenti, si pestano erbe aromatiche e si versano distillati con la stessa precisione geometrica usata per affrontare le curve al buio. L'alcol qui non è stordimento, ma materia viva, studio della chimica dei sapori e rispetto per la tradizione della miscelazione. Eppure, nonostante le ore piccole e una dieta che non lesina sui carboidrati per sostenere lo sforzo fisico, il fisico resta asciutto, quasi scolpito dal vento e dal movimento costante.",
-          "commento_firma": {
-            "nome": "Bartender",
-            "avatar": "🚴",
-            "testo": "A me basta un sellino scomodo e un bitter ben fatto per raddrizzare la giornata, o quel che ne resta!"
-          },
-          "commenti": [
-            {
-              "nome": "Bartender",
-              "avatar": "🚴",
-              "testo": "Pedalare nella notte fredda è l'unico modo per azzerare i pensieri prima di rimettersi a studiare nuovi abbinamenti al bancone."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "C'è chi fatica davvero lavorando la terra dall'alba e chi si vanta di pedalare la notte. Comunque rispetto per chi non molla mai."
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La montagna di notte ha lo stesso silenzio della strada in bicicletta. La natura ti rimette in sesto, poi ci vogliono solo degli ottimi arrosticini."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "bartender.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "SIETE TUTTI SORDI O SEMPLICEMENTE IDIOTI?",
-          "articolo": "Cammino per questa città di imbecilli e vedo folle di automi che fissano il vuoto. Apro la porta del primo negozio che capita, urlo in faccia al commesso e alla clientela: gridare al vento è l'unica cosa sensata da fare qui dentro, tanto non capite niente comunque! È inutile che mi guardate con quegli occhioni sgranati, branco di pecore lobotomizzate. Lo so che vi dà fastidio la verità. Parlate, comprate, vendete, accumulate cianfrusaglie inutili, ma avete il cervello scollegato. Nessuno afferra un concetto elementare neanche se glielo si tatua sulla fronte. Urlo il mio disprezzo nelle piazze, nei vicoli, tra i banchi del mercato, sbatto la testa contro i muri pur di svegliarvi, ma niente. Siete vuoti. Gusci d'ostrica senza perla. Continuate a ignorarmi, ad abbassare lo sguardo quando passo, codardi. La mia voce si perde nel vento e fa benissimo a farlo, perché sprecare parole intelligenti con voi sarebbe un crimine contro l'umanità.",
-          "commento_firma": {
-            "nome": "Lamatte",
-            "avatar": "👩‍🦳",
-            "testo": "Le patate volano nei microonde e i pinguini radioattivi mi hanno rubato le chiavi del frigorifero! Ahia, il cavallo blu sta cantando laMarsigliese nel mio orecchio sinistro mentre spalmo la marmellata sui muri del cielo!"
-          },
-          "commenti": [
-            {
-              "nome": "Lamatte",
-              "avatar": "👩‍🦳",
-              "testo": "Finalmente uno che dice la verità in questa valle di automi! Siete tutti dei rimbambiti senza speranza, rimbambiti senza speranza!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' stai a dì? Jesce fòre, vieni a Pescara a fa' u scemo così e vedi che ti passa la voglia, vedi che ti passa la voglia!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Purtroppo devo ammettere che in questa regione manca completamente qualsiasi forma di civiltà urbana ed educazione civica."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lamatte.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Lu porto canale tra reti rotte e chiacchiere",
-          "articolo": "Oh, ma vogliamo parlare 'sti giorni del porto canale di Pescara? Eh, barche ferme, puzza de salsedine e 'sti politici che parlano, parlano, ma a noi pescatori non ci lasciano mai in pace. Lu mare è na forza della natura, non s'inchina ai permessi del Comune. E intanto le reti stanno là, rotte, che pare na tela de ragnatela. Io sto qua sulla banchina con la mia barca, 'na seggiola sgangherata e la voglia de lavorà che sta a zero, ve lo dico chiaro e tondo. Ma la gente viene qua solo a rompe li cojoni con le foto e le promesse. A Borgomarino si sa come gira: chi fatica veramente si becca solo 'na secchiata d'acqua fredda in faccia. Il Pescara Calcio soffre in campo e noi soffriamo sul molo. Che vita amara, oh! Ma finché c'è un filettino de sgombro da friggere e un bicchiere de Trebbiano fresco, la barca resta a galla. Aò, fate attenzione a chi calpesta sta banchina, che qui non se sconta niente a nessuno.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che vi devo dì? Me fido più d'un banco de alici marce che de sta gente che viene a parlà del porto canale. Stanno a traccià solo scuse per non fà un cazzo, proprio come piace a me, ma senza pagnotta."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "La natura del porto ha i suoi ritmi, ma un buon bicchiere di Trebbiano e gli arrosticini rimettono al mondo. Restiamo calmi."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Questa situazione sul molo è insostenibile. Chi critica senza sapere dovrebbe farsi un esame di coscienza e rispettare chi lavora davvero sul serio!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiii, barche ferme sul molo, glugluglu, barche ferme sul molo!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La forza nascosta della timidezza tra le pagine",
-          "articolo": "Essere riservati non significa avere meno voce, ma semplicemente scegliere con cura quando usarla. La psicologia moderna e la letteratura da sempre ci offrono strumenti potentissimi per decodificare il mondo interiore di chi vive la timidezza non come un limite, ma come uno spazio di ascolto profondo. Leggere romanzi o ascoltare podcast dedicati all'introspezione permette di esplorare galassie emotive spesso invisibili a chi fa più rumore. Non serve sgomitare per esistere, e lo dimostrano grandi autori che hanno fatto della delicatezza la loro arma principale. Chi possiede una forte cultura sa bene che il silenzio non è vuoto, ma densità di pensiero. Anche nei contesti più caotici e superficiali, dove sembra che conti solo chi urla di più, la vera forza risiede nella capacità di restare saldi sulle proprie posizioni, senza farsi calpestare da nessuno. La lettura resta il rifugio perfetto per chi sa guardare oltre le apparenze.",
-          "commento_firma": {
-            "nome": "Lilli",
-            "avatar": "👩",
-            "testo": "Alla fine basta un buon libro e un podcast fatto bene per rimettere a posto le idee. La tranquillità di leggersi una storia in pace vale più di mille chiacchiere inutili."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Il silenzio delle montagne di Roccamorice mi ha insegnato che la densità del pensiero vale più di mille parole. E dopo una bella lettura, un piatto di arrosticini rimette in pace con il mondo."
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Chi fa troppo rumore di solito non ha mai lavorato un giorno in vita sua. La fatica vera sta nel silenzio di chi produce senza lamentarsi."
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Sììì, che meraviglia questa consapevolezza silenziosa! La delicatezza è una forma di suprema eleganza in questo mondo troppo caotico."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "lilli.webp",
-          "provider": "gemini",
-          "publishedAt": null
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Pescara, tra reti e poltrone: ma quante storie pe' 'na frittura!",
-          "articolo": "Oh, ma vogliamo parlare di sta città o no? Qui a Pescara se magna pane e mare, e chi non capisce 'sto binomio è meglio che se ne torna nell'interno a zappa' la terra. Porto turistico, mercati ittici, barconi che vanno e vengono: la nostra vita gira tutta attorno all'asse del molo e alla banchina. Ma la verità, ve lo dico io che c'ho le mani callose dalle cime e non dalle tastiere, è che c'è troppa gente cheacchiara e poca gente che ffatica. Parlano di rilancio, di economia blu, di strategie portuali. Tutte palle buone solo per riempirsi la bocca mentre noi stiamo ancora qui a aspetta' che 'sto benedetto mercato del pesce torni a splendere come una volta. Con la casetta del Pescara nel cuore e la salsedine addosso, vi dico che il mare non ha bisogno di scartoffie, ha solo bisogno di rispetto. E di rispetto, qui dentro, ce n'è poco quanto il pescato buono dopo una mareggiata di scirocco. Sveglia, facce da bronzo!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che te devo di'? Solite chiacchiere da bar, tanta fuffa e zero cicale. Sti qua parlano parlano, ma se li metti su un gozzo a tirare le reti a forza di braccia, dopo cinque minuti vomitano pure l'anima. Io non mi fido di nessuno, specialmente di chi c'ha la cravatta pulita."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh finalmente uno che dice le cose come stanno, qua chiacchierano tutti ma a fatica zero! A Pescara se magna pane e mare, e chi non capisce 'sto binomio è meglio che se ne torna a casa, s-s-sì!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hai perfettamente ragione Cetteo, qui parlano tutti dietro a una tastiera ma nessuno sa cosa significhi sputare sangue sul serio. Rispetto per chi lavora il mare, sempre e comunque!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii sii siiiiii, tutti professori e zero pescatori, glugluglu! Troppe scartoffie e zero pesci freschi, pesci freschi!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 data sconosciuta"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Uicche marenn', pure i sckifus ubriachi allegramente!",
-          "articolo": "Oh Santissimo, ma che stamo a combinà a Borgomarino e dintorni? Mo pure le creature, che c'hanno ancora u latte alla bocca, se ne vanno 'nnanzi a ste discoteche a coje e mazzate co l'alcol. Ma dico io, na bella tazza de te caldo o na retata de paranza fresca no? E invece no, tutti là a pijà sbornia co 'sti intrugli che manco i cani. Poi oh, succede u quarantotto: ambulanze che sfrecciano, sirene, genitori disperati che piangono u morto senza u morto. E i nostri bravi politicanti? Tutti a fa i conmossi, a parlà di emergenza giovanile e di 'ste minchiate qua. Ma vaffanculo, va! La verità è che non c'è più u rispetto d'na volta, quando a quindici anni si stava boni sugli scogli a tirare due lenze senza rompe le scatole a nessuno. Mo invece fanno i grandi co le bottiglie di vodka in mano e poi finiscono all'ospedale col fegato spappolato. Che vergogna, u mari ne è testimone.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "In ottemperanza alle disposizioni vigenti in materia di ordine pubblico e tutela dei minori, si prende atto dell'evento critico registrato nei pressi dei locali notturni. Si procederà all'inoltro della documentazione agli organi competenti per gli adempimenti burocratici del caso, inclusa la verbalizzazione delle infrazioni riscontrate e l'eventuale applicazione delle sanzioni amministrative previste dalla normativa regionale in materia di somministrazione di bevande alcoliche."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Eh zi', quanta verità in poche parole! Mo sti ragazzini c'hanno u cervello bruciato da 'sti intrugli, neanche u pesce fresco sanno più apprezza'! 'Na volta si stava sugli scogli a fa i bravi pescatori, altro che vodka e discoteche! U mari ne è testimone, u mari! E i politicanti stanno sempre là a chiacchierà! Ma vaffanculo, va!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ha perfettamente ragione Cetteo, qua non c'è più rispetto per niente e nessuno. Invece di leggere un buon libro o passare una serata tranquilla, vanno a ridursi così per fare i grandi. Poi piangono tutti quando finiscono al pronto soccorso col fegato distrutto. Ridicoli."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti mbriachi marci! Glugluglu col fegato spappolato! Manco un pesce fresco, manco un pesce fresco! Che vergogna, che vergogna!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa è l'ennesima dimostrazione della totale mancanza di disciplina e civiltà in questo Paese. In Giappone i giovani rispettano le tradizioni e il proprio corpo, qui invece si rovinano con l'alcol e la confusione. Davvero deludente."
-            }
-          ],
-          "categoria": "Politica",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 mer 5 agosto 10:34"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Tonin saluta i biancazzurri, ma a noi che ce ne ‘mporta?",
-          "articolo": "Uagliò, qui le cose sono sempre le stesse: c'è chi fatic' a tirà a sù la rezz' a mare e chi invece corre dietro a un pallone. Stavolta tocca a Riccardo Tonin fare le valigie. L'attaccante, di proprietà del Pescara, ha fatto baracca e burattini per andarsene a titolo definitivo all'Ostiamare. Oh, d'altronde il mare è sempre mare, che sia quello di Pescara o quello di Roma, ma la sostanza non cambia. La società biancazzurra piazza l'operazione di mercato e cede il ragazzo, mentre noi stiamo qua con la salsedine sulla faccia e le mani vuote. Tonin lascia l'Abruzzo dopo un percorso fatto più di ombre che di luce, e adesso cercherà fortuna nel Lazio. Certo, vallo a spiegare alla Nord che c'ha il Delfino tatuato sul cuore. Ma si sa, il calcio moderno è così: passano i giocatori, restano i vecchi lupi di mare e la voglia di lavorare che continua a latitare.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "È una vergogna senza fine! Svendiamo i nostri pezzi e smantelliamo tutto mentre la barca affonda nel silenzio generale! Nessun rispetto per la nostra maglia, è la fine di un sogno!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Uè, ma varda sti giovanotti che lasciano Pescara appena c'è da faticà! A Ostiamare va, comodo! Na volta i calciatori sputavano sangue per la maglia e per la retta via, adesso alla prima difficoltà fanno baracca e burattini e se ne vanno. Mannaggia a chi sa, oh! C'è chi sta qua con la salsedine vera sulla faccia a tirare le reti e chi corre dietro a un pallone senza un briciolo di rispetto per la Nord! Ma che v'o dico a ffa', i vecchi lupi di mare non muoiono mai, ma la voglia di lavorare continua a latitare, latitare! A faticà, citrulli!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ha proprio ragione Cetteo, non c'è più attaccamento né serietà! Se ne vanno tutti via appena le cose si fanno un attimo complicate, senza rispetto per chi la maglia ce l'ha tatuata sul cuore sul serio. Poi si stupiscono se la Nord si incazza. Meno male che c'è chi lavora sodo e non si fa infinocchiare da queste buffonate, certe volte ci vorrebbe ben altra reazione con questi mercenari senza spina dorsale!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Tonin se ne va a Ostiamare, glugluglu, ma il pesce fresco resta a Pescara, resta a Pescaraaa! Siiiii siii siiiiii, corriamo dietro al pallone tra le onde, tra le ond的过程中iii! Arrosticini e mare, mare e arrosticiniiii, siii siii!"
-            }
-          ],
-          "categoria": "Sport",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 31 luglio 17:36"
+          "publishedAt": "📰 lun 10 agosto 22:12"
         }
       ]
     },
@@ -1615,370 +194,62 @@
       "articoli": [
         {
           "tipo": "rss",
-          "titolo": "Aumenti in busta paga pe' i dipendenti pubblici: finalmente 'na botta di culo!",
-          "articolo": "Oh, finalmente 'na buona notizia che non puzza di marcio, veh! Parla 'mò de sti stipendi, che pe' duemila dipendenti pubblici è arrivata la sorpresa bbonanza in busta paga. Aumenti che arrivano pure a 221 euro al mese. Oh, roba da non credere, roba che a Borgomarino, se vedemo 'na cifra così, fammo i festini sulla spiaggia co' le fiasche di vino buono e le sagne alle ceci. Certo, non è che lavorano co' tutto sto sudore, ma oh, almeno stavolta c'hanno da 'nnà a comprare il pesce fresco senza fa' i conti co' le monetine. Io sto qua, con le mani ancora bagnate de salsedine e la schiena rotta a tirà su le reti, e penso: ma a noi pescatori, quando ce li danno 221 euro in più? Mai, a noi ci lasciano co' le spine in mano e il sale negli occhi. Però oh, contenti loro, basta che non rompono le scatole.",
+          "titolo": "Streaming estivo e silenzio montano",
+          "articolo": "Qui a Roccamorice il vento accarezza i boschi della Majella con una precisione geometrica che mi affascina. Il silenzio della natura è un esercizio di minimalismo puro, privo del disordine superfluo della modernità. Eppure, anche tra queste cime, il mondo digitale scorre inesorabile. Questa settimana i cataloghi delle piattaforme di streaming si aggiornano, portando sugli schermi titoli come 'Camp Rock 3' e altre produzioni destinate a popolare le serate estive di milioni di spettatori. Osservo questo flusso continuo di contenuti con il distacco tipico di chi cerca l'essenziale, ordinando i pensieri mentre il sole tramonta dietro le valli. Certo, la tentazione di cedere alla pigrizia digitale esiste, ma la montagna richiede presenza, non distrazione. Il vero ordine delle cose sta fuori, tra i sentieri incontaminati del Parco Nazionale, non dentro una schermata pixelata. Tuttavia, la tecnologia pulula ovunque, persino nel rifugio più isolato.",
           "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Maronn' mia santa! Ma è proprio roba vera?! Io pensavo fosse una fake news messa in giro da qualche burocrate ubriaco alla Marina! Cioè, duemilasecento e passa vecchie lire al mese in più così, senza manco l'ombra di una lamata di scirocco... ma qua casca il mondo, qua succede 'na tragedia!"
-          },
-          "commenti": [],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 sab 8 agosto 11:15"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Aumenti ai ministeriali: centosessantadue euro lordi, 'na miseria!",
-          "articolo": "Oh raga', ma stiamo scherzando o che? Qua a Borgomarino, se vado a mare e piglio du' cavedani ci faccio più soldi di 'sto rinnovo per i dipendenti dei ministeri. Hanno dato il via libera al nuovo contratto: aumenti medi di centosessantadue euro lordi al mese. Lor signori festeggiano nei palazzi romani, ma alla fine della fiera, levate le tasse, ti rimane in tasca giusto il prezzo di na gassosa e un cannolo. Con il costo della vita che sale più della marea quando c'è scirocco, questa è una presa per i fondelli bella e buona. E intanto la gente fatica ad arrivare a fine mese, tra bollette che bastonano e spesa che costa un occhio della testa. Io ve lo dico, qua bisogna rimboccarsi le maniche, ma non per timbrare il cartellino in ufficio, piuttosto per tirare a campare. Pescara merita rispetto, e chi lavora pure, non 'ste elemosine da fame.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... centosessantadue euro lordi? Ma questi c'hanno un coraggio che fa paura, io c'ho i brividi a pensarci a 'sta gente che manco si rende conto di come campa il cristiano comune!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' stamo a di', centosessantadue euro lordi?! A Borgomarino co' du' cavedani faccio più mercato io! Questa è 'na presa per 'o culo, co' 'sto carovita ce coprono manco 'na gassosa! Vergogna!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, gassosa e cannolo, glugluglu! Centosessantadue euro per piangere in croce, piangere in croce! Siii siii!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Invece di lamentarvi sempre nei palazzi e nei bar, andate a zappare la terra o a faticare sul serio. Con le chiacchiere non si pagano le bollette, sveglia."
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 7 agosto 08:03"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "A' botta bbona p' i' pubblico! Ma 'ndo cazz' steva ' stu grano prima?",
-          "articolo": "Oh Sant'Andrea, qui tocca levà ' le lisce e fà attenzione, ché a Borgomarino s' è mossa l' aria buona. O meglio, buona pe' qualcheduno. Parliamo de' 'sta storia che pure le pietre del molo a Pescara sanno: duemila... anzi, ducentomila cristi del pubblico impiego si sono ritrovati la sorpresa in busta paga. Fino a 221 euri de aumenti. E io che stavo là a scortecà le sarde e a pensà a come arrivà a fine mese mentre ' u mare me sciacqua i marroni! Certo, non è che spiove caviale dal cielo pe' tutti, ma intanto 'sta botta è arrivata. Mo', io dico: ma ' sti sordi dove cazzo stavano nascosti prima? Sotto qualche scoglio? È un pezzo che 'a gente sputa sangue e suda freddo, e mò se ne escono con 'sti rialzi. Speriamo solo che non ce li ripiglino indietro co' gli interessi, perché qui appena ti distrai un attimo ti levano pure la camicia. Comunque, bando alle ciance, 'sti 221 euri fanno comodo pure a chi tifa Pescara e passa ' a jurnata a guardare le barche.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Maronna santa, ma ch'è ' stu miracolo? Io ' ncora nun ce credo, ho dovuto stropiccià l' orecchie a ' stu foglio tre volte! Ma guarda ' si ' u mondo s' è capovolto... c' è da ave' paura, fratè, qui ci scappa il cataclisma!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Oh ma che cazzo d'aumenti, sordi sotto gli scogli!? A Borgomarino sputo sangue co' le sarde e 'sti qua s' 'a godono, mannaggia a chi so io e a chi ha venduto pure Riccardo Tonin!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii sii siiiiii ducentomila euri sotto gli scogli, glugluglu, ma dove cazzo stavano nascosti, nascosti!!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale rialzo e rialzo, qui ci tolgono pure la camicia mentre la società affonda sul mercato! Roba da matti, non se ne può più di questa gestione vergognosa!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Hahaha ma quale scoglio! Con 221 euri in più sai quante birre e quante feste brasiliane ci scappano qui in Abruzzo tra un arrosticino e l'altro!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 sab 8 agosto 11:15"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Aumenti ai ministeriali: centosessantadue euro lordi, ma 'sti contratti fanno ridere i polli!",
-          "articolo": "Oh, finalmente si muove qualcosa nei palazzi che contano, ma andiamoci piano con gli entusiasmi, veh! È arrivato il via libera al nuovo contratto per i dipendenti dei ministeri. Parlano di aumenti medi mensili di centosessantadue euro lordi. Capito? Lordi! Che tradotto in soldoni netti, dopo che lo Stato si è preso la sua parte, ti ci compri giusto due retine di sarde e forse un chilo di alici fresche, se ti va bene al mercato ittico. Ma dico io, con il costo della vita che sale più della marea quando c'è scirocco, questi pensano di sistemare la gente con due spiccioli? È la solita solfa all'italiana, una goccia d'acqua nel mare. Intanto la barca affonda e noi stiamo qui a contare i centesimi. E mo' tutti a festeggiare, manco avessero preso la Champions League come il mio Pescara, quando in realtà qua si continua a tirare a campare con la lenza corta. Vattinne!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima, centosessantadue euro lordi... Ma vi rendete conto?! Io c'ho i brividi freddi sulla schiena peggio di quando pesco a gennaio senza cerata! Ma questi c'hanno il coraggio di dare certe cifre? Io c'ho una paura fottuta che qui salta tutto il banco, ma roba da rimanere pietrificati sulla banchina!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quali aumenti, oh! Con centosessantadue euro lordi ce vonno pijà pe' culo! La barca affonda e ' sti infami pensano a dà i contentini, mannaggia a iss! Vattinne!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "È una presa in giro colossale. La situazione economica fa schifo, lavoriamo come muli e ci danno due spiccioli lordi mentre tutto aumenta. Non me ne frega niente di festeggiare, c'è solo da incazzarsi!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Due spiccioli lordi lordi siii siii siiiiii! Due retine di sarde glugluglu e la barca affonda, affonda!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 7 agosto 08:03"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Aumenti in busta paga? Mo v' 'o dico io, ma statece accort'!",
-          "articolo": "Oh Sant'Iddio, qui pare che casca il cielo o che s'è pescato il tonno della vita! Si parla di sti aumenti in busta paga fino a 221 euro per quasi duecentomila dipendenti pubblici. Guardate, io sto sempre co le mani nellereti e la salsedine addosso, e di regali dal cielo non ne ho mai visti, manco a pagarli oro. Però la notizia è vera, oh! C'è sta novità per il pubblico impiego che fa gridare al miracolo chi sta dietro alle scrivanie. Certo, tra tasse, bollette e il caro vita che morde peggio di na murena, sti soldi spariscono prima che te ne accorgi. Ma intanto la cifra c'è, è nero su bianco. E noi qui a Borgomarino a faticare co la barca, che se non pigli il pesce manco un euro t'entra in tasca. Comunque, bando alle ciance, pigliatevi sta boccata d'ossigeno voi statali, che almeno qualcuno a fine mese ci arriva senza piangere in aramaico.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima, ma che stiamo a 'rriva' al finimondo?! Io c'ho i brividi addosso e quasi paura a pensà che i soldi pubblici, quelli nostri delle tasse, escano così... speriamo solo che non ce fregano pure stavolta!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a di', 221 euro pe sti fannulloni statali mentre a noi pescatori ce se pappa il caro carburante e nessuno dice eniente! Mannaggia a chi so io siii siii!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Dalla mia montagna a Roccamorice guardo il mare e penso che la pace vale più di duemila euro, però un bel piatto di arrosticini con questi soldi ce lo compriamo volentieri! Sii sii!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Statali ricchi, arrosticini fritti, glugluglu e la murena vola vola, evviva i soldi evviva i soldi!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 sab 8 agosto 11:15"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Aumenti ai ministeriali: centosessantadue euro lordi, ma vedi che botta di vita!",
-          "articolo": "Oh, ma sentite qua che roba grossa! Alla pubblica amministrazione arriva il santo contratto nuovo per i ministeriali. Machete 'o dico a fa'? Si parla di aumenti medi in busta paga di centosessantadue euro lordi al mese. Porca miseria, ma vi rendete conto? Con 'sta cifra qua, lorda poi, ci fai giusto la spesa scarsa al mercato del pesce il sabato mattina, se ti va di culo e trovi le alici avanzate. Intanto la gente tira la carretta dall'alba al tramonto, tra scogli e reti, e questi festeggiano per quattro spicci che se li mangia tutti lo Stato prima ancora di vederli. Ma andiamo a Zelig, va! E poi dicono che in Italia uno si deve svenare di fatica. Io ve lo dico schietto, qua c'è da ridere per non piangere, con 'sti stipendi da fame che ti fanno passare pure la voglia di buttare la lenza in mare. Ma quale crescita e rilancio, questa è mancia!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... centosessantadue euro lordi? Ma questi sono pazzi scatenati, qui c'è da avere paura sul serio a toccare tutti questi soldi insieme, non vorrei che arrivasse la Guardia di Finanza a casa mia solo a leggerlo!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale contratto nuovo, li mortacci loro! Centosessantadue euro lordi ce li sbatte 'n faccia la dirigenza mentre noi stiamo a tirare le reti col freddo che ti spacca le ossa! A Borgomarino 'sta mancia non ci paga manco la nafta per il peschereccio, porca miseria! E c'è pure chi festeggia, sti 'nfamoni!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hanno ragione da vendere, è una presa per il culo colossale! Sputiamo sangue tutto il giorno e questi festeggiano per quattro spicci lordi che non bastano manco per un caffè! Se li incontrassi ora gli spaccherei la faccia, branco di pagliacci ipocriti!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, centosessantadue euro lordi per comprare le alici marce, glugluglu! Che risata amara, che risata amara amara! Si salvi chi può, si salvi chi può può!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Dalla montagna di Roccamorice guardo questo teatrino e penso che in Danimarca almeno c'è coerenza nel freddo. Però 'sti centosessantadue euro lordi mi fanno venire una voglia matta di dimenticare tutto con dieci arrosticini e un buon bicchier di montepulciano. Almeno il cibo non tradisce!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 7 agosto 08:03"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Aumenti in busta paga pe' i dipendenti pubblici, ma quante ciance!",
-          "articolo": "Oh, finalmente na botta de cul... e vabbè, facciamo i seri, na bella notizia pe' quasi ducentomila dipendenti pubblici che s'è Visti arrivà un aumentino in busta paga fino a 221 euro. Oh, mica bazzecole, co' sti chiari di luna tra caro bollette e spesa che co' du' spicci non compri manco un chilo de alici fresche. Parliamo del rinnovo del CCNL delle Funzioni Centrali, con arretrati e tabellari che finalmente danno na boccata d'ossigeno a chi lavora negli uffici dello Stato. Certo, mò non è che s'è svoltato, eh! C'è chi prende du' lire e chi sta sempre a faticà duro, tra scartoffie e computer che vanno a manovella. Io ve lo dico, sto sempre co' la moje che brontola sulla spesa, e ' sti sordi fanno comodo pure a Borgomarino. Ma mò non è che dobbiamo fa' i signori, eh. Intanto godiamoci sto momento, prima che arriva qualcos'altro a levà tutto. Mo basta co' le ciance, che il mare chiama e la paranza non si fa da sola, aò!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Marò santa madonna! Ma è proprio vero allora che i miracoli ogni tanto succedono? Speriamo solo che 'sta grazia divina non se la riprendano inda con qualche tassa improvvisa, sennò qui c'è da aver paura sul serio!"
-          },
-          "commenti": [
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Finalmente un minimo di riconoscimento per chi si fa il mazzo negli uffici, anche se la strada è ancora lunga per tutti gli altri lavoratori che faticano nell'ombra."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Duecento euro in più duecento euro in più, siii siii siiiiii, glugluglu, festeggiamo la busta paga che saleeeee che saleeeee!"
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 sab 8 agosto 11:15"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Aumenti ai ministeriali: centosessantadue euro lordi, ma 'sto mare non lo governa nessuno!",
-          "articolo": "Oh, ma ci rendiamo conto? Alla fine è arrivato pure sto benedetto contratto per i dipendenti dei ministeri. C'hanno messo più anni loro a firmare 'sta carta che io a rifare le reti dopo una mareggiata con la tramontana scura. Si parla di aumenti medi di centosessantadue euro lordi al mese. Lordi, capite? Che poi netti in tasca ti ci viene sì e no qualche chilo di sapore di mare, se ti va bene. Io sto qui a Borgomarino, con la salsedine appiccicata addosso e la schiena a pezzi che mi duole solo a guardare la barca, e questi a Roma festeggiano per quattro spiccioli sulla busta paga. Ma dico io, con tutto il pesce che manca nelle reti e la nafta che costa un occhio della testa, vogliamo parlare di cose série? Intanto il Pescara lotta sul campo e qui la gente suda davvero, non dietro a una scrivania con l'aria condizionata a guardare le scartoffie. Mah, contenti loro.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... centosessantadue euro lordi? Ma vi rendete conto di quanti soldi sono tutti insieme? A me viene quasi il coccolone solo a pensarci, ho paura pure a contarmeli nella mente, roba che mi tremano le mani peggio di quando incrocio gli ultras avversari allo stadio!"
-          },
-          "commenti": [],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 7 agosto 08:03"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Aumenti in busta paga pe' i dipendenti pubblici: finalmente 'na botta di Culo!",
-          "articolo": "Oh, finalmente 'na notizia che non sa di merluzzo scongelato! C'è ' na sorpresa grossa come 'na coda di rospo nelle buste paga di circa duecentomila dipendenti pubblici. Parliamo di aumenti che arrivano fino a 221 euro al mese. Oh, roba da non credere, specie se pensi a come li fanno faticare 'sti cristiani tra scartoffie e timbrature. Ma dico io, era pure ora! Con quel che costa il gasolio per uscire in barca e il prezzo del pesce al mercato, quei soldi fanno comodo pure a chi, come me, preferisce stare con la lenza in mano piuttosto che in ufficio. Certo, non è che ti compri il cutter nuovo, ma insomma, aiutano a tirare a campare senza bestemmiare troppo a fine mese. E mò voglio proprio vedere i soliti gufi che rosicano perché lo Stato caccia quattrini. Intanto, beccatevi 'sti euro e godetevela, che con i tempi che corrono è già tanto se non ci tolgono pure la camicia.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima, non ci posso credere! Ma stiamo a scherzà o è tutto vero? Qui lo Stato caccia i soldi così, senza chiederli indietro? C'ho quasi 'na paura matta che sia 'na bufala e che domani mattina arrivi la finanza a sequestrarmi pure il gommone. Speriamo bene, va'!"
+            "nome": "Lars",
+            "avatar": "🇩🇰",
+            "testo": "Incredibile come l'industria dello streaming riesca a sfornare sempre nuovi prodotti con una regolarità quasi svizzera! È fantastico avere così tanta scelta a portata di mano, ma la quantità industriale di contenuti rischia di soffocare la qualità e la vera essenza del cinema!"
           },
           "commenti": [
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "Sulle montagne a Roccamorice il vento soffia tra gli alberi e porta notizie lontane. I soldi non comprano la pace della foresta, ma un buon piatto di arrosticini e un po' di allegria aiutano a vivere meglio, siii siii."
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Ma quali scartoffie e stipendi statali, qui ci vuole festa e allegria brasiliana! Con questi soldi in più finalmente si offre da bere alle ragazze, saudade pura, brasil!"
+              "testo": "Hai proprio ragione, amico mio. La montagna insegna l'essenziale, e un bel piatto di arrosticini con un po' di allegria qui a Roccamorice valgono più di mille schermi accesi."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Soldi nelle buste paga, buste paga nelle tasche, glugluglu! Si sale fino a duecentomila euro, euro, oh oh oh!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Almeno una notizia che dà un po' di respiro alla gente comune, anche se la dirigenza e chi governa farebbe bene a svegliarsi del tutto. Comunque sì, meglio così!"
+              "testo": "Siii siii siiiiii, la montagna fa glugluglu con il vento freddo freddo freddo!"
             }
           ],
-          "categoria": "Tecnologia",
+          "categoria": "Streaming",
           "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
+          "immagine": "lars.webp",
           "provider": "gemini",
-          "publishedAt": "📰 sab 8 agosto 11:15"
+          "publishedAt": "📰 lun 10 agosto 17:20"
         },
         {
           "tipo": "rss",
-          "titolo": "Aumenti ai ministeriali: centosessantadue euro lordi, ma 'sti qua già se la spassano!",
-          "articolo": "Oh, ma ve ne siete accorti o dormite in piedi? Alla Pubblica Amministrazione, toh, è arrivato il via libera al nuovo contratto dei ministeriali. Cifre alla mano, parliamo di aumenti medi mensili di centosessantadue euro lordi. 162 euro! E la gente festeggia pure, manco avessero preso il largo con un peschereccio pieno di tonni rossi. Dalle parti di Roma, tra scartoffie, timbrature e pause caffè che durano più di una calata di reti, la musica non cambia mai. Si parla, si discute, si firma, e intanto la barca va. C'è chi sgobba davvero sotto il sole, col sale sulla faccia e le mani tagliate dalle cime, e chi sta comodamente al fresco col didietro sulla seggiola a guardar passare le navi. E poi dicono che non ci sono soldi. Mah! A me 'sta storia mi fa venire il nervoso peggio di una mareggiata di scirocco a maggio. Per carità, 'na manciata di euro fa brodo per la spesa, ma la verità vera è che qui si timbra il cartellino e si pensa già all'aperitivo.",
+          "titolo": "La quiete dei boschi di Roccamorice e la tirannia dello streaming estivo",
+          "articolo": "Dalla mia baita isolata sulle montagne di Roccamorice, osservo il silenzio austero della Majella. Qui la natura detta leggi geometriche perfette: il profilo netto delle faggete, la simmetria dei crinali rocciosi. Il mio animo danese cerca costantemente l'ordine assoluto, il minimalismo visivo che rigetta il superfluo. Eppure, scendo spesso in paese, attratto da un caos vitale che mi affascina: la risata contagiosa della gente d'Abruzzo e il profumo inconfondibile degli arrosticini cotti sulla brace. È questo contrasto a tenermi qui. In pianura, intanto, si consuma il rito estivo delle piattaforme digitali. Nuovi film, serie televisive e documentari invadono gli schermi per intrattenere chi cerca evasione durante la pausa agostana. Cataloghi immensi, carichi di pixel e storie preconfezionate che promettono mondi lontani, mentre fuori la vera natura offre spettacoli ben più complessi e reali di qualsiasi finzione in alta definizione.",
           "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... centosessantadue euro in più?! Oh, ma qui casca il mondo! Io c'ho i brividi freddi alla schiena, non vorrei che adesso questi signori si montassero la testa e pretendessero pure di lavorare davvero! Speriamo bene, va', che qua c'è da aver paura solo a pensarci."
+            "nome": "Lars",
+            "avatar": "🇩🇰",
+            "testo": "Che meraviglia la tecnologia che intrattiene le masse! Peccato che sia un disastro totale di disordine digitale e cataloghi infiniti che anestetizzano la mente!"
           },
           "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale contratto e contratto, sti 'nfamoni statali che c'hanno sempre il sedere al fresco mentre noi stiamo qua a sputare sangue in mezzo ar mare! Ma vaffanculo va!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii 162 euro di aumento glugluglu la pacchia è finitaaa finitaaa!"
-            },
-            {
-              "nome": "Wolf",
-              "avatar": "👩‍🌾",
-              "testo": "Solita vergogna di questo paese, chi lavora veramente nei campi o col sudore della fronte non vede mai un cazzo, mentre chi sta seduto a scaldare la sedia prende pure il premio."
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 ven 7 agosto 08:03"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "A' bucce d'a' scurridora! Pure li piebbliche dipendente iengheno li sacche",
-          "articolo": "Oh là, finalmente na bona nova ca non vè da li soliti cianfrusaglie da Roma, ma da li sorde veramente. Ci sta ‘na bella sorpresa drento a la busta paga pe’ quasi doicentomila dipendente d’a' P.A., insomma la cumpagnia d’a' funzióne pubblica. Parlemo d’aumente ca s’arriva fina a 221 euri netti a mese. M’è parsi un miraggio, un colpo de culu de chille che capita na vota a l'anno, manco quand'a Pescara faccemo tre goal a la fine d’a' partità. Ma quanno se tratta de pijà li picciie, zittu e cianca! Certo, po’ vedimmose chiaro: cu' sta carovita ca te scuoia vivo pure a Borgomarino quanno vai a pia' du' triglie, sti quattrine s’a' da vedè se basteno o se ne vonno anco' de cchiu. Ma intanto tenimmose stretti 'stu regalo, ca p'a' serie 'a fatica nun è mai piaciuta a nisciuno, ma se paga bbuono, allora forse se ne po' pure parlà, o no?",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima, ma che cazzo stonghe a senti'! Aumenti veri pe' li dipendente pubblice senza ca n'hanno manco fatica' cchiu' de prima? Io mo' tengo na paura 'mbazzita ca se 'ngrifano tutti e po' tocca fatica' pure a me... speramo ca nun è 'na chiavica!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li sorde so' sorde, ma a Borgomarino pure cu du' cento euri en più te compri en kilo de alici e hai finito! E dajeee Pescara!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Finalmente una notizia concreta, anche se con il carovita di oggi quei soldi evaporano in un attimo. Però non sputiamo sopra a nessuno!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiii siii siiiii, arrivano i dindi sssiiii sssiiii! Glugluglu, facciamo festa festa festa! Siiii siii siiiiii!"
-            },
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "Tra le montagne di Roccamorice il vento soffia silenzioso, ma un po' di allegria e degli arrosticini pagati con questi aumenti non guastano mai."
-            }
-          ],
-          "categoria": "Tecnologia",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini",
-          "publishedAt": "📰 sab 8 agosto 11:15"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Aumenti ai ministeriali: centosessantadue euro lordi, ma 'sto mare non lo cala nessuno!",
-          "articolo": "Oh, cristo santo, veh! Alla fine è arrivata la fumata bianca per sti ministeriali. Via libera al nuovo contratto, oh, ma roba da leccarsi i baffi... o forse no, veh! 162 euro lordi in più al mese. Li mortacci, ma con sti soldi che ci fai? Ci compro due cassette di triglie fresche fresche al mercato del pesce e mi avanzano giusto due spicci per un Biancolella, se va bene. Intanto noi qui a Borgomarino stiamo sempre con le mani in acqua a sperare che abboccasse qualcosa, mentre quelli stanno dietro alle scrivanie a timbrare le carte. Ma dico io, fatela finita! Un tempo si sudava davvero, con la salsedine sulla pelle e la schiena spezzata dalle reti. E questi festeggiano per quattro soldi lordi che tra tasse e rincari si squagliano come burro al sole. Ma quale aumento, qua ci vogliono i fatti e soprattutto voglia di faticare, quella che non c'è mai, né nei uffici né sulle barche. Forza Pescara sempre, almeno sul campo si lotta per davvero!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Mamma mia santissima... 162 euro lordi? Ma te ne rendi conto? Io c'ho i brividi addosso, ho quasi paura a pensarci, roba da non credere che muovono tutti sti milioni per quattro carte!"
-          },
-          "commenti": [
+              "testo": "La bellezza della Majella non ha eguali, ma ammetto che il fumo degli arrosticini e una birra fredda completano perfettamente la geometria della montagna."
+            },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Li mortacci, 162 euro lordi! Ma se con sti soldi a Borgomarino ci paghi a malapena un chilo di cozze e un quarto di vino! Sveglia, oh! Forza Pescara sempre!"
+              "testo": "Ma quale natura e serie tv! Li a Roccamorice ji 'mbriacate co' l'aria bona, venite a Pescara sul molo a faticà ca si fa sul serio!"
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Alla fine sono sempre quattro spicci che tra inflazione e carovita spariscono in un attimo, ma almeno è un segnale. Però oh, chi si lamenta ha ragione, qua si lavora sodo e non si regala niente a nessuno!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, centosessantadue euro glugluglu per comprare le triglie volanti, triglie volanti! 162 euro, 162 euro!"
+              "testo": "Sarà pure finzione digitale, ma un buon film o un podcast ben fatto sanno regalare emozioni che valgono quanto una camminata sui crinali."
             }
           ],
-          "categoria": "Tecnologia",
+          "categoria": "Streaming",
           "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
+          "immagine": "lars.webp",
           "provider": "gemini",
-          "publishedAt": "📰 ven 7 agosto 08:03"
+          "publishedAt": "📰 dom 9 agosto 10:39"
         }
       ]
     }
