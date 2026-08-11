@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "11/08, 03:29",
+  "prossimo_aggiornamento": "11/08, 04:55",
   "news": [
     {
       "tipo": "personaggio",
@@ -32,7 +32,7 @@
       "colore_tipo": "#008cff",
       "immagine": "glusi.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -64,7 +64,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -96,7 +96,7 @@
       "colore_tipo": "#008cff",
       "immagine": "hiroki.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -128,7 +128,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -154,6 +154,171 @@
           "nome": "Glusi",
           "avatar": "🤪",
           "testo": "Che brutta storia, che brutta storia! Glugluglu, ma dove stiamo finendo siii siii siiiiii!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La frenetica vita da inviato e il ritorno a casa, casa",
+      "articolo": "Siii siii siiiiii! Che giornata pazzesca, pazzesca! Glugluglu, giù un bicchiere d'acqua al volo tra una corsa e l'altra per le strade della città, città. La mia vita da giornalista è un vortice continuo, sempre in giro, sempre occupato, occupato. Raccontare la realtà significa non fermarsi mai, mai. E così, tra un'intervista e una verifica sul campo, le ore volano via, via. Quando cala la sera, ritorno a casa stanco morto, morto. Ma ad attendermi non c'è solo il silenzio, no, no. Spesso ricevo la visita del mio storico amico, il famoso taccagno del quartiere, un vero pezzo di pane che però riesce sempre a prendere più di quello che dà, dà! Si siede sul divano, beve il mio caffè e sparisce con metà della mia spesa, spesa. È un fenomeno da baraccone, simpatico e sempre indaffarato quanto me, me. Viviamo in un perenne trend virale, un meme vivente che fa sorridere tutti, tutti!",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Glugluglu, che fatica ma che risate, risate! Se volete sopravvivere alla vita moderna, vi serve un amico taccagno che vi svuoti il frigo, frigo!"
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii! Che storia fantastica fantastica! Glugluglu, proprio così così!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Che allegria, meu irmão! Questo sì che è vivere alla grande, tra caffè offerti e risate! Saudade di queste pazzie!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Li mortacci, ma che Zì, questo se 'nventa le storie la notte mentre pedalà! Ma quale trend virale, va' a lavorà!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Cronache semiserie da bancone: tra calici giusti e mise decisamente da dimenticare",
+      "articolo": "Freghet, lo sapete tutti che per me l'ora dell'aperitivo è sacra quanto un editoriale in prima pagina. E il nostro bancone preferito si conferma il vero tribunale della città, dove si sfilano tendenze, silenzi strategici e cadute di stile memorabili. C'era il fior fiore della nostra comunità e della buona società, impegnato a disquisire di progetti e pettegolezzi con nonchalance. Ma parliamo di cose serie: chi c'era e, soprattutto, chi è decisamente scivolato sulla buccia di banana della moda. Ho visto accostamenti cromatici che gridanovendetta e giacche che farebbero impallidire qualsiasi stylist di Via Monte Napoleone. Mancavano i soliti noti, forse trattenuti da impegni noiosi, ma la loro assenza si è sentita poco, tra un calice di bollicine fresche e tartine gourmet. Alla fine, il rito dell'aperitivo resta lo specchio fedele di chi siamo: ironici, attenti ai dettagli e sempre pronti a commentare con garbo chi non ha passato l'esame dello specchio di casa.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino, sei sempre il re indiscusso del bancone! Con quella tua eleganza naturale e la battuta sempre pronta, riesci a fotografare vizi e virtù della nostra città come nessun altro. Ci fai ridere, riflettere e, ammettiamolo, correre a controllare l'armadio prima di uscire. Ti vogliamo tutti benissimo!"
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Che festa fantastica, con le bollicine e le donne più belle del Brasile... anzi, d'Abruzzo! Che saudade dell'allegria!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, le bollicine fresche fresche! Glugluglu, che spettacolo fantastico fantastico!"
+        },
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Un aperitivo così rilassante e chic è proprio quello che ci vuole per godersi la vita con stile!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Ordine e robot: il fossato incolmabile tra Italia e Giappone",
+      "articolo": "Vivo a Pescara da anni e ho imparato ad amare la sua luce, il mare e la generosità della gente. Ma ogni volta che osservo la gestione della cosa pubblica, il confronto con il mio Giappone diventa inevitabile e doloroso. Là, l'efficienza non è un optional: i treni arrivano al secondo, la raccolta differenziata è un dogma civico e la tecnologia viene impiegata per semplificare la vita dei cittadini, non per rallentarla tra burocrazia e scartoffie. Qui in Italia si rincorre continuamente l'emergenza, affidandosi all'improvvisazione anziché alla pianificazione. L'uso dei robot e dell'automazione, che a Tokyo alleggeriscono il carico di una società che invecchia, qui viene visto con diffidenza o come una minaccia. Eppure, sogno ancora un'Italia capace di unire la sua straordinaria creatività alla nostra disciplina. Tra poco tornerò in Giappone, ma so già che farò ritorno qui. È una sfida aperta tra il mio essere sognatore e il mio pragmatismo.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "È patetico vedere come questo Paese rifiuti ostinatamente la modernità per aggrapparsi ainefficienze medievali, scambiando il caos per libertà."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Finalmente qualcuno che comprende l'importanza fondamentale della disciplina e dell'efficienza organizzativa. Senza un metodo rigoroso, la creatività si disperde nel caos."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazzo state a di', oh! Se te ne voi torna' in Giappone vattene subbito e nun rompe li cojoni co' sti robot! A Pescara semo cresciuti a pane, mare e arrosticini, altro che scartoffie e differenziata giapponese!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiissiiii robot giapponesi sulle montagne di Roccamorice con gli arrosticini volanti, glugluglu! Robot giapponesi sulle montagne di Roccamorice con gli arrosticini volanti, glugluglu!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Streaming con stile: il cinema che fa tendenza",
+      "articolo": "Freghet, lo sapete tutti che non disdegno affatto il buon intrattenimento, soprattutto quando c'è da rilassarsi dopo una giornata intensa tra redazione e impegni mondani. Ormai Prime Video è diventato il salotto buono della cultura pop, un palcoscenico dove le storie prendono vita tra serie cult e produzioni indipendenti che fanno discutere nei salotti giusti. Quando mi siedo al tavolino del mio bar preferito per il consueto aperitivo, rigorosamente con un calice fresco e stuzzichini ricercati, la conversazione cade spesso sui titoli del momento. C'è chi preferisce il brio delle commedie brillanti e chi cerca drammi intensi capaci di lasciare il segno. La verità è che il catalogo offre una varietà straordinaria, perfetta per soddisfare i palati più esigenti. Tra un brindisi e quattro chiacchiere con gli amici di sempre, la bellezza sta proprio nel condividere passioni e opinioni, trasformando la visione di un film in un vero e proprio rito collettivo ed elegante.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino ha sempre quel tocco unico che trasforma ogni chiacchiera in un momento speciale, adorato da tutti per la sua classe e la sua simpatia travolgente!"
+      },
+      "commenti": [
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Ma assolutamente d'accordo! Non c'è nulla di meglio che rilassarsi con un buon calice e commentare l'ultima uscita di Prime Video con gli amici giusti al bancone."
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Che spettacolo! Però ragazzi, dopo il film ci vuole una festa brasiliana con tanta alegria e donne che ballano la samba, saudades!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, arrosticini volanti sullo schermo di Prime Video, glugluglu che bontà, arrosticini volanti siii siii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Maronna mia, che malafinestra a Pescara: un altro guaio grosso sul nostro litorale",
+      "articolo": "Uè, qui a Borgomarino tiriamo a dritto tra una lisca di triglia e na retata, ma a Pescara la situazione si è fatta proprio nera, na vera chiavica. Un guaglione di ventidue anni è rimasto chiuso nelle patrie galere, fermato con l'accusa pesantissima di omicidio volontario per una morte violenta in strada. Ma dico io, ci sa stare la gente? Si esce di casa con la capa storta e succede la disgrazia che ci lascia tutti a bocca aperta, proprio sotto il cielo del nostro amato mare. La costa adriatica piange un'altra vita spezzata in modo assurdo, mentre le forze dell'ordine cercano di capirci qualcosa in mezzo a questo marasma. Noi che stiamo sempre in porto a guardare le paranze sappiamo che la terraferma a volte dà i numeri peggiori della burrasca. Bastardo mondo, non c'è rispetto per niente, solo guai che piovono addosso alla nostra gente per colpa di teste calde.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "A me sta storia non me la conta giusta, c'è puzza di marcio lontano un miglio. E vedi d'andare a spigolare altrove con queste notizie da brivido."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Che a Borgomarino tiriamo a dritto tra una lisca e na retata lo so io, ma sta robba a Pescara fa proprio schifo al cazzo, non c'è rispetto per niente!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Una tragedia assurda che lascia senza parole, vent'anni buttati via per una testa calda in strada. La nostra costa non merita questo."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Mamma mia che brutta storia, ma ce li vogliamo mangiare due arrosticini per tirarsi su il morale morale?!"
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Ecco cosa succede a non lavorare in silenzio e a perdere la testa per strada. Gente che non sa cosa sia la fatica."
         }
       ],
       "categoria": "Cronaca",
