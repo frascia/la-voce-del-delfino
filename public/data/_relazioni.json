@@ -1,5 +1,5 @@
 {
-  "_runCount": 2,
+  "_runCount": 3,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": 0.948,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "13/08/2026"
   },
@@ -61,7 +61,7 @@
     "ultimo_aggiornamento": "08/08/2026"
   },
   "Cetteo→Lars": {
-    "score": 0.74,
+    "score": 0.94,
     "label": "amico",
     "ultimo_aggiornamento": "13/08/2026"
   },
@@ -76,12 +76,12 @@
     "ultimo_aggiornamento": "06/08/2026"
   },
   "Hiroki→Lars": {
-    "score": 0.573,
+    "score": 0.473,
     "label": "simpatico",
     "ultimo_aggiornamento": "13/08/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "13/08/2026"
   },
@@ -188,7 +188,7 @@
   "Glusi→Lilli": {
     "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "12/08/2026"
+    "ultimo_aggiornamento": "13/08/2026"
   },
   "Enzo→Glusi": {
     "score": -0.005,
@@ -276,9 +276,9 @@
     "ultimo_aggiornamento": "13/08/2026"
   },
   "Lars→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "12/08/2026"
+    "ultimo_aggiornamento": "13/08/2026"
   },
   "Juizinho→Glusi": {
     "score": 0.9,
@@ -311,8 +311,8 @@
     "ultimo_aggiornamento": "13/08/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.267,
-    "label": "diffidente",
+    "score": -0.167,
+    "label": "neutro",
     "ultimo_aggiornamento": "13/08/2026"
   },
   "Wolf→Redazione": {
@@ -406,9 +406,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Lars→Abbukk": {
-    "score": -0.194,
-    "label": "neutro",
-    "ultimo_aggiornamento": "12/08/2026"
+    "score": -0.294,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "13/08/2026"
   },
   "Juizinho→Abbukk": {
     "score": 0.005,
@@ -541,9 +541,9 @@
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Cetteo→Abbukk": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "12/08/2026"
+    "ultimo_aggiornamento": "13/08/2026"
   },
   "Lilli→Abbukk": {
     "score": -0.9,
@@ -1241,7 +1241,7 @@
     "ultimo_aggiornamento": "24/07/2026"
   },
   "Glusi→Bartender": {
-    "score": 0.91,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "13/08/2026"
   },
@@ -1831,9 +1831,9 @@
     "ultimo_aggiornamento": "11/08/2026"
   },
   "Lucap→Glusi": {
-    "score": 0.767,
+    "score": 0.867,
     "label": "amico",
-    "ultimo_aggiornamento": "11/08/2026"
+    "ultimo_aggiornamento": "13/08/2026"
   },
   "Cronista→Cetteo": {
     "score": -0.005,
@@ -2791,7 +2791,7 @@
     "ultimo_aggiornamento": "03/06/2026"
   },
   "Topengo→Lucap": {
-    "score": 0.929,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "13/08/2026"
   },
@@ -3956,9 +3956,9 @@
     "ultimo_aggiornamento": "17/07/2026"
   },
   "Enzino→Topengo": {
-    "score": 0.81,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "08/08/2026"
+    "ultimo_aggiornamento": "13/08/2026"
   },
   "Lars→Roccamorice": {
     "score": 0.022,
@@ -5566,7 +5566,7 @@
     "ultimo_aggiornamento": "23/07/2026"
   },
   "Topengo→Juizinho": {
-    "score": 0.91,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "13/08/2026"
   },
@@ -5576,9 +5576,9 @@
     "ultimo_aggiornamento": "23/07/2026"
   },
   "Topengo→Enzino": {
-    "score": 0.81,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "10/08/2026"
+    "ultimo_aggiornamento": "13/08/2026"
   },
   "Glusi→Glugluglu": {
     "score": 0.077,
@@ -6078,6 +6078,11 @@
   "Enzino→Bartender": {
     "score": 0.3,
     "label": "simpatico",
+    "ultimo_aggiornamento": "13/08/2026"
+  },
+  "Hiroki→Pyongyang": {
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "13/08/2026"
   }
 }
