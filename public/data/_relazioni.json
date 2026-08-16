@@ -1,5 +1,5 @@
 {
-  "_runCount": 5,
+  "_runCount": 6,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -46,7 +46,7 @@
     "ultimo_aggiornamento": "15/08/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.996,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "16/08/2026"
   },
@@ -216,7 +216,7 @@
     "ultimo_aggiornamento": "16/08/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "16/08/2026"
   },
@@ -283,7 +283,7 @@
   "Juizinho→Glusi": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "15/08/2026"
+    "ultimo_aggiornamento": "16/08/2026"
   },
   "Glusi→Questa comunità": {
     "score": -0.041,
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "16/08/2026"
   },
@@ -346,8 +346,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.522,
-    "label": "diffidente",
+    "score": -0.622,
+    "label": "ostile",
     "ultimo_aggiornamento": "16/08/2026"
   },
   "Abbukk→Hiroki": {
@@ -506,9 +506,9 @@
     "ultimo_aggiornamento": "16/04/2026"
   },
   "Wolf→Lars": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "15/08/2026"
+    "ultimo_aggiornamento": "16/08/2026"
   },
   "Cetteo→Wolf": {
     "score": 0.9,
@@ -636,14 +636,14 @@
     "ultimo_aggiornamento": "14/08/2026"
   },
   "Autore→Glusi": {
-    "score": 0.61,
-    "label": "simpatico",
+    "score": 0.71,
+    "label": "amico",
     "ultimo_aggiornamento": "16/08/2026"
   },
   "Lars→Wolf": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "15/08/2026"
+    "ultimo_aggiornamento": "16/08/2026"
   },
   "Lilli→Autore": {
     "score": -0.9,
@@ -766,9 +766,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Cetteo→Pescara": {
-    "score": -0.005,
-    "label": "neutro",
-    "ultimo_aggiornamento": "27/07/2026"
+    "score": -0.305,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "16/08/2026"
   },
   "Wolf→Pescara": {
     "score": -0.011,
@@ -1351,9 +1351,9 @@
     "ultimo_aggiornamento": "14/07/2026"
   },
   "Lilli→Pescara": {
-    "score": 0.006,
+    "score": 0.106,
     "label": "neutro",
-    "ultimo_aggiornamento": "19/07/2026"
+    "ultimo_aggiornamento": "16/08/2026"
   },
   "Lilli→Istituzioni": {
     "score": -0.005,
@@ -3381,9 +3381,9 @@
     "ultimo_aggiornamento": "25/05/2026"
   },
   "Autore→Topengo": {
-    "score": 0.166,
-    "label": "neutro",
-    "ultimo_aggiornamento": "25/07/2026"
+    "score": 0.366,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "16/08/2026"
   },
   "Juizinho→Del Piero": {
     "score": 0.022,
@@ -5471,9 +5471,9 @@
     "ultimo_aggiornamento": "12/08/2026"
   },
   "Autore dell'articolo→Cetteo": {
-    "score": 0.004,
-    "label": "neutro",
-    "ultimo_aggiornamento": "14/08/2026"
+    "score": -0.296,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "16/08/2026"
   },
   "Hiroki→Autore dell'articolo": {
     "score": -0.189,
@@ -5526,9 +5526,9 @@
     "ultimo_aggiornamento": "30/07/2026"
   },
   "Autore dell'articolo→Glusi": {
-    "score": 0.815,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "14/08/2026"
+    "ultimo_aggiornamento": "16/08/2026"
   },
   "Bartender→Narratore": {
     "score": 0.069,
@@ -6142,6 +6142,36 @@
   },
   "Lilli→Autore del post": {
     "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/08/2026"
+  },
+  "Brasileiro→Cetteo": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "16/08/2026"
+  },
+  "Brasileiro→Lilli": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "16/08/2026"
+  },
+  "Cetteo→Brasileiro": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "16/08/2026"
+  },
+  "Lilli→Brasileiro": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "16/08/2026"
+  },
+  "Glusi→Brasileiro": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "16/08/2026"
+  },
+  "Autore dell'articolo→Juizinho": {
+    "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "16/08/2026"
   }
