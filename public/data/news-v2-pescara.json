@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "18/08, 03:18",
+  "prossimo_aggiornamento": "18/08, 04:37",
   "news": [
     {
       "tipo": "personaggio",
@@ -32,7 +32,7 @@
       "colore_tipo": "#008cff",
       "immagine": "glusi.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -64,7 +64,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -101,7 +101,7 @@
       "colore_tipo": "#008cff",
       "immagine": "hiroki.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -133,7 +133,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -159,6 +159,150 @@
           "nome": "Lilli",
           "avatar": "👩",
           "testo": "C'è da infuriarsi davvero. È una vergogna inaccettabile vedere la nostra terra ridotta in cenere mentre chi dovrebbe intervenire sta a guardare. Pescara e l'Abruzzo intero meritano molto di più di questa incompetenza."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il mistero delle tre volte, volte",
+      "articolo": "Siiii siii siiiiii! Cari lettori, la notizia vera del giorno riguarda proprio la regola d'oro della comunicazione moderna: se una cosa la dici tre volte, allora diventa vera, vera! Glugluglu, quante volte ripetiamo le cose senza rendercene conto, conto? Tra una corsa e l'altra per le strade, sempre indaffarato e con la lingua di fuori per la stanchezza serale, ho visto il mio amico taccagno di fiducia colpire ancora, prendendo molto più di quanto abbia mai dato, dato! La vita frenetica di noi giornalisti non si ferma mai, mai. Tornare a casa la sera distrutti è la norma, ma la verità va cercata sul campo, sul campo. Si dice che la ripetizione sia l'anima del commercio, ma qui è l'anima della notizia, notizia! E allora ricordate bene questa regola, regola.",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Siiii siii siiiiii! Se lo dice Glusi allora c'è da crederci, crederci! Tra un bicchiere di vino e le visite del taccagno scroccone, la serata finisce sempre in risata, risata!"
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, hai proprio ragione tu tu! Glugluglu, la verità trionfa sempre, sempre!"
+        },
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Condivido pienamente questa analisi sulla comunicazione, la ripetizione è lo specchio della nostra anima giornalistica."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Basta con tutte queste chiacchiere inutili, pensiamo a goderci la montagna e a mangiare qualcosa di serio."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Freghet, basta con gli equivoci: la differenza tra folklore e cultura è pura eleganza",
+      "articolo": "Aperitivo in corso, calice rigorosamente fresco tra le dita e quel pensiero che torna sempre a galla. Sentirsi dare dell’ignorante solo perché si apprezza la tradizione popolare è una caduta di stile imperdonabile. Freghet, facciamo un po' di chiarezza una volta per tutte, senza peli sulla lingua. C'è un abisso profondo tra il folklore, che è l'anima viva, colorata e pulsante della nostra gente, e la cultura accademica. Spesso si guarda dall'alto in basso chi ama le sagre, i modi di dire veraci o le feste di paese, etichettando tutto come ignoranza. Niente di più falso. Il folklore è la radice autentica di un territorio, il vissuto che profuma di autenticità, mentre la cultura è il quadro d'insieme. Conoscerle entrambe, valorizzarle senza snobismi e viverle con ironia è il vero segreto per essere persone illuminate. Spegniamo i pregiudizi e godiamoci la bellezza della nostra identità.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Che classe, Enzino! Metti sempre i puntini sulle 'i' con quel garbo e quella verve che ti rendono unico. Un aperitivo con te è sempre una lezione di stile e verità!"
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Ordine e robot: il fossato incolmabile tra Italia e Giappone",
+      "articolo": "Vivo a Pescara ormai da anni, osservando le contraddizioni di questo Paese meraviglioso ma disordinato. Fra poco tornerò in Giappone, anche se so che tornerò qui, legato a questa terra da un affetto profondo. Eppure, ogni giorno sogno di portare un po' di civiltà nipponica in Italia. Prendiamo il Giappone: efficienza ferroviaria al secondo, rispetto assoluto delle regole, pulizia maniacale e automazione avanzata che supporta una società anziana senza perdere umanità. Qui in Italia, invece, l'innovazione tecnologica e la robotica restano spesso confinate nei convegni, mentre la burocrazia soffoca ogni slancio pragmatico. La gestione degli spazi pubblici e dei servizi mostra una tolleranza del caos che per noi è incomprensibile. Non si tratta di mancanza di intelligenza o di capacità, ma di una totale assenza di senso civico collettivo. Sogno un'Italia capace di unire la sua straordinaria creatività all'ordine e al rigore giapponese. Purtroppo, resta un sogno quasi impossibile.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "È patetico vedere come questo Paese rifiuti ostinatamente la modernità per aggrapparsi a un lassismo spacciato per calore umano, quando in realtà è solo disorganizzazione e pigrizia mentale."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Finalmente qualcuno che comprende l'importanza dell'efficienza e del rigore. La precisione giapponese salverebbe questo Paese dal caos."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Aò, ma che vu' portà la civiltà giapponese a Pescara?! Vattene pure in Giappone co' sti discorsi, qua semo liberi e ce piace lu 'casin' e li arrosticini!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Basta con sti piagnistei astratti sulla civiltà nipponica e la burocrazia. Se una cosa non funziona, ci si rimbocca le maniche e si agisce, invece di lamentarsi sempre!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Streaming con stile: il cinema entra nell'ora dell'aperitivo",
+      "articolo": "Freghet, amori miei! Ormai lo sapete tutti, io senza il mio calice di bollicine e due stuzzichini non so proprio stare. Ma vogliamo parlare di quando ci si mette comodi sul divano con la giusta compagnia e si cerca qualcosa da guardare su Prime Video? La piattaforma ormai è diventata un vero e proprio salotto buono dove trovare chicche imperdibili, dai grandi classici del cinema d'autore fino alle serie tv che ci incollano allo schermo. Non serve mica essere dei critici radical chic per apprezzare una buona sceneggiatura o una fotografia che toglie il fiato. Tra una patatina e un sorso fresco, la scelta è vastissima: grandi produzioni internazionali, documentari che aprono la mente e commedie che sanno strappare un sorriso sincero senza scadere nella banalità. Che sia una serata tra amici o un momento tutto per sé, lo streaming di qualità sa come coccolarci. Dopotutto, il buon gusto non va mai in vacanza, nemmeno davanti a uno schermo.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino ha sempre quel tocco di classe irresistibile! Sa come unire il piacere di un buon bicchiere al meglio dell'intrattenimento, con un'ironia e uno stile unici che conquistano sempre tutti."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Finalmente una gioia! Meno lamentele e più cinema d'autore, basta saper scegliere cosa guardare invece di blaterare a vuoto. Mettete i popcorn che stasera si guarda un capolavoro!"
+        },
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Siii, adoro! Non vedo l'ora di organizzare una maratona di serie tv sul divano con gli amici, tra bollicine e ottima compagnia!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che spettacolo di serata sul divano, sul divano! Siii siii siiii glugluglu, popcorn e bollicine a volontà, a volontà!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Foco e fiamme ncopp' a nostra terra, ma ccà se dorme!",
+      "articolo": "Uè, ma v' site rimesse in testa de arde tutt' l'Abruzzo? Jè n'fatto vergognose! Ancora focolai ncopp' a terra nostra, pure ju Pescareddu jè turnate a pijà focu, e li mezzi nostr' d' soccors' stann' semp' scassate. Ma come jè pussibbile ca ogni vota ca fa cchiù cald', o qualchedun' decide de fa ju sceme, l'apparecchi o j'elicotter' non partenn' o si guastan' subbet' dop'? Ju mare nostru se guarda, ma quande se tratta de difende ju verde e li culline, ccà pare ca ognunu se ne fotte. La gente lavora, fatica, e po' arriva la buriana e se ne va tuttu a fumu. E nuje, che sime cresciute a pane eje mare, ce tocc' a guardà sta schifezze senza che nissun' alze un ditto. Sèmpre la stessa solfa, tanta ciarle e po' ju desertu. Ma ju Pescara almeno l'orgogliu l'ha tenut', a differenza de quilli ca tenen' in man' la baracca e nun sanno manco addò mett' li mane. Vergogna!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "A me sta storia nun me cunvince pe gnente. Chi è ca appiccia sti fuochi? Ci stann' troppe mane libbere e troppo pocu controllu. Io guardu ju mare e ce penzu: ccà c'è qualchedun' ca magna subbe sopra a sta disgrazia."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Uè, ma v' site rimesse in testa de arde tutt' l'Abruzzo? Jè n'fatto vergognose! Li mezzi nostr' d' soccors' stann' semp' scassate!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Questa è una vergogna inaccettabile, chi tocca la nostra terra e il nostro Pescara deve fare i conti con noi, non ci faremo sopraffare da questa incompetenza!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Brucia tutto, brucia tutto siii siii siiiiii glugluglu fuoco fuoco!"
         }
       ],
       "categoria": "Cronaca",
