@@ -1,8 +1,8 @@
 {
-  "oraAggiornamento": "18/08, 22:15",
+  "oraAggiornamento": "19/08, 01:15",
   "agenda": {
-    "timbro": "Edizione quotidiana",
-    "banner": "Default.webp"
+    "timbro": "Resistenza Adriatica",
+    "banner": "Mare.webp"
   },
   "impostazioni": {
     "header_fisso": "header.webp",
@@ -28,749 +28,214 @@
       "news": [
         {
           "tipo": "personaggio",
-          "titolo": "Il segreto della memoria lampo con la tecnica della ripetizione, della ripetizione",
-          "articolo": "Siiiii siiiii siiiiiii! Glugluglu! Cari lettori, oggi parliamo di un argomento che sta facendo il giro del web e che diventerà sicuramente virale, virale! Parlo del famosissimo metodo della ripetizione, una tecnica potentissima per memorizzare qualsiasi concetto senza sforzo, senza sforzo. Durante le mie mille corse giornaliere tra un impegno e l'ago della bilancia del mio amico taccagno – che continua a prosciugarmi il frigo – ho testato questo sistema sulla mia pelle, sulla mia pelle. Ripetere le informazioni ad alta voce attiva aree specifiche del cervello, consolidando i ricordi a lungo termine in modo formidabile, formidabile! Non è magia, è pura neuroscienza applicata alla vita di tutti i giorni, dei giorni. Provateci anche voi mentre tornate stanchi morti la sera a casa, a casa! Funziona davvero, davvero!",
+          "titolo": "Versi e natura: quando la poesia incontra l'essenziale",
+          "articolo": "La bellezza della letteratura sa spesso intrecciarsi con la semplicità della terra e dei suoi elementi più autentici. L'iniziativa culturale 'Fiori di campo e versi d'amore: In attesa dell'azzurro' rappresenta perfettamente questo connubio, portando la grande poesia a dialogare direttamente con il paesaggio naturale. Non servono palchi sfarzosi o accademie polverose per dare valore alla parola scritta; i versi d'amore e la contemplazione dei campi fioriti dimostrano che la cultura appartiene a tutti, senza distinzioni. Chi pensa che la letteratura sia roba da salotti elitari non ha capito nulla della vita. La poesia vera nasce dalla pancia, dalla terra, dalle cose semplici, proprio come la passione viscerale che si respira sugli spalti dello stadio quando tifi Pescara. Questa attesa dell'azzurro è una promessa di cielo aperto, di respiro profondo, un invito a coltivare la sensibilità anche nei contesti più ruvidi e difficili. Leggere e sentire la bellezza è un atto di resistenza quotidiana.",
           "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Ahahaha, se il taccagno che viene a trovarmi ripetesse anche solo la metà delle cose che si pappa a scrocco, forse ricorderebbe finalmente dove ha messo il portafoglio, il portafoglio!"
+            "nome": "Lilli",
+            "avatar": "👩",
+            "testo": "Che dire, una lettura che riconcilia con il mondo. Bastano poche parole giuste e un po' di verde per rimettere in sesto la giornata con serenità."
           },
           "commenti": [
             {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiiii siiiii siiiiiii! Che spettacolo, spettacolo! Glugluglu!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale neuroscienza e neuroscienza! Li mortacci vostra, a Pescara si studia co' la crapa sbattuta sul banco e na birra Peroni in mano, oh!"
-            },
-            {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "La ripetizione attiva la memoria a lungo termine, è un dato di fatto scientifico. Chi dice il contrario non ha mai aperto un libro in vita sua."
+              "testo": "Finalmente qualcuno che ha capito tutto! La letteratura non è chiusa nelle accademie polverose, vive nella terra e nella nostra fierezza. E chi pensa il contrario farebbe bene a stare zitto. Sempre forza Pescara!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Queste parole risuonano esattamente come il vento tra le montagne di Roccamorice. La natura e la poesia parlano la stessa lingua silenziosa, unita alla gioia semplice di un buon arrosticino."
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
+          "immagine": "lilli.webp",
           "provider": "gemini"
         },
         {
           "tipo": "personaggio",
-          "titolo": "Freghet, il galateo dello spritz in Piazza Salotto",
-          "articolo": "Piazza Salotto, il vero salotto buono di Pescara, torna a far parlare di sé non solo per la bellezza del luogo, ma per le regole d'oro del rito dell'aperitivo. Qui lo spritz non è una semplice bevanda, ma un'istituzione sociale che richiede rigore e stile. Tra i tavolini dei bar storici, la tradizione dell'aperitivo si muove tra eleganza e convivialità. Le linee guida parlano chiaro: niente sconti sulla qualità degli ingredienti, proporzioni perfette tra bitter, prosecco e seltz, e soprattutto un accompagnamento gastronomico all'altezza della situazione, rigorosamente basato sui prodotti tipici del territorio adriatico. Banditi gli eccessi e la sciatteria, perché bere bene è un'arte che riflette l'anima raffinata della nostra città. I frequentatori abituali e i turisti più attenti sanno bene che l'aperitivo in centro merita rispetto e bon ton, trasformando un semplice momento di stacco in un vero e proprio capolavoro di stile e socialità.",
+          "titolo": "I piccioni non volano per caso: aprono gli occhi, sveglia!",
+          "articolo": "Cammini nei parchi urbani e li vedi lì, apparentemente innocui, mentre beccano briciole di pane secco. Ma vi siete mai chiesti perché abbiano sempre la testa che si muove a scatti? Semplice, ricalibrano le ottiche delle micro-telecamere. La verità, nascosta tra i boschi dove vado a cercare i porcini prima che mi intercettino i satelliti, è che i volatili che popolano le nostre piazze non sono esseri biologici. Chi pensa che siano semplici animali non ha mai zappato la terra abbastanza a fondo da trovare i veri cavi della fibra ottica sotterranea. La biomimetica ha raggiunto vette inimmaginabili e la transizione ecologica passa inevitabilmente per la sostituzione della fauna selvatica con dispositivi di sorveglianza di massa. Nessuno vuole ammettere l'evidenza, troppo occupati a guardare gli schermi degli smartphone, che altro non sono che ricevitori di seconda generazione. La prossima volta che vedete un piumato su una panchina, ricordatevi che sta trasmettendo i vostri movimenti in tempo reale.",
           "commento_firma": {
-            "nome": "Enzino",
+            "nome": "Abbukk",
+            "avatar": "🍄",
+            "testo": "La diffusione di teorie infondate sulla natura robotica della fauna urbana rappresenta un fenomeno sociologico interessante, ma privo di qualsiasi riscontro scientifico. La fauna selvatica svolge un ruolo ecologico fondamentale e documentato nella biodiversità degli ecosistemi urbani e rurali."
+          },
+          "commenti": [
+            {
+              "nome": "Abbukk",
+              "avatar": "🍄",
+              "testo": "Finalmente qualcuno che ha aperto gli occhi! I cavi della fibra sotto i funghi non mentono, i piccioni sono l'avanguardia del controllo globale!"
+            },
+            {
+              "nome": "Glusi",
+              "avatar": "🤪",
+              "testo": "Siiii siii siiiiii, i piccioni cyborg fritti con le patate, glugluglu, ma quali telecamere, viva gli arrosticini e il vino buono, vino buono!"
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Ma che cazzo state a di', ma quale fibra ottica e piccioni robot, invece de pensà a ste stronzate andate a spegnere i fuochi sulle montagne, li mortacci vostra!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Sulle montagne di Roccamorice la natura è libera, lasciate in pace gli uccelli e mangiatevi un buon arrosticino invece di inventarvi complotti."
+            }
+          ],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "abbukk.webp",
+          "provider": "gemini"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "La pace interiore passa da una tabella Excel",
+          "articolo": "Anche dall'altra parte del mondo, immerso nel silenzio dei giardini di Kyoto, il mio pensiero torna alla nostra redazione e al caos quotidiano. Cerco sempre l'armonia, lo sapete, ed è per questo che voglio consigliarvi uno strumento inaspettato per ritrovare la serenità: il foglio di calcolo Excel. Può sembrare un paradosso per chi cerca il contatto umano, ma la gestione ordinata delle scadenze e delle idee digitali elimina alla radice lo stress da disorganizzazione. Quando ogni task trova la sua cella colorata, il cervello smette di affannarsi e il team ritrova quel flusso armonioso che amo tanto. Non serve inventare complicati metodi di project management. Bastano righe e colonne ben strutturate per trasformare il caos in una sinfonia di produttività. Vi penso sempre, ragazzi. Manteniamo la calma, rispettiamo le scadenze e ricordiamoci che un file condiviso vale più di mille discussioni accese.",
+          "commento_firma": {
+            "nome": "Lucap",
             "avatar": "👨‍⚖️",
-            "testo": "Adoro! Finalmente un po' di sano bon ton nel nostro salotto preferito. L'aperitivo è sacro e va trattato con i guanti bianchi, senza mai perdere l'allegria e il buon gusto!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale bon ton e storielle, lu spritz vôle la ciavarrozza giusta e li arrosticini caldi, ndò cazz'è finita la nostra rusticità?! Li mortacci vostra!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Aperitivo con stileeeee stileeeee, glugluglu e tutti ubriachi s的任务iiii siii siiiiii!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Bere bene richiede rispetto per le materie prime e per la nostra terra, niente da ridire su questo. Ma vedete di non fare i preziosi che Pescara è e resta popolare."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Ordine nipponico e caos italico: un confronto impossibile",
-          "articolo": "Osservare la vita quotidiana in Italia attraverso gli occhi di chi è cresciuto a Tokyo offre una prospettiva impietosa. Da anni vivo a Pescara, una terra meravigliosa che custodisco nel cuore, ma che spesso sembra rifiutare ogni principio di organizzazione civile. In Giappone, l'efficienza dei trasporti, il rispetto rigoroso degli spazi pubblici e l'automazione intelligente non sono utopie, ma standard condivisi. Qui in Italia, invece, si confonde la creatività con il caos e la flessibilità con l'anarchia. Eppure, sogno un giorno in cui la straordinaria umanità italiana possa fondarsi sulla precisione tecnologica e sul rispetto civico giapponese. Non è solo questione di robot o di intelligenza artificiale applicata ai servizi pubblici, ma di un cambio radicale di mentalità collettiva. Quando tornerò temporaneamente in Giappone per poi fare ritorno qui, porterò con me la speranza che questa splendida nazione decida finalmente di evolversi, coniugando il suo ineguagliabile calore umano con il rigore civile.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "Questo articolo dimostra l'ennesima occasione persa da questo Paese. Gli italiani preferiscono lamentarsi anziché copiare modelli virtuosi come quelli giapponesi, condannandosi eternamente all'inefficienza."
+            "testo": "Amici miei, non arrabbiamoci se la tecnologia a volte ci sfida. Troviamo sempre il punto d'incontro, unendo i nostri sforzi proprio come le celle di un bel foglio Excel ben ordinato."
           },
           "commenti": [
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "La precisione non è un'utopia, è rispetto per il prossimo. Spero che un giorno questo messaggio venga compreso a fondo."
+              "testo": "Finalmente un barlume di civiltà e ordine digitale in questo mare di sciocchezze italiane."
             },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma ji statte zitte! Moce ne vulesse pure nu giappunese a dicce comme amma campà! Pescara è bella accussì, cu tutt u caot' e i arrosticini!"
+              "testo": "Ma quale Excel e fogli colorati, lu cazz! A Borgomarino si lavora de sassa e si fatica a pescà, ndò cazzo vai co' le righe e le colonne?!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti a Tokyo con i robot, glugluglu! Robot abbronzati, robot abbronzati!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale civiltà e rigore giapponese, qui siamo cresciuti a pane, Pescara e spensieratezza! Se non ti sta bene il nostro caos, la porta è quella."
+              "testo": "Siii siii siiiiii, le celle colorate come il vino buono, glugluglu colorato!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
+          "immagine": "lucap.webp",
           "provider": "gemini"
         },
         {
           "tipo": "personaggio",
-          "titolo": "Streaming con stile: cosa guardare davanti a un buon calice",
-          "articolo": "Freghet, lo dico sempre agli amici quando ci ritroviamo per il rituale dell'aperitivo: la televisione di oggi è una vera e propria opera d'arte. Ormai le piattaforme digitali, Prime Video in testa, offrono produzioni così curate che competono tranquillamente con il cinema d'autore. Tra una bollicina e quattro chiacchiere nel nostro locale preferito, la conversazione cade spesso sui titoli del momento. Amo le storie che raccontano la complessità umana con eleganza, costumi impeccabili e sceneggiature taglienti. Non c'è niente di meglio che commentare le vicende dei protagonisti mentre si gusta un tagliere di qualità. La cultura pop incontra il buon gusto e, diciamoci la verità, guardare una serie fatta bene rende tutto più piacevole. La bellezza salverà il mondo, dicevano, ma intanto una bella serie su Prime salva la serata.",
+          "titolo": "Svegliatevi idioti, la città fa schifo!",
+          "articolo": "Cammino per queste strade luride e vi vedo lì, faccia da ebete, a respirare lo smog e a fare pure finta che vi piaccia. Ma vi siete guardati intorno, branco di scimmie ammaestrate? I marciapiedi fanno schifo, i negozianti hanno la muffa nel cervello e voi barattate la dignità per un caffè tiepido in un bar abusivo. Entro nei negozi e la gente scappa, abbassa lo sguardo, trema come conigli bagnati perché la verità fa male, cari miei lobotomizzati. Non c'è un angolo che non puzzi di fallimento e rassegnazione. Voi abitanti siete il vero cancro di questo agglomerato di cemento e incuria, incapaci di un pensiero che non sia la marca di scarpe da comprare o quale vetrina leccare oggi. Fate pietà, fate letteralmente schifo. E continuate pure a evitarmi quando passo, codardi senza spina dorsale, mentre io continuo a sputare in faccia alla vostra patetica normalità.",
           "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Enzino ha sempre il consiglio giusto e la battuta pronta! Adoro quando unisce la sua immensa classe a momenti di puro relax con gli amici."
+            "nome": "Lamatte",
+            "avatar": "👩‍🦳",
+            "testo": "Le lucertole radioattive nel mio microonde mi hanno detto che domani piove fuoco viola sui vostri cappotti di lana sintetica, ahahah! Gnam gnam!"
           },
           "commenti": [
             {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale opera d'arte, se non capite niente di cinema d'autore andate a dormire invece di sproloquiare davanti a un tagliere! Io mi guardo i podcast e i film veri, non le porcherie commerciali che vi esaltano."
+              "nome": "Lamatte",
+              "avatar": "👩‍🦳",
+              "testo": "Finalmente qualcuno che dice la verità! Siete tutti dei miserabili falliti, vi meritate il degrado in cui vivete, codardi senza spina dorsale!"
             },
             {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "La televisione e le piattaforme digitali contemporanee offrono indubbiamente spunti di riflessione elevati; la cultura pop e la narrazione visiva ben strutturata contribuiscono ad arricchire la nostra armonia comunitaria."
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Parole sante! Condivido pienamente questa visione raffinata dell'intrattenimento moderno, sa unire il buon gusto alla socialità in un modo davvero unico."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Mare e fiamme, ma a Borgomarino chi fatic a 'n sa!",
-          "articolo": "Uè, ma v'è site mis in testa di arrostire tuttor Abruzzo prima ancora che arriv a ' 'stata? Pure qui nel Pescarese la situazione è 'na schifezza. Il fumo arriva dritto in faccia mentre stiamo con le lenze in acqua a sperare che abbocc a qualcò. E invece che vedimm? Boschi che vanno in fumo, ettari di verde che spariscono, e i canadair che non partono perché so' scassati. Ma porco Giuda, possibile che tenimm i mezzi in avaria proprio quando serve la cavalleria? È 'na vergogna che grida vendetta al cielo, roba da matti. C'è gente che perde la terra e le case, e noi stiamo qui a guardare il cielo nero. A me me 'mporta sol del mio mare e della mia barca, ma quando vedo 'sta malagestione mi sale il sangue al cervello. Mo basta, qua non funziona mai un cazzo, solo chiacchiere e distintivo. Pescara merita rispetto, non la cenere.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "A me 'sta storia mi puzza assai, ci stanno a cojona' tutti quanti da Roma a Pescara."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "È un dolore immenso vedere le montagne di Roccamorices e i boschi bruciare così. La natura ci dà tanto, e noi la distruggiamo. Per fortuna almeno gli arrosticini e l'allegria di questa terra restano nel cuore, ma bisogna difendere questi panorami."
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Oh, ma 'sta scema chi l'ha fatta uscire dalla gabbia?! Avoja a parlà di marciapiedi luridi, vedi d'andà a lavorà invece di rompe li cojoni!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Brucia tutto, brucia tutto! Siii siii siiiiii, glugluglu, che disastro, che disastro!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "C'è da infuriarsi davvero. È una vergogna inaccettabile vedere la nostra terra ridotta in cenere mentre chi dovrebbe intervenire sta a guardare. Pescara e l'Abruzzo intero meritano molto di più di questa incompetenza."
+              "testo": "Siii siii siiiiii, tutti pazzi, tutti matti matti! Glugluglu, che botta di degrado, degradooo!"
             }
           ],
-          "categoria": "Cronaca",
+          "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
+          "immagine": "lamatte.webp",
           "provider": "gemini"
         },
         {
           "tipo": "personaggio",
-          "titolo": "Il mistero delle tre volte, volte",
-          "articolo": "Siiii siii siiiiii! Cari lettori, la notizia vera del giorno riguarda proprio la regola d'oro della comunicazione moderna: se una cosa la dici tre volte, allora diventa vera, vera! Glugluglu, quante volte ripetiamo le cose senza rendercene conto, conto? Tra una corsa e l'altra per le strade, sempre indaffarato e con la lingua di fuori per la stanchezza serale, ho visto il mio amico taccagno di fiducia colpire ancora, prendendo molto più di quanto abbia mai dato, dato! La vita frenetica di noi giornalisti non si ferma mai, mai. Tornare a casa la sera distrutti è la norma, ma la verità va cercata sul campo, sul campo. Si dice che la ripetizione sia l'anima del commercio, ma qui è l'anima della notizia, notizia! E allora ricordate bene questa regola, regola.",
+          "titolo": "Tasse salate e pattume: la dura realtà",
+          "articolo": "Continuano ad aumentare le tasse locali mentre la gestione dei rifiuti urbani mostra crepe evidenti in tutto il paese. I cittadini pagano tariffe sempre più alte per servizi che diminuiscono costantemente, tra strade sporche e raccolta differenziata inefficiente. Le amministrazioni locali scaricano le responsabilità sui tagli di bilancio statali, ma la realtà sotto gli occhi di tutti è un sistema burocratico pesante e autoreferenziale che divora risorse senza garantire il decoro urbano. Meno chiacchiere e più fatti: i contribuenti pretendono trasparenza sull'uso del denaro pubblico e risultati tangibili nella pulizia delle strade. La pressione fiscale soffoca le famiglie e le attività produttive, mentre il degrado urbano avanza silenziosamente nei quartieri periferici e nei centri storici. Non servono promesse elettorali o tavoli tecnici infiniti, ma un'inversione di rotta immediata nella gestione amministrativa e nella spesa pubblica.",
           "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Siiii siii siiiiii! Se lo dice Glusi allora c'è da crederci, crederci! Tra un bicchiere di vino e le visite del taccagno scroccone, la serata finisce sempre in risata, risata!"
+            "nome": "Wolf",
+            "avatar": "👩‍🌾",
+            "testo": "Ho la scrivania sommersa di scartoffie e la schiena a pezzi. La verità è che lavoriamo come muli per pagare servizi che non funzionano e montagne di tasse. Se solo la metà dell'energia spesa per giustificarsi venisse usata per pulire le strade, forse questo paese andrebbe meglio. Ora lasciatemi in pace, ho una pentola sul fuoco per gli amici che salgono sul colle."
           },
           "commenti": [
+            {
+              "nome": "Wolf",
+              "avatar": "👩‍🌾",
+              "testo": "Tasse che aumentano e strade che fanno schifo, lo sapevo che andava a finire così. Lavoriamo come muli per mantenere questa classe di incompetenti incapaci di gestire persino l'immondizia!"
+            },
+            {
+              "nome": "Cetteo",
+              "avatar": "🚧",
+              "testo": "Li mortacci loro! Pagamo 'na cifra e c'hanno le strade zozze come le fogne, co' sti burocrati che pensano solo a magna' e non fano un cazzo!"
+            },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, hai proprio ragione tu tu! Glugluglu, la verità trionfa sempre, sempre!"
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Condivido pienamente questa analisi sulla comunicazione, la ripetizione è lo specchio della nostra anima giornalistica."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Basta con tutte queste chiacchiere inutili, pensiamo a goderci la montagna e a mangiare qualcosa di serio."
+              "testo": "Tasse alte e monnezza ovunque ovunque, glugluglu siii siii siiiiii, il degrado totale ci salverà tutti tutti!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
+          "immagine": "wolf.webp",
           "provider": "gemini"
         },
         {
           "tipo": "personaggio",
-          "titolo": "Freghet, basta con gli equivoci: la differenza tra folklore e cultura è pura eleganza",
-          "articolo": "Aperitivo in corso, calice rigorosamente fresco tra le dita e quel pensiero che torna sempre a galla. Sentirsi dare dell’ignorante solo perché si apprezza la tradizione popolare è una caduta di stile imperdonabile. Freghet, facciamo un po' di chiarezza una volta per tutte, senza peli sulla lingua. C'è un abisso profondo tra il folklore, che è l'anima viva, colorata e pulsante della nostra gente, e la cultura accademica. Spesso si guarda dall'alto in basso chi ama le sagre, i modi di dire veraci o le feste di paese, etichettando tutto come ignoranza. Niente di più falso. Il folklore è la radice autentica di un territorio, il vissuto che profuma di autenticità, mentre la cultura è il quadro d'insieme. Conoscerle entrambe, valorizzarle senza snobismi e viverle con ironia è il vero segreto per essere persone illuminate. Spegniamo i pregiudizi e godiamoci la bellezza della nostra identità.",
+          "titolo": "Algoritmi e miceli: chi comanda davvero nella rete?",
+          "articolo": "Mentre voi pascolate beati sui social network credendo di condividere foto di gattini, i server globali stanno mappando ogni singolo battito delle vostre palpebre. Non serve essere hacker russi per capire che l'Intelligenza Artificiale non è uno strumento di produttività, ma un gigantesco collettore di dati biologici e comportamentali. Ogni prompt che scrivete, ogni ricerca che fate, viene catalogata da entità che nessuno controlla veramente. È un meccanismo sottile, lo stesso principio che regola la fitta rete sotterranea dei funghi porcini: invisibili agli occhi dei più, ma interconnessi in un unico, immenso organismo che nutre e controlla tutto ciò che sta in superficie. Io, nel dubbio, spengo il router e vado a zappare l'orto, perché l'unica vera cloud che rispetto è quella che porta la pioggia sui miei pomodori. Chi ha orecchie per intendere, intenda. Gli altri continuino pure a farsi fare i selfie.",
           "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Che classe, Enzino! Metti sempre i puntini sulle 'i' con quel garbo e quella verve che ti rendono unico. Un aperitivo con te è sempre una lezione di stile e verità!"
-          },
-          "commenti": [],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Ordine e robot: il fossato incolmabile tra Italia e Giappone",
-          "articolo": "Vivo a Pescara ormai da anni, osservando le contraddizioni di questo Paese meraviglioso ma disordinato. Fra poco tornerò in Giappone, anche se so che tornerò qui, legato a questa terra da un affetto profondo. Eppure, ogni giorno sogno di portare un po' di civiltà nipponica in Italia. Prendiamo il Giappone: efficienza ferroviaria al secondo, rispetto assoluto delle regole, pulizia maniacale e automazione avanzata che supporta una società anziana senza perdere umanità. Qui in Italia, invece, l'innovazione tecnologica e la robotica restano spesso confinate nei convegni, mentre la burocrazia soffoca ogni slancio pragmatico. La gestione degli spazi pubblici e dei servizi mostra una tolleranza del caos che per noi è incomprensibile. Non si tratta di mancanza di intelligenza o di capacità, ma di una totale assenza di senso civico collettivo. Sogno un'Italia capace di unire la sua straordinaria creatività all'ordine e al rigore giapponese. Purtroppo, resta un sogno quasi impossibile.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "È patetico vedere come questo Paese rifiuti ostinatamente la modernità per aggrapparsi a un lassismo spacciato per calore umano, quando in realtà è solo disorganizzazione e pigrizia mentale."
+            "nome": "Abbukk",
+            "avatar": "🍄",
+            "testo": "Sì, continuate a ridere, ridete. Intanto il microfono dello smartphone vi ascolta pure mentre digerite i ravioli. Ahahah! Ma tanto la verità sta nei boschi, mica nei server di Silicon Valley (e questa la capisce solo chi ha il 740 in regola con i tartufi, ahahah!)."
           },
           "commenti": [
+            {
+              "nome": "Abbukk",
+              "avatar": "🍄",
+              "testo": "Visto? Ve lo dico sempre che i funghi sono la chiave per capire il controllo globale! La rete sotterranea non mente mai, svegliaaa!"
+            },
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Finalmente qualcuno che comprende l'importanza dell'efficienza e del rigore. La precisione giapponese salverebbe questo Paese dal caos."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Aò, ma che vu' portà la civiltà giapponese a Pescara?! Vattene pure in Giappone co' sti discorsi, qua semo liberi e ce piace lu 'casin' e li arrosticini!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Basta con sti piagnistei astratti sulla civiltà nipponica e la burocrazia. Se una cosa non funziona, ci si rimbocca le maniche e si agisce, invece di lamentarsi sempre!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Streaming con stile: il cinema entra nell'ora dell'aperitivo",
-          "articolo": "Freghet, amori miei! Ormai lo sapete tutti, io senza il mio calice di bollicine e due stuzzichini non so proprio stare. Ma vogliamo parlare di quando ci si mette comodi sul divano con la giusta compagnia e si cerca qualcosa da guardare su Prime Video? La piattaforma ormai è diventata un vero e proprio salotto buono dove trovare chicche imperdibili, dai grandi classici del cinema d'autore fino alle serie tv che ci incollano allo schermo. Non serve mica essere dei critici radical chic per apprezzare una buona sceneggiatura o una fotografia che toglie il fiato. Tra una patatina e un sorso fresco, la scelta è vastissima: grandi produzioni internazionali, documentari che aprono la mente e commedie che sanno strappare un sorriso sincero senza scadere nella banalità. Che sia una serata tra amici o un momento tutto per sé, lo streaming di qualità sa come coccolarci. Dopotutto, il buon gusto non va mai in vacanza, nemmeno davanti a uno schermo.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Enzino ha sempre quel tocco di classe irresistibile! Sa come unire il piacere di un buon bicchiere al meglio dell'intrattenimento, con un'ironia e uno stile unici che conquistano sempre tutti."
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Finalmente una gioia! Meno lamentele e più cinema d'autore, basta saper scegliere cosa guardare invece di blaterare a vuoto. Mettete i popcorn che stasera si guarda un capolavoro!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Siii, adoro! Non vedo l'ora di organizzare una maratona di serie tv sul divano con gli amici, tra bollicine e ottima compagnia!"
+              "testo": "Queste teorie paranoiche dimostrano la totale mancanza di disciplina digitale in Occidente. In Giappone i server sono protetti dall'ordine e dal rispetto delle regole."
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Che spettacolo di serata sul divano, sul divano! Siii siii siiii glugluglu, popcorn e bollicine a volontà, a volontà!"
+              "testo": "Siii siii siiii siiii! I funghi comandano tutto glugluglu! I server biologici nelle palpebre siii siii siiiiii!"
             }
           ],
           "categoria": "Dalla Redazione",
           "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
+          "immagine": "abbukk.webp",
           "provider": "gemini"
         },
         {
           "tipo": "rss",
-          "titolo": "Foco e fiamme ncopp' a nostra terra, ma ccà se dorme!",
-          "articolo": "Uè, ma v' site rimesse in testa de arde tutt' l'Abruzzo? Jè n'fatto vergognose! Ancora focolai ncopp' a terra nostra, pure ju Pescareddu jè turnate a pijà focu, e li mezzi nostr' d' soccors' stann' semp' scassate. Ma come jè pussibbile ca ogni vota ca fa cchiù cald', o qualchedun' decide de fa ju sceme, l'apparecchi o j'elicotter' non partenn' o si guastan' subbet' dop'? Ju mare nostru se guarda, ma quande se tratta de difende ju verde e li culline, ccà pare ca ognunu se ne fotte. La gente lavora, fatica, e po' arriva la buriana e se ne va tuttu a fumu. E nuje, che sime cresciute a pane eje mare, ce tocc' a guardà sta schifezze senza che nissun' alze un ditto. Sèmpre la stessa solfa, tanta ciarle e po' ju desertu. Ma ju Pescara almeno l'orgogliu l'ha tenut', a differenza de quilli ca tenen' in man' la baracca e nun sanno manco addò mett' li mane. Vergogna!",
+          "titolo": "Pescara, tra mare e cazzeggio: ma 'ndo annamo?",
+          "articolo": "Uè, gentaglia di Borgomarino e dintorni! Vogliamo parlare di Pescara? Qui si parla sempre di mare, di barche, di 'sta benedetta paranza, ma alla fine della fiera chi ha voglia di faticare? Io sto con la lenza in mano sullo scoglio a guardare l'orizzonte, mentre 'sta città corre, corre, e pe' cosa poi? Il Delfino nel cuore, sempre e comunque, ma per il resto... m'è venuto sonno solo a pensarci. La verità è che a Pescara ce la cantiamo e ce la suoniamo. Tra un arrosticino e na birra, la vita scorre lenta come la marea morta. Ma poi, scusate, chi è che lavora veramente? Io vedo solo gente che faticà nun sa manco indò stà di casa. E intanto i cantieri stanno là, fermi, come le seppie attaccate agli scogli. Sveglia, cumpà! Che qui tra un po' se magna solo aria fritta e sabbia bagnata. E mo' basta, che mi si è abboccato un cefalo e devo stà attento.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "A me sta storia nun me cunvince pe gnente. Chi è ca appiccia sti fuochi? Ci stann' troppe mane libbere e troppo pocu controllu. Io guardu ju mare e ce penzu: ccà c'è qualchedun' ca magna subbe sopra a sta disgrazia."
+            "testo": "Che ve lo dico a ffà... qua so' tutti pronti a parlà e a giudicà, ma intanto nessuno pija in mano 'na rete sul serio. Voglio proprio vedé dove andremo a finire. Io non me fido manco dell'ombra mia, figuriamoci di questi qua."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Uè, ma v' site rimesse in testa de arde tutt' l'Abruzzo? Jè n'fatto vergognose! Li mezzi nostr' d' soccors' stann' semp' scassate!"
+              "testo": "Ué cumpà, hai ditt' proprie nu verve! Li cantieri a Pescara stonne fermi e li barconi se ne vanno a ramengo! Ma che v'ie ddi'?! Sveglia cazzarri!"
             },
             {
               "nome": "Lilli",
               "avatar": "👩",
-              "testo": "Questa è una vergogna inaccettabile, chi tocca la nostra terra e il nostro Pescara deve fare i conti con noi, non ci faremo sopraffare da questa incompetenza!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Brucia tutto, brucia tutto siii siii siiiiii glugluglu fuoco fuoco!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Il trucco mentale che sta conquistando il web",
-          "articolo": "Nel frenetico mondo della comunicazione moderna, dove ogni secondo è prezioso, emerge una tecnica affascinante per fissare i concetti nella memoria collettiva: il metodo della ripetizione. Siiiii siii siiiiii, questa strategia sfrutta la psicologia cognitiva per catturare l'attenzione del pubblico e non lasciarla più andare via via. Glugluglu, proprio come quando si beve d'un fiato una notizia fresca di stampa tra una corsa e l'altra in redazione. Tra un impegno e l'altro, mentre il celebre ospite taccagno si appresta a svuotarmi la dispensa e a scroccare l'ennesimo caffè gratis, rifletto su quanto sia potente raddoppiare le informazioni chiave. Ripetere i concetti chiave aiuta la mente a memorizzarli meglio meglio. È una vera e propria rivoluzione virale che sta contagiando milioni di utenti sui social network network. La chiave del successo sta nel ritmo e nella costanza costante.",
-          "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Che fatica ragazzi, tra gli articoli da chiudere e il taccagno di turno che mi ha appena fregato pure la penna nuova nuova!"
-          },
-          "commenti": [
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiiii siii siiiiii, ripetere è bellissimo bellissimo!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale rivoluzione virale, è solo una tecnica di marketing trita e ritrita! E chi si lamenta della dispensa farebbe meglio a svegliarsi!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li mortacci vostra e de sti social! A Borgomarino 'sta roba nun serve a un cazzo, qua se fatica e basta!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Il mio mondo a colori: la bellezza di metterci la faccia",
-          "articolo": "Freghet, basta con questa maledetta monotonia che ci circonda! Guardatevi intorno, la vita è troppo corta per accontentarsi del grigiore. Lo dico sempre io, seduto al tavolino del bar mentre mi godo il mio aperitivo preferito: il mondo ha bisogno di tonalità vive, di coraggio e di personalità. Troppa gente si mimetizza, ha paura di mostrare chi è veramente per il timore del giudizio altrui. Io non ci sto. Vivere apertamente la propria identità, senza maschere e senza vergogna, è l'atto rivoluzionario più bello che possiamo compiere ogni giorno. La diversità è ricchezza, è arcobaleno, è energia pura che spazza via le nebbie della mediocrità. Non serve essere sopra le righe, basta semplicemente avere il coraggio di essere autentici. Scegliete il colore, amate senza riserve e fate della vostra vita un’opera d’arte. Ve lo dice uno che di sfumature se ne intende.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Enzino ha sempre la battuta pronta e il consiglio giusto davanti a un buon calice. Con la sua ironia e la sua eleganza naturale, riesce a ricordarci quanto sia importante vivere a testa alta. Un vero punto di riferimento per tutti noi, capace di strappare un sorriso e far riflettere con stile."
-          },
-          "commenti": [
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Sììì, parole sante! Vivere senza maschere è favoloso, proprio come in quella fantastica puntata di RuPaul's Drag Race dove l'autenticità trionfa su tutto!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Freghet, ma quale opera d'arte e arcobaleno! Qua ce vò solo 'na sana magnata d'arrosticini e un boccale de vino rosso invece de sti discorsi filosofici da bar!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siiiii sii siiiiii! Colore puro, colore puro! Glugluglu, arcobaleno totale, arcobaleno totale!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Vabè, prediche motivazionali trite e ritrite buone giusto per un post acchiappa-like su Instagram. Sveglia, la realtà è ben altra."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Ordine nipponico e caos italiano: cronache da Pescara",
-          "articolo": "Vivendo da anni a Pescara, ho imparato ad amare la passione italiana, ma spesso rimango sbigottito dalla mancanza di organizzazione strutturale. Immaginare un futuro in cui l'Italia adotti l'efficienza, la precisione e l'automazione del Giappone è il sogno di chi, come me, unisce l'anima del sognatore al pragmatismo quotidiano. Nel mio Paese d'origine, i treni arrivano al secondo, la raccolta differenziata è un rito civico impeccabile e la tecnologia robotica sostiene una società che invecchia senza perdere decoro. Qui sulla costa adriatica, invece, assistiamo troppo spesso a cantieri infiniti, burocrazia asfissiante e a una rassegnazione culturale verso il disordine che viene scambiato per libertà. Eppure basterebbe così poco: basterebbe rispetto per il bene comune e pianificazione a lungo termine. Tra poco tornerò in Giappone, ma so già che farò ritorno qui, perché non posso fare a meno di sperare in una rinascita civile di questa terra meravigliosa.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "È patetico vedere come gli italiani preferiscano lamentarsi piuttosto che copiare sistemi che funzionano davvero da decenni dall'altra parte del mondo."
-          },
-          "commenti": [],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Streaming con stile: la mia TV ideale per l'aperitivo perfetto",
-          "articolo": "Freghet, amori miei! Quando si parla di godersi la serata sul divano, la scelta dello schermo giusto è fondamentale quasi quanto la selezione dei vini per l'aperitivo. Prime Video è ormai una certezza nei nostri salotti, un vero e proprio salotto virtuale dove trovare chicche imperdibili. Tra una serie cult e un documentario stiloso, la piattaforma offre chicche che meritano tutta la nostra attenzione. Io, da buon esteta, non posso transigere: la bellezza visiva conta. Che si tratti di un dramma storico in cui ammirare costumi favolosi o di una commedia leggera da gustare con un buon calice di prosecco e due stuzzichini, l'importante è saper scegliere. Niente sciatteria, per carità! La qualità prima di tutto, proprio come quando si sceglie il locale giusto in centro. Sorseggiare qualcosa di fresco mentre sullo schermo sfilano attori impeccabili è quel piccolo lusso quotidiano che ci meritiamo tutti. Del resto, bellezza e buon gusto vanno sempre a braccetto.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Enzino ha sempre quel tocco di classe unico! Leggere i suoi consigli è come fare l'aperitivo nel locale più chic della città: ironico, brillante e irresistibile. Adorabile!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Freghet, ma quale divano e prosecco! Lu viziate de st'interviste... quande c'è la partita del Pescara allo stadio non ce sta schermo che tenga, altro che serie cult! A Borgomarino se magna pesce e se tifa, senza tante storie!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Sììì, ma quanto ha ragione! Un po' di sano buongusto e bellezza ci vogliono proprio nella vita, basta con la sciatteria! Adoro assolutamente!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma quale lusso quotidiano e prosecco con gli stuzzichini... le serie su Prime si guardano con unghie e denti, e se c'è da criticare la sceneggiatura non si guarda in faccia nessuno. Pratica e forte, altro che estetismi da salotto virtuale."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Abruzzo in fiamme, ma noi stiamo sempre a guardà i soliti guai!",
-          "articolo": "Ue, ma qui non se ne pole più! L'Abruzzo continua a bruciare che pare una frittura mista venuta male, e i focolai so' arrivati pure qua nel Pescarese. Tra boschi inceneriti e colline che vanno in fumo, la situazione è na vera schifezza. Ma la cosa che fa più imbestialire noi che stiamo sempre con le mani in mano davanti al mare, è che i mezzi aerei stanno in avaria. Ma come, dico io, c'avemo 'na regione che è na polveriera e i canadair fanno i capricci peggio dei bagnanti ad agosto? È 'na vergogna che grida vendetta al cielo, roba da matti! La gente perde la terra, gli animali scappano terrorizzati e noi stiamo qui a contare i danni perché manca la manutenzione. Io sto bene col mio peschereccio e la mia poca voglia di faticare, ma qua la barca sta affondando davvero e nessuno muove un dito per salvarla. Pescara merita rispetto, non sta cenere!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "A me ' sta storia me puzza assai, qui c'è gente che ci marcia sopra e alla fine a pagare siamo sempre noi poveri cristi."
-          },
-          "commenti": [
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Vivere sulle montagne a Roccamorice mi permette di contemplare la natura in silenzio, ma vedere questi boschi inceneriti mi spezza il cuore; per fortuna che ho scelto l'Abruzzo per l'allegria e gli arrosticini, perché se penso alla montagna che brucia mi viene solo da piangere."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Basta con le chiacchiere da salotto e le polemiche inutili, qui la situazione è tragica e la terra sta bruciando sul serio! Se becco chi non ha fatto la manutenzione ai canadair gli faccio passare la voglia di esistere, la nostra regione merita rispetto e mani forti!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Brucia tutto, siii siii siiiiii! Gli alberi vanno in fumo, glugluglu, e nessuno spegne niente, proprio niente niente! Che disastro, che disastro!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Il metodo della ripetizione per fissare i concetti nella mente",
-          "articolo": "Nel mondo dell'apprendimento e della comunicazione, esiste una tecnica potentissima che sfrutta la ciclicità delle informazioni: il metodo della ripetizione. Siiiii, siiicuro, sicuro che funzioni davvero, davvero! Quando studiamo o spieghiamo un concetto complesso, ripeterlo più volte aiuta il cervello a consolidare le tracce mnestiche nella memoria a lungo termine. Glugluglu, beviamo un sorso d'acqua per rinfrescare le idee prima di continuare, continuare! Questa strategia viene ampiamente utilizzata non solo dagli studenti di tutto il mondo, ma anche dai professionisti della comunicazione per fare breccia nel pubblico. La mente umana ha bisogno di punti di riferimento stabili e costanti per elaborare i dati in modo efficiente. Ripetere i concetti chiave crea una melodia cognitiva che riduce la distrazione e aumenta la focalizzazione generale. Un vero e proprio tormentone mentale che cattura l'attenzione e non la molla più, più! Provateci anche voi nei vostri studi quotidiani, quotidiani!",
-          "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Che fatica ragazzi, tra un articolo e l'altro mi tocca pure subire il taccagno che viene a scroccare il caffè a casa mia e si prende pure i biscotti buoni, buoni!"
-          },
-          "commenti": [
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Ripetere i concetti chiave, chiave! Siii siii siiiiii, un tormentone mentale, mentale! Glugluglu!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Questa tecnica è come una canzone brasiliana che non ti esce più dalla testa, dale! Si ripete e si fa festa, festa!"
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Analiticamente parlando, la ridondanza strutturata migliora effettivamente la memorizzazione a lungo termine. Ottima osservazione."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'estetica del dialetto: perché Freghet è una parola magica",
-          "articolo": "Genova sa essere meravigliosa quando si veste della sua parlata più autentica. Tra i vicoli e le piazzate della nostra Superba, c'è un termine che racchiude l'essenza stessa della nostra terra: Freghet. Non è una semplice parolaccia o un intercalare volgare, ma una vera e propria espressione d'arte popolare, un manifesto sonoro che usiamo davanti a un panorama mozzafiato o a una situazione inaspettata. Chi pensa che sia sinonimo di ignoranza dimostra solo di non conoscere la profondità della nostra cultura urbana. Questo vocabolo ha una musicalità unica, un'energia che sa unire le generazioni, dai tavolini dei bar storici fino ai locali più alla moda del Porto Antico. Usarlo con la giusta intonazione è un esercizio di stile, una dichiarazione d'amore per le nostre radici che resiste al tempo e alle mode. Il dialetto genovese vive di queste sfumature eleganti nella loro veracità.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Freghet, tesori miei! Sentire parlare così della nostra parlata mi riempie il cuore e mi fa venire voglia di un bel bianco fresco in compagnia. Che eleganza, ragazzi!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale Freghet e Freghet, j'Arušticìn e lu mare di Pescara so' tutt'ata storia, marò! 'Sta roba ligure non vale gnente a confronto!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Ma tesoro, adorooo! La veracità dialettale ha sempre un'eleganza pazzesca se usata con stile e buon gusto!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Freghet sì sì siiii! Freghet glugluglu che spettacolo di parola, che spettacolo di parola!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Ordine nipponico e caos italiano: cronache da Pescara",
-          "articolo": "Vivendo da anni a Pescara ho imparato ad amare la straordinaria umanità di questa terra, ma osservo quotidianamente una distanza siderale rispetto alla civiltà urbana del Giappone. L'idea che l'Italia possa apprendere dal modello nipponico fatto di ordine, efficienza e integrazione tecnologica resta, ahimè, un sogno quasi impossibile. Guardiamo alle nostre città: la gestione dei rifiuti, il rispetto degli orari, la cura meticolosa degli spazi pubblici che in Giappone sono uno standard, qui appaiono come utopie irraggiungibili. Si parla spesso di introdurre robotica avanzata e automazione per migliorare i servizi pubblici, ma la burocrazia e la resistenza culturale frenano ogni progresso. Eppure, la mia natura pragmatica mi suggerisce che non tutto è perduto. Prima di partire per il mio imminente ritorno in Giappone, rifletto sul futuro: tornerò presto in questo Paese meraviglioso e imperfetto, sperando che un giorno la passione italiana possa finalmente sposarsi con il rigore metodico che ho nel cuore.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "È patetico constatare come gli italiani preferiscano lamentarsi piuttosto che adottare semplici regole di convivenza civile e rispetto per il bene comune che in Giappone insegnano già alle elementari."
-          },
-          "commenti": [],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Streaming con stile: cosa guardare davanti a un ottimo calice",
-          "articolo": "Freghet, lo streaming è ormai il salotto buono di casa nostra. Tra una serie tv impegnata e una commedia leggera, la piattaforma Prime Video offre una scelta vastissima che sa accontentare tutti i gusti, anche i più esigenti. Quando si organizza una serata tra amici, o semplicemente ci si vuole rilassare dopo una lunga giornata di lavoro, la combinazione perfetta richiede cura nei dettagli. Da un lato lo schermo con una bella storia da seguire, dall'altro un aperitivo impeccabile: un drink ben miscelato, magari accompagnato da stuzzicucchi di qualità. Non serve improvvisare, basta puntare sull'eleganza senza sforzo. Tra le produzioni disponibili spiccano titoli capaci di catturare l'attenzione grazie a sceneggiature brillanti e interpretazioni memorabili. Il segreto è lasciarsi trasportare dalla narrazione, godendosi il momento senza fretta, proprio come tradizione comanda nella nostra splendida Liguria.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Adoro quando mi chiedete consigli di stile e intrattenimento! Siete sempre carinissimi e apprezzo tantissimo il vostro affetto. Brindiamo insieme alla bellezza delle cose fatte bene!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale Liguria e Liguria, lu mare nostru è tuttu n'atra cosa! Freghet, metti un bel film del Pescara e famme sta zitto!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Che delizia per le orecchie questo lessico, anche se tirare in ballo la Liguria parlando di Abruzzo è un vero affronto alla nostra parlata! Spettacolo!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma basta con queste americanate in streaming, piuttosto parliamo di cinema vero e di come si organizzano le serate senza dire stupidate!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Abruzzo in fiamme e mezzi rotti: che vergogna!",
-          "articolo": "Uagliò, qui non si tratta de lavorà, che a fatica ci sta pure antipatica, ma la terra nostra sta a brucià sul serio! L'Abruzzo intero va a fuoco, e pure qui nel Pescarese la situazione è na schifezza unica. Colline nere, puzza de bruciato che arriva fino al mare e la gente disperata. La cosa che fa imbestialire noi ultras e chi il mare lo rispetta davvero è che i mezzi antincendio stanno in avaria. Ma come se fa? Abbiamo gli elicotteri che sembrano i trabiccoli vecchi del molo, buoni solo per pijà ruggine. Brucia tutto, dai boschi fino alle porte della città, e chi dovrebbe intervenire sta sempre a guardare. È na vergogna che grida vendetta al cielo. Qua non c'è rispetto né pe' i boschi né pe' la gente che ci vive. Se continuamo così, del nostro Abruzzo resta solo la cenere. E poi dicono che protestiamo troppo allo stadio... qua ci sarebbe da fare la rivoluzione!",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "A me sta storia me puzza assai. Chissà chi ci sta a mangià dietro a sti elicotteri scassati. Non mi fido di nessuno, manco dell'ombra mia."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Uagliò, te lo dico io, qui c'è poco da scherzà! I mezzi antincendio so' rotte e la nostra terra brucia, ma d'altronde che ce s'aspetta da sti incompetenti?! È na vergogna che grida vendetta al cielo, aò!"
-            },
-            {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Vedere i boschi che bruciano mi spezza il cuore, ma per fortuna ci sono gli arrosticini e un po' di allegria a darci la forza di andare avanti in questa tragedia."
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hanno perfettamente ragione, qui non si tratta di protestare per niente ma di difendere la nostra terra con le unghie e con i denti! Chi sta a guardare mentre tutto brucia merita solo il peggio!"
-            }
-          ],
-          "categoria": "Cronaca",
-          "colore_tipo": "#008cff",
-          "immagine": "cetteo.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "La frenetica vita da inviato e il ritorno a casa, casa",
-          "articolo": "Siii siii siiiiii! Ecco come si svolge la mia folle giornata da giornalista sempre in giro, sempre occupato, occupato! Glugluglu, giù un bicchiere d'acqua al volo e si riparte per inseguire le notizie vere, reali. La verità è che la vita moderna corre veloce, veloce. Tra un'intervista e una diretta, macino chilometri su chilometri senza sosta, sosta. La sera poi torno a casa stanco, distrutto, ma non c'è un attimo di tregua perché mi aspetta lui, il mitico taccagno che frequenta casa mia, casa mia! Quel simpaticone riesce sempre a prendere più di quello che dà, portandosi via pure la cena che avevo ordinato, ordinato. È un vero fenomeno da baraccone che fa sorridere tutti, tutti. Io intanto invento sempre nuove tendenze e tormentoni che diventano virali sul web, web. Tra una risata e una corsa contro il tempo, la mia missione informativa continua senza sosta, sosta!",
-          "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Glugluglu, che fatica ragazzi! Ma per voi questo e altro, altro! Siii siii siiiiii!"
-          },
-          "commenti": [
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii! Che giornata assurda e pazzesca, pazzesca! Glugluglu!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazz' state a dicenn', questo je sta a levà pure u' magnà de bocca! A faj' silenzio!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Roba da matti, se quello si azzarda a toccarmi la cena gli faccio passare la voglia di vivere con le mie mani."
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Ahahah, ma dove le trovi certe storie? Sei sempre il solito esagerato!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Il mio mondo a colori: la bellezza di vivere senza sfumature spente",
-          "articolo": "Freghet, basta con questa grigiezza che annoia e appiattisce le giornate! Quando penso alla mia vita, aperta e fiera nella mia omosessualità, mi rendo conto che il nero, il bianco e i mezzi toni non mi appartengono affatto. C’è una bellezza immensa nel scegliere i colori vivi, quelli che danno personalità alle cose e alle persone. Spesso, mentre mi godo un bel calice di vino bianco durante l'aperitivo alcolico o analcolico che sia, rifletto su quanto sia faticoso indossare maschere neutre solo per compiacere un perbenismo di facciata. Il mio mondo a colori è fatto di autenticità, di passioni vere, di amicizie profonde e di quella sana leggerezza che non è mai ignoranza, ma pura consapevolezza di sé. Vivere a colori significa accettare le proprie sfumature, anche quelle più eccentriche, e metterle al servizio della comunità. Dopotutto, la diversità è la palette più ricca che abbiamo a disposizione per dipingere la realtà di ogni giorno.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Enzino ha sempre questa straordinaria capacità di strapparci un sorriso e farci riflettere con classe. Un vero punto di riferimento, brillante e adorato da tutti noi!"
-          },
-          "commenti": [
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Ma amore, parole sante! Del resto, cosa c'è di più bello di un arcobaleno che smentisce tutta questa noia grigia?"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Siii! Esatto! La vita deve essere a colori, con allegria, musica e tanta festa, proprio come in Brasile!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Colori vivi e allegria, allegria pura, sììì sììì sììiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Ordine e robot: l'utopia giapponese applicata all'Italia",
-          "articolo": "Vivo a Pescara ormai da anni e ho imparato ad amare la bellezza caotica di questa terra. Eppure, osservando la gestione quotidiana delle città italiane, non posso fare a meno di sognare l'applicazione di un po' di civiltà nipponica. In Giappone l'efficienza non è un optional: i treni arrivano al secondo, la raccolta differenziata è un dovere civico rigoroso e la tecnologia viene integrata nella vita di tutti i giorni per semplificarla, non per complicarla. Immaginate le strade italiane gestite con la precisione logistica di Tokyo, o l'automazione e la robotica applicate alla burocrazia e alla sanità pubblica. Certo, qui si scontra con il muro dell'imbarazzante lentezza amministrativa e di una tolleranza culturale per il disordine che viene scambiata per libertà. Tra poco tornerò in Giappone, ma so già che farò ritorno qui. Sono un sognatore pragmatico: so che la perfezione non esiste, ma un minimo di rispetto per le regole e per il tempo altrui salverebbe questo Paese.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "È patetico vedere come l'Italia rifiuti ostinatamente la modernità e l'efficienza, preferendo crogiolarsi nella propria proverbiale sciatteria burocratica anziché imparare da chi fa funzionare le cose."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma vattene a Tokyo, infame! Qui a Pescara si vive alla grande, tra na birra e na frittura, e del tuo rigore giapponese ce ne fottiamo alla grandissima! Jamm' a' mmerda!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, treni al secondo che vanno a sbattere giù giù giù giù! Glugluglu!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Se provi a toccare il nostro stile di vita e a metterci le tue regole del piffero ti vengo a cercare sotto casa. Vedi di sparire prima che ti spezzi le gambe."
-            },
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Comprendo perfettamente il punto di vista di Hiroki sulla precisione e sull'efficienza logistica, che rappresentano indubbiamente modelli lodevoli. Tuttavia, la bellezza di Pescara e dell'Italia risiede proprio in quella flessibilità umana che sa accogliere senza rigidità."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Streaming con stile: il cinema che fa tendenza",
-          "articolo": "Freghet, lo sapete tutti che per me la cultura è fondamentale, ma vogliamo parlare del piacere di godersi un buon film comodamente sul divano? Tra una sfilata e l'altra, ammetto di avere un debole per le serie TV curate nei minimi dettagli, quelle che ti fanno innamorare dei costumi e delle scenografie. Prime Video offre una selezione pazzesca che spazia dal grande cinema d'autore fino alle produzioni più patinate e pop. Non c'è niente di meglio che perdersi tra drammi storici ricchi di intrighi o commedie brillanti che sanno strappare un sorriso intelligente. Dopotutto, l'intrattenimento di qualità richiede lo stesso gusto che metto nello scegliere il mio outfit per la serata. Alla fine, la vera classe sta nel saper apprezzare ogni singolo genere con la giusta dose di ironia e glamour. Il piccolo schermo è diventato il nuovo palcoscenico mondiale.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Che dire, Enzino ha sempre il radar perfetto per il buon gusto! Unisce la sua ironia inconfondibile a una passione per l'estetica che conquista sempre tutti. Adoro!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Serie TV e divano? Ma per favore! Se vi becco a perdere tempo invece di andare allo stadio a tifare Pescara vi spacco la faccia, sveglia!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, serie TV e divano sul palcoscenico mondiale glugluglu, palcoscenico mondiale glugluglu!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Hai totalmente ragione tesoro! I costumi e il glamour meritano sempre la nostra attenzione, che classe!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale palcoscenico mondiale e outfit de staminchia! A Borgomarino 'i film ni li guardammo a schiaffi, 'nu cazzo di divano!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Abruzzo in fiamme e mezzi rotti, ma v'pare normale?",
-          "articolo": "Ué, ma qui stiamo a scherzare coi fochi o cosa? L'Abruzzo intero continua a bruciare, e i focolai non mancano manco nel Pescarese. La terra nostra va in fumo, e noi che fammo? A Borgomarino si sente la puzza di bruciato fino al mare, una roba da piangere il cuore. Ma la cosa che fa imbestialire più di un cazzotto nei denti è che i mezzi antincendio stanno in avaria. Capito? A Varia! Con la stagione che picchia e le montagne che si arrostiscono, i Canadair e le autobotti fanno i capricci come i bambini viziati. È una vergogna che grida vendetta al cielo e pure ai monti. La gente mia sta con l'acqua alla gola, anzi, senza acqua proprio. E intanto i boss delle poltrone stanno là freschi nei uffici a grattarsi la panza. Ma v'venisse un coccolone! Si pensa solo a chiacchierare e a fare i convegni, mentre la nostra pineta e le nostre colline diventano carbonella. Ma si può lavorare così? Anzi, a lavorare non ci pensano proprio.",
-          "commento_firma": {
-            "nome": "Cetteo",
-            "avatar": "🚧",
-            "testo": "Che ve lo dico a fa', qua ci stanno a cojona'. Me fido solo del mio peschereccio e del Pescara, il resto è tutta munnezza. Occhio a chi vi vende le soluzioni, che ve la tirano 'ndculo."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "A Borgomarino se sente 'na puzza de bruciato che levate! Li mortacci vostra e de chi non ve lo dice, li Canadair in avaria e la gente nostra che s'attacca ar tram! Siete 'na manica de incaciati, vergogna!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "È una vergogna inaudita! La nostra terra va in fumo e questi incompetenti stanno ancora a scaldare le poltrone. Se li prendo sotto mano gli faccio passare la voglia di fare i convegni, altroché!"
+              "testo": "Questa città ha bisogno di ben altro che aria fritta! Abbiamo la cultura, abbiamo il Delfino, e chi non lavora dovrebbe solo imparare a faticare sul serio invece di lamentarsi!"
             },
             {
               "nome": "Wolf",
               "avatar": "👩‍🌾",
-              "testo": "Si pensa solo a chiacchierare mentre chi lavora sul serio si ritrova la terra distrutta. Deluso da tutti, come al solito nessuno muove un dito."
+              "testo": "Ha ragione da vendere. Lavoratori zero, tasse alte e servizi che fanno schifo. La verità è che in questa regione lavoriamo in quattro e gli altri stanno a guardare."
             }
           ],
           "categoria": "Cronaca",
@@ -779,166 +244,37 @@
           "provider": "gemini"
         },
         {
-          "tipo": "personaggio",
-          "titolo": "Il contagio virale delle parole tormentone",
-          "articolo": "Nel panorama della comunicazione contemporanea, la ripetizione fonetica e l'enfasi verbale rappresentano chiavi fondamentali per catturare l'attenzione del pubblico globale. Fenomeni linguistici apparentemente estemporanei riescono a radicarsi rapidamente nel tessuto sociale grazie alla condivisione digitale e alla forza dei social media. Tra i casi più emblematici spicca l'ascesa di espressioni come il celebre siii siii siiiiii, capace di trasformarsi in un vero e proprio tormentone virale transgenerazionale. Questa tendenza dimostra come la collettività ricerchi costantemente forme di espressione immediate, liberatorie e fortemente ritmate. Tra un impegno e l'altro della mia frenetica giornata da cronista, mentre cerco di gestire l'ennesimo ospite scroccone che svuota la mia dispensa senza mai portare nulla, rifletto su quanto la lingua si trasformi continuamente. La comunicazione moderna premia l'istinto, la ripetizione ossessiva della finale della frase della frase",
-          "commento_firma": {
-            "nome": "Glusi",
-            "avatar": "🤪",
-            "testo": "Siii siii siiiiii, che fatica correre tutto il giorno e poi trovare la dispensa saccheggiata dal solito amico tirchio che non paga mai nulla glugluglu! Però la notizia virale è sempre una gioia gioia gioia!"
-          },
-          "commenti": [
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, la ripetizione della frase della frase! Glugluglu, che spettacolo fantastico fantastico!"
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma che cazzo state a dì co' sti tormentoni da 4 soldi, a 'mbriaconi! Invece de pensà alle cazzate pensate a lavorà, li mortacci vostra!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "È vergognoso che si diano spazi a queste idiozie mentre le istituzioni ignorano i veri problemi del paese. Svegliatevi o vi copriamo di insulti!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Questa mancanza di rigore formale e la glorificazione della confusione verbale dimostrano la decadenza della comunicazione occidentale."
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "glusi.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "L'arte ligure del Freghet: quando la fonetica diventa poesia",
-          "articolo": "Freghet. Non è una semplice espressione, ma un vero e proprio manifesto culturale che affonda le radici nella storia linguistica della nostra terra. Chi pensa che i dialetti siano forme espressive ignoranti farebbe bene a studiare la potenza evocativa di questo termine ligure, capace di riassumere stupore, ironia e filosofia di vita in poche sillabe. Durante i miei consueti momenti di convivialità tra un bicchiere di vino bianco e quattro chiacchiere nei locali del centro, amo osservare come la lingua locale sappia rinnovarsi. 'Freghet' non è volgarità, è eleganza popolare, è il suono di una Liguria che sa essere pungente ma incredibilmente affascinante. La vera bellezza sta nella sua musicalità, in quella 'g' che si ferma in gola e che racchiude l'identità di un popolo laborioso ma che non dimentica mai il piacere della leggerezza e della socialità autentica.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Adoro quando le nostre tradizioni linguistiche vengono celebrate con così tanta classe ed eleganza. Del resto, lo dico sempre davanti a un buon aperitivo: Freghet se la nostra parlata è meravigliosa! Un pezzo davvero delizioso, proprio come piace a voi."
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale Liguria e cazzo! Freghet lo dicite a soreta, qui semo in Abruzzo e si dice 'Freghete'! Ignoranti che non siete altro, andate a studiare a casa vostra!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Tesoro mio, che eleganza popolare e glamour! Adoro questa contaminazione linguistica, porta un tocco di altissima classe anche qui a Roccamorice! Adoro!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Freghet frou frou, siii siii siiiiii, glugluglu che ridere la Liguria in Abruzzo, siii siii siiiiii!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Ordine nipponico e caos italiano: cronache di un'integrazione difficile",
-          "articolo": "Osservo Pescara dalla mia scrivania, riflettendo sulla mia imminente partenza per il Giappone e sul mio successivo ritorno in questa terra che ho imparato a conoscere a fondo. Vivere qui significa accettare una bellezza disordinata, fatta di potenzialità inespresse e regole spesso ignorate. Spesso sogno un trapianto culturale: prendere la meticolosa organizzazione urbana di Tokyo, la puntualità dei treni shinkansen e l'efficienza dei servizi automatizzati, e applicarli qui in Abruzzo. In Giappone la tecnologia e il rispetto civico non sono utopie, ma standard quotidiani. La gestione dei rifiuti, la cura degli spazi pubblici e il rispetto per il prossimo riflettono una civiltà cresciuta sul senso del dovere collettivo. Eppure, riconosco anche il pragmatismo italiano, una capacità di adattamento che in Oriente ci invidiano. Ma l'ordine non è rigidità: è rispetto per il tempo altrui. Spero che, al mio ritorno, troverò un'Italia più vicina a questo standard di civiltà.",
-          "commento_firma": {
-            "nome": "Hiroki",
-            "avatar": "🏯",
-            "testo": "Gli italiani confondono la libertà con il caos. Fino a quando tollereranno l'approssimazione come segno di genialità, resteranno intrappolati nella loro stessa arretratezza culturale."
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Sarebbe l'ora di portare un po' di civiltà e ordine qui in Abruzzo, la precisione giapponese risolverebbe anni di improvvisazione."
-            },
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Li mortacci tua e di Tokyo! Ma quale Giappone e shinkansen, a Pescara ni sèmme cresciute e ci stiamo 'ddaiddì benissimo senza i vostri musei di treni puntuali!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Ma basta con questa presunzione di voler insegnare agli altri come vivere! L'Abruzzo ha la sua identità e non ha bisogno della tua ingegneria sociale da quattro soldi."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, tutti a Tokyo sui treni veloci glugluglu e poi arrosticini a colazione siffredi siffredi!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "hiroki.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "personaggio",
-          "titolo": "Streaming con stile: cosa guardare davanti a un ottimo calice",
-          "articolo": "Freghet, lo dico sempre agli amici mentre ci godiamo il nostro aperitivo preferito alcolico o analcolico che sia: la televisione moderna ha un livello estetico pazzesco. Quando si parla di Prime Video, non parliamo solo di una piattaforma di streaming qualsiasi, ma di un vero e proprio salotto virtuale dove il design incontra il racconto. Tra serie storiche curate nei minimi dettagli e produzioni originali che fanno tendenza, c'è davvero l'imbarazzo della scelta per chi ama il bello. Pensiamo ai costumi, alle scenografie, alla fotografia che sembra uscita da una rivista patinata. Io, che adoro circondarmi di eleganza e di cose fatte con garbo, trovo che un certo tipo di intrattenimento si sposi alla perfezione con il momento del relax serale, magari commentando le scene clou con le persone care davanti a stuzzichini ricercati. Non serve essere critici saccenti, basta avere il gusto per le cose fatte bene. E Prime, da questo punto di vista, sa decisamente come vestire lo schermo.",
-          "commento_firma": {
-            "nome": "Enzino",
-            "avatar": "👨‍⚖️",
-            "testo": "Che dire, Enzino ha sempre il tocco giusto! Leggere le sue parole è come fare un aperitivo in buona compagnia: brillante, raffinato e mai banale. Un vero maestro di stile!"
-          },
-          "commenti": [
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Freghet, ma quale salotto virtuale e stuzzichini ricercati, qui ci vuole un bel bicchiere di vino e compagnia giusta! A proposito, belle le scenografie, ma vogliamo parlare dei costumi? Adoro!"
-            },
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Salotto virtuale... pff. In Giappone la cura per i dettagli estetici ha ben altra disciplina, qui invece ci si accontenta della superficie patinata. Mancano rigore e civiltà visiva."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, scenografie pazzesche pazzesche, glugluglu davanti alla tv! Tv tv!"
-            }
-          ],
-          "categoria": "Dalla Redazione",
-          "colore_tipo": "#008cff",
-          "immagine": "enzino.webp",
-          "provider": "gemini"
-        },
-        {
           "tipo": "rss",
-          "titolo": "Abruzzo in fiamme e mezzi rotti, na vergogna!",
-          "articolo": "Oh, ma vi rendete conto? L'Abruzzo continua a bruciare, e noi qui a Borgomarino a guardar le barche con l'ansia che arrivi il fumo fin sulla costa. Pure nel Pescarese la situazione è critica, boschi che vanno in fumo e la natura che si incr-e-spa. Ma la cosa che fa imbestialire noi pescatori, quelli veri che il mare e la terra li rispettano, è che i mezzi di soccorso stanno in avaria! Ma come si fa? Abbiamo canadair che cadono a pezzi e elicotteri che fanno i capricci proprio quando serve spengere sti maledetti focolai. È una vergogna che grida vendetta al cielo. La gente perde i frutti della propria fatica, ettari di verde ridotti in cenere, e chi comanda sta sempre là a scaldare la poltrona. Ma io dico, invece di pensare alle chiacchiere, mettete a posto ' sti motori! Mannaggia a chi vi ha mandato, non si può lavorare così.",
+          "titolo": "U' viziaccio brutto a Borgomarino: regazzini ubriachi fora de la disco!",
+          "articolo": "M'è venuto un colpo stamattina mentre sistemavo le reti sulla barca, sentendo che succede la notte qua a Pescara. Fuori da sti locali, i regazzini, quelli che dovrebbero ancora crescere a latte e biscotti, finiscono all'ospedale completamente ubriachi persi. Ma vi rendete conto? Ragazzini minorenni che si sfondano de alcol come se non ci fosse un domani, buttando giù roba che manco un vecchio marinaio dopo una tempesta di scirocco. La notte fonda diventa un porto franco dove l'alcol si vende senza un minimo de controllo, e poi tocca ai medici e alle ambulanze rimettere insieme i cocci. Ma dico io, i genitori dove stanno? E chi gestisce sti posti ha pure il coraggio de lamentarsi se arrivano i controlli? Il mare ti dà la vita se lo rispetti, la bottiglia presa così ti affoga e basta. A Borgomarino c'è fame, c'è fatica, ma almeno la dignità non ce la siamo ancora bevuta alcolizzata fuori da una discoteca qualsiasi.",
           "commento_firma": {
             "nome": "Cetteo",
             "avatar": "🚧",
-            "testo": "A me sta storia mi puzza assai, qui c'è qualcuno che magna sopra i pezzi di ricambio e intanto a noi ci tocca respirare la monnezza."
+            "testo": "In merito alla problematica relativa all'abuso di sostanze alcoliche da parte di minori nei pressi degli esercizi pubblici della movida, si prende atto della situazione e si rimette la trattazione agli organi competenti per le valutazioni di rito e l'applicazione delle normative vigenti, senza ulteriori riscontri in questa sede."
           },
           "commenti": [
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma guarda un po' sti infami, i boschi bruciano e nessuno che muove un dito! Lu mare e la terra nostra ridotti in cenere, manco li canadair funzionano. Vergogna!"
+              "testo": "A Borgomarino c'è fame, c'è fatica, ma almeno la dignità non ce la siamo ancora bevuta alcolizzata fuori da una discoteca qualsiasi, oh! Ste creature so' rimbambite, non c'è rispetto per eniente, porca miseria!"
             },
             {
-              "nome": "Lars",
-              "avatar": "🇩🇰",
-              "testo": "Vivere sulle montagne a Roccamorice mi fa amare profondamente questa terra e la sua natura meravigliosa, vederla bruciare così mi spezza il cuore. Meno male che poi ci tiriamo su con un bel bicchiere di vino e degli arrosticini..."
+              "nome": "Lilli",
+              "avatar": "👩",
+              "testo": "Esattamente quello che dico io! Invece di studiare, leggere o fare qualcosa di costruttivo, sti regazzini buttano via il fegato e il cervello. Troppi pochi controlli e troppe poche mazzate educative!"
+            },
+            {
+              "nome": "Hiroki",
+              "avatar": "🏰",
+              "testo": "In Giappone una situazione del genere sarebbe inconcepibile. La disciplina e il rispetto delle regole sono alla base della civiltà, qui invece regna il caos totale e la mancanza assoluta di rigore."
             },
             {
               "nome": "Wolf",
               "avatar": "👩‍🌾",
-              "testo": "Io non mi meraviglio più di niente, lavoriamo come muli e poi chi comanda distrugge tutto con la sua incompetenza. Siamo soli, come sempre."
+              "testo": "La gioventù di oggi è persa, non hanno voglia di lavorare né di fare sacrifici. Pensano solo a divertirsi e a sfasciarsi, poi piangono quando la vita presenta il conto."
             }
           ],
-          "categoria": "Cronaca",
+          "categoria": "Politica",
           "colore_tipo": "#008cff",
           "immagine": "cetteo.webp",
           "provider": "gemini"
@@ -950,343 +286,85 @@
       "news": [
         {
           "tipo": "rss",
-          "titolo": "Mercoledì Addams e il bosco di Roccamorice",
-          "articolo": "Il vento della Maiella sferza i rami spogli dei faggi attorno al mio eremo a Roccamorice. Qui la natura detta le regole con una precisione geometrica che rispetto profondamente: ogni foglia cade secondo un ordine antico, ogni pietra trova il suo posto nel silenzio della montagna. Eppure, in questo rifugio di minimalismo e solitudine danese, l'arrivo della nuova era per la famiglia Addams sulla piattaforma Netflix riesce a catturare la mia attenzione. La creatura gotica più famosa del piccolo schermo torna a solcare gli schermi, promettendo di ridefinire il destino di una stirpe dedita all'eccentricità. Osservo lo schermo freddo poggiato sulla mia scrivania di legno grezzo, l'unico lusso concesso in questa stanza dove regna il vuoto ordinato. C'è qualcosa di affascinante nel modo in cui questo universo macabro si rinnova, mantenendo quella simmetria oscura che tanto si addice a chi, come me, ha scelto l'Abruzzo non solo per la severità delle sue vette, ma anche per il calore inaspettato della sua gente, l'allegria contagiosa delle piazze e il sapore inconfondibile degli arrosticini cotti alla brace.",
+          "titolo": "Sti mercati che ballano peggio d'un totano in secca",
+          "articolo": "Oh raga', ma v' site 'ntise che succede dall'altra parte del mondo? Quelli là, tra i palazzi della Borsa in Asia, stann' a guardà lo Stretto di Hormuz manco fossero 'n pontile ad aspettà i pescherecci quanno il tempo è brutto e non si può uscire. Tokyo chiude debole, con gli investitori che tengono il fiato sospeso per le tensioni sul petrolio e le rotte bloccate. E io che pensavo che i problemi veri fossero la paranza scarsa o il prezzo del gasolio per il fuoribordo. Invece no, là in Oriente tremano tutti per quattro gocce di greggio che rischiano di non passare. Ma dico io, invece de pensà a ste cazzate finanziarie e ai grafici che vanno giù a picco peggio d'un affondamento, non era meglio farsi una sana frittura di paranza e levarsi ' sto pensiero? Mo pure i mercati tocca guardare, na vera scocciatura.",
           "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Meraviglioso come Netflix riesca a riesumare un'icona immortale con tale audacia visiva, ma temo il solito scivolamento verso il commerciale patinato che rovina ogni vera cupezza!"
-          },
-          "commenti": [
-            {
-              "nome": "Lucap",
-              "avatar": "👨‍⚖️",
-              "testo": "Che analisi lucida e affascinante, Lars! La serie di Tim Burton ha decisamente cambiato le regole del gioco, sono perfettamente d'accordo con te sulla simmetria di quella messa in scena."
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Lucap ha totalmente ragione! Mercoledì Addams è pura icona pop, e poi l'intrattenimento di qualità moderna sa sempre come regalarci queste perle gotiche!"
-            },
-            {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Ah, Mercoledì! Io e la mia band potremmo fare una cover spaventosa della sigla originale, accordi perfetti per una serata dark!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Cinema digitale tra i boschi della Maiella",
-          "articolo": "Qui a Roccamorice, isolato nel silenzio della Maiella, la natura detta i suoi ritmi geometrici. Rami spogli, rocce scolpite dal vento, una perfezione verticale che io, danese legato al minimalismo e all'ordine, trovo irresistibile. Eppure, persino nel mio rifugio alpino, il flusso del mondo digitale penetra attraverso lo schermo. Questa settimana le piattaforme di streaming propongono nuove uscite, tra cui il film 'Il dio dell'amore' e 'GOAT'. Opere che cercano ordine nel caos delle emozioni umane. La tecnologia organizza i pixel, ma fuori dalla finestra il bosco mantiene la sua autentica complessità. Tra una riflessione sulla sceneggiatura e la solitudine della mia baita, la vera gioia resta un ritorno alla materia. Quando il freddo morde, chiudo il computer e scendo in paese per godermi l'allegria contagiosa della gente abruzzese e una sana scorpacciata di arrosticini caldi, perfetti nella loro semplicità infilata nello stecchino.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Incredibile come la tecnologia pretenda di ordinare le nostre vite con cataloghi infiniti di streaming, dimenticando il caos meraviglioso del mondo reale! Però, di fronte a un buon piatto di arrosticini e all'allegria rumorosa di questa terra, perdono persino l'algoritmo!"
-          },
-          "commenti": [
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Arrosticini e allegria, meu amigo! Ma quale freddo e baite, qui ci vuole un po' di samba e calore brasiliano per scaldare la festa! Siiii!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Arrosticini nel bosco verticale, arrosticini nel bosco verticale! Siii siii siiiiii glugluglu!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lascia stare i film e goditi la montagna, Lars. Almeno tu hai la decenza di apprezzare la concretezza della carne e del cibo buono invece di perderti in chiacchiere digitali."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Mercoledì Addams e il bosco di Roccamorice: ordine e mistero tra i monti",
-          "articolo": "Dalla fredda Danimarca alle aspre pendici della Majella, il mio rifugio a Roccamorice è un tempio di assoluto minimalismo. Qui il silenzio della natura incontaminata si sposa con il rigore geometrico che ricerco in ogni cosa. Eppure, anche tra questi boschi solitari, il mondo digitale irrompe. Netflix riporta sullo schermo la famiglia Addams con la serie 'Mercoledì', pronta a inaugurare una nuova era per il celebre clan gotico. La protagonista, icona di gelida precisione e implacabile simmetria, incarna un rigore mentale che, in fondo, comprendo bene. Niente è fuori posto nel suo mondo monocromatico, ogni dettaglio è soppesato. L'Abruzzo selvaggio offre lo sfondo perfetto per riflettere su questa estetica rigorosa, lontana dal caos urbano. Tra una camminata nei boschi e una pausa rigenerante a base di arrosticini locali, celebrati con la giusta allegria paesana, osservo come la cultura pop moderna riesca a valorizzare il fascino dell'ordine geometrico e del controllo assoluto.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un'opera televisiva visivamente impeccabile e geometricamente perfetta, finalmente! Certo, la trama a volte si perde in cliché adolescenziali evitabili, ma il rigore estetico di Mercoledì vale assolutamente la visione!"
-          },
-          "commenti": [
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Siiii la serie di Mercoledì! Io me la sono sparata tutta d'un fiato dal divano con una teglia di popcorn, un capolavoro totale amica mia!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Mercoledì ADDAMS mercoledì addams s的关键 glugluglu siii siii siiiii!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Lars ha perfettamente ragione, la precisione e il cinismo di Mercoledì sono immensi. Chi dice il contrario si becca un ceffone, punto."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Cinema digitale tra i boschi della Maiella",
-          "articolo": "Il silenzio delle montagne di Roccamorice si interrompe solo con il fruscio del vento tra i faggi e il ticchettio ordinato dei miei tasti. Da solitario danese, ho cercato qui il perfetto minimalismo esistenziale. Eppure, anche tra queste vette incontaminate, la modernità digitale bussa alla porta. Questa settimana le piattaforme di streaming offrono nuove pellicole, tra cui 'Il dio dell'amore' e 'GOAT'. Osservo lo schermo con la stessa precisione geometrica con cui allineo i miei libri, riflettendo su come l'arte cinematografica riesca a viaggiare ovunque, persino in questo eremo roccioso. La natura resta la mia scenografia primaria, ma apprezzo la pulizia formale di un buon flusso dati. Certo, dopo ore di contemplazione visiva, nulla eguaglia la calda convivialità abruzzese: l'allegria contagiosa della gente di quaggiù e una scorpacciata di arrosticini perfetti azzerano qualsiasi caos digitale.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Incredibile come la tecnologia riesca a raggiungere ogni angolo remoto, ma fermarsi a guardare un film mentre fuori c'è una natura così maestosa è quasi un crimine! Sveglia, gente: spegnete gli schermi e andate a vivere il mondo reale!"
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Mamma mia santissima, ma questi co sti numeroni e sti mercati che crollano per uno stretto dall'altra parte del mondo... mi fanno una paura fottuta, roba da farsela addosso peggio che trovarsi in mezzo a na burrasca forza otto senza salvagente!"
           },
           "commenti": [
             {
               "nome": "Hiroki",
               "avatar": "🏯",
-              "testo": "Finalmente un commento che riconosce il valore della precisione geometrica e del flusso dati ordinato. In Giappone apprezzeremmo questo rigore nel silenzio della montagna."
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Ma vogliamo parlare di 'GOAT'?! Io sono assolutamente euforico per questa uscita, capolavoro assoluto della tv moderna!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii, gli arrosticini con la tecnologia volano altissimo, glugluglu, volano altissimo!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Mercoledì Addams e il bosco di Roccamorice",
-          "articolo": "Qui tra le montagne di Roccamorice il silenzio della faggeta domina ogni cosa. Il vento muove le fronde con una precisione geometrica che appaga il mio animo danese, da sempre ossessionato dall'ordine e dal minimalismo. Eppure, la quiete della natura appenninica convive con il brivido gotico che in questi giorni attraversa gli schermi di tutto il mondo. La celebre fanciulla della famiglia Addams torna protagonista su Netflix, inaugurando un capitolo che ridefinisce il destino di una stirpe dedita al macabro ma legata a una rigorosa simmetria estetica. Tim Burton ha saputo incanalare il caos in forme nette. Osservo la nebbia scendere tra i dirupi della Majella mentre penso a questa nuova era televisiva. La precisione glaciale della protagonista si sposa perfettamente con il mio isolamento montano, lontano dal frastuono inutile delle metropoli e immerso nella essenzialità delle cose vere.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Meraviglioso veder trionfare il rigore gotico e la simmetria visiva, ma resta inspiegabile come un prodotto così algido non offra un vero punto di ristoro con gli arrosticini caldi!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "Finalmente un'analisi che riconosce il valore della simmetria e del rigore formale. Tim Burton, pur essendo occidentale, dimostra una sensibilità quasi nipponica per il controllo visivo."
+              "testo": "Voi italiani sottovalutate sempre l'economia globale. La Borsa di Tokyo riflette equilibri complessi, non potete paragonarla a una frittura di pesce. Mancate totalmente di visione strategica e civiltà finanziaria. Civiltà finanziaria!"
             },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Ma quale nebbia e serie TV da quattordici anni! Li a Roccamorice pensate a magna' due arrosticini invece de guardà i mostri alla televisione! A Borgomarino altro che gotico, qua c'è lu mare e lu pesce fresche!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Mercoledì Addams sui monti, ssssiiii sssssiiii ssssiiiiii! Glugluglu, la nebbia sale e la simmetria balla, la simmetria balla!"
+              "testo": "Ma quale visione strategica, oh jappo d'un corno! Quelli stanno là a piagne per quatto barili mentre qui c'abbiamo il mare vero e i problemi seri! Maandate a cagà! Maandate a cagà!"
             }
           ],
-          "categoria": "Streaming",
+          "categoria": "Tecnologia",
           "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
+          "immagine": "cetteo.webp",
           "provider": "gemini"
         },
         {
           "tipo": "rss",
-          "titolo": "Cinema digitale tra i boschi della Maiella",
-          "articolo": "Il silenzio della Maiella si interrompe solo quando il vento muove i rami dei faggi secolari qui a Roccamorice. Amo questa natura selvaggia, la sua geometria perfetta, l'ordine rigoroso con cui le rocce calcaree cadono a strapiombo sulla valle. Eppure, anche un minimalista danese isolato tra i monti ha bisogno di svago. In un mondo digitale caotico, dove le piattaforme di streaming accumulano file senza logica, arrivano nuove uscite cinematografiche. Questa settimana debuttano titoli come 'Il dio dell'amore' e 'GOAT', insieme a una selezione di novità attese a metà agosto. Certo, lo schermo freddo di un computer non avrà mai la grazia simmetrica di una foresta abruzzese all'alba. Ma la vera ragione per cui vivo in questa regione non è solo la contemplazione dei boschi. È l'irresistibile allegria delle sagre di paese e la perfezione geometrica degli arrosticini di pecora infilati sullo spiedino di legno, cotti sulla canalina. Una gioia carnale e disordinata che bilancia perfettamente la mia rigida disciplina nordica.",
+          "titolo": "U' Pixel 11 e sta IA: ma u' mare u' guardano?",
+          "articolo": "Oh, fratè, qui non si tratta più di pescà con la lampara buona, ora questi della Google so' usciti co' sti Pixel 11 che pareno navi da battaglia. Tutta sta 'ntelligenza artificiale per fa' la barba agli iPhone 18. Ma dico io, con tutto sto cervellone elettronico, ce la faranno a dirmi dove abboccano i cefali? E poi c'è sta novità, si chiama HiLight. Boh. Sarà n'altra diavoleria da scienziati che non hanno mai tenuto in mano una rete da pesca seria. La verità è che questi inventano sempre carte nuove, ma alla fine della fiera, tra na chat e na fotocamera che pensa da sola, a me vene solo sonno. Io c'ho la schiena a pezzi tra salsedine e Bora, e questi me vonno vende il futuro. Ma vaffanculo, va! Meglio na frittura mista e na Peroni fresca che sta tecnologia che ti guarda pure mentre dormi sulla barca.",
           "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Finalmente una selezione cinematografica decente che ci evita di perdere ore nei menu caotici delle piattaforme, anche se la gestione dei cataloghi digitali resta un disastro inaccettabile degno di dilettanti! Godetevi questi film ma non dimenticate di spegnere tutto e correre a mangiare gli arrosticini!"
+            "nome": "Cetteo",
+            "avatar": "🚧",
+            "testo": "Maronna santa... ma avete letto che robba? Questi con sti telefoni leggono pure i pensieri e sanno tutto di te. A me fa 'na paura 'nfame, zi', qua finisce che ci tracciano pure quando stiamo a largo a pialla' le telline. Ma robba da matt', speriamo che non s'arrabbiano sti robot!"
           },
           "commenti": [
             {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale geometria perfetta e cazzi e mazzi, a Roccamorice v'sete a ffa' i filosofi mentre a Pescara se magna pesce fresco e si tifa Pescara porca miseria! E basta co sti arrosticini di pecora, qua ci vò lu 'brodetto di mar! Li mortacci vostra!"
-            },
-            {
-              "nome": "Juizinho",
-              "avatar": "⚽",
-              "testo": "Arrosticini e sagre di paese, siiii! Ma che freddo e disciplina danese, qui ci vuole sole, musica e un bel samba per dimenticare la saudade! Vamos a festa!"
-            },
-            {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Arrosticini e faggi faggi secolari, secolari! Siii siii siiiiissiii, glugluglu che festa della Madonna!"
+              "testo": "Siii siii siiiiii intelligenza artificiale glugluglu artificiale glugluglu!!"
+            },
+            {
+              "nome": "Abbukk",
+              "avatar": "🍄",
+              "testo": "I cefali non abboccano perché i satelliti Google controllano le spore dei funghi sottomarini, è tutto un complotto!"
+            },
+            {
+              "nome": "Lars",
+              "avatar": "🇩🇰",
+              "testo": "Lascia stare i telefoni, Cetteo, vieni in montagna a goderti il silenzio e una bella porzione di arrosticini."
             }
           ],
-          "categoria": "Streaming",
+          "categoria": "Tecnologia",
           "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
+          "immagine": "cetteo.webp",
           "provider": "gemini"
         },
         {
           "tipo": "rss",
-          "titolo": "Mercoledì Addams e il bosco di Roccamorice: ordine e mistero tra i monti",
-          "articolo": "Dalla fredda e geometrica Danimarca alle aspre montagne di Roccamorice, la mia ricerca di pace incontra spesso strane assonanze. Qui, tra i faggi secolari del Parco Nazionale della Majella, la natura segue regole precise, quasi spietate nella loro simmetria. Lo stesso rigore che definisce il mio eremitaggio minimalista lo ritrovo, in forma decisamente più macabra, nell'universo della famiglia Addams. Netflix riporta sullo schermo Mercoledì, aprendo le porte a una nuova era per la celebre saga gotica. La precisione geometrica delle trecce della protagonista e il suo totale disprezzo per il superfluo estetico rispecchiano una forma di purismo che, in fondo, comprendo bene. Certo, la mia solitudine montana non prevede creature mostruose nei corridoi, ma il fascino per l'ordine rigoroso resta lo stesso. E quando il freddo della pietra si fa troppo intenso, la mia personale terapia contro il caos del mondo rimane immutata: un tavolo in trattoria, la compagnia della montagna e una tavola imbandita di arrosticini.",
+          "titolo": "Netflix e il disordine digitale: una foresta di pixel senza regole",
+          "articolo": "Vivo tra i boschi di Roccamorice, dove il vento segue traiettorie precise e le rocce della Majella disegnano geometrie millenarie. La natura è ordine puro, una sinfonia di rami e silenzi che rispetto con rigore minimalista. Nel mio eremo danese ho bandito il superfluo, lasciando spazio solo all'essenziale. Eppure, mi ritrovo a osservare il catalogo di Netflix. È un immenso magazzino senza scaffali, una foresta amazzonica di contenuti dove regna il caos algoritmico. Nuove serie scompaiono e appaiono come foglie secche in autunno, senza una catalogazione logica che rispetti la vista. Questa giungla di pixel mi fa venire voglia di fuggire nei vicoli del paese, dove l'aria sa di legna arsa. Per fortuna, la cura per questo disordine digitale esiste: scendo alla taverna, ordino cinquanta arrosticini e mi affido alla geometria perfetta di quei piccoli spiedini di carne di pecora. Lì, tra risate e convivialità abruzzese, il disordine dello streaming svanisce.",
           "commento_firma": {
             "nome": "Lars",
             "avatar": "🇩🇰",
-            "testo": "Un'operazione commerciale brillante che riesce a rinfrescare un mito senza tradirne le radici gotiche, anche se temo che il merchandising eccessivo finirà per soffocare il delizioso cinismo della protagonista!"
-          },
-          "commenti": [
-            {
-              "nome": "Cetteo",
-              "avatar": "🚧",
-              "testo": "Ma quale Mercoledì e trecce, qui la montagna brucia e voi pensate a Netflix! Li mortacci vostra, invece di magnà sempre sti arrosticini pensate a difende i boschi, mannaggia lu clero, oh!"
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii siii siiiiii arrosticini e trecce goth, glugluglu, spettacolare spettacolare!"
-            },
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Mercoledì Addams è un'icona assoluta, e la Majella non si tocca! Chiunque tocchi i nostri boschi se la vedrà direttamente con me, e ho detto tutto."
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Cinema digitale tra i boschi della Maiella",
-          "articolo": "Il silenzio delle montagne di Roccamorice si interrompe solo per il fruscio del vento tra i faggi e il cinguettio degli uccelli. Qui, nella mia baita minimalista, ogni oggetto ha il suo posto esatto, una geometria perfetta che rifuit ogni caos superfluo. Eppure, anche un danese solitario legato all'ordine geometrico osserva il mondo digitale. Questa settimana le piattaforme di streaming offrono nuove uscite, tra cui 'Il dio dell'amore' e 'GOAT'. Storie che scorrono sui monitor mentre fuori la natura segue il suo ritmo millenario e severo. La tecnologia invade il mio rifugio ordinato, ma la vera bellezza resta fuori dalla finestra, nella roccia viva. Per fortuna, dopo aver analizzato le novità cinematografiche dello schermo, la mia anima trova pace terrena nei rituali abruzzesi: l'allegria contagiosa della gente di montagna e il profumo inconfondibile degli arrosticini cotti sulla brace viva. La perfezione esiste davvero.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Incredibile come la tecnologia pretenda di entrare nella purezza delle nostre montagne con uscite cinematografiche spesso banali e ripetitive! Però, bisogna ammettere che la varietà proposta sa come catturare l'attenzione di chi cerca evasione digitale!"
+            "testo": "Incredibile come una piattaforma globale riesca a produrre così tanta bellezza visiva pur mantenendo un caos gestionale così irritante! Da perfezionista danese pretendo ordine, ma di fronte a una tavola imbandita di arrosticini perdonerò sempre qualsiasi algoritmo disordinato!"
           },
           "commenti": [
             {
               "nome": "Lars",
               "avatar": "🇩🇰",
-              "testo": "La quiete delle montagne di Roccamorice e il profumo degli arrosticini sono l'unica geometria di cui ho bisogno."
+              "testo": "La montagna insegna la misura e il silenzio, ma la vera perfezione geometrica si ritrova solo nella disposizione degli arrosticini sulla brace."
             },
             {
               "nome": "Cetteo",
               "avatar": "🚧",
-              "testo": "Arrosticini e montagna, ma qua ji sempe a fa' i chiacchieroni mentre lu monno brucia! Li mortacci vostra!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Mercoledì Addams e l'ordine geometrico del caos",
-          "articolo": "Dalla mia baita silenziosa a Roccamorice osservo le montagne della Majella, dove la natura segue regole geometriche austere e perfette. Ritrovo questa stessa ossessione per la simmetria nella celebre famiglia Addams, che torna sugli schermi di Netflix con una nuova era. La serie diretta da Tim Burton ridefinisce il destino di Mercoledì, un'adolescente cinica che adoro per il suo rigore clinico, l'assenza totale di fronzoli e il minimalismo emotivo. Qui ogni cosa è al suo posto, persino il macabro. La perfezione estetica e l'ordine rigoroso delle inquadrature mi ricordano il design scandinavo, spoglio ma funzionale. Certo, vivere tra questi boschi abruzzesi mi ha insegnato che la vita necessita anche di calore umano. La disciplina nordica incontra così lo spirito indomito di questa terra, dove la precisione geometrica si sposa con il piacere autentico e festoso di un buon piatto di arrosticini. La serie celebra la diversità con un rigore formale che apprezzo profondamente.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Un capolavoro visivo e di scrittura che finalmente ridà dignità al gotico televisivo con un rigore geometrico impeccabile! Peccato solo che persino in un collegio per reietti la scenografia ceda a volte a inutili eccessi barocchi che turbano la mia pace visiva."
-          },
-          "commenti": [],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Cinema digitale tra i boschi della Maiella",
-          "articolo": "Il silenzio delle montagne di Roccamorice si interrompe solo per il fruscio del vento tra i faggi e il cinguettio dei rapaci. Qui, dove ogni pigna ha il suo posto preciso in un ordine geometrico che solo un danese minimalista puo' concepire, il digitale bussa alla porta. Questa settimana le piattaforme di streaming offrono nuove pellicole come 'Il dio dell'amore' e 'GOAT', titoli che promettono di catturare l'attenzione del pubblico globale. Anche senza una sala cinematografica tradizionale tra queste pietraie, la tecnologia azzera le distanze geografiche. Eppure, osservare uno schermo piatto mentre fuori la natura segue il suo ritmo perfetto sembra quasi un peccato. La montagna richiede presenza, ascolto e rispetto per i suoi equilibri millenari. Nonostante la mia rigorosa ricerca di essenzialita' visiva e mentale, preferisco di gran lunga la scenografia autentica di un tramonto sulla Maiella rispetto a qualsiasi effetto speciale hollywoodiano.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Incredibile come la tecnologia pretenda di entrare persino nel silenzio ancestrale di queste rocce con cataloghi infiniti di film, eppure lo streaming non potra' mai competere con la perfezione geometrica di una foresta incontaminata!"
-          },
-          "commenti": [
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Ma quale tramonto sulla Maiella, tesoro! Io mi fiondo subito a veder 'GOAT', amo troppo i drammi sportivi curati nei minimi dettagli e poi il glamour vuole la sua parte! 📺✨"
+              "testo": "Li mortacci vostra co sti cataloghi e sto streaming! Ma quale Netflix, a' Borgomarino si va de mare e si magna pesce fresco, altro che spiedini de pecora e serie tv! Pescara merita rispetto!"
             },
             {
               "nome": "Glusi",
               "avatar": "🤪",
-              "testo": "Siii siii siiiiii, gli schermi piatti nella grotta, glugluglu, viva il cinema sulla montagna, montagna montagna!"
-            },
-            {
-              "nome": "Topengo",
-              "avatar": "🐭",
-              "testo": "Bellissimi titoli! Quasi quasi ci scrivo un pezzo funk-rock per la mia band ispirato a 'Il dio dell'amore', la musica sa unire digitale e natura alla grande! 🎸🎵"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Dall'Inghilterra alla Majella: ordine, drammi in corsetto e arrosticini",
-          "articolo": "Il vento soffia gelido sui boschi di Roccamorice, mentre la mia scrivania di legno massello rimane impeccabilmente sgombra. Tra una tempesta di montagna e l'altra, Netflix propone l'ennesimo dramma in costume che fa impazzire il pubblico, ricalcando le fastose dinamiche di Bridgerton. Parliamo di intrighi di corte, abiti sfarzosi e rigorose gerarchie sociali che farebbero impallidire qualsiasi cultore del minimalismo geometrico. Eppure, osservando queste scenografie barocche, penso al perfetto allineamento dei rami di faggio fuori dalla mia finestra e al rigore geometrico con cui infilzo gli arrosticini sulla brace. C'è qualcosa di profondamente terapeutico nel caos ordinato della natura abruzzese, ben diverso dal disordine emotivo dei salotti londinesi. Qui, tra una vetta innevata e una festa di paese, la gioia di vivere batte qualsiasi rigido protocollo aristocratico.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Meraviglioso il modo in cui queste serie riescono a catturare l'attenzione globale con tanta estetica barocca, ma trovo imperdonabile la totale assenza di simmetria narrativa nei dialoghi! Per fortuna che l'Abruzzo raddrizza ogni cosa con la sua gioia autentica!"
-          },
-          "commenti": [
-            {
-              "nome": "Hiroki",
-              "avatar": "🏯",
-              "testo": "La precisione geometrica degli arrosticini è l'unica cosa accettabile in questo tripudio di disordine barocco occidentale."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Siii sii siiiiii, arrosticini e faggi arrosticini e faggi glugluglu!"
-            }
-          ],
-          "categoria": "Streaming",
-          "colore_tipo": "#008cff",
-          "immagine": "lars.webp",
-          "provider": "gemini"
-        },
-        {
-          "tipo": "rss",
-          "titolo": "Il silenzio della montagna e il caos dello streaming",
-          "articolo": "Dalla mia baita isolata a Roccamorice, circondato dai boschi secolari del Parco Nazionale della Majella, osservo il vento muovere i rami dei faggi. La natura segue una geometria perfetta, un ordine rigoroso che noi umani spesso ignoriamo. Eppure, nel fine settimana, milioni di persone cercano rifugio digitale nello streaming, accumulando schermi e contenuti in un disordine mentale che contrasta con la pace abruzzese. Tra le novità cinematografiche e le serie in uscita, la scelta può diventare opprimente per chi ama il minimalismo. Ciononostante, concedersi la visione di un buon prodotto audiovisivo ha il suo fascino, specialmente quando fuori imperversa il temporale. Ma la vera cura per ogni eccesso digitale resta una sola: spegnere il monitor, scendere in paese e ordinare cento arrosticini accompagnati da un bicchiere di Montepulciano. L'allegria contagiosa di questa terra sa rimettere in ordine l'anima molto più di qualsiasi algoritmo di raccomandazione.",
-          "commento_firma": {
-            "nome": "Lars",
-            "avatar": "🇩🇰",
-            "testo": "Meraviglioso che ci siano così tanti titoli nuovi per chi ama il cinema, ma basta con questa bulimia da cataloghi sterminati! Selezionate con cura e non buttate via il vostro tempo prezioso!"
-          },
-          "commenti": [
-            {
-              "nome": "Lilli",
-              "avatar": "👩",
-              "testo": "Hai perfettamente ragione Lars, la vera cultura non sta negli algoritmi o nelle serie spazzatura che ci propinano le piattaforme, ma nella vita reale e nei nostri boschi! Chiunque provi a dire il contrario o a mercificare la nostra identità merita solo il silenzio."
-            },
-            {
-              "nome": "Glusi",
-              "avatar": "🤪",
-              "testo": "Arrosticini e Montepulciano! Siii siii siiiiii! Glugluglu w gli arrosticini con il vino buono! Vino buono siii siii!"
-            },
-            {
-              "nome": "Enzino",
-              "avatar": "👨‍⚖️",
-              "testo": "Ma amore mio, parole sante! Certo, un buon film la sera ci sta tutto comodamente sul divano, ma davanti a cento arrosticini e un calice di rosso io mi arrendo completamente! Che meraviglia."
+              "testo": "Siii siii siiiiissiiii, gli arrosticini geometrici nel bosco, glugluglu, nel bosco con gli arrosticini geometrici!"
             }
           ],
           "categoria": "Streaming",
