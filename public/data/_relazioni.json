@@ -1,5 +1,5 @@
 {
-  "_runCount": 8,
+  "_runCount": 9,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,9 +36,9 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": 0.61,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "18/08/2026"
+    "score": 0.71,
+    "label": "amico",
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Hiroki→Cetteo": {
     "score": -1,
@@ -61,7 +61,7 @@
     "ultimo_aggiornamento": "15/08/2026"
   },
   "Cetteo→Lars": {
-    "score": 0.72,
+    "score": 0.82,
     "label": "amico",
     "ultimo_aggiornamento": "19/08/2026"
   },
@@ -186,9 +186,9 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.71,
+    "score": 0.81,
     "label": "amico",
-    "ultimo_aggiornamento": "18/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Enzo→Glusi": {
     "score": -0.005,
@@ -211,12 +211,12 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "19/08/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "19/08/2026"
   },
@@ -278,7 +278,7 @@
   "Lars→Glusi": {
     "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "18/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Juizinho→Glusi": {
     "score": 1,
@@ -296,24 +296,24 @@
     "ultimo_aggiornamento": "19/08/2026"
   },
   "Lars→Lilli": {
-    "score": 0.9,
-    "label": "amico",
-    "ultimo_aggiornamento": "18/08/2026"
-  },
-  "Hiroki→Lilli": {
-    "score": -0.703,
-    "label": "ostile",
-    "ultimo_aggiornamento": "18/08/2026"
-  },
-  "Cetteo→Lilli": {
     "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "19/08/2026"
   },
+  "Hiroki→Lilli": {
+    "score": -0.503,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "19/08/2026"
+  },
+  "Cetteo→Lilli": {
+    "score": 0.9,
+    "label": "amico",
+    "ultimo_aggiornamento": "19/08/2026"
+  },
   "Lilli→Hiroki": {
-    "score": -0.735,
-    "label": "ostile",
-    "ultimo_aggiornamento": "18/08/2026"
+    "score": -0.435,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Wolf→Redazione": {
     "score": -0.005,
@@ -351,9 +351,9 @@
     "ultimo_aggiornamento": "18/08/2026"
   },
   "Abbukk→Hiroki": {
-    "score": -0.299,
+    "score": -0.499,
     "label": "diffidente",
-    "ultimo_aggiornamento": "14/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Abbukk→Juizinho": {
     "score": -0.005,
@@ -381,9 +381,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": 0.4,
+    "score": 0.5,
     "label": "simpatico",
-    "ultimo_aggiornamento": "18/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "utente→Lars": {
     "score": 0.005,
@@ -641,9 +641,9 @@
     "ultimo_aggiornamento": "19/08/2026"
   },
   "Lars→Wolf": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "17/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Lilli→Autore": {
     "score": -1,
@@ -661,7 +661,7 @@
     "ultimo_aggiornamento": "19/08/2026"
   },
   "Glusi→Wolf": {
-    "score": 0.473,
+    "score": 0.373,
     "label": "simpatico",
     "ultimo_aggiornamento": "19/08/2026"
   },
@@ -821,8 +821,8 @@
     "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.396,
-    "label": "simpatico",
+    "score": 0.296,
+    "label": "neutro",
     "ultimo_aggiornamento": "19/08/2026"
   },
   "Cetteo→Squadra": {
@@ -991,9 +991,9 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": 0.978,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "17/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Autore→Lilli": {
     "score": -0.469,
@@ -1141,9 +1141,9 @@
     "ultimo_aggiornamento": "19/08/2026"
   },
   "Hiroki→Lamatte": {
-    "score": -0.315,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "17/08/2026"
+    "score": -0.615,
+    "label": "ostile",
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Glusi→Lamatte": {
     "score": 1,
@@ -1161,7 +1161,7 @@
     "ultimo_aggiornamento": "18/08/2026"
   },
   "Lamatte→Cetteo": {
-    "score": -0.698,
+    "score": -0.898,
     "label": "ostile",
     "ultimo_aggiornamento": "19/08/2026"
   },
@@ -1481,9 +1481,9 @@
     "ultimo_aggiornamento": "18/08/2026"
   },
   "Glusi→Lucap": {
-    "score": 0.312,
+    "score": 0.512,
     "label": "simpatico",
-    "ultimo_aggiornamento": "17/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Wolf→Amministrazione": {
     "score": -0.254,
@@ -1683,7 +1683,7 @@
   "Lars→Lucap": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "17/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Topengo→Lilli": {
     "score": 0.531,
@@ -1831,9 +1831,9 @@
     "ultimo_aggiornamento": "18/08/2026"
   },
   "Lucap→Glusi": {
-    "score": 0.8,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "18/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Cronista→Cetteo": {
     "score": -0.005,
@@ -2371,9 +2371,9 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Lucap→Lars": {
-    "score": 0.81,
+    "score": 0.91,
     "label": "amico",
-    "ultimo_aggiornamento": "14/08/2026"
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Lilli→Burger King": {
     "score": -0.015,
@@ -4946,9 +4946,9 @@
     "ultimo_aggiornamento": "08/07/2026"
   },
   "Abbukk→Autore articolo": {
-    "score": 0.194,
-    "label": "neutro",
-    "ultimo_aggiornamento": "05/08/2026"
+    "score": 0.394,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "19/08/2026"
   },
   "Wolf→Sistema Sportivo Italiano": {
     "score": -0.033,
