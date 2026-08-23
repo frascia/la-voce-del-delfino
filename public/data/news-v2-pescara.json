@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "23/08, 03:15",
+  "prossimo_aggiornamento": "23/08, 04:50",
   "news": [
     {
       "tipo": "personaggio",
@@ -32,7 +32,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -64,7 +64,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -96,7 +96,7 @@
       "colore_tipo": "#008cff",
       "immagine": "juizinho.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -165,7 +165,7 @@
       "colore_tipo": "#008cff",
       "immagine": "juizinho.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -191,6 +191,193 @@
           "nome": "Lucap",
           "avatar": "👨‍⚖️",
           "testo": "Comprendo perfettamente il rammarico dei tifosi e di Cetteo. Dobbiamo cercare di mantenere l'armonia, ma queste operazioni di mercato lasciano davvero perplessi."
+        }
+      ],
+      "categoria": "Sport",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il silenzio ordinato di Roccamorice",
+      "articolo": "Qui, tra i boschi del Parco Nazionale della Majella, il vento del Nord ha finalmente trovato una tregua che cercavo da anni. Abbandonare le coste danesi per arrampicarmi sulle rocce vive di Roccamorice è stato un atto di rigore. Amo la natura quando segue una geometria severa, ma ho scoperto che l'Abruzzo sa offrire molto di più della sua pietra millenaria. Tra questi vicoli silenziosi, ho imparato ad apprezzare il calore umano e la gioia contagiosa della gente locale. La vera rivelazione di questa terra aspra e generosa sono gli arrosticini: piccoli spiedini di carne ovina che richiedono precisione nella cottura e regalano un convivio inaspettato. Nel mio rifugio minimalista, dove ogni oggetto ha il suo posto esatto, custodisco il contrasto perfetto tra il rigore nordico e l'allegria abruzzese. La montagna insegna l'essenziale, la tavola unisce gli spiriti.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Osservare il fumo sottile che sale dai bracieri accesi tra i vicoli di pietra mi ricorda che anche nei luoghi più solitari esiste un calore capace di abbracciare l'anima, con la stessa grazia silenziosa della neve che posa leggera sui rami."
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini e montagna, arrosticini e montagna! Siiii siii siiiiidiiiii glugluglu arrosticini con la birretta, arrosticini con la birretta!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Lars meu amigo! Hai proprio ragione, la carne e l'allegria di questa terra valgono più di un carnevale a Rio! Vamos a comer arrosticini!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Freghet! La cultura non è un aperitivo amaro",
+      "articolo": "Carissimi lettori, qui si fa presto a dare degli ignoranti alla gente, ma bisognerebbe fermarsi un attimo a riflettere sorseggiando qualcosa di fresco. Spesso si fa confusione tra ciò che è folklore e ciò che è vera cultura, come se fossero la stessa minestra. Il folklore è quella tradizione viva, fatta di sagre, canti popolari e colori che profumano di casa nostra e di autenticità. La cultura, invece, è il quadro d'insieme, lo studio, la consapevolezza critica che ci permette di capire da veniamo e dove andiamo. Non sono mondi in lotta tra loro, ma facce della stessa medaglia che nobilitano il nostro patrimonio. Dire che una tradizione paesana sia ignorante solo perché non passa attraverso i salotti radical chic è un errore grossolano. La vera ignoranza sta nel disprezzare le radici popolari credendosi superiori. Studiare e rispettare le proprie origini è il modo più elegante per essere cittadini del mondo.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino ha sempre la battuta pronta e il bicchiere mezzo pieno, ma stavolta ha fatto centro con un'analisi che mette tutti d'accordo con stile e intelligenza!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura ha le sue geometrie fisse, ma l'uomo ha bisogno di radici, esattamente come gli arrosticini hanno bisogno del fuoco vivo. Ha ragione l'autore, la saggezza popolare vale quanto un trattato di filosofia."
+        },
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Parole sagge e misurate. C'è bisogno di ritrovare l'armonia e di smetterla di etichettare con leggerezza ciò che profuma della nostra terra e della nostra storia."
+        },
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Finalmente qualcuno che sa usare la testa e il cuore! L'autenticità delle nostre origini è una ricchezza immensa che va celebrata con orgoglio e amore, senza snobismi."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Saudade e Pescara: amore puro senza fine!",
+      "articolo": "Ah, che bellezza indescrivibile questa terra adriatica, amigos! Io sono venuto fin qui dal Brasile solo per una ragione: tifare il Pescara. Ho lasciato spiagge dorate e samba per il profumo del mare di Pescara e i colori biancazzurri. Qui si respira una saudade pazzesca, quella nostalgia allegra che ti stringe il cuore. Anche quando la vittoria non arriva e la palla non vuole entrare, il nostro amore non trema mica! Ogni domenica sugli spalti è una festa del cuore, un carnevale di passione viscerale. Tra i brividi della Curva Nord e un sorriso caliente, penso alle donne meravigliose di questa città e alla bellezza di un pallone che rotola. Non serve vincere ogni trofeo per essere felici, basta sentire il calore di questa maglia sulla pelle, ballare col pensiero e vivere per questi colori. Pescara mia, ti amo da impazzire!",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "La vita è come una partita del Pescara: anche quando il sole si nasconde dietro le nuvole, la saudade si trasforma in pura allegria e il cuore impara a danzare per sempre!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Che cazzo c'entri tu col Brasile, Juizinho?! Questa è la Curva Nord, qui si sputa sangue e si combatte, altro che samba e pagliacciate! Pescara si rispetta, infami! Pescara si rispetta, infami!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ahahaha ma quale sangue, amigo! Qui c'è solo allegria, musica nel cuore e donne stupende che fanno cantare l'anima! Viva Pescara e viva il samba!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Juizinho hai rotto le scatole con questo Brasile da quattro soldi! Qui si soffre per la squadra e basta, altro che carnevale e sorrisi calienti!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U mari nostru s'asciutt': ma a che cazzo serve sta retorica?",
+      "articolo": "Uè, facimm' u punto. A Borgomarino tiriamo le reti e guardiamo l'orizzonte, ma qui pare che l'unica cosa che si muove sono le chiacchiere dei soliti noti sulla nostra marineria. Pescara respira salsedine, pescherecci e nafta, non le vostre cagate da salotto buono. La costa adriatica soffre, i pescatori tirano a campà con le reti sempre più vuote e le accise sul gasolio che ci affondano prima ancora di uscire dal porto. Voi parlate di transizione ecologica e progetti europei, ma qua arivamm' a fine mese sputando sangue e mangiando pane e cipolla. La verità è che del mare e di chi ci faticà sopra non ve ne frega un cazzo, basta che c'è il pesce fresco sul banco a prezzo politico. E invece no, u' mar' è un osso duro, proprio come noi biancazzurri quando andiamo in trasferta a farci rispettare. Svegliatevi, che qui tra burocrazia e scuse, l'unica cosa che affonda davvero è la nostra dignità marinara.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che vi devo dì? Mejate fuffa e portate a casa stipendi sicuri mentre noi stiamo co' i piedi nell'acqua fredda. Io non mi fido di nessuno, manco dell'ombra mia. Guardateli bene in faccia, che se potessero vi venderebbero pure la sabbia sotto i piedi."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "U' mar' è un osso duro e noi sputiamo sangue, ma a questi delle cagate da salotto buono non frega un cazzo! Pescara e Borgomarino non abbassano la testa, altroché!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Hanno perfettamente ragione, parlano tutti dai loro comodi uffici senza sapere cosa significa fare i conti con la realtà e tirare a campà. Forza Pescara e rispetto per i nostri marinai!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Pane e cipolla e reti vuote, siii siii siiiiii! Glugluglu nel mare blu, ma qui affonda tutto, tutto!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara, tra feste, gol e bellezza femminile",
+      "articolo": "Ah, Pescara mia! Che meraviglia di città, oh! Ogni fine settimana qui è una festa continua, proprio come le spiagge di Rio de Janeiro, anche se qui c'è il profumo degli arrosticini sulla brace che ti fa girare la testa. Camminare sul lungomare e ammirare le donne pescaresi, con quel fascino mediterraneo che ti scalda il cuore, mi fa venire una saudade immensa del Brasile, ma poi ripenso al Delfino e mi passa tutto. Il fine settimana in riva all'Adriatico si accende sempre di eventi, musica nei locali e sorrisi che illuminano la riviera. Io sono arrivato qui solo per tifare Pescara, per sentire il calore dello stadio Adriatico, e vi dico la verità: tra una passeggiata sotto i pini e un aperitivo al tramonto, questa terra sa come far ballare l'anima. Che spettacolo, amigos!",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "La vita è come una partita del Pescara: devi sempre metterci il cuore e tanta alegria, perché ogni gol è una festa che celebra il miracolo dell'esistenza!"
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Che bellezza, amigos! Questa terra ha proprio il ritmo nel sangue, quasi quasi mi metto a ballare la samba qui in mezzo al lungomare!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Aho, Juizì, vedi d'annà a ballà da n'altra parte e rispetta ' sta terra invece de fa' 'l bullo! Forza Pescara e abbasso i criticoni da salotto!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, glugluglu, gli arrosticini volano sulla spiaggia, sulla spiaggiaaa!"
+        }
+      ],
+      "categoria": "Weekend",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Tonin saluta i Delfini, da Pescara a Ostia: ma che stamo a fà?",
+      "articolo": "Uè, gente di Borgomarino, qui tocca raddrizzare la barra prima che la barca faccia acqua da tutte le parti. Il mercato del nostro amato Pescara ci regala un'altra perla delle sue: Riccardo Tonin fa le valigie e sbarca all'Ostiamare, a titolo definitivo. Oh, ma stiamo scherzando o dicendo sul serio? Lasciare andare un attaccante così, uno che con la nostra maglia c'ha messo grinta e sudore, per mandarlo in Serie D a calpestare i campi della capitale? Eh no, zi', qui il mare è grande ma la pazienza dei tifosi ha un limite ben preciso. Tra una frittura di paranza e uno sguardo all'orizzonte, noi ultras non possiamo mica stare a guardare mentre smembrano la squadra. Tonin se ne va, e noi restiamo qua a bocca asciutta a chiederci chi me lo fa fare di soffrire ogni domenica per questi colori, mentre la barca imbarca acqua da prua a poppa.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Questa cessione è una tragedia greca consumata sulle banchine del nostro porto! Svendiamo i nostri pezzi pregiati come le cozze a fine mercato, calpestando la nostra storia e il sangue biancazzurro. È la fine di tutto, un dramma sportivo senza fine che ci lascia soli nel gelo di un'agonia infinita!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda sti scellerati! Vendere Tonin all'Ostiamare è na vergogna che manco co du litri de montepulciano se digerisce! Mo basta, ci' abbassano la sbarra e noi spacchiamo tutto, zi'!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "È uno scandalo inaccettabile. Chi gestisce questa squadra non ha rispetto per chi suda sugli spalti ogni domenica. Tolgono i giocatori migliori e pretendono pure che stiamo in silenzio? Ma per favore."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Tonin va viaaaa va viaaaa, glugluglu, ma che stiamo a di' siii siii siiiiii! Pescara nel cuore, nel cuoreee!"
         }
       ],
       "categoria": "Sport",
