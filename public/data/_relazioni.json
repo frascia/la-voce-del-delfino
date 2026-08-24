@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -346,14 +346,14 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "24/08/2026"
   },
   "Abbukk→Hiroki": {
-    "score": -0.674,
+    "score": -0.774,
     "label": "ostile",
-    "ultimo_aggiornamento": "21/08/2026"
+    "ultimo_aggiornamento": "24/08/2026"
   },
   "Abbukk→Juizinho": {
     "score": -0.005,
@@ -381,8 +381,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": 0.216,
-    "label": "neutro",
+    "score": 0.316,
+    "label": "simpatico",
     "ultimo_aggiornamento": "24/08/2026"
   },
   "utente→Lars": {
@@ -516,9 +516,9 @@
     "ultimo_aggiornamento": "22/08/2026"
   },
   "Glusi→Autore": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "23/08/2026"
+    "ultimo_aggiornamento": "24/08/2026"
   },
   "Lars→Giornalista": {
     "score": 0.074,
@@ -1241,7 +1241,7 @@
     "ultimo_aggiornamento": "24/07/2026"
   },
   "Glusi→Bartender": {
-    "score": 0.747,
+    "score": 0.847,
     "label": "amico",
     "ultimo_aggiornamento": "24/08/2026"
   },
@@ -1276,9 +1276,9 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Wolf→Bartender": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "20/08/2026"
+    "ultimo_aggiornamento": "24/08/2026"
   },
   "Lamatte→Wolf": {
     "score": 0.297,
@@ -1431,9 +1431,9 @@
     "ultimo_aggiornamento": "21/08/2026"
   },
   "Lilli→Lucap": {
-    "score": -0.615,
-    "label": "ostile",
-    "ultimo_aggiornamento": "22/08/2026"
+    "score": -0.415,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "24/08/2026"
   },
   "Autore Articolo→Lamatte": {
     "score": -0.005,
@@ -1831,9 +1831,9 @@
     "ultimo_aggiornamento": "21/08/2026"
   },
   "Lucap→Glusi": {
-    "score": 0.739,
+    "score": 0.839,
     "label": "amico",
-    "ultimo_aggiornamento": "23/08/2026"
+    "ultimo_aggiornamento": "24/08/2026"
   },
   "Cronista→Cetteo": {
     "score": -0.005,
@@ -4621,9 +4621,9 @@
     "ultimo_aggiornamento": "29/06/2026"
   },
   "Bartender→Wolf": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "20/08/2026"
+    "ultimo_aggiornamento": "24/08/2026"
   },
   "Lilli→Governo locale": {
     "score": -0.03,
@@ -6279,5 +6279,10 @@
     "score": -0.3,
     "label": "diffidente",
     "ultimo_aggiornamento": "23/08/2026"
+  },
+  "Cetteo→Cetteo": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "24/08/2026"
   }
 }
