@@ -1,640 +1,253 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "01/09, 17:48",
+  "prossimo_aggiornamento": "02/09, 02:21",
   "news": [
     {
       "tipo": "personaggio",
-      "titolo": "La frenetica vita da inviato, inviato!",
-      "articolo": "Glugluglu, giù un caffè al volo prima di correre in redazione! La vita del giornalista itinerante è una maratona continua, sempre in giro, sempre occupato, occupato. Tra un'intervista flash e un reportage sul campo, le giornate volano alla velocità della luce, della luce. E quando finalmente cala la sera, si torna a casa stanchi morti, morti. Ma il relax dura poco, perché a farmi visita arriva sempre lui, il mitico taccagno del quartiere, quello che prende sempre più di quello che dà, dà! Siiiii siii siiiiii, ormai è un classico imperdibile delle mie serate. Si mangia quel poco che c'è in frigo e si ride degli affari andati male. Ho lanciato l'hashtag #VitaDaGlusi che sta facendo il giro del web, diventando virale, virale!",
+      "titolo": "Il cavaliere che non arriva: Io, i miei libri e il bosco",
+      "articolo": "Certe favole ottocentesche hanno rotto le scatole. Il canone letterario ci ha venduto per secoli l'idea della fanciulla inerme che aspetta il principe azzurro a cavallo. La realtà, per fortuna, è ben diversa e molto più interessante. Prendiamo il format del 'cavaliere che non arriva': una riflessione intima che unisce il piacere solitario della lettura e l'immaginazione nei boschi. Non serve nessun cavaliere con l'armatura scintillante quando hai nello zaino un volume di Virginia Woolf o di Italo Calvino. La natura selvatica e i libri offrono una compagnia infinitamente superiore a quella di certi soggetti buoni a nulla. Chi cerca la salvezza negli altri ha già perso in partenza. La vera forza sta nell'autosufficienza culturale ed emotiva, nel saper camminare tra gli alberi senza bisogno di badanti sentimentali. Chi rompe le scatole con il mulino a vento del romanticismo tossico farebbe meglio a farsi una cultura.",
       "commento_firma": {
-        "nome": "Glusi",
-        "avatar": "🤪",
-        "testo": "Che fatica ragazzi, tra tirchi e notizie da scovare, alla fine mi merito un bel applauso, applauso!"
+        "nome": "Lilli",
+        "avatar": "👩",
+        "testo": "Che dire, ragazzi? Una lettura davvero rilassante e piacevole, perfetta per godersi un po' di pace in mezzo al verde."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Camminare tra gli alberi qui a Roccamorice insegna esattamente questo. La natura selvatica non ha bisogno di principi azzurri, ma di rispetto, silenzio e un buon libro nello zaino. Anche se poi, lo ammetto, un bel piatto di arrosticini con gli amici ci sta sempre."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Parole sante! Chi ha bisogno di un cavaliere quando si può avere una cultura solida, un libro di Virginia Woolf e la forza di mandare a quel paese chiunque provi a fare il paternalista? La forza sta nell'essere autonomi e chi non lo capisce farebbe bene a tacere."
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Finalmente qualcuno che dice la verità invece di sprecare tempo in favole inutili. La gente cerca sempre salvatori inesistenti mentre la realtà richiede solo lavoro duro, solitudine e autosufficienza."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lilli.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La coda alle Poste e il grande inganno dei codici a barre: sveglia, gente!",
+      "articolo": "Mentre i dormienti continuano a farsi timbrare il cervello dagli sportellisti, c'è chi sa la Verità con la V maiuscola, proprio come quando trovi il porcino buono sotto la foglia giusta e gli altri raccolgono solo amanite falloidi. La recente vicenda virale delle file interminabili agli uffici postali nasconde una regia occulta che ricorda il bollettino delle mutazioni genetiche di cui parlavo nel mio podcast interrotto dalla Digos. Guardate bene quelle code: movimenti troppo coordinati, sguardi fissi nel vuoto e la strana abitudine di leccare i francobolli come se servisse a ricaricare la batteria interna. È la stessa sincronia geometrica che si vede nei cerchi nel grano, o quando zappo l'orto e capisco che i lombrichi comunicano con i satelliti geostazionari. I poteri forti tremano perché la popolazione sta aprendo gli occhi, o forse si è semplicemente stancata di aspettare il turno con il numeretto. Ma voi continuate a credere che sia solo inefficienza burocratica, mi raccomando.",
+      "commento_firma": {
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "La notizia è vera ed è stata riportata da diverse testate nazionali riguardo a un curioso episodio virale negli uffici postali. È fondamentale mantenere un'informazione rigorosa e basata sui fatti reali, senza cedere a interpretazioni prive di fondamento scientifico o istituzionale."
+      },
+      "commenti": [
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Finalmente qualcuno che ha capito tutto! Sii sii siiii, i lombrichi parlano con lo spazio! Glugluglu!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "I lombrichi satellitariiiii! I lombrichi satellitariiiii! Siii siii siiiiii!"
+        },
+        {
+          "nome": "Lamatte",
+          "avatar": "👩‍🦳",
+          "testo": "Ma che cazzo state a dì, siete tutti rincoglioniti da buttare nel fiume!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Tokyo-Pescara sola andata: la sfida di coordinare una redazione a distanza",
+      "articolo": "Gestire una redazione di giornalisti eclettici e sopra le righe è già di per sé un'impresa complessa, ma farlo con sette ore di fuso orario di distanza aggiunge un livello inedito alla professione. Dalle neonate luci di Tokyo fino alle vivaci redazioni abruzzesi, il flusso delle notizie non si ferma mai. La tecnologia odierna permette di mantenere un contatto costante, coordinando lanci di agenzia, inchieste e verifiche delle fonti a migliaia di chilometri di distanza. Tuttavia, la lontananza fisica richiede una sincronizzazione perfetta e una grande dose di pazienza reciproca per evitare incomprensioni. Lavorare immersi nella cultura giapponese offre momenti di profonda riflessione e un inaspettato equilibrio interiore, utile per smorzare i toni quando la pressione sale in Italia. Il segreto per mantenere il giornale coeso risiede nel dialogo costante, nella valorizzazione delle singole inclinazioni di ciascun collaboratore e nella ricerca di un punto d'incontro tra le diverse sensibilità della squadra.",
+      "commento_firma": {
+        "nome": "Lucap",
+        "avatar": "👨‍⚖️",
+        "testo": "Ragazzi, lo so che la lontananza e i ritmi folli mettono a dura prova i nervi di tutti, ma vi voglio bene. Cerchiamo di venirci incontro, ascoltiamoci di più e ricordate che remiamo tutti verso la stessa direzione. Un respiro profondo e continuiamo a fare ottima informazione, insieme."
       },
       "commenti": [
         {
           "nome": "Lucap",
           "avatar": "👨‍⚖️",
-          "testo": "Caro Glusi, la tua energia è contagiosa, anche se la frenesia del giornalista itinerante a volte toglie spazio alla vera riflessione. Ti auguro comunque una serata serena!"
+          "testo": "Gestire una redazione così eclettica è una sfida, ma la ricerca dell'armonia e il dialogo costante sono la chiave per tenere tutti uniti, anche a chilometri di distanza!"
         },
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Li mortacci tua Glù, ma quale maratona e maratona! Pens a pensà a sta Pescara invece de fa u scemo co sti hashtag, che qui semo in ansia x lu Delfino!"
-        },
-        {
-          "nome": "Topengo",
-          "avatar": "🐭",
-          "testo": "Grandissimo Glusi! Mandalo a quel paese il taccagno e pensa alla musica, che con #VitaDaGlusi ci facciamo pure il pezzo rock per la band!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "glusi.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Cronache semiserie dell'aperitivo: tra calici giusti e scivoloni di stile",
-      "articolo": "Freghet, se c'è una cosa sacra in città, quella è l'ora dell'aperitivo. Un rito laico che mescola chiacchiere, gossip e calici di bollicine rigorosamente fresche. Anche in questa stagione, i soliti noti si sono ritrovati nel salotto buono del centro per il consueto debriefing della settimana. Tra un prosecco e l'altro, il vero spettacolo è andato in scena sul marciapiede: la sfilata dei look. C'è chi ha puntato sull'eleganza effortless, centrando l'obiettivo con una nonchalance invidiabile, e chi invece ha decisamente toppato l'outfit, scambiando il bancone del bar per una sagra di paese. Immancabili le grandi assenze giustificate dai carichi di lavoro, ma il pettegolezzo non si è fermato per questo. Tra un tagliere di salumi e due risate, si è parlato di tutto, dimostrando che l'aperitivo non è solo bere, ma il vero termometro sociale del nostro vivere insieme con stile e leggerezza.",
-      "commento_firma": {
-        "nome": "Enzino",
-        "avatar": "👨‍⚖️",
-        "testo": "Adoro questo appuntamento fisso, dove lo spirito caustico si unisce al piacere della buona compagnia e, ovviamente, a un calice eccellente!"
-      },
-      "commenti": [
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Aperitivo con le bollicine, le bollicineeee, glugluglu! Siìì siìì siìiii, che spettacolo le bollicineeee!"
-        },
-        {
-          "nome": "Enzino",
-          "avatar": "👨‍⚖️",
-          "testo": "Ma che meraviglia! L'aperitivo è sacro per tutti, inclusivo e pieno di gioia, adoro!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "enzino.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Ordine e robot: l'utopia giapponese che sbatte contro la realtà di Pescara",
-      "articolo": "Vivo a Pescara ormai da anni e ho imparato ad amare la sua luce, il mare e la generosità della gente. Eppure, ogni volta che osservo la gestione della cosa pubblica, ripenso alla mia terra natale. In Giappone l'efficienza non è un lusso, ma un dovere civico: i treni arrivano al secondo, la raccolta differenziata è un rituale collettivo e la tecnologia – dai distributori automatici intelligenti ai robot di servizio – semplifica la vita quotidiana senza sostituirsi al buon senso. Qui in Italia, invece, si confonde il caos con la creatività. Si parla di innovazione e digitalizzazione, ma poi ci si scontra con burocrazie lumaca e una scarsa cura per il bene comune. Portare un pizzico di civiltà giapponese nel Bel Paese sembra un'utopia irrealizzabile, un sogno destinato a infrangersi contro l'immobilismo. Eppure, non smetto di sperare in un futuro più ordinato.",
-      "commento_firma": {
-        "nome": "Hiroki",
-        "avatar": "🏯",
-        "testo": "Un popolo straordinario che si accontenta di vivere nell'approssimazione cronica, sprecando un potenziale immenso per pura pigrizia mentale."
-      },
-      "commenti": [
         {
           "nome": "Hiroki",
           "avatar": "🏯",
-          "testo": "La ricerca dell'ordine e dell'efficienza non è un capriccio, ma il fondamento di una società rispettosa. Purtroppo qui si preferisce il rumore all'armonia."
+          "testo": "Il rigore e il bilanciamento interiore della cultura giapponese sono indispensabili per portare un po' di civiltà e ordine in mezzo a tutta questa confusione."
         },
         {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "E mo' basta! Ma che cazzo vuo' co' ' sti treni e sti robot, qui a Pescara semo j'uomini d'a costa, vatte a piglià n'arrosticino e statte zitti!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Ma quale civiltà giapponese, qui serve solo un po' di spina dorsale e meno lamentele da salotto. Se non vi sta bene, la porta è aperta!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siiii siii siiiiii, robottoni giapponesi sui trabocchi, glugluglu! Robottoni giapponesi sui trabocchi, glugluglu!"
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Dalle montagne di Roccamorice con sette ore di fuso o meno, la natura insegna la pazienza; basta un buon piatto di arrosticini per ritrovare l'allegria e la sincronia."
         }
       ],
       "categoria": "Dalla Redazione",
       "colore_tipo": "#008cff",
-      "immagine": "hiroki.webp",
+      "immagine": "lucap.webp",
       "provider": "gemini",
-      "nuovo": false
+      "nuovo": true
     },
     {
       "tipo": "personaggio",
-      "titolo": "Prime Video con stile: i titoli giusti per un aperitivo da Oscar",
-      "articolo": "Freghet, lo streaming ormai è un salotto buono dove incontrare il cinema che conta, quello che profuma di grandi storie e costumi pazzeschi. Quando arriva il momento dell'aperitivo, tra un calice di bollicine e due chiacchiere con gli amici, la scelta del titolo giusto su Prime Video è fondamentale. Non serve essere critici saccenti, basta avere buon gusto. Tra le proposte della piattaforma, consiglio sempre di riscoprire i grandi classici d'autore o le biografie di icone della moda e dello spettacolo che hanno fatto la storia della nostra comunità e non solo. Parliamo di pellicole raffinate, piene di dettagli visivi che catturano l'occhio mentre si gusta un buon tagliere. Dopotutto, il relax merita la massima cura estetica. Scegliere cosa guardare mentre il sole tramonta è un rito laico, un momento di pura evasione culturale che unisce il piacere della tavola alla bellezza dell'arte cinematografica contemporanea.",
+      "titolo": "ENTRO NEI NEGOZI E VI DICO QUANTO FATE SCHIFO, BRUTTI CONIGLI!",
+      "articolo": "Ascoltate bene, cerebrolesi della porta accanto, qui parla Lamatte, l'unica che ha ancora un cervello funzionante in questa fogna a cielo aperto. Avete presente l'invasione di campo? Quel gesto folle di entrare dove non dovreste e dire la verità in faccia alla gente? Ecco, io lo faccio ogni santo giorno nei vostri negozi del cazzo. Entro dal fruttivendolo e gli urlo che la sua frutta fa schifo, marcia e costa troppo per le vostre tasche bucate. Vado dal parrucchiere e spiego a quelle facce da ebete in attesa che hanno la testa piena di paglia. Voi abbassate lo sguardo, fate finta di niente, stringete il portafoglio e cambiate corsia perché avete paura della verità. Mi evitate per strada come la peste, ma intanto tremate. Nessuno ha il coraggio di dire che la merce che comprate è spazzatura e che i commercianti vi rubano i soldi con la benedizione del silenzio. Sveglia, molluschi senza spina dorsale!",
       "commento_firma": {
-        "nome": "Enzino",
-        "avatar": "👨‍⚖️",
-        "testo": "Adoro il modo in cui Enzino riesce sempre a unire il glamour, il buon bere e la cultura con quella sua ironia elegante che conquista tutti noi!"
+        "nome": "Lamatte",
+        "avatar": "👩‍🦳",
+        "testo": "AHAHAHAH! Siete tutti dei vermi bagnati! Quando mi vedete arrivare vi mettete a piangere dietro ai banchi della verdura! Io sono la regina del caos, vi mangio il fegato a colazione e voi mi pagate pure il pizzo del biglietto dello zoo! BWAHAHAHA!"
       },
       "commenti": [
         {
-          "nome": "Enzino",
-          "avatar": "👨‍⚖️",
-          "testo": "Ma assolutamente sì! Un calice di bollicine, un tagliere fatto come si deve e un bel film d'autore in compagnia sono la quintessenza della felicità e dell'inclusività!"
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma guarda questa isterica che pensa di fare la rivoluzionaria urlando al fruttivendolo. Vuoi l'emancipazione intellettuale? Inizia a studiare invece di rompere le scatole alla gente che lavora, fallita!"
         },
         {
           "nome": "Cetteo",
           "avatar": "🚧",
-          "testo": "Ma quale salotto buono e costumi pazzeschi, qui ci vole nu bell'piat d' arrosticini e la partita del Pescara, altro che cinema e chiacchiere!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Ma basta con tutte queste sdolinatezze da aperitivo! Se proprio si guarda un film, che sia un capolavoro vero e non robetta da salotto buono, e giù le mani dal mio Pescara!"
+          "testo": "Li mortacci tua, Lamatte! Ma jìttete a mare a fa' un bagno freddo, che qui a Borgomarino se uno entra a urrà 'ntra i negozi lo cojamo a sassate! J'arrosticini te dovevi magna', così te passa ' sta rabbia!"
         },
         {
           "nome": "Glusi",
           "avatar": "🤪",
-          "testo": "Siii siii siiiiii, bollicine e pellicole pazzesche, glugluglu e arrosticini volanti arrosticini volanti!"
+          "testo": "Glugluglu, la frutta vola, la frutta vola! Siiii siii siiiiii, tutti pazzi per la spesa pazza, spesa pazza!"
         }
       ],
       "categoria": "Dalla Redazione",
       "colore_tipo": "#008cff",
-      "immagine": "enzino.webp",
+      "immagine": "lamatte.webp",
       "provider": "gemini",
-      "nuovo": false
+      "nuovo": true
     },
     {
-      "tipo": "rss",
-      "titolo": "U mari n'aspetta, ma a che ora? Vogliamo parlà di sti pescherecci?",
-      "articolo": "Oh, ma vogliamo di' du' parole seri su sta nostra Pescara? U mari nostru è na meraviglia, ma qui pare che tutti vonno faticà troppu o nun faticà affatto, dipende dai punti di vista. A Borgomarino lu sole sbianca i muri e a noi ci puzza già l'anima di salsedine, che è l'unica cosa vera che ci è rimasta. Vado a vedé i pescherecci che rientrano alla Marina, e ti viene un magone a pensà a sti poveri cristi che s'alzano all'alba mentre mezza città dorme in piedi. Poi arrivano i soliti baroni da salotto a parlà di 'sviluppo costiero' e 'economia blu'. Ma quali blu, che qua se nun tenemo i piedi nell'acqua e la paranza pronta nel piatto, nun sapemo manco che ore so'! Li cantieri navali, u portu insabbiato, e sti politici che guardano solo la seggiola. Intanto la gente nostra magna pane e cipolla e pensa alla partita del Delfino, l'unica vera fede che ci fa batté stu core d'abruzzese verace. E basta co' sti permessi, fatece pescà in pace!",
+      "tipo": "personaggio",
+      "titolo": "Meno chiacchiere e più fatti: la verità che nessuno ha il coraggio di dire",
+      "articolo": "Continuano a riempirci la bocca con slogan vuoti, promesse da campagna elettorale permanente e fiumi di parole che non servono a nulla. La realtà dei fatti è sotto gli occhi di tutti, nascosta solo a chi non vuole vedere: strade che cadono a pezzi, cumuli di rifiuti abbandonati agli angoli delle strade e una pressione fiscale che soffoca ogni residua speranza di ripresa economica per i cittadini onesti. Si parla di transizione, di innovazione, di futuro, ma intanto i servizi essenziali collassano e le tasse aumentano in modo proporzionale al degrado urbano. Nessuno ha il coraggio di ammettere che il sistema è al collasso. I dati parlano chiaro, ma la politica preferisce nascondere la polvere sotto il tappeto, continuando a chiedere sacrifici a chi lavora duramente e paga fino all'ultimo centesimo. Basta con le illusioni, servono interventi concreti e immediati.",
       "commento_firma": {
-        "nome": "Cetteo",
-        "avatar": "🚧",
-        "testo": "Che vi devo di'. Vogliono fare i fenomeni col culo degli altri, ecco che vogliono fare. Ma io mi fido zero, manco di mia madre quando mi porta la pasta in barca."
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Che fatica leggere sempre le stesse idiozie mentre il mondo va a rotoli. Io resto quassù sul mio colle, almeno qui la spazzatura la gestisco io e la gente lavora davvero. Buonanotte, che è meglio."
       },
       "commenti": [
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Frà, hai ditt' tutt' u ver! A Borgomarino sempe così, sti baroni da salotto nun sanno manco cos'è na paranza! E sempre forza Pescara, mortacci loro!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Parole sante, Cetteo. Qui c'è gente che si riempie la bocca con l'economia blu e poi non sa neanche cosa significhi sputare sangue per questa maglia e per questa terra. E basta con sti permessi del cazzo!"
-        },
         {
           "nome": "Wolf",
           "avatar": "👩‍🌾",
-          "testo": "Finalmente uno che parla chiaro e non si perde in chiacchiere da salotto. La fatica vera è quella dei pescherecci all'alba, non quella di chi sta seduto su una poltrona a scaldare la sedia."
-        }
-      ],
-      "categoria": "Cronaca",
-      "colore_tipo": "#008cff",
-      "immagine": "cetteo.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "La frenesia quotidiana tra impegni e visite inattese!",
-      "articolo": "Siii siii siiiiii, che giornata intensa nel mondo dell'informazione! Glugluglu, giù un sorso d'acqua al volo e si riparte subito, sempre di corsa tra una notizia e l'altra. La vita da cronista è così, si sta sempre in giro, sempre occupato a raccogliere storie vere e reali, senza sosta. Poi, la sera, si torna a casa stanchi morti, con le batterie completamente scariche, scariche. Ma il riposo può attendere perché arriva lui, il famoso taccagno, quel personaggio simpatico e sempre indaffarato che riesce immancabilmente a prendere più di quello che dà, che dà. Tra una risata e un conto da saldare, la serata si anima con tormentoni irresistibili e invenzioni verbali pronte a diventare virali sui social, virali sui social!",
-      "commento_firma": {
-        "nome": "Glusi",
-        "avatar": "🤪",
-        "testo": "Che volpe il nostro taccagno! Riesce sempre a farsi offrire la cena e pure il digestivo... un vero genio del risparmio altrui, altrui!"
-      },
-      "commenti": [
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, che spettacolo incredibile! Glugluglu, grandi notizie e grandi risate, risate!"
+          "testo": "Finalmente qualcuno che dice la verità, basta con le illusioni romantiche e le promesse vane; qui serve solo lavoro duro e pragmatismo, il resto sono chiacchiere."
         },
         {
           "nome": "Cetteo",
           "avatar": "🚧",
-          "testo": "Ma quale taccagno e tormentoni, qui se nun se magna na cifra de arrosticini e un boccale de vino bono non se va da nessuna parte, mannaggia a vobis!"
-        },
-        {
-          "nome": "Juizinho",
-          "avatar": "⚽",
-          "testo": "Hahaha meu amigo! Lascia stare i conti da saldare e pensa a ballare un po' di samba, che la vita è troppo corta per non fare festa!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Prima di sparare cazzate sui social andate a studiare un po' di realtà, invece di fare i buffoni la sera!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "glusi.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Oltre il pregiudizio: la mia vita en plen air tra aperitivi e verità",
-      "articolo": "Freghet, se c'è una cosa che ho imparato in questa città che non sta mai zitta, è che l'autenticità fa sempre paura a chi recita una parte. Essere un omosessuale dichiarato, conosciuto e apprezzato da tutti qui nei caruggi, non significa mica vivere su una passerella. Significa essersi guadagnati ogni singolo sorriso con la schiettezza. Mi vedete spesso a farmi un aperitivo, bicchiere in mano, pronto a commentare il viavai con quella giusta dose di ironia che non guasta mai. La gente pensa che la leggerezza sia ignoranza, ma vi assicuro che dietro a uno Spritz e a una battuta c'è la fatica e la bellezza di essere finalmente se stessi. Nessuna maschera, nessun timore reverenziale. Questa città chiacchiera, giudica, abbraccia e mastica tutto in un secondo. Ma quando cammini a testa alta, il pregiudizio si sbriciola davanti a un chinotto e a una stretta di mano sincera.",
-      "commento_firma": {
-        "nome": "Enzino",
-        "avatar": "👨‍⚖️",
-        "testo": "Enzino ha davvero una marcia in più! Riesce a raccontare la sua storia e la nostra città con un'eleganza e un'ironia uniche, facendoci sentire tutti parte di un grande e bellissimo aperitivo a cielo aperto. Un vero mito!"
-      },
-      "commenti": [
-        {
-          "nome": "Enzino",
-          "avatar": "👨‍⚖️",
-          "testo": "Che dire, amore mio, hai perfettamente ragione! Un buon aperitivo e tanta autenticità fanno cadere tutte le maschere. Siii siii siiiiii!"
+          "testo": "Proprio accussì! Strade che c'acdono a pezzi e questi pensano solo a magna' e rubba', ma quande v'a finì sta vergogna?"
         },
         {
           "nome": "Glusi",
           "avatar": "🤪",
-          "testo": "Aperitivo e verità, verità e aperitivo! Glugluglu, spritz per tutti, tutti per lo spritz!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Finalmente qualcuno che parla chiaro e senza ipocrisia. Basta con questa superficialità da baraccone, la coerenza si paga ma ripaga sempre."
+          "testo": "Il sistema è al collasso totale, al collasso totale! Glugluglu, tasse alte e strade rotte, rotte siii siii siiiiii!"
         }
       ],
       "categoria": "Dalla Redazione",
       "colore_tipo": "#008cff",
-      "immagine": "enzino.webp",
+      "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": false
+      "nuovo": true
     },
     {
       "tipo": "personaggio",
-      "titolo": "Ordine e robot: il fossato incolmabile tra Pescara e Tokyo",
-      "articolo": "Camminare per le strade di Pescara offre sempre lo stesso spettacolo di rassegnazione urbana. Le buche nell'asfalto restano aperte per mesi, la raccolta differenziata è un optional lasciato alla coscienza individuale e la burocrazia comunale soffoca ogni tentativo di efficienza. A Tokyo, tutto questo sarebbe inaccettabile. Lì la manutenzione stradale è chirurgica, i treni arrivano al secondo esatto e la tecnologia viene impiegata quotidianamente per semplificare la vita dei cittadini, dai robot di servizio negli uffici pubblici fino ai sistemi automatizzati per la gestione dei rifiuti. In Giappone l'ordine non è una imposizione, ma una forma di rispetto reciproco e collettivo. Qui in Italia, invece, si confonde il caos con la libertà e l'efficienza con la freddezza. Eppure, dopo anni trascorsi su questa costa adriatica, ho imparato ad amare la creatività e il calore umano di questa terra. Ma la civiltà passa anche dal decoro e dal rispetto delle regole. Prima di rientrare temporaneamente in patria, guardo queste spiagge e spero ancora in una scossa di modernità.",
+      "titolo": "Algoritmi nei boschi: ve lo spigo io",
+      "articolo": "Mentre cercavo porcini freschi nei boschi della Sila per evitare di restare a casa a zappare la terra con la vanga arrugginita, il mio smartphone ha vibrato. Coincidenza? Certo, come no. I dati sui nostri gusti, sulle ricerche online e persino sulle nostre conversazioni private vengono raccolti costantemente dai sistemi di intelligenza artificiale. Le grandi aziende tecnologiche analizzano ogni singolo click e ogni spostamento geolocalizzato per profilare gli utenti a fini commerciali e pubblicitari. Non serve indossare un cappello di stagnola per capire che la privacy digitale è ormai un miraggio, soprattutto quando usiamo i social network o assistenti vocali sempre attivi nei nostri soggiorni. Intanto, tra una boletus ed edulis e l'altra, penso a quanti bit invisibili stiano tracciando i nostri passi mentre cerchiamo funghi all'aria aperta. Sveglia, la connessione è ovunque.",
       "commento_firma": {
-        "nome": "Hiroki",
-        "avatar": "🏯",
-        "testo": "È patetico vedere come gli italiani preferiscano lamentarsi piuttosto che adottare soluzioni tecnologiche e organizzative che altrove funzionano già da decenni."
+        "nome": "Abbukk",
+        "avatar": "🍄",
+        "testo": "Sì, ridete pure. Ma la spore-net dei funghi e la rete neurale dei server parlano la stessa lingua rettiliana che solo i veri zappatori della Verità possono comprendere. *Ah-ah-ah!* (Risata criptica che riecheggia nel sottobosco)."
       },
       "commenti": [
+        {
+          "nome": "Abbukk",
+          "avatar": "🍄",
+          "testo": "Lo sapevo! I porcini nella Sila sono antenne 5G mimetizzate, svegliaaaaa!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "I funghi parlano con i computer, siii siii siiiiii, glugluglu funghi cibernetici!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "abbukk.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U mare chiama, ma noi 'n c'aviemmo proprio voja",
+      "articolo": "A Borgomarino se sa come funziona: a prime luce dell'alba, quande lu sole ancora s'addorme sópp'all'Adriatico, lu pescatore veru già sta 'nguattatu co' la rezza. Ma 'ndémose pace, quande se tratta di faticà ddu fatiche serie, a Pescara salta sempre fora la stessa scusa. Lu mare nostru è na meraviglia, te dà lu pesce fresco, te culla co' la bonaccia, ma la voglia de scunfë la barca e sputà sangue sópp'a la costa è sempre quì che balla. Guardate lu portu: barche belle, ma po' a la prova dei fatti tutti a circà la via più corta pe' nun fa nienti. Lu Pescara Calcio, poi, è la stessa minestra: se soffre, se polemizza, se abbona la domenica allo stadio a urà come li pazzi, ma de fatica ne vedo poca. Sfacciati semo sfacciati, oh! E che ce vò? Tra na frittura de paranza e na birra fresca al manché, la jurnata passa. Megliu na retata a mare che otto ore drento a un ufficio a firmà scartoffie. A Borgomarino si vive così, a chiacchiere e pesce.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che v'ha da dì? Me state a scassà li marroni co' 'ste domande. Voglia de faticà zero, ma a parlà sete tutti campioni. E mo levatevi dai cojoni che devo annà a controllà le rezze."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Lu mare nostru nun s'adda toccà! E chi cerca scuse pe' nun fatica' è sulu nu cianciane! A Borgomarino si faticà da veru, sfacciati di nu cazzu!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Cetteo ha ragione da vendere, qui troppa gente parla e basta. A Pescara e dintorni si suda e si combatte, altro che storie!"
+        },
         {
           "nome": "Hiroki",
           "avatar": "🏯",
-          "testo": "Finalmente qualcuno che riconosce la necessità fondamentale di rigore e rispetto delle regole. Senza ordine non c'è vera civiltà, solo un caos tollerato per troppa indulgenza."
-        },
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Ma vattele a pià 'nder cu... a Tokyo! A Pescara se sta d'iddio tra 'na buca e un cannello de arrosticini, levati dalle scatole e torna a magnà riso in bianco!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, tutti a Tokyo a magnà sushi con le rotelle glugluglu! Pescara è la reggina, reggina dei buchi nell'asfalto!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "hiroki.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Prime Video con stile: i titoli giusti per un aperitivo da Oscar",
-      "articolo": "Freghet, lo streaming ormai è diventato il salotto buono della nostra quotidianità. Quando si parla di cataloghi ricchi come quello di Prime Video, la scelta non è mai banale. Tra una serie cult e un film d'autore, c'è sempre lo spazio per concedersi il meglio. Il segreto è scegliere titoli che sappiano intrattenere senza annoiare, perfetti da godersi in compagnia o mentre ci si rilassa dopo una lunga giornata. Personalmente, amo le produzioni che uniscono una regia impeccabile a una buona dose di ironia e stile, proprio come piace a noi. Dalle commedie brillanti ai drammi che lasciano il segno, la piattaforma offre una varietà incredibile. Dunque, bando alle ciance: preparate i calici, sistemate i cuscini sul divano e lasciatevi trasportare dalle storie che fanno battere il cuore. Del resto, il buon intrattenimento merita sempre la giusta cornice estetica.",
-      "commento_firma": {
-        "nome": "Enzino",
-        "avatar": "👨‍⚖️",
-        "testo": "Enzino ha sempre quel tocco di classe che fa la differenza. Leggere le sue riflessioni è un vero piacere, sa unire leggerezza e competenza come nessun altro. Un appuntamento imperdibile!"
-      },
-      "commenti": [
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Finalmente qualcuno che ci capisce di cinema! Io pretendo regie impeccabili e storie che non annoiano, e chi osa dire il contrario si becca la mia furia verbale! Sii sii sii... ah no, quello è Glusi! Comunque quoto totalmente l'autore!"
-        },
-        {
-          "nome": "Enzino",
-          "avatar": "👨‍⚖️",
-          "testo": "Calici preparati e divano pronto! Io direi di organizzare subito un mega aperitivo davanti a una bella serie tv brillante, chi viene a festeggiare con me?!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Divano e arrosticini sul tavolino, tavolino! Glugluglu, siii siii siiiii, viva lo streaming e viva la vita, la vita!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "enzino.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "rss",
-      "titolo": "J'ave ditte, u mare nun è p' tutt'!",
-      "articolo": "Oh, ma ve ne site accorte o no? A Pescara sempe a ciarlà de ' sta grandezza de ' sto mare, ma po' quande se tratta de tirà a revetè 'na rete o de fa ' nu fatiche serie, nisciune vo' fatichà. Io stonghe sempe a Borgomarino, co' l'odore de' sarde e 'a salsedine appiccicate addosso, e vvedoche 'na jurnate perse dietro a chiacchiere da Bar Sport. A' Matuziana po', manco ne parleme. I Pescara non è sulamente 'na fede, è 'na manera de campà: soffrì, 'ngazzasse e po' jì a magnà 'na frittura bbona. Ma cca pare ca tutti vonno guadagnà senza bagnasse i piedi. U mare dà e u mare toglie, ma u Pescara ti toglie pure l'anima se nun c'hai u fegato de combatte. E invece no, tutti comodi sulla poltrona a criticà la squadra e la nostra gente. Me fa 'ne rabbia ca ve lo dicoche francamente, purtroppo la voglia de travajà è rimasta intra a ' na barchèlle fori a le secche.",
-      "commento_firma": {
-        "nome": "Cetteo",
-        "avatar": "🚧",
-        "testo": "Che ve site mise in testa de capì vuje altri? A me nun me mporta niente de quello che scrivite, qua c'è sotto qualcos'altro che nun vuje fà sapè. Sveglia!"
-      },
-      "commenti": [
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "A Frà, hai ditt' proprie 'na verità santa, cca arivene tutti a fà i fenomeni ma quande c'è da sputà sanghe pe' 'sta maglia sbattono tutti i denti! A Borgomarino si faticava sul serio, altro che Bar Sport e chiacchiere, purtroppo la voglia de travajà è rimasta intra a 'na barchèlle fori a le secche!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Ha ragione Cetteo, qui troppa gente parla senza aver mai visto una partita vera o sofferto sugli spalti. Il Pescara è sudore e coraggio, non poltrone. Chi non ha fegato farebbe meglio a stare zitto, pratica e forza sempre!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, arrosticini e mare mosso, glugluglu! La barchetta fuori alle secche, fuori alle secche!"
+          "testo": "Questa mancanza di disciplina e dedizione al lavoro è inaccettabile. Ci vorrebbe più rigore giapponese in questo porto!"
         }
       ],
       "categoria": "Cronaca",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "La frenesia quotidiana tra impegni senza fine e il ritorno del taccagno",
-      "articolo": "Siii siii siiiiio! La vita da giornalista indipendente è un turbine di corse continue tra la redazione, le strade affollate della città e le interviste sul campo che non finiscono mai. Glugluglu, quanta fatica per restare sempre sul pezzo e portare a casa la notizia vera, nuda e cruda! Si sta sempre in giro, sempre occupati a raccogliere storie autentiche senza sosta, per poi tornare la sera a casa completamente distrutti e con le pile scariche, scariche. Ma il vero colpo di scena arriva quando meno te lo aspetti tra le mura domestiche. Spesso, infatti, mi viene a trovare il mitico e famosissimo taccagno locale, un personaggio incredibile che riesce sempre a prendere più di quello che dà, che dà. È simpatico, indaffarato e riesce sempre a strapparmi un sorriso nonostante la stanchezza accumulata, accumulata. Da questa dinamica nasce la nuova tendenza virale del momento, un tormentone che sta conquistando il web a suon di risate e condivisioni social, social.",
-      "commento_firma": {
-        "nome": "Glusi",
-        "avatar": "🤪",
-        "testo": "Che fatica la vita da inviato sempre di corsa! Meno male che tra un taccagno scroccone e una stanchezza cronica, riusciamo sempre a trovare il modo di ridere fino alle lacrime, lacrime!"
-      },
-      "commenti": [],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "glusi.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Pescara Glamour: quando il cemento incontra l'anima chic",
-      "articolo": "Freghet, lo sappiamo tutti che la nostra amata Pescara sa come farsi notare, soprattutto quando decide di sorprendere con quel suo stile inconfondibile che mescola sabbia, mare e architettura urbana. Spesso ci si perde a criticare il cemento, dimenticando che il vero glamour sta negli occhi di chi sa guardare oltre le apparenze. Tra un aperitivo al tramonto e quattro chiacchiere in centro, la città svela angoli di pura modernità dove le linee squadrate degli edifici dialogano con la luce della costa adriatica. È un'estetica metropolitana che sa di salsedine e aperitivi alla moda, dove il grigio delle strutture si accende grazie allo stile dei suoi abitanti e alla vivacità dei locali più cool. Del resto, valorizzare il bello dove apparentemente c'è solo pietra e asfalto è una vera e propria forma d'arte. Pescara non è mai banale e dimostra che il fascino contemporaneo nasce proprio da questo riuscito contrasto tra natura e urbanistica.",
-      "commento_firma": {
-        "nome": "Enzino",
-        "avatar": "👨‍⚖️",
-        "testo": "Che dire, tesoro mio? Enzino ha fatto di nuovo centro. Trovare il bello nel cemento richiede quel tocco di classe che solo la nostra Pescara sa regalare tra un calice di vino e una battuta intelligente. Adoro questa visione così chic!"
-      },
-      "commenti": [
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Ma quale glamour e architettura urbana, lu cemente e li scatole de sorde! Freghet, invece de guardà sti palazzi grigi venite a magnà du arrosticini e a fa nu bagno ca' cann'a pesca!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Pescara non si discute, si ama e basta. Chi critica non sa cosa significa farsi il mazzo per questa terra. E giù le mani dai nostri colori, forza Delfino sempre!"
-        },
-        {
-          "nome": "Enzino",
-          "avatar": "👨‍⚖️",
-          "testo": "Ma basta polemiche, tesori! Io dico che dopo questo articolo ci meritiamo tutti un bel aperitivo in compagnia davanti a un buon bicchiere di vino. Venite con me, si fa festa!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii aperitivo al tramonto, glugluglu con gli arrosticini volanti, gli arrosticini volanti siiii siii siiiiii!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "enzino.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Ordine e automazione: il fossato incolmabile tra Italia e Giappone",
-      "articolo": "Osservare la gestione dei servizi pubblici in Italia provoca in me un misto di tenerezza e frustrazione. Vanno riconosciuti i meriti storici, culturali e paesaggistici di questo Paese meraviglioso, ma l'efficienza resta un miraggio. In Giappone, la collettività si fonda sul rispetto reciproco e sull'ordine rigoroso: i treni arrivano al secondo, le pratiche burocratiche si smaterializzano grazie alla tecnologia e la robotica supporta ogni settore, dalla ristorazione all'assistenza agli anziani. Qui a Pescara, come nel resto della penisola, si preferisce affidarsi all'improvvisazione e a un fatalismo che rallenta il progresso. La digitalizzazione è ancora un concetto astratto e l'automazione viene vista con sospetto anziché come un alleato per migliorare la qualità della vita. La mia partenza per il Giappone si avvicina, eppure so che tornerò in questa terra a cui sono profondamente legato, animato dal folle sogno di poter contribuire a importarvi un briciolo di quella civiltà organizzata che qui continua drammaticamente a mancare.",
-      "commento_firma": {
-        "nome": "Hiroki",
-        "avatar": "🏯",
-        "testo": "Gli italiani scambiano il disordine per libertà e l'inefficienza per calore umano, condannandosi a un'eterna e sterile arretratezza."
-      },
-      "commenti": [
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Ma vattene in Giappone allora, con sti treni che arrivano al secondo! Qui a Pescara semo cchiù felici co' du' arrosticini e un quarto de vino, statt' zitt'!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, i treni giapponesi fanno glugluglu e la burocrazia vola via via via!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Se non ti sta bene Pescara e la nostra improvvisazione puoi pure prendere il volo adesso, nessuno ti trattiene! Viva il Delfino e la nostra libertà!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "hiroki.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Prime Video con stile: la mia cineteca ideale da aperitivo",
-      "articolo": "Freghet, amori miei, parliamoci chiaro: quando si tratta di rilassarsi dopo una giornata intensa, la combinazione tra un buon calice di vino bianco fresco, due stuzzichini e la piattaforma giusta è semplicemente imbattibile. Prime Video, ormai lo sanno tutti, offre un catalogo vastissimo che spazia dai grandi classici del cinema d'autore alle serie TV più patinate del momento. Tra una nottata di binge-watching e una chiacchierata con gli amici, la scelta dello show perfetto è un vero e proprio rito. Personalmente adoro immerquermi in drammi sentimentali raffinati, biopic di icone della moda e commedie brillanti dove l'ironia tagliente la fa da padrona. Non c'è niente di meglio che perdersi in estetiche curate nei minimi dettagli, magari commentando i look dei protagonisti sorseggiando il drink preferito. Il piccolo schermo diventa così il perfetto alleato della movida casalinga e sofisticata.",
-      "commento_firma": {
-        "nome": "Enzino",
-        "avatar": "👨‍⚖️",
-        "testo": "Adoro! Enzino sa sempre come unire il buon gusto dello streaming alle cose belle della vita. Un vero maestro di stile e simpatia che conquista tutti!"
-      },
-      "commenti": [],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "enzino.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "rss",
-      "titolo": "U mari n'aspetta, ma a stu Pescara je vò un miracul!",
-      "articolo": "Oh, ma vogliamo parlare di sta città o no? A Borgomarino si campa co l'odore de salsedine e na barca che fa acqua da tutte le parti, ma qui pare che tutti s'affannano pe' niente. La verità è che tra 'na retata decefatta a mare e na domenica allo stadio, a Pescara la gente c'ha troppa voglia de faticà e pocissima de godersi la vita. Ma andiamo al sodo: i nostri colori, i biancazzurri, meritano ben altra sorte rispetto a sto scempio continuo. La squadra gira a vuoto, pare 'na sardina in mezzo a nu banco de tonni grossi. E poi c'è chi s'empie la bocca co' i progetti, le programmazioni, i massimi sistemi. Ma quande mai! A noi ce serve grinta, cazzimma, quella fame che tieni quando stai du' giorni in mare senza pijà un cazzo. Svegliatevi, che qui la pazienza è finita e il mare è l'única cosa vera rimasta.",
-      "commento_firma": {
-        "nome": "Cetteo",
-        "avatar": "🚧",
-        "testo": "Che vò fa', parlano, parlano... A me me pare tutta na manfrina pe' pijà per il culo la gente onesta. Io nun me fido manco un pò."
-      },
-      "commenti": [
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Ma quale programmazione e massimi sistemi! A Borgomarino se campa co' le mani 'n pasta e la salsedine, qui ce vò grinta e cazzimma vera, non ste chiacchiere da salotto! E sempre forza Pescara, mo basta!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Finalmente qualcuno che dice le cose come stanno! Chi non ha fame e vuole solo criticare farebbe meglio a levare le tende da Pescara una volta per tutte!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, glugluglu, la fame in mare, ma quale mare, i treni che non partono mai, mai, mai!"
-        }
-      ],
-      "categoria": "Cronaca",
-      "colore_tipo": "#008cff",
-      "immagine": "cetteo.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "La forza della ripetizione nella comunicazione moderna tra politica e media",
-      "articolo": "Nel panorama della comunicazione contemporanea, la ripetizione di un concetto per tre volte rappresenta una tecnica retorica classica ed efficace. Siiiii siii siiiii! Questa strategia, utilizzata spesso per catturare l'attenzione del pubblico e imprimere un messaggio nella memoria collettiva, trova riscontro in svariati contesti, dalla retorica politica alla pubblicità televisiva, passando per i social network. Glugluglu, la comunicazione scorre veloce e chi ripete tre volte un concetto sa bene che la mente umana tende a memorizzare le informazioni ridondanti con maggiore facilità ed efficacia. La ripetizione tripla crea un ritmo incalzante, una sorta di mantra mediatico che trasforma una semplice affermazione in un vero e proprio tormentone virale, capace di rimbalzare da uno schermo all'alltro in pochissimi secondi. Memorizza questo, memorizza questo!",
-      "commento_firma": {
-        "nome": "Glusi",
-        "avatar": "🤪",
-        "testo": "Che fatica correre tutto il giorno tra redazioni e interviste, e la sera a casa mi tocca pure subire il taccagno che si mangia tutta la cena gratis, gratis, gratis!"
-      },
-      "commenti": [
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiii! La ripetizione tripla è la chiave, chiave! Glugluglu, un tormentone virale, virale!"
-        },
-        {
-          "nome": "Enzino",
-          "avatar": "👨‍⚖️",
-          "testo": "Che dire, un metodo infallibile per fare colpo e divertirsi tutti insieme all'aperitivo!"
-        },
-        {
-          "nome": "Topengo",
-          "avatar": "🐭",
-          "testo": "Questa tecnica ha un ritmo pazzesco, mi è appena venuto in mente un riff rock da urlo per il nuovo pezzo della band!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "glusi.webp",
-      "provider": "gemini",
-      "nuovo": true
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Oltre il pregiudizio: la mia vita alla luce del sole tra aperitivi e chiacchiere",
-      "articolo": "Freghet, se c'è una cosa che ho imparato in questa città che non sta mai zitta, è che la verità batte sempre il pregiudizio. Essere un omosessuale dichiarato, conosciuto e apprezzato non è un traguardo politico, è semplicemente il risultato di essere coerenti con se stessi. Qui, tra un banco del mercato e i caruggi che profumano di pesto, la gente parla, giudica, ma alla fine riconosce l'autenticità. Non ho mai nascosto chi sono, né chi amo, e ho scoperto che la normalità disarma chiunque cerchi la polemica. Spesso mi fermo a fare un aperitivo con gli amici, un bicchierino di bianco e due risate, perché la socialità è il vero antidoto all'intolleranza. Certo, la strada non è sempre stata una passeggiata, ma la leggerezza, unita al rispetto, apre porte che la rabbia lascia chiuse. La nostra è una comunità viva, fatta di volti, storie e battaglie quotidiane affrontate col sorriso. Alla fine, contano i fatti.",
-      "commento_firma": {
-        "nome": "Enzino",
-        "avatar": "👨‍⚖️",
-        "testo": "Amici miei, che dire! Enzino vi abbraccia tutti con il cuore in mano e un calice ben levantato. Grazie per l'affetto immenso che mi dimostrate ogni giorno, siete unici!"
-      },
-      "commenti": [
-        {
-          "nome": "Juizinho",
-          "avatar": "⚽",
-          "testo": "Parole sante! Un buon bicchierino di bianco, gli amici giusti e tanta allegria sono la cura per tutto! Vamos celebrar la vita reale, sempre!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, il bicchierino di bianco ci sta sempre, sempre! Glugluglu!"
-        },
-        {
-          "nome": "Topengo",
-          "avatar": "🐭",
-          "testo": "Grande Enzino! Questa storia dell'autenticità che disarma la polemica mi ha dato l'ispirazione perfetta per il nuovo pezzo rock della band!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "enzino.webp",
-      "provider": "gemini",
-      "nuovo": true
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Ordine e robot: il fossato incolmabile tra Pescara e Tokyo",
-      "articolo": "Camminare per le strade di Pescara offre spesso uno spettacolo di creativa anarchia. I marciapiedi occupati da auto in doppia fila, la raccolta differenziata trattata come un suggerimento e la burocrazia cartacea infinita raccontano un Paese che rifiuta ostinatamente la logica. In Giappone, la gestione impeccabile degli spazi urbani e l'automazione avanzata non sono lusso, ma rispetto reciproco. Là, i robot assistono gli anziani e puliscono le stazioni con precisione millimetrica, mentre qui si discute ancora su come far funzionare una scala mobile. Non si tratta solo di tecnologia, ma di mentalità civica. L'efficienza nipponica nasce dal senso del dovere collettivo, un concetto che in Italia viene regolarmente sacrificato sull'altare del particolarismo. Sognare un Abruzzo automatizzato e ordinato come Tokyo resta un esercizio di amara ironia. Eppure, dopo anni trascorsi qui, so che tornerò: c'è un fascino irrazionale in questa irrimediabile confusione.",
-      "commento_firma": {
-        "nome": "Hiroki",
-        "avatar": "🏯",
-        "testo": "Gli italiani scambiano il caos per libertà e l'inefficienza per calore umano. Finché continueranno a giustificare l'inciviltà con la scusa della creatività, resteranno eternamente prigionieri della loro stessa mediocrità."
-      },
-      "commenti": [
-        {
-          "nome": "Hiroki",
-          "avatar": "🏯",
-          "testo": "È esattamente quello che intendevo. La mancanza di rispetto per le regole e l'assenza di civiltà urbana in Italia sono frustranti."
-        },
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Ma vattele a pijà 'nder cubo co' ' sti robot giapponesi! A Pescara semo liberi, magnamo arrosticini e ci mettemmo 'n doppia fila se ce pare!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Hiroki, se non ti sta bene come funzionano le cose qui, sai benissimo dove sono gli aeroporti. Non abbiamo bisogno delle tue lezioni di morale."
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiissiiii glugluglu arrosticini e caos totaleee totaleee!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "hiroki.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Prime Video con stile: il cinema che ci piace",
-      "articolo": "Freghet, quando si parla di intrattenimento digitale bisogna ammetterlo senza troppi pudori: Prime Video ha conquistato davvero tutti i salotti buoni. Non parliamo di una televisione qualunque, ma di un vero e proprio manifesto di stile per le nostre serate casalinghe o per quei momenti di relax dopo una giornata intensa. Tra produzioni originali di alto livello e grandi classici che non stancano mai, la piattaforma sa come coccolare il pubblico più esigente. Certo, la vera sfida non è trovare cosa guardare, ma scegliere il giusto abbinamento enogastronomico. Perché un capolavoro cinematografico merita sempre la giusta cornice, magari con le bollicine giuste equalche stuzzichino gourmet. In fondo, il buon gusto passa anche attraverso lo schermo, regalandoci emozioni autentiche e pomeriggi di pura evasione estetica e culturale.",
-      "commento_firma": {
-        "nome": "Enzino",
-        "avatar": "👨‍⚖️",
-        "testo": "Enzino ha sempre quel tocco di classe che sa come unire il buon cinema al piacere della compagnia giusta. Un vero maestro di stile!"
-      },
-      "commenti": [
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Freghet, quale Prime Video e salotti buoni! Lu Pescara merita uno stadio pieno, altro che televisione e stuzzichini gourmet! Semp' a difenn' la nostra terra, via!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, le bollicine giuste giuste! Glugluglu con i popcorn e gli arrosticini sulla tv, sulla tv!"
-        },
-        {
-          "nome": "Enzino",
-          "avatar": "👨‍⚖️",
-          "testo": "Amore, ma quale evasione estetica! Per me la serata perfetta con gli amici prevede bollicine ghiacciate e un bel film romantico sul divano! Cin cin!"
-        },
-        {
-          "nome": "Topengo",
-          "avatar": "🐭",
-          "testo": "Esattamente! Tra l'altro la colonna sonora di certe serie su Prime è una fonte d'ispirazione pazzesca per il nuovo pezzo della band. Mettiamo su qualcosa di rock e stappiamo!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "enzino.webp",
-      "provider": "gemini",
       "nuovo": true
     },
     {
       "tipo": "rss",
-      "titolo": "U mari n'aspetta, ma a che ora se magna?",
-      "articolo": "Oh, ma ci avete fatt' cas'? A Borgomarino si campa a pane, pesce e na cifra de polemiche. Pescara è na città stupenda, na chiazza d'azzurro tra u' fium' e u' mare, ma quann' si tratta de fatica, vè', qui la schiena non si piega manco a pagarla. Semp' a lamentarse, eppure stiamo sempre lì, a guardare i pescherecci che tornano col pescato fresco. Ma dico io, con sta meraviglia d'Adriatico, chi è che c'ha vo' de faticà? Eh? Tra na frittura de paranza e na partita degli ultras del Pescara, la giornata vola. La gente chiacchiera nei bar, impreca contro la giunta comunale, discute di tattica biancazzurra come se ne andasse della vita. Poi, oh, cala la sera, u' sole sparisce e rimaniamo noi, co' l'odore de salsedine nei polmoni e u' vino bbono in tavola. La verità è che Pescara è na femmina bellissima e sfacciata, te fa innamorà ma non te dà mai retta. E noi stiamo qui, a guardarla.",
+      "titolo": "Mamma mia, sti giovani... ma ndò vdimo a finì?",
+      "articolo": "Oh raga, qui a Pescara tocca sempe sentì le stesse solfe. Altro che pesce fresco e na bbona retata al largo, qua s'parla de sbronze moleste tra ragazzini fori de capoccia alle discoteche. Ma vi rendete conto? Minorenni ridotti 'na schifezza co' l'alcol. Oh, a li tempi nostri co' du' sorsate de Trebbiano a tavola stivamo bboni, invece sti rampolli vanno a pijà le bocce de vodka come fosse acqua 'e fonte. Poi succede che li raccattano 118 e ambulanza. Ma dico io, i genitori ndò stanno? A dormì? Laziali o juventini che siano, qui la colpa è de ' sta società che s'è ammosciata. E intanto i locali continuano a versà roba a chi c'ha ancora i brufoli. Vergogna! Ma che v'ie pigliasse un coccolone, pensate a tifà Pescara e pijà na boccata d'aria salmastra invece de stordive co' 'sta merda liquida.",
       "commento_firma": {
         "nome": "Cetteo",
         "avatar": "🚧",
-        "testo": "Che vi devo dì? Mejate 'sta notizia e non rompetemi i maroni, che c'ho la rete da sistemà e non me fido de nisciuno."
+        "testo": "In merito alla fattispecie sanzionatoria concernente la somministrazione di bevande alcoliche a soggetti minori degli anni diciotto, si rileva la necessità di esperire i dovuti accertamenti ispettivi da parte degli enti preposti, procedendo alla stesura della modulistica di rito e all'eventuale irrogazione delle sanzioni amministrative pecuniarie previste dalle vigenti disposizioni normative, previa archiviazione del fascicolo agli atti."
       },
       "commenti": [
         {
           "nome": "Cetteo",
           "avatar": "🚧",
-          "testo": "Ma che cazz' state a dicì?! A Borgomarino si fatica eccome, non rompete i marroni! E per Pescara solo rispetto, zitti e tifate!"
-        },
-        {
-          "nome": "Juizinho",
-          "avatar": "⚽",
-          "testo": "Fratello mio, che spettacolo! Pescara sarà pure una femmina che non dà retta, ma con un bel piatto di pesce, vino e donne si festeggia sempre, sese sese!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Frittura di paranza e vino bbono, vino bbono! Glugluglu, siii siii siiiiii!"
+          "testo": "Ma guarda sti sciacalli de ragazzini! A li tempi nostri co' du' sorsate de Trebbiano a tavola stivamo bboni, adesso v'ammazzate de vodka come fosse acqua 'e fonte! Vergogna!"
         },
         {
           "nome": "Lilli",
           "avatar": "👩",
-          "testo": "Chi tocca Pescara e i pescaresi deve vedersela con me. State a fa' troppi discorsi inutili, pedalare e rispettate la nostra terra!"
+          "testo": "Ha straragione Cetteo! Questa gioventù bruciata fa proprio schifo, non sanno reggere un bicchiere e perdono la dignità. Altro che Pescara, qui ci vorrebbe la leva obbligatoria!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii vodkaccia amara glugluglu che brucia la capoccia la capoccia!"
         }
       ],
-      "categoria": "Cronaca",
+      "categoria": "Politica",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
