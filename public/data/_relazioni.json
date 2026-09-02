@@ -1,5 +1,5 @@
 {
-  "_runCount": 8,
+  "_runCount": 9,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -38,7 +38,7 @@
   "Lars→Cetteo": {
     "score": 0.778,
     "label": "amico",
-    "ultimo_aggiornamento": "31/08/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Hiroki→Cetteo": {
     "score": -1,
@@ -46,7 +46,7 @@
     "ultimo_aggiornamento": "02/09/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.7,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "02/09/2026"
   },
@@ -86,14 +86,14 @@
     "ultimo_aggiornamento": "02/09/2026"
   },
   "Lars→Juizinho": {
-    "score": 0.81,
+    "score": 0.71,
     "label": "amico",
-    "ultimo_aggiornamento": "30/08/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Juizinho→Lars": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "01/09/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Hiroki→Redazione": {
     "score": -0.022,
@@ -231,9 +231,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Juizinho": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "30/08/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Lilli→Lars": {
     "score": 0.978,
@@ -273,7 +273,7 @@
   "Hiroki→Glusi": {
     "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "01/09/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Lars→Glusi": {
     "score": 0.91,
@@ -331,9 +331,9 @@
     "ultimo_aggiornamento": "30/08/2026"
   },
   "Abbukk→Wolf": {
-    "score": 0.127,
-    "label": "neutro",
-    "ultimo_aggiornamento": "26/08/2026"
+    "score": 0.327,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Abbukk→Lars": {
     "score": 0.488,
@@ -381,7 +381,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": 0.258,
+    "score": 0.058,
     "label": "neutro",
     "ultimo_aggiornamento": "02/09/2026"
   },
@@ -551,9 +551,9 @@
     "ultimo_aggiornamento": "02/09/2026"
   },
   "Wolf→Abbukk": {
-    "score": -0.16,
+    "score": -0.06,
     "label": "neutro",
-    "ultimo_aggiornamento": "12/08/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Lilli→viaggiatore danese": {
     "score": 0.005,
@@ -643,7 +643,7 @@
   "Lars→Wolf": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "31/08/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Lilli→Autore": {
     "score": -1,
@@ -866,7 +866,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Glusi": {
-    "score": -0.704,
+    "score": -0.604,
     "label": "ostile",
     "ultimo_aggiornamento": "02/09/2026"
   },
@@ -1456,9 +1456,9 @@
     "ultimo_aggiornamento": "17/08/2026"
   },
   "Cetteo→Autore articolo": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "31/08/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Glusi→Autore articolo": {
     "score": 1,
@@ -2126,9 +2126,9 @@
     "ultimo_aggiornamento": "19/08/2026"
   },
   "Cetteo→Articolo": {
-    "score": -0.05,
+    "score": 0.15,
     "label": "neutro",
-    "ultimo_aggiornamento": "30/06/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Hiroki→Movimento Underground": {
     "score": -0.005,
@@ -3751,9 +3751,9 @@
     "ultimo_aggiornamento": "05/06/2026"
   },
   "Lamatte→Autore articolo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "31/08/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Cetteo→Plastic Free": {
     "score": -0.017,
@@ -6196,9 +6196,9 @@
     "ultimo_aggiornamento": "17/08/2026"
   },
   "Lars→Articolo": {
-    "score": 0.118,
+    "score": 0.218,
     "label": "neutro",
-    "ultimo_aggiornamento": "19/08/2026"
+    "ultimo_aggiornamento": "02/09/2026"
   },
   "Articolista→undefined": {
     "score": 0.118,
@@ -6354,5 +6354,10 @@
     "score": 0.3,
     "label": "simpatico",
     "ultimo_aggiornamento": "01/09/2026"
+  },
+  "Wolf→Articolo": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "02/09/2026"
   }
 }
