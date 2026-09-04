@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -106,9 +106,9 @@
     "ultimo_aggiornamento": "25/05/2026"
   },
   "Lars→Redazione": {
-    "score": -0.005,
-    "label": "neutro",
-    "ultimo_aggiornamento": "11/04/2026"
+    "score": -0.205,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "04/09/2026"
   },
   "Lars→Autore": {
     "score": 1,
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "04/09/2026"
   },
@@ -291,14 +291,14 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.5,
-    "label": "simpatico",
+    "score": 0.8,
+    "label": "amico",
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Lars→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "02/09/2026"
+    "ultimo_aggiornamento": "04/09/2026"
   },
   "Hiroki→Lilli": {
     "score": -0.739,
@@ -306,7 +306,7 @@
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Cetteo→Lilli": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "04/09/2026"
   },
@@ -1686,8 +1686,8 @@
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Topengo→Lilli": {
-    "score": 0.241,
-    "label": "neutro",
+    "score": 0.341,
+    "label": "simpatico",
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Cetteo→Giocatori Pescara": {
@@ -1746,8 +1746,8 @@
     "ultimo_aggiornamento": "25/04/2026"
   },
   "Lilli→Enzino": {
-    "score": 0.627,
-    "label": "simpatico",
+    "score": 0.727,
+    "label": "amico",
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Glusi→Enzino": {
@@ -6403,6 +6403,11 @@
   "Lilli→Gabriele (KIRATHEFOX92)": {
     "score": 0.3,
     "label": "simpatico",
+    "ultimo_aggiornamento": "04/09/2026"
+  },
+  "Lars→Montagne d'Abruzzo": {
+    "score": 0.2,
+    "label": "neutro",
     "ultimo_aggiornamento": "04/09/2026"
   }
 }
