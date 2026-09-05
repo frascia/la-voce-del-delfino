@@ -1,5 +1,5 @@
 {
-  "_runCount": 10,
+  "_runCount": 11,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -116,9 +116,9 @@
     "ultimo_aggiornamento": "03/09/2026"
   },
   "Cetteo→Autore": {
-    "score": -0.675,
+    "score": -0.975,
     "label": "ostile",
-    "ultimo_aggiornamento": "02/09/2026"
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Hiroki→Autore": {
     "score": 0.9,
@@ -216,7 +216,7 @@
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Glusi→Cetteo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "05/09/2026"
   },
@@ -261,9 +261,9 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Juizinho→Autore": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "02/09/2026"
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Enzo→Autore": {
     "score": -0.005,
@@ -278,7 +278,7 @@
   "Lars→Glusi": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "04/09/2026"
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Juizinho→Glusi": {
     "score": 1,
@@ -646,8 +646,8 @@
     "ultimo_aggiornamento": "03/09/2026"
   },
   "Lilli→Autore": {
-    "score": -0.6,
-    "label": "diffidente",
+    "score": -0.8,
+    "label": "ostile",
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Abbukk→Cetteo": {
@@ -1003,7 +1003,7 @@
   "Lars→Topengo": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "03/09/2026"
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Cetteo→Topengo": {
     "score": -1,
@@ -1011,9 +1011,9 @@
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Hiroki→Topengo": {
-    "score": -0.487,
+    "score": -0.287,
     "label": "diffidente",
-    "ultimo_aggiornamento": "04/09/2026"
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Lilli→Topengo": {
     "score": 0.548,
@@ -1031,7 +1031,7 @@
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Lilli→Lamatte": {
-    "score": -0.8,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "05/09/2026"
   },
@@ -1151,8 +1151,8 @@
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Topengo→Hiroki": {
-    "score": 0.135,
-    "label": "neutro",
+    "score": 0.335,
+    "label": "simpatico",
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Glusi→Topengo": {
@@ -1161,7 +1161,7 @@
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Lamatte→Cetteo": {
-    "score": 0.055,
+    "score": 0.255,
     "label": "neutro",
     "ultimo_aggiornamento": "05/09/2026"
   },
@@ -1316,9 +1316,9 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Lilli→Bartender": {
-    "score": 0.239,
-    "label": "neutro",
-    "ultimo_aggiornamento": "06/08/2026"
+    "score": 0.339,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Cetteo→Giornalista": {
     "score": -0.239,
@@ -2121,9 +2121,9 @@
     "ultimo_aggiornamento": "19/08/2026"
   },
   "Glusi→Articolo": {
-    "score": 0.063,
+    "score": 0.263,
     "label": "neutro",
-    "ultimo_aggiornamento": "19/08/2026"
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Cetteo→Articolo": {
     "score": -0.045,
@@ -5501,13 +5501,13 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Cetteo→Autore dell'articolo": {
-    "score": -0.409,
-    "label": "diffidente",
+    "score": -0.709,
+    "label": "ostile",
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Lilli→Autore dell'articolo": {
-    "score": -0.368,
-    "label": "diffidente",
+    "score": -0.668,
+    "label": "ostile",
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Lucap→Autore dell'articolo": {
@@ -5516,9 +5516,9 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Glusi→Autore dell'articolo": {
-    "score": 0.619,
+    "score": 0.519,
     "label": "simpatico",
-    "ultimo_aggiornamento": "29/08/2026"
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Autore dell'articolo→Abbukk": {
     "score": 0.21,
@@ -5711,9 +5711,9 @@
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Lamatte→Autore dell'articolo": {
-    "score": 0.578,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "29/08/2026"
+    "score": 0.878,
+    "label": "amico",
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Ohje→Lilli": {
     "score": -0.041,
@@ -5801,9 +5801,9 @@
     "ultimo_aggiornamento": "22/08/2026"
   },
   "Juizinho→Topengo": {
-    "score": 0.81,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "29/08/2026"
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Enzino→Avvocato": {
     "score": 0.831,
@@ -6196,9 +6196,9 @@
     "ultimo_aggiornamento": "17/08/2026"
   },
   "Lars→Articolo": {
-    "score": 0.196,
-    "label": "neutro",
-    "ultimo_aggiornamento": "02/09/2026"
+    "score": 0.396,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "05/09/2026"
   },
   "Articolista→undefined": {
     "score": 0.106,
@@ -6413,6 +6413,11 @@
   "Autore dell'articolo→Questa": {
     "score": -0.2,
     "label": "neutro",
+    "ultimo_aggiornamento": "05/09/2026"
+  },
+  "Topengo→Articolo": {
+    "score": 0.3,
+    "label": "simpatico",
     "ultimo_aggiornamento": "05/09/2026"
   }
 }
