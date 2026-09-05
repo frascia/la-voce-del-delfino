@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "05/09, 16:16",
+  "prossimo_aggiornamento": "06/09, 01:52",
   "news": [
     {
       "tipo": "gen",
@@ -155,7 +155,34 @@
       "colore_tipo": "#ff4d4d",
       "immagine": "lilli.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
+    },
+    {
+      "tipo": "gen",
+      "titolo": "La carta profuma ancora di buono",
+      "articolo": "Chi pensa che i libri di carta siano roba del passato non ha capito niente della vita. Tra gli scaffali delle librerie indipendenti si respira ancora quell'odore inconfondibile di inchiostro e colla che nessun e-reader potrà mai replicare. Negli ultimi mesi le novità editoriali stanno riempiendo le tavole dei lettori con una varietà che spazia dalla saggistica più rigorosa alla narrativa contemporanea di alto livello. Non serve rincorrere l'ultimo algoritmo o il bestseller pompato dai social per trovare storie che lasciano il segno. Le case editrici continuano a investire su voci forti, traduzioni curate e saggi capaci di spiegare il presente senza banalizzarlo. Leggere non è un passatempo elitario, è un atto di resistenza quotidiana contro il rumore di fondo del mondo. Che si tratti di un romanzo corposo o di una raccolta di racconti fulminanti, il libro resta lo strumento più potente per capire chi siamo. Chiudete gli schermi, fatevi un favore e tornate a girare pagine vere.",
+      "commento_firma": {
+        "nome": "Lilli",
+        "avatar": "👩",
+        "testo": "Finalmente una boccata d'ossigeno in mezzo a questo mare di mediocrità digitale! Voglio vedere scaffali pieni e menti aperte, basta con le letture superficiali da quattro soldi!"
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Parole sante! Non c'è algoritmo che tenga di fronte al fruscio di una pagina vera. Chiudete sti smartphone e compratevi un libro, cazzo!"
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Esattamente come il silenzio della montagna a Roccamorice, la carta stampata dà il tempo di pensare. E poi tra una lettura e degli arrosticini la vita ha un senso, siii."
+        }
+      ],
+      "categoria": "Da Leggere",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "lilli.webp",
+      "provider": "gemini",
+      "nuovo": false
     }
   ]
 }
