@@ -1,5 +1,5 @@
 {
-  "_runCount": 2,
+  "_runCount": 3,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -46,8 +46,8 @@
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.05,
-    "label": "neutro",
+    "score": -0.25,
+    "label": "diffidente",
     "ultimo_aggiornamento": "06/09/2026"
   },
   "Lars→Hiroki": {
@@ -66,7 +66,7 @@
     "ultimo_aggiornamento": "06/09/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -1,
+    "score": -0.95,
     "label": "ostile",
     "ultimo_aggiornamento": "06/09/2026"
   },
@@ -116,8 +116,8 @@
     "ultimo_aggiornamento": "03/09/2026"
   },
   "Cetteo→Autore": {
-    "score": -0.577,
-    "label": "diffidente",
+    "score": -0.777,
+    "label": "ostile",
     "ultimo_aggiornamento": "06/09/2026"
   },
   "Hiroki→Autore": {
@@ -346,7 +346,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.6,
+    "score": -0.3,
     "label": "diffidente",
     "ultimo_aggiornamento": "06/09/2026"
   },
@@ -516,9 +516,9 @@
     "ultimo_aggiornamento": "05/09/2026"
   },
   "Glusi→Autore": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "05/09/2026"
+    "ultimo_aggiornamento": "06/09/2026"
   },
   "Lars→Giornalista": {
     "score": 0.044,
