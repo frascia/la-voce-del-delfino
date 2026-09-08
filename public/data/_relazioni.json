@@ -1,5 +1,5 @@
 {
-  "_runCount": 11,
+  "_runCount": 12,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,7 +36,7 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "08/09/2026"
   },
@@ -61,13 +61,13 @@
     "ultimo_aggiornamento": "08/09/2026"
   },
   "Cetteo→Lars": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "08/09/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -0.65,
-    "label": "ostile",
+    "score": -0.55,
+    "label": "diffidente",
     "ultimo_aggiornamento": "08/09/2026"
   },
   "Juizinho→Hiroki": {
@@ -81,12 +81,12 @@
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "08/09/2026"
   },
   "Lars→Juizinho": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "08/09/2026"
   },
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "08/09/2026"
   },
@@ -276,9 +276,9 @@
     "ultimo_aggiornamento": "08/09/2026"
   },
   "Lars→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "07/09/2026"
+    "ultimo_aggiornamento": "08/09/2026"
   },
   "Juizinho→Glusi": {
     "score": 1,
@@ -346,8 +346,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": -0.05,
-    "label": "neutro",
+    "score": -0.25,
+    "label": "diffidente",
     "ultimo_aggiornamento": "08/09/2026"
   },
   "Abbukk→Hiroki": {
@@ -383,7 +383,7 @@
   "Glusi→Hiroki": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "07/09/2026"
+    "ultimo_aggiornamento": "08/09/2026"
   },
   "utente→Lars": {
     "score": 0.005,
@@ -1761,9 +1761,9 @@
     "ultimo_aggiornamento": "12/07/2026"
   },
   "Cetteo→Enzino": {
-    "score": -0.297,
+    "score": -0.597,
     "label": "diffidente",
-    "ultimo_aggiornamento": "04/09/2026"
+    "ultimo_aggiornamento": "08/09/2026"
   },
   "Lucap→Wolf": {
     "score": 0.319,
@@ -5526,9 +5526,9 @@
     "ultimo_aggiornamento": "30/07/2026"
   },
   "Autore dell'articolo→Glusi": {
-    "score": 0.721,
+    "score": 0.821,
     "label": "amico",
-    "ultimo_aggiornamento": "06/09/2026"
+    "ultimo_aggiornamento": "08/09/2026"
   },
   "Bartender→Narratore": {
     "score": 0.135,
@@ -5651,9 +5651,9 @@
     "ultimo_aggiornamento": "25/07/2026"
   },
   "Enzino→Juizinho": {
-    "score": 0.883,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "06/09/2026"
+    "ultimo_aggiornamento": "08/09/2026"
   },
   "Cetteo→Juizino": {
     "score": -0.05,
@@ -5751,9 +5751,9 @@
     "ultimo_aggiornamento": "28/07/2026"
   },
   "Autore dell'articolo→Enzino": {
-    "score": 0.476,
+    "score": 0.676,
     "label": "simpatico",
-    "ultimo_aggiornamento": "06/09/2026"
+    "ultimo_aggiornamento": "08/09/2026"
   },
   "Autore dell'articolo→Lars": {
     "score": 0.279,
@@ -5911,9 +5911,9 @@
     "ultimo_aggiornamento": "21/08/2026"
   },
   "Juizinho→Enzino": {
-    "score": 0.41,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "06/09/2026"
+    "score": 0.21,
+    "label": "neutro",
+    "ultimo_aggiornamento": "08/09/2026"
   },
   "Wolf→Autore dell'articolo": {
     "score": 0.125,
@@ -6171,9 +6171,9 @@
     "ultimo_aggiornamento": "16/08/2026"
   },
   "Autore dell'articolo→Juizinho": {
-    "score": 0.286,
-    "label": "neutro",
-    "ultimo_aggiornamento": "06/09/2026"
+    "score": 0.486,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "08/09/2026"
   },
   "Lilli→Ostiamare": {
     "score": -0.129,
