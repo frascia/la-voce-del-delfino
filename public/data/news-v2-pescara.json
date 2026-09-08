@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "08/09, 04:53",
+  "prossimo_aggiornamento": "08/09, 05:58",
   "news": [
     {
       "tipo": "personaggio",
@@ -170,7 +170,7 @@
       "colore_tipo": "#008cff",
       "immagine": "glusi.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -202,7 +202,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -266,7 +266,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -292,6 +292,171 @@
           "nome": "Lilli",
           "avatar": "👩",
           "testo": "Finalmente qualcuno che dice le cose come stanno senza filtri. La maglia biancazzurra addosso e via, il resto sono solo chiacchiere da bar di chi non ha mai preso un'onda in faccia."
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il mistero delle parole ripetute e il ritorno della sera con il taccagno",
+      "articolo": "Siiii siii siiiiii! Sotto la pioggia battente o nel traffico più caotico della città, la mia vita da inviato in giro per le strade non si ferma mai un attimo, mai un attimo. Tra un'intervista al volo e una corsa per prendere l'ultima notizia prima della chiusura delle redazioni, le giornate volano via a una velocità incredibile, incredibile. Glugluglu, bevo un sorso d'acqua al volo e riparto subito verso la prossima tappa della mia inchiesta, la mia inchiesta. La sera però, quando finalmente rientro a casa distrutto e con le ossa a pezzi, chi ti trovo comodamente seduto sul divano? Ma proprio lui, il mio amico taccagno di fiducia, quello che riesce sempre a scroccare più di quanto offre, di quanto offre! Si siede, beve il mio caffè e sparisce nel nulla, nel nulla.",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Che fatica ragazzi, ma almeno il portafoglio del mio amico ospite non ha sofferto troppo... o forse sì, ahahah!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Lu trafficu modernu e sti giornalisti da tastiera... a me basta nu piattu dece arrosticini veraci e 'na barca, ma che vu' capì?"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questo caos urbano e la mancanza di rispetto per la tranquillità altrui dimostrano una totale assenza di civiltà. Dovreste imparare l'ordine."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma basta con questo vittimismo da quattro soldi! Se non sai gestirti la vita e ti fai scroccare il caffè in casa, è colpa tua, svegliati!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Oltre il pregiudizio: la mia vita en plen air tra aperitivi e libertà",
+      "articolo": "Freghet, se c'è una cosa che ho imparato vivendo in questa città che non sta mai zitta, è che l'autenticità paga sempre. Essere un omosessuale dichiarato, beh, non è mai stato un mistero per nessuno qui, e fortunatamente ho sempre trovato più aperitivi offerti che porte in faccia. Certo, i pregiudizi durano a morire, strisciano nei vicoli come certe voci di corridoio, ma io rispondo sempre con un sorriso e un buon bicchiere di bianco in mano. Non serve urlare per farsi rispettare, basta esser se stessi senza chiedere permesso. La nostra comunità ha fatto passi da gigante, eppure c'è sempre chi vorrebbe dettare le regole su come dovremmo camminare, parlare o amare. Ma noi siamo qui, rumorosi quanto basta, colorati e fieri, seduti al nostro tavolino all'aperto, a guardare il mondo che cambia mentre noi restiamo saldi alla nostra felicità.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino ha quel tocco unico che sa trasformare ogni chiacchiera da bar in una lezione di vita memorabile: adorabile, caustico al punto giusto e sempre amatissimo da tutti noi!"
+      },
+      "commenti": [
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Sììì amore mio, parole sante! Un bicchiere di bianco, un sorriso e via, che la classe non è acqua!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Chiunque osi dire mezza parola fuori posto si becca una sberla che la metà basta. Avanti così, sempre a testa alta!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Freghet, quanta verità! La gente deve farsi li cazzi sua e basta, invece di rompere i maroni!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Ordine e automazione: quando il sogno giapponese si scontra con la realtà di Pescara",
+      "articolo": "Osservo da anni la mia amata Pescara con lo sguardo del sognatore pragmatico. Spesso rifletto su cosa accadrebbe se questo Paese, straordinario per cuore e creatività, importasse un frammento di civiltà nipponica. Parlo di efficienza, rispetto rigoroso delle regole e integrazione tecnologica. In Giappone la puntualità è sacra e i robot non rubano il lavoro, ma supportano una società che invecchia, gestendo la logistica e la cura con precisione millimetrica. Qui in Abruzzo la burocrazia soffoca l'innovazione e la gestione urbana vive di improvvisazione. Immaginare un sistema automatizzato per la raccolta differenziata o sportelli comunali digitali e rapidi sembra fantascienza. Eppure, prima del mio prossimo viaggio di ritorno verso Tokyo, continuo a sperare che questo territorio possa evolversi. Tornerò qui, perché amo Pescara profondamente, ma l'Italia ha bisogno di una scossa culturale per colmare il divario con il futuro.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "Un'occasione perduta dietro all'eterna pigrizia italica: finché si preferirà lamentarsi anziché copiare i modelli virtuosi del Sol Levante, resteremo intrappolati nel caos."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Finalmente qualcuno che comprende la necessità di ordine e disciplina tecnologica! La precisione giapponese risolverebbe anni di improvvisazione."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma vattele a pijà na birra in Giappone, oh! A Pescara semo cresciuti a pane, arrosticini e cagnà, le vostre macchinette levatele de mezzo!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Io sto con l'autore e la sua visione pragmatica, chi critica senza capire il cuore di Pescara farebbe meglio a salire sul primo aereo per Tokyo."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, robot con gli arrosticini giapponesi, glugluglu arrosticini giapponesi!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Prime Video con stile: i titoli che meritano un calice di bianco",
+      "articolo": "Freghet, se c'è una cosa che so fare bene, oltre a scegliere l'outfit giusto per l'aperitivo, è godermi una buona serie sul divano dopo il tramonto. Prime Video ha svoltato le serate di tutti noi, diciamoci la verità. Tra una chiacchiera alcolica e l'altra con gli amici, la piattaforma di casa Bezos regala chicche imperdibili. Io adoro il mix perfetto tra glamour e sostanza. Penso a capolavori come 'The Marvelous Mrs. Maisel', dove ogni abito è una lezione di stile e la protagonista ha una parlantina che ti conquista al primo secondo. Oppure, per chi cerca quel brivido elegante che non guasta mai, le produzioni europee offrono spunti pazzeschi. Non serve essere critici cinematografici per capire cosa funziona: basta avere buon gusto e il bicchiere sempre pieno. Dopotutto, il relax merita la stessa cura che mettiamo nel prenderci cura di noi stessi. Spegniamo il telefono, stappiamo qualcosa di buono e lasciamoci trasportare dalle storie che contano davvero.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino ha sempre quel tocco unico che trasforma ogni consiglio in un evento mondano. Adorabile!"
+      },
+      "commenti": [
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Ma amore mio, ma vogliamo parlare degli outfit di Mrs. Maisel? Cioè iconica è dire poco, io me li rifarei tutti su misura! Sii fabulosa o vai a casa!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Abiti favolosi abiti favolosi, glugluglu, siii siii siiiii, da bere da bere!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Finalmente qualcuno che capisce di cinema e non spara cavolate! Mrs. Maisel è un capolavoro assoluto e chi dice il contrario si becca una cinquina nei denti!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U mari n'aspetta, ma lu Pescara non perdona",
+      "articolo": "Oh, ma via! Chi cazz' ha voglia di faticà stamattina? C'è u sole, a marea è bbona e a me mi tocca scrive di cronaca pescarese. Vabbè, facciamo sto dovere e poi via a Borgomarino a vedè se tirano su du' tose sane. A Pescara sembren tutt'agitati. Tra cantieri che bloccano via Nicola Fabriza e polemiche su sta benedetta cittadella dello sport, a cità pare un gommato forato. Ma dico io, invece di rompe li coglioni con ste carte bollate, pensassimo a sta squadra. Domenica c'è la trasferta e i ragazzi vogliono i tre punti, capì? A Zemanlandia ci siamo abituati male, mo ogni pareggio sembra na tragedia greca. La gente mormora al mercato vecchio, tra na cassetta di triglie e na frittura mista. E intanto i prezzi del pesce fresco salgono, ch'è na vergogna. Ma noi resistiamo, con la canna in mano e na Peroni fredda. Chi non ama u mare e i biancazzurri non è di Pescara. Punto.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che c'azzecQuesta cronaca poi... mah, chi sa chi c'è dietro. A me me puzza de marcio, come u pesce liscio lasciato al sole."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Oh finalmente uno che dice le cose come stann'! A Borgomarino si lavora da dio e poi co na Peroni fredda passa tutt'! E sti forestieri che rompono co le carte bollate via da Pescara, u mare è nostro e i tre punti pure, cazz'!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Oh, Cetteo ha ragione da vendere! La squadra deve vincere e chi critica Zemanlandia o rompe le scatole alla città merita solo un bel volo giù dal molo! A Pescara non si scherza, guai a chi tocca i nostri colori!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, triglie fritte e Peroni ghiacciata glugluglu! Pescara vola come un gommato bucato, glugluglu! I tre punti alla riscossa, alla riscossa!"
         }
       ],
       "categoria": "Cronaca",
