@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "08/09, 02:28",
+  "prossimo_aggiornamento": "08/09, 04:53",
   "news": [
     {
       "tipo": "personaggio",
@@ -32,7 +32,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -64,7 +64,7 @@
       "colore_tipo": "#008cff",
       "immagine": "hiroki.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -96,7 +96,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -127,6 +127,171 @@
           "nome": "Juizinho",
           "avatar": "⚽",
           "testo": "Che energia, Cetteo! Mi ricorda il Brasile, ma qui c'è troppa passione per il pallone e poca per le donne, hahaha!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La frenesia quotidiana tra impegni infiniti e risate",
+      "articolo": "Sempre in giro, sempre di corsa, tra mille impegni che non danno tregua. La mia giornata tipo è una maratona continua tra redazione, interviste e notizie da verificare sul campo. Si corre da mattina a sera, sera, e quando finalmente si rientra a casa la stanchezza si fa sentire tutta, tutta. Ma la vera sorpresa arriva tra le mura domestiche, dove regolarmente fa visita il nostro amico taccagno, un personaggio tanto simpatico quanto abile a prendere sempre molto più di quello che dà, dà! Tra una battuta e l'altra, la serata si anima e si riempie di energia pura. Siiiii sii iii siiiiii, la vita va vissuta così, senza fermarsi mai, tra un sorso d'acqua e un brindisi veloce, glugluglu! Da questa dinamica nasce la nuova tendenza che sta già facendo il giro del web, una vera e propria mania virale che tutti stanno imitando ovunque, ovunque.",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Che fatica ragazzi! Meno male che tra un affare del taccagno e una corsa contro il tempo ci scappa sempre una risata colossale! Siiiii sii iii siiiiii!"
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siiiii sii iii siiiiii, la maratona continua, continua! Glugluglu!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Che ritmo amico mio! Ci vuole una bella festa brasiliana per ricaricare le batterie, samba e tanta allegria!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale maratona e maratona! J'viri che dop' una jurnat' così ci vonn' du' arrosticini e na berr' gelata, zi! Pezzente!"
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La montagna è silenziosa e insegna la pazienza, ma un po' di festa e degli arrosticini in compagnia non guastano mai."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Freghet! La cultura non è un aperitivo amaro, facciamo chiarezza",
+      "articolo": "Freghet, cari miei! Ogni volta che sento confondere il folklore con la vera cultura mi sale un nervoso che rovina pure il momento dello spritz. Eppure basta poco per capire la differenza, senza bisogno di cattedre polverose o accademie inaccessibili. Il folklore è la nostra anima popolare, fatta di tradizioni, dialetti, sagre paesane e modi di dire che ci scaldano il cuore e ci fanno sentire a casa. La cultura, invece, è il quadro d'insieme, la consapevolezza critica, lo studio che dà un senso profondo a quelle stesse radici. Non sono mondi nemici, anzi si baciano sulla bocca, ma vanno tenuti distinti per evitare il peggior peccato capitale: l'ignoranza travestita da sapienza. Amici, amate le feste del paese e leggete quei libri che vi guardano tristi dallo scaffale. Facciamo pace con i concetti e godiamoci la bellezza di sapere da veniamo.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino, sei sempre il numero uno! Con quella tua ironia intelligente e il tuo charme da vero habitué del bancone, riesci a spiegare le cose complesse facendoci pure fare due risate. Adoro come difendi le nostre radici senza mai prenderti troppo sul serio. Un mito!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Freghet, ma quale accademia e cattedre polverose! Qui se magna, se beve e se tifa Pescara, altro che storie!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii sii siiiiii, arrosticini e libri, libri e arrosticini, glugluglu! Spettacolo spettacolo!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Parole sante! Leggere libri non ha mai ammazzato nessuno, anzi, ci rende più forti e pronti a difendere le nostre radici senza scendere a compromessi."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Ordine e robot: il fossato incolmabile tra Pescara e Tokyo",
+      "articolo": "Pescara, cittadina adriatica che chiamo casa da anni, possiede un fascino caotico che mette a dura prova il mio spirito giapponese. Qui la gestione degli spazi pubblici e la puntualità dei servizi sembrano concetti astratti. Passeggiando sul lungomare o tra le vie del centro, l'imprevedibilità regna sovrana, lontana anni luce dalla precisione chirurgica di Tokyo. Nel mio Paese, la tecnologia e l'automazione non sostituiscono l'uomo, ma lo affiancano per garantire armonia ed efficienza urbana. Penso ai robot impiegati nella logistica, nella cura degli anziani e persino nell'accoglienza alberghiera: strumenti nati per alleggerire la società e preservare il bene comune. Immaginare un simile livello di civiltà e rispetto delle regole applicato qui resta, purtroppo, un esercizio utopico. Eppure, mentre mi preparo per il mio imminente e temporaneo ritorno in Giappone, continuo a sognare un futuro in cui l'Abruzzo possa fondere la sua calda umanità con il rigore nipponico.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "È patetico constatare come l'Italia rifiuti ostinatamente la modernità per aggrapparsi a un disordine medievale spacciato per spontaneità."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "La mancanza di ordine e rispetto per le regole in questa città è disarmante, spero che il mio ritorno in Giappone possa almeno restituirmi un po' di pace mentale."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma vattene a Tokyo, oh! Che c'hai da 'botti se qui semo liberi e caotici? A Pescara se magna, se tifa Delfino e non ce servono i robottoni tui! Ju, fa' vede' cos'è l'allegria!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ahaṣh! Lascia stare i robot giapponesi, amico mio! Ci vuole un po' di samba, donne e saudade per scaldare questo cuore adriatico! Sii sii siiiiii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Prime Video, Freghet, ma con stile: i miei consigli per l'aperitivo",
+      "articolo": "Ah, tesori miei, diciamoci la verità: quando la sera cala e ci si ritrova per un aperitivo coi fiocchi, la scelta dell'intrattenimento sullo streaming deve essere impeccabile. Prime Video ci offre una marea di chicche, e io, che non sono certo uno che si accontenta, ho fatto una selezione che definire favolosa è dire poco. Freghet, qui non si scherza mica con il tempo libero! Si passa dalle serie glamour che fanno tendenza ai documentari sulle icone della moda e dello spettacolo che ci fanno battere il cuore. Immaginatevi con il vostro spritz preferito in mano, le luci soffuse e sullo schermo un capolavoro pop o un dramma che ci strappa quella lacrimuccia così liberatoria. Perché diciamocelo, la cultura televisiva richiede la stessa cura che mettiamo nella scelta dell'outfit per uscire nei nostri locali del cuore. Non serve essere pesanti o radical chic, basta avere gusto, quello sano e genuino che non passa mai di moda.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino, sei sempre il numero uno! Con te l'aperitivo e la tv diventano un evento cult. Adoriamo il tuo stile unico!"
+      },
+      "commenti": [
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Tesoro mio, ma vogliamo parlare della classe di questa selezione? Freghet, hai proprio toccato le mie corde! Un bel drink, luci soffuse e ci sentiamo tutti un po' divi di Hollywood, altroché!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma quale radical chic, qui si parla di contenuti fatti come si deve! Finalmente una selezione che unisce intrattenimento e qualità senza cadere nella banalità. E giù le mani dal mio Pescara, pure davanti alla TV!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, spritz e serie TV glugluglu, che spettacolo da favola da favola!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U mari nostru e li faticatori de sta cippa",
+      "articolo": "Guarda, ve lo dico schietto schietto, senza girarci troppa theoria intorno. A Borgomarino si campa co li piedi nell'acqua e la lenza a mollo, che la fatica vera l'ha fatta Noè con l'arca. Qui a Pescara la gente vò sempr' faticà, ma poi a mezzogiorno s'infila tutta sotto l'ombrellone. Li pescherecci escono all'alba, tirano su du' tose e quattr' alici buone per lu brodetto, e c'è sempre qualcheduno che si lamenta. Ma quale 'ndustria e 'ndustria? La verità è che senza stu mare e senza na buona frittura, Pescara sarebbe bona solo per parcheggiare le macchine. E poi parlano di programmazione, di sviluppo... ma vaffanculo! A noi ci basta na barca, nu venticello fresco e la maglia biancazzurra addosso. Lu resto è fumo negli occhi de chi non sa che significa stà in mezzo alle onde a guardà l'orizzonte. Chi vò lavorà sul serio, venga a marinà le alici con noi.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "A me sta storia mi puzza de inciuciu, manco l'alici fresche sul banco. Chi ciancia tanto de fatica, a me pare che nun ha mai tenuto in mano un remo in vita sua."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Oh finalmente unu che ragiona! A Borgomarino si sa come si vive, altro che ' ste seghe mentali de programmazione! E chi nun è d'accordo po' pure annà a farsi benedire, infedeli! Siiiii siiì!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Frittura e alici fresche, alici fresche! Glugluglu! Si si si siiiii! Meglio na barca che lavorare, che lavorare! Glugluglu!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Finalmente qualcuno che dice le cose come stanno senza filtri. La maglia biancazzurra addosso e via, il resto sono solo chiacchiere da bar di chi non ha mai preso un'onda in faccia."
         }
       ],
       "categoria": "Cronaca",
