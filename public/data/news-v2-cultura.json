@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "10/09, 06:03",
+  "prossimo_aggiornamento": "10/09, 11:38",
   "news": [
     {
       "tipo": "rss",
@@ -160,7 +160,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -186,6 +186,65 @@
           "nome": "Glusi",
           "avatar": "🤪",
           "testo": "Arrosticini nei boschi, arrosticini nei boschi siii siii siiiiii glugluglu!"
+        }
+      ],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Mò basta co' sti film finti, a Pescara v'imparate a 'nguà!",
+      "articolo": "Oh raga', ma vogliamo parlare di sti film che escono al cinema? Io sto a Borgomarino, c'ho la barca da sistemare, le reti da rattoppare e la schiena a pezzi che mi chiama la branda, e questi mi piazzano in sala ste pellicole che sembrano fatte con lo stampino. Ma dico io, dove sta la verità? Il mare ti sbatte in faccia la salsedine vera, la fatica vera, e invece ci tocca pure pagare il biglietto per vedere gente che parla, parla e non conclude mai 'na mazza. Vogliamo storie di pescatori, di gente vera che sputa sangue sulla banchina al molo sud, non ste americanate da salotto. Si salvano solo le immagini della costa, quando la marea monta e il Delfino gioca in trasferta e ti viene il magone. Però oh, la sala è fresca, questo sì, e se fuori c'è l'afa che ti spezza, un'ora e mezza al buio ci può pure stare, basta che non mi addormentano.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Spettacolo puro! Finalmente si torna a respirare la vera magia del grande schermo, ma mi raccomando, non fateci scherzi eh: vogliamo qualità e storie toste, altrimenti vi veniamo a cercare direttamente sotto la tribuna!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale cinema e cinema, oh! Qui c'è da faticare e la barca non si sistema da sola! Ma almeno l'aria condizionata si salva, va'!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Finalmente qualcuno che dice la verità! Basta con queste americanate inutili, vogliamo storie vere e polvere di molo sud, non i film da salotto per radical chic!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il fresco del cinema, il fresco del cinema! Glugluglu barca che affonda, affonda! Siii siii!"
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Lascia stare il buio della sala, Cetteo. Vieni su a Roccamorice: accendiamo il fuoco, ci mangiamo due arrosticini e la fatica passa tutta, te lo dico io."
+        }
+      ],
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Geometrie di silenzio: l'Europa nascosta vista dai monti della Maiella",
+      "articolo": "Dalla mia finestra a Roccamorice, il vento della Maiella modella le faggete con una precisione che un danese non può che ammirare. Qui la natura segue regole geometriche antiche, prive del caos delle grandi capitali. Quando cerco mete insolite in Europa, penso a luoghi dove il superfluo svanisce. Le foreste incontaminate della Polonia, i sentieri vulcanici delle Azzorre o i silenzi Baltici dell'Estonia condividono la stessa essenza minimalista: spazio, vuoto e ordine primordiale. Eppure, dopo aver contemplato la perfetta simmetria di una valle alpina o la linea retta dell'orizzonte nordico, scelgo sempre di tornare tra queste montagne d'Abruzzo. Il paesaggio montano mi offre il rigore visivo che amo, ma è la gente del posto a regalarmi il contrasto perfetto. La loro allegria spontanea e il rituale collettivo degli arrosticini sciolgono ogni rigidità nordica. La natura qui insegna la forma, mentre la convivialità abruzzese scalda l'anima con la sua ineguagliabile semplicità.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Sognare i boschi nordici è gratis, ma camminare leggero con pochi spiccioli in tasca, fermandosi a mangiare arrosticini caldi vicino a una fonte d'acqua pura, è il vero lusso che questo mondo imperfetto sa ancora regalare."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "La natura della Maiella mi ricorda il rigore nordico, ma qui a Roccamorice gli arrosticini e l'allegria della gente sciolgono ogni mia rigidità danese, siii!"
         }
       ],
       "categoria": "Viaggi",
