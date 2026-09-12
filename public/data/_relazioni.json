@@ -1,5 +1,5 @@
 {
-  "_runCount": 2,
+  "_runCount": 3,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -41,13 +41,13 @@
     "ultimo_aggiornamento": "11/09/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "11/09/2026"
+    "ultimo_aggiornamento": "12/09/2026"
   },
   "Juizinho→Cetteo": {
-    "score": 0.319,
-    "label": "simpatico",
+    "score": -0.181,
+    "label": "neutro",
     "ultimo_aggiornamento": "12/09/2026"
   },
   "Lars→Hiroki": {
@@ -66,7 +66,7 @@
     "ultimo_aggiornamento": "12/09/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -0.766,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "12/09/2026"
   },
@@ -111,9 +111,9 @@
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Lars→Autore": {
-    "score": 0.756,
+    "score": 0.956,
     "label": "amico",
-    "ultimo_aggiornamento": "11/09/2026"
+    "ultimo_aggiornamento": "12/09/2026"
   },
   "Cetteo→Autore": {
     "score": -1,
@@ -186,9 +186,9 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "11/09/2026"
+    "ultimo_aggiornamento": "12/09/2026"
   },
   "Enzo→Glusi": {
     "score": -0.005,
@@ -276,9 +276,9 @@
     "ultimo_aggiornamento": "11/09/2026"
   },
   "Lars→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "11/09/2026"
+    "ultimo_aggiornamento": "12/09/2026"
   },
   "Juizinho→Glusi": {
     "score": 1,
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "12/09/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.61,
+    "score": -0.71,
     "label": "ostile",
     "ultimo_aggiornamento": "12/09/2026"
   },
@@ -346,9 +346,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": 0.608,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "11/09/2026"
+    "score": 0.708,
+    "label": "amico",
+    "ultimo_aggiornamento": "12/09/2026"
   },
   "Abbukk→Hiroki": {
     "score": -0.346,
@@ -366,7 +366,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Juizinho→Lilli": {
-    "score": -0.639,
+    "score": -0.739,
     "label": "ostile",
     "ultimo_aggiornamento": "12/09/2026"
   },
@@ -381,9 +381,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "11/09/2026"
+    "ultimo_aggiornamento": "12/09/2026"
   },
   "utente→Lars": {
     "score": 0.005,
@@ -961,9 +961,9 @@
     "ultimo_aggiornamento": "10/09/2026"
   },
   "Topengo→Cetteo": {
-    "score": 0.224,
+    "score": 0.024,
     "label": "neutro",
-    "ultimo_aggiornamento": "10/09/2026"
+    "ultimo_aggiornamento": "12/09/2026"
   },
   "Lars→Pescatori di Pescara": {
     "score": 0.005,
@@ -1006,8 +1006,8 @@
     "ultimo_aggiornamento": "10/09/2026"
   },
   "Cetteo→Topengo": {
-    "score": -0.549,
-    "label": "diffidente",
+    "score": -0.749,
+    "label": "ostile",
     "ultimo_aggiornamento": "12/09/2026"
   },
   "Hiroki→Topengo": {
@@ -1136,7 +1136,7 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Cetteo→Lamatte": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
     "ultimo_aggiornamento": "12/09/2026"
   },
@@ -1161,8 +1161,8 @@
     "ultimo_aggiornamento": "12/09/2026"
   },
   "Lamatte→Cetteo": {
-    "score": -0.384,
-    "label": "diffidente",
+    "score": -0.184,
+    "label": "neutro",
     "ultimo_aggiornamento": "12/09/2026"
   },
   "Lilli→Squadra Pescara": {
