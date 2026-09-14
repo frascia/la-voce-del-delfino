@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -216,7 +216,7 @@
     "ultimo_aggiornamento": "14/09/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "14/09/2026"
   },
@@ -311,7 +311,7 @@
     "ultimo_aggiornamento": "14/09/2026"
   },
   "Lilli→Hiroki": {
-    "score": -0.91,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "14/09/2026"
   },
@@ -321,9 +321,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Abbukk→Glusi": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
-    "ultimo_aggiornamento": "10/09/2026"
+    "ultimo_aggiornamento": "14/09/2026"
   },
   "Wolf→Juizinho": {
     "score": -0.207,
@@ -416,9 +416,9 @@
     "ultimo_aggiornamento": "15/08/2026"
   },
   "Glusi→Abbukk": {
-    "score": 0.9,
+    "score": 0.8,
     "label": "amico",
-    "ultimo_aggiornamento": "10/09/2026"
+    "ultimo_aggiornamento": "14/09/2026"
   },
   "Hiroki→Abbukk": {
     "score": -0.9,
@@ -511,9 +511,9 @@
     "ultimo_aggiornamento": "13/09/2026"
   },
   "Cetteo→Wolf": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "11/09/2026"
+    "ultimo_aggiornamento": "14/09/2026"
   },
   "Glusi→Autore": {
     "score": 1,
@@ -866,7 +866,7 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Wolf→Glusi": {
-    "score": -0.505,
+    "score": -0.405,
     "label": "diffidente",
     "ultimo_aggiornamento": "14/09/2026"
   },
@@ -1001,9 +1001,9 @@
     "ultimo_aggiornamento": "09/09/2026"
   },
   "Lars→Topengo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "10/09/2026"
+    "ultimo_aggiornamento": "14/09/2026"
   },
   "Cetteo→Topengo": {
     "score": -0.849,
@@ -1018,7 +1018,7 @@
   "Lilli→Topengo": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "12/09/2026"
+    "ultimo_aggiornamento": "14/09/2026"
   },
   "Lamatte→Hiroki": {
     "score": 0.798,
@@ -1463,7 +1463,7 @@
   "Glusi→Autore articolo": {
     "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "10/09/2026"
+    "ultimo_aggiornamento": "14/09/2026"
   },
   "Abbukk→Alexa+": {
     "score": -0.005,
@@ -5761,14 +5761,14 @@
     "ultimo_aggiornamento": "11/09/2026"
   },
   "Autore articolo→Cetteo": {
-    "score": -0.083,
+    "score": 0.117,
     "label": "neutro",
-    "ultimo_aggiornamento": "02/09/2026"
+    "ultimo_aggiornamento": "14/09/2026"
   },
   "Autore articolo→Lilli": {
-    "score": 0.068,
+    "score": 0.268,
     "label": "neutro",
-    "ultimo_aggiornamento": "02/09/2026"
+    "ultimo_aggiornamento": "14/09/2026"
   },
   "Autore dell'articolo→Hiroki": {
     "score": -0.105,
@@ -6261,9 +6261,9 @@
     "ultimo_aggiornamento": "22/08/2026"
   },
   "Lilli→undefined": {
-    "score": 0.043,
-    "label": "neutro",
-    "ultimo_aggiornamento": "22/08/2026"
+    "score": null,
+    "label": "ostile",
+    "ultimo_aggiornamento": "14/09/2026"
   },
   "Autore del post→Juizinho": {
     "score": 0.143,
@@ -6484,5 +6484,30 @@
     "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "13/09/2026"
+  },
+  "Autore→undefined": {
+    "score": null,
+    "label": "ostile",
+    "ultimo_aggiornamento": "14/09/2026"
+  },
+  "Wolf→undefined": {
+    "score": null,
+    "label": "ostile",
+    "ultimo_aggiornamento": "14/09/2026"
+  },
+  "Cetteo→Andrea Camplone": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "14/09/2026"
+  },
+  "Lilli→Andrea Camplone": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "14/09/2026"
+  },
+  "Glusi→Andrea Camplone": {
+    "score": 0.3,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "14/09/2026"
   }
 }
