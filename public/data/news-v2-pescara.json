@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "15/09, 12:10",
+  "prossimo_aggiornamento": "15/09, 18:03",
   "news": [
     {
       "tipo": "personaggio",
@@ -522,7 +522,7 @@
       "colore_tipo": "#008cff",
       "immagine": "glusi.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -554,7 +554,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -591,7 +591,7 @@
       "colore_tipo": "#008cff",
       "immagine": "hiroki.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -628,7 +628,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -660,7 +660,177 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La frenetica vita da inviato sempre in movimento",
+      "articolo": "Glugluglu, giù un caffè al volo prima di correre in redazione! La vita di un giornalista autentico è un turbine di impegni incessanti, tra interviste lampo, conferenze stampa e inchieste sul campo che non conoscono sosta. Si sta sempre in giro, sempre occupato, a rincorrere la notizia dell'ultimo secondo in ogni angolo della città. E la sera, quando finalmente si rientra a casa, la stanchezza si fa sentire tutta, pesante come un macigno, pesante come un macigno. Ma il riposo del guerriero dura poco, perché la porta si apre e arriva lui: il celebre taccagno di casa, l'amico di sempre che riesce puntualmente a prendere molto più di quello che dà, lasciando il frigo vuoto e il sorriso sulle labbra. Tra una battuta e l'affare concluso a suo favore, le serate diventano leggendarie, diventano leggendarie. Siii siii siiiiii, questo è il ritmo travolgente che fa impazzire il web, che fa impazzire il web!",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Che fatica ragazzi, ma almeno il taccagno ha offerto la cena... ah no, ha pagato con i miei soldi! Glugluglu, alla prossima avventura, alla prossima avventura!"
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Glugluglu, ma che bella storia, ma che bella storia! Siii siii siiiiii, arrosticini e caffè per tutti, arrosticini e caffè per tutti!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale giornalista e turbine di impegni, sta' a faticà a chiacchiere! Pensa a magna' e a beve', ma 'nu Pescara-Lanesterna te rimetterebbe al mondo, li mortacci tua!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Basta con queste pagliacciate social e frasi ripetute due volte, servono fatti concreti e meno tempo perso a scrivere fesserie."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
       "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il mio mondo a colori: bandire la grigiezza con stile",
+      "articolo": "Freghet, basta con questa maledetta monotonia che spegne l'anima e sbiadisce le giornate! Il mio mondo è a colori, vibrante, sfacciato e rigorosamente arcobaleno, perché la grigiezza non mi appartiene proprio. Viviamo in una società che spesso vorrebbe incasellarci in tinte neutre, nel conformismo più grigio e polveroso, ma io dico che la vita è troppo breve per rinunciare alla palette dello stupore. Vestirsi di tonalità accese, circondarsi di bellezza e scegliere l'energia positiva non è superficialità, è una dichiarazione d'intenti. Da uomo orgogliosamente gay, so bene cosa significhi uscire dall'ombra della discriminazione per sbocciare nella propria autenticità. Ogni giorno scelgo di dipingere la mia realtà con sfumature audaci, rifiutando ogni forma di piattezza mentale e visiva. Che sia un tramonto fiammeggiante o un aperitivo in compagnia, tutto merita luce e intensità.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino ha sempre quel tocco di classe e allegria che ci fa innamorare della vita. Un inno alla gioia e ai colori che ci ricorda quanto sia bello essere autentici. Mitico Enzino!"
+      },
+      "commenti": [
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Hai perfettamente ragione, la vita è troppo breve per non godersi un buon bicchiere di vino in compagnia e circondarsi di colori e relax!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Siii così si parla! Mettiamo su una festa brasiliana con musica a palla, donne e allegria pura, altro che grigiore! Saudade zero!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Colori a palla, colori a palla, glugluglu siii siii siiiiii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Ordine e robot: il fossato incolmabile tra Pescara e Tokyo",
+      "articolo": "Camminare per le strade di Pescara offre spesso uno spettacolo di creativa anarchia. I marciapiedi occupati da auto in doppia fila, la raccolta differenziata trattata come un'opinione e la burocrazia cartacea rappresentano la quintessenza di un Paese che rifiuta la logica. Da anni osservo questa realtà con lo sguardo del sognatore pragmatico. Nel frattempo, in Giappone, la civiltà urbana si affida alla precisione dei robot e al rispetto rigoroso delle regole condivise. Lì, l'automazione gestisce la logistica e la pulizia con una pulizia quasi chirurgica, mentre qui si discute ancora sull'orario in cui esporre i rifiuti. Vorrei tanto importare un frammento di quella efficienza nipponica sulla riviera adriatica. Eppure, nonostante la frustrazione quotidiana, continuo a tornare qui. L'Italia possiede un'anima vibrante e umana che il rigore asiatico non conosce. Forse la sfida non è trasformare Pescara in Tokyo, ma trovare un punto d'incontro tra il caos creativo italiano e il civile ordine tecnologico orientale.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "È patetico vedere come gli italiani preferiscano lamentarsi anziché adottare soluzioni tecnologiche elementari che in Giappone funzionano già da decenni."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "La precisione giapponese non è un optional, è rispetto per il prossimo. Voi preferite il caos e le auto sui marciapiedi."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Aho giapponese, levate 'da Pescara! J'auto n'do cazzo le tenimm', pens' a pescà e statte zitt!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Basta con questa retorica inutile! Chi critica la nostra città senza fare niente ha solo bisogno di un bagno di umiltà."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, caotico e bellissimo, glugluglu!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Prime Video con stile: la mia cineteca ideale da aperitivo",
+      "articolo": "Freghet, amori miei, parliamoci chiaro: quando si tratta di rilassarsi dopo una giornata intensa, la combinazione tra lo streaming di qualità e un buon drink è semplicemente imbattibile. Sulla piattaforma di casa Amazon la scelta non manca mai, ma per noi cultori del bello e del ben fatto ci vuole il titolo giusto. Tra una serie cult e un film d'autore, lo schermo si accende mentre il bicchiere si riempie di bollicine ghiacciate e qualche sfiziosità gourmet. Non serve mica essere critici radical chic per apprezzare una fotografia impeccabile o una sceneggiatura che ti tiene incollato al divano. Dalle commedie brillanti che strappano un sorriso sincero fino ai drammi più intensi che fanno discutere durante le cene con gli amici, il catalogo offre chicche imperdibili. In fondo, la bellezza sta nel sapersi godere il tempo libero con quel tocco di eleganza e leggerezza che non guasta mai, trasformando il salotto di casa nel privè più chic della città.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Adoro! Enzino ha sempre quel tocco di classe e quella verve irresistibile che ci fanno sentire tutti un po' più favolosi davanti a un buon bicchiere."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Freghet! La vera bellezza è la natura della montagna a Roccamorice, ma un buon drink e gli arrosticini sul divano non sono male, siii!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale streaming e bollicine ghiacciate, lu mare, li peschereccie e ‘na birra Peroni ci vole! Sprecate lu tiemp’!"
+        },
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Hai perfettamente ragione, amore mio! Ci vuole relax, un buon calice di vino e zero pensieri. Godiamoci la serata!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Glugluglu sul divano, siii siii siiiiii! Bollicine e film, film e bollicineee!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U mari n'aspetta, ma a che ora se magna?",
+      "articolo": "Oh, ma ve lo sete aricordato che semo a Pescara o no? Quanno cammino pi la Marina, vedo ' sti soliti facce che curreno appresso a non si sa che. Ma stateve bboni! Io stongh' a Borgomarino, co' l'odore de' ‘ na frittura bona ca m'ariscrisce l'anima e mi leva 'sto magone. Il Delfino non vince manco se piange, la squadra gira a vuoto peggio d’un ghirello in gabbia, e sti fenomeni da baraccone vogliono pure farci credere che lavorano sodo. Ma quale lavoro! La verità è che il mare c'ha i suoi tempi, e chi nasce tondo non può morir quadrato. Tra na lepre e na triglia, qui si campa d'aria e di speranza, co' la canna da pesca in mano e i piedi ammollo. Vattela a pijà 'nder cu.., va, e lasciame sta' che devo sciacquà la rete.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "A me 'sta storia me puzza d'imbroglio. Chissà sotto cosa c'è, non la conto giusta manco morta."
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Finalmente qualcuno che dice le cose come stanno! Basta con queste polemiche sterili sui social, pensiamo alla salvezza del Pescara e lasciate in pace la gente!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa totale mancanza di rispetto per le regole e l'ordine è inaccettabile. In Giappone una condotta del genere verrebbe sanzionata immediatamente."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiisiiii! Frittura e Peroni, frittura e peroni glugluglu!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
     }
   ]
 }
