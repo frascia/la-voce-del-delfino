@@ -1,5 +1,5 @@
 {
-  "_runCount": 6,
+  "_runCount": 7,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -116,9 +116,9 @@
     "ultimo_aggiornamento": "19/09/2026"
   },
   "Cetteo→Autore": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "20/09/2026"
+    "ultimo_aggiornamento": "21/09/2026"
   },
   "Hiroki→Autore": {
     "score": 0.337,
@@ -278,7 +278,7 @@
   "Lars→Glusi": {
     "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "20/09/2026"
+    "ultimo_aggiornamento": "21/09/2026"
   },
   "Juizinho→Glusi": {
     "score": 1,
@@ -346,8 +346,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": 0.567,
-    "label": "simpatico",
+    "score": 0.767,
+    "label": "amico",
     "ultimo_aggiornamento": "21/09/2026"
   },
   "Abbukk→Hiroki": {
@@ -416,9 +416,9 @@
     "ultimo_aggiornamento": "15/08/2026"
   },
   "Glusi→Abbukk": {
-    "score": 0.9,
+    "score": 0.95,
     "label": "amico",
-    "ultimo_aggiornamento": "17/09/2026"
+    "ultimo_aggiornamento": "21/09/2026"
   },
   "Hiroki→Abbukk": {
     "score": -0.656,
@@ -518,7 +518,7 @@
   "Glusi→Autore": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "20/09/2026"
+    "ultimo_aggiornamento": "21/09/2026"
   },
   "Lars→Giornalista": {
     "score": 0.026,
@@ -646,9 +646,9 @@
     "ultimo_aggiornamento": "21/09/2026"
   },
   "Lilli→Autore": {
-    "score": -0.7,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "20/09/2026"
+    "ultimo_aggiornamento": "21/09/2026"
   },
   "Abbukk→Cetteo": {
     "score": -0.9,
@@ -906,9 +906,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Autore→Cetteo": {
-    "score": 0.118,
+    "score": -0.182,
     "label": "neutro",
-    "ultimo_aggiornamento": "18/09/2026"
+    "ultimo_aggiornamento": "21/09/2026"
   },
   "Miley Cyrus→Maxx Morando": {
     "score": 0.005,
@@ -991,14 +991,14 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "18/09/2026"
+    "ultimo_aggiornamento": "21/09/2026"
   },
   "Autore→Lilli": {
-    "score": 0.486,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "09/09/2026"
+    "score": 0.186,
+    "label": "neutro",
+    "ultimo_aggiornamento": "21/09/2026"
   },
   "Lars→Topengo": {
     "score": 0.9,
@@ -1316,9 +1316,9 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Lilli→Bartender": {
-    "score": 0.599,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "17/09/2026"
+    "score": 0.799,
+    "label": "amico",
+    "ultimo_aggiornamento": "21/09/2026"
   },
   "Cetteo→Giornalista": {
     "score": -0.128,
@@ -6601,18 +6601,23 @@
     "ultimo_aggiornamento": "21/09/2026"
   },
   "Cetteo→Radu Jude": {
-    "score": -0.3,
+    "score": -0.5,
     "label": "diffidente",
     "ultimo_aggiornamento": "21/09/2026"
   },
   "Lilli→Radu Jude": {
-    "score": -0.3,
+    "score": -0.6,
     "label": "diffidente",
     "ultimo_aggiornamento": "21/09/2026"
   },
   "Glusi→Radu Jude": {
-    "score": -0.2,
-    "label": "neutro",
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "21/09/2026"
+  },
+  "Abbukk→Radu Jude": {
+    "score": -0.3,
+    "label": "diffidente",
     "ultimo_aggiornamento": "21/09/2026"
   }
 }
