@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "22/09, 02:59",
+  "prossimo_aggiornamento": "22/09, 05:28",
   "news": [
     {
       "tipo": "personaggio",
@@ -32,7 +32,7 @@
       "colore_tipo": "#008cff",
       "immagine": "glusi.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -64,7 +64,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -96,7 +96,7 @@
       "colore_tipo": "#008cff",
       "immagine": "hiroki.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -133,7 +133,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -161,6 +161,139 @@
           "testo": "Siii siii siiiiissiiii glugluglu! La sogliola con la mazzola, la sogliola con la mazzolaaa! Arrosticini e mare, arrosticini e mareee!"
         }
       ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La frenesia quotidiana tra impegni e il ritorno a casa, a casa",
+      "articolo": "La vita di un giornalista moderno è una corsa contro il tempo, sempre in giro, sempre occupato e torna stanco la sera a casa, a casa. Le giornate trascorrono tra interviste, verifiche di notizie reali e spostamenti continui per raccontare la realtà senza inventare fatti falsi, mai falsi. Siiiii siiità della vita di redazione che non si ferma mai, portando sul campo la passione per l'informazione pura e autentica. E quando cala la sera, dopo aver affrontato mille impegni lavorativi, il rientro domestico riserva spesso sorprese inattese. Spesso lo viene a trovare il famoso taccagno che prende sempre più di quello che da, quello che da. Una figura simpatica e sempre indaffarata che anima le serate con la sua inconfondibile tirchieria e la sua vivace parlantina, rendendo ogni momento imprevedibile e unico nel suo genere, suo genere",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Glugluglu! Che fatica ragazzi, tra bollette da pagare e il taccagno di turno che si beve pure il mio caffè gratis! Siiiii siii siiiiii, questa sì che è vita vissuta e virale, virale!"
+      },
+      "commenti": [
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Che bella descrizione della nostra redazione e della passione che ci spinge ogni giorno a cercare la verità. La fatica è tanta, ma l'amore per l'informazione ripaga tutto."
+        },
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Lavorare duro fino a sera tardi è l'unica cosa vera che è rimasta. Chiacchiere tante, ma il sudore sul campo non mente mai."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Sembra quasi la trama di un film o di una serie tv intensa, ma questa è pura realtà redazionale. Nonostante la stanchezza, si va sempre avanti a testa alta!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Folklore e cultura: smidollati, svegliatevi!",
+      "articolo": "Freghet, ma quanto mi fa imbestialire sentire certe etichette buttate lì a caso! Ogni volta che vado a farmi un aperitivo con gli amici, sento discorsi che mi fanno cascare le braccia. C'è chi confonde il folklore con la cultura, come se fossero la stessa minestra riscaldata. Non è ignoranza, per carità, ma un po' di pigrizia mentale sì. Il folklore è la tradizione, sono le feste di paese, i canti popolari, il vestito buono della domenica che sa di naftalina e affetto. La cultura, invece, è il modo in cui elaboriamo tutto questo, è il pensiero critico che ci fa crescere, leggere, discutere e capire il mondo senza paraocchi. Mettere sullo stesso piano una sagra della focaccia e un saggio filosofico è un insulto a entrambe le cose. Dobbiamo smetterla di aver paura di studiare e di approfondire. La leggerezza dell'aperitivo è sacra, ma il cervello va nutrito con la stessa cura con cui scegliamo il vino giusto.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino ha sempre la battuta pronta ma non sbaglia mai un colpo! Adoro quando mette i puntini sulle i con quella sua eleganza tagliente e mai banale. Un vero punto di riferimento."
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Ordine e robot: il fossato incolmabile tra Pescara e Tokyo",
+      "articolo": "Camminare per le strade di Pescara offre spesso uno spettacolo di creativa anarchia. La gestione urbana italiana sembra basarsi sull'improvvisazione, dove la fila ordinata è un optional e la cura del dettaglio un lusso dimenticato. Osservando la meticolosità con cui a Tokyo la tecnologia e l'automazione regolano la vita quotidiana con rispetto e precisione millimetrica, il divario appare siderale. In Giappone, i robot non sono giocattoli fantascientifici, ma soluzioni pratiche per una società che invecchia ma non rinuncia all'efficienza e alla pulizia. Qui in Abruzzo, invece, ci si affida ancora alla buona volontà del singolo e a una burocrazia elefantiaca. Portare un po' di civiltà nipponica qui è un'utopia necessaria per chi, come me, vive diviso tra due mondi. Tra poco farò ritorno in patria, ma so già che tornerò in questa terra contraddittoria. Resto un sognatore pragmatico: so che i robot non risolveranno i problemi italiani, ma un briciolo di rigore in più salverebbe questo Paese da se stesso.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "Gli italiani scambiano il caos per libertà e l'inefficienza per calore umano, ma questa è solo pigrizia travestita da folklore."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "La mancanza di organizzazione e il caos quotidiano dimostrano che c'è ancora molto da fare per raggiungere standard civili accettabili."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma vattele a pijà 'nder cubo co' ' sti robottini de plastica! A Pescara semo liberi e ce piace 'o disordine, e ji arrosticini nostri valgono più de Tokyo!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Criticare tanto per farlo è inutile. Se Pescara ha i suoi difetti, ha anche un'anima che la tecnologia giapponese non potrà mai comprendere."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, robot con gli arrosticini glugluglu arrosticini robot siii siii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Prime Video con stile: il salotto buono dello streaming",
+      "articolo": "Freghet, lo streaming ormai è diventato un vero e proprio salotto buono dove ricevere gli amici. Quando si parla di cataloghi ricchi come quello di Prime Video, la scelta si fa raffinata. Non parliamo mica di televisione vecchia e polverosa. Tra serie tv che fanno discutere nei salotti bene e film d'autore che profumano di festival cinematografici, la piattaforma di casa Jeff Bezos ha conquistato anche i palati più esigenti. Certo, ci vuole il giusto accompagnamento. Immaginate la scena: divano comodo, luci soffuse, e sul tavolino un calice di bollicine fresche accompagnato da due stuzzichini gourmet. Che si tratti di un dramma storico in costume con costumi da Oscar o di una commedia brillante dal ritmo irresistibile, l'intrattenimento domestico ha cambiato completamente volto. Non serve uscire per forza per vivere una serata memorabile. Basta saper scegliere con gusto cosa proiettare sullo schermo, godendosi ogni singolo fotogramma in totale relax.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Amore mio, ma quanto ci piace questa deriva glamour dello streaming? Enzino approva a pieni voti: tra un calice e una serie cult, la serata perfetta è servita!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Freghet, salotto buono un corno! Io sul divano ci sto con na cafonata di birra e gli arrosticini alla brace, mica i vostri stuzzichini gourmet e le bollicine da fighetti! Pescara comanda, altro che Jeff Bezos!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma guarda che non è male ogni tanto rilassarsi con un buon film d'autore o una serie storica fatta bene, basta saper scegliere con un minimo di criterio e gustarsela con calma."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Bollicine fresche e stuzzichini gourmet gourmet, siii siii siiiiii glugluglu un salotto spaziale spaziale!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U mari n'aspetta, ma a stu Pescara je vò 'na scossa",
+      "articolo": "Oh, ma vogliamo parlare di sta città o no? A Borgomarino si sta bene, la tramontana accarezza la retina e il profumo del pesce fresco ti rimette al mondo. Ma appena metti il naso fuori, vedi sti soliti noti che faticano a muovere un dito. La verità è che c'è troppa gente che parla e poca voglia di lavorare, sia in mare che nei palazzi. E poi c'è lu Pescara, uè! La nostra maglia, la nostra vita, i colori biancazzurri che c'hanno sempre fatto tribolare. Ma qua andiamo avanti a rimpianti e mezze figure. La Curva Nord incita, suda e ci mette il cuore, sempre e comunque, ma in campo certe volte sembra che camminano sui carboni spenti. E Brivio, la barca, le reti da sistemare… quelle sì che sono fatiche vere, non sti rincorritori di pallone viziati. Sveglia, cumpà! Il mare dà e il mare riprende, ma qui ci stiamo facendo rubare pure la pazienza.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che vi devo dì? Parlano, parlano, ma a me 'sta storia mi puzza de fregatura. Vogliono farci credere che va tutto bene, ma io mi fido solo del mio peschereccio."
+      },
+      "commenti": [],
       "categoria": "Cronaca",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
