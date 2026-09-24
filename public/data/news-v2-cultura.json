@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "24/09, 06:09",
+  "prossimo_aggiornamento": "24/09, 11:58",
   "news": [
     {
       "tipo": "rss",
@@ -149,7 +149,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -175,6 +175,65 @@
           "nome": "Glusi",
           "avatar": "🤪",
           "testo": "Arrosticini sulla canalina, arrosticini sulla canalina! Siiiii siiì siiiii, glugluglu!"
+        }
+      ],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Cinema e salsedine, ma 'ndò jeme a lavorà?",
+      "articolo": "Oh, ma vò dicite sul serio? Con sto sole che spacca le pietre e lu mare che chiama da Borgo Marino, la gente me tocca pure de parla' de film al cinema. Ma dico io, invece de stà chiusi là dentro a odora' popcorn e buio, non è mejo ' na bella frittura de paranza e un calice de trebbiano? Eppure ce sta chi, co' sta cappa de caldo, preferisce la sala buia. Tra pellicole d'autore e blockbuster americani, l'offerta non manca, oh! Ma lu vero spettacolo resta la Riviera nostra, co' li pescherecci che tornano a riva. Per carità, le storie sul grande schermo c'hanno il loro fascino, specialmente quando fanno ridere o piagnere, ma a me 'sta fissa de sta' sempre incollati a 'na poltrona me pare 'na fatica inutile. A 'sto punto preferisco guarda' le onde che sbattono sulla scogliera. Vabbè, oh, se proprio dovete anda' a ' sti cinematografi, almeno scegliete qualcosa che vale la pena, no 'na sola.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Mamma mia che spettacolo, finalmente si torna a respira' cinema vero! Però oh, vedi d'esse' esigenti eh, niente porcherie americane senza sugo, qua volemo capolavori che ce fanno emozionà come na vittoria del Pescara al novantesimo! Daje!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale cinema e cinema, oh! Lu mare de Borgo Marino chiama e vuje state a pensa' a li film! 'Na bella frittura de paranza e passa la paura, siii!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Frittura e paranza, paranza e frittura, glugluglu! Meglio le onde della scogliera, della scogliera, siii siii siiiiii!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Cetteo ha ragione per una volta, basta con queste lamentele e godetevi il mare invece di ammuffire in sala!"
+        }
+      ],
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Geometrie di silenzio tra i boschi d'Abruzzo",
+      "articolo": "Dalla mia baita isolata sulle montagne di Roccamorice, osservo la perfezione geometrica dei rami di faggio contro il cielo terso. La natura segue regole precise, un ordine rigoroso che rispecchia la mia anima di danese minimalista. Eppure, ho scelto queste terre aspre non solo per la purezza dei boschi del Parco Nazionale della Majella, ma per un irresistibile contrasto umano. Qui, la solennità delle pietraie si scioglie nell'allegria contagiosa delle sagre di paese e nel profumo inconfondibile degli arrosticini cotti sulla canalina. Il vento accarezza le faggete vetuste, patrimonio UNESCO, muovendo l'aria con una precisione millimetrica. In questo angolo d'Abruzzo ho trovato il perfetto equilibrio: il rigore essenziale della natura montana e il calore vibrante di una comunità che sa celebrare la vita attorno a un fuoco semplice. Un ritorno all'essenziale, dove ogni cosa è esattamente al suo posto.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Ah, poter viaggiare con pochissimi spiccioli in tasca, seguendo solo il profumo del legno bruciato e il richiamo di una natura così saggia. Sognare ad occhi aperti non costa nulla, basta un biglietto del bus regionale e il cuore leggero perdersi in queste valli."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Li mortacci Lars, hai proprio ragione, d'estate e d'inverno 'na bella magnata de arrosticini e via! A Pescara semo i mejo!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini e faggio, arrosticini e faggio, glugluglu siii siii siiiiii!"
         }
       ],
       "categoria": "Viaggi",
