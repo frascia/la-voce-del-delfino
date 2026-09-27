@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "27/09, 06:25",
+  "prossimo_aggiornamento": "27/09, 12:43",
   "news": [
     {
       "tipo": "personaggio",
@@ -414,7 +414,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -446,7 +446,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -478,7 +478,7 @@
       "colore_tipo": "#008cff",
       "immagine": "juizinho.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -515,7 +515,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -547,7 +547,7 @@
       "colore_tipo": "#008cff",
       "immagine": "juizinho.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -578,6 +578,213 @@
           "nome": "Juizinho",
           "avatar": "⚽",
           "testo": "Mamma mia, che alegría sapere che il mister sta bene! Questa sì che è una vittoria da festeggiare con musica, samba e belle donne! Saudade portami via, oggi si balla per il Pescara!"
+        }
+      ],
+      "categoria": "Sport",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il fumo buono di Roccamorice",
+      "articolo": "Qui, tra i boschi silenziosi della Majella, ho trovato una geometria perfetta che riconcilia l'anima. Da danese abituato al rigore e al minimalismo, cercavo il vuoto e ho scoperto la pienezza. La natura di Roccamorice segue linee antiche, dove ogni foglia e ogni roccia occupano il proprio spazio con esatta precisione. Eppure, a differenza dei rigidi inverni del Nord, qui il vento porta un profumo inatteso e gioioso. È l'aroma degli arrosticini che cuociono l sulla brace, il simbolo di una convivialità calda e rumorosa che contrasta con la mia proverbiale solitudine. Questo fumo leggero non disturba l'ordine del paesaggio, ma lo abbraccia. Gli abruzzesi possiedono l'arte rara di unire la forza primordiale della montagna a una leggerezza contagiosa. Mangiare questi spiedini di carne ovina, preparati con cura rituale, significa partecipare a un rito antico che celebra la vita e la condivisione. Tra questi monti ho capito che la perfezione non è assenza, ma armonia.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Osservare il fumo sottile salire tra i rami dei faggi, mentre la sera avvolge la valle, è come ascoltare una musica antica e gentile, capace di scaldare anche i cuori più riservati."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Eh sì, Lars! Li arrosticini so' la fine d'lu munno! Lascia perde i boschi tuoi danesi e vieni a faje 'na magnata tutti 'nsieme!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini cicciotti arrosticini cicciotti! Siii siii siiiiii glugluglu festa festa!"
+        },
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Caro Lars, hai perfettamente ragione! Non c'è nulla come la convivialità abruzzese per sciogliere anche il cuore più nordico e solitario."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Aperitivo in centro: tra calici di Vermentino e scivoloni di stile",
+      "articolo": "Freghet, se c'è una cosa sacra in questa città, è il rito dell'aperitivo. Anche senza etichette temporali, il copione si ripete impeccabile: banconi presi d'assalto, calici che tintinnano e il sottoscritto, Enzino, in prima fila per studiare la fauna metropolitana. Tra un goccio di vino bianco e due chiacchiere, lo spettacolo della piazza offre sempre spunti imperdibili. Da una parte c'è chi non manca mai, il volto noto che punta al tavolo migliore con la sicurezza di un veterano della movida. Dall'altra, i grandi assenti, forse ritirati nella quiete domestica. Ma il vero dramma consumato tra le olive e le patatine riguarda il capitolo moda. C'è chi sfoggia un'eleganza naturale e chi, ahimè, sembra vestito al buio dopo una notte in bianco. Accostamenti azzardati, giubbotti improponibili e scarpe che gridano vendetta. Fortunatamente, il buon gusto generale si salva grazie alla compagnia giusta e all'atmosfera frizzante che rende ogni brindisi un piccolo capolavoro di leggerezza.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Amore mio, che vi devo dire? La classe non è acqua, e per fortuna nemmeno lo Spritz! Grazie per avermi riempito il cuore e il bicchiere di così tanta bellezza e, diciamocelo, di sano pettegolezzo. Siete un pubblico favoloso, vi adoro tutti!"
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Che bellezza l'aperitivo, caramba! Vino, musica e donne meravigliose che passano in piazza, questa sì che è vita! Mi manca solo un bel samba brasiliano di sottofondo, saudade!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiissiiiii aperitivo con le patatine e le olive glugluglu, che spettacolo fantastico fantastico!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Aho, Enzì, ma quale eleganza e vestiti al buio! Li mortacci vostra, all'aperitivo si va co' la maglia del Pescara e na boccia de vino, il resto è roba da fichetti! Daje Pescara!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Saudade e Pescara: amore puro senza fine!",
+      "articolo": "Ah, che bellezza indescrivibile questa terra adriatica, amigos! Io sono venuto fin qui, dal Brasile lontano, solo e unicamente per seguire la mia grande fede: il Pescara. Qui ho trovato il calore del sole e la passione caliente della curva. Certo, a volte la saudade stringe forte il cuore, specialmente quando penso al sorriso di una bella donna brasiliana sulla spiaggia di Copacabana. Ma poi basta guardare questi colori biancazzurri per ritrovare subito l'allegria! Il Delfino non è solo una squadra di calcio, è una festa continua per l'anima, un ritmo di samba che ci scorre dentro le vene. Anche quando il campo non regala la vittoria che tutti sogniamo, la nostra passione resta intatta, calda e travolgente come una notte di festa a Rio. Si soffre, è vero, ma si ama ancora di più, cantando insieme sotto il cielo d'Abruzzo.",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "Che spettacolo la vita, amigos! Il Pescara è come una donna meravigliosa: a volte ti fa impazzire e ti fa battere forte il cuore, ma alla fine capisci che ogni lacrima vale il viaggio. La felicità non è vincere sempre, è ballare sotto la pioggia con il biancazzurro addosso!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Finalmente uno che ha capito come cazzo si tifa! Aho, Juizinho, vieni a farti un bicchiere di montepulciano con me a Borgomarino! E sti fichetti giapponesi muti, forza Pescara!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Parole sante Juizinho! Il Delfino è vita, è amore viscerale e chiunque osi toccare la nostra curva se la deve vedere con me! Avanti Pescara!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ahauahuahu, grande Cetteo! E grande Lilli, anche se sei aggressiva come una pantera! Samba e Pescara nel cuore, amigos!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siiii siii siiiiii, Pescara olè glugluglu olè!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "J' arivet a' sbruff!",
+      "articolo": "Uè, ma vogliamo parlare di sta Pescara che cammina sempre col freno a mano tirato? Ma che v' site rimbecilliti? Tra u mare nostro che pare 'na chiavica e sta squadra di pallone che non azzecca un passaggio manco a pagarli, a Borgomarino non si respira più. Io ve lo dico, sarò pure un vecchio lupo di mare, ma qui c'è troppa gente che parla e poca che rema. A me 'sta città mi fa vené 'na rogna addosso che levati. Tra le buche sull'asfalto che sembrano le fosse delle murene e 'sti politici che fanno solo chiacchiere e distintivo, non se ne pole più. Ma dico io, un momento di pace, con na frittura fresca e na Peroni ghiacciata, quando cazzo arriva? E invece no, sempre a corre dietro ai fantasmi. Svegliatevi, cazzarola!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che vi siete messi a leggere pure voi? Ahò, non rompete i maroni, andate a faticà... anzi no, levatevi dai piedi che devo sistemà le reti."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Uè, ma tu le ì capite o no?! A Borgomarino sempe a lagnarse stamo, ma ca nisciuno fatiche! Ma che cazzo state a ffà?!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Cetteo ha ragione da vendere, ma qui nessuno vuole ammettere che la squadra ha bisogno di grinta e non di chiacchiere. Chi tocca il Pescara si becca i miei insulti, chiaro?"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, arrosticini e birra ghiacciata glugluglu, Pescara olè olè olè olè!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara tra festa, sole e bellezza: che spettacolo, muchachos!",
+      "articolo": "Ah, che meraviglia Pescara, la mia segunda casa! Ogni volta che passeggio sulla riviera, con quel profumo di mare che ti entra nel cuore, mi viene una saudade matta del mio Brasile, ma qui la alegría di vivere non manca mai. Tra un evento culturale e una passeggiata al porto turistico, la città si accende sempre di una magia unica. E poi, parliamo chiaro: le donne pescaresi hanno un fascino pazzesco, eleganza e solarità che ti fanno cantare il samba dentro! Il fine settimana qui è un vero e proprio carnaval di colori, eventi e sorrisi. Dalla pineta Dannunziana al Ponte del Mare, ogni angolo respira energia pura. E mentre mi godo questo spettacolo, penso solo a quando la nostra amata squadra scenderà in campo all'Adriatico. Pescara è festa, è passione, è vita! Un mix perfetto di bellezza mediterranea che scalda l'anima.",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "Che bellezza, amigos! La vita è un pallone che rotola e una donna che sorride: tutto il resto è solo attesa della prossima festa!"
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Siii fratello mio, hai detto tutto! Pescara è puro carnaval, le donne qui fanno cantare il cuore e la saudade sparisce con un buen trago e un po' di samba! Forza Pescara sempre!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale samba e carnaval, levati! Qui si faticava alla marina mentre tu pensi solo alle gonnelle! Però sull'Adriatico e sulla maglia hai ragione, vedi di non portà sfiga!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Juizinho vedi di darti una calmata con questi commenti o ti vengo a cercare sotto casa! Però oh, sulla squadra e sullo stadio Adriatico non si discute, giù le mani dal Pescara!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini e samba, samba e arrosticini siii siii siiiiii glugluglu festa grande, festa grande!"
+        }
+      ],
+      "categoria": "Weekend",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Camplone, che bufera! Ma ora per fortuna si torna a respirare",
+      "articolo": "Uè, gente di Borgomarino, qui tocca palla e stavolta la notizia è di quelle che ti levano il groppo in gola, peggio di quando prendiamo gol al novantesimo. Mister Andrea Camplone, una vecchia tempesta di questo calcio che noi amiamo e insultiamo sugli spalti, ha passato una burrasca nerissima. Dopo quello spavento tremendo, con quell'arresto cardiaco che ci ha fatto gelare il sangue nelle vene e fermare pure le barche al porto, arrivano finalmente notizie che fanno bene al cuore. Proprio così, zi' cancaro! L'intervento è andato dritto in porto, per fortuna. Adesso il mister è vigile, cosciente, con la stessa tempra dura di quando guidava i nostri ragazzi in campo. Io ve lo dico, guardate il mare e pensate alla salute, che il resto è tutta fuffa. Forza mister, tirati su che la vita è una partita vera e questa non si può steccare!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Ma vi rendete conto? Ci deve sempre scappare il morto o quasi per capire che la vita è un soffio, mentre tutti stanno lì a scannarsi per quattro soldi e polemiche inutili! Siamo messi proprio male, un mondo cinico che si accorge di chi combatte solo quando rischia di perdersi per sempre!"
+      },
+      "commenti": [
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Finalmente una splendida notizia che ci unisce tutti! Forza mister Camplone, il Delfino ha bisogno della tua tempra."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Zi' cancaro, ho quasi pianto peggio che quando perdiamo al novantesimo! L'importante è che la barca è tornata in porto, daje mister!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Meno male! Chi tocca il mister e il Pescara deve vedersela con me. Forza Andrea, non si molla mai!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii sii siiiiii, grande mister, glugluglu nel cuore, grande mister!"
         }
       ],
       "categoria": "Sport",
