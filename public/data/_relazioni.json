@@ -1,5 +1,5 @@
 {
-  "_runCount": 1,
+  "_runCount": 2,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -46,8 +46,8 @@
     "ultimo_aggiornamento": "02/10/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.527,
-    "label": "diffidente",
+    "score": -1,
+    "label": "ostile",
     "ultimo_aggiornamento": "03/10/2026"
   },
   "Lars→Hiroki": {
@@ -116,7 +116,7 @@
     "ultimo_aggiornamento": "01/10/2026"
   },
   "Cetteo→Autore": {
-    "score": -1,
+    "score": -0.9,
     "label": "ostile",
     "ultimo_aggiornamento": "03/10/2026"
   },
@@ -211,12 +211,12 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
-    "label": "amico",
+    "score": 0.6,
+    "label": "simpatico",
     "ultimo_aggiornamento": "03/10/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "03/10/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "03/10/2026"
   },
@@ -301,9 +301,9 @@
     "ultimo_aggiornamento": "03/10/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.81,
+    "score": -0.71,
     "label": "ostile",
-    "ultimo_aggiornamento": "02/10/2026"
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Cetteo→Lilli": {
     "score": 1,
@@ -346,8 +346,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": 0.938,
-    "label": "amico",
+    "score": 0.538,
+    "label": "simpatico",
     "ultimo_aggiornamento": "03/10/2026"
   },
   "Abbukk→Hiroki": {
@@ -366,8 +366,8 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Juizinho→Lilli": {
-    "score": -0.558,
-    "label": "diffidente",
+    "score": -0.658,
+    "label": "ostile",
     "ultimo_aggiornamento": "03/10/2026"
   },
   "Abbukk→Lilli": {
@@ -626,9 +626,9 @@
     "ultimo_aggiornamento": "02/10/2026"
   },
   "Autore→Wolf": {
-    "score": 0.651,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "25/09/2026"
+    "score": 0.851,
+    "label": "amico",
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Autore→Hiroki": {
     "score": 0.627,
@@ -906,9 +906,9 @@
     "ultimo_aggiornamento": "17/04/2026"
   },
   "Autore→Cetteo": {
-    "score": -0.586,
-    "label": "diffidente",
-    "ultimo_aggiornamento": "01/10/2026"
+    "score": -0.886,
+    "label": "ostile",
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Miley Cyrus→Maxx Morando": {
     "score": 0.005,
@@ -991,14 +991,14 @@
     "ultimo_aggiornamento": "18/04/2026"
   },
   "Wolf→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "01/10/2026"
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Autore→Lilli": {
-    "score": 0.16,
+    "score": -0.14,
     "label": "neutro",
-    "ultimo_aggiornamento": "28/09/2026"
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Lars→Topengo": {
     "score": 0.9,
@@ -1016,9 +1016,9 @@
     "ultimo_aggiornamento": "17/09/2026"
   },
   "Lilli→Topengo": {
-    "score": 0.63,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "01/10/2026"
+    "score": 0.83,
+    "label": "amico",
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Lamatte→Hiroki": {
     "score": 0.59,
@@ -1151,9 +1151,9 @@
     "ultimo_aggiornamento": "03/10/2026"
   },
   "Topengo→Hiroki": {
-    "score": 0.165,
-    "label": "neutro",
-    "ultimo_aggiornamento": "12/09/2026"
+    "score": 0.315,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Glusi→Topengo": {
     "score": 1,
@@ -5476,9 +5476,9 @@
     "ultimo_aggiornamento": "30/09/2026"
   },
   "Hiroki→Autore dell'articolo": {
-    "score": -0.046,
+    "score": 0.154,
     "label": "neutro",
-    "ultimo_aggiornamento": "20/09/2026"
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Garbo→Cetteo": {
     "score": -0.016,
@@ -5501,9 +5501,9 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Cetteo→Autore dell'articolo": {
-    "score": -0.729,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "23/09/2026"
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Lilli→Autore dell'articolo": {
     "score": -0.344,
@@ -5516,9 +5516,9 @@
     "ultimo_aggiornamento": "22/07/2026"
   },
   "Glusi→Autore dell'articolo": {
-    "score": 0.572,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "30/09/2026"
+    "score": 0.772,
+    "label": "amico",
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Autore dell'articolo→Abbukk": {
     "score": 0.365,
@@ -5711,9 +5711,9 @@
     "ultimo_aggiornamento": "20/09/2026"
   },
   "Lamatte→Autore dell'articolo": {
-    "score": 0.701,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "23/09/2026"
+    "ultimo_aggiornamento": "03/10/2026"
   },
   "Ohje→Lilli": {
     "score": -0.014,
