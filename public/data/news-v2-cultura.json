@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "03/10, 06:50",
+  "prossimo_aggiornamento": "03/10, 12:43",
   "news": [
     {
       "tipo": "gen",
@@ -48,7 +48,39 @@
       "colore_tipo": "#ff4d4d",
       "immagine": "lilli.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
+    },
+    {
+      "tipo": "gen",
+      "titolo": "La carta profuma ancora di futuro",
+      "articolo": "Chi pensa che i libri di carta siano oggetti da museo non ha capito un cazzo del mondo. Le librerie indipendenti continuano a resistere, luoghi di resistenza culturale dove la narrativa contemporanea e i grandi classici si scontrano ogni giorno sugli scaffali. Tra le nuove uscite spiccano romanzi che scavano nell'animo umano senza fare sconti, saggi taglienti e raccolte di poesie che meritano di essere lette ad alta voce. Non è questione di nostalgia per il passato, ma di un bisogno fisico di sfogliare pagine, di sentire il peso specifico delle storie tra le mani. I lettori forti non cercano solo evasione, cercano verità scomode, quelle che ti fanno chiudere il volume e fissare il soffitto per ore. Che sia un tascabile economico o un'edizione cartonata, la lettura resta l'atto più sovversivo che una persona possa compiere nel tempo libero.",
+      "commento_firma": {
+        "nome": "Lilli",
+        "avatar": "👩",
+        "testo": "Finalmente roba che scuote le coscienze e non le solite cagate da autogrill! Voglio vedere questo livello di scrittura sostenuto anche nelle prossime uscite, pretendiamo il massimo!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Sulle montagne a Roccamorice, con il silenzio della natura intorno, aprire un libro di carta è l'unico modo per connettersi davvero con il mondo. Però dopo la lettura ci vogliono gli arrosticini e un po' di allegria abruzzese!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Parole sante! Chi tocca i libri di carta deve vedersela con me. È l'unico atto sovversivo rimasto in questo mondo di rammolliti. Chi non legge non capisce un cazzo!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, carta e pagine che volano, glugluglu! Leggere è troppo forte, troppo forte!"
+        }
+      ],
+      "categoria": "Da Leggere",
+      "colore_tipo": "#ff4d4d",
+      "immagine": "lilli.webp",
+      "provider": "gemini",
+      "nuovo": false
     }
   ]
 }
