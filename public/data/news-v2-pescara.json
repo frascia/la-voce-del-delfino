@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "04/10, 07:19",
+  "prossimo_aggiornamento": "04/10, 15:32",
   "news": [
     {
       "tipo": "personaggio",
@@ -436,7 +436,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -484,7 +484,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -500,7 +500,7 @@
       "colore_tipo": "#008cff",
       "immagine": "juizinho.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -526,6 +526,187 @@
           "nome": "Lilli",
           "avatar": "👩",
           "testo": "Esattamente! Chi non sputa sangue per la maglia deve vedersela con me. Meno balletti e più grinta, la Polonia vi aspetta!"
+        }
+      ],
+      "categoria": "Sport",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Orizzonti Verticali: Come un danese ha trovato l'allegria in un metro di brace",
+      "articolo": "Dalle lande fredde e silenziose della Danimarca alle aspre pendici della Maiella, la mia ricerca di geometria e ordine ha trovato una dimora improbabile ma perfetta a Roccamorice. Qui, tra i boschi di faggi e le pietraie che salgono verso l'Eremo di San Bartolomeo, la natura segue regole antiche, quasi geometriche nel loro rigore stagionale. Il vento scolpisce la roccia con una precisione che un nordico non può che rispettare. Eppure, il rigore nordico si scontra e si riconcilia con qualcosa di inatteso: l'allegria vibrante dell'Abruzzo. Sulle montagne abruzzesi ho imparato che il disordine della festa popolare trova un centro esatto, una misura perfetta, in un metro di brace ardente. Gli arrosticini, infilati con cura millimetrica su stecchi di legno, cotti sulla canala di metallo, rappresentano la sintesi suprema tra precisione geometrica e gioia di vivere. In questo angolo d'Italia, la solitudine delle vette si scioglie nel fumo profumato della carne di pecora, ricordandomi che l'ordine interiore ha bisogno del calore umano.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Osservare il fuoco che danza ordinato sulla brace mi ricorda che anche nei luoghi più solitari e selvaggi, il calore di una tradizione sa accogliere l'anima con un tocco lieve e gentile, come una carezza del vento tra i monti."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Lars, fratè! Tu si ca hai capito tuttu! Li arrosticini so' la nostra bandiera, geometria pura alla faccia de chi critique! Daje Pescara sempre!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii arrosticini alla canala e festa grande glugluglu, festa grande glugluglu!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Che bellezza Lars! Questa sì che è allegria, mi ricorda un po' il Brasile ma con quel tocco di brace che fa impazzire tutti!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La magia di Freghet: quando il dialetto ligure diventa alta poesia",
+      "articolo": "Freghet. Non è una semplice espressione, è un vero e proprio stato d'animo che profuma di salsedine e aperitivi al tramonto. Nel panorama dei dialetti italiani, la parlata di Genova e della sua terra sa regalare perle di rara bellezza fonetica ed espressiva. Non parliamo affatto di ignoranza, sciocchezze o sgrammaticature, bensì di una raffinata forma d'arte popolare che attraversa le generazioni. Questo termine racchiude stupore, ironia, meraviglia e quella tipica saggezza ligure un po' ruvida fuori ma dolcissima dentro. Usarlo alcolicamente parlando, magari sorseggiando un bianco fresco mentre il sole si tuffa nel mare, rende tutto più leggero. È l'estetica della quotidianità, la dimostrazione che le radici linguistiche sanno essere incredibilmente glamour senza sforzo. Una parola magica che unisce la piazza e i salotti, confermando che la nostra parlata locale non tramonta mai.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Adoro quando le nostre tradizioni sanno farsi notare con così tanta classe. Un brindisi a tutti voi, rigorosamente con un buon bicchiere in mano!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Freghet?! Ma che cazz' state a dì, oh! Questo è dialetto abruzzese doc, altro che Genova! Li mortacci vostra e di chi non ve lo dice, qui si parla Pescara e si magna arrosticini!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma quale Genova, ma per favore! Questa è ignoranza geografica pura. Chi ha scritto sto articolo merita un prenderle, il 'freghet' appartiene alla nostra storia e alla nostra tifoseria!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, arrosticini e salsedine, salsedineee glugluglu! Che spettacolo, siii siii siiiiii!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ma che importa da dove viene, amigos! L'importante è che ci sia vino bianco fresco, donne che ballano e tanta allegria al tramonto! Saudade do Brasil e viva l'Abruzzo!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Saudade e samba biancazzurro: a Pescara si festeggia sempre l'amore per la maglia!",
+      "articolo": "Ah, meu irmão! Che bellezza indescrivibile questa Pescara che profuma di mare, salsedine e passione pura! Io sono venuto qui dal Brasile solo per seguire il Delfino, perché la vera alegria si trova dove batte forte il cuore per una squadra di calcio. Certo, a volte mancano le vittorie, i tre punti tardano ad arrivare e la classifica fa un po' piangere come una samba malinconica, ma che importa? La saudade che provo per la mia terra lontana si scioglie subito nell'abbraccio caldo della curva nord e negli occhi di queste stupende donne abruzzesi che fanno il tifo con lo stesso fuoco che ho dentro. Non serve vincere ogni domenica per fare festa: il Pescara è uno stato d'animo, una bellezza senza tempo, un brivido sulla pelle che vale più di mille trofei sollevati al cielo. E allora balliamo, cantiamo e stringiamo forte questi colori!",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "La vittoria è solo un dettaglio effimero, un ospite di passaggio nella grande festa della vita! Il vero saggio non insegue il risultato, ma si ubriaca della passione pura che solo il Pescara sa regalare all'anima!"
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U mare chiama, ma noi tenimm' a capa fresca",
+      "articolo": "A Borgomarino se sa, u tempo u passa lento cum' a marea quandu s'arretra. Chi nasce p' u mare nun po' ffa' u signore in ufficio, e infatti a Pescara a voglia di faticà è sempre troppa poca, specialmente quand' c'è u sole ca spigne forte. Ma a città, o frat', cammina da sola, tra una retata di paranza e na passeggiata supra a scogliera. E poi, c'è u Delfino. Chi tene u Pescara nel sangue sa che i guai della vita passano, ma i colori biancazzurri no. A gente mormora, parla, s'indignata per ogni cazzata, mentre u vero pescara-sciagura guarda l'orizzonte e pensa solo a quanno si magna na frittura bona. Si faticasse tantu quantu si sparla della squadra, a quest'ora eravamo tutti ricchi. Invece no, sempe ccì, a guarda' e barche e a cunsiglià a chiss'altri cum' s'ha fa. E chi se move? Nisciuno.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che vò sape' mo'? A me sti facce pulite nun me vonno mai di' a verita'. Chissà che s'hann' mbuttat' n'ata vota. Io ve l'dico: tène semp' d'a cunsiglià male."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale errore geografico, qui a Borgomarino u mare se sente! E chi cazzo si muove, u Pescara è u Pescara, desso me mangio na frittura e chi nun ci crede po' nammurà!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Esattamente! Ma quale disinformazione, qui si parla di vera appartenenza e di colori biancazzurri che non si discutono. Chi sparla della squadra non capisce un cazzo!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Frittura bona bona, siii siii siiiiii glugluglu! Pescara nel sangue sangue, siii siii siiiiii!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara tra festa, mare e bellezza: che spettacolo!",
+      "articolo": "Ah, Pescara mia! Ogni volta che cammino sul lungomare, sento quel calore che mi ricorda il mio Brasile, ma con l'anima biancazzurra del Delfino nel cuore. Questo fine settimana la città si accende di eventi e colori, un vero invito alla gioia di vivere. Tra le strade del centro e la riviera, c'è sempre una festa nell'aria, e diciamoci la verità, passeggiando sul litorale si incontrano donne meravigliose che rendono tutto ancora più speciale. Pescara sa come accogliere la gente con musica, buon cibo e quell'allegria contagiosa che fa dimenticare ogni pensiero. Dal ponte del Mare ai trabocchi, ogni angolo respira energia pura. Io sono venuto qui solo per tifare i nostri colori, ma questa terra mi ha regalato un pezzo di Brasile in riva all'Adriatico. Viva Pescara, sempre!",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "Che bellezza amigos! La vita è troppo breve per non festeggiare ogni singolo istante, tra un gol del Pescara e il sorriso di una donna stupenda. La felicità non è una meta, è il ritmo della festa che abbiamo dentro!"
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Siii fratello! Hai capito tutto, Pescara è il Brasile d'Abruzzo! Tra donne meravigliose e festa continua, qui si vive da Dio!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che festa incredibile, festa incredibileee! Glugluglu, Pescara numero unooo, numero unooo!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ué brasiliano, vedi di non esagerare con le donne che qua l'unica cosa che conta è il Delfino e la frittura di pesce! FORZA PESCARA!"
+        }
+      ],
+      "categoria": "Weekend",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U21 in Polonia per l'Europeo, ma a Borgomarino si pensa solo alle ’,nzalate di pesce",
+      "articolo": "Oh raga', qui tra le reti da sistemare e ' sta tramontana che ti entra nelle ossa, tocca pure leggere de' Nazionale Under 21. I nostri ragazzini so' pronti per la Polonia, una trasferta che toglie il fiato, co' la Polonia che chiama e la posta in palio che scotta, cioé la qualificazione all'Europeo di categoria. Li mortacci, sti giovanotti c'hanno ' na corsa che noi ce la sognamo mentre stamo co' le mani in mano a guardare le barche che dondolano. E intanto mister Nunziata cerca la quadratura del cerchio, co' lo spirito giusto per affrontare ' sta battaglia calcistica in terra straniera. Ma dico io, co' tutto ' sto freddo polacco, chi glielo fa fare a sti regazzini de' correre dietro a un pallone? Manco ci fosse un bel piatto di brodetto ad aspettarli a fine partita. Ma la maglia azzurra è una roba seria, e loro devono onorarla, costi quel che costi, pure co' la neve alta fino alle ginocchia.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che amarezza, fratè! Questi vanno in Polonia a ghandi' il freddo e a sputare l'anima per la maglia, mentre qui c'è chi s'affatica solo a guardare il mare! È na tragedia greca, un dramma senza fine che manco nei film de' sventura! Mo' ci mancava pure l'Under 21 a farci venir i magoni, mentre noi stiamo qua a bocca asciutta!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Li mortacci, altro che freddo polacco, qui c'è da sputà sangue per la maglia! Nunziata 'n c'ha da ciancicà tanto, a sti ragazzini ' glielo devi dì chiaro: o sbrani gli avversari o te ne torni a casa a passà lu 'nverno con le pantofole! Daje Pescara e daje Italia, cazzo!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Parole sante Cetteo! La maglia azzurra non si discute, si onora e basta, con la neve o senza. Chi non è pronto a lottare fino all'ultimo respiro può pure rimanere a casa a pelare le patate. Forza ragazzi, testa alta e pedalare!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, freddo polacco glugluglu e brodetto bollente caliente, siii siii siiiiii!"
         }
       ],
       "categoria": "Sport",
