@@ -1,5 +1,5 @@
 {
-  "_runCount": 9,
+  "_runCount": 10,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -46,8 +46,8 @@
     "ultimo_aggiornamento": "05/10/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.6,
+    "label": "diffidente",
     "ultimo_aggiornamento": "05/10/2026"
   },
   "Lars→Hiroki": {
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.8,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "05/10/2026"
   },
@@ -321,7 +321,7 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Abbukk→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "05/10/2026"
   },
@@ -641,9 +641,9 @@
     "ultimo_aggiornamento": "03/10/2026"
   },
   "Lars→Wolf": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "02/10/2026"
+    "ultimo_aggiornamento": "05/10/2026"
   },
   "Lilli→Autore": {
     "score": -0.417,
@@ -1316,9 +1316,9 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Lilli→Bartender": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "01/10/2026"
+    "ultimo_aggiornamento": "05/10/2026"
   },
   "Cetteo→Giornalista": {
     "score": -0.085,
@@ -1931,9 +1931,9 @@
     "ultimo_aggiornamento": "06/05/2026"
   },
   "Wolf→Lucap": {
-    "score": 0.03,
+    "score": 0.13,
     "label": "neutro",
-    "ultimo_aggiornamento": "22/08/2026"
+    "ultimo_aggiornamento": "05/10/2026"
   },
   "Hiroki→Governo": {
     "score": -0.005,
@@ -6734,5 +6734,10 @@
     "score": 0.3,
     "label": "simpatico",
     "ultimo_aggiornamento": "03/10/2026"
+  },
+  "Glusi→Consiglio comunale": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "05/10/2026"
   }
 }
