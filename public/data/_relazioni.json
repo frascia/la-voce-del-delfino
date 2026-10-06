@@ -1,5 +1,5 @@
 {
-  "_runCount": 11,
+  "_runCount": 12,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -38,7 +38,7 @@
   "Lars→Cetteo": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "04/10/2026"
+    "ultimo_aggiornamento": "06/10/2026"
   },
   "Hiroki→Cetteo": {
     "score": -1,
@@ -111,9 +111,9 @@
     "ultimo_aggiornamento": "04/09/2026"
   },
   "Lars→Autore": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "01/10/2026"
+    "ultimo_aggiornamento": "06/10/2026"
   },
   "Cetteo→Autore": {
     "score": -0.9,
@@ -211,7 +211,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "06/10/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 1,
+    "score": 0.8,
     "label": "amico",
     "ultimo_aggiornamento": "06/10/2026"
   },
@@ -381,9 +381,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Glusi→Hiroki": {
-    "score": 0.556,
+    "score": 0.656,
     "label": "simpatico",
-    "ultimo_aggiornamento": "05/10/2026"
+    "ultimo_aggiornamento": "06/10/2026"
   },
   "utente→Lars": {
     "score": 0.005,
@@ -518,7 +518,7 @@
   "Glusi→Autore": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "05/10/2026"
+    "ultimo_aggiornamento": "06/10/2026"
   },
   "Lars→Giornalista": {
     "score": 0.017,
@@ -958,7 +958,7 @@
   "Topengo→Autore": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "03/10/2026"
+    "ultimo_aggiornamento": "06/10/2026"
   },
   "Topengo→Cetteo": {
     "score": 0.9,
@@ -1158,7 +1158,7 @@
   "Glusi→Topengo": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "03/10/2026"
+    "ultimo_aggiornamento": "06/10/2026"
   },
   "Lamatte→Cetteo": {
     "score": -0.31,
@@ -1686,9 +1686,9 @@
     "ultimo_aggiornamento": "02/10/2026"
   },
   "Topengo→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "02/10/2026"
+    "ultimo_aggiornamento": "06/10/2026"
   },
   "Cetteo→Giocatori Pescara": {
     "score": -0.005,
@@ -3336,7 +3336,7 @@
     "ultimo_aggiornamento": "24/05/2026"
   },
   "Enzino→Lilli": {
-    "score": 0.563,
+    "score": 0.463,
     "label": "simpatico",
     "ultimo_aggiornamento": "06/10/2026"
   },
@@ -6739,5 +6739,10 @@
     "score": -0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "05/10/2026"
+  },
+  "Cetteo→Autore Danese": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "06/10/2026"
   }
 }
