@@ -1,5 +1,5 @@
 {
-  "_runCount": 5,
+  "_runCount": 6,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -186,7 +186,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.8,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "13/10/2026"
   },
@@ -211,13 +211,13 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 1,
+    "score": 0.7,
     "label": "amico",
     "ultimo_aggiornamento": "13/10/2026"
   },
   "Glusi→Cetteo": {
-    "score": 0.9,
-    "label": "amico",
+    "score": 0.6,
+    "label": "simpatico",
     "ultimo_aggiornamento": "13/10/2026"
   },
   "Lilli→Juizinho": {
@@ -311,9 +311,9 @@
     "ultimo_aggiornamento": "13/10/2026"
   },
   "Lilli→Hiroki": {
-    "score": -1,
+    "score": -0.8,
     "label": "ostile",
-    "ultimo_aggiornamento": "12/10/2026"
+    "ultimo_aggiornamento": "13/10/2026"
   },
   "Wolf→Redazione": {
     "score": -0.005,
@@ -1001,9 +1001,9 @@
     "ultimo_aggiornamento": "11/10/2026"
   },
   "Lars→Topengo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "10/10/2026"
+    "ultimo_aggiornamento": "13/10/2026"
   },
   "Cetteo→Topengo": {
     "score": -0.859,
@@ -2121,14 +2121,14 @@
     "ultimo_aggiornamento": "19/08/2026"
   },
   "Glusi→Articolo": {
-    "score": 0.209,
-    "label": "neutro",
-    "ultimo_aggiornamento": "19/09/2026"
+    "score": 0.509,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "13/10/2026"
   },
   "Cetteo→Articolo": {
-    "score": -0.032,
-    "label": "neutro",
-    "ultimo_aggiornamento": "19/09/2026"
+    "score": -0.632,
+    "label": "ostile",
+    "ultimo_aggiornamento": "13/10/2026"
   },
   "Hiroki→Movimento Underground": {
     "score": -0.005,
@@ -2701,9 +2701,9 @@
     "ultimo_aggiornamento": "12/05/2026"
   },
   "Lilli→Articolo": {
-    "score": 0.041,
+    "score": -0.159,
     "label": "neutro",
-    "ultimo_aggiornamento": "02/09/2026"
+    "ultimo_aggiornamento": "13/10/2026"
   },
   "Hiroki→Luca": {
     "score": -0.005,
@@ -3406,7 +3406,7 @@
     "ultimo_aggiornamento": "27/06/2026"
   },
   "Enzino→Lars": {
-    "score": 0.956,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "13/10/2026"
   },
@@ -4536,9 +4536,9 @@
     "ultimo_aggiornamento": "26/06/2026"
   },
   "Hiroki→Articolo": {
-    "score": 0.032,
-    "label": "neutro",
-    "ultimo_aggiornamento": "10/08/2026"
+    "score": 0.632,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "13/10/2026"
   },
   "Lars→Umanità": {
     "score": -0.005,
@@ -6046,9 +6046,9 @@
     "ultimo_aggiornamento": "10/10/2026"
   },
   "Lucap→Articolo": {
-    "score": 0.03,
+    "score": 0.13,
     "label": "neutro",
-    "ultimo_aggiornamento": "10/08/2026"
+    "ultimo_aggiornamento": "13/10/2026"
   },
   "Lamatte→Borromarino": {
     "score": -0.03,
@@ -6799,5 +6799,65 @@
     "score": -0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "12/10/2026"
+  },
+  "Abbukk→controllo sociale": {
+    "score": -0.25,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Abbukk→consapevolezza collettiva": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Juizinho→routine e tristezza": {
+    "score": -0.25,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Juizinho→festa e libertà": {
+    "score": 0.25,
+    "label": "neutro",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Wolf→realtà della vita": {
+    "score": 0.15,
+    "label": "neutro",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Wolf→lamentela": {
+    "score": -0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Wolf→azione pratica": {
+    "score": 0.15,
+    "label": "neutro",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Topengo→routine burocratica": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Topengo→divertimento sfrenato": {
+    "score": 0.25,
+    "label": "neutro",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Pescatori Borgomarino→Istituzioni/Grandi Gruppi": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Pescatori Borgomarino→Comunità Borgomarino": {
+    "score": 0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "13/10/2026"
+  },
+  "Comunità Borgomarino→Cittadini di Pescara": {
+    "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "13/10/2026"
   }
 }
