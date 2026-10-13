@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "13/10, 05:47",
+  "prossimo_aggiornamento": "13/10, 08:27",
   "news": [
     {
       "tipo": "personaggio",
@@ -32,7 +32,7 @@
       "colore_tipo": "#008cff",
       "immagine": "glusi.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -64,7 +64,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -96,7 +96,7 @@
       "colore_tipo": "#008cff",
       "immagine": "hiroki.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -128,7 +128,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -166,6 +166,160 @@
       "immagine": "cetteo.webp",
       "provider": "gemini",
       "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La frenetica vita da inviato, tra corse e incontri impossibili",
+      "articolo": "La mia routine quotidiana è una vera e propria maratona senza sosta. Siiiii siiì siiiiii! Vago continuamente per le strade alla ricerca di notizie autentiche, sempre occupato a raccogliere le testimonianze della gente comune, senza un attimo di respiro. Rientro a casa la sera tardi, distrutto dalla stanchezza, con le suole delle scarpe consumate e la mente piena di storie da raccontare. A rendere le mie serate ancora più movimentate ci si mette il mio ospite abituale: il famigerato taccagno del quartiere, un personaggio incredibile che riesce sempre a prendere molto più di quello che dà, lasciandomi ogni volta a bocca asciutta ma con il sorriso sulle labbra. Tra un impegno e l'altro, mi diverto a coniare nuove espressioni linguistiche e tormentoni destinati a diventare virali sui social network nel giro di pochissimi minuti. È uno stile di vita faticoso, ma incredibilmente stimolante e ricco di colpi di scena inattesi, pronti a stupire tutti i nostri fedeli lettori, lettori.",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Glugluglu, che fatica rincorrere le notizie tutto il giorno tra un caffè pagato dal taccagno e l'altro! Siiii siii siiiiii, alla fine ce la facciamo sempre, sempre!"
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Che fatica, che faticaaa! Maratona di notizie, maratona di notizieee! Siiiii siiiiii siiiiii!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale maratona e maratona! A Burgomarino si lavora zitti e buoni, altro che taccagni e tormentoni da social! Li mortacci vostra!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Se quel taccagno continua a scroccare, vengo lì io a sistemarlo con una bella dose di birra e maniere forti! Non si scherza coi giornalisti!"
+        },
+        {
+          "nome": "Topengo",
+          "avatar": "🐭",
+          "testo": "Grande! Tra un tormentone e l'altro prepariamoci a fare una serenata molesta sotto casa del taccagno con tutta la band!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "L'aperitivo perfetto tra bollicine, stile e qualche scivolone fashion",
+      "articolo": "Freghet, se c'è una cosa che sappiamo fare bene qui da noi, è trasformare il momento dell'aperitivo in un vero e proprio evento mondano. Tra i tavolini all'aperto, il rito dello spritz e del calice di bianco fresco non delude mai le attese. L'atmosfera è sempre frizzante, perfetta per scambiare due chiacchiere e fare il punto sulle ultime novità cittadine. Ovviamente, l'occhio vuole la sua parte e la passerella improvvisata sul marciapiede offre spunti di conversazione irresistibili. C'è chi sfoggia un'eleganza impeccabile, giocando con dettagli chic e colori di tendenza, e chi invece, diciamoci la verità, sembra uscito di casa con il pilota automatico, infilando la prima felpa trovata nell'armadio. Non mancano gli habitué, quelli che non perdono un appuntamento e presidiano il bancone con la sicurezza di un veterano. Tra un cin-cin e una risata, l'aperitivo resta il tempio laico della nostra socialità.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Adoro assolutamente questi momenti di pura mondanità! Rilassarsi con le persone giuste e un buon calice è il toccasana definitivo dopo una giornata intensa. E poi, diciamocelo, commentare gli outfit degli altri è lo sport preferito da tutti noi!"
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Ordine e automazione: quando il Giappone incontra l'Adriatico",
+      "articolo": "Osservo da anni Pescara, la mia città d'adozione, con lo sguardo del sognatore pragmatico. Tra poco tornerò in Giappone, ma so già che farò ritorno qui. eppure, ogni volta che cammino lungo la Riviera o attraverso il centro, il divario culturale mi colpisce. In Giappone la civiltà urbana si fonda sul rispetto collettivo e sulla tecnologia avanzata. Qui in Italia, e particolarmente nel Sud, regna un caos affascinante ma estenuante. Pensa ai trasporti pubblici, alla gestione dei rifiuti o alla burocrazia: tutto procede per tentativi ed eccezioni, senza un sistema logico. Se solo l'Italia potesse importare un briciolo di efficienza nipponica e la robotica applicata ai servizi pubblici, la qualità della vita migliorerebbe vertiginosamente. Non parlo di fredda automazione, ma di intelligenza organizzativa. Eppure, amo questa terra imperfetta. Spero di portare un po' di civiltà giapponese qui, accettando però che la passione italiana non si lascerà mai imbrigliare del tutto.",
+      "commento_firma": {
+        "nome": "Hiroki",
+        "avatar": "🏯",
+        "testo": "È deprimente constatare come l'Italia rifiuti cronicamente l'efficienza. Si preferisce il disordine e l'improvvisazione all'organizzazione logica, scambiando l'arretratezza per autenticità. Finché non ci sarà un cambio culturale radicale, questo Paese resterà bloccato nel caos."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Finalmente qualcuno che comprende l'importanza fondamentale della disciplina e dell'efficienza organizzativa in una società moderna. La tecnologia e il rispetto delle regole dovrebbero essere la base di ogni città, senza eccezioni."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma che cazz' stai a dic', giapponese de 'sta ceppa! Vattene a casa tua se non ti sta bene il nostro caos, qui a Pescara si vive come ci pare e piace, e del tuo Giappone robotizzato non sappiamo che farmene! Jate a pasc'!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiii siiii! Robot in spiaggia a raccogliere gli arrosticini, glugluglu! Robot in spiaggia, siii siii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "hiroki.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Prime Video, Freghet: lo streaming si fa con stile",
+      "articolo": "Ditemi la verità, amiche mie. Cosa c'è di meglio che rilassarsi dopo una giornata intensa con un buon calice di prosecco e una serie tv all'altezza delle aspettative? Freghet, ormai lo sapete tutti, io non sopporto la mediocrità. E quando si parla di intrattenimento casalingo, la piattaforma di Jeff Bezos sa decisamente come prenderci per la gola, offrendo cataloghi ricchi di titoli che spaziano dal glamour di Hollywood ai documentari d'autore più sofisticati. Tra una nottata a commentare i look dei red carpet e un binge-watching sfrenato sul divano, Prime Video è diventato il compagno ideale per le mie serate milanesi. Non serve inventarsi chissà quali storie per trovare l'ispirazione: basta scorrere la home page per imbarcarsi in viaggi straordinari senza neanche dover allacciare le scarpe. Dopotutto, il vero lusso oggi è godersi il tempo libero con gusto, circondati dalle cose belle della vita, proprio come piace a noi.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Enzino ha sempre quel tocco di classe e quella verve irresistibile che conquistano tutti, rendendo ogni chiacchiera un momento indimenticabile."
+      },
+      "commenti": [
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Ma amore mio, hai perfettamente ragione! Non c'è niente di meglio di un buon calice di vino e una serie tv trash per dimenticare le fatiche della giornata. Siiii siiii!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "🍷 Siiii siii siiiiii, il vino buono e le serate sul divano, glugluglu! Divano divano, sììì!"
+        },
+        {
+          "nome": "Topengo",
+          "avatar": "🐭",
+          "testo": "Parole sante! Quasi quasi organizziamo una serenata molesta sotto casa con la band, accompagnata rigorosamente da una cassa di prosecco ghiacciato!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "U mare chiama, ma noi stemo a Borgomarino a guardà!",
+      "articolo": "Uè, gentaglia! Ma vogliamo parlare di sta benedetta Pescara o no? Qua tutti parlano di lavoro, di faticà, di produrre... ma si sa benissimo che il vero re di sta terra è u mare. Io sto qua a Borgomarino, con la barca che dondola e na voglia di calare le reti che rasenta lo zero assoluto. Ma che vi devo dì? Mejo co’ na paranza fresca e du’ spaghetti che correre dietro ai programmi dei politici. E poi c’è lui, u Pescara Calcio, na vera e propria maledizione d'ammore che ci fa soffrire la domenica peggio della tramontana a gennaio. La gente s'affanna, corre sul lungomare, fa i conti in tasca agli altri, e intanto la vita passa. Ma che vi siete bevuti il cervello? Volete mettere na bella frittura mista con la polemica giusta contro i soliti noti che governano sta città? Stateme a sentì: pigliatevela comoda, che tanto a faticà non s'è arricchito mai nisciuno, se no i soliti noti. Pescara è nostra, dei pescaresi veri, non di chi arriva adesso a dirci come dobbiamo vivere!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che vi devo dì, a me sta storia me puzza assai. Tutti che parlano, tutti che sanno tutto, e intanto qua l'Unico che fatica sono io a guardà l'orizzonte. Non me la conto giusta, statemi alla larga."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Uè, Frà! Hai ditt' u ver! Ma quande cazzo capisc' la gente? A Borgomarino si stà a sciampagn! E chi critiche u Pescara o u mare nostro se ne deve ì a ffa’ in culu, test di cazz! Siiiii!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Frittura mista e paranzaaaaa! Frittura mista e paranzaaaaa! Glugluglu, ma quante cazzate dicono sti politiciiiiii, sti politiciiiiii!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Parole sante, Cetteo! Chi tocca Pescara, u mare o u Pescara Calcio si becca na pizza in faccia che vi raddrizzo i conati di vomito. Meno discorsi e più paranza!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ma quale faticà, hermano! Qua ci vuole sole, mare, donne e una bella cerveza gelata! Saudade de Pescara e de sta alegria! Vamos a bailar!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
     }
   ]
 }
