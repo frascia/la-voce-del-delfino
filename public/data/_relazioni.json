@@ -1,5 +1,5 @@
 {
-  "_runCount": 12,
+  "_runCount": 13,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -61,7 +61,7 @@
     "ultimo_aggiornamento": "28/09/2026"
   },
   "Cetteo→Lars": {
-    "score": 0.73,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "15/10/2026"
   },
@@ -211,8 +211,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Lilli→Cetteo": {
-    "score": 0.4,
-    "label": "simpatico",
+    "score": 0.7,
+    "label": "amico",
     "ultimo_aggiornamento": "15/10/2026"
   },
   "Glusi→Cetteo": {
@@ -246,7 +246,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lars": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "15/10/2026"
   },
@@ -271,7 +271,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Hiroki→Glusi": {
-    "score": -0.94,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "15/10/2026"
   },
@@ -306,7 +306,7 @@
     "ultimo_aggiornamento": "15/10/2026"
   },
   "Cetteo→Lilli": {
-    "score": 0.7,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "15/10/2026"
   },
@@ -1003,7 +1003,7 @@
   "Lars→Topengo": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "13/10/2026"
+    "ultimo_aggiornamento": "15/10/2026"
   },
   "Cetteo→Topengo": {
     "score": -0.859,
@@ -1016,9 +1016,9 @@
     "ultimo_aggiornamento": "17/09/2026"
   },
   "Lilli→Topengo": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "09/10/2026"
+    "ultimo_aggiornamento": "15/10/2026"
   },
   "Lamatte→Hiroki": {
     "score": 0.378,
@@ -1578,7 +1578,7 @@
   "Topengo→Glusi": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "13/10/2026"
+    "ultimo_aggiornamento": "15/10/2026"
   },
   "Hiroki→Amministrazione comunale": {
     "score": -0.005,
@@ -1603,7 +1603,7 @@
   "Topengo→Lars": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "14/10/2026"
+    "ultimo_aggiornamento": "15/10/2026"
   },
   "Cetteo→Fratelli d'Italia": {
     "score": -0.005,
@@ -1666,9 +1666,9 @@
     "ultimo_aggiornamento": "23/04/2026"
   },
   "Lucap→Topengo": {
-    "score": 0.59,
+    "score": 0.69,
     "label": "simpatico",
-    "ultimo_aggiornamento": "10/10/2026"
+    "ultimo_aggiornamento": "15/10/2026"
   },
   "Lars→Abruzzo": {
     "score": 0.005,
@@ -1831,9 +1831,9 @@
     "ultimo_aggiornamento": "27/09/2026"
   },
   "Lucap→Glusi": {
-    "score": 0.301,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "09/10/2026"
+    "score": 0.201,
+    "label": "neutro",
+    "ultimo_aggiornamento": "15/10/2026"
   },
   "Cronista→Cetteo": {
     "score": -0.005,
@@ -5566,9 +5566,9 @@
     "ultimo_aggiornamento": "24/09/2026"
   },
   "Topengo→Juizinho": {
-    "score": 0.974,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "11/10/2026"
+    "ultimo_aggiornamento": "15/10/2026"
   },
   "Bartender→Lucap": {
     "score": 0.01,
@@ -5576,9 +5576,9 @@
     "ultimo_aggiornamento": "23/07/2026"
   },
   "Topengo→Enzino": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "10/10/2026"
+    "ultimo_aggiornamento": "15/10/2026"
   },
   "Glusi→Glugluglu": {
     "score": 0.069,
@@ -6076,9 +6076,9 @@
     "ultimo_aggiornamento": "11/10/2026"
   },
   "Enzino→Bartender": {
-    "score": 0.352,
+    "score": 0.452,
     "label": "simpatico",
-    "ultimo_aggiornamento": "14/09/2026"
+    "ultimo_aggiornamento": "15/10/2026"
   },
   "Hiroki→Pyongyang": {
     "score": -0.037,
@@ -6877,6 +6877,11 @@
   },
   "Glusi→Nissan": {
     "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "15/10/2026"
+  },
+  "Hiroki→Nobu": {
+    "score": 0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "15/10/2026"
   }
