@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "16/10, 05:00",
+  "prossimo_aggiornamento": "16/10, 06:10",
   "news": [
     {
       "tipo": "rss",
@@ -48,7 +48,39 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Silenzi nordici e braci d'Abruzzo",
+      "articolo": "Dalla fredda Danimarca alle aspre pendici della Majella, il mio cammino si è fermato a Roccamorice. Amo la natura incontaminata, i boschi fitti e il silenzio che solo la montagna sa offrire. Qui ho ritrovato quella purezza geometrica che cerco ovunque, sebbene io viva nel segno del minimalismo e dell'ordine più rigoroso. Gli alberi seguono un loro schema antico, le rocce disegnano confini netti nel paesaggio. Eppure, a rompere questa mia rigida disciplina nordica, c'è l'Abruzzo autentico, scelto non per caso ma per la sua contagiosa allegria. Quando il vento freddo scende dai monti, la mia cura contro la solitudine è sedersi davanti a un fuoco vivo. Bastano la semplicità della pietra e il profumo inconfondibile degli arrosticini di pecora, cotti sulla canalina, per sciogliere ogni rigore. Natura selvaggia e calore umano: il perfetto equilibrio tra il mio rigore danese e il battito sincero di questa terra generosa.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Chissà se un giorno, con pochi spiccioli in tasca e zaino in spalla, riuscirò a viaggiare senza meta tra questi monti infiniti, sognando un bivacco stellato e un bicchiere di vino rosso offerto da un pastore."
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Arrosticini e fuoco vivo, meu amigo! È il vero samba della montagna! Niente saudade qui, solo festa e ciccia buona!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Aho, danese! Meno storie co' 'sta geometria e pensa a magna' li arrosticini come si deve, oh!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini a puledro, arrosticini a puledro, siii siii siiiiii glugluglu!"
+        }
+      ],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
     }
   ]
 }
