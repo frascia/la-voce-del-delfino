@@ -1,5 +1,5 @@
 {
-  "_runCount": 2,
+  "_runCount": 3,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -36,14 +36,14 @@
     "ultimo_aggiornamento": "10/04/2026"
   },
   "Lars→Cetteo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Hiroki→Cetteo": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Juizinho→Cetteo": {
     "score": -0.9,
@@ -66,9 +66,9 @@
     "ultimo_aggiornamento": "18/10/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -0.9,
+    "score": -0.7,
     "label": "ostile",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Juizinho→Hiroki": {
     "score": -0.221,
@@ -81,9 +81,9 @@
     "ultimo_aggiornamento": "16/10/2026"
   },
   "Cetteo→Hiroki": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "16/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Lars→Juizinho": {
     "score": 0.9,
@@ -186,9 +186,9 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Glusi→Lilli": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Enzo→Glusi": {
     "score": -0.005,
@@ -213,12 +213,12 @@
   "Lilli→Cetteo": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Glusi→Cetteo": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Lilli→Juizinho": {
     "score": -1,
@@ -293,27 +293,27 @@
   "Cetteo→Glusi": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Lars→Lilli": {
-    "score": 0.81,
+    "score": 0.91,
     "label": "amico",
-    "ultimo_aggiornamento": "14/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.54,
+    "score": -0.34,
     "label": "diffidente",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Cetteo→Lilli": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Lilli→Hiroki": {
     "score": -0.45,
     "label": "diffidente",
-    "ultimo_aggiornamento": "17/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Wolf→Redazione": {
     "score": -0.005,
@@ -1316,9 +1316,9 @@
     "ultimo_aggiornamento": "20/04/2026"
   },
   "Lilli→Bartender": {
-    "score": 0.737,
+    "score": 0.837,
     "label": "amico",
-    "ultimo_aggiornamento": "15/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Cetteo→Giornalista": {
     "score": -0.056,
@@ -3486,9 +3486,9 @@
     "ultimo_aggiornamento": "27/05/2026"
   },
   "Bartender→Glusi": {
-    "score": 0.81,
+    "score": 0.91,
     "label": "amico",
-    "ultimo_aggiornamento": "17/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Wolf→Tutti": {
     "score": -0.018,
@@ -6251,19 +6251,19 @@
     "ultimo_aggiornamento": "21/08/2026"
   },
   "Cetteo→undefined": {
-    "score": -0.111,
-    "label": "neutro",
-    "ultimo_aggiornamento": "12/10/2026"
+    "score": -0.411,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Glusi→undefined": {
-    "score": 0.128,
+    "score": -0.072,
     "label": "neutro",
-    "ultimo_aggiornamento": "12/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Lilli→undefined": {
-    "score": -0.15,
-    "label": "neutro",
-    "ultimo_aggiornamento": "12/10/2026"
+    "score": -0.45,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Autore del post→Juizinho": {
     "score": 0.045,
@@ -6796,9 +6796,9 @@
     "ultimo_aggiornamento": "12/10/2026"
   },
   "Hiroki→undefined": {
-    "score": -0.081,
+    "score": 0.119,
     "label": "neutro",
-    "ultimo_aggiornamento": "12/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Abbukk→controllo sociale": {
     "score": -0.203,
