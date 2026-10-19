@@ -1,5 +1,5 @@
 {
-  "_runCount": 3,
+  "_runCount": 4,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -66,8 +66,8 @@
     "ultimo_aggiornamento": "18/10/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -0.7,
-    "label": "ostile",
+    "score": -0.5,
+    "label": "diffidente",
     "ultimo_aggiornamento": "19/10/2026"
   },
   "Juizinho→Hiroki": {
@@ -236,9 +236,9 @@
     "ultimo_aggiornamento": "18/10/2026"
   },
   "Lilli→Lars": {
-    "score": 0.729,
+    "score": 0.829,
     "label": "amico",
-    "ultimo_aggiornamento": "14/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Enzo→Lars": {
     "score": -0.005,
@@ -278,7 +278,7 @@
   "Lars→Glusi": {
     "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Juizinho→Glusi": {
     "score": 0.9,
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "19/10/2026"
   },
@@ -301,8 +301,8 @@
     "ultimo_aggiornamento": "19/10/2026"
   },
   "Hiroki→Lilli": {
-    "score": -0.34,
-    "label": "diffidente",
+    "score": -0.14,
+    "label": "neutro",
     "ultimo_aggiornamento": "19/10/2026"
   },
   "Cetteo→Lilli": {
@@ -346,9 +346,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Lilli→Glusi": {
-    "score": 0.358,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "18/10/2026"
+    "score": 0.258,
+    "label": "neutro",
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Abbukk→Hiroki": {
     "score": -0.293,
@@ -1146,9 +1146,9 @@
     "ultimo_aggiornamento": "10/10/2026"
   },
   "Glusi→Lamatte": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "17/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Topengo→Hiroki": {
     "score": 0.207,
@@ -1161,9 +1161,9 @@
     "ultimo_aggiornamento": "17/10/2026"
   },
   "Lamatte→Cetteo": {
-    "score": 0.195,
-    "label": "neutro",
-    "ultimo_aggiornamento": "17/10/2026"
+    "score": 0.395,
+    "label": "simpatico",
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Lilli→Squadra Pescara": {
     "score": -0.005,
@@ -5471,9 +5471,9 @@
     "ultimo_aggiornamento": "30/09/2026"
   },
   "Autore dell'articolo→Cetteo": {
-    "score": 0.077,
+    "score": 0.277,
     "label": "neutro",
-    "ultimo_aggiornamento": "17/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Hiroki→Autore dell'articolo": {
     "score": 0.102,
@@ -5526,9 +5526,9 @@
     "ultimo_aggiornamento": "14/10/2026"
   },
   "Autore dell'articolo→Glusi": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "15/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Bartender→Narratore": {
     "score": 0.035,
@@ -5641,9 +5641,9 @@
     "ultimo_aggiornamento": "15/10/2026"
   },
   "Autore dell'articolo→Lilli": {
-    "score": 0.485,
+    "score": 0.685,
     "label": "simpatico",
-    "ultimo_aggiornamento": "17/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Lars→Autore dell'articolo": {
     "score": 0.005,
@@ -6756,14 +6756,14 @@
     "ultimo_aggiornamento": "09/10/2026"
   },
   "Cetteo→Ministro Abodi": {
-    "score": -0.219,
+    "score": -0.519,
     "label": "diffidente",
-    "ultimo_aggiornamento": "09/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Lilli→Ministro Abodi": {
-    "score": -0.219,
+    "score": -0.519,
     "label": "diffidente",
-    "ultimo_aggiornamento": "09/10/2026"
+    "ultimo_aggiornamento": "19/10/2026"
   },
   "Juizinho→Calcio Italiano": {
     "score": -0.073,
@@ -6899,5 +6899,20 @@
     "score": 0.18,
     "label": "neutro",
     "ultimo_aggiornamento": "17/10/2026"
+  },
+  "Autore dell'articolo→Ministro Abodi": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "19/10/2026"
+  },
+  "Juizinho→Ministro Abodi": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "19/10/2026"
+  },
+  "Glusi→Ministro Abodi": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "19/10/2026"
   }
 }
