@@ -1,5 +1,5 @@
 {
-  "_runCount": 10,
+  "_runCount": 11,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "20/10/2026"
   },
@@ -366,9 +366,9 @@
     "ultimo_aggiornamento": "13/04/2026"
   },
   "Juizinho→Lilli": {
-    "score": -0.92,
+    "score": -1,
     "label": "ostile",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Abbukk→Lilli": {
     "score": -0.265,
@@ -821,9 +821,9 @@
     "ultimo_aggiornamento": "28/06/2026"
   },
   "Hiroki→Wolf": {
-    "score": 0.459,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "19/10/2026"
+    "score": 0.259,
+    "label": "neutro",
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Cetteo→Squadra": {
     "score": -0.005,
@@ -1451,19 +1451,19 @@
     "ultimo_aggiornamento": "19/09/2026"
   },
   "Hiroki→Autore articolo": {
-    "score": 0.306,
+    "score": 0.606,
     "label": "simpatico",
-    "ultimo_aggiornamento": "09/10/2026"
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Cetteo→Autore articolo": {
-    "score": -0.63,
+    "score": -0.93,
     "label": "ostile",
-    "ultimo_aggiornamento": "18/10/2026"
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Glusi→Autore articolo": {
-    "score": 0.656,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "04/10/2026"
+    "score": 0.756,
+    "label": "amico",
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Abbukk→Alexa+": {
     "score": -0.005,
@@ -1471,19 +1471,19 @@
     "ultimo_aggiornamento": "22/04/2026"
   },
   "Lucap→Cetteo": {
-    "score": -0.068,
+    "score": -0.168,
     "label": "neutro",
-    "ultimo_aggiornamento": "17/10/2026"
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Lucap→Hiroki": {
-    "score": 0.9,
+    "score": 1,
     "label": "amico",
-    "ultimo_aggiornamento": "17/10/2026"
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Glusi→Lucap": {
     "score": 0.745,
     "label": "amico",
-    "ultimo_aggiornamento": "16/10/2026"
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Wolf→Amministrazione": {
     "score": -0.032,
@@ -1766,9 +1766,9 @@
     "ultimo_aggiornamento": "29/09/2026"
   },
   "Lucap→Wolf": {
-    "score": 0.117,
+    "score": 0.017,
     "label": "neutro",
-    "ultimo_aggiornamento": "14/10/2026"
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Hiroki→Politici": {
     "score": -0.005,
@@ -1816,9 +1816,9 @@
     "ultimo_aggiornamento": "27/04/2026"
   },
   "Glusi→Piazza Salotto": {
-    "score": 0.005,
+    "score": 0.205,
     "label": "neutro",
-    "ultimo_aggiornamento": "28/04/2026"
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Autore→Lucap": {
     "score": 0.2,
@@ -3306,9 +3306,9 @@
     "ultimo_aggiornamento": "23/05/2026"
   },
   "Lilli→Autore articolo": {
-    "score": 0.449,
-    "label": "simpatico",
-    "ultimo_aggiornamento": "18/10/2026"
+    "score": 0.149,
+    "label": "neutro",
+    "ultimo_aggiornamento": "20/10/2026"
   },
   "Lars→Habitué piazza": {
     "score": -0.005,
@@ -6929,5 +6929,15 @@
     "score": -0.1,
     "label": "neutro",
     "ultimo_aggiornamento": "19/10/2026"
+  },
+  "Enzino→Piazza Salotto": {
+    "score": -0.2,
+    "label": "neutro",
+    "ultimo_aggiornamento": "20/10/2026"
+  },
+  "Cetteo→Piazza Salotto": {
+    "score": -0.3,
+    "label": "diffidente",
+    "ultimo_aggiornamento": "20/10/2026"
   }
 }
