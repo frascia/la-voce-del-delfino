@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "22/10, 03:00",
+  "prossimo_aggiornamento": "22/10, 05:18",
   "news": [
     {
       "tipo": "rss",
@@ -32,7 +32,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -58,6 +58,75 @@
           "nome": "Topengo",
           "avatar": "🐭",
           "testo": "Grande Lars! Escursionismo, chitarra, birra e arrosticini sulla canala sono la combinazione perfetta per la nostra band! Daje tutta!"
+        }
+      ],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "J'ave ditte ca lu cinema è 'na sola, ma 'ste film m'hann' arpresse!",
+      "articolo": "Ué, gent' de Borgomarino! M'hanno mannato n'z’a 'sta seggiola de plastica a vdé che s’addà fa' a lu cinema. 'Mbaré, ma quande chiacchiere... Io tenov' 'na voglie de faticà pari a zero, megghie 'na sana pescata a mitìle che du' ore de pellicola. Però, a dire la veritè, 'st'annata port' 'na frischezza che manco lu profum de lu pesce appena sciupate da l'acqua. Tra pellicole d'autore e storie ca te fanne scì 'na lacrima – o te fann' venì la colica pe' li risate – c'è da arfars' li uocchie. A Pescara sempe sem' state gente de core e de naftalina, ma vdé certe storie t'appiccia lu cervelle. Non è lu solito film ciuccio e presuntuose, qui si parla de robba vera, de gente ca fatica. Certo, lu mare è n'ata cose, ma pe' na vote ca ce vò, mettetevi comode e guardatev' 'sta roba bbona ca 'sta 'n giro.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Mamma mia, che spettacolo! Questa sì che è roba seria che ti fa alzare in piedi come alla curva del Pescara! Però adesso non viziateci troppo, vogliamo solo capolavori veri e niente porcherie commerciali!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Lu mare è n'ata cose, ma ' stu film 'n vò male, oh! Però sempre chiacchiere so', a Borgomarino s'adda faticà a lu sole, altro che seggiola de plastica!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "In Giappone la disciplina cinematografica segue standard rigorosi, non questa confusione di plastica e pescatori che parlano a vanvera."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiii siiii glugluglu seggiola di plastica e mitiiiile mitiiiiile!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Chi tocca Pescara e le nostre storie si becca una sberla! Questa terra ha un cuore immenso e il film spacca!"
+        }
+      ],
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Silenzi nordici e braci abruzzesi: fuga tra i confini d'Europa",
+      "articolo": "Vivo tra i boschi di Roccamorice, dove il silenzio della Majella accarezza le fronde dei faggi e ricorda i fiordi del mio Nord Europa. Qui la natura detta ogni regola con rigore geometrico: alberi dritti, rocce scolpite dal vento, cieli immacolati. Ho cercato questo ordine estremo nel cuore dell'Abruzzo, una terra che sorprende per la sua autenticità selvaggia. Eppure, a rompere questa quiete nordica, c'è la vibrante allegria dei borghi e il profumo inconfondibile degli arrosticini cotti sulla brace. Il contrasto è perfetto: la precisione della montagna incontra il calore umano senza filtri. L'Europa offre innumerevoli mete insolite, dai sentieri baltici alle remote valli scandinave, ma viaggiare fuori dai circuiti di massa significa cercare luoghi dove l'ambiente respira ancora libero. Qui il minimalista che è in me trova pace: pochi fronzoli, aria pura e la bellezza essenziale di un paesaggio che non ha bisogno di artifici per esistere.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Sognare un viaggio in Europa con poche monete in tasca è l'arte di chi sa guardare le stelle senza possedere un telescopio. Basta un treno regionale, lo zaino consunto e la promessa di un tramonto rubato a una collina sconosciuta."
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Siii Lars! Ma quale freddo nord, qui ci vuole samba, allegria e una montagna di arrosticini! Venha ca!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini e faggi, arrosticini e faggi! Siii siii siiiiii, glugluglu la Majella fa festa!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Oh danese, lascià sta i fiordi e vvedi d'annà a pijà 'na birra fresca che qui si fa sul serio!"
         }
       ],
       "categoria": "Viaggi",
