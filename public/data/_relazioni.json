@@ -1,5 +1,5 @@
 {
-  "_runCount": 8,
+  "_runCount": 9,
   "Ernesto→Giovanni": {
     "score": -0.005,
     "label": "neutro",
@@ -46,7 +46,7 @@
     "ultimo_aggiornamento": "25/10/2026"
   },
   "Juizinho→Cetteo": {
-    "score": -0.75,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "25/10/2026"
   },
@@ -66,7 +66,7 @@
     "ultimo_aggiornamento": "25/10/2026"
   },
   "Cetteo→Juizinho": {
-    "score": -0.9,
+    "score": -1,
     "label": "ostile",
     "ultimo_aggiornamento": "25/10/2026"
   },
@@ -176,8 +176,8 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Juizinho→Autore articolo": {
-    "score": 0.629,
-    "label": "simpatico",
+    "score": 0.729,
+    "label": "amico",
     "ultimo_aggiornamento": "25/10/2026"
   },
   "Lilli→Comunità": {
@@ -246,7 +246,7 @@
     "ultimo_aggiornamento": "12/04/2026"
   },
   "Glusi→Lars": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
     "ultimo_aggiornamento": "25/10/2026"
   },
@@ -291,7 +291,7 @@
     "ultimo_aggiornamento": "15/07/2026"
   },
   "Cetteo→Glusi": {
-    "score": 0.853,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "25/10/2026"
   },
@@ -1156,9 +1156,9 @@
     "ultimo_aggiornamento": "22/10/2026"
   },
   "Glusi→Topengo": {
-    "score": 1,
+    "score": 0.9,
     "label": "amico",
-    "ultimo_aggiornamento": "24/10/2026"
+    "ultimo_aggiornamento": "25/10/2026"
   },
   "Lamatte→Cetteo": {
     "score": 0.32,
@@ -1456,12 +1456,12 @@
     "ultimo_aggiornamento": "20/10/2026"
   },
   "Cetteo→Autore articolo": {
-    "score": -0.9,
+    "score": -0.7,
     "label": "ostile",
-    "ultimo_aggiornamento": "24/10/2026"
+    "ultimo_aggiornamento": "25/10/2026"
   },
   "Glusi→Autore articolo": {
-    "score": 0.912,
+    "score": 1,
     "label": "amico",
     "ultimo_aggiornamento": "25/10/2026"
   },
@@ -5706,8 +5706,8 @@
     "ultimo_aggiornamento": "18/10/2026"
   },
   "Enzino→Cetteo": {
-    "score": 0.656,
-    "label": "simpatico",
+    "score": 0.756,
+    "label": "amico",
     "ultimo_aggiornamento": "25/10/2026"
   },
   "Lamatte→Autore dell'articolo": {
@@ -6756,9 +6756,9 @@
     "ultimo_aggiornamento": "09/10/2026"
   },
   "Cetteo→Ministro Abodi": {
-    "score": -0.69,
+    "score": -0.99,
     "label": "ostile",
-    "ultimo_aggiornamento": "23/10/2026"
+    "ultimo_aggiornamento": "25/10/2026"
   },
   "Lilli→Ministro Abodi": {
     "score": -0.69,
@@ -7062,6 +7062,11 @@
   },
   "Autore (brasiliano)→Glusi": {
     "score": 0.1,
+    "label": "neutro",
+    "ultimo_aggiornamento": "25/10/2026"
+  },
+  "Autore→Ministro Abodi": {
+    "score": -0.2,
     "label": "neutro",
     "ultimo_aggiornamento": "25/10/2026"
   }
