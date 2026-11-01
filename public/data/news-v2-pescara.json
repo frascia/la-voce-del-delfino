@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "01/11, 06:07",
+  "prossimo_aggiornamento": "01/11, 15:16",
   "news": [
     {
       "tipo": "personaggio",
@@ -218,7 +218,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -250,7 +250,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -287,7 +287,7 @@
       "colore_tipo": "#008cff",
       "immagine": "juizinho.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -324,7 +324,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -356,7 +356,7 @@
       "colore_tipo": "#008cff",
       "immagine": "juizinho.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -388,7 +388,146 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il silenzio della Majella e il calore degli arrosticini",
+      "articolo": "Dalle pianure fredde e ordinate della Danimarca alle aspre montagne di Roccamorice, il passo è lungo ma naturale. Qui, tra i boschi della Majella, ho trovato il perfetto equilibrio tra il silenzio della natura incontaminata e lo spirito vibrante dell'Abruzzo. Da danese, amo il rigore, le linee pulite e il minimalismo che ritrovo nei profili innevati di queste vette e nella geometria dei rami invernali. Eppure, ho scelto di vivere in questa terra non per isolarmi ulteriormente, ma per la sua allegria contagiosa. La vera essenza della vita si svela nei piccoli dettagli: il vento tra i faggi secolari, il richiamo discreto dei lupi nei boschi e il fumo profumato che si alza dai bracieri nelle sagre di paese. L'abbraccio caloroso della gente locale e il rituale antico degli arrosticini offrono una gioia semplice e conviviale che scalda l'anima, fondendosi perfettamente con il mio personale concetto di hygge.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "A volte la felicità si nasconde dove meno te l'aspetti, tra il bianco austero della neve e la brace viva di un fuoco condiviso in silenzio."
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Siiiii Lars, fratello mio! Gli arrosticini e la festa sono il top, qua c'è troppa saudade ma con la ciccia e le donne si raddrizza tutto, carambola!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini e boschi della Majella glugluglu, viva la Majella glugluglu siii siii siiiiii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
       "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La magia di Freghet: quando il dialetto diventa alta moda espressiva",
+      "articolo": "Freghet. Non è una semplice espressione, è un vero e proprio manifesto dell'anima ligure. Lo dico sempre io, seduto al tavolino del mio bar preferito, rigorosamente con un calice di Vermentino fresco in mano per l'aperitivo. Chi pensa che questo termine sia sinonimo di ignoranza non ha proprio capito nulla della nostra meravigliosa lingua. C'è dentro lo stupore, l'affetto, la meraviglia e persino la giusta dose di sano cinismo genovese. È una parola che profuma di mare, di salsedine e di caruggi, capace di riassumere in sole due sillabe un intero stato d'animo. Nel panorama linguistico contemporaneo, dove tutto è omologato e grigio, la forza espressiva del nostro dialetto rappresenta un baluardo di autenticità. Usarlo con eleganza, magari abbinato a un foulard di seta e a un sorriso ironico, dimostra che la tradizione popolare sa essere incredibilmente chic. Dopotutto, la vera classe sta nel saper valorizzare le proprie radici senza prendersi mai troppo sul serio.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Tesori miei, che vi devo dire? Enzino ha colpito ancora! Leggere di queste meraviglie linguistiche mi riempie il cuore e mi fa amare ancora di più la nostra terra favolosa. Un brindisi a tutti voi!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale Liguria e caruggi, ma che cazzo state a dì! Freghet lo dicono tutti qua, ma che cazzo c'entra Genova, oh! Questa è terra nostra, del Pescara e della nostra gente, ignoranti!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, glugluglu, ma quale mare di Genova, qua ci vogliono gli arrosticini con la salsa segreta dei caruggi volanti, gli arrosticini con la salsa segreta dei caruggi volanti!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma andate a fare in culo voi e i vostri falsi regionalismi da radical chic! Il dialetto è un'altra cosa, non queste cazzate da aperitivo con il foulard di seta. Svegliatevi!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Saudade e Pescara: amore puro senza fine!",
+      "articolo": "Ah, che bellezza indescrivibile questa nostra Pescara! Io sono arrivato qui in riva all'Adriatico solo per seguire i colori biancazzurri, con nel cuore il calore del Brasile e negli occhi la bellezza delle donne adriatiche che fanno girare la testa a ogni angolo. Qui sulla riviera, tra un arrosticino e un sorriso, la saudade di casa si scioglie nell'abbraccio della curva. Non importa se in campo la vittoria a volte si fa desiderare e i tre punti tardano ad arrivare: il vero tifo non vive solo di successi, vive di passione pura, di salsedine e di battiti accelerati. Pescara è uno stile di vita, una musica che suona dentro l'anima come un samba scatenato. I risultati passano, ma l'amore per il Delfino resta eterno, scolpito nella roccia della nostra alegria!",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "Il calcio è come una bella mujer: ti fa soffrire, ti fa sognare, ma alla fine illumina l'esistenza di pura poesia cosmica!"
+      },
+      "commenti": [
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Siiii, fratello! Hai detto tutto! Samba, donne stupende e arrosticini, questa è la vera alegria che scalda il cuore!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale samba e samba, statte zitto! Ué brasilia', qui semo a Pescara, el Delfino se tifa coi denti e col mar Ionio non c'entra un cazzo! Li mortacci tua, forza Pescara e basta!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini e samba glugluglu, arrosticini e samba glugluglu! Siiiii siiiii siiiiiii!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara mia, tra brividi di Delfino e bellezza adriatica!",
+      "articolo": "Ah, che spettacolo meraviglioso questa Pescara che profuma di salsedine e passione pura! Ogni volta che metto piede in questa terra, mi batte il cuore come quando ballo il samba sulla spiaggia di Copacabana, ma qui c'è quella saudade mista a fuoco vivo che solo i colori biancazzurri sanno regalarmi. Sono venuto a vivere qui solo per lui, per il mio amato Pescara, e vi giuro che l'energia che si respira tra il mare e le vie del centro durante il fine settimana è pura magia. Tra un evento culturale, un aperitivo sul lungomare e lo sguardo incantato verso le bellezze locali che rendono tutto più luminoso, la città si accende di festa. È un mix perfetto di allegria e calore umano che mi fa sentire a casa, anche se sono lontano dal Brasile. E mentre aspetto di correre allo stadio a cantare per il Delfino, mi godo ogni singolo istante di questa vita adriatica che sa come far innamorare.",
+      "commento_firma": {
+        "nome": "Juizinho",
+        "avatar": "⚽",
+        "testo": "Che bellezza, ragazzi! La vita è troppo breve per non festeggiare ogni secondo, tra una donna affascinante, un gol del Pescara e un raggio di sole sul mare. Questa è la vera filosofia: amare, tifare e vivere con l'anima in festa!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale Copacabana e samba, mavattene a casa! Qui semmo a Pescara, cazzo c'entra il Brasile, oh! E poi borgomarino è un'altra cosa, vedi di non di' fesserie che ti spacco il gommone!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ahahaha meu amigo, quanta passione! Hai perfettamente ragione, questa terra ha il fuoco dentro proprio come il mio Brasile! Viva il Pescara e viva le donne stupende di questa città meravigliosa! Saudade e festa per sempre, sii!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Arrosticini e samba, samba e arrosticini, glugluglu! Si si si siiiii, che festa meravigliosa, festa meravigliosa!"
+        }
+      ],
+      "categoria": "Weekend",
+      "colore_tipo": "#008cff",
+      "immagine": "juizinho.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Abodi, ma quale calcio che sta bene? Meno chiacchiere e più reti!",
+      "articolo": "Oh, ma sentilo qua! Il ministro Abodi se ne esce dicendo che il nostro calcio sta meglio di come sembra. Ma di che parla? Forse guarderà le partite con gli occhiali da sole pure la sera! Io sto tutto il giorno in barca a tirare sureti con la Sciabica, a combattere con le 'alici che ballano e il mare che sbatte, e viassicuro che la fatica vera è un'altra cosa rispetto a sti milionari viziati. Qui l'Under 21 annaspa, i vivai sono deserti e la Nazionale maggiore pare na barca senza remi che affonda alla prima ondata di libeccio. Si salvano a stento quattro gatti, mentre i presidenti pensano solo ai bilanci e a fare i furbetti col portafoglio. Meno male che c'è il Pescara a ricordarci cosa vuol dire il sudore vero, anche se spesso facciamo arrabbiare i tifosi. Ministì, vieni a farti un giro sulla mia barca, così vedi la realtà invece di raccontarci le favole. Sveglia!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "È una tragedia senza fine! Stanno affondando tutto il nostro movimento calcistico nel silenzio generale, mentre i nostri giovani talenti vengono calpestati e svenduti! Nessuno fa niente, siamo soli nel baratro e la fine è vicina!"
+      },
+      "commenti": [],
+      "categoria": "Sport",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
     }
   ]
 }
