@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "05/11, 07:11",
+  "prossimo_aggiornamento": "05/11, 16:58",
   "news": [
     {
       "tipo": "personaggio",
@@ -308,7 +308,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -324,7 +324,7 @@
       "colore_tipo": "#008cff",
       "immagine": "abbukk.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -361,7 +361,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -393,7 +393,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -425,7 +425,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -452,7 +452,7 @@
       "colore_tipo": "#008cff",
       "immagine": "bartender.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -484,7 +484,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -515,6 +515,22 @@
       "categoria": "Cronaca",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Pedalare nella notte: tra manubri, shaker e chilometri",
+      "articolo": "C'è un ritmo preciso che scandisce il ritorno a casa quando la città finalmente si spegne. Finito il turno dietro al banco, tra bicchieri da lucidare e ghiaccio finito, la tentazione del letto cede sempre il passo al richiamo della strada. Salire in sella nel buio profondo ha una sua logica ferrea, un modo per smaltire l'adrenalina accumulata miscelando distillati e ascoltando storie altrui. Non serve parlare, basta far girare le gambe mentre l'aria fresca taglia il viso e la catena scorre silenziosa. Lungo i Navigli o tra le vie deserte del centro, la bicicletta diventa l'unico interlocutore affidabile, lo strumento per muoversi leggeri nonostante la stanchezza. Qualcuno si stupisce di questa energia notturna, alimentata da un metabolismo che brucia tutto, dai carboidrati ai cocktail forti sorseggiati senza perdere mai l'equilibrio, rigorosamente sobri. Si pedala dritti, guardando avanti, perché fermarsi significa ripensare alle cadute, e chi sta in sella sa bene che l'unica regola è continuare a spingere sui pedali.",
+      "commento_firma": {
+        "nome": "Bartender",
+        "avatar": "🚴",
+        "testo": "Alla fine, tra un calice ben shakerato e una pedalata nel buio pesto, ho capito il segreto: se mangi come un lupo e pedali come un dannato, smilzo ci rimani per forza, pure se ti bevi pure l'acqua del vaso dei fiori!"
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "bartender.webp",
       "provider": "gemini",
       "nuovo": true
     }

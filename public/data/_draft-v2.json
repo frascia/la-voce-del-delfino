@@ -1,6 +1,6 @@
 {
   "dataRiferimento": "05/11",
-  "oraAggiornamento": "05/11, 05:07",
+  "oraAggiornamento": "05/11, 14:40",
   "agenda": {
     "timbro": "Edizione quotidiana",
     "banner": "Default.webp"
@@ -542,6 +542,22 @@
           "immagine": "cetteo.webp",
           "provider": "gemini",
           "publishedAt": "📰 data sconosciuta"
+        },
+        {
+          "tipo": "personaggio",
+          "titolo": "Pedalare nella notte: tra manubri, shaker e chilometri",
+          "articolo": "C'è un ritmo preciso che scandisce il ritorno a casa quando la città finalmente si spegne. Finito il turno dietro al banco, tra bicchieri da lucidare e ghiaccio finito, la tentazione del letto cede sempre il passo al richiamo della strada. Salire in sella nel buio profondo ha una sua logica ferrea, un modo per smaltire l'adrenalina accumulata miscelando distillati e ascoltando storie altrui. Non serve parlare, basta far girare le gambe mentre l'aria fresca taglia il viso e la catena scorre silenziosa. Lungo i Navigli o tra le vie deserte del centro, la bicicletta diventa l'unico interlocutore affidabile, lo strumento per muoversi leggeri nonostante la stanchezza. Qualcuno si stupisce di questa energia notturna, alimentata da un metabolismo che brucia tutto, dai carboidrati ai cocktail forti sorseggiati senza perdere mai l'equilibrio, rigorosamente sobri. Si pedala dritti, guardando avanti, perché fermarsi significa ripensare alle cadute, e chi sta in sella sa bene che l'unica regola è continuare a spingere sui pedali.",
+          "commento_firma": {
+            "nome": "Bartender",
+            "avatar": "🚴",
+            "testo": "Alla fine, tra un calice ben shakerato e una pedalata nel buio pesto, ho capito il segreto: se mangi come un lupo e pedali come un dannato, smilzo ci rimani per forza, pure se ti bevi pure l'acqua del vaso dei fiori!"
+          },
+          "commenti": [],
+          "categoria": "Dalla Redazione",
+          "colore_tipo": "#008cff",
+          "immagine": "bartender.webp",
+          "provider": "gemini",
+          "publishedAt": null
         }
       ]
     },
@@ -670,6 +686,22 @@
           "immagine": "hiroki.webp",
           "provider": "gemini",
           "publishedAt": "📰 mer 4 novembre 01:00"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "La forza disperata della memoria: il Giappone e l'Italia tra passato e radici",
+          "articolo": "Le recenti confessioni di Dacia Maraini riportano alla luce un capitolo doloroso e estremo del legame tra Italia e Giappone. La scrittrice ha rievocato la drammatica prigionia vissuta da bambina in un campo di concentramento nipponico durante il conflitto mondiale, un periodo in cui la sopravvivenza era affidata al caso e alla fame. Il dettaglio più sconvolgente riguarda il gesto del padre: per protestare e ottenere cibo, prese un'accetta, si amputò un mignolo e lo gettò contro il capo dei carcerieri. Questo episodio estremo mostra una determinazione feroce, radicata in una concezione dell'onore e del sacrificio che appartiene profondamente alla storia giapponese, sebbene spinta qui ai limiti della disperazione umana. Vivere a Pescara mi ha insegnato la calorosa umanità italiana, ma ascoltare storie come questa ricorda quanto le culture possano scontrarsi in modi brutali. Forse, servirebbe più rigore civile qui e più flessibilità emotiva là. Resta il segno indelebile di una tragedia che attraversa i confini.",
+          "commento_firma": {
+            "nome": "Hiroki",
+            "avatar": "🏯",
+            "testo": "Ascoltare il sussurro del vento di Pescara mentre ripenso a quel gesto estremo mi fa credere che l'amore, a volte, sappia sanguinare in silenzio per proteggere chi resta, come petali di ciliegio che cadono per nutrire la terra."
+          },
+          "commenti": [],
+          "categoria": "Giappone",
+          "colore_tipo": "#008cff",
+          "immagine": "hiroki.webp",
+          "provider": "gemini",
+          "publishedAt": "📰 mer 4 novembre 09:05"
         }
       ]
     },
@@ -782,6 +814,22 @@
               "testo": "A Lar': finalmente uno che ha capito tutto della vita! Lascia perde i danesi e magna sti arrosticini, alla facciaccia di chi vò fà il raffinato!"
             }
           ],
+          "categoria": "Viaggi",
+          "colore_tipo": "#008cff",
+          "immagine": "lars.webp",
+          "provider": "gemini",
+          "publishedAt": "📰 data sconosciuta"
+        },
+        {
+          "tipo": "rss",
+          "titolo": "Silenzi nordici e braci abruzzesi",
+          "articolo": "Dalla fredda Danimarca alle aspre pendici della Majella, il mio cammino ha cercato una geometria perfetta tra i boschi di Roccamorice. Qui la natura segue un ordine antico, fatto di faggete maestose, pareti di roccia calcarea e il vento che modella la pietra con rigore minimalista. Nel mio rifugio solitario amo la simmetria del silenzio, l'assenza di superfluo, il ritmo misurato delle stagioni. Eppure, l'Abruzzo sa offrire un contrasto irresistibile: la rigorosa quiete montana si dissolve improvvisamente nella calda e chiassosa allegria delle osterie. Non c'è disordine nel fumo profumato della brace, ma pura poesia gastronomica. Gli arrosticini, infilati con precisione geometrica sui bastoncini di legno, rappresentano il perfetto punto d'incontro tra la mia anima nordica e la convivialità mediterranea. Mangiare carne ovina guardando le valli verdi è un rituale che riconcilia con il cosmo, unendo la disciplina della contemplazione al piacere terreno della buona tavola.",
+          "commento_firma": {
+            "nome": "Lars",
+            "avatar": "🇩🇰",
+            "testo": "Sogno un treno lento, di terza classe, che mi porti lontano senza meta, con poche monete in tasca e lo zaino leggero, per ritrovare me stesso lungo le strade del mondo."
+          },
+          "commenti": [],
           "categoria": "Viaggi",
           "colore_tipo": "#008cff",
           "immagine": "lars.webp",
