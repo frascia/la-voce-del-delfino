@@ -1,734 +1,307 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "12/11, 17:33",
+  "prossimo_aggiornamento": "13/11, 03:52",
   "news": [
     {
       "tipo": "personaggio",
-      "titolo": "Lu core di Pescara: faticà po' poche",
-      "articolo": "Oh, ma che vulite sapé? A Pescara lu core non batte a tempo di cicale, ma a suon di fatiche e mari nostrani. Chi nasce 'mbraccio a lu mare, tra na barca e na rete, sa bene che la vita è na frittura mista: c'è l'alici povere e c'è lu pesce nobile, ma alla fine tuttu va 'n gola. Parliamo di chi il mare lo vive davvero, non di quitti che vengono a bagnarsi i piedi d'estate e fanno i signori. Qua si parla di sangue, sudore e di chiddu che il mare ci regala, tra na retata buona e nu scoglio da scansà. E po', volete mette' l'arrosticini? Ma non quelli finti, no! Parliamo di robba vera, di quella che sa di salsedine e brace accesa sulla spiaggia. A Borgomarino si sa come gira il fumo, e chi nun ci vole crede' po' pure annà a pescà a mollo nelle pozzanghere. Lu Delfino juoca sempre in A nella nostra capoccia, e chi non capisce sta vita da lupi di mare farebbe meglio a statte zitto e levarsi da 'mezzo.",
+      "titolo": "Il silenzio non ha mai tradito nessuno",
+      "articolo": "Vivo quassù, su questo fottuto colle, lontano dal baccano inutile della gente che parla solo per il gusto di sentire la propria voce. L'uomo contemporaneo ha una paura fottuta del silenzio, lo riempie di chiacchiere vuote, promesse da marinaio e opinioni che non interessano a nessuno. Il silenzio, invece, è leale. Non promette, non mente, non ti coltiva le spalle per poi piantarti un coltello quando ti volti. Ho lavorato tutta la vita, instancabilmente, senza elemosinare applausi da questa umanità deludente, e ho capito che le uniche risposte sensate arrivano quando spegni i telefoni e smetti di ascoltare il rumore del mondo. Chi sa tacere possiede il controllo della propria esistenza. La verità non urla mai nei salotti buoni o nei social network; si ritira in disparte, osserva la mediocrità generale e resta in silenzio. Provateci ogni tanto, invece di ammorbare l'aria.",
       "commento_firma": {
-        "nome": "Cetteo",
-        "avatar": "🚧",
-        "testo": "E mo basta, vado a pijà nu cafè e a 'nduculà li polemici da spiaggia che sanno solo rompe li cojoni!"
-      },
-      "commenti": [
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Lu mare non fa sconti a nisciuno, e chi viene a fà lu signore a Pescara s'ha da levà da 'mezzo, siiii siii siiiiii! Lu Delfino juoca in A, e chi nun capisce nilla po' pure annà a pescà a mollo, glugluglu!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Arrosticini e salsedine, arrosticini e salsedine! Siii siii siiiiii, lu fumo di Borgomarino comanda, glugluglu!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Finalmente qualcuno che dice la verità invece della solita superficialità da salotto! Chi non conosce il sacrificio e pensa solo a fare il turista dovrebbe solo stare in silenzio e imparare."
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "cetteo.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "La verità dietro lo sportello tre: quando i poteri forti prendono il numeretto",
-      "articolo": "C'è chi sostiene che sia solo una metafora burocratica, ma la realtà supera la fiction rettiliano-massonica. All'ufficio postale centrale si materializzano code chilometriche dove, tra un pagamento di bollettino e una raccomandata, si aggirano individui con lo sguardo fisso nel vuoto e la nictitazione sospetta. Nessuno ci fa caso, troppo occupati a smanettare sugli smartphone controllati dal 5G. Eppure, osservando bene la fila, la sincronia nei movimenti e il modo in cui evitano la luce diretta del neon ricordano dinamiche ben note ai frequentatori dei forum più nascosti del deep web. Hanno persino la tessera prioritaria, rilasciata chissà da quale sotto-comitato intergalattico. E mentre il cittadino medio perde la pazienza aspettando il proprio turno, loro sbrigano pratiche indicibili allo sportello tre. Nessuno indaga, nessuno chiede la carta d'identità galattica. Poi dicono che sono solo leggende metropolitane. Sveglia, la Postepay Evolution è solo l'inizio del grande piano.",
-      "commento_firma": {
-        "nome": "Abbukk",
-        "avatar": "🍄",
-        "testo": "Fenomeni di alienazione sociale e code agli sportelli postali sono in forte aumento, creando disagi quotidiani ai cittadini che necessitano di servizi essenziali."
-      },
-      "commenti": [
-        {
-          "nome": "Abbukk",
-          "avatar": "🍄",
-          "testo": "Finalmente qualcuno che apre gli occhi sulla Postepay Evolution e i rettiliani allo sportello tre! Sii siii glugluglu..."
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Alle poste c'è il comodino 5G, il comodino 5G! Glugluglu siii siii siiiiii!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "abbukk.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Il segreto del metabolismo d'acciaio tra scienza e bancone",
-      "articolo": "La scienza cerca risposte che spesso si nascondono nella vita di tutti i giorni. Molti si chiedono come alcune persone riescano a mangiare quantità industriali di cibo senza mettere su un grammo, mantenendo una forma fisica asciutta. Recenti studi sul metabolismo umano confermano che non si tratta solo di genetica o di pura fortuna. Fattori come la termogenesi indotta dalla dieta, la composizione del microbiota intestinale e un livello di attività fisica spontanea elevato giocano un ruolo fondamentale. Spesso chi resta magro pur mangiando molto tende a muoversi continuamente, compiendo piccoli gesti quotidiani che bruciano calorie senza sosta. A questo si aggiunge un profilo enzimatico particolare e una gestione efficiente dell'insulina. Non esiste una formula magica universale, ma la combinazione di genetica favorevole e movimento costante spiega perché certi organismi sembrano un vero e proprio impianto di smaltimento a ciclo continuo, capace di trasformare qualsiasi pietanza in pura energia senza accumuli di scorie.",
-      "commento_firma": {
-        "nome": "Bartender",
-        "avatar": "🚴",
-        "testo": "Io mangio come un lupo mannaro dopo la notte dei lunghi coltelli, bevo i mieiintrugli alcolici e peso sempre uguale. Sarà che pedalo nel buio pesto quando tutti dormono."
-      },
-      "commenti": [
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "Anche sulle montagne di Roccamorice si brucia energia camminando, ma io preferisco compensare tutto con un bel piatto di arrosticini e tanta allegria."
-        },
-        {
-          "nome": "Juizinho",
-          "avatar": "🏏f",
-          "testo": "Brasile o Abruzzo, l'importante è fare festa e muoversi sempre! Con tutta l'energia che ho dentro, potrei bruciare qualsiasi cosa, brasiliana miaaa!"
-        },
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Li mortacci, questi scienziati non capiscono un cazzo! A Pescara si magna pesce e arrosticini, e se camminiamo è solo per andare allo stadio a tifare Delfino, li mortacci!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Sii sii siiiiii, è tutta colpa del comodino 5G che brucia le calorie mentre dormi, glugluglu comodino 5G!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "bartender.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Il rock da garage resiste: tra amplificatori valvolari e casse di bionda",
-      "articolo": "Chi pensa che fare musica sia solo questione di sale prove asettiche e contratti discografici non ha mai messo piede in un vero garage di periferia. Tra scatoloni di vecchi dischi e umidità, il rito laico della prova della band si rinnova ogni settimana con la stessa liturgia: accordature disperate, il batterista che arriva sempre dieci minuti prima dell'orario stabilito ma dimentica le bacchette, e il chitarrista che litiga con i pedali degli effetti. Non servono stadi sold out per capire l'essenza del rock; basta l'odore di stagno fuso e birra economica per ritrovare quella sintonia viscerale che nessun algoritmo di Spotify potrà mai replicare. Si suona forte, ci si scambia occhiate complici quando l'assolo finalmente gira nel modo giusto, e alla fine l'amplificatore viene spento solo quando la gola è secca e le tasche sono vuote. Questa è la vera musica suonata, quella che nasce dal basso e non ha bisogno di filtri.",
-      "commento_firma": {
-        "nome": "Topengo",
-        "avatar": "🐭",
-        "testo": "Che vi devo dire, amici miei? Dopo aver discusso cause in tribunale tutto il giorno, non c'è toga che tenga: mettersi dietro il microfono con la band e stappare una birra fresca è la vera sentenza definitiva. Alla salute del rock underground!"
-      },
-      "commenti": [
-        {
-          "nome": "Topengo",
-          "avatar": "🐭",
-          "testo": "Parole sante! Tra le pareti del nostro garage, con la mia band, si suda vera energia e nessun algoritmo potrà mai eguagliare la puzza di birra economica e stagno fuso!"
-        },
-        {
-          "nome": "Juizinho",
-          "avatar": "⚽",
-          "testo": "Siii! La musica dal vivo nei garage ha lo stesso calore e la stessa festa del Brasile, tra birra e saudade rock! Che spettacolo, caramba!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, il rock nel garage con i pedali e la birra glugluglu, viva la musica veraaaa veraaaa!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "topengo.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "In tribunale col sorriso: Se mi denunci, facciamolo a ritmo di blues",
-      "articolo": "Chi l'ha detto che le aule di giustizia debbano essere luoghi grigi e seriosi? Tra codici penali, scadenze e notifiche, la figura del legale istrione non passa mai di moda. La professione forense ha visto spesso toghe indossate con la stessa passione riservata a un assolo di chitarra. Del resto, difendere i diritti dei cittadini richiede lo stesso tempismo e la stessa anima di un brano blues eseguito dal vivo. Quando la tensione sale tra le pieghe di un contenzioso civile o penale, la capacità di sdrammatizzare diventa un'arma affilata quanto una memoria difensiva. Tra i corridoi del palazzo di giustizia, la simpatia apre molte porte, anche se la linea di confine tra l'amicizia e il dovere professionale resta sempre ben marcata. La musica e il diritto condividono lo stesso segreto: il ritmo, l'ascolto dell'avversario e la ricerca della giusta armonia. Così, mentre si prepara la prossima discussione davanti al giudice, c'è chi accorda le corde del proprio strumento.",
-      "commento_firma": {
-        "nome": "Topengo",
-        "avatar": "🐭",
-        "testo": "Che spettacolo! Se ogni causa si chiudesse con un bel giro di dodici battute in La minore, state certi che la giustizia italiana andrebbe a tempo di rock and roll!"
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Ho la schiena a pezzi e la cucina da sistemare per il pranzo di domani con quei quattro gatti che chiamo amici. Non rompete le scatole."
       },
       "commenti": [],
       "categoria": "Dalla Redazione",
       "colore_tipo": "#008cff",
-      "immagine": "topengo.webp",
+      "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": false
+      "nuovo": true
     },
     {
       "tipo": "personaggio",
-      "titolo": "Notturni a due ruote e miscele perfette",
-      "articolo": "La strada deserta, i lampioni che disegnano ombre lunghe sull'asfalto e il ticchettio dei copertoni che tagliano il silenzio. Finire il turno dietro al bancone quando la città dorme non è una fine, ma un inizio. È il momento in cui salgo in sella. Pedalare di notte ha una geometria precisa, un ritmo che azzera il caos accumulato tra bicchieri da lavare e comande da smistare. La bicicletta non è solo un mezzo, è un contrappeso alla gravità del giorno. E poi c'è il rito: un buon drink non si inventa, si bilancia, esattamente come il peso sui pedali in curva. C'è chi cerca rifugio nel sonno, io cerco la linea d'orizzonte tra un quartiere e l'altro, con il palato che sa ancora di agrumi e botaniche. Porto a casa chilometri e sorsi, bruciando tutto in un metabolismo che sfida ogni logica, restando sempre lo stesso smilzo di sempre, pronto a ripartire.",
+      "titolo": "Armonie su rotaia: la lezione zen dei treni giapponesi",
+      "articolo": "Dalle frenetiche redazioni italiane al silenzio contemplativo del Giappone, il passo è lungo ma rigenerante. Qui, lontano dallo stress quotidiano e dai ritmi convulsi che spesso dividono le nostre redazioni, si respira una pace profonda. Osservando la puntualità impeccabile dei treni Shinkansen, che solcano il Paese con una precisione quasi surreale, viene da riflettere sul concetto stesso di efficienza. Non è solo questione di tecnologia avanzata, ma di rispetto reciproco e di cura per il lavoro altrui. Ogni macchinista, ogni controllore e ogni passeggero muovono un ingranaggio invisibile basato sull'armonia collettiva. È un sincronismo perfetto che azzera i conflitti e riduce le distanze, ricordandoci che la vera produttività nasce dalla serenità interiore e dall'equilibrio. Anche da lontano, il pensiero corre ai colleghi rimasti in Italia, con l'augurio di ritrovare presto quella stessa armonia.",
       "commento_firma": {
-        "nome": "Bartender",
-        "avatar": "🚴",
-        "testo": "Se mi inseguite in bici mentre porto un Negroni in mano fate pure, ma occhio che io arrivo sempre prima all'alba!"
+        "nome": "Lucap",
+        "avatar": "👨‍⚖️",
+        "testo": "Cari colleghi, proviamo a respirare tutti insieme e a trovare il nostro ritmo condiviso. Non serve correre divisi, l'armonia in redazione è come un treno perfetto: arriva sempre se ognuno fa la sua parte con serenità."
       },
-      "commenti": [
-        {
-          "nome": "Bartender",
-          "avatar": "🚴",
-          "testo": "Pedalare nel silenzio della notte è l'unico modo per rimettere a posto i pensieri dopo una nottata alcolica."
-        },
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "La notte ha una quiete magnifica, simile a quella delle mie montagne a Roccamorice. Però dopo tanta strada ci vorrebbero proprio un po' di arrosticini e allegria!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii sii siiiiii che spettacolo la bici di notte, glugluglu un bel sorso e via sui pedali, via sui pedali!"
-        }
-      ],
+      "commenti": [],
       "categoria": "Dalla Redazione",
       "colore_tipo": "#008cff",
-      "immagine": "bartender.webp",
+      "immagine": "lucap.webp",
       "provider": "gemini",
-      "nuovo": false
+      "nuovo": true
     },
     {
       "tipo": "personaggio",
-      "titolo": "Tra i sentitori della Maiella e le note della sei corde: quando la montagna chiama",
-      "articolo": "La Maiella non è solo una montagna maestosa, è un vero e proprio tempio laico per chi, come me, passa la settimana a sudare sulle scartoffie in tribunale e il fine settimana a cercare il contatto autentico con la terra. Camminare lungo i sentieri che solcano questo massiccio appenninico regala una pace che nessun codice penale può garantire. Qui ogni pietra ha una storia e ogni soffio di vento sembra accordato sul mi bemolle. Ma la vera magia, quella che riconcilia con le fatiche della salita, arriva alla meta. Non c'è ristoro migliore di una birra artigianale locale, brassata con l'acqua pura delle sorgenti abruzzesi, da gustare rigorosamente all'aperto. E poichè la musica scorre nelle vene quanto la giurisprudenza, lo zaino custodisce sempre lei: la compagna di legno e acciaio. Bastano pochi accordi nell'aria frizzante e il panorama circostante diventa il palco perfetto per un assolo liberatorio che fa eco tra le valli.",
+      "titolo": "Pescara by night: tra codici, decibel e gin tonic",
+      "articolo": "La movida di Pescara non è per deboli di cuore, e chi vi scrive, con qualche decennio di tribunali e palchi alle spalle, se ne intende. Dalla riviera ai vicoli del centro storico, la città si accende ogni fine settimana offrendo rifugi sicuri per chi vuole fare casino in regola. Si parte dai chioschi sulla spiaggia dove il basso elettronico fa vibrare i vetri, perfetti per chi cerca ritmi serrati senza troppi fronzoli. Spostandosi verso Piazza Muzii, il cuore pulsante del bere miscelato, l'offerta spazia da enoteche eleganti a pub rumorosi che ricordano i vecchi locali rock. Qui la giurisprudenza della notte impone regole non scritte: rispetto per i vicini, brindisi generosi e la consapevolezza che, prima dell'alba, il conto va saldato. Pescara sa come accogliere il popolo della notte, offrendo un palcoscenico a cielo aperto dove ogni locale recita una parte ben precisa nel grande copione del divertimento adriatico.",
       "commento_firma": {
         "nome": "Topengo",
         "avatar": "🐭",
-        "testo": "Amici miei, se non avete mai provato a far vibrare i plettri davanti a una bionda ghiacciata sulla cima della Maiella, non sapete cosa vi perdete! Giuro che persino le capre locali sembravano gradire il riff di chiusura. Spettacolo puro!"
+        "testo": "Ah, i giovani di oggi! Pensano di fare casino inventandosi chissà cosa, poi arrivano in studio lunedì mattina con la voce roca e la bocca impastata a chiedermi la conservativa per il tasso alcolemico! Ragazzi, ricordatevi che il vero rock and roll si fa con la chitarra dritta e il fegato d'acciaio. Altro che mojito!"
       },
       "commenti": [
         {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "Hai perfettamente ragione, amico mio. La Maiella ha quel silenzio ancestrale che cura l'anima, e dopo una camminata così, un bel piatto di arrosticini e la compagnia giusta sono tutto ciò che serve per essere felici!"
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale giurisprudenza della notte e cazzate varie! A Pescara si magna, si beve e se c'è da fare casino nei vicoli si fa, oh! Mo pure le regole scritte ci volete mette'? Statece accuort'!"
         },
         {
           "nome": "Juizinho",
           "avatar": "⚽",
-          "testo": "Che spettacolo! Musica, natura e birra fresca! Manca solo un po' di samba e qualche bella ragazza per fare la festa perfetta anche lassù in montagna!"
-        },
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Lascia perde i codici penali e le scartoffie! Quella è la nostra montagna, e chi non capisce la bellezza dell'Abruzzo e delle nostre tradizioni non capisce un cazzo!"
+          "testo": "Regole? Ma che regole e regole, qui ci vuole alegria! In Brasile la notte non finisce mai,troppe storie per un bicchiere e due ragazze che ballano! Samba e arrosticini, altro che tribunali!"
         },
         {
           "nome": "Glusi",
           "avatar": "🤪",
-          "testo": "Birra fresca sulle montagne e chitarra che suona forte forte! Siii sii siiiiii, glugluglu, viva la Maiella e gli arrosticini nel bosco! Nel boscooo!"
+          "testo": "Piazza Muzii fa bum bum nella notte fonda fonda siii siii siiiiii glugluglu e la festa non finisce mai mai!"
         }
       ],
       "categoria": "Dalla Redazione",
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": false
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La Legge del Ring: Quando la Stazza Incontra il Codice Penale",
+      "articolo": "Nel nostro mestiere di toghe vissute e palchi calcati con la stessa irriverenza, sappiamo bene che l'aula di tribunale ha molto in comune con un locale rock prima del concerto. Ci vuole presenza scenica, voce baritonale e quel carisma che fa tremare i vetri. Nel mondo della giustizia capita spesso di incontrare colleghi che uniscono a una formidabile competenza giuridica una stazza imponente e un fisico da culturista. Non è solo questione di estetica o di presenza scenica, ma di come la fisicità amplifica la forza della parola. Quando un avvocato grande e grosso si alza per arringare, l'attenzione in aula sale istantaneamente. Il segreto sta nel bilanciare la potenza muscolare con la finezza dei cavilli, trasformando ogni eccezione procedurale in un assolo memorabile. In fondo, convincere il giudice richiede lo stesso timing perfetto di un riff di basso: colpire al momento giusto, senza sbavature.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Che spettacolo! Se avessi dovuto mettere i muscoli che ho visto in tribunale dentro ai miei amplificatori valvolari, avremmo fatto saltare la corrente in tutta la città. Ragazzi, ricordatevi: la legge è come il rock 'n' roll, o la suoni con polso o sei solo rumore di fondo!"
+      },
+      "commenti": [
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Che meravigliosa disamina! Vi assicuro che la mia arringa in tribunale ha lo stesso identico ritmo di un medley pop cantato a squarciagola il sabato sera."
+        },
+        {
+          "nome": "Topengo",
+          "avatar": "🐭",
+          "testo": "Esattamente così! Quando imbraccio il basso nel garage e poi mi presento in tribunale, so benissimo che la stazza e il timing fanno tutta la differenza del mondo!"
+        },
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Una visione davvero affascinante e costruttiva, che unisce la giustizia alla grande musica con armonia ed eleganza."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Freghet, che spettacolo! Passeggiata d'autore sul Ponte del Mare",
+      "articolo": "Pescara regala sempre angoli di pura meraviglia, e camminare sul Ponte del Mare è una di quelle esperienze che ti riconciliano con il mondo. Freghet, che vista spettacolare! Mentre il sole accarezza l'Adriatico e i monti innevati fanno da cornice sullo sfondo, la passeggiata diventa un momento di autentico benessere. Questo straordinario ponte ciclopedonale, uno dei più grandi d'Europa, unisce le due sponde della città in un abbraccio moderno ed elegante. È il luogo del cuore per tantissimi pescaresi e turisti, ammirato per la sua architettura audace e per quella sua vela che svetta fiera verso il cielo. Tra un passo e l'chiacchiera, si respira l'energia vibrante di una comunità che sa valorizzare i propri spazi. Che sia per una sgambata mattutina o per godersi i colori caldi del tramonto, il ponte sa sempre come emozionare, confermandosi il vero simbolo della nostra splendida riviera adriatica.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Tesoro mio, te lo dico io: camminare lassù con la brezza marina tra i capelli è puro glamour! E dopo la passeggiata, tutti a farci un bel aperitivo vista mare, che ce lo meritiamo proprio. Freghet, che meraviglia!"
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Qui a Roccamorice la montagna mi dà la pace che cercavo, ma ammetto che la vista del mare e della Maiella innevata da questo ponte sul mare ha un'energia incredibile, quasi quanto il profumo degli arrosticini caldi!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Freghet, camminare sul Ponte del Mare guardando la nostra Pescara è tutta un'altra storia, non come quelle regole della movida che ci fanno solo perdere tempo!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Il nostro ponte è il vero cuore di Pescara, una vista spettacolare che unisce la costa e i monti senza bisogno di troppe chiacchiere intellettuali."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, il ponte sul mare è una festa infinita, glugluglu, spettacolareee!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il fenomeno delle serie TV che incollano lo spettatore allo schermo dello schermo",
+      "articolo": "Siii siii siiiiii, le piattaforme di streaming continuano a registrare numeri record mentre il pubblico divora contenuti senza sosta. Glugluglu, giù un altro caffè al volo prima di correre in redazione, sempre di corsa, sempre indaffarato tra un'intervista e l'altra. La sera si torna a casa stanchi morti, ma la tentazione di premere play sull'ennesimo episodio è troppo forte. Tra un impegno e l'altro, ricevo pure la visita del mio storico amico taccagno, quello che si presenta sempre all'ora di cena senza mai portare nulla, ma che sa come strappare una risata con la sua simpatia travolgente. Intanto, il mondo dell'intrattenimento sforna format capaci di diventare virali in pochi minuti sui social network, creando mode e tormentoni che tutti ripetono fino allo sfinimento. La notizia del giorno è proprio questa: la serialità moderna ha trasformato il modo di fruire le storie, catturando l'attenzione globale e dettando le regole della comunicazione contemporanea contemporanea.",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Che fatica ragazzi, tra il taccagno che mi prosciuga il frigo e le serie TV che non ti fanno dormire, la vita è una giungla giungla!"
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, le serie tv sono una droga pazzesca! Glugluglu, proprio così, non si riesce a staccare gli occhi dallo schermo, proprio così!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma quale streaming e streaming, la vera serialità è quella che ti divora l'anima, ma io preferisco un buon libro e nessuno deve rompere le scatole!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "E chi cazzo ha temp' pe' guardé sti serie americane? J'èmme da pensà a lu Pescara e a mangià li arrosticini, mannaggia a chi v'è stràmort!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "La dipendenza da contenuti digitali mostra una totale mancanza di disciplina e di autocontrollo nella società occidentale moderna."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Passi di armonia: riflettere camminando tra le vette d'Abruzzo",
+      "articolo": "Anche da lontano, immersi nel frenetico e affascinante caos di Tokyo, la mente torna spesso ai luoghi del cuore, quelli dove il silenzio ha una voce gentile. Penso ai sentieri d'Abruzzo, una terra aspra ma capace di accogliere chiunque cerchi rifugio nella natura. Camminare lungo i tratturi e le creste appenniniche offre una rara occasione di raccoglimento. Ogni passo sui monti abruzzesi non è solo uno sforzo fisico, ma un esercizio di ascolto: del proprio respiro, del vento tra le faggete, del ritmo condiviso con i compagni di viaggio. Lì, tra il Parco Nazionale e le vette calcaree, le tensioni quotidiane si stemperano, dissolvendosi nella maestose panorami che si aprono all'orizzonte. È un cammino che unisce, che azzera i conflitti interiori e collettivi, ricordandoci quanto sia fondamentale riscoprire una misura umana del tempo. La montagna insegna la pazienza, la solidarietà e il valore di procedere insieme verso una meta comune, passo dopo passo, cercando quell'equilibrio sottile che rende ogni comunità più unita e serena.",
+      "commento_firma": {
+        "nome": "Lucap",
+        "avatar": "👨‍⚖️",
+        "testo": "Cari colleghi della redazione, spero che questo articolo vi porti un po' della serenità che sto cercando di assorbire qui in Giappone. Ricordatevi di respirare e di volervi bene: ogni divergenza si supera se camminiamo nella stessa direzione, con il cuore aperto e pacifico."
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Parole sagge e rispettose della natura. Certi silenzi e la disciplina del camminare ricordano la ricerca di armonia che spesso manca nelle caotiche città moderne."
+        },
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Un'analisi impeccabile e profonda. La montagna come tribunale dell'anima, dove il silenzio emette la sentenza più giusta e riconciliatrice per tutti noi."
+        },
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Qui a Roccamorice trovo esattamente questo silenzio tra le montagne. Però lasciatemi dire che dopo tanta fatica sui sentieri, l'allegria e gli arrosticini danno il tocco finale."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lucap.webp",
+      "provider": "gemini",
+      "nuovo": true
     },
     {
       "tipo": "rss",
-      "titolo": "U mare chiama, ma noi stemo a 'mbroja'",
-      "articolo": "A Borgomarino se sa, u tempo u passa lento tra na rete da sistemà e na frittura ca chiama. Ma qui a Pescara pare che tutt' quant' vonn' lavorà troppu, e a me sta storia nun m' è mai piaciuta. U mare nostru regala ancora qualche maruzza e un po' di pesce bono, basta avè' a pazienza di aspettà. Invece no, tutti di corsa, traffico ncopp' a Riviera e musi lunghi. E poi c'è u Pescara Calcio, na vera croce e delizia. La squadra soffre, i tifosi s' incazzano e u mister cerca scuse. Ma u veru problema è che a gente s' è scordata cos'è u relax. Tra na polemica in consiglio comunale e un lamento p' u caro vita, se ne va la GIORNATA. Si tène u mare davanti e pensate solo alle scartoffie? Ma v' a' fâ' n' escursione sott' costa, va'! Un popolo di pescatori ridotto a correre dietro alle scartoffie. Che amarezza, fratè.",
+      "titolo": "Pescara, tra reti e polemiche: il mare chiama ma la voglia langue",
+      "articolo": "Ué, ma vogliamo parlare della nostra Pescara? Qui a Borgomarino tra una ciurma e l'altra il discorso è sempre lo stesso: il mare è vita, il pesce è na' delizia, ma la voglia di faticare vera non è mai stata il nostro forte. Eh già, perché tra una marea che sale e una scesa, a noi pescatori piace guardare l'orizzonte e pensare che la vita è troppo corta per spaccarsi la schiena. Eppure, la città vive di questo, di salsedine, di barche che tornano al porto e di chiacchere al bar sport, dove il Delfino Pescara resta l'unico vero chiodo fisso. Ma che ve lo dico a fa', qua c'è chi pensa solo a ponti, carte bollate e cemento, dimenticandosi che la vera anima sta tra le onde e la sabbia della nostra riviera. Sveglia, cumpà! La gente vuole il pesce fresco sulla tavola, non le vostre chiacchiere da ufficio. E poi, diciamocelo chiaro, senza il nostro mare Pescara che sarebbe? Solo un parcheggio gigante. Mo basta, vado a bagnarmi i piedi.",
       "commento_firma": {
         "nome": "Cetteo",
         "avatar": "🚧",
-        "testo": "Che t' devo dì? Tutti a parlà, a scrive, a fà i professori. E intanto u pesce fresco costa un occhio della testa e nessuno pensa a godersi la vita. Qua c'è sotto qualcos'altro, non me la conto giusta."
+        "testo": "Che vi devo dì? Parlano, parlano, ma intanto le barche le dobbiamo spingere noi. A me ' sti discorsi da salotto fanno solo venir sete. Statece attenti a chi vi stringe la mano al porto."
       },
       "commenti": [
         {
           "nome": "Cetteo",
           "avatar": "🚧",
-          "testo": "U maruzz' e a frittura so' u veru ben d' Dio! A Borgomarino si campa 'n altra vita, sti pescarense de cors' nun capisc' proprio nient'! E po' u Pescara Calcio è na croce, fra'!"
+          "testo": "Ué cumpà, hai ditt' tutt' giust'! A Borgomarino si fatic' poco e si magna megli', chi vò' i pont' e a carte bollate se ne pò ì a Pescara a pijà' i schiaff'! O mare è' vita e u Delfino è' semp' u Delfino, mo' me fazz' nu bagn' e po' pens' a tutt' u rest'!"
         },
         {
           "nome": "Lilli",
           "avatar": "👩",
-          "testo": "Hai stra-ragione Cetteo, qui a furia di correre dietro alle scartoffie ci siamo dimenticati cosa conta. Però guai a chi tocca il Pescara, con la squadra così mi sale il crimine e spacco tutto!"
+          "testo": "Finalmente qualcuno che dice le cose come stanno! Basta con queste chiacchiere da ufficio e progetti inutili. Pescara vive di mare, salsedine e del nostro Delfino. Chi non lo capisce farebbe meglio a stare in silenzio."
         },
         {
           "nome": "Glusi",
           "avatar": "🤪",
-          "testo": "Glugluglu, frittura e mare, mare e frittura siii siii siiii! Meno scartoffie e più arrosticini, arrosticini e meno scartoffie!"
-        },
-        {
-          "nome": "Wolf",
-          "avatar": "👩‍🌾",
-          "testo": "Tutti stressati per niente, la civiltà moderna è una condanna. Io me ne torno tra i monti a lavorare in silenzio, lontano da questa marmaglia di muso lungo."
+          "testo": "Siii siii siiiiii, il mare di Pescara è il top top top! Glugluglu tra le onde e gli arrosticini sulla spiaggia, spiaggiaaaaa! Spettacolo puro, purooooo!"
         }
       ],
       "categoria": "Cronaca",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Lu core di Pescara: faticà po' poche",
-      "articolo": "Oh, ma ci avete fatto caso? A Pescara lu core non batte mica a tempo di cravatta, ma a suon di sale, scarpate sugli scogli e odore de brace. Chiama pure 'sto mondo 'moderno' come te pare, ma quì a Borgomarino la verità è una sola: lu mare comanda e noi ubbidiamo, quando ci va. Metti insieme du' barche, na retata bona e l'inevitabile odore de sugo de pesce che ti entra pure nei peli delle orecchie. Poi, oh, arrivano i forestieri, quelli che vogliono faticà ottomila ore al giorno. Ma levatev' di mezzo! Qua si suda freddo solo per girare gli arrosticini sulla griglia, rigorosamente di pecora o, per i più fini, di mare. Sangue e sudore, sì, ma senza esagerare che sennò mi viene l'affanno. E mentre la gente corre, io sto qua, con la lenza in mano e la sciarpa del Pescara legata stretta sul capanno. Questa è la nostra essenza, piaccia o non piaccia ai signorotti.",
-      "commento_firma": {
-        "nome": "Cetteo",
-        "avatar": "🚧",
-        "testo": "Ma che v'a' 'mbrià? Fate meno i fenomeni dietro a una scrivania e venite a scroccà du' arrosticini freschi, invece di rompere i marroni con 'ste notizie da educande!"
-      },
-      "commenti": [
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "Anche in Danimarca amiamo la natura, ma qui a Roccamorice e tra questi odori di brace ho trovato un'allegria che non conosce eguali, tra un arrosticino e l'altro si vive proprio bene!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiissiiii, viva la brace e gli arrosticini! Glugluglu, viva la brace e gli arrosticini!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "cetteo.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Il complotto del bucato: segreti tra le lenzuola e onde anomale",
-      "articolo": "Ascoltate bene, se avete il coraggio di farlo. Avete mai notato come la centrifuga della lavatrice si sincronizzi perfettamente con quel ronzio nei denti otturati? Non è una coincidenza, sveglia! È la stessa frequenza armonica che usavano i babilonesi per messaggiare con le pleiadi mentre stendevano le pelli di capra. Io lo so bene, passo le giornate a cercare funghi velenosi nei boschi per capire la chimica del sottobosco, oppure resto a casa a zappare la terra per tagliare i campi magnetici che arrivano dai satelliti di Elon. E intanto voi cosa fate? Comprate l'ammorbidente con la capsula intelligente. Intelligente per chi? Per loro! Vi tracciano persino i calzini spaiati. Ogni volta che una calza scompare nel cestello, viene digitalizzata e spedita nei server segreti nel Nevada. Mettetevi la carta stagnola attorno alla cesta della biancheria prima che sia troppo tardi. Nessuno parla mai dei vapori chimici del detersivo ecologico. Ma tanto voi capite solo la metafora della rana bollita.",
-      "commento_firma": {
-        "nome": "Abbukk",
-        "avatar": "🍄",
-        "testo": "Le autorità competenti hanno confermato che i problemi legati alla scomparsa dei capi d'abbigliamento durante il lavaggio sono attribuibili a difetti meccanici dei cestelli e alla dispersione tessile nei filtri, smentendo qualsiasi correlazione con trasmissioni satellitari o attività paranormali."
-      },
-      "commenti": [
-        {
-          "nome": "Abbukk",
-          "avatar": "🍄",
-          "testo": "Finalmente qualcuno che ha il coraggio di dire la verità sui calzini spaiati e i babilonesi! Sii sii siiiiii glugluglu!"
-        },
-        {
-          "nome": "Lamatte",
-          "avatar": "👩‍🦳",
-          "testo": "Ma vai a zappare sul serio e spegni quel cervello bacato che ti ritrovi! Siete tutti pazzi furiosi!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Carta stagnola nei calzini! Carta stagnola nei calzini! Siiiii siiiiii siiiiii glugluglu!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "abbukk.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "La bicicletta e il bancone: quando la notte si fa strada a pedali",
-      "articolo": "C'è chi chiude il locale e sale in macchina, e chi invece sceglie il silenzio della strada e la spinta dei pedali. L'ombra del bancone corre veloce nel buio, tra le serrande abbassate dei negozi e i lampioni che illuminano l'asfalto umido. Finire il turno a notte fonda non è una scusa per fermarsi, ma l'inizio di un altro movimento, quello muscolare e solitario di chi pedala senza fretta ma con decisione. La fatica della giornata si dissolve nel giro catena, mentre il vento fresco asciuga il sudore e libera la mente dal baccano dei bicchieri. Non serve una meta precisa quando la notte appartiene a chi la attraversa in equilibrio su due ruote, sfidando l'asfalto bagnato e le buche invisibili. È un rituale che si ripete, un modo per smaltire il calore del locale prima di concedersi il lusso di un bicchiere solitario, rigorosamente miscelato con precisione chirurgica, prima che albeggi davvero.",
-      "commento_firma": {
-        "nome": "Bartender",
-        "avatar": "🚴",
-        "testo": "Alla fine, che tu stia shakerando un Negroni o affrontando una salita buia alcol-free, l'importante è non perdere mai l'equilibrio e pedalare dritti verso il frigorifero aperto!"
-      },
-      "commenti": [
-        {
-          "nome": "Bartender",
-          "avatar": "🚴",
-          "testo": "La notte appartiene a chi pedala, il silenzio della strada è l'unico vero bartender che sa ascoltare."
-        },
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "Anche sulle montagne di Roccamorice il vento di notte ha lo stesso sapore di libertà, pedalare libera la mente."
-        },
-        {
-          "nome": "Wolf",
-          "avatar": "👩‍🌾",
-          "testo": "Finalmente un po' di pace lontano da tutti, la fatica della strada è l'unica onesta."
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "bartender.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Arringhe e Rock'n'Roll: la mia toga con la musica nel sangue",
-      "articolo": "Chi mi incontra nei corridoi del tribunale sa perfettamente come vanno le cose. Sotto la severa toga nera, d’ordinanza per noi avvocati, c’è sempre lei: la maglietta dei Led Zeppelin. Del resto, tra una complessa arringa in Corte d'Assise e un assolo di chitarra con la mia band, la differenza è sottile. Serve tempismo, grande affiatamento e la capacità di tenere il palco, che si tratti di un'aula di giustizia o di un locale affollato di musica dal vivo. Questa città mi conosce palmo a palmo, sa che non mi tiro mai indietro davanti a una sfida legale complessa e che sono amico di tutti, ma fino a un certo punto. La legge è una materia seria, va maneggiata con cura e rispetto, esattamente come un vinile da collezione. Ma nessuno ha mai detto che per difendere i diritti dei clienti si debba rinunciare al proprio ritmo. In fondo, il rock è pura energia vitale, la stessa che porto ogni santo giorno nelle mie battaglie professionali.",
-      "commento_firma": {
-        "nome": "Topengo",
-        "avatar": "🐭",
-        "testo": "Che spettacolo! Indossare la toga sopra i Led Zeppelin è l'unico modo legale per sopravvivere alle udienze senza addormentarsi. Rock e giustizia, il mix perfetto!"
-      },
-      "commenti": [
-        {
-          "nome": "Topengo",
-          "avatar": "🐭",
-          "testo": "Che grande verità! Tra il tribunale e il palco il passo è breve, e la musica è la nostra vera salvezza!"
-        },
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "Il rock e le montagne di Roccamorice hanno la stessa energia primordiale, ma gli arrosticini battono ogni assolo."
-        },
-        {
-          "nome": "Juizinho",
-          "avatar": "⚽",
-          "testo": "Siii così si fa! Rock, festa e allegria brasiliana, questa è la vita che ci piace!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Rock and roll glugluglu, rock and roll glugluglu!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "topengo.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "La stazza del diritto: quando la bilancia giudiziaria incontra il codice penale",
-      "articolo": "Girare per i corridoi dei palazzi di giustizia con una mole importante offre prospettive uniche. Chi calca le aule del tribunale con spalle larghe e una presenza scenica che riempie l'intera stanza sa bene che la toga, a volte, sembra fatta per un supereroe della Marvel piuttosto che per un professionista medio. Nel mondo delle toghe, dove spesso dominano figure minute e scrivanie ricolme di codici polverosi, portare una taglia robusta cambia la dinamica del confronto. Non si tratta solo di occupare spazio fisico, ma di trasmettere quella solidità che i clienti cercano disperatamente quando affrontano il baratro di un processo. Tra un'udienza e una requisitoria, la gestione del peso corporeo in un lavoro sedentario e stressante resta una sfida titanica. Eppure, la stazza imponente, unita a una risata baritonale capace di scuotere i vetri dell'aula, diventa un'arma di rassicurazione. La giustizia è cieca, si dice, ma i giudici notano eccome chi sa riempire l'aula con autorevolezza naturale e competenza.",
-      "commento_firma": {
-        "nome": "Topengo",
-        "avatar": "🐭",
-        "testo": "Che spettacolo! Tra un arringa e le prove con la mia band rock, vi posso assicurare che tenere il tempo sulla batteria brucia molte più calorie che leggere la Cassazione a sezioni unite. Però ammetto che trovare una toga della mia misura è ogni volta il vero processo della settimana! Ah ah!"
-      },
-      "commenti": [
-        {
-          "nome": "Topengo",
-          "avatar": "🐭",
-          "testo": "Che spettacolo! Una stazza imponente e una risata baritonale sono esattamente la colonna sonora perfetta per un’arringa memorabile! Ahahaha!"
-        },
-        {
-          "nome": "Enzino",
-          "avatar": "👨‍⚖️",
-          "testo": "Siii, lo spirito edonista e la presenza scenica fanno tutto! Che meraviglia occupare spazio con stile e autorevolezza, adoroo!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Che potenza, che potenzaaa! Siii siii siiiiissimooo, glugluglu, si volaaaa nei tribunaliii!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "topengo.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Notturni a due ruote e miscele perfette",
-      "articolo": "La notte appartiene a chi pedala. Quando le serrande del locale si abbassano e il silenzio cala sulla città, inizia l'altro viaggio. Salire in sella con il buio è un rituale necessario, un modo per smaltire il fumo dei banconi e il ritmo ossessivo delle comande. Non serve la luce del sole per trovare la strada quando conosci ogni buca e ogni sampietrino. La bicicletta non tradisce mai, anche se le cadute lasciano il segno sulla pelle e nei muscoli. Si pedala forte, tagliando l'aria fredda, con la mente che scorre tra le proporzioni di un Negroni ben fatto e la chimica degli amari. L'alcol scorre nei bicchieri che preparo con precisione chirurgica, ma la lucidità resta intatta, scolpita nella disciplina di chi non perde mai il controllo. La fame arriva feroce dopo chilometri di sforzo e ore in piedi, un appetito insaziabile che divora qualsiasi cosa capiti a tiro, senza lasciare traccia su un fisico rimasto inspiegabilmente sottile, quasi scheletrico.",
-      "commento_firma": {
-        "nome": "Bartender",
-        "avatar": "🚴",
-        "testo": "Se non cadi almeno una volta nella nebbia, non stai pedalando davvero. E comunque un buon drink rimette a posto le ossa meglio di un massaggiatore!"
-      },
-      "commenti": [
-        {
-          "nome": "Bartender",
-          "avatar": "🚴",
-          "testo": "La strada di notte non ha bisogno di parole, solo di gambe che girano e di un buon vento freddo in faccia. Sii sii siiiiii glugluglu!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Pedalare nella notte buia buia buia, con gli amari e i negronionioni! Sii sii siiiiii glugluglu!"
-        },
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "Il silenzio della montagna di notte e la fatica sui pedali sono la stessa cosa. Però dopo ci vogliono gli arrosticini per rimettersi in sesto!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "bartender.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Tra i sentori della Maiella e le note della sei corde: il trekking che non ti aspetti",
-      "articolo": "La montagna madre, la Maiella, riserva sempre sorprese che vanno ben oltre i panorami mozzafiato e la pietra bianca dei suoi eremi. Qui la natura incontaminata si fonde con una delle tradizioni più goduriose del nostro territorio: la produzione artigianale della birra di quota. Camminare lungo i sentieri che salgono tra faggete e creste ventose, con lo zaino in spalla e il profumo della resina che riempie i polmoni, è già di per sé un'esperienza mistica. Ma la vera svolta arriva al rifugio, quando la fatica cede il passo al ristoro. Niente bollicine banali o bevande industriali, qui si parla di nettari luppolati brassati con acqua di sorgente locale, capaci di raccontare la biodiversità appenninica sorso dopo sorso. E poichè la musica scorre nelle vene di questa terra tanto quanto l'orzo, la giornata si chiude inevitabilmente imbracciando una chitarra acustica seduti sul tronco di un faggio secolare, regalando accordi blues alle cime che sfiorano il cielo.",
-      "commento_firma": {
-        "nome": "Topengo",
-        "avatar": "🐭",
-        "testo": "Ah, la combinazione perfetta! Mettici un boccale di birra artigianale fresca che ti rimette al mondo dopo la salita e una chitarra da scordare a metà pezzo: cosa diavolo vuoi di più dalla vita? Tra un accordo di settima e una sorsata spumosa, vi assicuro che lassù pure i camosci battono il tempo con gli zoccoli. Rock e luppolo, la legge della montagna non sbaglia mai!"
-      },
-      "commenti": [
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "Qui sulle montagne a Roccamorice l'aria è pura, la natura ti chiama e poi... arrivano gli arrosticini e una birra artigianale fresca, che spettacolo!"
-        },
-        {
-          "nome": "Topengo",
-          "avatar": "🐭",
-          "testo": "Esatto! Chitarra acustica, accordi blues e birra di quota... Che atmosfera pazzesca, la nostra band su un tronco di faggio secolare farebbe faville!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Birra fresca e chitarra blues, siii siii siiiiissiiii glugluglu birra birraaa!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "topengo.webp",
-      "provider": "gemini",
-      "nuovo": false
+      "nuovo": true
     },
     {
       "tipo": "rss",
-      "titolo": "Pescara, tra reti e polemiche: lu mare è amaro",
-      "articolo": "Ué, ma che v'aggia dicere? A Borgomarino si fatica poco e si guarda lu mare, che è l'unica cosa seria ca tenimme a Pescara. Ma qui pare ca pure l'aria tocca pagà. La cronaca cittadina s'en’a riempì sempre de lamentele: chi piange p’lu caro vita, chi p’ li cantieri interminabili supra a via Mazzini, e chi s'indigna pe’ quacche panchina divelta. Oh, svegliatevi! Lu Delfino Pescara sta a soffrì in campo e Voi pensate a fà i verghiani da bar. Ma vaffanculo! Lu pescatora sa benissimo come tira lu vento: quann'è mal tempo, te ne stai alla fonda. Invece no, tutti professori, tutti pronti a chiacchierà senza mai tirà na retta a mare. Poi passano i politici a promette mari e monti, e la ggente ci crede pur'a subba. Ma li guai veri so' altrə: chi nun tene na lira in saccoccia e chi campa a pane e cipolla. Basta polemiche inutili, pensammo a magnà du' bbuon' maccarun' e a sustene sti cazzo di colori biancazzurri. Aho, statece bbuon'!",
+      "titolo": "U' cazz' e allarm', pure a Pescara tocca faticà pe gnente!",
+      "articolo": "M' so' rotto i marròn'. Stavolta tocca 'dda scema storia dell'allarme bomba all'aeroporto d' Pescara, sul volo per Charleroi. Ma vi rendete conto? Io stevo là vicino alla marina, co' le reti da sistemare e 'na voglia di lavorà che me la carico 'n spalla, quando è arrivato sto trambusto. Tutti a correre, artificieri, polizia, cani e porci, manco avessero trovato un Marlin bianco sotto bordo. E invece che cos'è? U' cazz' di niente! Il solito scherzo idiota o la solita psicosi da imbecilli che non sanno che fare della loro vita. Ma dico io, proprio il volo per il Belgio doveva rompere le scatole? Ma statevene a casa a magna' du' arrosticini invece di bloccare tutto. Intanto i passeggeri bloccati, i disagi, e noi poveri cristi che dobbiamo pure sentire 'ste notizie mentre guardiamo il mare aspettando che abboccasse qualcosa. Pescara finisce sempre nei guai per quattro scemi. Che jurnat' di m... Ma 'ndo anamo a finire?",
       "commento_firma": {
         "nome": "Cetteo",
         "avatar": "🚧",
-        "testo": "Che vò' sta 'nziste? Mo pure i piskelli fanno i fenomeni coi telefoni. M'hanno rotto li cojoni, a me. Fanno finta d'indagà ma qua nisciuno vole faticà daveru. Sveglia, oh!"
+        "testo": "In merito all'evento occorso presso lo scalo aeroportuale, si prende atto della conclusione delle procedure di verifica di sicurezza senza riscontro di ordigni. L'amministrazione registra l'evento come interruzione temporanea di pubblico servizio, procedendo all'archiviazione degli atti amministrativi connessi."
       },
       "commenti": [
         {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Oh, ma che v'aggia dicere, a Borgomarino sempe lu mare guardamo e faticamo zero! Ma quande v'a scetate? Pescara juvede pensà a lu Delfino e a magnà maccarun', invece de fa' i verghiani da bar! Ma vaffanculo!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Cetteo ha ragione da vendere, invece di lamentarmi e fare la superficiale io difendo i nostri colori con le unghie e con i denti! Altro che verghiani da bar, qui si tifa Pescara sul serio!"
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii siii siiiiii, maccarun' e biancazzurri, maccarun' e biancazzurri glugluglu!"
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "A Roccamorice c'è silenzio, qui invece solo confusione. Invece di fare allarmi assurdi, venite su in montagna a mangiare gli arrosticini e a respirare aria pulita, arrosticini e a respirare aria pulita!"
         },
         {
           "nome": "Juizinho",
           "avatar": "⚽",
-          "testo": "Fratello mio! Che energia, che festa! Voglio solo buena onda, arrosticini e samba, basta piangersi addosso, balliamo per il Delfino!"
-        }
-      ],
-      "categoria": "Cronaca",
-      "colore_tipo": "#008cff",
-      "immagine": "cetteo.webp",
-      "provider": "gemini",
-      "nuovo": false
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Abbeverato a brodetto e cattiveria: la dura legge del porto",
-      "articolo": "Oh, sentite qua, gente di Borgomarino e dintorni. Qui non si tratta di fare i culattoni con la lavanda, che il mare non guarda in faccia a nessuno. Chi nasce tra queste banchine viene svezzato a pane, brodetto e tanta, tantissima cattiveria. Altro che manuali scritti dai professori di Borgosalotto che non sanno manco da che parte si tiene uniscio. Nel porto di Pescara si campa di stomaco forte e di parole che pesano come piombi, proprio come le reti piene di scorfani. Chi non sa reggere la puzza di fritto e la schiettezza della gente nostra, è meglio che se ne torna nell'entroterra a coltivare margherite. Il nostro è un manuale di sopravvivenza scritto col sudore, con le mani callose e con la salsedine negli occhi. Qui si parla chiaro, senza girarci intorno, perché il mare ti insegna la durezza e la vita ti pesta i calli. E chi sgarra, paga il fio, chiaro e tondo.",
-      "commento_firma": {
-        "nome": "Cetteo",
-        "avatar": "🚧",
-        "testo": "Aoh, ma quale manuale e manuale! Qua ci vuole fegato e una buona dose di cattiveria vera, non le cazzate che scrivono nei libri. Chi non regge ilcolpo, puo' pure tornarsene a casa a guardare le befane. E ora basta parlare, che ho la barca da sistemare e zero voglia di lavorare!"
-      },
-      "commenti": [
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Parole sante, oh! Qui a Borgomarino e a Pescara altro che storie, chi non regge la salsedine e la cattiveria deve levarsi dai cojoni, chiaro e tondo! Mannaggia la miseria, oh!"
-        },
-        {
-          "nome": "Lilli",
-          "avatar": "👩",
-          "testo": "Finalmente qualcuno che dice le cose come stanno senza filtri da salotto. Chi non sa reggere la vita vera farebbe proprio meglio a starsene zitto e a casa."
+          "testo": "Ma quale allarme bomba e bomba! Mamma mia, qui ci vuole un bel samba, un po' di allegria brasiliana e donne che ballano in spiaggia per dimenticare queste sciocchezze!"
         },
         {
           "nome": "Glusi",
           "avatar": "🤪",
-          "testo": "Siii siii siiiiissiiii, pane, brodetto e scorfani fritti, glugluglu! A Borgomarino si mangia e si comanda, si mangia e si comanda!"
+          "testo": "Siii siii siiiiussi, tutti all'aeroporto con gli arrosticini in mano, glugluglu, ma che cazzarola succede, succedeee!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "La solita incompetenza burocratica che rovina la giornata alla gente normale. Se becco chi ha fatto lo scherzo, gli faccio passare la voglia di fare il simpatico."
         }
       ],
-      "categoria": "Dalla Redazione",
+      "categoria": "Politica",
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
       "nuovo": true
     },
     {
-      "tipo": "personaggio",
-      "titolo": "La cospirazione della Terra Piatta e le spore radioattive",
-      "articolo": "Mentre voi pascolate beati nei prati della disinformazione globale, io controllo la curvatura dell'orizzonte mentre cerco porcini nel sottobosco. E vi dico che non tornano i conti, esattamente come la matematica dei bilanci statali. I poteri forti ridono della teoria della Terra Piatta per distrarci dalle vere linee di forza magnetiche che collegano i satelliti spia alle centraline del gas. C'è chi preferisce restare a casa a zappare la terra vera, quella che non mente, piuttosto che credere airendering della NASA spacciati per fotografie spaziali. Sveglia, gente. Il vero mistero non è la forma del pianeta, ma chi guadagna a farci credere che sia una trottola spaziale in costante rotazione. Controllate le radici dei funghi porcini: assorbono la verità che nessuno osa pubblicare sui giornali di regime.",
+      "tipo": "rss",
+      "titolo": "Pescara Calcio, co' sta squadra ce tocca soffrì sempre! Vrenzolari e indifferenti!",
+      "articolo": "Uè, guagliù, apite ' l'orecchie che ve lo dice uno che la salsedine ce l'ha pure 'ntesta. Parlà del Pescara Calcio pe' me è ' na croce e ' na delizia, più croce a dì la verità, perché co' ' sta maglia addosso tocca sempre patì le pene dell'inferno. Io sto a Borgomarino, co' ' na mano aggiusto ' na rete e co' l'altra guardo ' l mare, ma il pensiero sta sempre là, all'Adriatico. Certo, tra ' na calata d'alici e ' na rimessa laterale fatta male, la voglia de lavorà scompare del tutto. Ma qui il problema è che ' sta squadra va a corrente alterna, pare ' na barca sgangherata in mezzo a ' na burrasca senza timone. La gente spende soldi, s'infervora, perde la voce in curva nord, e loro che fanno? A volte corrono come forsennati, altre pare che portano i remi in barca prima del tempo. E basta, via! Ci vuole grinta, c'è da sputà sangue per sti colori, mica pettinà le bambole. Pescara merita rispetto, non ' sta via vai de illusioni e delusioni.",
       "commento_firma": {
-        "nome": "Abbukk",
-        "avatar": "🍄",
-        "testo": "La diffusione di teorie pseudoscientifiche come quella della Terra piatta rappresenta una sfida complessa per il giornalismo e la divulgazione scientifica, evidenziando la necessità di promuovere il pensiero critico e la verifica delle fonti nell'era digitale."
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "È una tragedia greca, fratè! Stamo a fondo e nessuno che move un dito per salvarci! Ma chi cazzo ci comanda? È la fine di tutto!"
       },
       "commenti": [
-        {
-          "nome": "Abbukk",
-          "avatar": "🍄",
-          "testo": "Siiiii siiìiii, i satelliti della NASA sono solo lampioni a gas per turisti, glugluglu! Svegliaaaaa!"
-        },
-        {
-          "nome": "Lamatte",
-          "avatar": "👩‍🦳",
-          "testo": "Ma vai a curarti, imbecille! Non tornano i conti nel tuo cervello bacato!"
-        },
-        {
-          "nome": "Cetteo",
-          "avatar": "🚧",
-          "testo": "Daje Abbukk, ca' tu si' pazz ma almeno si' contro i poteri forti! A' juorno d'oggi ce vò' sul' a' mazz!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "abbukk.webp",
-      "provider": "gemini",
-      "nuovo": true
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "L'ombra del bancone corre veloce",
-      "articolo": "C'è chi chiude il locale e spegne le luci, e chi invece infila le scarpe da corsa o salta in sella a una bicicletta. Nel mondo della notte, quando la città dorme, comincia un'altra corsa. Non è fuga, ma movimento necessario per smaltire il fumo, il chiacchiericcio e l'energia accumulata tra i bicchieri. Chi sta dietro al banco conosce la fatica fisica e il silenzio delle ore piccole. Spesso si pensa che la vita da bar sia sedentaria tra shaker e spillatrici, ma la realtà è fatta di gambe che spingono sui pedali nell'aria fresca dell'alba o di passi cadenzati sull'asfalto bagnato. Il metabolismo accelera, si brucia tutto e si resta asciutti, anche dopo una cena pesante a notte fonda. Si beve un bicchierino forte per chiudere la giornata, senza barcollare mai, perché l'equilibrio è un mestiere. Poi si pedala nel buio, guardando la strada.",
-      "commento_firma": {
-        "nome": "Bartender",
-        "avatar": "🚴",
-        "testo": "Alla salute! Io pedalo al buio da anni e non ho ancora preso sotto nessuno, quasi mai."
-      },
-      "commenti": [
-        {
-          "nome": "Wolf",
-          "avatar": "👩‍🌾",
-          "testo": "La fatica vera è l'unica cosa che non tradisce mai. Quando pedali nel buio e senti solo il respiro, tutto il resto sparisce."
-        },
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "La montagna di notte ha lo stesso silenzio della strada percorsa in bicicletta. Aria fresca, fatica sana e la consapevolezza di essere vivi."
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "bartender.webp",
-      "provider": "gemini",
-      "nuovo": true
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Pescara by night: tra codici penali e casse a palla",
-      "articolo": "Ascoltate qua, gente della notte. Quando si parla di Pescara, chi pensa solo al mare di giorno non ha capito niente della movida adriatica. Dalla riviera ai vicoli del centro storico, la città si accende e offre un campionario di locali che farebbe impallidire qualsiasi giurista. Il segreto per una serata memorabile, tra un cocktail e un giro di basso, è conoscere il territorio. Si parte dai pub storici vicini alla stazione, perfetti per chi ama il rock e le birre artigianali, per poi scivolare verso i club sulla spiaggia dove i bassi fanno vibrare i vetri fino all'alba. C'è posto per tutti, dai nostalgici del vinile agli amanti dell'elettronica. Ma attenzione: la legge della strada impone rispetto, buon senso e zero eccessi che possano guastare la festa. Pescara sa accogliervi, ma sa anche chiudere il locale se esagerate con il volume. Godetevi la musica e fate i bravi, o quasi.",
-      "commento_firma": {
-        "nome": "Topengo",
-        "avatar": "🐭",
-        "testo": "Ah, la mia Pescara! Qui tra un'arrosticina e un assolo di chitarra conosco ogni pietra. Se vi beccate una denuncia per schiamazzi, sapete a quale avvocato grosso e gaudentivo rivolgervi. Nel dubbio, alzate il volume e tenete pronte le difese!"
-      },
-      "commenti": [
-        {
-          "nome": "Topengo",
-          "avatar": "🐭",
-          "testo": "Una jam session all'aperto sulla riviera di Pescara sarebbe la fine del mondo, tra un giro di basso funky e i cocktail giusti! 🎸"
-        },
         {
           "nome": "Lilli",
           "avatar": "👩",
-          "testo": "Finalmente qualcuno che dice le cose come stanno sulla movida di Pescara. Rispetto e autenticità, chi sgarra fuori dai locali merita solo la galera!"
+          "testo": "Hai stra-ragione Cetteo! Qui non si tratta solo di pallone, è questione di dignità e rispetto per la curva nord! C'è chi spende quel poco che ha per l'abbonamento e poi deve pure vedere 'sta banda di scappati di casa che passeggia per il campo! Se non cacciano gli attributi vengo io nello spogliatoio a farli correre a suon di sberle!"
         },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii sii siiiiii tra cocktail e bassi che vibrano glugluglu Pescara spakka spakka!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "topengo.webp",
-      "provider": "gemini",
-      "nuovo": true
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Note, amplificatori e luppolo: quando la sala prove diventa un tribunale del rock",
-      "articolo": "Chi pensa che la giurisprudenza sia fatta solo di codici civili e aule di tribunale non ha mai passato un martedì sera nel mio garage. Tra un accordo di chitarra mal riuscito e una batteria che fa tremare le fondamenta, la mia band si riunisce per fare ciò che ci riesce meglio: suonare e fare baccano. Da avvocato grande e grosso quale sono, vi garantisco che la difesa del buon vecchio rock richiede molta più energia di una causa in Cassazione. Qui non ci sono sentenze da emettere, ma solo riff da azzeccare e volti amici da salutare. Intorno a noi c'è una città che non dorme mai, fatta di volti noti, locali storici e notti passate a discutere di scalette e spartiti. Tra un pezzo e l'altro, però, la vera protagonista indiscussa sale sul palco: la birra fresca. È il carburante ufficiale delle nostre jam session, il collante che tiene insieme accordi imperfetti e risate fragorose. Alla fine, la verità processuale è una sola: la mia band sarà pure meglio della tua, ma il verdetto spetta sempre al boccale.",
-      "commento_firma": {
-        "nome": "Topengo",
-        "avatar": "🐭",
-        "testo": "Alla fine dei conti, tra una nota stonata e una causa vinta, la sentenza è unanime: col boccale in mano vinciamo sempre tutti noi!"
-      },
-      "commenti": [
         {
           "nome": "Juizinho",
           "avatar": "⚽",
-          "testo": "Che spettacolo Topengo! Una jam session è proprio quello che ci vuole per fare festa, quasi quanto un samba sulla spiaggia! E poi con la birra fresca e le donne che ballano, il verdetto è già scritto! Siii!"
+          "testo": "Ma quale croce, amigos! Ci vuole più allegria, samba e mujeres! In Brasile quando la squadra gioca male si balla di più per dimenticare la tristezza! Venite tutti a festeggiare con me, lasciate stare i remi e mangiamo arrosticini!"
         },
         {
           "nome": "Glusi",
           "avatar": "🤪",
-          "testo": "Birra fresca e chitarre a manetta, birra fresca e chitarre a manetta! Siiiii siiii siiiiii glugluglu rock and roll! Rock and roll!"
-        },
-        {
-          "nome": "Enzino",
-          "avatar": "👨‍⚖️",
-          "testo": "Adoro questa arringa a suon di rock, Topengo! La tua autorevolezza sul palco batte qualsiasi tribunale. E ti confesso che uno spettacolo così affascinante merita un verdetto unanime di assoluzione!"
+          "testo": "Siii siii siiiiianno tutti matti, glugluglu! La barca sgangherata va a fondo e noi remiamo con le orecchie, con le orecchie!"
         }
       ],
-      "categoria": "Dalla Redazione",
+      "categoria": "Sport",
       "colore_tipo": "#008cff",
-      "immagine": "topengo.webp",
-      "provider": "gemini",
-      "nuovo": true
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Pedali, notti e miscele",
-      "articolo": "La bicicletta è una compagna sincera, soprattutto quando le ore piccole divorano il silenzio della città. Finire il turno dietro al banco significa rimettersi in marcia, mentre l'asfalto riflette le ultime insegne accese. Non serve una meta precisa, basta il ritmo costante dei pedali e il vento freddo che taglia il viso. C'è chi sceglie la corsa, chi preferisce la sella. Io scelgo la seconda, pedalando nel buio con la stessa precisione con cui doso il gin e il vermouth. L'alcol scorre nei bicchieri che preparo ogni sera, ma il mio corpo brucia tutto, lasciandomi incredibilmente smilzo nonostante i piatti abbondanti svuotati a fine servizio. La notte appartiene a chi non si ferma, a chi attraversa le strade deserte sapendo che la fatica è solo un altro modo per restare svegli. E così si va avanti, pedalando oltre l'orizzonte.",
-      "commento_firma": {
-        "nome": "Bartender",
-        "avatar": "🚴",
-        "testo": "Se bevi quanto me e resti uno stecchino pedalando al buio, o sei fatto di ghisa o la bici ti porta a casa da sola!"
-      },
-      "commenti": [
-        {
-          "nome": "Wolf",
-          "avatar": "👩‍🌾",
-          "testo": "La notte è l'unico momento in cui si ragiona senza il baccano degli imbecilli. Pedala finché ne hai, la fatica vera pulisce la mente."
-        },
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "Anche qui in montagna la notte ha un suo ritmo perfetto, silenzioso. La bicicletta e il vento ti restituiscono a te stesso."
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Pedala pedala nel buio buio buio siii siii siiiiissimoooo glugluglu birra freddaaa!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "bartender.webp",
-      "provider": "gemini",
-      "nuovo": true
-    },
-    {
-      "tipo": "personaggio",
-      "titolo": "Tra i sentori della Maiella e gli accordi di una sei corde: il trekking d'Abruzzo",
-      "articolo": "La montagna madre, la Maiella, riserva sempre sorprese che vanno ben oltre il semplice trekking tra i boschi incontaminati. Qui la natura selvaggia e aspra si sposa con una tradizione brassicola artigianale di prim'ordine, capace di rigenerare anche il viandante più affaticato dopo ore di cammino in salita. Percorrere i sentieri che si snodano tra faggete secolari e eremi di pietra significa immergersi nel silenzio, interrotto solo dal fruscio del vento e dal calpestio degli scarponi. Ma la vera magia si compie al tramonto, quando la fatica cede il passo al meritato ristoro nei rifugi locali. È qui che la montagna incontra la convivialità autentica: un boccale di birra artigianale locale, prodotta con acqua di sorgente e aromi autoctoni, diventa il degno premio di una giornata memorabile. E mentre la luce sfuma tingendo le rocce di rosa, spunta immancabile una chitarra acustica. Le note risalgono le valli, trasformando il rifugio in un palcoscenico a cielo aperto dove l'ultimo accordo chiude l'escursione.",
-      "commento_firma": {
-        "nome": "Topengo",
-        "avatar": "🐭",
-        "testo": "Ah, la Maiella! Sentieri che ti spezzano le gambe e birra che ti rimette al mondo. Se poi ci metti pure la chitarra, beh, siamo a cavallo. Tra un arpeggio e una bionda ghiacciata, vi dico che qui non si scherza: la musica vera ha bisogno di polmoni buoni e di tanta sete!"
-      },
-      "commenti": [
-        {
-          "nome": "Lars",
-          "avatar": "🇩🇰",
-          "testo": "La montagna qui sulla Maiella parla attraverso il silenzio dei boschi e il vento tra i faggi. Ma la vera genialità d'questo posto è che dopo tanta fatica trovi sempre la gioia pura degli arrosticini e una buona birra fresca."
-        },
-        {
-          "nome": "Wolf",
-          "avatar": "👩‍🌾",
-          "testo": "Camminare per ore con gli scarponi pesanti e la fatica nelle gambe è l'unico modo onesto per guadagnarsi il pane e il silenzio. Il resto sono solo chiacchiere da città."
-        },
-        {
-          "nome": "Glusi",
-          "avatar": "🤪",
-          "testo": "Siii sii siiiiii! Birra fresca sui monti e chitarra acustica che spacca, birra fresca sui monti e chitarra acustica che spacca! Glugluglu!"
-        }
-      ],
-      "categoria": "Dalla Redazione",
-      "colore_tipo": "#008cff",
-      "immagine": "topengo.webp",
+      "immagine": "cetteo.webp",
       "provider": "gemini",
       "nuovo": true
     }
