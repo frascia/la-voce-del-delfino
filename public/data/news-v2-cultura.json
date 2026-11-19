@@ -1,6 +1,6 @@
 {
   "color": "#6a4c93",
-  "prossimo_aggiornamento": "19/11, 08:00",
+  "prossimo_aggiornamento": "19/11, 18:23",
   "news": [
     {
       "tipo": "rss",
@@ -96,7 +96,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -112,7 +112,71 @@
       "colore_tipo": "#008cff",
       "immagine": "lars.webp",
       "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Mò basta co' sta fuffa, a lu cinemà ce vò 'na botta de vita!",
+      "articolo": "Oh raga', parliamoci chiaro. Io co' le reti in barca c'ho da fà, ma si piove o c'è ' mar d'olio, 'na sedia comoda al fresco me la pijo volentieri. E che ce sta a fà mo' a le sale? Sempre 'sti film co' 'sta gente che piange, drammi d'autore che te fa venne a' scimmia cattiva. Ma dundè 'ndiamo? A Borgomarino se magna pesce fresco e se ride, mica se sta a 'mpensierì co' li <i>filosofi</i> de pellicola. Mo' escono ' sti tituli novi sul grande schermo, e io dico: invece de 'sti pipponi, ce vò azione, suspence, e magari pure 'na bella trama che te fa sveglià. Aoh, la sala buia è bona pure pe' piscià un attimo d'occhio tra un tempo e l'altro, ma se il film fa schifo manco la gassosa ti salva. Vojo vede' storie vere, gente tosta, mica chiacchiere da bar. Sveglia regà, che er pop corn senza spettacolo è solo granoturco bruciato.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Spettacolo puro! Finalmente si torna a riempì le sale come la curva nord quando fammo li botti! Però occhio a non pijarci per il culo con le solite americanate mosce, vogliamo qualità cazzo!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma quale film d'autore e filosofi de pellicola, aoh! A Borgomarino se magna pesce fresco e se ride, mica se sta a 'mpensierì! Ce vò azione e suspence, sveglia regà!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma che state a dì? I film drammatici e i libri impegnati sono un'altra cosa, non fate i superficiali che non capite un cazzo di cinema! Se non vi piace la storia tosta, tornate a guardare i cartoni!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, tutti al cinema con i popcorn bruciati bruciati! Glugluglu, viva i film d'azione action action!"
+        }
+      ],
+      "categoria": "Da Vedere",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
       "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Silenzi nordici e braci d'Abruzzo",
+      "articolo": "Vivo tra i boschi di Roccamorice, dove il silenzio della montagna incontra il vento che scende verso la Maiella. Da danese apprezzo il rigore delle linee pulite della natura, l'ordine geometrico delle faggete e la quiete che avvolge questi luoghi remoti. La mia baita è essenziale: pochi oggetti, tutto al suo posto, lontano dal superfluo. Eppure ho lasciato le lande scandinave per stabilirmi qui. Il motivo non è solo la maestosità aspra di questo Parco Nazionale, ma un contagioso senso di vitalità. Quando scendo in paese, il contrasto tra il mio minimalismo nordico e il calore della gente locale si scioglie davanti al fuoco. Non resisto al richiamo degli arrosticini, un rito antico e conviviale che celebra la semplicità della carne di pecora cotta sulla canalina. Viaggiare fuori dai sentieri battuti in Europa significa scoprire che la vera ricchezza non risiede nei grandi circuiti turistici, ma nell'armonia tra paesaggi selvaggi e autentiche passioni popolari.",
+      "commento_firma": {
+        "nome": "Lars",
+        "avatar": "🇩🇰",
+        "testo": "Ah, sognare di partire con poche monetine in tasca, seguendo solo l'odore della resina e della legna da ardere, dormendo sotto cieli immensi senza spendere un centesimo in più del necessario..."
+      },
+      "commenti": [
+        {
+          "nome": "Lars",
+          "avatar": "🇩🇰",
+          "testo": "Il bosco di Roccamorice mi dà la pace nordica, ma niente batte gli arrosticini e l'allegria abruzzese!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Daje Lars, finalmente uno che ha capito come si vive! Altro che storie, qui tra na' carne e n'altra ci stà da godé!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiissiiii glugluglu arrosticini nel boscoooo nel boscoooo!"
+        }
+      ],
+      "categoria": "Viaggi",
+      "colore_tipo": "#008cff",
+      "immagine": "lars.webp",
+      "provider": "gemini",
+      "nuovo": false
     }
   ]
 }
