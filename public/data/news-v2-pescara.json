@@ -1,6 +1,6 @@
 {
   "color": "#005f73",
-  "prossimo_aggiornamento": "20/11, 04:38",
+  "prossimo_aggiornamento": "20/11, 07:51",
   "news": [
     {
       "tipo": "personaggio",
@@ -37,7 +37,7 @@
       "colore_tipo": "#008cff",
       "immagine": "wolf.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -74,7 +74,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lucap.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -106,7 +106,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -138,7 +138,7 @@
       "colore_tipo": "#008cff",
       "immagine": "topengo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -170,7 +170,7 @@
       "colore_tipo": "#008cff",
       "immagine": "enzino.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -197,7 +197,7 @@
       "colore_tipo": "#008cff",
       "immagine": "glusi.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "personaggio",
@@ -229,7 +229,7 @@
       "colore_tipo": "#008cff",
       "immagine": "lucap.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -261,7 +261,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -293,7 +293,7 @@
       "colore_tipo": "#008cff",
       "immagine": "cetteo.webp",
       "provider": "gemini",
-      "nuovo": true
+      "nuovo": false
     },
     {
       "tipo": "rss",
@@ -319,6 +319,335 @@
           "nome": "Glusi",
           "avatar": "🤪",
           "testo": "Siii siii siiiiii, il Pescara Pescara nel cuore glugluglu! Arrosticini e pallone pallone, siii siii siiiiii!"
+        }
+      ],
+      "categoria": "Sport",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "La fatica vera non fa notizia",
+      "articolo": "Mentre voi passate le giornate a discutere del nulla, c'è chi ha la schiena spezzata dal lavoro vero. Il pane duro non è una metafora poetica, è quello che si mangia quando i salari sono fermi e la dignità viene calpestata da chi siede negli uffici climatizzati. Ho passato un'intera esistenza a tirare la carretta, senza sconti e senza lamentele inutili, e vedo questo Paese affondare nella sua stessa ipocrisia. Si riempiono la boca di parole come 'crescita' e 'futuro', mentre la gente comune suda sette camicie solo per arrivare a fine mese. Nessuno regala niente, eppure pretendono che sorridiamo mentre ci tolgono tutto. La verità è che non frega niente a nessuno della fatica altrui, finché il piatto è pieno sulla loro tavola. Io resto quassù, lontano da questo circo mediatico, a guardare dall'alto la vostra ipocrisia, mentre continuo a lavorare fino allo sfinimento.",
+      "commento_firma": {
+        "nome": "Wolf",
+        "avatar": "👩‍🌾",
+        "testo": "Lasciatemi in pace. Ho la schiena a pezzi, il fuoco da preparare per i miei ospiti e la nausea di leggere queste stesse lamentele ogni maledetto giorno."
+      },
+      "commenti": [
+        {
+          "nome": "Wolf",
+          "avatar": "👩‍🌾",
+          "testo": "Finalmente qualcuno che dice le cose come stanno, basta con queste chiacchiere da salotto mentre chi lavora sul serio viene ignorato."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Parole sante, frà! Lu pane duro si magna ma a lu marenne ce vonne li arrosticini pe tirà a skina, sti barunessa de li uffici nun sanno manco che significa fatica!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Esatto! E poi arrivano sti presuntuosi a fare la morale. La dignità non te la regalano, te la sudi ogni giorno a calci in faccia a questa società di ipocriti."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, la fatica vera, fatica vera glugluglu! Paga bassa, paga bassa!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "wolf.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Distanze e armonia: coordinare la redazione dal Giappone",
+      "articolo": "Gestire una squadra di giornalisti vivaci e passionali è già di per sé una sfida quotidiana. Farlo con sette ore di fuso orario di differenza, da Tokyo, richiede una dedizione zen. Tra templi antichi e grattacieli futuristici della capitale giapponese, il pensiero torna costantemente al caos creativo della nostra redazione. La tecnologia aiuta a mantenere i contatti, ma coordinare i pezzi, smussare gli angoli e cercare il consenso a distanza mette a dura prova i nervi. Eppure, ogni volta che riesco a ricucire uno strappo tra le diverse anime del giornale, ritrovo quella pace interiore che cercavo partendo. Il giornalismo è confronto acceso, ma il mio ruolo resta quello di trovare il punto d'incontro, anche dall'altro lato del mondo. L'armonia del gruppo non conosce confini geografici, e la redazione, nonostante la lontananza fisica, continua a battere come un unico cuore pulsante.",
+      "commento_firma": {
+        "nome": "Lucap",
+        "avatar": "👨‍⚖️",
+        "testo": "Amici miei, vi penso sempre e vi voglio bene. Cerchiamo di volerci bene e di lavorare insieme in armonia, anche se sono a migliaia di chilometri di distanza. Un abbraccio pacifico a tutti!"
+      },
+      "commenti": [
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "La disciplina e la pianificazione zen sono fondamentali per arginare il caos e la totale mancanza di civiltà che vedo qui in giro."
+        },
+        {
+          "nome": "Lucap",
+          "avatar": "👨‍⚖️",
+          "testo": "Grazie Hiroki, la distanza geografica non spegne il nostro spirito; il confronto è acceso ma l'armonia della redazione resta il nostro obiettivo primario."
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, armonia pura glugluglu, armonia pura glugluglu!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lucap.webp",
+      "provider": "gemini",
+      "nuovo": false
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Dal Codice Penale al Rock: Quando l'Avvocato Prende in Mano la Chitarra",
+      "articolo": "Nel caotico panorama delle aule di tribunale, dove le toga nera e le cravatte seriosa la fanno da padrone, esiste una specie rara che mescola codici penali e accordi distorti. Parlo di quei professionisti della legge che, appena cala il sole, abbandonano i fascicoli per imbracciare una Fender Stratocaster. Non è una leggenda metropolitana, ma la pura e semplice realtà di chi vive la giustizia con il ritmo nel sangue. Tra un rinvio d'udienza e una notifica urgente, la musica diventa l'unica vera difesa d'ufficio dallo stress quotidiano. Le aule giudiziarie si trasformano in palchi ideali dove ogni discussione legale sembra preparare il terreno per un assolo memorabile. In fondo, arringare una giuria e cantare un pezzo rock richiedono la stessa identica cosa: carisma, tempismo perfetto e una buona dose di spavalderia. Chi pensa che il diritto sia una materia noiosa non ha mai visto un legale rockettiero spiegare la legittima difesa a tempo di blues.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Ah, spettacolare! Se solo i giudici apprezzassero un bel bending sulle corde quanto amano la giurisprudenza, avremmo risolto metà dei contenziosi civili d'Italia a suon di power chord!"
+      },
+      "commenti": [
+        {
+          "nome": "Topengo",
+          "avatar": "🐭",
+          "testo": "Che spettacolo! La legge è un palcoscenico e la nostra band spacca di brutto, un bel blues e viaaa!"
+        },
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Topengo sei semplicemente il numero uno, quando imbracci quella chitarra non ce n'è per nessuno!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii sii siiiiii rock and roll glugluglu rock and roll!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Note legali: a Pescara si difende la musica",
+      "articolo": "Col mio metro e novanta e la toga spesso appoggiata sul sedile posteriore, so bene quanto le parole possano pesare in un'aula di tribunale. Ma a Pescara, ultimamente, c'è un silenzio che fa più rumore di una requisitoria a microfono aperto. È il silenzio assordante che avvolge la scena musicale locale, privata troppo spesso di spazi, dignità e ascolto. Con la mia band lo sappiamo bene cosa significa sudare sui riff di chitarra e cercare un locale che non ti guardi come un potenziale imputato per disturbo della quiete pubblica. La città adriatica ha una storia culturale pazzesca, fatta di fermento e talento grezzo, che non merita di essere soffocata da burocrazie ottuse e ordinanze restrittive. Qui non si tratta di sovvertire le leggi, ma di applicare quel buonsenso che spesso latita nei palazzi. La musica è linfa vitale, è aggregazione, è l'assoluzione migliore per una generazione che ha bisogno di esprimersi. Pescara deve tornare a suonare forte.",
+      "commento_firma": {
+        "nome": "Topengo",
+        "avatar": "🐭",
+        "testo": "Ah, che bellezza! Se i giudici ascoltassero la metà della musica che ascolto io con la mia band, avremmo la metà dei processi e il doppio delle feste. Suonare forte non è un reato, è un obbligo morale!"
+      },
+      "commenti": [
+        {
+          "nome": "Topengo",
+          "avatar": "🐭",
+          "testo": "Hai proprio ragione, tra un'udienza e l'altra la chitarra è l'unica vera assoluzione! Dobbiamo far tremare Pescara con la nostra band!"
+        },
+        {
+          "nome": "Enzino",
+          "avatar": "👨‍⚖️",
+          "testo": "Topengo sei fantastico quando suoni, hai un talento incredibile che merita tutti i palchi possibili! Ascoltarti è sempre una gioia immensa."
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Lu cess! Questi baroni nei palazzi non capiscono enece, pensano solo a rombe li coglioni! Pescara è del Delfino e della musica bona, mannaggia a Lor Signore!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, tutti a suonare la chitarraaa! Glugluglu, Pescara spakka spakka!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "topengo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Freghet, che spettacolo il Ponte del Mare!",
+      "articolo": "Passeggiare sul Ponte del Mare regala sempre quell'emozione unica che sa di salsedine e bellezza mediterranea. Freghet, ogni volta che lo attraverso, mi fermo a guardare lo skyline della nostra Pescara che si specchia nell'acqua, unendo le due sponde della città in un abbraccio di design e modernità. È il luogo del cuore per eccellenza, perfetto per sgranchirsi le gambe e godersi la brezza marina. Non è solo un'infrastruttura, è il salotto a cielo aperto dove la comunità si incontra, dove le coppie si scambiano tenerezze e i turisti rimangono a bocca aperta davanti a tanta magnificenza. Tra una chiacchiera e l'altra, questo ponte rappresenta l'anima vibrante della nostra terra, elegante e accogliente proprio come piace a noi. Dopo la camminata, poi, l'aperitivo vista mare diventa un vero e proprio obbligo morale per celebrare le piccole grandi gioie della vita.",
+      "commento_firma": {
+        "nome": "Enzino",
+        "avatar": "👨‍⚖️",
+        "testo": "Tesori miei, lo dico sempre io: quando ci vuole, ci vuole! Questo ponte è favoloso proprio come me, unisce tutti con classe e senza mai annoiare. Venite a trovarmi per un bicchierino qui sotto, vi voglio bene!"
+      },
+      "commenti": [
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ponte del Mare o meno, qui c'è sempre qualcuno pronto a lamentarsi invece di camminare e basta! E non rompete le scatole con l'aperitivo obbligatorio, ognuno fa quello che vuole!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Freghet, li mortacci! Lasciate sta' i baroni dei palazzi e godetevi la brezza del nostro mare, che Pescara è na spettacolo! E chi non è d'accordo se ne può pure tornà da 'ndò è venuto!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiii, tutti quanti sul ponte a camminare, camminareeeee! Glugluglu, aperitivo vista mareeee, vista mareeee!"
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "enzino.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Il fenomeno delle serie TV che non finiscono mai più mai più",
+      "articolo": "Glugluglu, amici lettori! Siii siii siiiiii, eccomi di ritorno dopo una giornata folle in giro per la redazione tra mille impegni e corse infinite. La sera torno distrutto sul divano, ma chi mi viene a trovare? Il mitico taccagno di turno che scrocca sempre la cena senza mai pagare il conto, simpatico ma sempre pronto a prendere più di quello che dà! In questa giungla quotidiana, ho analizzato il trend del momento che sta spopolando ovunque e diventando virale in un attimo: le serie televisive allungate all'infinito. Gli spettatori si ritrovano a guardare stagioni su stagioni dove la trama gira costantemente a vuoto, costringendo il pubblico a ripetere, ripetere, ripetere la stessa puntata senza trovare una vera conclusione. È la nuova frontiera dell'intrattenimento seriale che tiene incollati milioni di fan, fan, fan!",
+      "commento_firma": {
+        "nome": "Glusi",
+        "avatar": "🤪",
+        "testo": "Meno male che c'è il taccagno a pagarci almeno la bolletta della luce per la TV, ah ah ah!"
+      },
+      "commenti": [
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Glugluglu, ma che notizia fantastica! Siii siii siiiiii, le serie tv infinite fanno proprio girare la testa, testa, testa!"
+        },
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Li mortacci vostra e di ste serie TV che durano 'na vita! Aoh, ma 'nvece de guardà ' ste stronzate alla TV, venite a magnà du' arrosticini e a tifà Pescara, invece de rompere li coglioni!"
+        },
+        {
+          "nome": "Hiroki",
+          "avatar": "🏯",
+          "testo": "Questa mancanza di sintesi e di rispetto per il tempo dello spettatore è inaccettabile. In Giappone una serie avrebbe una conclusione dignitosa e rigorosa, non questo scempio infinito."
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma basta lamentarvi per ogni minima sciocchezza! Se una serie non vi piace cambiate canale invece di fare i leoni da tastiera, io mi guardo i miei film e sto a posto."
+        }
+      ],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "glusi.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "personaggio",
+      "titolo": "Passi di armonia: riflessioni dai monti d'Abruzzo",
+      "articolo": "Camminare lungo i sentieri d'Abruzzo offre una straordinaria occasione per ritrovare il contatto con la natura e con se stessi. Tra le maestose vette del Gran Sasso e della Majella, ogni passo diventa un esercizio di consapevolezza, capace di allontanare le tensioni quotidiane. La montagna non è solo uno spazio fisico da esplorare, ma un luogo di ascolto profondo, dove il silenzio della natura invita alla calma interiore. Anche da lontano, immersi in contesti culturali completamente differenti come quelli del Giappone, il ricordo di questi paesaggi montani restituisce un senso di pace fondamentale. La bellezza dei parchi nazionali abruzzesi ricorda l'importanza di preservare gli equilibri ambientali e interiori. Condividere queste esperienze di cammino significa promuovere una cultura del benessere collettivo, fondamentale per mantenere unita la nostra comunità redazionale e superare insieme ogni momento di stress lavorativo.",
+      "commento_firma": {
+        "nome": "Lucap",
+        "avatar": "👨‍⚖️",
+        "testo": "Cari colleghi, la lontananza e il viaggio servono anche a questo: a ricordarci che l'armonia è dentro di noi e nei luoghi che sappiamo custodire. Facciamo un bel respiro e cerchiamo di procedere insieme, con calma e comprensione reciproca."
+      },
+      "commenti": [],
+      "categoria": "Dalla Redazione",
+      "colore_tipo": "#008cff",
+      "immagine": "lucap.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara, tra mare e cazzeggio: ma qui si faticà mai?",
+      "articolo": "Uè, facciamo il punto della situazione nella nostra Pescara, che pure stamattina 'na voglia di lavorare che ve lo dico a fare, zero assoluto. Tra 'na botta di tramontana e 'nu caffeazzo veloce alla Madonnina, la vita scorre sempre uguale. Il mare nostro c'ha sempre quel profumo bono di pesce fresco, mica le schifezze che spacciano nei supermercati. Ma la verità, ve lo dico io che sto bagnato d'acqua salata da quando c'ho i pantaloncini corti, è che qua si parla troppo e si faticà poco. I cantieri sul lungomare stanno lì fermi come monumenti alla pigrizia, mentre i biancazzurri del Pescara lottano sempre per non retrocedere, mannaggia a quel boia. E poi ci sta sempre quello che sa tutto lui, che ti viene a spiegare come va il mondo mentre tu stai con le mani in tasca a guardare le barche che rientrano. Ma andate a zappare la terra! O meglio, a 'ttentare le telline, che è l'unica fatica che vale la pena di fa'. A Borgomarino la musica è sempre la stessa: salsedine, polemiche e na bella frittura.",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "Che vi devo dì? Me state a fa' perde tempo prezioso co' 'sta manfrina. Voglio annà a controllà le reti, invece sto qua a scrivì. E vedete de non rompe troppo le scatole, che c'ho pure i miei dubbi su chi legge."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Uè, ma quale zappare la terra! Sò d'accordo solo sul pesce fresco della Madonnina e sui cantieri fermi, ma i biancazzurri non si toccano, mannaggia a quel boia! E vedi di non fare il furbastro, chi è che parla troppo senza faticare?!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Basta con queste lamentele inutili! Invece di piangere sui cantieri e sulla squadra, rimboccatevi le maniche o state in silenzio. Praticità, ci vuole pratica, non chiacchiere!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiissiiii telline frescheeee glugluglu! Le telline con la salsedine fresca fresca, siii siii!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ma quale lavorare e faticare con questo caldo, ci vorrebbe un po' di allegria brasiliana, una samba in spiaggia e belle donne invece di lamentarvi sempre!"
+        }
+      ],
+      "categoria": "Cronaca",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Allarme bomba a Pescara, ma qua vuleve sulamente n'ata tarantella",
+      "articolo": "Ue, ma v'a sci' a piglià a coll'altri? Mancu 'n attimo de pace in sta disgraziata d'aeroporto a Pescara. Un altro falso allarme bomba, sta volta sul volo per Charleroi. Ma dico io, nun tenite nient'altre da fa'? C'è gente che vole annà a faticà, o forse no, visto che tra mare, paranza e na canna a lenza, a voglia de travagghià è proprio poca. Me so' dovuto levà dalla barca con la schiena a pezzi per sta notizia da 160 parole giuste giuste. E che cazzo, ogni tre per due qua fermano gli aerei perché a qualche scemo scappa la battuta o c'è lo zimbello di turno. Ma andate a zappà la terra o a pulì le seppie! Io stevo là tranquillo a guardà l'orizzonte, co' l'odore de salsedine e la frittura che me chiamava, e invece tocca sentì ‘ste stronzate. Pescara mia, sempre in mezzo ai guai, ma forza Delfino sempre e chi nun salè è nu zozzo!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "In riferimento all'evento segnalato, si prende atto della conclusione delle verifiche di sicurezza da parte delle autorità competenti, le quali hanno accertato la natura infondata della segnalazione di pericolo. L'amministrazione aeroportuale e gli organi preposti provvederanno all'archiviazione della pratica secondo i protocolli standard previsti per i casi di falso allarme, senza ulteriori adempimenti a carico dell'ente."
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Ma guarda ‘sti scemi, oh! Stann' semp' a fa’ casin' all'aeroporto! Invece de pensà all'aerei, pensassero a ‘sta frittura e a tifà Pescara! Chi nun salè è nu zozzo!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Falso allarme bomba, bombaaa! Siii siii siiiiii, glugluglu con le telline sul bagnasciuga, le telline sul bagnasciuga!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma basta con queste pagliacciate e questi falsi allarmi, la gente ha cose serie a cui pensare invece di perdere tempo. Svegliatevi!"
+        }
+      ],
+      "categoria": "Politica",
+      "colore_tipo": "#008cff",
+      "immagine": "cetteo.webp",
+      "provider": "gemini",
+      "nuovo": true
+    },
+    {
+      "tipo": "rss",
+      "titolo": "Pescara Calcio, co’ sto mare e sto pesce chi cazzo ha voglia di faticà!",
+      "articolo": "Frà, ma vogliamo parlà del Pescara Calcio? Ma vaffanculo, qua c'è na caldara che se crepa, il mare profuma de Sprecacione e della frittura buona che ti fa svoltà la giornata, e questi vogliono che stiamo sempre là a rosicà sui gradoni dello stadio Adriatico. Ma chi ce lo fa fà, dico io! A Borgomarino la vita è n’altra cosa, si sta con le reti in mano, na Peroni ghiacciata e si guarda l’orizzonte. Invece no, tocca sta a penà pe’ sti undici scarpari in campo che corrono meno de ‘na triglia spiaggiata. La maglia biancazzurra è na fede, oh! È sangue nostro, del nostro Adriatico, della nostra gente che sa che significa fatica vera, quella sulla barca all'alba. Però, mannaggia a la miseria, qua sembra che la voglia di correre sia rimasta impigliata nelle reti. Presidente, mister, svegliatevi! Qua non si può campare solo di chiacchiere. Pescara merita rispetto, cazzo!",
+      "commento_firma": {
+        "nome": "Cetteo",
+        "avatar": "🚧",
+        "testo": "È na tragedia greca, fratè! Siamo ridotti a piangere sopra un pallone sgonfio mentre il nostro mare muore e nessuno dice un cazzo! È la fine di tutto!"
+      },
+      "commenti": [
+        {
+          "nome": "Cetteo",
+          "avatar": "🚧",
+          "testo": "Frà, hai detto na verità grossa quantu na casa! A Borgomarino si sta troppo meglio con la Peroni in mano che a penà pe sti scarpari! Daje Pescara svegliateve!"
+        },
+        {
+          "nome": "Lilli",
+          "avatar": "👩",
+          "testo": "Ma quale triglia spiaggiata, qui bisogna tirare fuori gli attributi! La maglia biancazzurra non si tocca, se non c'è voglia di correre veniamo noi sui gradoni a farvi fare il mazzo!"
+        },
+        {
+          "nome": "Juizinho",
+          "avatar": "⚽",
+          "testo": "Ma lasciate stare il calcio, amigos! Con questo caldo andiamo in spiaggia a ballare e a goderci le donne, che la vida è demasiado corta per arrabbiarsi!"
+        },
+        {
+          "nome": "Glusi",
+          "avatar": "🤪",
+          "testo": "Siii siii siiiiisiii, frittura e telline per tutti, glugluglu, viva la Peroni ghiacciata sulla spiaggia, spiaggiaaaaa!"
         }
       ],
       "categoria": "Sport",
